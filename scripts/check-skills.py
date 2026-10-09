@@ -10,7 +10,7 @@ assert (root / '.claude/CLAUDE.md').read_text().strip() == '@../AGENTS.md', 'Cla
 registry = json.loads((root / 'skill-sources.json').read_text())
 plugin = json.loads((root / '.claude-plugin/plugin.json').read_text())
 paths = {p.parent.relative_to(root).as_posix() for p in (root / 'skills').rglob('SKILL.md')}
-promoted = {p for p in paths if p.split('/')[1] in ('engineering', 'productivity')}
+promoted = {p for p in paths if p.split('/')[1] in ('engineering', 'productivity', 'product-management', 'design')}
 assert promoted == {p.removeprefix('./') for p in plugin['skills']}, 'Plugin differs from promoted set'
 assert len(plugin['skills']) == len(promoted), 'Duplicate plugin entry'
 rows = registry['skills']

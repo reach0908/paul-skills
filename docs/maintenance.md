@@ -2,12 +2,31 @@
 
 The upstream authoring workflow is the default. Our additions are provenance, deterministic comparison checks, and observable behavior evaluations. Existing skill names remain compatible with upstream; this fork's source and installation identity are separate.
 
+## Installation scope
+
+Paul Skills is the shared workflow library, installed as one user-scope plugin in Codex and Claude Code. Its manifest ships only promoted skills. Keep `in-progress/` experiments in an isolated trial environment until the user validates and approves promotion.
+
+Project-specific capabilities belong to the project that owns the workflow:
+
+| Capability | Project configuration |
+| --- | --- |
+| Skills | Store the canonical skill at `.agents/skills/<name>/`. For Claude Code, add a relative `.claude/skills/<name>` link to the same directory. |
+| Claude Code plugins | Install from the project directory with `--scope project`; keep the project's plugin settings with the project. |
+| Codex local plugins | Declare the project marketplace in `.agents/plugins/marketplace.json` and enable its exact plugin ID in `.codex/config.toml`. |
+| MCP servers | Use the host's project-scoped configuration. Codex uses `.codex/config.toml` in trusted projects. Keep credentials in environment variables or the host credential store. |
+
+Record each project dependency's source, purpose, version or revision, update procedure, required environment-variable names, and removal procedure in the project's tooling documentation. A shared on-disk plugin cache does not make the plugin globally enabled. Workspace-managed app connectors can have different scope controls; do not describe a global app connection as project-only without verifying host support.
+
+Before relocating a global skill, compare it with existing project copies. Preserve newer and uncommitted project work, remove the global discovery path, and verify both hosts' project paths. Project-private instructions stay in their owning repository. Only deliberately generalized skills enter Paul Skills through its `in-progress/` and promotion process. A request to remove a skill does not remove its separate CLI executable or MCP server.
+
+Codex's supported boundaries are documented in [local skill locations](https://learn.chatgpt.com/docs/build-skills), [project plugin configuration](https://developers.openai.com/plugins/build/plugins), and [project MCP configuration](https://learn.chatgpt.com/docs/extend/mcp?surface=cli). Inspect installed host commands and settings when applying this policy; installation records and fresh-session activation are separate checks.
+
 ## One change through the process
 
 1. Capture the real task or failure and the result the human should be able to observe.
 2. Read `writing-for-agents` and its `SKILL-MECHANICS.md`; choose the invocation boundary and disclose branch-specific detail through references. Use `AGENTS.md` for bucket and packaging rules.
 3. Create or update the skill. Register every direct source in `skill-sources.json`; retain upstream copyright and in-file credits. New independent code can cite influences without pretending it is a direct import.
-4. New Paul-authored or newly migrated skills start in `in-progress/`. Keep them outside the default plugin, root skill index, and promoted router until the user validates their behavior and explicitly approves promotion. Tests and agent trials supply evidence, not approval. After approval, choose `engineering/` or `productivity/` by the task served and update the root and bucket README, `ask-matt`, human docs, and plugin skill list together.
+4. New Paul-authored or newly migrated skills start in `in-progress/`. Keep them outside the default plugin, root skill index, and promoted router until the user validates their behavior and explicitly approves promotion. Tests and agent trials supply evidence, not approval. After approval, choose `engineering/`, `productivity/`, `product-management/`, or `design/` by the task served and update the root and bucket README, `ask-matt`, human docs, and plugin skill list together. The [area descriptions](../README.md#skill-areas) define the boundaries. A new domain's first promoted skill also gets its docs page under `docs/<bucket>/`.
 5. Add a Changeset for `paul-skills`. Run `npm run check` and `claude plugin validate . --strict`. Use a realistic task to check behavior, not only prompt wording. The [evaluation protocol](../evals/README.md) defines the evidence boundary.
 6. Review the diff with its tests and limitations. Publish and merge within the user's authorization. The Release workflow opens the version PR; its version command keeps `package.json` and the plugin manifest aligned.
 7. After that version PR merges, the workflow tags the release. Confirm remote tag SHA, workflow outcome, installed manifest, and a fresh host session separately.
@@ -38,7 +57,7 @@ The next bounded candidates are `grilling`, `diagnosing-bugs`, and the PRD/spec 
 
 ## Development installs
 
-`scripts/link-skills.sh` links promoted and in-progress skills for maintainers. It now refuses existing files or foreign symlinks before writing anything. Test with a disposable HOME; a successful isolated install does not migrate a user's existing global installs.
+`scripts/link-skills.sh` links promoted and in-progress skills for maintainers. It refuses existing files or foreign symlinks before writing anything. Use it only with a disposable HOME for isolated trials, because its in-progress links do not belong in the daily global installation. Use the promoted plugin for daily work. A successful isolated install does not migrate a user's existing global installs.
 
 ## Intentional fork differences
 

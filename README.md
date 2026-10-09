@@ -9,6 +9,17 @@ Paul Skills uses its own version sequence starting at **0.1.0**, with release ta
 - [Evaluation protocol](evals/README.md): behavior evidence, model selection, and cost reporting.
 - [Scope](SCOPE.md): small skills, human decisions, and bounded migration.
 
+## Skill areas
+
+| Area | Responsibility |
+| --- | --- |
+| [Engineering](skills/engineering/README.md) | Implementation, architecture, debugging, and code quality. |
+| [Productivity](skills/productivity/README.md) | General workflows, learning, and skill-library maintenance. |
+| [Product management](skills/product-management/README.md) | Product discovery, strategy, prioritization, requirements, and outcomes. |
+| [Design](skills/design/README.md) | User experience, interaction, visual design, and design evaluation. |
+
+Product management and design currently have no promoted skills. New skills enter a domain after user validation and explicit promotion approval.
+
 ## Installation
 
 This fork uses its own marketplace. It is not listed in `claude-plugins-official`. Choose either the plugin or editable skills per host; installing both duplicates skill names. Marketplace installation and updates are separate from upstream source reconciliation.
@@ -17,7 +28,7 @@ This fork uses its own marketplace. It is not listed in `claude-plugins-official
 
 ```bash
 claude plugin marketplace add reach0908/paul-skills
-claude plugin install paul-skills@paul-skills
+claude plugin install paul-skills@paul-skills --scope user
 ```
 
 To update manually:

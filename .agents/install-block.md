@@ -6,7 +6,7 @@ This fork uses its own marketplace. It is not listed in `claude-plugins-official
 
 ```bash
 claude plugin marketplace add reach0908/paul-skills
-claude plugin install paul-skills@paul-skills
+claude plugin install paul-skills@paul-skills --scope user
 ```
 
 To update manually:

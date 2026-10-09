@@ -1,6 +1,6 @@
 # Scope
 
-Paul Skills is a human-in-the-loop library of small, composable skills for engineering and productivity. It forks mattpocock/skills to reuse its authoring, documentation, routing, and Changesets process.
+Paul Skills is a human-in-the-loop library of small, composable skills for engineering, productivity, product management, and design. It forks mattpocock/skills to reuse its authoring, documentation, routing, and Changesets process.
 
 A change needs a concrete user task or observed failure, a bounded skill responsibility, and observable evidence that the result helps. New skills and migrations are welcome when existing skills do not already cover the need. Record provenance and license before importing; private-source publication needs its own clearance.
 
