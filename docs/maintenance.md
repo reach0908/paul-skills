@@ -43,4 +43,4 @@ Historical upstream changelogs, ADRs, credits, and source documentation retain a
 
 ## Release toolchain
 
-Use Node 22.11 or newer and npm 10.9 or newer (the packageManager field pins npm 10.9.4). The initial inherited Changesets 2 lockfile reported 18 development dependency advisories. Changesets 3.0.3 preserves the same release workflow and removes those reported advisories; version-plan and release execution are checked before adoption. These Node packages are maintainer tooling, not dependencies of installed skill prompts.
+Use Node 22.11+ on the 22.x line (or 24.x / 26+) and npm 10.9 or newer (the packageManager field pins npm 10.9.4). The initial inherited Changesets 2 lockfile reported 18 development dependency advisories. Changesets 3.0.3 preserves the same release workflow and removes those reported advisories; version-plan and release execution are checked before adoption. These Node packages are maintainer tooling, not dependencies of installed skill prompts.
