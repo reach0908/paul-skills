@@ -2,6 +2,14 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.1.1
+
+### Patch Changes
+
+- [#6](https://github.com/reach0908/paul-skills/pull/6) [`d4f7349`](https://github.com/reach0908/paul-skills/commit/d4f7349c6e1cedb7ee13b50a179d5cf2eb3f88d1) Thanks [@reach0908](https://github.com/reach0908)! - Add empty product-management and design skill areas, document their responsibilities and promotion requirements, and extend catalog validation and docs guidance to both domains. Align revised docs guidance with this fork's GitHub publishing paths. Existing skills and the default plugin catalog are unchanged.
+
+- [#6](https://github.com/reach0908/paul-skills/pull/6) [`d4f7349`](https://github.com/reach0908/paul-skills/commit/d4f7349c6e1cedb7ee13b50a179d5cf2eb3f88d1) Thanks [@reach0908](https://github.com/reach0908)! - Document user-scope installation for the shared Paul Skills plugin and project-scoped ownership of skills, plugins, and MCP configuration. Make the Claude Code install scope explicit and keep maintainer links in isolated trial environments.
+
 ## 0.1.0
 
 ### Independent version baseline
