@@ -2,6 +2,8 @@
 name: writing-shape
 description: "Writing, exploit: shape raw material into an article, paragraph by paragraph."
 disable-model-invocation: true
+metadata:
+  provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 <what-to-do>

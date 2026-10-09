@@ -1,0 +1,38 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "fixture": {
+      "repository": "<fixture-root>/source",
+      "ref": "HEAD",
+      "license": "MIT",
+      "repositoryReview": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c"
+    }
+  },
+  "skills": [
+    {
+      "id": "review",
+      "path": "skills/review",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "fixture",
+          "path": "skills/review",
+          "importedRevision": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+          "reviewedRevision": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+          "localDigest": "sha256:90649722c50fa0f7a73d186e873ecb027338ecf124e0b2cf68c9676825a28fc6",
+          "decisions": [
+            {
+              "revision": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Korean output and human publication decision."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  ]
+}

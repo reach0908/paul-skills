@@ -1,0 +1,38 @@
+{
+  "source": "fixture",
+  "repository": "<fixture-root>/source",
+  "target": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+  "freshness": "pinned-checkout-only; verify remote separately",
+  "skills": [
+    {
+      "id": "review",
+      "localPath": "skills/review",
+      "sourcePath": "skills/review",
+      "base": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+      "localDigest": "sha256:82678f9b397f3817d724b55e57399ecb319dcdbd23be30f584d47a14c040c3fc",
+      "upstreamChanges": [],
+      "localChanges": [
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "differencesFromTarget": [
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "pending": [],
+      "localDrift": false,
+      "status": "UNCHANGED"
+    }
+  ],
+  "status": "COMPARED",
+  "repositoryBase": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+  "repositoryChanges": "M\tskills/review/references/rules.md\n",
+  "commits": [
+    "aed5a77 add reproducible evidence"
+  ],
+  "newCandidates": []
+}

@@ -2,6 +2,7 @@
 name: pr
 description: "Use when writing a PR body."
 metadata:
+  provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
   credits:
     skill: show-me
     author: Dex Horthy

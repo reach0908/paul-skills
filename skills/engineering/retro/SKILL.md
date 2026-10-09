@@ -2,6 +2,8 @@
 name: retro
 description: "Conduct a retrospective on a coding session."
 disable-model-invocation: true
+metadata:
+  provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 The user has asked for a **retrospective**. You are suggesting improvements to the coding agent's **environment** to improve future runs.

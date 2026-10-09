@@ -2,6 +2,8 @@
 name: writing-fragments
 description: "Writing, explore: mine raw fragments, no structure yet."
 disable-model-invocation: true
+metadata:
+  provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 <what-to-do>
