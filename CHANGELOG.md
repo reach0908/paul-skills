@@ -2,6 +2,14 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.2.0
+
+### Minor Changes
+
+- [#8](https://github.com/reach0908/paul-skills/pull/8) [`807618c`](https://github.com/reach0908/paul-skills/commit/807618cecb29ee23ccd202e55caebb2c80c8baed) Thanks [@reach0908](https://github.com/reach0908)! - Add an integrated Aside CLI route to research for web questions, with availability checks, a self-contained brief, evidence auditing, and explicit failure handling. Keep local investigation available and give delegated research one execution owner. Ship an argument-safe launcher, update the research docs and router, and record the user-supplied local source by content digest. Runtime and evaluation limitations are recorded with the research evidence.
+  
+  Recheck the installed CLI after updating to 1.26.1008.1938. Reject empty or malformed follow-up session IDs before launching work and reject effort overrides that the session commands cannot apply. Align direct source audits with the current tab-reuse guide.
+
 ## 0.1.1
 
 ### Patch Changes
