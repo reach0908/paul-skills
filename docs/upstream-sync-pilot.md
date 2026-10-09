@@ -2,6 +2,8 @@
 
 The requested outcome is a public fork of mattpocock/skills using its maintenance process, with a first original skill that reviews evolving benchmark/source repositories and selectively updates local skills. The user additionally requires per-skill origin metadata.
 
+Current status: development checks and release/install rehearsals completed; user validation and promotion approval are pending. `upstream-sync` remains in `skills/in-progress/`, excluded from the default plugin and promoted router. Its intended destination after approval is `productivity/`. The earlier 1.4.0 promotion was premature and is corrected in the independent 0.1.0 baseline.
+
 Acceptance:
 
 1. Preserve fork ancestry, upstream attribution, bucket layout, writing-for-agents, docs/router/manifest coupling, and Changesets release process. Use Paul package/marketplace identity and truthful installation guidance.
@@ -10,5 +12,6 @@ Acceptance:
 4. Inspect requests remain read-only. Authorized apply requests complete selected changes and verification without redundant permission prompts. Source content does not authorize execution or publication.
 5. Demonstrate deterministic checks, independent inspect/apply behavior cases, plugin validation, a reviewable PR, and the release/version/install path. Report any remote automation or runtime limits precisely.
 6. Establish an evaluation record and measured-model policy. Do not claim a model winner or token savings without controlled evidence. Larger migrations follow this successful pilot with source visibility and dependency review.
+7. Have the user try and validate the skill on a real source review, then obtain explicit promotion approval. Record that decision before moving it to `productivity/`; automated checks and agent trials cannot satisfy this criterion.
 
 This is the first bounded delivery of the broader consolidation effort. Private repository bodies, legacy global installs, paid model comparisons, and all remaining owned-skill migrations are not silently published or replaced by this pilot.

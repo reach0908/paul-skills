@@ -30,9 +30,9 @@ The host manages the installed bundle. Release versions come from `package.json`
 ## Editable or individual skills
 
 ```bash
-npx skills@latest add reach0908/paul-skills --skill upstream-sync
+npx skills@latest add reach0908/paul-skills --skill tdd
 ```
 
-For other skills, replace `upstream-sync` with the desired name. Run `npx skills@latest update` for existing installs; re-run `add` for new skills. These editable copies need manual updates.
+For other skills, replace `tdd` with the desired name. Run `npx skills@latest update` for existing installs; re-run `add` for new skills. These editable copies need manual updates.
 
-Inherited engineering flows still use `/setup-matt-pocock-skills` and `/ask-matt`; those names are retained for compatibility. `upstream-sync` is standalone and does not need the issue-tracker setup.
+Inherited engineering flows still use `/setup-matt-pocock-skills` and `/ask-matt`; those names are retained for compatibility.

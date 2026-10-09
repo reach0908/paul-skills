@@ -89,7 +89,3 @@ Check the changelog for a rename before assuming it is gone. `writing-great-skil
 `ask-matt` is a **standalone router** that sits over the whole set. It is never a step in a chain. It points into every chain, and the other docs pages link back to it so none of them has to redraw the graph. From here you most often land on [grill-with-docs](https://aihero.dev/skills-grill-with-docs), the head of the main flow, or [triage](https://aihero.dev/skills-triage), the on-ramp for work that arrived rather than work you started.
 
 It is a [secondary source](https://www.aihero.dev/ai-coding-dictionary/secondary-source) over the skills it describes. Where the router and a `SKILL.md` disagree, the `SKILL.md` is right.
-
-## Fork maintenance
-
-The map also includes [upstream-sync](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/upstream-sync.md), a standalone skill for reviewing source repositories, preserving local customizations, and applying selected improvements. It does not require the engineering issue-tracker setup.

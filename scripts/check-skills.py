@@ -41,5 +41,7 @@ for row in rows:
     if row['path'] in promoted:
         assert (root / row['path'].replace('skills/', 'docs/', 1)).with_suffix('.md').exists(), f'Missing docs: {p}'
         assert row['path'] + '/SKILL.md' in (root / 'README.md').read_text(), f'Missing index: {p}'
+    else:
+        assert row['path'] + '/SKILL.md' not in (root / 'README.md').read_text(), f'Unpromoted skill in root index: {p}'
     assert './' + row['id'] + '/SKILL.md' in (p.parent / 'README.md').read_text(), f'Missing bucket entry: {p}'
 print(f'{len(paths)} skill records; {len(promoted)} promoted paths; provenance and invocation consistent')

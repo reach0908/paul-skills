@@ -32,6 +32,8 @@ Canonical names, unchanged. See `docs/agents/triage-labels.md`. Issues are judge
 
 ## Paul maintenance additions
 
-Track every skill in `skill-sources.json`, including originals and all direct sources of adaptations. Preserve immutable origin revisions; reconciliation records advance only after a complete, verified review. Read [the provenance contract](./skills/engineering/upstream-sync/references/provenance.md) when changing it.
+New Paul-authored or newly migrated skills start in `in-progress/`. Passing automated checks or agent trials does not authorize promotion. Move a skill into `engineering/` or `productivity/` only after the user validates its behavior and explicitly approves promotion; record the evidence and choose the bucket by the task it serves.
+
+Track every skill in `skill-sources.json`, including originals and all direct sources of adaptations. Preserve immutable origin revisions; reconciliation records advance only after a complete, verified review. Read [the provenance contract](./skills/in-progress/upstream-sync/references/provenance.md) when changing it.
 
 Run `npm run check` for a skill change. Include a Changeset, observable behavior evidence, and limitations. Model recommendations stay unmeasured until controlled comparative trials exist. The repository workflow is documented in [maintenance.md](./docs/maintenance.md).

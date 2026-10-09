@@ -1,14 +1,20 @@
 #!/usr/bin/env node
-// Changesets 3 output no longer triggers changesets/action's legacy tag parser.
-import { execFileSync } from "node:child_process";
+// Keep Paul release tags separate from inherited upstream version tags.
+import { execFileSync, spawnSync } from "node:child_process";
 import { readFileSync } from "node:fs";
-import { fileURLToPath } from "node:url";
 
-const { version } = JSON.parse(readFileSync("package.json", "utf8"));
-if (!/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version)) {
+const { name, version } = JSON.parse(readFileSync("package.json", "utf8"));
+if (name !== "paul-skills" || !/^\d+\.\d+\.\d+(?:-[0-9A-Za-z.-]+)?$/.test(version)) {
   throw new Error("A release version is required before publishing a tag");
 }
-const cli = fileURLToPath(new URL("../node_modules/@changesets/cli/bin.js", import.meta.url));
-execFileSync(process.execPath, [cli, "git-tag"], { stdio: "inherit" });
+const tag = `${name}@${version}`;
+const ref = `refs/tags/${tag}`;
+const existing = spawnSync("git", ["show-ref", "--verify", "--quiet", ref]);
+if (existing.error || (existing.status !== 0 && existing.status !== 1)) {
+  throw new Error("Could not inspect existing release tags", { cause: existing.error });
+}
+if (existing.status === 1) {
+  execFileSync("git", ["tag", "-a", tag, "-m", tag], { stdio: "inherit" });
+}
 // Push only this package's version. Existing tags are never moved or force-pushed.
-execFileSync("git", ["push", "origin", `refs/tags/v${version}`], { stdio: "inherit" });
+execFileSync("git", ["push", "origin", ref], { stdio: "inherit" });
