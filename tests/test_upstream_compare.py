@@ -82,6 +82,23 @@ class CompareTests(unittest.TestCase):
         self.registry['skills'][0]['origins'][0]['reviewedRevision'] = '0' * 40
         self.assertEqual(self.run_report()['skills'][0]['status'], 'UNKNOWN')
 
+    def test_missing_source_does_not_hide_pending_decision(self):
+        self.registry['skills'][0]['origins'][0]['decisions'] = [{'decision': 'defer', 'reason': 'dependency unavailable'}]
+        (self.source / 'skills/demo').rename(self.source / 'skills/renamed')
+        row = self.run_report(self.commit('rename'))['skills'][0]
+        self.assertEqual(row['status'], 'UNKNOWN')
+        self.assertEqual(row['pending'][0]['reason'], 'dependency unavailable')
+
+    def test_nested_repository_is_rejected(self):
+        self.put(self.local, 'skills/demo/nested/.git', 'gitdir: ../somewhere')
+        self.assertEqual(self.run_report()['skills'][0]['status'], 'UNKNOWN')
+
+    def test_uninitialized_local_gitlink_is_rejected(self):
+        subprocess.run(['git', '-C', str(self.local), 'init', '-q'], check=True)
+        subprocess.run(['git', '-C', str(self.local), 'update-index', '--add', '--cacheinfo',
+                        '160000,' + self.base + ',skills/demo/nested'], check=True)
+        self.assertEqual(self.run_report()['skills'][0]['status'], 'UNKNOWN')
+
     def test_path_escape_is_rejected(self):
         self.registry['skills'][0]['path'] = '../source/skills/demo'
         self.assertEqual(self.run_report()['skills'][0]['status'], 'UNKNOWN')

@@ -1,0 +1,65 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "fixture": {
+      "repository": "<fixture-root>/source",
+      "ref": "HEAD",
+      "license": "MIT",
+      "repositoryReview": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c"
+    }
+  },
+  "skills": [
+    {
+      "id": "review",
+      "path": "skills/review",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "fixture",
+          "path": "skills/review",
+          "importedRevision": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+          "reviewedRevision": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+          "localDigest": "sha256:82678f9b397f3817d724b55e57399ecb319dcdbd23be30f584d47a14c040c3fc",
+          "decisions": [
+            {
+              "revision": "1fb5fee3e8685b51fe54fee7b8e96f33c7ce862c",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Korean output and human publication decision."
+            },
+            {
+              "revision": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+              "paths": [
+                "references/rules.md"
+              ],
+              "decision": "adopt",
+              "reason": "Report the test command and observed result for each finding, unchanged from the pinned upstream revision.",
+              "report": "reports/upstream-sync.md"
+            },
+            {
+              "revision": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Link the review rules from the entrypoint so the adopted evidence requirement is reachable.",
+              "report": "reports/upstream-sync.md"
+            },
+            {
+              "revision": "aed5a773ac4ddd43fefd8526f713b520a4c3a6d2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain Korean output and the human publication decision; upstream English output is incompatible with the authorized local policy.",
+              "report": "reports/upstream-sync.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  ]
+}

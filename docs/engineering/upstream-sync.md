@@ -1,12 +1,16 @@
-# upstream-sync
-
 ## What it does
 
 Compares a skill's source version, the newer upstream version, and the local copy. It identifies improvements worth adopting while preserving local requirements. A newer upstream file is a candidate for review, never proof that replacing our copy is correct.
 
 ## When to reach for it
 
-Type `/upstream-sync` (or `$upstream-sync` in Codex), or let the agent reach for it when a task fits. Use it when a benchmark repository changed, you need to identify where a skill came from, or you want to apply selected upstream improvements. Ordinary package upgrades belong in the package manager's workflow.
+Type `/upstream-sync` (or `$upstream-sync` in Codex), or let the agent reach for it when a task fits. Reach for it when:
+
+- A benchmark repository changed.
+- You need to identify where a skill came from.
+- You want to apply selected upstream improvements.
+
+Ordinary package upgrades belong in the package manager's workflow.
 
 ## Prerequisites
 
@@ -21,7 +25,10 @@ A Git source checkout and a local skill workspace. Python 3.9 or newer runs the 
 | We intentionally diverge | Keep the local behavior and record why. |
 | A dependency, origin, or evaluation is missing | Defer the change without advancing its review baseline. |
 
-A report-only request produces findings. An apply request produces the authorized patch and verification. Metadata distinguishes direct copies, adaptations, composite skills, and original work influenced by other repositories.
+- A report-only request produces findings.
+- An apply request produces the authorized patch and verification.
+
+Metadata distinguishes direct copies, adaptations, composite skills, and original work influenced by other repositories.
 
 ## Common questions
 

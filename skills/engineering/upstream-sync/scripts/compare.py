@@ -50,8 +50,17 @@ def local_tree(root, path):
             raise ValueError('Local symlinks are unsupported')
     if not folder.resolve().is_relative_to(root) or not folder.is_dir():
         raise ValueError('Local skill directory is missing or outside the workspace')
+    # A Git worktree can contain uninitialized gitlinks with no .git marker.
+    try:
+        index = git(root, 'ls-files', '--stage', '-z', '--', path)
+    except subprocess.CalledProcessError:
+        index = b''  # Plain fixture or installed skill workspace.
+    if any(entry.startswith(b'160000 ') for entry in index.split(b'\0')):
+        raise ValueError('Local submodules are unsupported')
     tree = {}
     for file in sorted(folder.rglob('*')):
+        if file.name == '.git':
+            raise ValueError('Nested Git repositories and local submodules are unsupported')
         if file.is_symlink():
             raise ValueError('Local symlinks are unsupported')
         if file.is_dir():
@@ -115,7 +124,8 @@ def report(registry, source_id, upstream, target, local_root):
             path = origin.get('reviewPath', origin['path'])
             known.add(path)
             row = {'id': skill['id'], 'localPath': skill['path'], 'sourcePath': path,
-                   'base': origin.get('reviewedRevision') or origin.get('importedRevision')}
+                   'base': origin.get('reviewedRevision') or origin.get('importedRevision'),
+                   'pending': [d for d in origin.get('decisions', []) if d.get('decision') == 'defer']}
             try:
                 base = revision(upstream, row['base'])
                 if subprocess.run(['git', '-C', str(upstream), 'merge-base', '--is-ancestor', base, target],
@@ -125,8 +135,7 @@ def report(registry, source_id, upstream, target, local_root):
                 new = source_tree(upstream, target, path)
                 local = local_tree(local_root, skill['path'])
                 row.update(localDigest=digest(local), upstreamChanges=changes(old, new),
-                           localChanges=changes(old, local), differencesFromTarget=changes(new, local),
-                           pending=[d for d in origin.get('decisions', []) if d.get('decision') == 'defer'])
+                           localChanges=changes(old, local), differencesFromTarget=changes(new, local))
                 row['localDrift'] = None if not origin.get('localDigest') else origin['localDigest'] != row['localDigest']
                 row['status'] = 'REVIEW' if row['upstreamChanges'] or row['pending'] or row['localDrift'] is not False else 'UNCHANGED'
             except (KeyError, ValueError, OSError, subprocess.CalledProcessError) as exc:
