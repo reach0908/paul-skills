@@ -1,35 +1,13 @@
 # Scope
 
-This repo is the set of skills I use every day. It is curated: ideas are welcome, and each one is judged against the bar below. Issues are for tracking changes to the skills. Questions and discussion go to [GitHub Discussions](https://github.com/mattpocock/skills/discussions).
+Paul Skills is a human-in-the-loop library of small, composable skills for engineering and productivity. It forks mattpocock/skills to reuse its authoring, documentation, routing, and Changesets process.
 
-## The bar
+A change needs a concrete user task or observed failure, a bounded skill responsibility, and observable evidence that the result helps. New skills and migrations are welcome when existing skills do not already cover the need. Record provenance and license before importing; private-source publication needs its own clearance.
 
-An idea or feedback issue stays open only if it clears **both** parts:
+Promoted skills have docs, a router entry, plugin membership, and verification evidence. Experimental work belongs in `in-progress/`. `misc/` stays frozen and `deprecated/` retains retirement guidance. Upstream decisions in `.out-of-scope/` remain historical context; this fork's explicit scope takes precedence, including permission to add our own skills and evaluation tools.
 
-1. **Observed failure.** It describes something that went wrong in a real session: what you ran, what the skill did, what you expected. A hypothetical improvement ("it would be better if...") does not clear this part.
-2. **Fits the philosophy.** It does not match anything in [`.out-of-scope/`](./.out-of-scope/) or a past rejection, and it is not a config option, a harness-specific branch, or a tweak to suit one person's workflow. Those belong in your own `CLAUDE.md` / `AGENTS.md`, or in a fork (skills.sh gives you an editable copy).
+The human owns intent, consequential decisions, and publication scope. A skill completes already authorized work without asking for repetitive confirmation. Autonomous agent orchestration is optional, never a prerequisite for using this library.
 
-Size is irrelevant: a one-word fix and a rewrite face the same bar. Reactions and +1 comments do not count towards it.
+Prefer task success, preserved intent, human effort, and cost per successful task over an external prose score. Model recommendations require measured comparisons. A shorter prompt alone does not prove lower total cost.
 
-## By bucket
-
-- **`engineering/`, `productivity/`, `in-progress/`**: the bar above.
-- **`misc/`**: frozen and unmaintained. Every issue is closed. See [`frozen-misc-skills.md`](./.out-of-scope/frozen-misc-skills.md).
-- **New skills**: proposals and contributions are closed. If the behaviour composes from existing skills, it does not get a new one. See [`new-skills.md`](./.out-of-scope/new-skills.md).
-
-## Already decided
-
-Each file in [`.out-of-scope/`](./.out-of-scope/) records one rejected concept and why. Read them before filing:
-
-- [`frozen-misc-skills.md`](./.out-of-scope/frozen-misc-skills.md)
-- [`harness-name-collisions.md`](./.out-of-scope/harness-name-collisions.md)
-- [`mainstream-issue-trackers-only.md`](./.out-of-scope/mainstream-issue-trackers-only.md)
-- [`native-question-tool.md`](./.out-of-scope/native-question-tool.md)
-- [`new-skills.md`](./.out-of-scope/new-skills.md)
-- [`question-limits.md`](./.out-of-scope/question-limits.md)
-- [`setup-skill-verify-mode.md`](./.out-of-scope/setup-skill-verify-mode.md)
-- [`subagent-recursion.md`](./.out-of-scope/subagent-recursion.md)
-
-## Unclear issues
-
-An issue that can't be judged against the bar gets one round of questions and the `needs-info` label. With no reply from the reporter in 14 days, it is closed. Rejections close as "not planned".
+Report failures with the skill/source revision, host/model, request, actual and expected result, and redacted artifacts. Triage follows [the inherited label roles](docs/agents/triage-labels.md). Scope decisions should be recorded with their reason.

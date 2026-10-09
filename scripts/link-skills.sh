@@ -1,16 +1,8 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-# NOTE: This is a dev-only script, intended for use by maintainers of this repo.
-# It is not a supported installer. Modifications to it, or requests for
-# modifications, will not be approved.
-#
-# Links all skills in the repository into the local skill directories used by
-# each agent harness:
-#   - ~/.claude/skills: Claude Code
-#   - ~/.agents/skills: Codex and other Agent Skills-compatible harnesses
-# Each entry is a symlink into this repo, so a `git pull` is all that's needed
-# to keep installed skills up to date.
+# Maintainer-only symlinks. Existing files and foreign links are never replaced.
+# Use an isolated HOME to test before touching a daily workspace.
 
 REPO="$(cd "$(dirname "$0")/.." && pwd)"
 DESTS=("$HOME/.claude/skills" "$HOME/.agents/skills")
@@ -30,33 +22,29 @@ while IFS= read -r -d '' skill_md; do
   srcs+=("$src")
 done < <(find "$REPO/skills" -name SKILL.md -not -path '*/node_modules/*' -not -path '*/deprecated/*' -not -path '*/misc/*' -print0)
 
+# Check every destination before creating any link.
 for DEST in "${DESTS[@]}"; do
-  # If $DEST is a symlink that resolves into this repo, we'd end up writing the
-  # per-skill symlinks back into the repo's own skills/ tree. Detect and bail
-  # out instead of polluting the working copy.
   if [ -L "$DEST" ]; then
-    resolved="$(readlink -f "$DEST")"
-    case "$resolved" in
-      "$REPO"|"$REPO"/*)
-        echo "error: $DEST is a symlink into this repo ($resolved)." >&2
-        echo "Remove it (rm \"$DEST\") and re-run; the script will recreate it as a real dir." >&2
-        exit 1
-        ;;
-    esac
+    echo "error: destination is a symlink: $DEST" >&2
+    exit 1
   fi
-
-  mkdir -p "$DEST"
-
   for i in "${!names[@]}"; do
-    name="${names[$i]}"
-    src="${srcs[$i]}"
-    target="$DEST/$name"
-
-    if [ -e "$target" ] && [ ! -L "$target" ]; then
-      rm -rf "$target"
+    target="$DEST/${names[$i]}"
+    if [ -e "$target" ] || [ -L "$target" ]; then
+      if [ ! -L "$target" ] || [ "$(readlink "$target")" != "${srcs[$i]}" ]; then
+        echo "error: existing install would be replaced: $target" >&2
+        exit 1
+      fi
     fi
-
-    ln -sfn "$src" "$target"
-    echo "linked $name -> $src ($DEST)"
+  done
+done
+for DEST in "${DESTS[@]}"; do
+  mkdir -p "$DEST"
+  for i in "${!names[@]}"; do
+    target="$DEST/${names[$i]}"
+    if [ ! -L "$target" ]; then
+      ln -s "${srcs[$i]}" "$target"
+    fi
+    echo "linked ${names[$i]} -> ${srcs[$i]} ($DEST)"
   done
 done

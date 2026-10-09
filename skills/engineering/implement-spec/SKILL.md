@@ -2,6 +2,8 @@
 name: implement-spec
 description: "Implement the result of /to-spec and /to-tickets in code."
 disable-model-invocation: true
+metadata:
+  provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 You have been provided a spec. This spec should have tickets associated with it, describing how to implement the spec.

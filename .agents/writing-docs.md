@@ -48,7 +48,7 @@ The questions readers really ask about this skill, each in bold with the answer 
 An observed question always beats an invented one, so go and find them before you write any:
 
 - **The wiki.** If `~/repos/matt/personal-wiki` exists on this machine, it is the richest source there is. Its `wiki/audience/` area is organised around what the audience wants, discusses, and **is confused by**: read `wiki/index.md` first for the registry of pages, then the pages bearing on this skill. Every page carries `sources:` linkbacks to the original X, Discord, GitHub, and email threads; the wiki is a secondary source, so quote the asker's own question rather than the wiki's summary of it. Skip this bullet where the directory does not exist.
-- **This repo's issues.** `gh issue list --repo mattpocock/skills --search "<skill-name>" --state all`. A question filed twice is a question the page owes an answer to.
+- **This repo's issues.** `gh issue list --repo reach0908/paul-skills --search "<skill-name>" --state all`. A question filed twice is a question the page owes an answer to.
 - **`CHANGELOG.md`.** Anything renamed, moved, or behaviourally changed generates a "where did it go?" that the page has to answer.
 
 Where the hunt comes up thin, the section may also carry a question a reader would plainly ask, but **the count stays honest to the evidence**. A well-discussed skill earns six; an obscure one earns one or two, or none at all. Padding a thin skill out to match a rich one is how the section fills with questions nobody has, and an invented question teaches the reader nothing.
@@ -65,7 +65,7 @@ Always present. Situate the skill in the system in a sentence or two:
 
 - **Role.** Name it: a **chain step** (`grill-with-docs → to-spec → to-tickets → implement → code-review`), a **run-once setup** (`setup-matt-pocock-skills`), **periodic maintenance** (`improve-codebase-architecture`, "every few days"), or a **reach-for-it-anytime standalone** (`diagnosing-bugs`, `prototype`, `handoff`). A standalone's map is one honest sentence, which is far better than omitting the section.
 - **Neighbours.** The one or two siblings that matter, each with a because-clause, linked absolutely.
-- **The map.** Point to [ask-matt](https://aihero.dev/skills-ask-matt), the router over the whole set, so this page stays a node and never has to redraw the graph.
+- **The map.** Point to [ask-matt](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/ask-matt.md), the router over the whole set, so this page stays a node and never has to redraw the graph.
 
 </page-template>
 
@@ -94,3 +94,7 @@ Always present. Situate the skill in the system in a sentence or two:
 - Every `## It's working if` bullet is checkable without opening `SKILL.md`.
 - The sections appear in the template's order.
 - Every link is absolute, and every one resolves.
+
+## Fork publishing
+
+The fork has no aihero.dev publishing integration. Link local docs using absolute GitHub URLs under `reach0908/paul-skills/blob/main/docs/`; the root README carries installation commands. Existing upstream docs and historical ADRs retain their source context until revised. For a new skill, user requests are valid evidence for Common questions.

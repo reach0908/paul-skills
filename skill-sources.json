@@ -1,0 +1,988 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "mattpocock-skills": {
+      "repository": "https://github.com/mattpocock/skills",
+      "ref": "main",
+      "license": "MIT",
+      "repositoryReview": "b0618bc436ad893b3c5e84e55fba86586d34a404"
+    },
+    "paul-loop": {
+      "repository": "https://github.com/reach0908/paul-loop",
+      "ref": "main",
+      "license": "MIT"
+    }
+  },
+  "skills": [
+    {
+      "id": "ask-matt",
+      "path": "skills/engineering/ask-matt",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/ask-matt",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:3852a47cb6c9bcd1b0f71a61a6b84c82f974999003edf2cc514655d4adcad6d7",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits. Include the local upstream-sync route."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "code-review",
+      "path": "skills/engineering/code-review",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/code-review",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:9e665dc079428e61ad808ae4e7d055ec346b832ab21b9a0f47a49b6f5af600f1",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "codebase-design",
+      "path": "skills/engineering/codebase-design",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/codebase-design",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:08b0266126c6ecbb19821d0aa5d75176af0731158aef3f2f4eb2672d54c4a70b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "diagnosing-bugs",
+      "path": "skills/engineering/diagnosing-bugs",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/diagnosing-bugs",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:feeb72cb358147a2a7f78a15934adef4a34aeddd3291ea3c23d3f99d447dcf91",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "domain-modeling",
+      "path": "skills/engineering/domain-modeling",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/domain-modeling",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:93ffec1622982bc198c4e812bd7de35f12bafcd5b7018b70be84d232e59f43dc",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grill-with-docs",
+      "path": "skills/engineering/grill-with-docs",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/grill-with-docs",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:d8aea758e62aa83a2f575a1197d0aeaa85b5c98224ca81f162e0e5d5f41b8fce",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "implement",
+      "path": "skills/engineering/implement",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/implement",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1990843a24edd9c39d79b68f9c1ecdd3df89d0a1c983c8ed80f03d578e094732",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "implement-spec",
+      "path": "skills/engineering/implement-spec",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/implement-spec",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:8ddcae0c25698ded4585595a868c267cbcafee80baa5611176b01cc9cdb127e8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "improve-codebase-architecture",
+      "path": "skills/engineering/improve-codebase-architecture",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/improve-codebase-architecture",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a7b708126f769769b641e61dbe408f877fb804af430dbc1dc21fcedda3300932",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "pr",
+      "path": "skills/engineering/pr",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/pr",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a02864ee434a77503064a384d79efecc03a9588b9815447ca0eb3032e1048bf2",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "prototype",
+      "path": "skills/engineering/prototype",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/prototype",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:63e8f2fb183a7e141c971966edb2d6bc2547df84f19d70d0ebbbe91d769e1ddf",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "research",
+      "path": "skills/engineering/research",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/research",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:5a7775c519157ffd4f9a705008800b62e32124fb050fbd8da447b1306ca4c4c6",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "retro",
+      "path": "skills/engineering/retro",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/retro",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:bf0daf080ad5a78d4fdb446b3854b79beea1e7a201f428cf1bd9c176fadf913d",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "path": "skills/engineering/setup-matt-pocock-skills",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/setup-matt-pocock-skills",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:105130bd861305afb2d6be69409dd47b2a159c5af6fea5813ab3c8e7f03457c5",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "tdd",
+      "path": "skills/engineering/tdd",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/tdd",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c63d02d45192be615498af86dfa89fd0e2a26d87e9090aa24b8d6f24cd9085f3",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-spec",
+      "path": "skills/engineering/to-spec",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/to-spec",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:273ba75bc4fc47625443fef4f02c46b84f35a9388a48c312ef6388666269d6c1",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-tickets",
+      "path": "skills/engineering/to-tickets",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/to-tickets",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:916d9f4774fed02fca28cad7823bf25bb7d42cfbda393f715bc3c03ff2e635d4",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "triage",
+      "path": "skills/engineering/triage",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/triage",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:031a870028b41800bc5dfd5ad294c7423b89691237f4fbe9f3667e06f9e64ca5",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "upstream-sync",
+      "path": "skills/engineering/upstream-sync",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/writing-for-agents",
+          "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reason": "Authoring principles and skill packaging."
+        },
+        {
+          "source": "paul-loop",
+          "path": "tools/ship-flow/skills/vendor-sync",
+          "revision": "7c95bb3f60e2ae6334bddf452be1852fbad3fd05",
+          "reason": "Three-way review, deliberate local divergence, and inspect/apply scope. New portable implementation; no loop-engine dependency."
+        }
+      ]
+    },
+    {
+      "id": "wayfinder",
+      "path": "skills/engineering/wayfinder",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/wayfinder",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1892db9c5b6c86c0f96fa8c91f03dbac047dacc2ce4be04fafd9df7effbe1458",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "wizard",
+      "path": "skills/engineering/wizard",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/wizard",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a7485a7bfd6f4b3b5d3953cee54bdc170b4668b8d5f672d24fe0cda6c660e2f8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "chief-of-staff",
+      "path": "skills/in-progress/chief-of-staff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/chief-of-staff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:b2f3e9e0322aca7aa9f494000fba87809c89cef6dd45c500047012c0b0778a4e",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "claude-handoff",
+      "path": "skills/in-progress/claude-handoff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/claude-handoff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:240bd03e80544f578af8a4bcb7b731e5ab2999d0040fb3eec125d44e4622cb81",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "loop-me",
+      "path": "skills/in-progress/loop-me",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/loop-me",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:72ccd65dff3611ca7856b6aab6aeb1fd6e4673bc04e05a386a4d0318a0c0efa2",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-ts-deep-modules",
+      "path": "skills/in-progress/setup-ts-deep-modules",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/setup-ts-deep-modules",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:4f1acf3d5972a5460b11055eb8445521ab88d6f060c57b863d5c9cdaa918ef1e",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-beats",
+      "path": "skills/in-progress/writing-beats",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-beats",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:eec431ba99eaa3227303d485185a8f87215ebb4de325a3fd25f267ed9462bd0f",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-fragments",
+      "path": "skills/in-progress/writing-fragments",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-fragments",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c749f86f39e94a4dba2272665d97ab8445d70962e3fee579a6e9102243f73c39",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-shape",
+      "path": "skills/in-progress/writing-shape",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-shape",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:7a991297f19c9d2d99d24082c5b9bc75100169a262ec03594a8bd30fc25c0c8b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "git-guardrails-claude-code",
+      "path": "skills/misc/git-guardrails-claude-code",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/git-guardrails-claude-code",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:2e949ae93bc2c7c5134057f7e3ff01696fcbecdf0f0ad7073a2b2e92fb687aa8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "migrate-to-shoehorn",
+      "path": "skills/misc/migrate-to-shoehorn",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/migrate-to-shoehorn",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:f32d728cd21733d4b448e0fad9f70a73086e74ee64f31fbe9aa148c749f2c83c",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "scaffold-exercises",
+      "path": "skills/misc/scaffold-exercises",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/scaffold-exercises",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:2b550c818f3a8f72cc2c483cfe5ed837763622639d00f5546a2c8adfdeee0ef7",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-pre-commit",
+      "path": "skills/misc/setup-pre-commit",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/setup-pre-commit",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:5ec2f3e9d0ef380558795e57818be3a4ef7d57005618642501db775337614338",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grill-me",
+      "path": "skills/productivity/grill-me",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/grill-me",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c35b7605b2435aa942fe6ce7e79079583b13cc05b6e6ed631cc38bfbf2435611",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grilling",
+      "path": "skills/productivity/grilling",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/grilling",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1e92bdd2a12406da164abd3b85473054bde9abbd00cf3ba4abc6e0ef8efb641b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "handoff",
+      "path": "skills/productivity/handoff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/handoff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a1123f400a2e424cb569fd26ac4b2e51bd1c83d47db3dc09f04ac108aa9aa18b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "teach",
+      "path": "skills/productivity/teach",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/teach",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:fbd4511a356bf4d289dd405d4d7f22b6c098a406f45ae5f8c97b624390db01e4",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-questionnaire",
+      "path": "skills/productivity/to-questionnaire",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/to-questionnaire",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:346b8c5c011e5b232d373452bc0517c100f24d4fc18cff62fcdfdd6934c29921",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "wait-what",
+      "path": "skills/productivity/wait-what",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/wait-what",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:fa2014e0d0dcd7065e873c0fbfe8b8e50abaa0a5e534cc23236793cb363b7b52",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-for-agents",
+      "path": "skills/productivity/writing-for-agents",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/writing-for-agents",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:93b963003258a9b1ee7aa5c84cb30a7f8a8664a353e1b869a849e93657437944",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  ]
+}

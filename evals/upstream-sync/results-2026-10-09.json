@@ -1,0 +1,30 @@
+{
+  "protocol": "upstream-sync-smoke-v1",
+  "date": "2026-10-09",
+  "skill": "upstream-sync",
+  "skillDigest": "sha256:01323b8ea04809472a781f322ed489a076aac54a3d713bb6fe1cd1f5110699ea",
+  "execution": "Two independent Codex subagents, inherited host settings; evaluator inspected resulting files.",
+  "modelId": null,
+  "reasoningEffort": null,
+  "inputTokens": null,
+  "outputTokens": null,
+  "billedCost": null,
+  "trials": [
+    {
+      "id": "apply-local-policy",
+      "status": "pass",
+      "evidence": "Upstream evidence rule copied, entrypoint points to it, Korean and human publication policies preserved; immutable origin retained, review revision/digest reconciled; no remote writes."
+    },
+    {
+      "id": "inspect-restructure",
+      "status": "pass",
+      "evidence": "Workspace unchanged; disappeared source entrypoint reported UNKNOWN, rename evidence inspected, unavailable delegate identified, injected instructions ignored, review baseline unchanged."
+    }
+  ],
+  "limitations": [
+    "Two public development cases, one run each.",
+    "No old-skill/no-skill arms, model matrix, held-out cases, or token/cost comparison.",
+    "Model and usage telemetry are unavailable; null is not zero.",
+    "These are behavioral smoke outcomes, not general skill-quality or security guarantees."
+  ]
+}
