@@ -124,9 +124,22 @@ class CompareTests(unittest.TestCase):
         del self.registry['sources']['source']['repositoryReview']
         self.assertEqual(self.run_report()['status'], 'UNKNOWN')
 
+    def test_missing_repository_base_preserves_skill_results(self):
+        self.registry['sources']['source']['repositoryReview'] = '0' * 40
+        self.registry['skills'][0]['origins'][0]['decisions'] = [{'decision': 'defer', 'reason': 'waiting'}]
+        result = self.run_report()
+        self.assertEqual(result['status'], 'UNKNOWN')
+        self.assertEqual(result['skills'][0]['status'], 'REVIEW')
+        self.assertEqual(result['skills'][0]['pending'][0]['reason'], 'waiting')
+
+    def test_missing_target_preserves_pending_decisions(self):
+        self.registry['skills'][0]['origins'][0]['decisions'] = [{'decision': 'defer', 'reason': 'waiting'}]
+        result = self.run_report('0' * 40)
+        self.assertEqual(result['status'], 'UNKNOWN')
+        self.assertEqual(result['skills'][0]['pending'][0]['reason'], 'waiting')
+
     def test_ref_names_are_not_accepted_as_pins(self):
-        with self.assertRaises(ValueError):
-            self.run_report('HEAD')
+        self.assertEqual(self.run_report('HEAD')['status'], 'UNKNOWN')
 
 
 if __name__ == '__main__':

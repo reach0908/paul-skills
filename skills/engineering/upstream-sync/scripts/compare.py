@@ -103,19 +103,19 @@ def report(registry, source_id, upstream, target, local_root):
     if registry.get('schemaVersion') != 1:
         raise ValueError('Unsupported registry schemaVersion')
     source = registry['sources'][source_id]
-    revision(upstream, target)
     result = {'source': source_id, 'repository': source['repository'], 'target': target,
               'freshness': 'pinned-checkout-only; verify remote separately', 'skills': [], 'status': 'COMPARED'}
     review = source.get('repositoryReview')
-    if review:
+    try:
+        revision(upstream, target)
+        if not review:
+            raise ValueError('No completed repository review is recorded')
         revision(upstream, review)
         result['repositoryBase'] = review
         result['repositoryChanges'] = git(upstream, 'diff', '--name-status', '--find-renames', review, target, '--').decode()
         result['commits'] = git(upstream, 'log', '--format=%h %s', review + '..' + target, '--').decode().splitlines()
-    else:
-        result['repositoryChanges'] = None
-        result['repositoryReviewStatus'] = 'UNKNOWN'
-        result['status'] = 'UNKNOWN'
+    except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+        result.update(repositoryChanges=None, repositoryReviewStatus='UNKNOWN', repositoryError=str(exc), status='UNKNOWN')
     known = set()
     for skill in registry['skills']:
         for origin in skill.get('origins', []):
@@ -127,6 +127,7 @@ def report(registry, source_id, upstream, target, local_root):
                    'base': origin.get('reviewedRevision') or origin.get('importedRevision'),
                    'pending': [d for d in origin.get('decisions', []) if d.get('decision') == 'defer']}
             try:
+                revision(upstream, target)
                 base = revision(upstream, row['base'])
                 if subprocess.run(['git', '-C', str(upstream), 'merge-base', '--is-ancestor', base, target],
                                   stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL).returncode != 0:
@@ -142,8 +143,12 @@ def report(registry, source_id, upstream, target, local_root):
                 row.update(status='UNKNOWN', error=str(exc))
                 result['status'] = 'UNKNOWN'
             result['skills'].append(row)
-    names = git(upstream, 'ls-tree', '-rz', '--name-only', target).decode().split('\0')
-    result['newCandidates'] = sorted(str(PurePosixPath(p).parent) for p in names if p.endswith('/SKILL.md') and str(PurePosixPath(p).parent) not in known)
+    try:
+        revision(upstream, target)
+        names = git(upstream, 'ls-tree', '-rz', '--name-only', target).decode().split('\0')
+        result['newCandidates'] = sorted(str(PurePosixPath(p).parent) for p in names if p.endswith('/SKILL.md') and str(PurePosixPath(p).parent) not in known)
+    except (ValueError, OSError, subprocess.CalledProcessError) as exc:
+        result.update(newCandidates=None, discoveryError=str(exc), status='UNKNOWN')
     return result
 
 
