@@ -1,73 +1,76 @@
 ## What it does
 
-`research` answers a question by reading the sources that own the answer, then leaves a cited Markdown file in the repo. It works only from **[primary sources](https://www.aihero.dev/ai-coding-dictionary/primary-source)**: official docs, source code, specs, first-party APIs. It follows every claim back to the source that owns it, so it will not repeat a blog post's account of an API when the API's own docs are reachable.
+`research` answers a bounded question from [primary sources](https://www.aihero.dev/ai-coding-dictionary/primary-source) and saves a cited Markdown file for the next decision or task. Questions about live websites use the Aside CLI. Supplied files, source code, and local records can be investigated directly.
 
-It does not answer you in the conversation. The output is a file, written where the repo already keeps such notes, with a link on each claim. You get a document you can react to, hand to another agent, or throw away, rather than an answer that is gone when the [session](https://www.aihero.dev/ai-coding-dictionary/session) ends.
+The conclusion is checked against original evidence, including dates, versions, and counterevidence. Aside's report is input to that check. Every scoped question ends with an evidenced answer or an explicit unresolved gap.
 
 ## When to reach for it
 
-Type `/research`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically when a task turns into reading legwork.
+Type `/research`, or the agent reaches for it automatically when a task needs an investigation.
 
-Reach for it when the next step is *finding something out* from outside the working directory (how a third-party API behaves, what a spec says, whether a version claim holds), and you'd rather not stall your own thread doing the reading. What you need decides which skill:
-
-| What you need | Reach for |
+| What you need | Route |
 | --- | --- |
-| An external fact a decision is waiting on | `research` |
-| A decision made *with* you, by interview | [grilling](https://aihero.dev/skills-grilling) |
-| A durable architecture decision, written into `GLOSSARY.md` and ADRs | [grill-with-docs](https://aihero.dev/skills-grill-with-docs) |
-| To find out whether an approach works in your codebase | [prototype](https://aihero.dev/skills-prototype) |
-| A plan too big to hold in one session | [wayfinder](https://aihero.dev/skills-wayfinder) |
+| A fact in supplied files or local source code | Local investigation |
+| Current docs, API behavior, comparisons, or evidence on websites | Aside web research |
+| A question needing both local and external evidence | Local investigation plus a scoped Aside brief |
+| A decision sharpened in conversation | [grilling](https://github.com/reach0908/paul-skills/blob/main/docs/productivity/grilling.md) |
+| A runnable answer about an approach | [prototype](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/prototype.md) |
 
-The line between `research` and `grill-with-docs` is the **shelf life of what comes back**. Research produces short-lived facts, such as what this library's auth mechanism does as of this week. An ADR records a decision you keep. If what you are producing is a decision rather than a fact, you are [grilling](https://www.aihero.dev/ai-coding-dictionary/grilling), not researching.
+## Prerequisites
 
-## Delegated legwork
+The findings need a writable destination. A caller can provide the path; otherwise the skill follows the repo's notes convention and reports the location.
 
-The reading runs as a **background agent**. You keep working while it follows each claim to its primary source, writes one Markdown file, and reports back. Research is legwork you delegate, not thinking you outsource. You get a document to grill, plan, or design against, and you still make the decision.
+Web research needs Python 3 and a working, authenticated Aside CLI. The skill checks the executable, version, and relevant command help before starting. CLI installation, updates, and account setup are separate actions.
 
-Nothing stops the background agent from spawning another background agent of its own. This is the skill's best-documented problem.
+## Scope and evidence
 
-The repo decides where the file goes, not the skill. It follows whatever convention already exists for notes. If there is none, it picks a sensible place and tells you where. It writes one file per run.
+The **scope** names the purpose, questions, audience, exclusions, and time or version boundary. Existing context supplies it whenever possible. A question is asked only when a missing choice would materially change the answer.
+
+For web questions, Aside receives a self-contained brief with the source policy, search plan, counterevidence, and required output. The default effort is `ultrabrowse`; a requested lighter pass can preserve the user's configured effort. The user's model, provider, account, host, and permission settings are retained.
+
+The saved file distinguishes evidence, source-owner claims, inference, and recommendations. Important web claims carry a ledger with original URLs, dates or versions, confidence and its reason, and missing checks. A narrow source or an inaccessible page limits the conclusion.
+
+## One execution owner
+
+A [subagent](https://www.aihero.dev/ai-coding-dictionary/subagent) already assigned a research task performs it directly. For a standalone invocation, a caller with other work can delegate to one background executor. An inline run handles the task when there is no useful concurrent work or the harness lacks delegation.
+
+The same rule applies when [wayfinder](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/wayfinder.md) supplies a research executor. That executor uses Aside for web discovery and returns its findings to the caller.
 
 ## Common questions
 
-**It spawned a second research agent. Is that meant to happen?**
+**Does this call the separate `research-with-aside` skill?**
 
-No. This is an open bug, [issue #530](https://github.com/mattpocock/skills/issues/530). The skill tells its caller to spin up a background agent but does not restrict the agent type. So the caller spawns a `general-purpose` agent, which has the `Agent` tool and the same instructions, and follows them again. One reporter measured a single research task costing roughly 450k [tokens](https://www.aihero.dev/ai-coding-dictionary/token) across three overlapping runs, and the duplicate finished half an hour later where the user could not see it. It also happens outside Claude Code. Users confirmed the same nesting in Codex with GPT-5.6-sol. There is no shipped fix. Users have patched their own installed copy with a line telling an agent that is already a [subagent](https://www.aihero.dev/ai-coding-dictionary/subagent) to do the work itself, That helps, but it is only an instruction, not a structural fix. After you invoke the skill, watch your background task list and stop the duplicate.
+It runs the Aside workflow through its own reference and helper. The other skill supplied source material during authoring and has no runtime installation requirement.
 
-The opposite failure also happens. If your own global instructions forbid an agent from re-delegating work, the background agent declines the task, and the skill does nothing without telling you.
+**Which Aside features does research use?**
 
-**Where should the file live, and should I commit it?**
+`exec` performs discovery. A known session can be resumed, steered while running, or given a queued follow-up, retaining its existing settings. The launcher rejects empty or malformed session IDs before starting any CLI work. For direct source verification, the agent reads `guide repl` and the relevant built-in site skill before reusing matching tabs and taking browser snapshots. The built-in Aside session reader can recover a specific task's metadata and answer when stdout is unavailable. Features are checked against the installed help; a newer advertised version does not prove that the installed executable supports it.
 
-The skill puts the file where the repo already keeps notes and has no further opinion. The community view is mostly settled: keep ADRs, not research files. One Discord thread on this question put it most clearly: "ADRs yes. Everything else archive or delete after done. It otherwise becomes cruft of work and can poison future repo reads if you've drifted away from the spec/research." A research file records what was true on the day it was written, so a stale one is worse than none. On balance, these files don't belong in git, and there is no standard home for them. People use Obsidian, a separate knowledge repo, or the issue tracker instead.
+**What happens if Aside is missing or fails?**
 
-**What counts as a "high-trust" primary source, and who decides?**
+You receive the availability or execution failure together with the brief and any partial evidence. The agent asks you to restore Aside or authorize another web engine. It retains a known session ID for resuming an interrupted investigation.
 
-The [model](https://www.aihero.dev/ai-coding-dictionary/model) does. The skill names the *kinds* of source that qualify (official docs, source code, specs, first-party APIs), and there is no allowlist, no domain gate, and no verification pass. This was the loudest objection when the skill was first proposed, and nobody has answered it publicly: "Five research subagents pointed at junk just gives you five confident wrong answers faster. How are you gating what counts as high-trust sources?" Your only protection is the citation on each claim. Follow two or three of them. If they land on a summary of the thing rather than the thing, the run failed.
+**Can research create another research agent inside its executor?**
 
-**Does a later session reuse what an earlier run found?**
-
-No. Nothing loads a past research file automatically. The file stays in the repo until a human or a skill points at it. This was the strongest early challenge to the design: "the value's the markdown becoming context the agent re-reads later, not the fetch itself. A write-once dead file is just a fancy search." The shipped skill does not solve it. In practice, the file is useful only when you feed it into the next step yourself: attach it to a spec, quote it into a grilling session, point a [ticket](https://www.aihero.dev/ai-coding-dictionary/ticket) at it.
-
-**Why not just ask the agent to go read the docs?**
-
-You can, and a two-line prompt saying exactly that was the practice this skill replaced. The skill gives you two things the prompt does not. It runs in the background, so your session's [context](https://www.aihero.dev/ai-coding-dictionary/context) stays clean. And the primary-source constraint and the cited-file output are the same every time, rather than depending on how you phrased the prompt. Compared with a [harness](https://www.aihero.dev/ai-coding-dictionary/harness)'s own deep-research mode, the difference is the file and the primary-source rule, not the search. If a two-line prompt gets you what you need on a small question, use the two-line prompt.
+The executor's job is to investigate and return the artifact. Its caller owns dispatch, so an existing executor performs the work directly. The instructions define that boundary; behavior trials still need to show whether each host follows it.
 
 **When does it stop reading?**
 
-The skill has no stopping criterion. This shows up as two complaints that look opposite but have the same cause: agents that go far too deep, and agents that cover a topic broadly but miss the one detail that mattered. One practitioner put it as "deep-research skills are a bit too deep sometimes. And telling an agent to research usually results in missing crucial details." You have to set the scope. A narrow, answerable question (one API, one behaviour, one version claim) comes back far better than "research X".
+When every scoped question has supporting evidence or a stated unresolved gap. A follow-up needs a specific gap that could change the answer. Naming the questions controls the work.
 
-**`/wayfinder` created research tickets. Do I resolve those myself?**
+**Where should the file live, and should I commit it?**
 
-No, it now fires them for you. In the unreleased changes since v1.1, a charting session spawns one `/research` subagent per research ticket and runs them in parallel. Each one records its findings on a throwaway `research/<name>` branch, with a [context pointer](https://www.aihero.dev/ai-coding-dictionary/context-pointer) from the ticket. Research tickets are the one exception to wayfinder's one-ticket-per-session rule, because they are [AFK](https://www.aihero.dev/ai-coding-dictionary/afk): nothing waits on you. One known problem: deleting the branch later breaks the context pointers in the tickets.
+The caller's path takes priority, followed by the repo's existing convention. The skill saves the file and reports its absolute path. Your project decides whether to retain, commit, attach, or archive it. Recheck date-sensitive findings before reusing them.
 
 ## It's working if
 
-- Your own session keeps going. If you are sitting watching it read, the delegation didn't happen.
-- Exactly one new background task appears. A second one with a near-identical name is the nesting bug.
-- One new Markdown file shows up, in the folder the repo already uses for notes, and the agent tells you the path.
-- Every claim in it carries a link, and following two at random lands you on an official doc, a spec, or the source file itself, not on someone's write-up of it.
-- You can make the decision you were stuck on from the file alone, without going back to the sources yourself.
+- You can see the scoped questions and the output destination before investigation starts.
+- Local questions use the available files; web questions show an Aside availability check and run.
+- An existing research executor completes the task directly, with one output artifact.
+- Important claims link to original evidence and state dates, versions, and verification limits.
+- The saved file states what remains unresolved and what check would settle it.
+- A failed web run leaves a usable brief and its actual status.
 
 ## Where it fits
 
-`research` is a reach-for-it-anytime standalone. It feeds the thinking skills and is not a step in the build chain. You take its file *into* the flow. [grilling](https://aihero.dev/skills-grilling) and [grill-with-docs](https://aihero.dev/skills-grill-with-docs) ask sharper questions when they already have the facts, and [to-spec](https://aihero.dev/skills-to-spec) can synthesise against it. [wayfinder](https://aihero.dev/skills-wayfinder) is the one skill that invokes it directly. It resolves each research ticket on its map with a `/research` subagent. For the whole map, see [ask-matt](https://aihero.dev/skills-ask-matt).
+`research` is a reach-for-it-anytime standalone. [wayfinder](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/wayfinder.md) supplies research tickets; [grill-with-docs](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/grill-with-docs.md) can use the findings to sharpen and record a decision. [ask-matt](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/ask-matt.md) routes across the full set.

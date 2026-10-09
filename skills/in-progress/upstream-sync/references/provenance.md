@@ -41,3 +41,11 @@ Each decision records `revision`, affected `paths`, `decision` (`adopt`, `adapt`
 The helper hashes sorted relative file paths, Git-compatible executable modes, and SHA-256 file contents as compact JSON, then hashes that payload. Symlinks, submodules, paths escaping the workspace, or missing baseline trees fail closed. Its output includes `localDigest`; after an authorized, completed review copy that value into the relevant origin. Review uses all ordinary files; remove accidental cache files before stamping. There is no automatic stamp command.
 
 For a new source, save its canonical repository URL, ref, verified license, and exact import commit. Add one skill record per local skill, with all direct origins. Registration is a write operation: in report-only work, propose the metadata without changing it.
+
+## User-supplied local sources
+
+A local skill supplied for adaptation may have no Git repository or declared license. Record it in `localSources`, separately from Git-backed `sources`, and list the consuming skill's `localOrigins`. This is a direct source of copied or adapted material, not an influence. Use `composite` when a skill combines Git and local direct sources.
+
+Each local source records a portable locator such as `local-skill:<name>`, the relative filenames actually used and their SHA-256 content digests, a `digest`, and the known license/permission status. The source digest is SHA-256 of compact JSON containing sorted `(relative filename, file digest)` pairs. A null license records an undeclared license; user authorization for local adaptation does not imply redistribution clearance. Keep personal filesystem paths and unrelated files out of the public inventory.
+
+A `localOrigins` entry names the source, its immutable `importedDigest`, the last completely reviewed `reviewedDigest`, and adaptation decisions. Compare a changed local source as a new content snapshot; preserve historical imported fields. Record a new source key for a new immutable snapshot. The existing Git comparison helper handles Git-backed origins only. A local source's review requires reading the actual recorded files and matching their hashes; inventory validation checks metadata consistency and is not a source-content or license verification.

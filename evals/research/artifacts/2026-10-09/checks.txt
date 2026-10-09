@@ -1,0 +1,48 @@
+
+> paul-skills@0.1.1 check
+> npm run check-plugin-version && python3 scripts/check-skills.py && npm test
+
+
+> paul-skills@0.1.1 check-plugin-version
+> node scripts/sync-plugin-version.mjs --check
+
+Plugin and lock metadata match package version 0.1.1
+39 skill records; 27 promoted paths; provenance and invocation consistent
+
+> paul-skills@0.1.1 test
+> PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+
+test_fresh_install_is_idempotent_and_links_support_files (test_dev_links.DevelopmentLinksTests) ... ok
+test_late_destination_collision_preserves_both_destinations (test_dev_links.DevelopmentLinksTests) ... ok
+test_publishes_only_version_and_rerun_preserves_tag (test_release_tag.ReleaseTagTests) ... ok
+test_check_does_not_start_research (test_research_aside.AsideResearchTests) ... ok
+test_default_effort_preserves_user_configuration (test_research_aside.AsideResearchTests) ... ok
+test_execution_failure_is_visible (test_research_aside.AsideResearchTests) ... ok
+test_failed_version_check_stops_before_discovery (test_research_aside.AsideResearchTests) ... ok
+test_invalid_brief_never_launches_aside (test_research_aside.AsideResearchTests) ... ok
+test_missing_cli_preserves_brief_and_reports_failure (test_research_aside.AsideResearchTests) ... ok
+test_prompt_is_one_literal_argument_and_report_streams (test_research_aside.AsideResearchTests) ... ok
+test_resume_uses_known_session_without_overriding_settings (test_research_aside.AsideResearchTests) ... ok
+test_running_followup_preserves_literal_prompt (test_research_aside.AsideResearchTests) ... ok
+test_deferred_work_does_not_disappear (test_upstream_compare.CompareTests) ... ok
+test_execution_mode_change_is_detected (test_upstream_compare.CompareTests) ... ok
+test_missing_repository_base_preserves_skill_results (test_upstream_compare.CompareTests) ... ok
+test_missing_repository_review_is_explicit (test_upstream_compare.CompareTests) ... ok
+test_missing_source_does_not_hide_pending_decision (test_upstream_compare.CompareTests) ... ok
+test_missing_source_path_is_unknown_and_rename_is_visible (test_upstream_compare.CompareTests) ... ok
+test_missing_target_preserves_pending_decisions (test_upstream_compare.CompareTests) ... ok
+test_multiple_sources_are_independent (test_upstream_compare.CompareTests) ... ok
+test_nested_repository_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_path_escape_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_ref_names_are_not_accepted_as_pins (test_upstream_compare.CompareTests) ... ok
+test_same_head_does_not_hide_local_edit (test_upstream_compare.CompareTests) ... ok
+test_symlink_is_rejected_without_reading_target (test_upstream_compare.CompareTests) ... ok
+test_three_way_preserves_local_and_catches_support_changes (test_upstream_compare.CompareTests) ... ok
+test_unchanged_is_read_only (test_upstream_compare.CompareTests) ... ok
+test_uninitialized_local_gitlink_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_unknown_history_is_not_unchanged (test_upstream_compare.CompareTests) ... ok
+
+----------------------------------------------------------------------
+Ran 29 tests in 9.014s
+
+OK
