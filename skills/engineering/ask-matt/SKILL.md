@@ -55,10 +55,6 @@ A starting situation that generates work, then merges onto the main flow.
 
   When the map clears, **it hands off, it doesn't build**: merge onto the main flow at **`/to-spec`**, which collapses the map's linked decisions into a buildable plan, then `/to-tickets` and `/implement` as usual. Looping the map straight into `/implement` skips that collapse and throws the linked detail away, so go straight to `/implement` only when the effort turned out genuinely small.
 
-## Skill library maintenance
-
-- **`/upstream-sync`** compares our skill sources at pinned commits, preserves local intent, and proposes or applies selected improvements within the user's scope. Use it for benchmark repository updates and provenance, independently of the idea-to-ship flow.
-
 ## Codebase health
 
 Not feature work, just upkeep.

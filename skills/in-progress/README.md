@@ -16,3 +16,4 @@ npx skills@latest add reach0908/paul-skills --skill=<name>
 - **[setup-ts-deep-modules](./setup-ts-deep-modules/SKILL.md)**: Wire dependency-cruiser into a TypeScript repo so each package is a deep module: implementation hidden in subfolders, reachable only through its entry-point files, tests exercising it through those. User-invoked.
 
 - **[chief-of-staff](./chief-of-staff/SKILL.md)**: Coordinate a stateful personal work overview. Experimental, outside the default plugin.
+- **[upstream-sync](./upstream-sync/SKILL.md)**: Review source repository changes and selectively improve local skills. Awaiting user validation and promotion approval; intended destination is `productivity/`.

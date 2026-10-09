@@ -1,5 +1,17 @@
 # Paul Skills
 
+Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
+
+## 0.1.0
+
+### Independent version baseline
+
+- Start Paul Skills at 0.1.0 with the inherited skill catalog, provenance registry, and evaluation tooling.
+- Move upstream-sync from engineering to in-progress pending user validation and explicit promotion approval. Remove it from the default plugin, promoted router, root skill index, and human docs; its intended destination after approval is productivity. The experimental skill's instructions and helpers are unchanged.
+- Require user validation and explicit approval before promoting new Paul-authored or newly migrated skills; passing tests or agent trials is not promotion approval.
+- Synchronize the package, plugin, and lockfile versions. Publish future releases as `paul-skills@<version>` so inherited upstream `v*` tags remain intact, including when Paul reaches 1.0.0.
+- Keep using Changesets for subsequent Paul releases. Track upstream revisions independently in `skill-sources.json`; upstream version numbers do not advance the Paul release sequence.
+
 ## 1.4.0
 
 ### Minor Changes

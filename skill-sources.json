@@ -24,7 +24,7 @@
           "path": "skills/engineering/ask-matt",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
           "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:3852a47cb6c9bcd1b0f71a61a6b84c82f974999003edf2cc514655d4adcad6d7",
+          "localDigest": "sha256:7aa057ba9d7febdcd394a9d1172cade032536a8f58731e1a2051db3d51f7cf31",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -32,7 +32,7 @@
                 "SKILL.md"
               ],
               "decision": "keep-local",
-              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits. Include the local upstream-sync route."
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits. The experimental upstream-sync route was removed pending user validation and promotion approval."
             }
           ]
         }
@@ -466,7 +466,7 @@
     },
     {
       "id": "upstream-sync",
-      "path": "skills/engineering/upstream-sync",
+      "path": "skills/in-progress/upstream-sync",
       "kind": "original",
       "origins": [],
       "influences": [

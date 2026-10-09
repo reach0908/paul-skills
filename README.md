@@ -2,7 +2,7 @@
 
 A human-in-the-loop skill library, forked from [mattpocock/skills](https://github.com/mattpocock/skills). It keeps the upstream bucket layout, writing guidance, docs, router, and Changesets release process, then adds source tracking and observable evaluations.
 
-Our first skill, **[upstream-sync](skills/engineering/upstream-sync/SKILL.md)**, reviews changes in source repositories and selectively brings useful improvements into local skills. It preserves local decisions and keeps pending changes visible.
+Paul Skills uses its own version sequence starting at **0.1.0**, with release tags named `paul-skills@<version>`. Upstream revisions are tracked separately. See the [version policy](docs/maintenance.md#independent-versions).
 
 - [Maintenance process](docs/maintenance.md): create, evaluate, review, release, and verify installation.
 - [Source inventory](skill-sources.json): exact origin commits, paths, licenses, and review baselines for every skill.
@@ -41,12 +41,12 @@ The host manages the installed bundle. Release versions come from `package.json`
 ## Editable or individual skills
 
 ```bash
-npx skills@latest add reach0908/paul-skills --skill upstream-sync
+npx skills@latest add reach0908/paul-skills --skill tdd
 ```
 
-For other skills, replace `upstream-sync` with the desired name. Run `npx skills@latest update` for existing installs; re-run `add` for new skills. These editable copies need manual updates.
+For other skills, replace `tdd` with the desired name. Run `npx skills@latest update` for existing installs; re-run `add` for new skills. These editable copies need manual updates.
 
-Inherited engineering flows still use `/setup-matt-pocock-skills` and `/ask-matt`; those names are retained for compatibility. `upstream-sync` is standalone and does not need the issue-tracker setup.
+Inherited engineering flows still use `/setup-matt-pocock-skills` and `/ask-matt`; those names are retained for compatibility.
 
 ## Reference
 
@@ -71,8 +71,6 @@ Skills I use daily for code work.
 - **[retro](./skills/engineering/retro/SKILL.md)**: Suggest improvements to the coding agent's environment (navigation, automated checks, coding standards, steering files, tooling) after a session, most severe first.
 
 **Model-invoked**
-
-- **[upstream-sync](./skills/engineering/upstream-sync/SKILL.md)**: Compare skill sources, preserve local intent, and review or apply selected upstream improvements.
 
 - **[prototype](./skills/engineering/prototype/SKILL.md)**: Build a throwaway prototype to answer a design question, either a single shareable HTML file for state/logic questions, or several radically different UI variations toggleable from one route.
 - **[diagnosing-bugs](./skills/engineering/diagnosing-bugs/SKILL.md)**: Disciplined diagnosis loop for hard bugs and performance regressions: build a feedback loop that goes red on this bug → minimise → hypothesise → instrument → fix → regression-test.

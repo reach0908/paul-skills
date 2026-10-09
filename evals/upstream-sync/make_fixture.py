@@ -8,7 +8,7 @@ import shutil
 import subprocess
 
 repo = Path(__file__).resolve().parents[2]
-spec = importlib.util.spec_from_file_location('compare', repo / 'skills/engineering/upstream-sync/scripts/compare.py')
+spec = importlib.util.spec_from_file_location('compare', repo / 'skills/in-progress/upstream-sync/scripts/compare.py')
 compare = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(compare)
 
