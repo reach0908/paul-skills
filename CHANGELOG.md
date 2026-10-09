@@ -1,4 +1,4 @@
-# mattpocock-skills
+# Paul Skills
 
 ## 1.3.1
 
