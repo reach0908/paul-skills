@@ -17,7 +17,7 @@
     {
       "id": "ask-matt",
       "path": "skills/engineering/ask-matt",
-      "kind": "forked",
+      "kind": "adapted",
       "origins": [
         {
           "source": "mattpocock-skills",
@@ -292,7 +292,7 @@
     {
       "id": "research",
       "path": "skills/engineering/research",
-      "kind": "forked",
+      "kind": "composite",
       "origins": [
         {
           "source": "mattpocock-skills",
@@ -312,7 +312,24 @@
           ]
         }
       ],
-      "influences": []
+      "influences": [],
+      "localOrigins": [
+        {
+          "source": "research-with-aside-20261009",
+          "importedDigest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+          "reviewedDigest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+          "decisions": [
+            {
+              "decision": "adapt",
+              "paths": [
+                "SKILL.md",
+                "references/research-brief-template.md"
+              ],
+              "reason": "Integrate the user-requested Aside web workflow into research; retain local investigation, add one execution owner, use safe argv transport and current session commands. This records a local source review, not a new upstream Git reconciliation."
+            }
+          ]
+        }
+      ]
     },
     {
       "id": "retro",
@@ -984,5 +1001,17 @@
       ],
       "influences": []
     }
-  ]
+  ],
+  "localSources": {
+    "research-with-aside-20261009": {
+      "locator": "local-skill:research-with-aside",
+      "files": {
+        "SKILL.md": "sha256:3c0ac5b18e38562c76d8becd323cdfb3244af1465325c024770347efdce33965",
+        "references/research-brief-template.md": "sha256:ab4039344ab59340595cb70ebd72c8330dd75bd5743be3160ea2b91e3f4dd4d6"
+      },
+      "digest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+      "license": null,
+      "permission": "User supplied this local source and explicitly authorized adaptation and publication of the resulting generalized research workflow on 2026-10-09. No source license was declared; the original source bodies are not redistributed."
+    }
+  }
 }

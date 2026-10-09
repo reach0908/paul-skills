@@ -1,0 +1,66 @@
+{
+  "date": "2026-10-09",
+  "timezone": "Asia/Seoul",
+  "completedAt": "2026-10-09T10:53:21.107363+00:00",
+  "protocol": "maintainer-led compatibility review and live CLI workflow smoke; not an independent full-skill agent trial",
+  "repositoryHead": "68c2f9d94d5280f0167e74e52de17c893ed98f3e",
+  "skillDigest": "sha256:1537a1af44211ec0b1df01b3450537f30362cf28441307dc7c81013a0a7d51aa",
+  "helperSha256": "2631b111ff0304e87b8fbab967d99c109fd9f09939a123f998c1c0607a4f4e59",
+  "installedCliVersion": "1.26.1008.1938",
+  "host": "Codex desktop on macOS, local Aside Browser",
+  "asideModel": null,
+  "effort": "ultrabrowse",
+  "inputTokens": null,
+  "outputTokens": null,
+  "cost": null,
+  "durationSeconds": null,
+  "helpCommandsPassed": 10,
+  "helperCheckExitCode": 0,
+  "discoveryExitCode": 0,
+  "resumeExitCode": 0,
+  "directSourceSnapshotExitCode": 0,
+  "sessionReaderExitCode": 0,
+  "sessionState": "idle",
+  "sessionSuspension": null,
+  "finalAssistantAnswerRetrieved": true,
+  "npmCheckExitCode": 0,
+  "testsPassed": 31,
+  "helperTestsPassed": 11,
+  "pluginValidationExitCode": 0,
+  "diffCheckExitCode": 0,
+  "regressionsObservedBeforeFix": [
+    "An empty follow-up session ID fell through to a new exec instead of rejecting input.",
+    "Surrounding whitespace in a session ID was sent to Aside.",
+    "Explicit ultrabrowse effort with resume was silently ignored."
+  ],
+  "fixes": [
+    "Reject empty, surrounding-whitespace, and dash-prefixed follow-up IDs before any CLI call.",
+    "Reject check mode or explicit effort with session follow-ups; retain session settings.",
+    "Align direct source audit instructions with current tab inventory and attachment guides.",
+    "Replace unsupported pagination implication with documented transcript options."
+  ],
+  "consumerReview": {
+    "wayfinder": "static contract compatible; caller supplies executor and output path",
+    "ask-matt": "routing still matches the updated workflow",
+    "runtimeConsumerTrial": false
+  },
+  "limits": [
+    "steer and queue have installed help and argument-transport fixture coverage; their live runtime behavior was not exercised.",
+    "Full skill invocation by an independent agent, nested executor behavior, and wayfinder runtime integration were not measured.",
+    "Developer-documentation body was retrieved through the Aside agent web reader; its browser snapshot exposed only the page title.",
+    "The manifest was independently checked using the current CLI REPL snapshot.",
+    "The legacy --session runtime form was not executed. A help-only probe printed help and cannot establish alias support.",
+    "The session ID is redacted and unavailable model/cost telemetry remains null."
+  ],
+  "evidenceFiles": [
+    "README.md",
+    "discovery-brief.txt",
+    "followup-brief.txt",
+    "installed-cli-help.json",
+    "executed-helper.py",
+    "aside-responses.json",
+    "source-audit.txt",
+    "session-reader.json",
+    "session-reader.txt"
+  ]
+}

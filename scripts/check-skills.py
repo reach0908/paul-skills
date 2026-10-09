@@ -1,6 +1,7 @@
 #!/usr/bin/env python3
 """Check catalog/package/provenance relationships; not a behavior evaluation."""
 import json
+import hashlib
 from pathlib import Path
 import re
 
@@ -17,6 +18,17 @@ rows = registry['skills']
 assert len(rows) == len(paths) == len({r['id'] for r in rows}), 'Duplicate or absent inventory row'
 assert {r['path'] for r in rows} == paths, 'Provenance coverage differs from skill tree'
 sha = re.compile(r'^[0-9a-f]{40}$')
+content_digest = re.compile(r'^sha256:[0-9a-f]{64}$')
+local_sources = registry.get('localSources', {})
+for source_id, source in local_sources.items():
+    assert source_id not in registry['sources'], f'Ambiguous source: {source_id}'
+    assert source['locator'].startswith('local-skill:') and source['permission'], source_id
+    assert 'license' in source and source['files'], source_id
+    for filename, value in source['files'].items():
+        assert filename and not Path(filename).is_absolute() and '..' not in Path(filename).parts
+        assert content_digest.fullmatch(value), source_id
+    payload = json.dumps(sorted(source['files'].items()), separators=(',', ':'), ensure_ascii=True)
+    assert source['digest'] == 'sha256:' + hashlib.sha256(payload.encode()).hexdigest(), source_id
 for row in rows:
     p = root / row['path']
     text = (p / 'SKILL.md').read_text()
@@ -27,7 +39,7 @@ for row in rows:
     policy = (p / 'agents/openai.yaml').read_text()
     assert explicit == ('allow_implicit_invocation: false' in policy), f'Invocation mismatch: {p}'
     assert row['kind'] in ('forked', 'adapted', 'composite', 'original')
-    assert (row['kind'] == 'original') == (not row['origins']), f'Origin kind mismatch: {p}'
+    assert (row['kind'] == 'original') == (not row['origins'] and not row.get('localOrigins')), f'Origin kind mismatch: {p}'
     for origin in row['origins']:
         assert origin['source'] in registry['sources']
         assert sha.fullmatch(origin['importedRevision']) and sha.fullmatch(origin['reviewedRevision'])
@@ -38,6 +50,11 @@ for row in rows:
                 assert value and not Path(value).is_absolute() and '..' not in Path(value).parts
     for influence in row.get('influences', []):
         assert influence['source'] in registry['sources'] and sha.fullmatch(influence['revision'])
+    for origin in row.get('localOrigins', []):
+        assert origin['source'] in local_sources, row['id']
+        assert content_digest.fullmatch(origin['importedDigest']), row['id']
+        assert origin['reviewedDigest'] == local_sources[origin['source']]['digest'], row['id']
+        assert row['kind'] in ('adapted', 'composite'), row['id']
     if row['path'] in promoted:
         assert (root / row['path'].replace('skills/', 'docs/', 1)).with_suffix('.md').exists(), f'Missing docs: {p}'
         assert row['path'] + '/SKILL.md' in (root / 'README.md').read_text(), f'Missing index: {p}'

@@ -1,0 +1,14 @@
+Command: aside repl with the recorded read-only code
+
+const auditTabMatches1008 = (await listBrowserTabs()).filter(t => t.url === 'https://releases.aside.com/cli/AsideCLI-darwin-arm64-latest.json'); console.log(JSON.stringify({ matchingTabs: auditTabMatches1008.length, route: auditTabMatches1008.length ? 'attach' : 'open' })); if (auditTabMatches1008.length) { await attachBrowserTab(auditTabMatches1008[0].targetId); } else { await openTab('https://releases.aside.com/cli/AsideCLI-darwin-arm64-latest.json'); } const auditSnapshot1008 = await snapshot(page); console.log(auditSnapshot1008.tree); if (!auditTabMatches1008.length) { await closeTab(page); }
+
+{"matchingTabs":0,"route":"open"}
+✔︎ Opened a new tab and set it active: tabs[0], page →  (https://releases.aside.com/cli/AsideCLI-darwin-arm64-latest.json)
+- title: "" [url=https://releases.aside.com/cli/AsideCLI-darwin-arm64-latest.json]
+- text: "{\n  \"version\": \"1.26.1008.1938\",\n  \"platform\": \"darwin-arm64\",\n  \"installUrl\": \"https://releases.aside.com/install.sh\"\n}"
+[system] last tab closed. `page` is now null. call openTab(url) to open a new one.
+[system] no current open tabs in this session.
+[2m[ok | 2250ms][0m
+
+
+Exit code: 0
