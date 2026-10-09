@@ -17,6 +17,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -30,7 +32,7 @@ jobs:
         uses: changesets/action@v1
         with:
           version: npm run version
-          publish: npx changeset tag
+          publish: node scripts/publish-version-tag.mjs
           commit: "chore: version skills"
           title: "chore: version skills"
         env:

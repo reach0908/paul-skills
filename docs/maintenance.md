@@ -12,7 +12,7 @@ The upstream authoring workflow is the default. Our additions are provenance, de
 6. Review the diff with its tests and limitations. Publish and merge within the user's authorization. The Release workflow opens the version PR; its version command keeps `package.json` and the plugin manifest aligned.
 7. After that version PR merges, the workflow tags the release. Confirm remote tag SHA, workflow outcome, installed manifest, and a fresh host session separately.
 
-Forked workflows may initially be disabled. Enabling the repository's Actions does not grant its token permission to create PRs. If GitHub denies the version PR, keep that error visible and create the same version diff through an authorized maintainer account; do not silently broaden token permissions. The inherited workflow creates Git tags, not an npm package or a GitHub Release page.
+Forked workflows may initially be disabled. Enabling the repository's Actions does not grant its token permission to create PRs. If GitHub denies the version PR, keep that error visible and create the same version diff through an authorized maintainer account; do not silently broaden token permissions. The workflow publishes the current version tag explicitly. It does not publish an npm package. Changesets 3 changed its log format, so relying on the action's older output parser can report success without pushing a tag. Full Git history keeps existing tags available for idempotent reruns.
 
 ## Source review
 
