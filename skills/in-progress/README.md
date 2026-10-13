@@ -17,3 +17,7 @@ npx skills@latest add reach0908/paul-skills --skill=<name>
 
 - **[chief-of-staff](./chief-of-staff/SKILL.md)**: Coordinate a stateful personal work overview. Experimental, outside the default plugin.
 - **[upstream-sync](./upstream-sync/SKILL.md)**: Review source repository changes and selectively improve local skills. Awaiting user validation and promotion approval; intended destination is `productivity/`.
+
+- **[problem-discovery](./problem-discovery/SKILL.md)**: Recover the product problem and first scope without repeating answered questions. Model-invoked PM beta.
+- **[product-brief](./product-brief/SKILL.md)**: Create or update product decisions and hand the current truth to design or engineering. Model-invoked PM beta.
+- **[experiment-design](./experiment-design/SKILL.md)**: Test a consequential product assumption with bounded evidence and result-dependent decisions. Model-invoked PM beta; ordinary UI QA stays with design.

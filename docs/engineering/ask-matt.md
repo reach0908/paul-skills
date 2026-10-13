@@ -19,7 +19,7 @@ You invoke this by typing `/ask-matt`; the agent won't reach for it on its own.
 
 ## Prerequisites
 
-The router names skills; it does not install them. Everything it points at has to be installed for the recommendation to be actionable, and it only knows the promoted skills in this repo.
+The router names skills; it does not install them. Everything it points at has to be installed for the recommendation to be actionable, and the normal flow uses the promoted skills in this repo. Its PM beta branch is conditional on the candidate being separately available; it does not install or promote it.
 
 The tracker-dependent routes (triage, `to-spec`, `to-tickets`, `implement`) assume [setup-matt-pocock-skills](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/setup-matt-pocock-skills.md) has already configured an issue tracker in the repo. The router recommends them even before that has happened.
 
@@ -47,7 +47,20 @@ The skill's other key idea is the **phase boundary**. A phase is a chunk of work
 
 People often get two of these wrong, which is why the router gives the order and not only the list. `/handoff` looks like the general way to move between context windows, but it is not. All it gives you is portability. `/compact` is the last option in the tree, not the first, because each of the four options above it is cheaper or more precise.
 
+## Product, design and engineering
+
+For product work, the router preserves a path from product context to design decisions to engineering inputs. The optional [PM beta candidates](https://github.com/reach0908/paul-skills/blob/main/skills/in-progress/README.md) clarify problems, preserve a brief or design a decision test. They are outside the promoted plugin and are recommended for execution only when separately available.
+
+Design takes the agreed scope, product rules and current evidence into navigation, flows, screens and interface review. Engineering takes the canonical product contract and latest design inputs into technical synthesis, implementation slices and verification. A small settled task can start at the appropriate stage without another interview or a new bundle of documents.
+
+A usability experiment asks whether people can complete a product task and defines what the result changes. A clipping or keyboard check belongs to interface QA. Product handoff stays in product-brief and links current decisions, evidence state, superseded inputs and one next action.
+
 ## Common questions
+
+**Does using the PM beta force every task through all three stages?**
+
+No. Reuse the supplied context and start where a question remains open. A scoped design change preserves unaffected product decisions; its existence does not authorize a new product direction. A trial pass does not promote a candidate or establish user acceptance.
+
 
 **Isn't there just a list of the skills in the right order?**
 

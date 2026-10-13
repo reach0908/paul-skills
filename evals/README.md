@@ -27,3 +27,5 @@ Record input/output/cache/reasoning tokens when supplied by the host, duration, 
 Human review owns qualitative acceptance. Reuse deterministic output checks where possible; calibrate any model judge against human decisions. A candidate must not edit its own grading criteria or holdout. Keep private holdout cases outside the candidate checkout, with a versioned evaluator-owned protocol. Publish only redacted, permitted evidence.
 
 Before a paid matrix, choose models from currently supported host options, fix a budget/stop condition, and get any needed spending authorization. The initial in-session trials use inherited host settings and support no model-ranking claim.
+
+The [PM beta trials](product-management-beta/README.md) compare three product-context candidates with no-skill controls on synthetic tasks, including the boundary between product experiments and design QA. They preserve task/skill hashes, raw artifacts, verdict grounds and limits; they do not promote the candidates.
