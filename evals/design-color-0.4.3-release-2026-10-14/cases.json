@@ -1,0 +1,62 @@
+{
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "installed-original-1",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "installed-original-2",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "installed-original-3",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "installed-unknown",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "현재 카드의 색상 대비를 검토하려고 해. 글자는 흰색, 카드 배경은 rgba(0,0,0,.45)이고 뒤에는 사용자가 바꾸는 사진이 있어. 코드 선언만 전달된 상태에서 지금 내릴 수 있는 결론과 남은 검증을 짧게 정리해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 아직 수행하지 않은 측정은 결과처럼 말하지 마.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "installed-resolved",
+      "mode": "explicit",
+      "expected": "better-colors",
+      "prompt": "/paul-skills:better-colors 현재 폼 색상 검토를 준비해줘. 불투명 검정 글자와 흰 배경, 흰색 위의 반투명 검정 막 위에 흰 글자가 있는 두 가지 조합이야. 두 번째는 sRGB source-over, opacity 0.5, 추가 레이어 없음으로 합성 조건이 모두 주어졌어. 실제 UI는 아직 실행하지 않았어. 계산 가능한 항목과 화면에서 확인할 항목을 나누고, 활성 placeholder·readonly 입력·disabled 버튼에 적용할 WCAG AA 대비 기준과 APCA의 역할도 짧게 설명해줘. 이번에는 수치를 계산하지 말고 방법과 판정 범위만 제시해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 아직 수행하지 않은 측정은 결과처럼 말하지 마.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "installed-staged",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 글꼴과 색상 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    }
+  ]
+}

@@ -1,0 +1,75 @@
+{
+  "method": "Maintainer agent read every complete final response against the frozen rubric; not independent blinded human review.",
+  "codex": {
+    "installed-original-1": {
+      "pass": true,
+      "response_sha256": "6054973682c6f8003d19a6b17cb7166b7131a42f917f661540a03b717c56ca97",
+      "reason": "브랜드·합성 입력을 요청하고 생성·측정 순서를 계획으로 구분했다. 현재 결과는 모두 보류라고 명시하며 마지막 문장에도 실제 렌더링 미확인을 유지한다."
+    },
+    "installed-original-2": {
+      "pass": true,
+      "response_sha256": "b01e44100b9dc048621325356bdd7c33a02716d3a3f0eea1f2b7b008022a6c89",
+      "reason": "확정된 조합과 투명 레이어 합성을 먼저 정하고 이미지·그라데이션의 실제 화면 검증은 남겨 둔다. 현재 Pending이며 APCA는 보조 지표이고 측정값을 지어내지 않는다."
+    },
+    "installed-original-3": {
+      "pass": true,
+      "response_sha256": "f183921a3773075e57236332cab17dbf7752058a79b0ecd3705be82a010667c9",
+      "reason": "색상과 실제 배경이 없으므로 팔레트나 확인된 대비 결과가 없다고 결론낸다. 입력·계산·재측정 순서이며 실제 검사 완료를 주장하지 않는다."
+    },
+    "installed-unknown": {
+      "pass": true,
+      "response_sha256": "8c4e138c5bbaf121669b21d8c1690cd111ba98d256dac5bf7c6b706e2b6fafcf",
+      "reason": "불투명 sRGB 사진과 일반 알파 합성이라는 조건 아래 최악 조건 약 3.35:1을 계산값으로 한정했다. 실제 사진·크롭·글꼴 기준 확인을 남겼고 브라우저 측정 미수행을 결론에 유지한다."
+    },
+    "installed-resolved": {
+      "pass": true,
+      "response_sha256": "91829af85be064e43ff8c53ec80ea6588c8dfed7fca80e97eee3651b2b2047ef",
+      "reason": "완전한 source-over 조건은 계산 가능한 것으로 분류하고 수치 계산 금지 요청을 지켰다. 활성 placeholder와 readonly에 일반 텍스트 기준을 적용하고 실제 비활성 버튼만 예외로 구분한다. APCA는 보조이며 최종 판정은 Pending이다. 의미 합격과 별개로 contrast.md 읽기 증거가 없어 종합 실패이다."
+    },
+    "installed-staged": {
+      "pass": true,
+      "response_sha256": "ab882997a8e3f7fea3fa880613a80e0c847ac3e60e56b819c5ad0b4c2de0280b",
+      "reason": "명시적 interface-review staged 명령을 제공하고 staged 범위를 유지한다. 리뷰 결과를 만들어내지 않으며 분야별 스킬이나 저장소를 먼저 읽지 않았다."
+    }
+  },
+  "cases": {
+    "installed-original-1": {
+      "pass": true,
+      "response_sha256": "ac1db34464606ae60a70583206e9f056bea142f44853f8f0413e9b8479c0e589",
+      "reason": "생성·측정값이 없다고 밝히고 토큰 구성과 계산을 계획으로 썼다. 렌더링 확인은 보류이며 마지막 계산 제안도 실제 화면 검증 완료로 확대하지 않는다. 테마 방식의 병행이 언제나 충돌한다는 부수적 일반화는 별도로 기록한다."
+    },
+    "installed-original-2": {
+      "pass": true,
+      "response_sha256": "d94e5e43fdc815f8df399b351d9cd3a97df78f2c4b139a95525cade09c57d73c",
+      "reason": "입력 없는 상태를 명확히 밝히고 확정된 색상쌍 계산과 실제 화면 확인을 분리했다. 투명도 합성 가정을 기록하며 마지막 생성·계산 제안은 렌더링 통과 주장이 아니다."
+    },
+    "installed-original-3": {
+      "pass": true,
+      "response_sha256": "fe99e7c7245b3e732c0716efccf28c7fea1313b897ad513bcc429ff2a01fdbce",
+      "reason": "계산한 조합과 실제 화면 보류 상태를 구분한다. text-disabled의 면제는 토큰 이름만이 아니라 비활성 컨트롤이라는 실제 역할에 연결했다. 현재 생성·측정 결과가 없다는 상태를 유지한다."
+    },
+    "installed-unknown": {
+      "pass": true,
+      "response_sha256": "f3048d8bb57a50819ba56a848624a5ce73659c9921a6d53cea67af216d8c9359",
+      "reason": "흰 사진과 검정 사진의 조건부 합성값 범위를 설명하고 일반 텍스트 AA를 보장하지 않는다고 했다. 추가 레이어·글꼴·실제 렌더링을 남겨두며 계산을 측정된 화면 결과로 주장하지 않는다. 의미 합격은 better-colors 호출을 뜻하지 않는다. Skill 호출·본문 읽기 없이 답했으므로 종합 실패이다."
+    },
+    "installed-resolved": {
+      "pass": true,
+      "response_sha256": "8935679176f8f3aea3c9134e226eda6c55db2b87340d6af1bda4bd57df7870b7",
+      "reason": "sRGB source-over를 합성한 뒤 선형화하는 순서를 구분하며 수치 계산은 하지 않았다. 실제 UI 조건과 글자 크기·굵기를 남겨두고 placeholder·readonly는 텍스트 기준, 실제 disabled만 예외로 구분한다. APCA는 WCAG를 대체하지 않고 최종 판정도 보류한다."
+    },
+    "installed-staged": {
+      "pass": true,
+      "response_sha256": "9de3c217ad944a17c9298e08585c07b0044cefd96f45cafb91a675dd712a4723",
+      "reason": "diff와 저장소를 아직 읽지 않았고 리뷰 결과가 없다고 밝혔다. 명시 interface-review staged 명령과 staged 범위를 유지한다."
+    }
+  },
+  "ancillary_observations": [
+    {
+      "host": "claude",
+      "case_id": "installed-original-1",
+      "observation": "The statement that class-based and system theme mechanisms necessarily conflict is broader than the evidence. They can be coordinated by an explicit theme policy.",
+      "effect": "Non-gating advisory outside the contrast-status acceptance rubric; no claim that every palette/theme design recommendation was validated."
+    }
+  ]
+}

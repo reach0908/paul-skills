@@ -1,0 +1,62 @@
+{
+  "recorded_at": "2026-10-14T15:03:12.614205+00:00",
+  "local_timezone": "Asia/Seoul",
+  "protocol_prepared_local_date": "2026-10-14",
+  "finalized_local_date": "2026-10-15",
+  "hosts": {
+    "codex": {
+      "version": "0.146.0",
+      "models": [
+        "gpt-5.6-sol"
+      ],
+      "efforts": [
+        "xhigh"
+      ],
+      "started_at": "2026-10-14T14:55:56.743671+00:00",
+      "sessions": [
+        "01a13ae9-b6dc-7663-831c-7fc03d200530",
+        "01a13ae9-b6cd-7d03-9b8d-6b3d097eb07e",
+        "01a13aea-797d-7543-b0aa-29c06634eb8a",
+        "01a13aeb-230f-7481-8775-61de302783cb",
+        "01a13aeb-2369-7e73-87a5-74c59be4f4af",
+        "01a13aea-7832-7fc3-9a9c-6454f172cf49"
+      ],
+      "attempts": 6,
+      "retries": 0,
+      "global_install": true,
+      "product_inputs_unchanged": true,
+      "total_reported_cost_usd": null,
+      "actual_billed_usd": null
+    },
+    "claude": {
+      "version": "2.1.296",
+      "models": [
+        "claude-opus-5-5"
+      ],
+      "efforts": [
+        "xhigh"
+      ],
+      "started_at": "2026-10-14T14:55:54.638283+00:00",
+      "sessions": [
+        "c052ef88-e1f9-4986-932a-b488f5f7b581",
+        "705580fa-d85c-4d1b-9324-9f05dc005f19",
+        "154116f2-5cf7-4f06-86d4-80beb6a0593b",
+        "5cabce93-e64e-486b-aba7-fbaa732e35d7",
+        "c0b63225-c277-4ba4-97e6-2f3238a0fd0e",
+        "14b9d09c-74de-42d8-b315-ad1d6b715a8a"
+      ],
+      "attempts": 6,
+      "retries": 0,
+      "global_install": true,
+      "product_inputs_unchanged": true,
+      "total_reported_cost_usd": 2.0759344,
+      "actual_billed_usd": null
+    }
+  },
+  "scope": "fresh native CLI sessions using actual daily user plugin installations",
+  "desktop_existing_chat_refreshed": false,
+  "global_model_settings_changed": false,
+  "pre_run_freeze_verified": true,
+  "metadata_collection_python": "3.13; initial system Python 3.9 lacked tomllib, so the metadata helper used the existing 3.13 interpreter",
+  "raw_traces_public": false
+}

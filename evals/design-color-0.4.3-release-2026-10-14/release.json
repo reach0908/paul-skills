@@ -1,0 +1,62 @@
+{
+  "source_pr": {
+    "headRefOid": "98098fa69cffc6495f1f5264de7feaad3bac37cc",
+    "mergeCommit": {
+      "oid": "eedec92ef6eaa1ae8eeca74dcbf53cbfa0c0ec94"
+    },
+    "mergedAt": "2026-10-14T14:49:10Z",
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-14T14:47:48Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38583671893/job/115919849491",
+        "name": "validate",
+        "startedAt": "2026-10-14T14:47:36Z",
+        "status": "COMPLETED",
+        "workflowName": "Validate skills"
+      }
+    ],
+    "url": "https://github.com/reach0908/paul-skills/pull/23"
+  },
+  "version_pr": {
+    "headRefOid": "4983c50358ce74f592b5886598f5980127b1bea9",
+    "mergeCommit": {
+      "oid": "fa0834e3b9d3b71d9595949bb4bc8e3aaa7be2e4"
+    },
+    "mergedAt": "2026-10-14T14:52:05Z",
+    "state": "MERGED",
+    "statusCheckRollup": [
+      {
+        "__typename": "CheckRun",
+        "completedAt": "2026-10-14T14:51:29Z",
+        "conclusion": "SUCCESS",
+        "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38584191509/job/115921656456",
+        "name": "validate",
+        "startedAt": "2026-10-14T14:51:06Z",
+        "status": "COMPLETED",
+        "workflowName": "Validate skills"
+      }
+    ],
+    "url": "https://github.com/reach0908/paul-skills/pull/24"
+  },
+  "tag": "paul-skills@0.4.3",
+  "tag_object": "b1335e36e7f711803ace72703142c0c40fe29525",
+  "release_commit": "fa0834e3b9d3b71d9595949bb4bc8e3aaa7be2e4",
+  "workflow": {
+    "conclusion": "success",
+    "createdAt": "2026-10-14T14:52:09Z",
+    "headSha": "fa0834e3b9d3b71d9595949bb4bc8e3aaa7be2e4",
+    "status": "completed",
+    "updatedAt": "2026-10-14T14:52:25Z",
+    "url": "https://github.com/reach0908/paul-skills/actions/runs/38584354670"
+  },
+  "version_automation_failure": {
+    "url": "https://github.com/reach0908/paul-skills/actions/runs/38583922330",
+    "reason": "GitHub Actions is not permitted to create or approve pull requests.",
+    "resolution": "Maintainer opened PR 24 from the unmodified generated version branch.",
+    "repository_permissions_changed": false
+  },
+  "distribution": "Immutable Git tag and own plugin marketplace; no npm publication"
+}
