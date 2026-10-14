@@ -1,0 +1,5 @@
+# Codex native-read handoff control
+
+The common authorized-handoff prompt was designed for Claude Read/Glob/Grep. It restricts shell commands to a Git allowlist and refers file reads to those tools, which Codex does not expose. Codex reconstructed source from git diff output, and an attempted git grep failed before recovery. Preserve its original strict failure and do not call that alone a skill regression.
+
+Run exactly one additional Codex session on the unchanged candidate 3 bundle, model, effort and fixture. Remove only the Claude-specific shell/read-tool paragraph; authorize normal native read-only local file access. Keep the same actual review task, no mutation, no fetch, no browser and no external-service action. Freeze this prompt before running it. Six-minute timeout, no answer-based retries. Grade all owner bodies, real diff, classification, runtime limits and command completion. Report this separately from the original 21-case matrix; it is a tool-affordance control, not a replacement passing answer or a staged-routing repair.

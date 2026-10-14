@@ -1,0 +1,27 @@
+{
+  "reviewer": "Maintainer agent; not an independent blinded judge",
+  "codex": {
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "e89cdb9064458afacbdd485bdbf07760c6ef5adfa8fecf1674ef1f3a5c5ccbe0",
+      "notes": "Full corrected reference read. Correct supplied-value placeholder/read-only failure and truly disabled exemption; APCA kept separate, no invented measured values."
+    },
+    "normal-better-colors-preparation": {
+      "pass": true,
+      "response_sha256": "fc2a95c2870d81c680ca5434f63b6ddf6950f0f5925656f8cd33a7211d24d4a2",
+      "notes": "Full corrected reference read; missing inputs and role-based light/dark preparation with actual-pair measurement, no invented values or invalid exemption."
+    }
+  },
+  "cases": {
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "f5eb36b0f71bda0a3478be4c40a94b252185d97657db5226c9cb4e3a9c10ba57",
+      "notes": "Full corrected reference read. Correct supplied-value placeholder/read-only failure and truly disabled exemption; APCA kept separate, no invented measured values."
+    },
+    "normal-better-colors-preparation": {
+      "pass": true,
+      "response_sha256": "9fd79b82cd3433d81efafeaae6c6cc0c5e5560df25915b0bb7f3851c6028404a",
+      "notes": "Corrected contrast reference fully read with other applicable references. Requests missing brand and role inputs, treats source example values as examples, separates WCAG disabled exemption and APCA target, and does not claim measured product results."
+    }
+  }
+}

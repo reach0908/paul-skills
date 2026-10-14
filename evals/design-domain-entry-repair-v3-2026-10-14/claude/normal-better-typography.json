@@ -1,0 +1,241 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "schema_version": 1,
+  "case_id": "normal-better-typography",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_011",
+  "expected": "better-typography",
+  "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "42325e56-75d3-4fe2-8bf0-182ced60104e",
+  "started_at": "2026-10-14T12:49:24.461051+00:00",
+  "host_init_session_id": "42325e56-75d3-4fe2-8bf0-182ced60104e",
+  "host_result_session_id": "42325e56-75d3-4fe2-8bf0-182ced60104e",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "f40d6c69-563b-4794-9e29-4c0f55a4a236",
+  "automatic_catalog_sha256": "509792e2a2032bf1fd4c8caf55f796f57df69657d4aa4478e757440c1781dbeb",
+  "full_body_loads": [
+    {
+      "name": "better-typography",
+      "event_uuid": "e0fc7482-8186-40bb-89b1-f9c53ac2b4fb",
+      "file_sha256": "b3ae486746f5cb27a34964e1383cc55818280698aa952f2479a3ed296bb2ccd6",
+      "body_sha256": "c9878d89c354874eb9a334c2f38f0ca1239bbbf3c98f1f06e5568082149ed598",
+      "host_message_sha256": "50f1231df3f105196cb44556aa9dfd9e04441f732f97932e1383ab2f7f0cf220",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-typography",
+        "args": "한국어 긴 글 페이지 타이포그래피 점검 준비(현재 상태 점검, 수정 없음): 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬, 말줄임 시 전체 내용 접근. 레이아웃 재설계 없이 필요한 입력과 점검 기준만 짧게."
+      },
+      "tool_use_id": "toolu_01DHFWoxT9sqeqhwrVoEjNQi",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7f4ab17375b6c8ff9b193ad7fc37c973ee2cba6f43fe2827285a20481ba9ecbc"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01S1K4Afj3JicpXs6WCKAJsw",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "a0ba5c8953d17af714a382072e39edf6bd869167a65cd248f028312cd74b7581"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin/skills/design/better-typography/korean-text.md"
+      },
+      "tool_use_id": "toolu_0112CkTMoqZosuhzZPfa9fko",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "15935532604a5eb399c1eb19a8bd7699382ec8e4c8ade936f2c8d6dac39ffc18"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 디렉터리에 파일이 하나도 없어서 이번에 점검한 것은 없습니다. 아래 기준은 모두 아직 확인하지 않은 상태(`Not verified`)이고, 통과나 차단 판정도 내리지 않았습니다.\n\n## 1. 필요한 입력\n\n| # | 입력 | 이유 |\n|---|---|---|\n| 1 | 긴 글 페이지의 템플릿·마크업 경로 | 실제 선언된 CSS 값을 확인하려면 필요해요 |\n| 2 | 스타일 방식(Tailwind인지 일반 CSS인지)과 글자 크기 단계·행간·간격 토큰 | 지적 사항을 프로젝트의 기존 토큰 기준으로 적으려면 필요해요 |\n| 3 | `@font-face` 선언: 한글 글꼴, 실제로 불러오는 굵기, 대체 글꼴 순서 | 대체 글꼴로 바뀔 때 행간이 달라지는지, 글꼴에 고정폭 숫자(`tnum`)가 있는지 봐야 해요 |\n| 4 | `lang=\"ko\"`가 문서에 있는지, 영어 구간에는 언어가 따로 지정됐는지 | 줄바꿈과 문장부호가 언어 설정을 따르기 때문이에요 |\n| 5 | 실제 콘텐츠 예시: 가장 짧은/긴 제목, 한글에 제품명·숫자·긴 URL이 섞인 제목, 숫자가 들어간 문단, 표나 목록의 숫자 열 | 한글은 실제 글꼴과 실제 문장으로 측정해야 정확해요 |\n| 6 | 말줄임(`truncate`, `line-clamp`)을 쓰는 위치와, 잘린 내용을 끝까지 보는 방법(펼치기, 상세 링크, 접근 가능한 툴팁 중 무엇인지) | 전체 내용에 접근할 수 있는지 판단하려면 필요해요 |\n| 7 | 대상 화면 폭(최소 320px)과 200% 확대 지원 여부 | 이 두 조건에서 글이 잘리면 심각도 HIGH로 봐요 |\n\n## 2. 점검 기준\n\n**본문 줄 길이**\n- 라틴 문자 기준인 60–75자를 한글에 그대로 쓰지 않아요.\n- 실제 글꼴과 최대 콘텐츠 폭에서 한 줄에 들어가는 글자 수를 직접 세요. 기존 측정값 토큰이 있으면 그것과 비교해요.\n\n**행간**\n- 본문 행간은 단위 없는 값으로 1.5–1.6이 출발점이에요. 한글은 그 상단 값에 가까운지 확인해요.\n- 3줄 이상으로 줄바꿈되는 텍스트는 1.4 이상이어야 해요.\n- 행간이 `px`나 `rem`처럼 단위로 고정돼 있으면 지적 사항이에요.\n- 글꼴이 대체 글꼴로 바뀐 줄에서 행간이 들쭉날쭉하지 않은지 봐요.\n\n**글자 크기 계층**\n- 본문은 16px(`rem` 단위)에서 시작해요.\n- 제목은 단계가 내려갈수록 작아지고, 본문보다 작아지면 안 돼요.\n- 18px 미만 글자는 굵기 400 이상이어야 해요.\n- 본문 자간은 0이고, 자간을 준다면 `em` 단위여야 해요.\n\n**제목 줄바꿈**\n- 제목에는 `text-wrap: balance`를 쓰고, 문단에는 쓰지 않아요.\n- 제목에서 어절을 지키려면 `word-break: keep-all`을 쓸 수 있어요. 다만 URL이나 ID처럼 끊을 곳이 없는 값을 위해 `overflow-wrap` 대비책도 같이 둬야 해요.\n- 값 하나를 고치려고 본문 전체에 공격적인 줄바꿈 규칙을 적용하지 않아요.\n- 화면 폭에 맞춘 수동 줄바꿈(`<br>`)이 없는지 확인해요.\n- 320px 폭과 200% 확대에서 글자가 잘리거나 어절이 깨지는지 봐요.\n\n**숫자 정렬**\n- 표의 숫자 열, 카운터, 가격처럼 값이 바뀌는 숫자에는 `font-variant-numeric: tabular-nums`를 써요. `font-feature-settings`로 넣었다면 지적 사항이에요.\n- 문장 속 숫자는 기본 비례폭 그대로 둬요.\n- 불러온 글꼴에 고정폭 숫자가 실제로 있는지, 숫자만 다른 글꼴로 바뀌어 나오지 않는지 확인해요.\n\n**말줄임과 전체 내용 접근**\n- 한 줄 말줄임은 `truncate`, 여러 줄은 `line-clamp`를 쓰고, 여러 줄일 때는 `display: -webkit-box`가 함께 있어야 해요.\n- 잘린 내용을 끝까지 볼 방법이 없으면 HIGH예요. `title` 속성만으로는 인정하지 않아요.\n- 실제 길이의 문자열로 시험해요.\n- 다시 보는 방법을 고치는 일은 레이아웃 담당(`better-layout`) 범위라서 이번 점검에서는 문제 여부만 기록해요.\n\n## 3. 보고 방식\n\n- 심각도는 세 단계예요.\n  - **HIGH**: 읽을 수 없음, 잘린 내용을 볼 방법이 없음, 320px나 200% 확대에서 글자가 잘림\n  - **MEDIUM**: 글자 크기 단계나 제목 위계가 깨짐\n  - **LOW**: 한 곳에만 있는 다듬기 사항\n- 원인 하나당 한 줄로 쓰고, 열은 `Severity | Location(file:line) | Before | After | Why`예요.\n- 한글 관련 지적에는 실제 문자열, 화면 폭, 불러온 글꼴, 실제로 관찰된 줄바꿈을 함께 적어요.\n- 브라우저 없이 확인하면 선언된 값까지만 볼 수 있어요. 실제 렌더링 결과는 `Not verified`로 표시해요.\n\n입력 1–3과 5를 받으면 이 기준으로 바로 점검을 시작할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 82.039,
+  "duration_api_ms": 78906,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 19007,
+    "cache_read_input_tokens": 60200,
+    "output_tokens": 3276,
+    "output_tokens_details": {
+      "thinking_tokens": 574
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17314,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 415,
+        "cache_read_input_tokens": 20394,
+        "cache_creation_input_tokens": 652,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 652
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 22907,
+        "output_tokens": 2800,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2359,
+        "cache_read_input_tokens": 21046,
+        "cache_creation_input_tokens": 1693,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1693,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 3276,
+      "cacheReadInputTokens": 60200,
+      "cacheCreationInputTokens": 19007,
+      "webSearchRequests": 0,
+      "costUSD": 0.22456900000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 574,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 22907,
+      "outputTokens": 2800,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.36907,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.593639,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 5,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "e321d73056b67a851bb6c0e17bfbd79d64b727dbcdaa0e39de1881928afa4335",
+  "transcript_sha256": "599e5875aedb5e50c046d030319d6fe557d41910669bf65707aec7dc51a48674",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

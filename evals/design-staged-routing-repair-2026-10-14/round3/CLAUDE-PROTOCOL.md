@@ -1,0 +1,3 @@
+# Claude budget amendment before candidate 3 execution
+
+Candidate 2 authorized handoff loaded all eight required bodies but exhausted its USD 1.60 reported list-cost cap before the final report. Preserve that incomplete result. Before any candidate 3 Claude session starts, set the cap to USD 3 for this full handoff and USD 1 for preparation cases; keep the batch cap at USD 15, the six-minute timeout and all prompts/source/tool restrictions unchanged. This resource adjustment applies only to Claude. Codex sessions already in progress use the frozen main protocol unchanged. No answer-based retry is authorized by this amendment. These are host list-cost caps, not measured account charges.

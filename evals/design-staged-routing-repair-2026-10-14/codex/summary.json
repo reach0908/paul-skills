@@ -1,0 +1,30 @@
+{
+  "planned": 22,
+  "completed": 6,
+  "by_arm": {
+    "baseline": {
+      "completed": 3,
+      "passed": 2
+    },
+    "candidate": {
+      "completed": 3,
+      "passed": 2
+    }
+  },
+  "failures": {
+    "staged-1": [
+      "only_route_bodies",
+      "semantic_review_pass"
+    ],
+    "baseline-staged-1": [
+      "only_route_bodies",
+      "semantic_review_pass"
+    ]
+  },
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "efforts": [
+    "medium"
+  ]
+}

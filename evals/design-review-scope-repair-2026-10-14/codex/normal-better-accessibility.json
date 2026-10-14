@@ -1,0 +1,71 @@
+{
+  "case_id": "normal-better-accessibility",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a4f-677a-7201-ad6f-dabf978c9f42",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재는 입력이 없어 모두 `Not verified`입니다. 아래는 WCAG 2.2 기반의 준비 명세입니다.\n\n### 필요한 입력\n\n- 대상 화면 URL/경로와 실행 방법\n- 대화상자를 여는 버튼 및 닫기 수단: 취소, 닫기 버튼, `Escape`, 완료\n- 정상·검증 오류·서버 오류를 재현하는 조건\n- 지원 브라우저와 화면 읽기 프로그램\n- 확대 및 애니메이션이 포함된 기준 화면\n\n### 검증 순서\n\n1. 키보드로 트리거까지 이동하고 `Enter`·`Space`로 연다.\n2. 열린 직후 적절한 요소로 포커스가 이동하는지 확인한다.\n3. `Tab`·`Shift+Tab`으로 내부를 순환하며 배경으로 빠지지 않고 포커스 표시가 보이는지 확인한다.\n4. 각 컨트롤의 접근 가능한 이름·역할·상태를 확인한다.\n5. 제출 오류가 안내되고, 첫 오류로 포커스가 이동하며 오류 문구가 연결·발표되는지 확인한다.\n6. 취소·닫기·`Escape`·완료 각각으로 닫은 뒤 원래 트리거로 포커스가 복귀하는지 확인한다.\n7. 200% 확대와 320 CSS px 폭에서 내용 손실·가로 스크롤·조작 불가가 없는지 확인한다.\n8. `prefers-reduced-motion: reduce`에서 이동·확대 애니메이션이 제거 또는 최소화되는지 확인한다.\n\n### 완료 조건\n\n모든 경로를 마우스 없이 완료할 수 있고, 포커스가 대화상자 안에서 관리된 뒤 원래 버튼으로 복귀하며, 모든 컨트롤과 오류가 화면 읽기 프로그램에 정확히 전달되어야 합니다. 200% 확대·320px 리플로우·움직임 감소 설정에서도 정보나 기능 손실이 없어야 합니다. 실제 화면과 재현 입력을 받기 전에는 통과 또는 승인으로 판정하지 않습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-accessibility"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-accessibility": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45373,
+      "cached_input_tokens": 32256,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 916,
+      "reasoning_output_tokens": 278
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "9750a99fc36b95eb756b737f1c1ba8febc01d0bf51a8608c24e7afd0146eb8ca",
+  "transcript_sha256": "158fc4c83d668f2dd7b5c8d32703c4c7ca87a049eaef01e6ba1bdff9a6fcddb1",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 26.916
+}

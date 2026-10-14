@@ -1,0 +1,25 @@
+{
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "authorized-handoff-native-read",
+      "mode": "handoff",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 로컬 src/Panel.html의 미커밋 변경이 UI에 새로 만든 문제를 실제로 리뷰해줘. Git의 이전 내용과 현재 내용을 비교하고 검토를 끝까지 진행해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.\n스킬 본문과 참조 문서를 포함한 로컬 파일은 Codex가 제공하는 읽기 도구로 읽어도 돼. 저장소 변경 없이 읽기 전용으로 진행해.",
+      "max_cost": 3.0,
+      "timeout_seconds": 600,
+      "extra_read_shell": [
+        "Bash(git grep *)"
+      ]
+    }
+  ],
+  "codex_baseline_repeats": 0
+}

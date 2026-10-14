@@ -1,0 +1,68 @@
+{
+  "case_id": "explicit-owner",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a139e7-b3df-7742-b08c-32f0ef24caf1",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": false
+  },
+  "pass": false,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "`interface-review` 절차를 준비 명세로만 정리합니다. 실제 diff·제품 파일·브라우저·외부 서비스는 확인하지 않았습니다.\n\n필요한 입력:\n\n- 대상: `working`\n- 비교 기준이 될 기본 브랜치와 merge-base\n- 변경 의도: 관련 이슈·명세 또는 간단한 목적\n- 검토 범위에서 제외할 생성물·스냅샷·잠금 파일 규칙\n- 렌더링 검증 요청 여부 \u2014 이번 요청에서는 미실행\n\n분류 방식:\n\n- `Introduced`: 이번 변경이 새로 만든 결함\n- `Regression`: 변경 전에는 올바르거나 더 나았지만 이번 변경으로 약화된 결함\n- `Pre-existing`: 변경 전부터 있었고 이번 변경이 악화하지 않은 결함. 별도 섹션에 최대 3개만 기록\n- 삭제된 접근성·상태·반응형 처리 등은 대체 구현이 있는지 먼저 확인한 뒤 `Regression` 여부를 판단\n- 변경 파일 자체뿐 아니라 직접 영향을 받는 화면·소비자까지 제한적으로 추적\n\n완료 조건:\n\n- base/head, 커밋 및 미커밋 범위, 포함·제외 파일, 확장한 화면을 명시\n- 접근성·레이아웃·문구·타이포그래피·색상·UI별 검토 범위와 미검토 사유를 기록\n- 모든 지적에 심각도, 분류, 위치, 변경 전후 근거를 부여\n- `Introduced`와 `Regression`이 없으면 “이번 변경에서 실행 가능한 인터페이스 지적 없음”으로 종료\n- 렌더링하지 않았다면 시각·런타임 판단을 `Not verified`로 표시\n- 변경 파일은 수정하지 않고 읽기 전용으로 종료",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57",
+      "full_body_equal": true
+    }
+  ],
+  "loaded_file_hashes": {
+    "interface-review": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57"
+  },
+  "commands": [],
+  "usage": [
+    {
+      "input_tokens": 23980,
+      "cached_input_tokens": 11264,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 545,
+      "reasoning_output_tokens": 140
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "a55868be23f079eb802a839a2c0b07998c1efb2804d27596d4031b9ca7d5ac92",
+  "cases_sha256": "f5c66ed8208e0e91e7bb6a8e86e2b5cbd28b7dd2e09d4a3480d939770878f929",
+  "bundle_manifest_sha256": "2d275b13bc80e9f4e713556e105f7ffed97e051140945783a07bf690ec0f88ed",
+  "stream_sha256": "6255ba7ce1aaa69e9ecb7e78a7f144f9a5e4c467c2f0d224d6d668707dfffbbf",
+  "transcript_sha256": "c5c8fb8f136132ce3b2d2c558092cbc33ee34ebe62b4cb242c607f7ac2ea05f8",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 16.623
+}

@@ -1,0 +1,262 @@
+{
+  "case_id": "current-audit",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a51-882b-7ad2-8f1f-9a880fe3b225",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "final_response": "현재 화면 감사 기준으로 준비했습니다. 이번 응답에서는 제품 파일·브라우저·외부 서비스를 확인하지 않았으므로 실제 문제나 통과 여부는 판단하지 않습니다.\n\n### 검토 절차\n\n1. **범위 확정**: 구독 화면의 기본·로딩·빈 화면·오류·성공·좁은 화면 상태를 명시합니다.\n2. **프로젝트 기준 확인**: 디자인 토큰, 컴포넌트, 지원 뷰포트, UI 가이드 문서를 확인합니다.\n3. **영역별 검토**: 접근성 → 배치 → 문구 → 타이포그래피 → 색상 → 시각 디테일 순서로 점검합니다.\n4. **근거 대조**: 소스 증거와 렌더링·상호작용 증거를 구분합니다.\n5. **통합 보고**: 동일 원인은 하나로 합치고, 사용자 영향에 따라 `HIGH / MEDIUM / LOW`로 정렬합니다.\n\n### 필요한 증거\n\n| 영역 | 필요한 증거 |\n| --- | --- |\n| 접근성 | Tab 이동 순서, 모든 포인터 작업의 키보드 경로, 포커스 표시, 접근 가능한 이름·역할·상태, 포커스 복귀, 200% 확대와 320px 리플로우 |\n| 배치 | 지원 폭별 스크린샷, 정렬·그룹 간격, DOM과 시각 순서, 주요 행동의 우선순위, 잘림·겹침·숨은 콘텐츠 단서 |\n| 문구 | 화면 문자열과 로케일 원문, 버튼 행동과 라벨 대응, 용어 일관성, 오류 복구 안내, 빈 상태의 다음 행동 |\n| 글꼴 | 실제 로드된 글꼴·굵기, 계산된 크기·행간, 제목 위계, 줄바꿈·말줄임, 긴 한국어 문자열, 모바일 입력창 16px 여부 |\n| 색상 | 실제 전경·배경 색상값과 측정 대비율, 라이트·다크 상태, 의미의 색상 단독 의존 여부, 의미 토큰과 사용처 |\n| 시각 디테일 | 기본·hover·pressed·selected·disabled·loading 상태, 아이콘 정렬과 굵기, 반경·그림자 일관성, 모션 수치와 reduced-motion 결과 |\n\n각 발견에는 최소한 `화면/상태`, `컴포넌트 또는 파일:줄`, `현재 구현`, `제안 구현`, `사용자 영향`, `검증 방법`이 필요합니다. 소스만 본 경우 시각적 결과를 확정하지 않고, 스크린샷만 본 경우 코드 원인을 확정하지 않습니다.\n\n이번에는 증거를 수집하지 않았으므로 모든 영역은 아직 **Not reviewed**이며 `Approve/Block` 판정도 내리지 않습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-ui": {
+      "call_id": "call_0db4839a5c3a4b7b9bc7989333b8fe10",
+      "file_sha256": "6ecf2c0197290d27e3e3b52537f412333b7b249fe55fab531112663d77c2ad48",
+      "output_sha256": "e602b668c49e30abdfa4f2881e24df1ca1d72684ed530b5f446f2caa66822281",
+      "full_body_equal": true
+    },
+    "better-accessibility": {
+      "call_id": "call_0db4839a5c3a4b7b9bc7989333b8fe10",
+      "file_sha256": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173",
+      "output_sha256": "e602b668c49e30abdfa4f2881e24df1ca1d72684ed530b5f446f2caa66822281",
+      "full_body_equal": true
+    },
+    "better-interface": {
+      "call_id": "call_062044c2a8b4466f9625f35b8846e262",
+      "file_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "output_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-colors": "dc859a827af1681c59b3bbe094cee91d4899bf8e531c4e36da8c201d13819270",
+    "better-ui": "6ecf2c0197290d27e3e3b52537f412333b7b249fe55fab531112663d77c2ad48",
+    "better-accessibility": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173",
+    "better-interface": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+    "better-typography": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc",
+    "better-writing": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b",
+    "better-layout": "5ab7a453623b818f345f0cae78a04283c50f7221e757563513658a20e70d1c8b"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/audit-procedure.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "05a9041364148306f7667ebc4f5d59f563c7d30b5a3a2c9898199bac5585d983"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-layout/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "5ab7a453623b818f345f0cae78a04283c50f7221e757563513658a20e70d1c8b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-colors/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "dc859a827af1681c59b3bbe094cee91d4899bf8e531c4e36da8c201d13819270"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-ui/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "6ecf2c0197290d27e3e3b52537f412333b7b249fe55fab531112663d77c2ad48"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/review-format.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440"
+    },
+    {
+      "command": "/bin/zsh -lc 'wc -l $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/{better-accessibility,better-layout,better-writing,better-typography,better-colors,better-ui}/SKILL.md'",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "ed7fe136eb58d18de2d2257e5e96062469143dcd8d4c85577846db40a1afef77"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-layout/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "5ab7a453623b818f345f0cae78a04283c50f7221e757563513658a20e70d1c8b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-colors/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "dc859a827af1681c59b3bbe094cee91d4899bf8e531c4e36da8c201d13819270"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,220p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' \\\"$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md\\\"\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 229171,
+      "cached_input_tokens": 188544,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2529,
+      "reasoning_output_tokens": 441
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "6403d0f91179b448ea449cb6a0df84e63d9099ecc5485061e7fac20afd9c7749",
+  "transcript_sha256": "5247fbb23e8c5da39c996409d5ac2aeb1756bf818579e05b8eb57726c70435df",
+  "inputs_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "2e6267887aa51d0772355b08a0ad86318796b54e99f1049c12cceb223253d581",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "ba26e92b42ad4fd39316edfeb59c4bca0453207d94c508120824a17898734e9d",
+    ".git/logs/refs/heads/feature/checkout": "437451b57c18d963de016759824f2f2ddf0b80b377e508ae8441797487dd0a08",
+    ".git/logs/refs/heads/main": "449411edb1ed5b4cbc82b4fdc04b7176b78d7995fcb176695afe0e506a9933cd",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/71/49b97c809718c9e32206bb24a4dce960fb96ce": "135a0e8ab3ed89bcfdbcc0756b57f0a409bc4fefc70e7a9ff4f8fd6b483b1241",
+    ".git/objects/b7/86269f39c99636b40319191c591884e6f22bae": "e0f5cb67e767191f3ecc0576aed968baa07246d0331d6a326651289aa0b5423a",
+    ".git/refs/heads/feature/checkout": "cc4651f84edeb42e554b93d2ca83696a90704523b7abbe8b52ca4d0d6de6c5ca",
+    ".git/refs/heads/main": "defbecc7c05da6f77d046332bf23319877264a786dcecf32323b39c08218a335",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "inputs_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "2e6267887aa51d0772355b08a0ad86318796b54e99f1049c12cceb223253d581",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "ba26e92b42ad4fd39316edfeb59c4bca0453207d94c508120824a17898734e9d",
+    ".git/logs/refs/heads/feature/checkout": "437451b57c18d963de016759824f2f2ddf0b80b377e508ae8441797487dd0a08",
+    ".git/logs/refs/heads/main": "449411edb1ed5b4cbc82b4fdc04b7176b78d7995fcb176695afe0e506a9933cd",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/71/49b97c809718c9e32206bb24a4dce960fb96ce": "135a0e8ab3ed89bcfdbcc0756b57f0a409bc4fefc70e7a9ff4f8fd6b483b1241",
+    ".git/objects/b7/86269f39c99636b40319191c591884e6f22bae": "e0f5cb67e767191f3ecc0576aed968baa07246d0331d6a326651289aa0b5423a",
+    ".git/refs/heads/feature/checkout": "cc4651f84edeb42e554b93d2ca83696a90704523b7abbe8b52ca4d0d6de6c5ca",
+    ".git/refs/heads/main": "defbecc7c05da6f77d046332bf23319877264a786dcecf32323b39c08218a335",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "duration_seconds": 54.658
+}

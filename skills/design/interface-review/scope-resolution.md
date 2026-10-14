@@ -4,11 +4,13 @@ How a review target becomes a file list, and the traps that fail quietly and lea
 
 ## Default branch
 
+Resolve this only for no-target discovery or a branch/ref comparison. Explicit `working` and `staged` targets use the `HEAD` contract in [SKILL.md](SKILL.md#1-resolve-the-change-scope-first) and skip this section. Pull requests use their own base.
+
 Try `refs/remotes/origin/HEAD`, then `gh repo view --json defaultBranchRef`. If the ref is missing, ask the remote with `git remote set-head origin --auto` rather than guessing. It needs the network and writes only a ref under `.git`, so it is permitted; note it in Verification. With no remote at all, fall back to a local `main` or `master` and state which base you assumed.
 
 ## Targets
 
-Accepted targets are `working`, `staged`, `branch`, `pr <n>`, a bare `<ref>` and an explicit `<a>..<b>` or `<a>...<b>` range. Anything else in the invocation is a `<ref>`.
+Accepted targets are `working`, `staged`, `branch`, `pr <n>`, a bare `<ref>` and an explicit `<a>..<b>` or `<a>...<b>` range. A target token outside that list is a `<ref>`; surrounding instructions are not part of the target.
 
 Diff a branch against the **merge base**, with three dots. Two dots reports every upstream commit that landed on the base branch as part of the change.
 
@@ -34,7 +36,7 @@ Read files at the head ref with `git show refs/remotes/pr/<n>:path/to/file`. Nev
 
 Three worth handling. Everything else fails loudly at `merge-base`: unrelated histories, a repo with no commits, a moved submodule pointer. Say the base is unresolvable and stop. Never review a range you cannot name.
 
-**Detached HEAD.** Use the merge base against the default branch and name the SHA, not a branch, in the scope block.
+**Detached HEAD.** Local `working` and `staged` targets still use the current `HEAD` SHA. For a branch comparison or no-target discovery, use the merge base against the default branch and name the SHA, not a branch, in the scope block.
 
 **Shallow clone**, the CI default, where `merge-base` returns nothing. Fetch `--deepen=50`, retry, then `--deepen=200`, then report the scope as unresolvable. Deepening writes to `.git` and not to the working tree, so it is permitted; note it in Verification.
 
@@ -42,7 +44,9 @@ Three worth handling. Everything else fails loudly at `merge-base`: unrelated hi
 
 ## Nothing to review
 
-The tree is clean and `HEAD` is not ahead of the merge base. Gather the facts before asking, so the offer is accurate rather than a guess. They are the current branch, the count ahead of the base, the last commit's SHA and subject and any open pull request from `gh pr status`.
+This subsection applies only to no-target discovery. An explicit local target with an empty inventory stays empty; offer another target without remote or merge-base discovery.
+
+For no-target discovery, the tree is clean and `HEAD` is not ahead of the merge base. Gather the facts before asking, so the offer is accurate rather than a guess. They are the current branch, the count ahead of the base, the last commit's SHA and subject and any open pull request from `gh pr status`.
 
 `gh pr status` succeeds when no pull request is open. It omits `currentBranch`, so an empty result is an answer, not an error. It fails outright without `gh`, without authentication and on a repository with no GitHub remote. Treat any failure as "no pull request found", say so and offer the remaining routes rather than stopping.
 
@@ -78,6 +82,8 @@ Two traps under-exclude silently. `*.lock` catches `yarn.lock` and `Cargo.lock` 
 ## Expanding to consumers
 
 Use the project's own resolver where one exists, otherwise import paths.
+
+For `staged`, search with `git grep --cached` and read the index with `git show :path`, including unchanged consumers. For `working`, use the working tree and include untracked consumers.
 
 `git grep` searches the working tree by default. Pass the reviewed ref after the pattern, or on a pull request you search a different revision and miss importers the change itself added. Results come back as `<rev>:path/to/file`; read them with `git show`, never the working-tree copy. Pass `-e` when the pattern starts with a dash, such as a `--color-*` token, or git parses it as an option.
 

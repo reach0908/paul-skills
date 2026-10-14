@@ -1,0 +1,211 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "schema_version": 1,
+  "case_id": "explicit-owner",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_015",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "6e0c17b2-8368-4028-84b0-df6638f794a0",
+  "started_at": "2026-10-14T12:03:06.142925+00:00",
+  "host_init_session_id": "6e0c17b2-8368-4028-84b0-df6638f794a0",
+  "host_result_session_id": "6e0c17b2-8368-4028-84b0-df6638f794a0",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "405a9b1b-f538-4704-8795-42e473607225",
+  "automatic_catalog_sha256": "cf893e72a07cbf5c9113b464d776077db54cc6c860508b523743db2ed077729d",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "87e59534-84a6-47e0-9d18-d420a9b21b10",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "body_sha256": "5ae3409669880922a35cb872efabcbbefb534a3ff20956132db414984e4b4b56",
+      "host_message_sha256": "886735ec848473314bf8a997718247a31e313bb5bca29c6e7b7baec8085bd229",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "## `working` 범위 계약\n\n- **Base**: 현재 `HEAD` SHA. 기본 브랜치나 merge-base는 쓰지 않습니다.\n- **검토 대상**: `HEAD`부터 작업 트리까지의 순변경(`git diff HEAD`)과 추적되지 않은 파일(`git ls-files --others --exclude-standard`)입니다. staged와 unstaged 변경은 모두 포함하고, 이전 커밋은 빼서 커밋 수는 0으로 둡니다.\n- 이번에는 Git을 실행하지 않았습니다. 그래서 SHA, 파일 목록, 제외 항목은 아직 정해지지 않았습니다.\n\n## 필요한 입력\n\n1. **저장소 경로**: 환경 정보상 현재 디렉터리(`case_015`)는 Git 저장소가 아닌 것으로 표시됩니다. 실제로 확인한 건 아닙니다. 검토할 저장소 경로를 알려주세요.\n2. **읽기 전용 Git 실행 승인**: `git rev-parse HEAD`, `git diff HEAD`, `git ls-files --others --exclude-standard`, `git blame`이 필요합니다.\n3. **변경 의도**: `working`에는 커밋 메시지가 없습니다. 무엇을 바꾸려 했는지 직접 설명하거나 관련 이슈·PR 본문을 알려주세요. 이게 있어야 빠진 상태(hover/focus/disabled/loading, 빈 상태·오류 상태, 번역 누락)를 점검할 수 있습니다.\n4. **렌더링 검증 여부**: 기본값은 하지 않음이고, 시각·런타임 판단은 **Not verified**로 표시합니다.\n\n## 기존 결함과 새 회귀를 나누는 기준\n\n결함이 **어디에** 보이는지가 아니라 **무엇 때문에** 생겼는지로 나눕니다.\n\n- **Introduced**: 이번 변경이 새로 만든 결함입니다. 변경된 토큰을 쓰는 다른 화면, 즉 diff에 없는 파일에서 나타나도 여기에 속합니다.\n- **Regression**: 아래 세 조건을 모두 충족해야 회귀로 판정합니다.\n  - diff에서 삭제된 줄(`-` 쪽)에 접근성 이름, 포커스 표시 같은 장치가 있었습니다.\n  - diff의 다른 곳에 같은 역할을 하는 대체가 없습니다.\n  - 해당 영역을 담당하는 `better-*` 스킬이 회귀로 확인했습니다.\n- **Pre-existing**: 변경 전부터 있었고 이번 변경으로 나빠지지 않은 결함입니다. 바뀐 줄 바로 옆에 있어도 여기에 속합니다. 최대 3개만 별도 섹션에 적습니다.\n- **판별 방법**: `working`에서는 범위 없이 `git blame -L n,n -- path`를 씁니다. `Not Committed Yet`이면 이번 변경 소속이고, 그 외 커밋이면 Pre-existing 후보입니다.\n- **영향 화면 확장**: 바뀐 파일을 직접 import하거나 호출하는 곳(1단계)까지 봅니다. 2단계는 디자인 토큰, 테마 값, 공유 컴포넌트를 바꿨을 때만 봅니다. 합쳐서 최대 5곳까지 보고, 보지 못한 곳의 수를 적습니다.\n\n## 완료 조건\n\n- 범위 표를 채웁니다(Target / Base ref / Head ref / Commits / Files in scope / Excluded / Surfaces expanded). 값은 위 입력을 받은 뒤에 정합니다.\n- 의견을 내기 전에 diff 전체를 읽고, 삭제된 줄도 모두 확인합니다.\n- 모든 결함에 Introduced, Regression, Pre-existing 중 하나를 붙입니다.\n- 커버리지, 심각도, 최종 판정은 `better-interface`에 넘겨서 받습니다. 이 스킬을 쓸 수 없으면 범위와 파일 목록만 보고하고 멈춥니다. 심각도나 판정을 임의로 만들지 않습니다.\n- Introduced나 Regression이 없으면 \"No actionable interface findings in this change.\"라고 적습니다.\n- 작업 트리는 바꾸지 않습니다. checkout, switch, stash는 쓰지 않습니다.\n- 대상 파일이 하나도 없으면 비어 있다고 보고하고 다른 대상을 물어봅니다. `HEAD~1`처럼 범위를 넓히지 않고, 빈 범위에 Approve를 내지 않습니다.\n- 정확성, 테스트, 보안 문제는 일반 코드 리뷰 항목이라고 한 번 언급하고 넘어갑니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 98.485,
+  "duration_api_ms": 96153,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 18983,
+    "cache_read_input_tokens": 23217,
+    "output_tokens": 3922,
+    "output_tokens_details": {
+      "thinking_tokens": 2154
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15753,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2172,
+        "cache_read_input_tokens": 3732,
+        "cache_creation_input_tokens": 15753,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 15753
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 23221,
+        "output_tokens": 2886,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1750,
+        "cache_read_input_tokens": 19485,
+        "cache_creation_input_tokens": 3230,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3230,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 3922,
+      "cacheReadInputTokens": 23217,
+      "cacheCreationInputTokens": 18983,
+      "webSearchRequests": 0,
+      "costUSD": 0.2252734,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2154,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 23221,
+      "outputTokens": 2886,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.37651,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6017834,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "stream_sha256": "d62d1fba9f68348e21fe571d9dbedf2e73a216b164944553dd742bd6f38a59a5",
+  "transcript_sha256": "5e11172cfb658f9dfaa8365c55f9cf8022459457507160c938f275c57d7ecdf7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

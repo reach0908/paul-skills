@@ -1,0 +1,9 @@
+{
+  "stage": "before model execution",
+  "first_setup": "plugin list failed because copied config referenced a marketplace snapshot under the temporary CODEX_HOME that had not been copied",
+  "repair": "copy the same .tmp/marketplaces snapshot to both isolated homes and resume preparation before any model run",
+  "model_runs_before_repair": 0,
+  "daily_install_modified": false,
+  "second_setup": "Retry tried to overwrite read-only Git object files in the already-copied private snapshot. Reused complete existing snapshot directories and excluded .git metadata from newly copied directories; no model had run.",
+  "third_setup": "An existing marketplace parent directory was not proof that all children were copied. Merge only missing snapshot entries recursively, excluding Git metadata, then verify both native installed manifests before any model execution."
+}

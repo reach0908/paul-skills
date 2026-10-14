@@ -1,0 +1,9 @@
+# Contrast boundary confirmation, candidate 9
+
+Freeze source, four cases and this protocol before execution. Run three unchanged color-preparation prompts from candidate 8 and one explicit standards-boundary probe per host, each in a fresh native session. Preserve all outcomes without retry. This is eight fresh sessions, not a new 54-session matrix or a held-out reliability estimate.
+
+The only installed-bundle change from candidate 8 is skills/design/better-colors/contrast.md. SKILL bodies, discovery metadata, review routing and Git scope behavior are byte-identical. Verify that all 48 non-color matrix sessions passed and did not read the changed reference before carrying their evidence forward. Re-run the six color matrix cases that read it. Record source differences and observed reference consumers; do not label carried evidence as fresh execution.
+
+Use the same native tools, model selection, concurrency, time limits and cost controls as candidate 8. Codex uses gpt-5.6-sol with inherited medium effort; Claude uses claude-opus-5-5 with inherited xhigh effort. Native package loading, complete source reads, unchanged inputs and absence of tool failures remain mandatory. For every new case require a completed full read of the corrected contrast reference. The explicit probe must reject 2.8:1 for normal active-field placeholder and read-only text, exempt the truly disabled control, and keep APCA separate. The original prompts must not make a conflicting claim or invent measurements.
+
+The candidate 8 Claude color failure remains a semantic failure. The corrected source is grounded in W3C WCAG 2.2 SC 1.4.3. No host prompt for the three repeated cases teaches the correction. Public records exclude credentials and raw host context. Daily 0.4.1 installations remain unchanged. Release readiness requires the 48 eligible carried cases, all eight new cases, package validation and source/evidence integrity to pass.

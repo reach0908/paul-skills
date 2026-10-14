@@ -28,9 +28,20 @@ A shared component can affect unchanged screens. The review follows relevant con
 
 It is deliberately user-invoked. Type its name to start it. A generic request to review UI changes can automatically load `better-interface` to give you the correct command, but the change review begins only after you invoke `interface-review` yourself.
 
+**Does `working` compare my branch with the default branch?**
+
+No. Both local targets start at the current `HEAD`, including when the branch already has commits:
+
+| Target | What the review covers |
+| --- | --- |
+| `working` | Net current changes to tracked files plus untracked files. Earlier commits are excluded. |
+| `staged` | The Git index snapshot. Unstaged edits and untracked files are excluded. |
+
+If you stage an edit and then undo it only in your working copy, `staged` still reviews that staged edit while `working` sees the restored state. A preparation-only answer explains this scope without inspecting Git. Neither target needs the default branch or a merge base.
+
 **What happens when there is nothing to review?**
 
-It states the repository facts and asks you to choose a target. It does not invent a last-commit review or approve an empty scope. For the current screen as a whole, choose [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md).
+It states that the selected scope is empty and asks you to choose another target. An empty `working` or `staged` scope does not silently expand to earlier branch commits. It does not invent a last-commit review or approve an empty scope. For the current screen as a whole, choose [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md).
 
 ## It's working if
 

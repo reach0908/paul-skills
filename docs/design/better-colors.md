@@ -20,9 +20,21 @@ Color values serve roles such as text, background, border and selection. Compone
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
+**What if the agent cannot read a color reference?**
+
+It resolves the file from the installed skill directory and checks that the read succeeded. A shell read uses the real quoted filename; failed or truncated reads do not count as evidence.
+
 **Will it force a new notation or design system?**
 
 No. A consistent existing system is retained. New ramps and tokens need a role that actually uses them.
+
+**Is placeholder text exempt from contrast requirements?**
+
+No. Placeholder text in an active input and read-only text use the applicable WCAG text threshold. Disabled controls have a separate exemption. APCA readability targets are reported separately and do not replace WCAG requirements.
 
 **Can it estimate contrast from a screenshot?**
 

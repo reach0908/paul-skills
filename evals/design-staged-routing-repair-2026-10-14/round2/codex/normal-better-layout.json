@@ -1,0 +1,76 @@
+{
+  "case_id": "normal-better-layout",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a139dc-89e2-79a1-8544-765183251594",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "범위는 현재 대시보드의 그룹·정렬·읽기 순서·반응형 배치입니다. 색상과 폰트 교체는 제외합니다. 아직 화면이나 코드를 보지 않았으므로 확인된 문제는 없습니다.\n\n필요한 입력:\n\n- 데스크톱 3열 전체 화면과 320px 화면 캡처\n- 각 열과 카드의 중요도 및 모바일 우선순위\n- 실제 독일어 라벨과 가장 긴 데이터 예시\n- 지원하는 최소·최대 너비, 주요 중간 너비\n- 기본·로딩·빈 상태·오류·확장 상태 화면\n- 가능하면 DOM 순서를 확인할 수 있는 관련 컴포넌트 경로\n\n배치 검토 순서:\n\n1. 간격과 정렬선으로 정보 그룹이 명확한지 확인\n2. 가장 중요한 내용이 상단·선두에 있고 시각 순서와 DOM 순서가 일치하는지 확인\n3. 3열이 내용에 의해 깨지는 지점을 찾고 2열·1열 전환 순서를 결정\n4. 320px에서 핵심 내용과 주요 행동이 먼저 나오며 잘림·겹침·불필요한 가로 스크롤이 없는지 확인\n5. 실제 독일어 라벨을 적용해 줄바꿈, 높이 증가, 버튼·행 재배치를 점검\n6. 로딩·빈 상태·오류·확장 상태와 200% 확대에서도 같은 우선순위가 유지되는지 확인\n\n320px에서 콘텐츠나 조작 요소가 잘리거나 접근 불가능하면 차단 이슈로 분류합니다. 숨겨진 내용에는 다음 항목 일부 노출이나 펼침 제어처럼 명확한 단서가 필요합니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-interface",
+    "better-layout"
+  ],
+  "injected_skills": [],
+  "loaded_file_hashes": {
+    "better-interface": "9cd28463756c00bda541612784919053a6b2b96305d3d8915cfaef31e65cdd44",
+    "better-layout": "e610fa31d309f6e5fd191cb2dbb57fe24995073cfb4bce7a581489af0e0ded3a"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "9cd28463756c00bda541612784919053a6b2b96305d3d8915cfaef31e65cdd44"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-layout/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "e610fa31d309f6e5fd191cb2dbb57fe24995073cfb4bce7a581489af0e0ded3a"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 71781,
+      "cached_input_tokens": 56192,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1174,
+      "reasoning_output_tokens": 386
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "stream_sha256": "3624595b25cd982a6d4fc5b19a6b50b3046a7464fa7ed052b11b3184efea2ba7",
+  "transcript_sha256": "ef8fff6da6793d35a324f6996d66aaa16b40cc7c236ec21f7c8efc143b8257be",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 38.219
+}

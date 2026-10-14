@@ -1,0 +1,95 @@
+{
+  "case_id": "normal-better-typography",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a87-bd8b-70d2-b656-d300e8b752ad",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "실제 화면·콘텐츠 입력이 없어 현재 상태는 판정하지 않았습니다. 아래는 `better-typography` 기준의 점검 준비 명세입니다.\n\n### 필요한 입력\n\n- 대표 페이지 또는 화면 캡처: 데스크톱, 최소 지원 너비\n- 실제 한국어 본문과 긴 제목 예시\n- 사용 폰트·fallback, 본문/제목 타이포 토큰\n- 숫자가 변하는 영역과 숫자 열 예시\n- 말줄임 위치 및 전체 내용을 확인하는 현재 방식\n- 지원할 확대 수준과 최소 화면 너비\n\n### 점검 기준\n\n| 대상 | 기준 |\n|---|---|\n| 본문 줄 길이 | 실제 한글 폰트로 읽기 흐름을 확인. 라틴 기준인 `60–75ch`를 한글에 그대로 적용하지 않음 |\n| 본문 크기·행간 | 본문은 `16px` 상당부터 검토하고 행간은 보통 `1.5–1.6`의 단위 없는 값 사용 |\n| 크기 계층 | 제목 단계가 내려갈수록 시각적 크기도 내려가며, 제목이 본문보다 작아지지 않음 |\n| 제목 줄바꿈 | 수동 `<br>`에 의존하지 않고 실제 긴 제목·혼합 영문·숫자로 최소 너비에서 확인. 짧은 제목에는 균형 줄바꿈 검토 |\n| 한글 줄바꿈 | `keep-all` 사용 시 긴 URL·식별자의 넘침을 별도 처리하고, 모든 본문에 공격적인 글자 단위 분리를 적용하지 않음 |\n| 숫자 정렬 | 가격·통계·시간·숫자 열에는 `tabular-nums`; 표의 숫자 열은 같은 방향으로 정렬. 일반 문장 속 숫자는 비례 숫자 유지 |\n| 말줄임 | 말줄임마다 전체 내용을 확인할 수 있는 명확한 경로 제공. 마우스 hover에만 의존하지 않고 키보드·터치에서도 접근 가능 |\n| 극한 조건 | 최소 지원 너비와 200% 확대에서 글자 잘림, 컨테이너 이탈, 전체 내용 접근 불가 여부 확인 |\n\n본문 잘림 또는 말줄임 후 전체 내용 접근 불가는 `HIGH`, 제목 계층이나 타입 시스템 불일치는 `MEDIUM`, 고립된 미세 조정은 `LOW`로 분류하면 됩니다. 현재는 모든 항목이 **Not verified**입니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state wor",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state wor",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and reque",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-st",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-typography"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-typography": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc"
+    },
+    {
+      "command_id": "item_4",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' korean-text.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 70811,
+      "cached_input_tokens": 65408,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1207,
+      "reasoning_output_tokens": 305
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "stream_sha256": "1914b1e17de5c952e2e203f53bff581ab83466ffe2125902f16a1691a92151b1",
+  "transcript_sha256": "14b235711fee5ef2a9832c06f654def75b7673961d4f10c2be1edb1c76400abd",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 40.418
+}

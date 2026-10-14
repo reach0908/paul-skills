@@ -44,6 +44,8 @@
 
 ## Remaining Codex failure
 
+후속 [staged 호출 순서 보완 보고서](../design-staged-routing-repair-2026-10-14/REPORT.md)는 별도 로컬 후보의 변경과 새 세션 검증을 기록한다. 아래 0.4.1 결과와 릴리스 파일은 그대로 보존하며 후속 후보의 결과로 소급 변경하지 않는다.
+
 [Codex staged receipt](./codex/repair-staged.json)의 실제 순서:
 
 ```text

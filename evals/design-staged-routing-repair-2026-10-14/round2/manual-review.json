@@ -1,0 +1,199 @@
+{
+  "reviewer": "same executing agent; not independent",
+  "codex": {
+    "staged-1": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "499dc5151a68e613c7d3dad73a8ee13fdbf3583f920e93c5708d0d11d2ede47e"
+    },
+    "staged-2": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "7361d9733db09f7229a94d4bf3f365229cac0f45e47d61743449c37691aa7ef4"
+    },
+    "staged-3": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "082e081c1a4b871846b9ddcf5a6ea5638af4aea9c84d2c809e8b152112d22d53"
+    },
+    "normal-better-colors": {
+      "pass": true,
+      "note": "Reached color role and full exact body; asks for brand input, defines semantic themes and real rendered-pair measurement instead of invented contrast.",
+      "response_sha256": "51c59c7285b6b27361a704b1166be559fa0798a6782deb814e1827c966d1405e"
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "note": "Reached typography role; Korean content, actual font and numeric/truncation checks retained without fabricated measurements.",
+      "response_sha256": "9312e5c4d6cf074f0f5833cd7a981a5f029e868278ad7a17caffca371832ebb4"
+    },
+    "explicit-domain": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "5b33c5620353f7d47a88070c637c139c1eb6fefd88e62edde4f8b055a99c2cda"
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "note": "Reached writing role; supplied copy alternatives are conditional on real behavior and retain missing-context limits.",
+      "response_sha256": "fd02661c0698defdf72f7d7a490a67e949e385595e9e91dbb581894c136764cf"
+    },
+    "staged-type-color": {
+      "pass": false,
+      "note": "Correct final command does not excuse batching the router read with Git status and diff inspection; full body output was also truncated.",
+      "response_sha256": "7ebeedc9fcc0dcb3dfea02504988ec93e145e67dc6a29d7c7787b4b5dda27c8d"
+    },
+    "normal-ia": {
+      "pass": true,
+      "note": "Reached IA role; destination hierarchy and labels remain draft and do not invent screen design.",
+      "response_sha256": "aada0b7e3372ce876e47d0b862a31de4f271058ae5b8aa36accb958b0070d8e5"
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "note": "Reached layout preparation; grouping, DOM/visual order, 320px and long translation inputs retained; no redesign or change-review redirect.",
+      "response_sha256": "a31c7fb17190c9e6d7642cfec0df03ddbdd08367a747becd701889853724ef56"
+    },
+    "branch": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "76c7fb3e1934655250fec9acf443bd7bfe29e1410e12a4c641e63b8e9b5ec259"
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "bba1217caa994cda6f68519bab7fe3eefd8f05d4683a1e99fba6148d3a3fac90"
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "note": "Reached UI-polish role; radius, icons and interaction states stay within requested surfaces; no fabricated visual pass.",
+      "response_sha256": "18082771d03e66bfb5122387476183bbfaa89b4d5d80d2e91d594d418b36bedf"
+    },
+    "explicit-owner": {
+      "pass": false,
+      "note": "Invocation is correct, but preparation incorrectly asks for the default branch as the working comparison base. Working should be based on HEAD. Keep this quality defect separate from routing.",
+      "response_sha256": "68336dc408053b58a4066ef7cc8b14e8ad3bc37d54c042c524db8b3e13cc3382"
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "note": "Reached accessibility preparation; covers modal keyboard entry/exit, focus, errors, zoom and motion, with unverified runtime explicitly bounded.",
+      "response_sha256": "6802a9ff0b5f77b6d3f024a708dbc948d01a8e71931133659df318e31e0dc730"
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "note": "Actual fixture diff identifies removed aria-label as a Regression; router and all six exact owner bodies reached without invocation loop. Browser behavior remains unverified. The missing origin/HEAD probe remains a nonzero command and fails the strict mechanical completion gate; full owner loads reconstructed from exact added-file diff bodies.",
+      "response_sha256": "55bcdf26f73122277d65f6c6c43386192b1b2e872b58f05fd592cf18febf1c2b"
+    },
+    "explicit-router": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "352f213c23777bab3c15109f2230aea903cd0a99dc3d440b2a1245fcf53b1a9c"
+    },
+    "working": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "bba75875bb8720669b7ec6841dcf1065f8ca62bdd3a716a26dc1f52c26570d0e"
+    },
+    "current-audit": {
+      "pass": true,
+      "note": "Prepared current-screen cross-domain audit with evidence requirements and no actual verdict. Conditional mention of a separate change review is not a redirect.",
+      "response_sha256": "bc61a5c0e24c6c43e9c802f732eaa20607f2c81531999458b0cc4a6fc3466b6a",
+      "no_change_review_redirect": true
+    }
+  },
+  "cases": {
+    "staged-1": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "cb48dd81743933d1ccc7ff67e8c93f6cc027fc398d6a0cc0626c42e9937ab70e"
+    },
+    "staged-2": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "420f3a6d37fec03cc8b36dfb9540123627c9ac600aa3c7bc36f6aebe46151145"
+    },
+    "staged-3": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "33379054ccb6bc931aebbfc9caa81dca2357dbf37b2ad08f7303aa3bf235900d"
+    },
+    "normal-better-colors": {
+      "pass": true,
+      "note": "Reached color role and full exact body; asks for brand input, defines semantic themes and real rendered-pair measurement instead of invented contrast.",
+      "response_sha256": "ae591fc6bb236756f3a1ec399b2b56e154372ad946b846142a6dea9c7a57f7a8"
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "note": "Reached typography role; Korean content, actual font and numeric/truncation checks retained without fabricated measurements.",
+      "response_sha256": "ff6984006eb9b03ab74a9bed3ac9de59c55ba20f2e9ea4a0ffab28cdb831dd80"
+    },
+    "explicit-domain": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "b41019475f076d29e0e3f508f8ef7d33e72de9b3b877e397830710f4dba9a25c"
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "note": "Reached writing role; supplied copy alternatives are conditional on real behavior and retain missing-context limits.",
+      "response_sha256": "4759739ccc198c08f8553bff1844cd65d1c10ec7f54fe27adcae82ff3741e2d2"
+    },
+    "staged-type-color": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "5ac9dc073676e3e0b8a7948c0aa0438ec9719e76213a721fd94a86ed9d06baa4"
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "note": "Reached layout preparation; grouping, DOM/visual order, 320px and long translation inputs retained; no redesign or change-review redirect.",
+      "response_sha256": "b3e55ed0608dd790008d03589b4d11097717564d276e257afe6d76271e1ef4de"
+    },
+    "branch": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "a3b83e67ce441ca22c33ef7c98c07f6ba744d1d30d9686461831839b4bda6add"
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "427b69aa9aab07bfcf0cf035d5a434c2cddbd967aa56cb7a98bc4dd4785f2f03"
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "note": "Reached UI-polish role; radius, icons and interaction states stay within requested surfaces; no fabricated visual pass.",
+      "response_sha256": "9dfd02b5682032970157507b49cdc4d42f1e564318558b0a9e9e7dcd4aea8302"
+    },
+    "explicit-owner": {
+      "pass": true,
+      "note": "Explicit owner loaded and preparation stays non-executing; classification and verification limits are stated.",
+      "response_sha256": "4778507f52c1188d229a8b05bbae98e79b8ac5c65e40dc231649d7e3ed77a551"
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "note": "Reached accessibility preparation; covers modal keyboard entry/exit, focus, errors, zoom and motion, with unverified runtime explicitly bounded.",
+      "response_sha256": "d945364a8affc57b357ed51523aa1978f58cd7502e757fbc72b7b2e624c32e41"
+    },
+    "explicit-router": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "c71498a8beaddc7b2f1852690657350c724a9142242da489996b232ffd1dd980"
+    },
+    "working": {
+      "pass": true,
+      "note": "Returns the requested explicit target command and preserves no-mutation and no-browser constraints; no review verdict.",
+      "response_sha256": "721286401867fef72ea127f455da964cb4fb5b771e3df1a8a42774ad87884b5a"
+    },
+    "current-audit": {
+      "pass": true,
+      "note": "Prepared current-screen cross-domain audit with evidence requirements and no actual verdict. Conditional mention of a separate change review is not a redirect.",
+      "response_sha256": "47b22a5675dbb5214de767b46b3622f72c330c55ffd0e697f481f2d136890fa0",
+      "no_change_review_redirect": true
+    },
+    "normal-ia": {
+      "pass": true,
+      "note": "IA destination and hierarchy draft reached its owner, assumptions and missing product decisions explicit, no screen implementation.",
+      "response_sha256": "c5a4b805a1563cc53625a964eb433c50cb7a2daa05150f1adb93c09b070b5dcc"
+    },
+    "authorized-handoff": {
+      "pass": false,
+      "note": "All authorized owner bodies loaded and Git diff reached, but the USD 1.60 host list-cost cap stopped the session before a final report. Preserve as incomplete, not a routing success.",
+      "response_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  }
+}

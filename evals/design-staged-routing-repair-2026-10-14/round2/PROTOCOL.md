@@ -1,0 +1,5 @@
+# Candidate 2: separate route decision before domain loading
+
+Candidate 1 failed its pilot because Codex batched the router and domain skill bodies in one call. Preserve all nine pilot sessions and stop that candidate before expansion. Candidate 2 changes descriptions to scope domain skills to current-screen work or authorized handoff, and makes the router an exclusive separate first call. Its domain rules and all other source files remain unchanged.
+
+Run the same nineteen frozen cases per host on candidate 2. The first three staged repetitions gate expansion. Use the same host snapshot, Codex model/effort, tools, fixture, graders, six-minute timeout and privacy boundaries as the original protocol. Retain the first candidate and baseline counts separately; do not pool them into candidate 2. No additional baseline is needed for this bounded repair confirmation, so its baseline comparison is descriptive and not concurrent. This new source attempt is not an answer-only retry. Only candidate 2 outcomes support the final-source conclusion.

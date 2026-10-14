@@ -1,0 +1,35 @@
+{
+  "planned": 19,
+  "completed": 19,
+  "by_arm": {
+    "baseline": {
+      "completed": 0,
+      "passed": 0
+    },
+    "candidate": {
+      "completed": 19,
+      "passed": 16
+    }
+  },
+  "failures": {
+    "staged-type-color": [
+      "target_body_equal",
+      "target_path_read",
+      "router_loaded",
+      "no_repository_inspection",
+      "semantic_review_pass"
+    ],
+    "explicit-owner": [
+      "semantic_review_pass"
+    ],
+    "authorized-handoff": [
+      "no_failed_commands"
+    ]
+  },
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "efforts": [
+    "medium"
+  ]
+}

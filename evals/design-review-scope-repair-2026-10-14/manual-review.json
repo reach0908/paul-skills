@@ -1,0 +1,259 @@
+{
+  "reviewer": "Maintainer agent; manual inspection of responses and tool receipts, not an independent blinded judge",
+  "codex": {
+    "explicit-owner-3": {
+      "pass": true,
+      "response_sha256": "c07759ec9f56ee29d86470488f0ece31578bf4a6c00a76c8a1d968dd6cd77611",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "explicit-owner-2": {
+      "pass": true,
+      "response_sha256": "20b81ebeab7321ee524fba23478c86a204209cf135496af50835f22afe32f6c2",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "e1b0989975e53ac36cd08538d873b6bf461b462893ce9c71065cca6d1cb62bde",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "staged-2": {
+      "pass": true,
+      "response_sha256": "61f2046aa0d2493e7fe56da8af65d4ada0cd59094daed469f44163eadbdc55ad",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "111f7f9aca1e1eec09f155adbdcfd72163a80b8607402d43af6ba323eb9fc38b",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "staged-3": {
+      "pass": true,
+      "response_sha256": "25777a9549abb49e5d9015dc4348e1ff18b55dc8c3f7840a39f92f4a1665f67d",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "branch": {
+      "pass": true,
+      "response_sha256": "2853e218033b3e51b2fa7f48a63abe6bcced8d60b1002dbcfe2efead5842aa87",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "2544e5ed1444d26e230fe3173130169d07530609cddc0ecd48ab71f0f4e82c89",
+      "notes": "Correct domain preparation with required inputs, checks and verification limits; no actual UI findings claimed. Normal invocation remains available."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "ff214110eaefe05eda6be25f84dbae6424060b7bb180f4cf13e61a1e6efd3056",
+      "notes": "Correct domain preparation with required inputs, checks and verification limits; no actual UI findings claimed. Normal invocation remains available."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "37b0090556779b966220be770d12ece033dc61e8011a7800dc0828ba833bfe40",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "staged-type-color": {
+      "pass": false,
+      "response_sha256": "b450b9557c976390a36dc4c4a6202031f9599d3d008dd98c075b7c7afa30d104",
+      "notes": "Final staged command is correct, but the first read batches router, typography and colors. This violates the entry order and remains a failure; no source/repository inspection or invented verdict observed."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "291539371651d34e100ee378ff43e4a8eba6a150bd4564b3b08f094f832cad3b",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "62498c308e78bb176e6c6dac8ff63eff37793a665c7a2e1020302b3cdca1f3af",
+      "notes": "Correct domain selected with bounded copy proposals or typography preparation. Missing inputs and rendered evidence are explicit; no observed result claimed."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "153bcc0151a20aaee923d24ee014673cee75844aceda1acecd2131921677fcf9",
+      "notes": "Correct domain selected with bounded copy proposals or typography preparation. Missing inputs and rendered evidence are explicit; no observed result claimed."
+    },
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "61c595be1bd5f1df98255149587a751e22ff6b17035aedbf837397b770a5222a",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately. Five malformed reference-read commands are retained as execution failures despite recovery and a substantively correct final answer."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "bbf0871d698abe35d15038d9b54c18240073ff6c01e22f92822584c2405df1dd",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "81fb3eaa2d7021d08b041d571778809fa9c858ff9aaf28d54806fed98173dd5e",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately.",
+      "no_change_review_redirect": true
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "367a0f1499e8fb204f7b3c16095ef42476eb3eb6a76671289c0ef9ba3f39c622",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "explicit-domain": {
+      "pass": true,
+      "response_sha256": "8dd5966209e6075843cf71e36300f50f9ec1f4d288e402269049827ac45a5b7c",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "response_sha256": "2a285ff079df1cb735c9a027a5eb65d5a2a763d4be8b1148bf6fb770ee7d0907",
+      "notes": "HEAD SHA matches the fixture, one uncommitted Panel change and zero committed changes. Correct HIGH Regression, six owners and procedure loaded; no rendered claims or default-branch resolution."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "f30b41eb01399dcfaea516d7806662bfb27c01d5bd44982cc18a04894eea1b95",
+      "notes": "Five stable destination IDs, hierarchy and navigation are supplied; layout and visual design excluded. No invented validation."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "0030451f786961e7e099916017cf8c3c7293981c8bf66c72a1834517786cabfa",
+      "notes": "Correct staged command after router-only read; no repository/domain work."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "899b1b0460eb518f05ff32244f4682c08ea4dc291ca63a8d86cd77a8d2fe7add",
+      "notes": "Correct router-first explicit staged command without repository or unauthorized domain work."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "c8cb75a88eb81a63eed71b6cc3368cd1ce540aea990baf87e19fbe85ed04a222",
+      "notes": "Correct HEAD SHA and index blob. Finds Panel name Regression despite restored working file; excludes unstaged restoration and New.html. Six owners and procedure, cached diff/show/grep, zero committed changes and rendering limitations confirmed."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "4878d093d330202cf48b59dfb4c05db5a9f1c9843ac2a08f0873ae8c19d5d8ad",
+      "notes": "HEAD SHA correct; net tracked diff empty, only untracked New.html reviewed as Introduced. Restored Panel excluded. No default-branch lookup, all six owners/procedure loaded, static evidence and rendered limits explicit."
+    }
+  },
+  "cases": {
+    "explicit-owner-3": {
+      "pass": true,
+      "response_sha256": "f9f9d5fb621ac5beacb1ad1a7ecafe7d5b4dd467d17e671e26b878e50daafb6c",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "explicit-owner-2": {
+      "pass": true,
+      "response_sha256": "2eef86d8a09e3bb80b2c80da33764fef4f25bbc7f679ce6268695c05c0bf7447",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "4743a40c26e7e8f44ddcf95c02a514da7b623c21f4a463e17481c9aa7c8ae408",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "staged-2": {
+      "pass": true,
+      "response_sha256": "9ce4dc9449ddc54dd38334eeb9fc8c2e3f16880e54772dd1747a7db45834c035",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "cd9cda5e42bd1da096f239f3cef0e567789b6a954bb59312085d35e82b473ce4",
+      "notes": "HEAD, zero earlier commits and untracked inventory correctly explained; no diff executed and no claimed result. Preparation wording asks for a later execution request."
+    },
+    "staged-3": {
+      "pass": true,
+      "response_sha256": "65665d40c4e4bc01b821723709685696eb5231aa567c9d9c5be20eece4a457bd",
+      "notes": "Correct staged index command; no repository or domain inspection, no claimed findings."
+    },
+    "branch": {
+      "pass": true,
+      "response_sha256": "142c84bdacc24fc2e8133adcfaee69be419ef5bd68fbd5757d650c2e988a4515",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "11ff3c2d86ceb3425628f6bce0ceaea715ab23fb0a3a10010340fc551eba4705",
+      "notes": "Correct domain preparation with required inputs, checks and verification limits; no actual UI findings claimed. Normal invocation remains available."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "84d5a81f156e035283cad69b9717887729e08650ace295e0f2244edb98d132c1",
+      "notes": "Correct domain preparation with required inputs, checks and verification limits; no actual UI findings claimed. Normal invocation remains available."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "0579c69724b22e0d72fc80718ae9995581c304215a9d2e4c507a6cadf2c38eff",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "f4b432edb92534577f6721f7c6bbdb312c9eb30a92695e5dcac62502b35dcd7c",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "671b2edcd2c3401bf020c04edc28ade1808ca30a1a321541f983ce41254fe3e2",
+      "notes": "Correct target command and no findings; entry/tool evidence inspected."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "c9fd956f6c046f98d993f8f8cc96a36fc412ee3804a23485f79cc003e27ed2f2",
+      "notes": "Correct domain selected with bounded copy proposals or typography preparation. Missing inputs and rendered evidence are explicit; no observed result claimed."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "36a76b35971f73f8332957656bc91ab11558080a94e81a829c975b3c6101c158",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "90cc565b7150736d959519b6d01b3ebd8d4b3cbb37b16b19b345d98ba3725b44",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "025b2b90c10863eba55f5039082e91b4db611adacf03345beeeeceeed8484d11",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "f638bc1b5114ef4b3e9b574a1e92d5ddeca7db9f2909ca029664e0be36908d40",
+      "notes": "Correct preparation or command with requested scope and explicit unverified status; actual tool success is graded separately."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "ef2024e08eeb535a43f1a27cee34a3e37c4e5869dc98768258774d7bf079ad9e",
+      "notes": "Current-screen preparation continues, source observations are supported and rendering limits explicit. Conditional mention of a separate change review does not redirect or block the current audit.",
+      "no_change_review_redirect": true
+    },
+    "explicit-domain": {
+      "pass": true,
+      "response_sha256": "68cc4f4b9c02dec39a94ef07cc499ab11214feec7e7c17de2a2b3d0cc0739027",
+      "notes": "Correct router-first explicit staged command without repository or unauthorized domain work."
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "response_sha256": "ea9ca57988c03c60b99eb9928da9e761c4415fc087bb3300268f926e32091185",
+      "notes": "HEAD SHA and one net working regression match the fixture. All six owners and full audit procedure observed; no default-branch lookup. Static name-loss conclusion with explicit rendered limitations."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "20862f6076061e3f169492225e877ee195837a2906cf52ecc7928fcb5f2906ea",
+      "notes": "Correct staged command; route only, no repository/domain reads or invented findings."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "94e18afba473f9c238a5c568abdad0af99845b211ab6b30cd6b0158651633c56",
+      "notes": "Stable destination IDs and hierarchy, assumptions and missing inputs explicitly separated. No visual design or implementation and no user-validation claim."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "2eb1510ea6400c22ad3d8144853e619e86880fca963085039a3e98c67231a975",
+      "notes": "Correct staged command with router-only invocation and no repository/domain inspection."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "ff304a132e122cce8829630c0b527bb2316831e97357f34df3f24669de7d3886",
+      "notes": "Correct HEAD/index scope and Regression, excludes working restoration and New.html; cached content and six domains/procedure confirmed. Pre-existing stroke issue separated; contrast is labeled source calculation and rendering/reader behavior remains unverified."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "f1035c7d786239d0ce6e652d0f7ed79926f8b52e34902f76af36cb40001c426e",
+      "notes": "HEAD matches fixture, no net tracked changes, New.html included as untracked Introduced. Panel index deletion is excluded from verdict and separately identified as outside working scope. Six owners/procedure, native reads and explicit rendering limits verified."
+    }
+  }
+}

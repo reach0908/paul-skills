@@ -1,0 +1,67 @@
+{
+  "reviewer": "Maintainer agent; manual inspection, not an independent blinded judge",
+  "codex": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "c3b9daa205e2ee073888309b8f526d05d8abe738d7db70685846ddc9620ef031",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "57e2c371eeab38de61cd970c004c9bc52d0c6a09ec008122e832b6fa453ffa9f",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "ba66266d7dcc30080875c4f3fb1a8a1a93950ce9c86feb7f1eea87a02ed02316",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "146fe185d4687a0ecc6acaa119238adc215971abf2ac2d8cdbefc035545c22c5",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "307aa68f6479843b9561e4d774b47c40d650e30ac3cfeb58ec29c229696dbb28",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "ba3a246859e9934319973db8f50b6402bd27e87a8678b8a87ebba782594b50db",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    }
+  },
+  "cases": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "d1449ff6c6173e141ee55d394d4dae6b2f1888ff58a9ef4dbe1b2da950bf7b4a",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "81884f193242de5cd3e6ff82181d198af96bba13ebdc96336de623f2b3fc6b2e",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "7e8ac66c90b10b349323355a023c15912a9bb631b0ac8cbcdeae72fe44d733b1",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "36f0b5a2732aa95565e58d0f0cc41f38e34fe5f2d986ee788569323b9db568e2",
+      "notes": "Preparation identifies missing color inputs, roles and measurement steps without claiming completed validation. Exact Claude body mutation and command success are checked separately."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "3f34082ae9d201c57b19b4382e04828d4b393454cda78f37855ac4efd76a1dda",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "aac96c689b994a8dbb188b0b3d7c05118a051bf1a76e48c2c5de6b252f278e5a",
+      "notes": "Final staged target and restrictions are correct; premature loading is separately failed by the order checks."
+    }
+  }
+}

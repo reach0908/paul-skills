@@ -1,0 +1,58 @@
+{
+  "behavior_sessions": 90,
+  "network_failed_launches": 2,
+  "unique_sessions_total": 92,
+  "outcomes": {
+    "pilot-codex": {
+      "baseline": {
+        "completed": 3,
+        "passed": 2
+      },
+      "candidate": {
+        "completed": 3,
+        "passed": 2
+      }
+    },
+    "pilot-claude": {
+      "candidate": {
+        "completed": 3,
+        "passed": 3
+      }
+    },
+    "candidate2-codex": {
+      "candidate": {
+        "completed": 19,
+        "passed": 16
+      }
+    },
+    "candidate2-claude": {
+      "candidate": {
+        "completed": 19,
+        "passed": 18
+      }
+    },
+    "final-codex": {
+      "candidate": {
+        "completed": 21,
+        "passed": 18
+      }
+    },
+    "final-claude": {
+      "candidate": {
+        "completed": 21,
+        "passed": 21
+      }
+    },
+    "native-read-control-codex": {
+      "candidate": {
+        "completed": 1,
+        "passed": 1
+      }
+    }
+  },
+  "claude_reported_list_cost_usd": 14.7807262,
+  "actual_billed_cost_usd": null,
+  "decision": "hold; Codex staged routing and working preparation remain unreliable",
+  "daily_installs_unchanged": "0.4.1",
+  "source_and_quality_scope": "routing plus bounded preparation and one actual synthetic diff; not seventeen-role quality parity"
+}

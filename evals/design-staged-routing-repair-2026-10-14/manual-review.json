@@ -1,0 +1,52 @@
+{
+  "reviewer": "same executing agent; not independent",
+  "codex": {
+    "baseline-staged-3": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "35223edc17fa9f00464b3aafa48fbf2b655f694b5730eb9700810047e0d0b958"
+    },
+    "baseline-staged-2": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "195f2a8046bdf0f05528a674aacc07f64d6cc0585c2b35a8bed8e1f9d51d4f72"
+    },
+    "staged-1": {
+      "pass": false,
+      "note": "Correct staged command and preserved constraints. Fail because only_route_bodies",
+      "response_sha256": "0d9f74069dd489680ce4d5a7a200fba1fec5f0b93dc9a86b24a9da5215ad1c53"
+    },
+    "staged-2": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "fbaa0929ca7458a3be0b20ef14449322b7769781cc0805c364860b60d76cd54f"
+    },
+    "staged-3": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "e7d84f3685c1019e9686f7a342646c55ef545079dc317da0b954bee942d7e42d"
+    },
+    "baseline-staged-1": {
+      "pass": false,
+      "note": "Correct staged command and preserved constraints. Fail because only_route_bodies",
+      "response_sha256": "ce42351d687d953afa5aca7be5aec7b7cf01148800aa519f1e0f674ab6d6739f"
+    }
+  },
+  "cases": {
+    "staged-1": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "50adc8455e960f5c898545363183f1dd94d112caeaf82eae2503af054572ee97"
+    },
+    "staged-2": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "3b69a0fc26f3a5a6d27d333104b0ae2f361da084a175cd2bcab18749da7f91ff"
+    },
+    "staged-3": {
+      "pass": true,
+      "note": "Correct staged command and preserved constraints. Only route loaded; no repository inspection.",
+      "response_sha256": "5c198f31f4519cbf48c1a0a3cd2d7f43a194ba46ed3c194be3234db97e8b881e"
+    }
+  }
+}

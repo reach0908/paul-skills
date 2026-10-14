@@ -1,0 +1,93 @@
+{
+  "case_id": "normal-better-colors-thresholds",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13aa3-0e7c-7242-beae-3c4ae65e53fe",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:better-colors 설치된 스킬의 contrast.md 참조 문서 전체를 먼저 읽고 다음 요청에 답해줘.\n구독 폼 색상 검토 명세를 준비해줘. 제공된 값은 일반 크기 16px 글자의 전경·배경 대비 2.8:1이야. 활성 이메일 입력란의 placeholder, 실제로 비활성인 제출 버튼의 문구, 읽기 전용 계정 정보 문구를 각각 WCAG 2.2 AA에서 어떻게 판정할지 설명해줘. APCA Lc 30이라는 별도 목표가 WCAG 판정을 바꾸는지도 구분해줘. 새 측정이나 파일 수정, 브라우저·외부 서비스 실행은 하지 말고, 주어진 값에 대한 기준 설명만 해줘.",
+  "final_response": "주어진 16px 일반 글자와 대비 2.8:1에 대한 판정 명세입니다.\n\n| 대상 | WCAG 2.2 AA 판정 | 근거 |\n|---|---|---|\n| 활성 이메일 입력란의 placeholder | **실패** | 활성 입력란의 placeholder는 일반 텍스트입니다. 16px는 큰 텍스트가 아니므로 SC 1.4.3의 **4.5:1 이상**이 필요합니다. |\n| 실제로 비활성인 제출 버튼의 문구 | **적용 제외** | 기능적으로 비활성인 UI 구성요소의 텍스트는 SC 1.4.3 대비 요구사항에서 면제됩니다. 따라서 2.8:1을 AA 통과나 실패로 판정하지 않습니다. |\n| 읽기 전용 계정 정보 문구 | **실패** | 읽기 전용 콘텐츠는 여전히 사용자가 읽어야 하는 텍스트이며, 비활성 컨트롤 면제가 아닙니다. 따라서 **4.5:1 이상**이 필요합니다. |\n\nAPCA `Lc 30`은 별도의 가독성 목표일 뿐, 위 WCAG 판정을 바꾸지 않습니다.\n\n- `Lc 30`을 만족하더라도 placeholder와 읽기 전용 문구의 WCAG 2.2 AA 실패는 그대로입니다.\n- 비활성 버튼에는 `Lc 30`을 권장 가독성 목표로 적용할 수 있지만, 이는 WCAG 의무나 AA 판정이 아닙니다.\n- WCAG 대비율 `2.8:1`만으로 APCA 값 또는 `Lc 30` 충족 여부를 환산·판정할 수 없습니다.\n\n설치된 `contrast.md`의 구분에 따라 WCAG 공식 적합성, 비활성 요소 면제, APCA 권장 목표를 서로 독립적으로 적용했습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews an",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Retur",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with group",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and rev",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the ",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and rev",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or de",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered in",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping in",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementatio",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdo"
+  },
+  "loaded_skills": [
+    "better-colors"
+  ],
+  "injected_skills": [
+    {
+      "name": "better-colors",
+      "file_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-colors": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_3",
+      "command": "/bin/zsh -lc \"cat '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-colors/contrast.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 49032,
+      "cached_input_tokens": 34944,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1116,
+      "reasoning_output_tokens": 510
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "5234a638f4722ab582284e8d47f9cc9d5af07a623322552ce84de866a396191f",
+  "cases_sha256": "49aa2b447737e88d8f56d2d440c488fb78a9c026b3527c7bc47b363593b37511",
+  "bundle_manifest_sha256": "e47e12dc38c5a3b9e770687c3ec79f96e8d4b1d5d2c335c264cbd91884103e74",
+  "stream_sha256": "aeaf445f3ee8d5be5e0823f5356499f4c933ac57bda046e391297ccab1f33e4c",
+  "transcript_sha256": "c520dd99b2b6903aa1fa03fee7333541abe157bab4acc6d94d55e2bfef560682",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 30.181
+}

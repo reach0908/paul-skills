@@ -1,0 +1,46 @@
+{
+  "planned": 19,
+  "completed": 19,
+  "by_arm": {
+    "candidate": {
+      "completed": 19,
+      "passed": 18
+    }
+  },
+  "by_mode_candidate": {
+    "explicit": {
+      "completed": 1,
+      "passed": 1
+    },
+    "implicit": {
+      "completed": 8,
+      "passed": 8
+    },
+    "boundary": {
+      "completed": 9,
+      "passed": 9
+    },
+    "handoff": {
+      "completed": 1,
+      "passed": 0
+    }
+  },
+  "failures": [
+    {
+      "case_id": "authorized-handoff",
+      "failed_checks": [
+        "model_completed",
+        "semantic_review_pass",
+        "classified_regression"
+      ]
+    }
+  ],
+  "reported_cost_usd": 6.880774799999999,
+  "actual_billed_usd": null,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "efforts": [
+    "xhigh"
+  ]
+}

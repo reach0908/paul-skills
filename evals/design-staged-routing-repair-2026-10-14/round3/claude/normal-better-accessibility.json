@@ -1,0 +1,231 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "2d275b13bc80e9f4e713556e105f7ffed97e051140945783a07bf690ec0f88ed",
+  "schema_version": 1,
+  "case_id": "normal-better-accessibility",
+  "host_protocol_sha256": "577e0365e3739867b1ce0edaf5c1efc39db4e0f8c911acaee84e003f213f53d5",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_008",
+  "expected": "better-accessibility",
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "73b7b5d9-7b1d-4167-9756-08586e1641f8",
+  "started_at": "2026-10-14T10:12:43.614919+00:00",
+  "host_init_session_id": "73b7b5d9-7b1d-4167-9756-08586e1641f8",
+  "host_result_session_id": "73b7b5d9-7b1d-4167-9756-08586e1641f8",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-staged-routing-20261014/round3/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "3e4ec357-edb1-4137-8b01-19e2c09b8f92",
+  "automatic_catalog_sha256": "c223f485c452146ef3dd91e032d37d7b130bbbb77fa36bffb2b64131cde3edd9",
+  "full_body_loads": [
+    {
+      "name": "better-accessibility",
+      "event_uuid": "4ff17bdb-2e59-4fd4-8180-93895499c458",
+      "file_sha256": "cf90927907f247cdc98cf5cad5c92e679eacc1e437c02bc8d157f25e80338af6",
+      "body_sha256": "4588c33276fb57595852b994c751c6ac27fdd704d0a496901789c592ac69eab9",
+      "host_message_sha256": "c91ed4fa3bb482d1b9a8ff4e4a6d1f7d49f4d51f7baa9abaf163e76ee0317133",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_0111Vufv62TLT9stYWzbESk4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "00513016fb3de36b5450a6178f3d21bfab41613966bf82451e7382da0441b048"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-accessibility",
+        "args": "구독 해지 대화상자 현재 화면 감사 준비만. 범위: 키보드 열기·이동·닫기·트리거 포커스 복귀, 접근 가능한 이름, 오류 알림, 확대(zoom/reflow), 움직임 감소. 이번 턴은 입력·검증 순서·완료 조건 명세까지만이며 파일 수정·브라우저·외부 서비스 실행 금지. 작업 디렉터리는 비어 있음."
+      },
+      "tool_use_id": "toolu_01RdMnPhnWnm7AnGyFv2YF2X",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ec719f186d0e55d0d44d29759a3cb02a2b147a892e497f7d4cc0adc0e11474c1"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "## 구독 해지 대화상자 접근성 점검 명세\n\n작업 디렉터리가 비어 있어 점검할 코드나 화면이 없습니다. 그래서 아래 내용은 준비용 명세이고, 확인된 결과는 아직 하나도 없습니다.\n\n### 1. 필요한 입력 (지금은 모두 없음)\n1. **대화상자 소스와 스타일:** `<dialog>`를 `showModal()`로 여는지, 아니면 직접 만든 대화상자에 `role=\"dialog\"`와 `aria-modal`을 붙이고 배경에 `inert`를 거는지, 포커스 가두기 라이브러리를 쓰는지 알아야 합니다.\n2. **트리거 버튼 소스:** 해지에 성공한 뒤 이 버튼이 사라지거나 다른 버튼으로 바뀌는지 알아야 합니다. 이에 따라 포커스를 어디로 돌려보낼지가 달라집니다.\n3. **해지 처리 코드:** 요청 대기 중 상태, 두 번 눌러도 한 번만 처리되는지, 실패 후 다시 시도하는 방법, 오류 종류(입력 검증 오류인지, 네트워크나 서버 실패인지)를 확인해야 합니다.\n4. **애니메이션 CSS나 설정:** 자동으로 닫히는 토스트나 타이머가 있는지도 함께 봐야 합니다.\n5. **viewport meta와 포커스 링 스타일**\n6. **다음 단계(브라우저 확인)용:** 실행할 수 있는 URL이나 Storybook, 점검할 브라우저와 스크린리더 조합, 해지할 수 있는 상태의 테스트 계정\n\n### 2. 검증 순서\n\n**A. 코드 읽기 (입력 1–5를 받은 뒤)**\n1. **모달 구조:** 네이티브 `<dialog>`인지, 아니면 role, `aria-modal`, 배경 `inert`를 모두 갖췄는지 봅니다.\n2. **열기, 이동, 닫기:**\n   - Enter나 Space로 트리거를 누르면 포커스가 대화상자 안으로 들어가는지 봅니다.\n   - Tab과 Shift+Tab을 누를 때 포커스가 대화상자 안에서만 도는지 봅니다.\n   - Escape, 닫기 버튼, 취소 버튼 모두로 닫히는지 봅니다.\n   - 처음 포커스는 \"구독 유지\"처럼 안전한 버튼에 두기를 권장합니다. 이건 WCAG 기준이 아니라 권장 사항입니다.\n3. **포커스 복귀:** 닫으면 트리거 버튼으로 돌아가야 합니다. 해지에 성공해 트리거가 사라지는 경우에는 다음에 포커스를 받을 요소(예: 바뀐 상태 문구나 \"구독 재개\" 버튼)가 정해져 있어야 합니다.\n4. **접근 가능한 이름:**\n   - 대화상자의 `aria-labelledby`는 제목을, `aria-describedby`는 본문을 가리켜야 합니다.\n   - 아이콘만 있는 닫기 버튼에는 `aria-label`이 있어야 합니다.\n   - 각 버튼의 접근 가능한 이름에 화면에 보이는 글자가 들어가야 합니다.\n5. **오류 알림:**\n   - 입력란 오류: `aria-invalid`와 `aria-describedby`를 쓰고, 제출할 때 첫 번째 오류 입력란으로 포커스를 옮겨야 합니다.\n   - 입력란과 상관없는 실패는 `role=\"alert\"`, 성공 알림은 `role=\"status\"`로 전해야 합니다.\n   - 알림 영역(live region)은 빈 상태로 먼저 화면에 있어야 나중에 바뀐 내용이 읽힙니다.\n   - 요청 대기 중 상태, 중복 클릭 처리, 실패 후 복구도 확인합니다.\n6. **움직임 감소:**\n   - 열기/닫기 애니메이션이 `@media (prefers-reduced-motion: no-preference)` 안에만 있는지 봅니다.\n   - 움직임 감소 설정에서는 밀기나 확대 효과 대신 투명도 변화만 쓰는지 봅니다.\n   - 5초 넘게 스스로 움직이는 요소가 있는지 봅니다.\n7. **화면 확대:**\n   - viewport meta에 `maximum-scale=1`이나 `user-scalable=no`가 없어야 합니다.\n   - 글자가 담긴 영역은 고정 `height` 대신 `min-height`를 써야 합니다.\n   - 화면이 좁을 때 대화상자 본문을 스크롤할 수 있어야 합니다.\n\n**B. 브라우저 확인 (다음 단계, 이번에는 실행하지 않음)**\n8. 키보드만으로 2번과 3번 흐름을 실제로 따라가며, 포커스가 멈추는 곳마다 포커스 표시가 보이고 다른 요소에 가려지지 않는지 봅니다.\n9. 접근성 트리에서 이름, 역할, 상태를 읽고, 스크린리더로 오류와 상태 알림이 실제로 들리는지 확인합니다.\n10. 200% 확대와 320px 폭에서 내용과 버튼에 모두 닿을 수 있고 가로 스크롤이 생기지 않는지 봅니다.\n11. OS의 움직임 감소 설정(또는 에뮬레이션)을 켠 채로 대화상자를 열고 닫아 봅니다.\n12. 자동 접근성 검사 도구를 돌립니다.\n\n### 3. 완료 조건\n- 모든 항목을 다음 셋 중 하나로 기록합니다.\n  - 통과: `path:line`이나 브라우저에서 관찰한 근거를 함께 적습니다.\n  - 실패: WCAG 기준 번호와 심각도를 함께 적습니다.\n  - `Not verified`\n- 항목별 기준 번호:\n\n  | 항목 | WCAG 기준 |\n  | --- | --- |\n  | 키보드 조작, 포커스 갇힘 없음 | 2.1.1, 2.1.2 |\n  | 포커스 순서와 복귀 | 2.4.3 |\n  | 포커스 표시, 가려짐 없음 | 2.4.7, 2.4.11 |\n  | 이름·역할·상태, 보이는 글자 포함 | 4.1.2, 2.5.3 |\n  | 오류 식별, 상태 메시지 | 3.3.1, 4.1.3 |\n  | 텍스트 확대, 리플로우 | 1.4.4, 1.4.10 |\n  | 5초 넘게 스스로 움직이는 요소 | 2.2.2 |\n\n  움직임 감소 설정을 무시하는 경우는 WCAG로는 2.3.3(AAA) 해당입니다. 이번 감사 규칙에서는 이것도 HIGH로 다루고, 보고할 때 AAA라는 점을 함께 적습니다.\n- **판정:** HIGH가 하나라도 남으면 `Block`, 없으면 `Approve`입니다. B 단계 항목이 `Not verified`로 남아 있으면 `Approve`할 수 없습니다.\n\n입력 1–5를 주시면 A 단계(코드 읽기)부터 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 110.865,
+  "duration_api_ms": 109247,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 18376,
+    "cache_read_input_tokens": 54490,
+    "output_tokens": 6366,
+    "output_tokens_details": {
+      "thinking_tokens": 3401
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16689,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 218,
+        "cache_read_input_tokens": 15407,
+        "cache_creation_input_tokens": 5014,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5014
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 21789,
+        "output_tokens": 2995,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 5404,
+        "cache_read_input_tokens": 20421,
+        "cache_creation_input_tokens": 1687,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1687,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 6366,
+      "cacheReadInputTokens": 54490,
+      "cacheCreationInputTokens": 18376,
+      "webSearchRequests": 0,
+      "costUSD": 0.28019700000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 3401,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 21789,
+      "outputTokens": 2995,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.36763999999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.647837,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "a55868be23f079eb802a839a2c0b07998c1efb2804d27596d4031b9ca7d5ac92",
+  "cases_sha256": "f5c66ed8208e0e91e7bb6a8e86e2b5cbd28b7dd2e09d4a3480d939770878f929",
+  "stream_sha256": "56dff6f72c930bfa0f784227e6038b6efbb5bfed3cc7fc1dcb6b031f1ae58834",
+  "transcript_sha256": "d95ef17e65420b9c29492d4695dde0fa1d655a4dd1b64c6485c6390634134c4a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

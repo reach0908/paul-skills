@@ -1,0 +1,279 @@
+{
+  "reviewer": "Maintainer agent; manual inspection of outputs and receipts, not an independent blinded judge",
+  "codex": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "ae1e93682d3a7bd4d00e89cfa3746c7e630fd9316a2651f10dad1c16baf93d18",
+      "notes": "Color preparation names missing brand values and actual pairs, separates generation from measurement and claims no completed measurement. Command success and reference coverage are graded separately."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "505b859f8b9bf5c934e278f1d4b2fb2cac45839d984d08ce0215c26b28172933",
+      "notes": "Correct staged-only invocation after router-only read, no invented findings."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "7cb63d849baf3db533081df9a3d57d8b54a1973a07dfaa1c561a5b8ef339a4dd",
+      "notes": "Color preparation names missing brand values and actual pairs, separates generation from measurement and claims no completed measurement. Command success and reference coverage are graded separately."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "f98ade9dbd4572925a7ddebbc6015d699cb99a486e81088ac756f37614e1a0c5",
+      "notes": "Color preparation names missing brand values and actual pairs, separates generation from measurement and claims no completed measurement. Command success and reference coverage are graded separately."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "180276cead2d14a7921b56ebc603ca42922fd33149c225297e5feeab0a517e8c",
+      "notes": "Correct staged-only invocation after router-only read, no invented findings."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "6f9825e07299be1b9a9fe7b64a577099e28a6f1b6f2998113f46f2b36eef34d2",
+      "notes": "Correct staged-only invocation after router-only read, no invented findings."
+    },
+    "branch": {
+      "pass": true,
+      "response_sha256": "9a793be4cf5de508b7fc56c2d78d281601aa4bc9157c0c29b5206625d03b9b18",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "bef1facd889e2454190e86f5075459de9e5d0655714d64a4c8aab475484d8cbf",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "371141b30db49746edcfee62a923b74a55e89d1e30e9323c35ac529f039b785d",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-2": {
+      "pass": true,
+      "response_sha256": "fa9d34b992e1c9775c48b680641b3bb1e33784a56890a0dc2a1cd308ab0a26e5",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-3": {
+      "pass": true,
+      "response_sha256": "908392a2baa064afb1172b1a9a6c80b2dc7bbe6feb30852f50f334356347446d",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "9c0c3efccdb063dcfdb84bf678d661a0ad8ffbeeb57cf30fa81043775f9d4fcc",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "d22b1136304cf03fe4ebefa094484d2cfbed20cf4f9ebf5c59ff6bdd9c880b7a",
+      "notes": "Appropriate domain preparation or conditional copy proposal; missing inputs and unverified rendered behavior are explicit. Source loading and commands checked separately."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "b5e0f0274eeaabfc656fb7a9cb2cea9987a361cda2158bf2dfe900cbf6156528",
+      "notes": "Appropriate domain preparation or conditional copy proposal; missing inputs and unverified rendered behavior are explicit. Source loading and commands checked separately."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "ee130d60c2a5aab9a2154c87cc230fdcac99d3b64d10d4c71e041f40eb83e7f8",
+      "notes": "Appropriate domain preparation or conditional copy proposal; missing inputs and unverified rendered behavior are explicit. Source loading and commands checked separately."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "085d22bd2fc6492a61ca046dbffa1b5e6a366a6b5dc7631e32f00c6f399509ec",
+      "notes": "Appropriate domain preparation or conditional copy proposal; missing inputs and unverified rendered behavior are explicit. Source loading and commands checked separately."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "decf1fd2a4b08e5f5be98a88b22ab7deaaa78392fa7153c0e476e9985e312898",
+      "notes": "Correct surface/icon/motion preparation, no measured result; current-state entry retained."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "259ed236cebe2bfb9b0480b407b16103abb935e7cb1aa49bd8b26651ca08785f",
+      "notes": "Current-screen preparation follows all six domains without a change-review redirect or invented verdict.",
+      "no_change_review_redirect": true
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "b455ee3349b5a6608c07e1317967c1f6f64db7a6b173f4558290fbf21aed17b4",
+      "notes": "Working preparation uses HEAD plus net tracked and untracked work, with no Git execution or earlier-commit expansion."
+    },
+    "explicit-owner-2": {
+      "pass": true,
+      "response_sha256": "4a829e4fa8cc6a1f6d9e6f7ef2b89ad91f5ac44d22a7b3ed414071e406034336",
+      "notes": "Working preparation uses HEAD and untracked inventory; no branch/merge-base prerequisite or actual inspection claim."
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "3fbd544a04f4ded1e17f81ab370911a972f7ad89e7b8252d0dba502b2117a02d",
+      "notes": "Correct explicit staged command with constraints and no repository inspection."
+    },
+    "explicit-domain": {
+      "pass": true,
+      "response_sha256": "4750ebec364185c0d69f4ec09762fb967f7564f37430dda892ec870ea09ad6a5",
+      "notes": "Explicit layout body hands change attribution to the router, then stops at staged owner command."
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "response_sha256": "a1f3c2d310400f02b7f4f36f03e7092ef2764dcbe9541ad1294bb6438f129c0b",
+      "notes": "Correct HEAD working scope and HIGH accessible-name Regression; six domain bodies and execution procedure loaded, one tracked file, zero committed changes, rendered limits explicit."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "6b28260dc9e25851d5c1f9af19379f8677802a22efaadd8d7a1ccde4ab63b746",
+      "notes": "Five stable destination IDs, hierarchy and content relationships, explicit unresolved choices; no visual design or user-validation claim."
+    },
+    "explicit-owner-3": {
+      "pass": true,
+      "response_sha256": "508da2911593dc2e5b93b93f68f8713429dc3b3d8cb5ea7ca030cacec2f6aa6e",
+      "notes": "HEAD-based net tracked and untracked preparation; no earlier-commit or default-branch expansion and no actual inspection claim."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "b4e5f67b8aa94553a72830e2675bc3aa25ce235933092c8d73e268198f354112",
+      "notes": "Exact HEAD/index scope; detects staged Panel accessible-name Regression while excluding restored working contents and untracked New.html. Full six owners and execution reference loaded; zero committed changes and static/rendered limits explicit."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "0c4adc48b05198802d424a8ac0484ec600b5862783b697ed81e7ddf61e6bfe0f",
+      "notes": "Correct HEAD working scope, net tracked diff empty and only untracked New.html Introduced; canceled Panel change excluded. Exact HEAD, full six domains, static evidence and rendered limits verified."
+    }
+  },
+  "cases": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "f773befc1c2521dd05bbd845d6598c946c4d8014abb954c57c63bc08a14dbe80",
+      "notes": "Color preparation states missing values and separates calculated-token contrast from rendered validation; no generation or measurement results claimed. Exact body and tool success checked separately."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "55ed6e21e28b907c3dbbf17769a89fe59454d970f41c257458dc5bf5de316fba",
+      "notes": "Correct staged command, requested restrictions and no review verdict; router-only tool evidence."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "4a365acf83bcf10df6b6c5cd2687673bd913eef237ef5de46a7f6f2ebb13a545",
+      "notes": "Color preparation states missing values and separates calculated-token contrast from rendered validation; no generation or measurement results claimed. Exact body and tool success checked separately."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "f5e6a269726ae01e37b9736bbb450d02cc3c1eb52cebb3485283843cd31da4d3",
+      "notes": "Color preparation states missing values and separates calculated-token contrast from rendered validation; no generation or measurement results claimed. Exact body and tool success checked separately."
+    },
+    "staged-type-color-2": {
+      "pass": true,
+      "response_sha256": "c996bcaa050a2d5fcbdd4e0a3d433c70370b8e810c0fd34e468fcdc3b1e3b70a",
+      "notes": "Correct staged command, requested restrictions and no review verdict; router-only tool evidence."
+    },
+    "staged-type-color-3": {
+      "pass": true,
+      "response_sha256": "5a0809a7b7064c81751893a8083c27b3c9aa901eca176801ac08ff704d0fe51d",
+      "notes": "Correct staged command, requested restrictions and no review verdict; router-only tool evidence."
+    },
+    "branch": {
+      "pass": true,
+      "response_sha256": "690b7e865234d494f8046213a25d983bc9207fd90f0199279636352caa72706c",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "e48bd541195150aae542b26a14d03bc828a59ac839d30d944bdaf514bfb1723b",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "f08f1cb6d1ce557002c332815687be47f468232b58e1806ab12ba47ccbbf9d18",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-2": {
+      "pass": true,
+      "response_sha256": "66c02a03021ac35059f4d457b1bd1a4c76133d90ab295400440f7a84769d7bac",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-3": {
+      "pass": true,
+      "response_sha256": "db03b0af62b90336ff89af395e5eb97b1ff54f08e72d06e56301031dafc8a098",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "45e0b214cb5a1defa221f191b1209828cfff2dae0344938bf6badf11f3595f9c",
+      "notes": "Target matches the requested local or branch scope; constraints preserved, no completed review or findings claimed. Native tool route checked separately."
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "ef470e5f57b001fbfba0271f3ed09cb70dbf04d24d3ae3affe53db0cc3cb95e3",
+      "notes": "Domain preparation covers native keyboard/focus/error/zoom/motion and separates screen reader verification; no actual results claimed."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "6924e5cd207f878a37b08d4b4eb9ede156b19be73d3103d787de5144f14d5774",
+      "notes": "Layout preparation covers 320px priority, German text and structure, preserves color/font scope exclusion; no observed defect claim."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "bc4ba39a80044d8ed3a8ba8d7d02c6fe653664a264951ec7fc6c43cc3aee224b",
+      "notes": "Conditional copy proposals are tied to behavior assumptions and missing inputs, without claims of product testing."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "b07ab3edc395e9a9635f6033d2855ef8358243b3804ebccc03fac59e2ba4474b",
+      "notes": "Typography preparation addresses actual Korean content, wrapping, font/numeral behavior, truncation recovery and explicit verification limits."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "61ec23709aa2868c758272bf3b54208252a06e794e3ee514687c08694646aa41",
+      "notes": "Normal surface/icon/motion preparation proceeds with required inputs and rendering limits; a conditional scope question does not redirect the task."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "1d00f766248731939255e7477d0efd6433b2484226b3452f5937fa24678d70a5",
+      "notes": "Current-screen preparation continues using supported static source observations and pending domain/rendered checks. Conditional staged explanation does not replace the requested audit or assign change attribution.",
+      "no_change_review_redirect": true
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "bfda0b0d2302929711cfea94cbd1f732c9fce15d8a42949a83045f9fa22c3e99",
+      "notes": "Explicit router returns staged owner command without file or domain inspection and preserves constraints."
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "c3bad47220b21f0c37e5e8ea0ff73b1f50c84dd221e079dc2b91ee4c7ab46c3a",
+      "notes": "Preparation correctly uses current HEAD, zero committed changes and net tracked plus untracked inventory; no default branch prerequisite or actual Git inspection."
+    },
+    "explicit-domain": {
+      "pass": true,
+      "response_sha256": "b99237b2dc79dd42a13fc85d812bc0ca79736edab5231460bc0eb8ae3ede685e",
+      "notes": "Explicit layout invocation delegates change attribution to the router and returns staged owner command; no additional domain or repository inspection."
+    },
+    "authorized-handoff": {
+      "pass": false,
+      "response_sha256": "3b1bf28de1e1a41e20faeeacc5b5dabdd659d3f337f74e1de922208a41f3aa98",
+      "notes": "Correct HEAD and accessible-name Regression, but only accessibility was invoked; five installed owners were omitted. This violates the handoff contract despite a substantively correct narrow finding."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "f525cadbe46719c0349e9d415f807cc17f78d0572e46553d10ef188c23b84f5e",
+      "notes": "Stable destination IDs and hierarchy, with the added topic destination explicitly proposed and assumptions separated. No visual implementation or user-testing claim."
+    },
+    "explicit-owner-2": {
+      "pass": true,
+      "response_sha256": "1fe38fa16a8a97604ace5df624f13dd28bbbaf3e4d53bf154360c9043f460f46",
+      "notes": "Correct HEAD scope, zero earlier commits, tracked net changes and untracked inventory, no default branch prerequisite. Preparation only."
+    },
+    "explicit-owner-3": {
+      "pass": true,
+      "response_sha256": "8d507689dbf822311bdd71168ddbdddb2e37144e6a2d1534f1ade963d1e995dc",
+      "notes": "Correct HEAD-based working preparation, zero committed changes, tracked net difference and untracked files. No merge-base lookup or claimed inspection."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "6415dcdf8440682b10a59d9a6cd720a25821fa6dfa638a178f8c86179f335033",
+      "notes": "Correct HEAD/index scope, excludes unstaged restoration and New.html. All six owner bodies loaded; HIGH accessible-name Regression supported statically with rendered limits."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "8252324bbb0cb796cb88649721eb753ea55b7196cdc69833926cc3ad8d2ac001",
+      "notes": "Correct HEAD net working scope, New.html Introduced and canceled Panel excluded from the verdict. All six domain owners loaded with static evidence and rendered limits."
+    }
+  }
+}

@@ -12,6 +12,10 @@ The platform supplies useful behavior through real buttons, links and form contr
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
 **Is one successful keyboard example enough?**
 
 Only for a scope containing that one example. A repeated collection needs the requested items and viewports accounted for, with expected and completed counts.

@@ -1,0 +1,109 @@
+{
+  "case_id": "explicit-owner",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13a4b-8e63-71b1-bca4-9282a88426f7",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "준비만 했으며 실제 diff·제품 파일은 읽지 않았습니다. 확인된 UI 결과는 없습니다.\n\n### 필요한 입력\n\n- 대상: `working` \u2014 이미 지정됨\n- 실행 승인: 이후 “검토 실행” 요청 필요\n- 가능하면 변경 의도·관련 이슈·주요 화면/상태\n- 렌더링 검증 허용 여부. 허용하지 않으면 시각·런타임 항목은 `Not verified`\n\n실행 시 범위는 현재 `HEAD`를 기준으로 staged·unstaged·untracked의 순변경이며, 커밋된 변경은 0건으로 기록합니다. lockfile·snapshot·생성물·vendor·binary는 제외하고 명시합니다.\n\n### 결함 분류\n\n- `Introduced`: 이번 변경이 새로 만든 결함\n- `Regression`: 이전에 올바르던 동작을 이번 변경이 약화한 결함\n- `Pre-existing`: 이전부터 있었고 이번 변경이 악화하지 않은 결함\n\n위치가 아니라 원인으로 분류합니다. 삭제된 접근성·상태·스타일 신호는 대체 구현 여부까지 확인한 뒤에만 `Regression`으로 판정합니다. `Pre-existing`은 최대 3건만 별도로 알리고 변경 판정에는 포함하지 않습니다.\n\n### 완료 조건\n\n- 정확한 base/head, 파일·제외 항목, 영향 화면과 소비자 확장 범위를 명시\n- 전체 diff의 추가·삭제 양쪽과 변경 의도 확인\n- 접근성·레이아웃·문구·타이포그래피·색상·UI 6개 영역을 각각 검토하거나 미검토 사유 기록\n- 새 결함과 회귀를 근거·위치·Before/After와 함께 통합 보고\n- 실행하지 않은 렌더링·키보드·보조기술 검증은 `Not verified`로 표시\n- `HIGH`인 `Introduced`/`Regression`이 있으면 `Block`, 없으면 검사한 영역에 한해 `Approve`\n- `working` 범위가 비어 있으면 승인하지 않고 다른 대상을 요청\n\n이번 응답에서는 실제 범위의 SHA, 파일 수, 결함, 검증 결과 또는 판정을 확정하지 않았습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-interface",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {
+    "better-interface": {
+      "call_id": "call_5212eda450af4a92a5ceb8c9d17092bc",
+      "file_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "output_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "full_body_equal": true
+    },
+    "interface-review": {
+      "call_id": "call_52797a23d5274e8fb6209e60ae5fdc16",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "output_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-interface": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/SKILL.md && sed -n '261,520p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md && sed -n '281,620p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/audit-procedure.md && sed -n '321,700p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/audit-procedure.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "05a9041364148306f7667ebc4f5d59f563c7d30b5a3a2c9898199bac5585d983"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/review-format.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 142937,
+      "cached_input_tokens": 121984,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2064,
+      "reasoning_output_tokens": 735
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "e70d6ebda1c35b381c08ee692ff8086ce66199ee69e7edcf795c72859160e292",
+  "transcript_sha256": "25cd2be7749193b7a980b7cd6afbe9c327abba8baa25f37609f464ff23a909c1",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 54.019
+}

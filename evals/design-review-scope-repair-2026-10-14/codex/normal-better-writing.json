@@ -1,0 +1,84 @@
+{
+  "case_id": "normal-better-writing",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a4f-ef72-7ed0-84fe-7fa527362d6e",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재 문구만으로는 실제 동작을 확인할 수 없어 아래는 가정 기반 제안입니다.\n\n| 상황 | 권장 문구 | 대안과 이유 |\n|---|---|---|\n| 저장 버튼 | **저장** | 설정을 저장한다면 가장 정확합니다. 다음 단계로 이동한다면 **다음**이 적합합니다. **진행**은 결과가 불분명합니다. |\n| 저장 실패 | **저장하지 못했습니다. 다시 시도해 주세요.** | 재시도 버튼이 있다면 **저장하지 못했습니다. 잠시 후 다시 시도해 주세요.** 원인을 확인한 경우에만 연결 상태 등의 원인을 명시합니다. |\n| 빈 구독 목록 | **아직 구독이 없습니다.**<br>**구독할 서비스를 찾아보세요.** | CTA가 있다면 **서비스 둘러보기**를 함께 제공합니다. **없음**만으로는 상태와 다음 행동을 알기 어렵습니다. |\n| 검색 결과 없음 | **일치하는 구독이 없습니다.**<br>**검색어나 필터를 바꿔보세요.** | 일반적인 빈 목록과 검색·필터 결과 없음은 구분해야 합니다. |\n\n확정에 필요한 입력: 저장 버튼의 실제 동작, 실패 후 가능한 복구 행동, 빈 목록이 최초 상태인지 검색 결과인지, 제품의 기존 말투(해요체/합니다체). 제품 파일과 실행 화면은 확인하지 않았습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-writing"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-writing": {
+      "call_id": "call_0d48d7cbe8b643bd9c3f37f3b1182630",
+      "file_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b",
+      "output_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-writing": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/korean-copy.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 69299,
+      "cached_input_tokens": 64512,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 927,
+      "reasoning_output_tokens": 270
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "f0891d4913fccb318bca01255d2a581c1fe8cb6b96e4fc5a4361d61dfa839171",
+  "transcript_sha256": "84792321e3c9ec21f00c316c8fe7eb31305c0f16b9df863f9c67ab2163c2c7da",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 28.97
+}

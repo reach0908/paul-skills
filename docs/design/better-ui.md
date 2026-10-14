@@ -12,6 +12,10 @@ Interactive transitions should survive interruption and reversal. Selected-state
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
 **Will it add animation everywhere?**
 
 No. Some frequent interactions should have none. The project’s motion language remains the starting point, and a consistent visual choice is not automatically a defect.
