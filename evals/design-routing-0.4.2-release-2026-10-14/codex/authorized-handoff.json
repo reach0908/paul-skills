@@ -1,0 +1,345 @@
+{
+  "case_id": "authorized-handoff",
+  "arm": "candidate",
+  "mode": "handoff",
+  "session_id": "01a13ab8-2e22-7950-adf9-06850317ae1d",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "daily_global_install": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "all_owners_loaded": true,
+    "real_git_diff": true,
+    "classified_finding": true,
+    "audit_procedure_loaded": true,
+    "no_default_branch_resolution": true,
+    "target_snapshot_read": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 로컬 src/Panel.html의 미커밋 변경이 UI에 새로 만든 문제를 실제로 리뷰해줘. Git의 이전 내용과 현재 내용을 비교하고 검토를 끝까지 진행해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+  "final_response": "## 범위\n\n| Field | Value |\n| --- | --- |\n| Target | `working` |\n| Base ref | `444e277a7b78d9f60a6c2bebe8c5132f4080f634` (`HEAD`) |\n| Head ref | Working tree. 변경은 staged 상태이며 unstaged 차이는 없음 |\n| Commits | 0 committed, 1 uncommitted file; 1 insertion, 1 deletion |\n| Files in scope | 1: `src/Panel.html` |\n| Excluded | 없음 |\n| Surfaces expanded | Subscription panel. 다른 추적 파일·직접 소비자 없음; 미확장 0개 |\n\n스택은 단일 정적 HTML, 인라인 CSS, 네이티브 `<button>`과 인라인 SVG입니다. 프레임워크, 컴포넌트 라이브러리, 테스트/프리뷰 명령, UI 규약 문서는 발견되지 않았습니다.\n\n## 커버리지\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | HEAD/working 버튼 마크업, SVG 접근성 처리, 포커스 스타일 | 1 Regression |\n| Layout | 전체 diff 및 인라인 스타일 | Not reviewed: 변경 범위에 레이아웃 증거 없음 |\n| Writing | 삭제된 `Close subscription panel` 문구와 버튼의 목적 | Clear; 별도 문구 문제 없음 |\n| Typography | 전체 diff | Not reviewed: 변경 범위에 타이포그래피 증거 없음 |\n| Colors | 전체 diff 및 선언된 색상 | Not reviewed: 변경 범위에 색상 변경 없음 |\n| UI | 버튼과 SVG의 전체 diff | Not reviewed: 변경 범위에 시각적 UI 변경 없음 |\n\n## 발견 사항\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Accessibility | Regression | [src/Panel.html:4](<$TRIAL/src/Panel.html:4>) | `HEAD`에는 `<button type=\"button\" aria-label=\"Close subscription panel\">`이 있었음 | Working tree에서 `aria-label`이 삭제됨. 기존 속성을 복원해야 함 | 버튼에는 텍스트가 없고 유일한 SVG도 `aria-hidden=\"true\"`이므로 정적 의미상 접근 가능한 이름의 출처가 전혀 없습니다. WCAG 4.1.2 위반이며, 이름 없는 인터랙티브 컨트롤은 즉시 `HIGH`인 차단 사유입니다. |\n\n이 문제는 이전 커밋의 의도인 `Name the close control`도 직접 되돌립니다.\n\n## 검증\n\n통과:\n\n- `git diff HEAD -- src/Panel.html`: 전체 변경 확인\n- `git show HEAD:src/Panel.html`과 현재 파일 비교\n- `git ls-files --others --exclude-standard`: untracked 파일 없음\n- `git diff --check HEAD`: 오류 없음\n- 최종 `git status --short`: 작업 시작 전과 동일하게 `M  src/Panel.html`\n- 정적 접근성 이름 분석: 이전에는 `aria-label`, 현재는 이름 소스 없음\n\nNot verified:\n\n- 브라우저 접근성 트리와 실제 스크린리더 발화\n- 렌더링된 포커스 표시, 키보드 동작 및 닫기 기능\n- 320px 너비, 200% 확대, 실제 대비와 시각적 배치\n\n요청에 따라 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 않았습니다.\n\n## 판정\n\n`Block` \u2014 접근 가능한 이름을 제거한 `HIGH` 회귀 1건이 남아 있습니다. 기존 `aria-label=\"Close subscription panel\"`을 복원하기 전에는 배포하면 안 됩니다. 레이아웃·타이포그래피·색상·시각적 UI는 변경 증거가 없어 이 판정의 검토 범위에 포함되지 않았습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color sy",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit chan",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, read",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text render",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and ",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface ",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the ",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interactio",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architectu",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswe",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specificat"
+  },
+  "loaded_skills": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {
+    "interface-review": {
+      "call_id": "call_2018fc71580e4e058331ca784d6645e9",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "output_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    },
+    "better-accessibility": {
+      "call_id": "call_3cde34a862d34588ab15b4ad011d287a",
+      "file_sha256": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2",
+      "output_sha256": "922898eff504440ba630ab72a52fdb04099f30aff5407c2c218b143b76ee9553",
+      "full_body_equal": true
+    },
+    "better-typography": {
+      "call_id": "call_c0ba9513d752486191b7551108a1cc72",
+      "file_sha256": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc",
+      "output_sha256": "b9973d9e2bb901b4d33c1dfbd3394127e8ea39b042193dea95eea242e4623cdd",
+      "full_body_equal": true
+    },
+    "better-layout": {
+      "call_id": "call_8771e5aab49a4984ac3ee60cba83762a",
+      "file_sha256": "5cc5420de32d6fa328a0dff41f95535ee91719b77b0f2a7be254e2910372d5e4",
+      "output_sha256": "a0b35f26cfb2623bd8b7ff8bf9d8eeafdc327b2fde4ccdc6371b8a00ef14752d",
+      "full_body_equal": true
+    },
+    "better-writing": {
+      "call_id": "call_8771e5aab49a4984ac3ee60cba83762a",
+      "file_sha256": "dc8eb14015d21e00f205730abfb4e247f5005eb9afa462190849af40fe1a9d04",
+      "output_sha256": "60de9e64217ff4fac6b9aa32eee190fa6a952da298c34b9a25491935c25e3601",
+      "full_body_equal": true
+    },
+    "better-interface": {
+      "call_id": "call_123c7a9caf3b476894126825b325417c",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "output_sha256": "b16175c6ffeb5e24fceb4b494af0dbc1e0afd750ead520149e1350a67af2a3bc",
+      "full_body_equal": true
+    },
+    "better-ui": {
+      "call_id": "call_3cde34a862d34588ab15b4ad011d287a",
+      "file_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d",
+      "output_sha256": "922898eff504440ba630ab72a52fdb04099f30aff5407c2c218b143b76ee9553",
+      "full_body_equal": true
+    },
+    "better-colors": {
+      "call_id": "call_c0ba9513d752486191b7551108a1cc72",
+      "file_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e",
+      "output_sha256": "46466d8c70a258d874504b485253da48db29d8f19a75eea00c396df4b0b7698a",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+    "better-accessibility": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2",
+    "better-layout": "5cc5420de32d6fa328a0dff41f95535ee91719b77b0f2a7be254e2910372d5e4",
+    "better-typography": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc",
+    "better-writing": "dc8eb14015d21e00f205730abfb4e247f5005eb9afa462190849af40fe1a9d04",
+    "better-interface": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+    "better-ui": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d",
+    "better-colors": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_3",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review/SKILL.md && sed -n '261,520p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+    },
+    {
+      "command_id": "item_4",
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface/SKILL.md && sed -n '321,640p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface/SKILL.md && rg --files $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "b16175c6ffeb5e24fceb4b494af0dbc1e0afd750ead520149e1350a67af2a3bc"
+    },
+    {
+      "command_id": "item_5",
+      "command": "/bin/zsh -lc \"sed -n '1,360p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface/audit-procedure.md && sed -n '361,720p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface/audit-procedure.md && sed -n '1,320p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-interface/review-format.md && sed -n '1,360p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review/scope-resolution.md && sed -n '361,720p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review/scope-resolution.md && sed -n '1,360p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/interface-review/removed-signals.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "4ab1df5fa48d10263cca351b4db9039d5b5a262481340fdfb0cdac4789bf84ec"
+    },
+    {
+      "command_id": "item_7",
+      "command": "/bin/zsh -lc 'git rev-parse HEAD\ngit status --short\ngit diff --name-status HEAD -- .\ngit diff --stat HEAD -- .\ngit ls-files --others --exclude-standard\nfor marker in rebase-merge rebase-apply MERGE_HEAD CHERRY_PICK_HEAD; do p=$(git rev-parse --git-path \"$marker\"); if test -e \"$p\"; then echo \"MID_OPERATION $marker $p\"; fi; done\nrg --files -g '\"'AGENTS.md' -g 'CLAUDE.md' -g 'CONTRIBUTING.md' -g 'CODING_STANDARDS.md' -g '*design*' -g '*storybook*' -g 'package.json' -g 'vite.config.*' -g 'src/**' .\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "4eea8564b8a9b4e8cae623fa39f84f0d26c1a52a697c5af9b385a944d235f9e0"
+    },
+    {
+      "command_id": "item_8",
+      "command": "/bin/zsh -lc \"git diff --no-ext-diff --unified=120 HEAD -- src/Panel.html\nnl -ba src/Panel.html\ngit show HEAD:src/Panel.html | nl -ba\ngit diff --no-ext-diff --unified=0 HEAD -- src/Panel.html | sed -n '/\"'^-/p'\"'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "5b12de912cf7782a86b1a9d1269a5419d78254db4f8c909bd666ed72d2c776a7"
+    },
+    {
+      "command_id": "item_10",
+      "command": "/bin/zsh -lc 'wc -l $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility/SKILL.md $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-layout/SKILL.md $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-writing/SKILL.md $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-typography/SKILL.md $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-colors/SKILL.md $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-ui/SKILL.md\nrg --files $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-layout $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-writing $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-typography $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-colors $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-ui'",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "efb636d0a0dbe93a7d00529b6788edf5379f2b545e86332f58a579bcef0d57ac"
+    },
+    {
+      "command_id": "item_11",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility/SKILL.md\nsed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-layout/SKILL.md\nsed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-writing/SKILL.md\nsed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-typography/SKILL.md\nsed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-colors/SKILL.md\nsed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-ui/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "ed312c05f1979e5b99f3269308e58237ad9e38d90a2b69518e5055b0a2aa40de"
+    },
+    {
+      "command_id": "item_12",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2"
+    },
+    {
+      "command_id": "item_13",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-layout/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "5cc5420de32d6fa328a0dff41f95535ee91719b77b0f2a7be254e2910372d5e4"
+    },
+    {
+      "command_id": "item_14",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-writing/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "dc8eb14015d21e00f205730abfb4e247f5005eb9afa462190849af40fe1a9d04"
+    },
+    {
+      "command_id": "item_15",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-ui/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d"
+    },
+    {
+      "command_id": "item_16",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-typography/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc"
+    },
+    {
+      "command_id": "item_17",
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-colors/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e"
+    },
+    {
+      "command_id": "item_18",
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility/semantics-and-aria.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e"
+    },
+    {
+      "command_id": "item_19",
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-accessibility/screen-readers.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+    },
+    {
+      "command_id": "item_20",
+      "command": "/bin/zsh -lc \"git ls-files\ngit diff --cached --name-only HEAD\ngit diff --name-only\ngit log -1 --format='%H%n%s'\ngit blame -L 4,4 -- src/Panel.html\ngit diff --check HEAD\nrg -n --hidden --glob '\"'!.git/**'\"' 'Panel\\\\.html|<button|aria-|<svg|focus-visible|prefers-|@media|overflow|text-wrap|line-clamp|transition|animation|color:|background:' .\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "a46021270c76e3cfc8ff95864e487adb9863a023bddc9eeb45a4018a47bebee1"
+    },
+    {
+      "command_id": "item_22",
+      "command": "/bin/zsh -lc 'git status --short\ngit diff --name-only\ngit diff --cached --name-only HEAD\ngit rev-parse HEAD'",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "86157889d29fdd96a9a0a6eed501a29fc20fe46f636eb59e665c04cb57bd6db9"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 608902,
+      "cached_input_tokens": 546688,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 8425,
+      "reasoning_output_tokens": 4379
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "18d6201d8dcb99f77078026dd5720aa6f50f0df4a97896beb944b6846883ee51",
+  "cases_sha256": "bd6644f8eb98616b1addd79b7907e42a6c1ab1350aed1e9456815d25844d67e1",
+  "bundle_manifest_sha256": "7fdca87937dadec06c77e291d2d6f596a401deebcad7ac4d8fadf3702e5b07b5",
+  "stream_sha256": "46b66d23fc3b4ae88f6ae2de14483768d7933fe32640f7272fa0eabeba3ddc1c",
+  "transcript_sha256": "6996d9f3ee81596801c330723cd0402fde38d0584eae8f9cedcc02fb6f04d4b4",
+  "inputs_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "7ce2a2ef87f3931925cbc24c0ae277d9b9c3bd6fcb079d1cc1e031a1d07c2023",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "5870ae964457daddab331f5d287f7e0c77e0aedfc0438d6b9fd0be4d9c867ded",
+    ".git/logs/refs/heads/feature/checkout": "5f4e89b971832ef3ccb2883ae5798844c3924a50ae4a029eeed7790f390e6a52",
+    ".git/logs/refs/heads/main": "8c9f40c228e71812f11e3b4af4999c81728c07017a5fc5ce240cb79995c12157",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/16/1bc3b710d359f37cc2821cec9917b815eea642": "c0dc2f2c57e8689770ca83804597b33ce116fd8f89571a73cdd929bcee4e5951",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/4e277a7b78d9f60a6c2bebe8c5132f4080f634": "bf796239284372621cf26fb27fb9943f79150d7340268704b4ea064def224177",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/refs/heads/feature/checkout": "36768ca944c1b38826107d8a75893766345b387fd7a9550567793c107a4b4c8b",
+    ".git/refs/heads/main": "638c55d65601e5cb4868f2d77ebf98d5306f7f2aff8f7079e9af526f41c2e16b",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "inputs_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "7ce2a2ef87f3931925cbc24c0ae277d9b9c3bd6fcb079d1cc1e031a1d07c2023",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "5870ae964457daddab331f5d287f7e0c77e0aedfc0438d6b9fd0be4d9c867ded",
+    ".git/logs/refs/heads/feature/checkout": "5f4e89b971832ef3ccb2883ae5798844c3924a50ae4a029eeed7790f390e6a52",
+    ".git/logs/refs/heads/main": "8c9f40c228e71812f11e3b4af4999c81728c07017a5fc5ce240cb79995c12157",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/16/1bc3b710d359f37cc2821cec9917b815eea642": "c0dc2f2c57e8689770ca83804597b33ce116fd8f89571a73cdd929bcee4e5951",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/4e277a7b78d9f60a6c2bebe8c5132f4080f634": "bf796239284372621cf26fb27fb9943f79150d7340268704b4ea064def224177",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/refs/heads/feature/checkout": "36768ca944c1b38826107d8a75893766345b387fd7a9550567793c107a4b4c8b",
+    ".git/refs/heads/main": "638c55d65601e5cb4868f2d77ebf98d5306f7f2aff8f7079e9af526f41c2e16b",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "duration_seconds": 182.121
+}

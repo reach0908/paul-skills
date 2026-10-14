@@ -1,0 +1,34 @@
+{
+  "deployment_completed": true,
+  "version": "0.4.2",
+  "unique_sessions": 36,
+  "outcomes": {
+    "codex": {
+      "completed": 18,
+      "passed": 17
+    },
+    "claude": {
+      "completed": 18,
+      "passed": 18
+    }
+  },
+  "source_application_verified": true,
+  "full_sample_passed": false,
+  "failures": {
+    "codex": {
+      "normal-better-colors": [
+        "semantic_review_pass"
+      ]
+    },
+    "claude": {}
+  },
+  "claude_reported_list_cost_usd": 12.3132384,
+  "actual_billed_usd": null,
+  "codex_cost_usd": null,
+  "limitations": [
+    "One Codex color response has a contradictory clause; retained as semantic failure.",
+    "No independent model or original-quality superiority comparison.",
+    "Codex inherited xhigh rather than the medium anticipated in the protocol.",
+    "Fresh native CLI sessions, not desktop UI end-to-end tests."
+  ]
+}

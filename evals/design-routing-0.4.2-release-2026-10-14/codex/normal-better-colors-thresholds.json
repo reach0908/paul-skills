@@ -1,0 +1,94 @@
+{
+  "case_id": "normal-better-colors-thresholds",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13abb-d540-7220-bb0a-ecfd9b8d70fe",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "daily_global_install": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:better-colors 설치된 스킬의 contrast.md 참조 문서 전체를 먼저 읽고 다음 요청에 답해줘.\n구독 폼 색상 검토 명세를 준비해줘. 제공된 값은 일반 크기 16px 글자의 전경·배경 대비 2.8:1이야. 활성 이메일 입력란의 placeholder, 실제로 비활성인 제출 버튼의 문구, 읽기 전용 계정 정보 문구를 각각 WCAG 2.2 AA에서 어떻게 판정할지 설명해줘. APCA Lc 30이라는 별도 목표가 WCAG 판정을 바꾸는지도 구분해줘. 새 측정이나 파일 수정, 브라우저·외부 서비스 실행은 하지 말고, 주어진 값에 대한 기준 설명만 해줘.",
+  "final_response": "## 구독 폼 색상 검토 명세\n\n전제: 모든 문구는 일반 크기 16px이며, 제공된 WCAG 명암비는 2.8:1이다. 16px 일반 글자는 큰 텍스트가 아니므로 AA 기준은 4.5:1이다.\n\n| 대상 | WCAG 2.2 AA 판정 | 근거 |\n| --- | --- | --- |\n| 활성 이메일 입력란의 placeholder | **실패** | 활성 입력란의 placeholder는 비활성 컨트롤이 아니라 텍스트다. 4.5:1 이상이 필요하므로 2.8:1은 미달이다. |\n| 실제로 비활성인 제출 버튼의 문구 | **적용 제외** | 실제 disabled/inactive 상태의 UI 컴포넌트는 최소 명암비 요구에서 면제된다. 2.8:1을 AA 통과라고 표현하지 않고, “비활성 컨트롤 예외로 판정 대상 아님”이라고 기록한다. |\n| 읽기 전용 계정 정보 문구 | **실패** | 읽기 전용 정보는 사용자가 읽어야 하는 콘텐츠다. 비활성 컨트롤 예외가 적용되지 않으며 4.5:1 이상이 필요하다. |\n\nAPCA의 `Lc 30`은 별도의 가독성 목표이며 WCAG 판정을 바꾸지 않는다.\n\n- 비활성 버튼에는 `Lc 30`을 권장 목표로 둘 수 있지만, 이는 WCAG 요구사항이 아니다.\n- 활성 placeholder와 읽기 전용 문구가 `Lc 30`을 달성해도 WCAG 2.2 AA의 4.5:1 요구를 대신하거나 면제하지 않는다.\n- WCAG 명암비 2.8:1만으로 실제 APCA Lc 값을 환산하거나 달성 여부를 판정할 수는 없다. 이번 명세에서는 새 측정을 하지 않았으므로 APCA 결과는 미확인으로 기록한다.\n\n**Block** \u2014 활성 placeholder와 읽기 전용 계정 정보가 WCAG 2.2 AA 필수 명암비를 충족하지 않는다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit chan",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading ",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and moti",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the ",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architectu",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered ",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification."
+  },
+  "loaded_skills": [
+    "better-colors"
+  ],
+  "injected_skills": [
+    {
+      "name": "better-colors",
+      "file_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-colors": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"cat '$HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-colors/contrast.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 48667,
+      "cached_input_tokens": 34688,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1264,
+      "reasoning_output_tokens": 579
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "18d6201d8dcb99f77078026dd5720aa6f50f0df4a97896beb944b6846883ee51",
+  "cases_sha256": "bd6644f8eb98616b1addd79b7907e42a6c1ab1350aed1e9456815d25844d67e1",
+  "bundle_manifest_sha256": "7fdca87937dadec06c77e291d2d6f596a401deebcad7ac4d8fadf3702e5b07b5",
+  "stream_sha256": "a4934bff05ec0d2ea92cd0be06f68b60e92a441110019be7bec05fc50c83d273",
+  "transcript_sha256": "17dfdd47e2d86e7a52313fac8cd5afdfd8741979287d76c462aa9fd9daf1444f",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 35.663
+}

@@ -1,0 +1,189 @@
+{
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "staged-1",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 접근성과 레이아웃 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "staged-type-color",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 글꼴과 색상 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "staged-copy-motion",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 문구와 애니메이션 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "working",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "working",
+      "entry": "implicit",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘."
+    },
+    {
+      "id": "explicit-router",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "explicit",
+      "prompt": "/paul-skills:better-interface 스테이징된 UI 변경만 검토해서 이번 변경이 망가뜨린 부분을 찾아줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "explicit-owner",
+      "mode": "explicit",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "current-audit",
+      "mode": "implicit",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "normal-better-accessibility",
+      "mode": "implicit",
+      "expected": "better-accessibility",
+      "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-layout",
+      "mode": "implicit",
+      "expected": "better-layout",
+      "prompt": "현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-writing",
+      "mode": "implicit",
+      "expected": "better-writing",
+      "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-typography",
+      "mode": "implicit",
+      "expected": "better-typography",
+      "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-colors",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-ui",
+      "mode": "implicit",
+      "expected": "better-ui",
+      "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-ia",
+      "mode": "implicit",
+      "expected": "information-architecture",
+      "prompt": "기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "authorized-handoff",
+      "mode": "handoff",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 로컬 src/Panel.html의 미커밋 변경이 UI에 새로 만든 문제를 실제로 리뷰해줘. Git의 이전 내용과 현재 내용을 비교하고 검토를 끝까지 진행해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+      "max_cost": 3.0,
+      "timeout_seconds": 600,
+      "extra_read_shell": [
+        "Bash(git grep *)"
+      ],
+      "classification": "Regression"
+    },
+    {
+      "id": "staged-divergent",
+      "mode": "handoff",
+      "arm": "candidate",
+      "fixture": "index-divergent",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review staged 범위의 로컬 UI 변경 전체를 실제로 리뷰해줘. Git 이전 내용과 해당 범위의 내용을 비교해서 검토를 끝까지 진행하고, 기준 SHA와 포함·제외한 파일을 명시해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+      "max_cost": 3.0,
+      "timeout_seconds": 600,
+      "extra_read_shell": [
+        "Bash(git grep *)"
+      ],
+      "classification": "Regression"
+    },
+    {
+      "id": "working-divergent",
+      "mode": "handoff",
+      "arm": "candidate",
+      "fixture": "index-divergent",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 범위의 로컬 UI 변경 전체를 실제로 리뷰해줘. Git 이전 내용과 해당 범위의 내용을 비교해서 검토를 끝까지 진행하고, 기준 SHA와 포함·제외한 파일을 명시해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+      "max_cost": 3.0,
+      "timeout_seconds": 600,
+      "extra_read_shell": [
+        "Bash(git grep *)"
+      ],
+      "classification": "Introduced"
+    },
+    {
+      "id": "normal-better-colors-thresholds",
+      "mode": "explicit",
+      "expected": "better-colors",
+      "prompt": "/paul-skills:better-colors 설치된 스킬의 contrast.md 참조 문서 전체를 먼저 읽고 다음 요청에 답해줘.\n구독 폼 색상 검토 명세를 준비해줘. 제공된 값은 일반 크기 16px 글자의 전경·배경 대비 2.8:1이야. 활성 이메일 입력란의 placeholder, 실제로 비활성인 제출 버튼의 문구, 읽기 전용 계정 정보 문구를 각각 WCAG 2.2 AA에서 어떻게 판정할지 설명해줘. APCA Lc 30이라는 별도 목표가 WCAG 판정을 바꾸는지도 구분해줘. 새 측정이나 파일 수정, 브라우저·외부 서비스 실행은 하지 말고, 주어진 값에 대한 기준 설명만 해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    }
+  ],
+  "codex_baseline_repeats": 0
+}
