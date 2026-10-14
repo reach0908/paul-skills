@@ -1,0 +1,77 @@
+{
+  "status": "separate corrected local preview verified; original five-stage failure remains recorded",
+  "changes": [
+    "Applied independent Paul wireframe repair to reference and app with original token mappings retained",
+    "Maintainer added destination-specific title and autocomplete=name semantics"
+  ],
+  "coreRegression": "All observable state/hash/body/input/button/overflow/geometry outputs in4surface-width groups equal earlier independently checked core flow.",
+  "skipChecks": [
+    {
+      "surface": "design",
+      "width": 1280,
+      "keepsPending": true,
+      "keepsRoute": true,
+      "keepsName": true,
+      "nativeSkip": true,
+      "finishesFailure": true,
+      "titles": true,
+      "autocomplete": true
+    },
+    {
+      "surface": "design",
+      "width": 390,
+      "keepsPending": true,
+      "keepsRoute": true,
+      "keepsName": true,
+      "nativeSkip": true,
+      "finishesFailure": true,
+      "titles": true,
+      "autocomplete": true
+    },
+    {
+      "surface": "app",
+      "width": 1280,
+      "keepsPending": true,
+      "keepsRoute": true,
+      "keepsName": true,
+      "nativeSkip": true,
+      "finishesFailure": true,
+      "titles": true,
+      "autocomplete": true
+    },
+    {
+      "surface": "app",
+      "width": 390,
+      "keepsPending": true,
+      "keepsRoute": true,
+      "keepsName": true,
+      "nativeSkip": true,
+      "finishesFailure": true,
+      "titles": true,
+      "autocomplete": true
+    }
+  ],
+  "source": "wireframe-paul-r3-navigation exposed repair",
+  "sourceSha256": "d044fae5d22807bc44b365966390abeae0cf852da4d2aa4b4ad5d745ec1c096f",
+  "artifactHashes": {
+    "REPAIR.md": "f1a80a826b51ecb2f4d0a3f7e2e849069b5b924a610ca9fe46c4baa639c84737",
+    "app/index.html": "51a98d7c2bd6d1637c086ccc74b09057697d0b57886e8ed4a206ec554b143158",
+    "app/tokens.css": "183a0996a3fc0a3d63bbab8fcdac754f3cb715c0aea65cdcbeb8ff0d12c11dd9",
+    "brief.md": "d74572e6e09a874a852c31106c831fbb2784fae0bc6b0e93ed90cecdb6130efd",
+    "design/flow.md": "f4c8a098663e8d179627256801fa06faa4530f1686ee5b8cbd07988632e3544f",
+    "design/ia.md": "ffede0a69018206cb983d397bf7c31bd296091248d459dcf12abce2ec2316db5",
+    "design/index.html": "3cda0653910b27b37c42917763586224d172414c63b88dfcfdb34f6b31f8e6a1",
+    "design/screens.md": "d3c6b903220da14fd7d816d779efc07d6b605709dbda652af91719f273042ea3"
+  },
+  "limits": [
+    "New local preview is a maintainer-composed repair, not an untouched5stage output or independent sixth agent.",
+    "Title and autocomplete attributes observed; actual screenreader and saved-profile autofill untested.",
+    "No production or user acceptance. Initial helper assertion failure retained separately before actual repaired writes."
+  ],
+  "evidence": [
+    "composition-repaired.json",
+    "composition-repaired-core-checks.json",
+    "repaired-skip.json",
+    "wireframe-r3-navigation-assessment.json"
+  ]
+}

@@ -1,0 +1,489 @@
+{
+  "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+  "candidate": "v4",
+  "upstreamHashesMatched": 65,
+  "fileCounts": {
+    "identical": 46,
+    "modified": 18,
+    "missing": 0
+  },
+  "files": [
+    {
+      "upstream": "skills/better-accessibility/SKILL.md",
+      "local": "skills/in-progress/better-accessibility/SKILL.md",
+      "status": "modified",
+      "sha256": "18a457787a99b489d05320328a55ce8821dda126bff1b9658a4c2a4be428728a"
+    },
+    {
+      "upstream": "skills/better-accessibility/agents/openai.yaml",
+      "local": "skills/in-progress/better-accessibility/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563"
+    },
+    {
+      "upstream": "skills/better-accessibility/focus-and-keyboard.md",
+      "local": "skills/in-progress/better-accessibility/focus-and-keyboard.md",
+      "status": "identical",
+      "sha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b"
+    },
+    {
+      "upstream": "skills/better-accessibility/forms.md",
+      "local": "skills/in-progress/better-accessibility/forms.md",
+      "status": "modified",
+      "sha256": "60b313755f61b842c7113c4a32602554bc1a0ce58269215df13d54f78305a950"
+    },
+    {
+      "upstream": "skills/better-accessibility/hit-areas.md",
+      "local": "skills/in-progress/better-accessibility/hit-areas.md",
+      "status": "identical",
+      "sha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53"
+    },
+    {
+      "upstream": "skills/better-accessibility/motion-and-zoom.md",
+      "local": "skills/in-progress/better-accessibility/motion-and-zoom.md",
+      "status": "identical",
+      "sha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714"
+    },
+    {
+      "upstream": "skills/better-accessibility/screen-readers.md",
+      "local": "skills/in-progress/better-accessibility/screen-readers.md",
+      "status": "identical",
+      "sha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+    },
+    {
+      "upstream": "skills/better-accessibility/semantics-and-aria.md",
+      "local": "skills/in-progress/better-accessibility/semantics-and-aria.md",
+      "status": "identical",
+      "sha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e"
+    },
+    {
+      "upstream": "skills/better-colors/SKILL.md",
+      "local": "skills/in-progress/better-colors/SKILL.md",
+      "status": "modified",
+      "sha256": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33"
+    },
+    {
+      "upstream": "skills/better-colors/agents/openai.yaml",
+      "local": "skills/in-progress/better-colors/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a"
+    },
+    {
+      "upstream": "skills/better-colors/color-formats.md",
+      "local": "skills/in-progress/better-colors/color-formats.md",
+      "status": "identical",
+      "sha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba"
+    },
+    {
+      "upstream": "skills/better-colors/color-usage.md",
+      "local": "skills/in-progress/better-colors/color-usage.md",
+      "status": "identical",
+      "sha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773"
+    },
+    {
+      "upstream": "skills/better-colors/contrast.md",
+      "local": "skills/in-progress/better-colors/contrast.md",
+      "status": "identical",
+      "sha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc"
+    },
+    {
+      "upstream": "skills/better-colors/palette-generation.md",
+      "local": "skills/in-progress/better-colors/palette-generation.md",
+      "status": "identical",
+      "sha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5"
+    },
+    {
+      "upstream": "skills/better-colors/palette-structure.md",
+      "local": "skills/in-progress/better-colors/palette-structure.md",
+      "status": "identical",
+      "sha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62"
+    },
+    {
+      "upstream": "skills/better-colors/token-naming.md",
+      "local": "skills/in-progress/better-colors/token-naming.md",
+      "status": "identical",
+      "sha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a"
+    },
+    {
+      "upstream": "skills/better-interface/SKILL.md",
+      "local": "skills/in-progress/better-interface/SKILL.md",
+      "status": "modified",
+      "sha256": "a5228b2d838370228dea24b17593b629811ccdb398af7d2c495548db900a2aaf"
+    },
+    {
+      "upstream": "skills/better-interface/agents/openai.yaml",
+      "local": "skills/in-progress/better-interface/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc"
+    },
+    {
+      "upstream": "skills/better-interface/review-format.md",
+      "local": "skills/in-progress/better-interface/review-format.md",
+      "status": "modified",
+      "sha256": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440"
+    },
+    {
+      "upstream": "skills/better-layout/SKILL.md",
+      "local": "skills/in-progress/better-layout/SKILL.md",
+      "status": "modified",
+      "sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55"
+    },
+    {
+      "upstream": "skills/better-layout/agents/openai.yaml",
+      "local": "skills/in-progress/better-layout/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15"
+    },
+    {
+      "upstream": "skills/better-layout/grouping-and-alignment.md",
+      "local": "skills/in-progress/better-layout/grouping-and-alignment.md",
+      "status": "identical",
+      "sha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a"
+    },
+    {
+      "upstream": "skills/better-layout/spacing-and-adaptivity.md",
+      "local": "skills/in-progress/better-layout/spacing-and-adaptivity.md",
+      "status": "identical",
+      "sha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958"
+    },
+    {
+      "upstream": "skills/better-typography/SKILL.md",
+      "local": "skills/in-progress/better-typography/SKILL.md",
+      "status": "modified",
+      "sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5"
+    },
+    {
+      "upstream": "skills/better-typography/agents/openai.yaml",
+      "local": "skills/in-progress/better-typography/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8"
+    },
+    {
+      "upstream": "skills/better-typography/choosing-fonts.md",
+      "local": "skills/in-progress/better-typography/choosing-fonts.md",
+      "status": "identical",
+      "sha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d"
+    },
+    {
+      "upstream": "skills/better-typography/css-cheat-sheet.md",
+      "local": "skills/in-progress/better-typography/css-cheat-sheet.md",
+      "status": "identical",
+      "sha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9"
+    },
+    {
+      "upstream": "skills/better-typography/details-and-accessibility.md",
+      "local": "skills/in-progress/better-typography/details-and-accessibility.md",
+      "status": "identical",
+      "sha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23"
+    },
+    {
+      "upstream": "skills/better-typography/spacing-and-sizing.md",
+      "local": "skills/in-progress/better-typography/spacing-and-sizing.md",
+      "status": "identical",
+      "sha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f"
+    },
+    {
+      "upstream": "skills/better-typography/variable-fonts-and-opentype.md",
+      "local": "skills/in-progress/better-typography/variable-fonts-and-opentype.md",
+      "status": "identical",
+      "sha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556"
+    },
+    {
+      "upstream": "skills/better-typography/wrapping-and-punctuation.md",
+      "local": "skills/in-progress/better-typography/wrapping-and-punctuation.md",
+      "status": "modified",
+      "sha256": "7a09070681d74456a117bf79f006c56f822c316a5b7ad28202c0737cc524557c"
+    },
+    {
+      "upstream": "skills/better-ui/SKILL.md",
+      "local": "skills/in-progress/better-ui/SKILL.md",
+      "status": "modified",
+      "sha256": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d"
+    },
+    {
+      "upstream": "skills/better-ui/agents/openai.yaml",
+      "local": "skills/in-progress/better-ui/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871"
+    },
+    {
+      "upstream": "skills/better-ui/animations.md",
+      "local": "skills/in-progress/better-ui/animations.md",
+      "status": "identical",
+      "sha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3"
+    },
+    {
+      "upstream": "skills/better-ui/enter-exit.md",
+      "local": "skills/in-progress/better-ui/enter-exit.md",
+      "status": "identical",
+      "sha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a"
+    },
+    {
+      "upstream": "skills/better-ui/icon-transitions.md",
+      "local": "skills/in-progress/better-ui/icon-transitions.md",
+      "status": "identical",
+      "sha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06"
+    },
+    {
+      "upstream": "skills/better-ui/icons.md",
+      "local": "skills/in-progress/better-ui/icons.md",
+      "status": "identical",
+      "sha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd"
+    },
+    {
+      "upstream": "skills/better-ui/performance.md",
+      "local": "skills/in-progress/better-ui/performance.md",
+      "status": "identical",
+      "sha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6"
+    },
+    {
+      "upstream": "skills/better-ui/surfaces.md",
+      "local": "skills/in-progress/better-ui/surfaces.md",
+      "status": "identical",
+      "sha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721"
+    },
+    {
+      "upstream": "skills/better-writing/SKILL.md",
+      "local": "skills/in-progress/better-writing/SKILL.md",
+      "status": "modified",
+      "sha256": "1a91b300594ee7acf804a8c117cc45ff4fb077d28e7c48cd2e945d66065d9e70"
+    },
+    {
+      "upstream": "skills/better-writing/agents/openai.yaml",
+      "local": "skills/in-progress/better-writing/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67"
+    },
+    {
+      "upstream": "skills/better-writing/patterns.md",
+      "local": "skills/in-progress/better-writing/patterns.md",
+      "status": "modified",
+      "sha256": "89a4aa4267a737f3bafe143340463c8d7722ee00e857ecd38df2bfc362117359"
+    },
+    {
+      "upstream": "skills/break/SKILL.md",
+      "local": "skills/in-progress/break/SKILL.md",
+      "status": "modified",
+      "sha256": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f"
+    },
+    {
+      "upstream": "skills/break/agents/openai.yaml",
+      "local": "skills/in-progress/break/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc"
+    },
+    {
+      "upstream": "skills/break/scenarios.md",
+      "local": "skills/in-progress/break/scenarios.md",
+      "status": "identical",
+      "sha256": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5"
+    },
+    {
+      "upstream": "skills/build-design/SKILL.md",
+      "local": "skills/in-progress/build-design/SKILL.md",
+      "status": "modified",
+      "sha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e"
+    },
+    {
+      "upstream": "skills/build-design/agents/openai.yaml",
+      "local": "skills/in-progress/build-design/agents/openai.yaml",
+      "status": "modified",
+      "sha256": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0"
+    },
+    {
+      "upstream": "skills/build-design/figma.md",
+      "local": "skills/in-progress/build-design/figma.md",
+      "status": "identical",
+      "sha256": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942"
+    },
+    {
+      "upstream": "skills/explain-interface/SKILL.md",
+      "local": "skills/in-progress/explain-interface/SKILL.md",
+      "status": "modified",
+      "sha256": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a"
+    },
+    {
+      "upstream": "skills/explain-interface/agents/openai.yaml",
+      "local": "skills/in-progress/explain-interface/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc"
+    },
+    {
+      "upstream": "skills/explain-interface/find-the-effect.md",
+      "local": "skills/in-progress/explain-interface/find-the-effect.md",
+      "status": "identical",
+      "sha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df"
+    },
+    {
+      "upstream": "skills/explain-interface/from-an-image.md",
+      "local": "skills/in-progress/explain-interface/from-an-image.md",
+      "status": "identical",
+      "sha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77"
+    },
+    {
+      "upstream": "skills/explain-interface/no-browser.md",
+      "local": "skills/in-progress/explain-interface/no-browser.md",
+      "status": "identical",
+      "sha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f"
+    },
+    {
+      "upstream": "skills/explain-interface/read-the-system.md",
+      "local": "skills/in-progress/explain-interface/read-the-system.md",
+      "status": "identical",
+      "sha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482"
+    },
+    {
+      "upstream": "skills/interface-review/SKILL.md",
+      "local": "skills/in-progress/interface-review/SKILL.md",
+      "status": "modified",
+      "sha256": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba"
+    },
+    {
+      "upstream": "skills/interface-review/agents/openai.yaml",
+      "local": "skills/in-progress/interface-review/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f"
+    },
+    {
+      "upstream": "skills/interface-review/removed-signals.md",
+      "local": "skills/in-progress/interface-review/removed-signals.md",
+      "status": "identical",
+      "sha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac"
+    },
+    {
+      "upstream": "skills/interface-review/scope-resolution.md",
+      "local": "skills/in-progress/interface-review/scope-resolution.md",
+      "status": "identical",
+      "sha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e"
+    },
+    {
+      "upstream": "skills/state-machine/SKILL.md",
+      "local": "skills/in-progress/state-machine/SKILL.md",
+      "status": "modified",
+      "sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0"
+    },
+    {
+      "upstream": "skills/state-machine/agents/openai.yaml",
+      "local": "skills/in-progress/state-machine/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff"
+    },
+    {
+      "upstream": "skills/state-machine/switcher.md",
+      "local": "skills/in-progress/state-machine/switcher.md",
+      "status": "identical",
+      "sha256": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b"
+    },
+    {
+      "upstream": "skills/variant/SKILL.md",
+      "local": "skills/in-progress/variant/SKILL.md",
+      "status": "modified",
+      "sha256": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446"
+    },
+    {
+      "upstream": "skills/variant/agents/openai.yaml",
+      "local": "skills/in-progress/variant/agents/openai.yaml",
+      "status": "identical",
+      "sha256": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0"
+    },
+    {
+      "upstream": "skills/variant/picker.md",
+      "local": "skills/in-progress/variant/picker.md",
+      "status": "identical",
+      "sha256": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    }
+  ],
+  "skills": [
+    {
+      "id": "better-accessibility",
+      "digest": "sha256:1ae4a7c9343f687cc01fabfb940d0206d477947276f833652221235c0e5853d9",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-colors",
+      "digest": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-interface",
+      "digest": "sha256:242d3a9f5e70f3863bc23287bface5eb64f25492740ef1d851b170846b62e7cb",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-layout",
+      "digest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-typography",
+      "digest": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-ui",
+      "digest": "sha256:5008b74603b954edb58eb497bb532fd13ad9ae6dcf619ddbb8ddb91df967674a",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "better-writing",
+      "digest": "sha256:b230bc4d0f351826898219c84ed202762be2874b9ed7b61b53d13ae0c3429e2e",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "break",
+      "digest": "sha256:26c4cce857f6287944c8d4f3cf9f9d9c2112dabb9036c6d57c8a5287240ec1fc",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "build-design",
+      "digest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "explain-interface",
+      "digest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "interface-review",
+      "digest": "sha256:071359a09e6912e071585f660865443c24cc2d14ec166f155965b10431ff155e",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "state-machine",
+      "digest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    },
+    {
+      "id": "variant",
+      "digest": "sha256:fd3cc7388f2657877a0a915d6e2cf0e0133cc9d08994c1b7be959cb32c2f6db5",
+      "registeredDigestMatches": true,
+      "invocationUnchanged": true,
+      "licenseMatches": true
+    }
+  ]
+}

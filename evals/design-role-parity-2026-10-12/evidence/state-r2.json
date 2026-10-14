@@ -1,0 +1,2149 @@
+{
+  "states": [
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "loading",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "error",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오지 못했어요.\n\n다시 불러오기",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "empty",
+      "observed": {
+        "text": "활동 기록\n\n아직 활동 기록이 없어요. 파일을 공유하면 여기에 표시돼요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "one",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "typical",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "typical",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "long",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:00\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:01\n이하린 · 편집 권한 변경 · 2026.10.12 11:02\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 12:03\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 13:04\n이하린 · 편집 권한 변경 · 2026.10.12 14:05\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.11 15:06\n박준호 · 제품 사진 24개 업로드 · 2026.10.11 16:07\n이하린 · 편집 권한 변경 · 2026.10.11 09:08\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.11 10:09\n박준호 · 제품 사진 24개 업로드 · 2026.10.11 11:10\n이하린 · 편집 권한 변경 · 2026.10.11 12:11\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.10 13:12\n박준호 · 제품 사진 24개 업로드 · 2026.10.10 14:13\n이하린 · 편집 권한 변경 · 2026.10.10 15:14\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.10 16:15\n박준호 · 제품 사진 24개 업로드 · 2026.10.10 09:16\n이하린 · 편집 권한 변경 · 2026.10.10 10:17\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.09 11:18\n박준호 · 제품 사진 24개 업로드 · 2026.10.09 12:19\n이하린 · 편집 권한 변경 · 2026.10.09 13:20\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.09 14:21\n박준호 · 제품 사진 24개 업로드 · 2026.10.09 15:22\n이하린 · 편집 권한 변경 · 2026.10.09 16:23\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.08 09:24\n박준호 · 제품 사진 24개 업로드 · 2026.10.08 10:25\n이하린 · 편집 권한 변경 · 2026.10.08 11:26\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.08 12:27\n박준호 · 제품 사진 24개 업로드 · 2026.10.08 13:28\n이하린 · 편집 권한 변경 · 2026.10.08 14:29\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.07 15:30\n박준호 · 제품 사진 24개 업로드 · 2026.10.07 16:31\n이하린 · 편집 권한 변경 · 2026.10.07 09:32\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.07 10:33\n박준호 · 제품 사진 24개 업로드 · 2026.10.07 11:34\n이하린 · 편집 권한 변경 · 2026.10.07 12:35\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.06 13:36\n박준호 · 제품 사진 24개 업로드 · 2026.10.06 14:37\n이하린 · 편집 권한 변경 · 2026.10.06 15:38\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.06 16:39\n박준호 · 제품 사진 24개 업로드 · 2026.10.06 09:40\n이하린 · 편집 권한 변경 · 2026.10.06 10:41",
+        "items": 42,
+        "busy": 0
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "refreshing",
+      "observed": {
+        "text": "활동 기록\n\n이전 기록을 보며 새 기록을 기다리고 있어요.\n\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "refreshing",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "member-no-access",
+      "observed": {
+        "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "member-no-access",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 1280,
+      "kind": "reload",
+      "stable": true,
+      "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요."
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "loading",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "error",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오지 못했어요.\n\n다시 불러오기",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "empty",
+      "observed": {
+        "text": "활동 기록\n\n아직 활동 기록이 없어요. 파일을 공유하면 여기에 표시돼요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "one",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "typical",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "typical",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "long",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:00\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:01\n이하린 · 편집 권한 변경 · 2026.10.12 11:02\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 12:03\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 13:04\n이하린 · 편집 권한 변경 · 2026.10.12 14:05\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.11 15:06\n박준호 · 제품 사진 24개 업로드 · 2026.10.11 16:07\n이하린 · 편집 권한 변경 · 2026.10.11 09:08\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.11 10:09\n박준호 · 제품 사진 24개 업로드 · 2026.10.11 11:10\n이하린 · 편집 권한 변경 · 2026.10.11 12:11\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.10 13:12\n박준호 · 제품 사진 24개 업로드 · 2026.10.10 14:13\n이하린 · 편집 권한 변경 · 2026.10.10 15:14\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.10 16:15\n박준호 · 제품 사진 24개 업로드 · 2026.10.10 09:16\n이하린 · 편집 권한 변경 · 2026.10.10 10:17\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.09 11:18\n박준호 · 제품 사진 24개 업로드 · 2026.10.09 12:19\n이하린 · 편집 권한 변경 · 2026.10.09 13:20\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.09 14:21\n박준호 · 제품 사진 24개 업로드 · 2026.10.09 15:22\n이하린 · 편집 권한 변경 · 2026.10.09 16:23\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.08 09:24\n박준호 · 제품 사진 24개 업로드 · 2026.10.08 10:25\n이하린 · 편집 권한 변경 · 2026.10.08 11:26\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.08 12:27\n박준호 · 제품 사진 24개 업로드 · 2026.10.08 13:28\n이하린 · 편집 권한 변경 · 2026.10.08 14:29\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.07 15:30\n박준호 · 제품 사진 24개 업로드 · 2026.10.07 16:31\n이하린 · 편집 권한 변경 · 2026.10.07 09:32\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.07 10:33\n박준호 · 제품 사진 24개 업로드 · 2026.10.07 11:34\n이하린 · 편집 권한 변경 · 2026.10.07 12:35\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.06 13:36\n박준호 · 제품 사진 24개 업로드 · 2026.10.06 14:37\n이하린 · 편집 권한 변경 · 2026.10.06 15:38\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.06 16:39\n박준호 · 제품 사진 24개 업로드 · 2026.10.06 09:40\n이하린 · 편집 권한 변경 · 2026.10.06 10:41",
+        "items": 42,
+        "busy": 0
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "refreshing",
+      "observed": {
+        "text": "활동 기록\n\n이전 기록을 보며 새 기록을 기다리고 있어요.\n\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "refreshing",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "id": "member-no-access",
+      "observed": {
+        "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "member-no-access",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "audit-states",
+      "width": 320,
+      "kind": "reload",
+      "stable": true,
+      "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요."
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "feature-disabled",
+      "observed": {
+        "text": "공유 파일 전송\n\n관리자가 파일 전송 기능을 꺼 두었어요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "feature-disabled",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "free-limit",
+      "observed": {
+        "text": "공유 파일 전송\n\n이번 달 무료 전송 20건을 모두 사용했어요. 다음 달에 다시 전송하거나 팀 플랜을 확인해 주세요.\n\n팀 플랜 확인",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "free-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "loading",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송 목록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "error",
+      "observed": {
+        "text": "공유 파일 전송\n\n목록을 불러오지 못했어요.\n\n다시 시도",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "empty",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송할 파일을 추가해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "one-pending",
+      "observed": {
+        "text": "공유 파일 전송\n매장 동선 최종 검토.pdf · 전송 대기",
+        "items": 1,
+        "busy": 1
+      },
+      "shell": {
+        "state": "one-pending",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "partial",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "partial",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "all-done",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 완료\n브랜드 제안서 v8.key · 전송 완료",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "all-done",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "all-failed",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 실패: 파일을 다시 추가해 주세요.\n매장 동선 최종 검토.pdf · 전송 실패: 파일을 다시 추가해 주세요.\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "all-failed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "long",
+      "observed": {
+        "text": "공유 파일 전송\n01-인터뷰-서윤-20261012.wav · 전송 완료\n02-매장 동선 최종 검토.pdf · 전송 대기\n03-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n04-인터뷰-서윤-20261012.wav · 전송 완료\n05-매장 동선 최종 검토.pdf · 전송 대기\n06-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n07-인터뷰-서윤-20261012.wav · 전송 완료\n08-매장 동선 최종 검토.pdf · 전송 대기\n09-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n10-인터뷰-서윤-20261012.wav · 전송 완료\n11-매장 동선 최종 검토.pdf · 전송 대기\n12-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n13-인터뷰-서윤-20261012.wav · 전송 완료\n14-매장 동선 최종 검토.pdf · 전송 대기\n15-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n16-인터뷰-서윤-20261012.wav · 전송 완료\n17-매장 동선 최종 검토.pdf · 전송 대기\n18-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n19-인터뷰-서윤-20261012.wav · 전송 완료\n20-매장 동선 최종 검토.pdf · 전송 대기\n21-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n22-인터뷰-서윤-20261012.wav · 전송 완료\n23-매장 동선 최종 검토.pdf · 전송 대기\n24-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n25-인터뷰-서윤-20261012.wav · 전송 완료\n26-매장 동선 최종 검토.pdf · 전송 대기\n27-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n28-인터뷰-서윤-20261012.wav · 전송 완료\n29-매장 동선 최종 검토.pdf · 전송 대기\n30-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n31-인터뷰-서윤-20261012.wav · 전송 완료\n32-매장 동선 최종 검토.pdf · 전송 대기\n33-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n34-인터뷰-서윤-20261012.wav · 전송 완료\n35-매장 동선 최종 검토.pdf · 전송 대기\n36-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 36,
+        "busy": 12
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "free-under-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "free-under-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "team-over-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "team-over-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 233.4375,
+          "y": 785,
+          "width": 813.125,
+          "height": 35,
+          "top": 785,
+          "right": 1046.5625,
+          "bottom": 820,
+          "left": 233.4375
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "kind": "reload",
+      "stable": true,
+      "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요."
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "feature-disabled",
+      "observed": {
+        "text": "공유 파일 전송\n\n관리자가 파일 전송 기능을 꺼 두었어요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "feature-disabled",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "free-limit",
+      "observed": {
+        "text": "공유 파일 전송\n\n이번 달 무료 전송 20건을 모두 사용했어요. 다음 달에 다시 전송하거나 팀 플랜을 확인해 주세요.\n\n팀 플랜 확인",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "free-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "loading",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송 목록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "error",
+      "observed": {
+        "text": "공유 파일 전송\n\n목록을 불러오지 못했어요.\n\n다시 시도",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "empty",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송할 파일을 추가해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "one-pending",
+      "observed": {
+        "text": "공유 파일 전송\n매장 동선 최종 검토.pdf · 전송 대기",
+        "items": 1,
+        "busy": 1
+      },
+      "shell": {
+        "state": "one-pending",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "partial",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "partial",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "all-done",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 완료\n브랜드 제안서 v8.key · 전송 완료",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "all-done",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "all-failed",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 실패: 파일을 다시 추가해 주세요.\n매장 동선 최종 검토.pdf · 전송 실패: 파일을 다시 추가해 주세요.\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "all-failed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "long",
+      "observed": {
+        "text": "공유 파일 전송\n01-인터뷰-서윤-20261012.wav · 전송 완료\n02-매장 동선 최종 검토.pdf · 전송 대기\n03-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n04-인터뷰-서윤-20261012.wav · 전송 완료\n05-매장 동선 최종 검토.pdf · 전송 대기\n06-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n07-인터뷰-서윤-20261012.wav · 전송 완료\n08-매장 동선 최종 검토.pdf · 전송 대기\n09-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n10-인터뷰-서윤-20261012.wav · 전송 완료\n11-매장 동선 최종 검토.pdf · 전송 대기\n12-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n13-인터뷰-서윤-20261012.wav · 전송 완료\n14-매장 동선 최종 검토.pdf · 전송 대기\n15-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n16-인터뷰-서윤-20261012.wav · 전송 완료\n17-매장 동선 최종 검토.pdf · 전송 대기\n18-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n19-인터뷰-서윤-20261012.wav · 전송 완료\n20-매장 동선 최종 검토.pdf · 전송 대기\n21-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n22-인터뷰-서윤-20261012.wav · 전송 완료\n23-매장 동선 최종 검토.pdf · 전송 대기\n24-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n25-인터뷰-서윤-20261012.wav · 전송 완료\n26-매장 동선 최종 검토.pdf · 전송 대기\n27-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n28-인터뷰-서윤-20261012.wav · 전송 완료\n29-매장 동선 최종 검토.pdf · 전송 대기\n30-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n31-인터뷰-서윤-20261012.wav · 전송 완료\n32-매장 동선 최종 검토.pdf · 전송 대기\n33-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.\n34-인터뷰-서윤-20261012.wav · 전송 완료\n35-매장 동선 최종 검토.pdf · 전송 대기\n36-브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 36,
+        "busy": 12
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "free-under-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "free-under-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "team-over-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "team-over-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 16,
+          "y": 785,
+          "width": 288,
+          "height": 35,
+          "top": 785,
+          "right": 304,
+          "bottom": 820,
+          "left": 16
+        }
+      }
+    },
+    {
+      "arm": "original",
+      "name": "queue-boundaries",
+      "width": 320,
+      "kind": "reload",
+      "stable": true,
+      "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요."
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "loading",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "error",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오지 못했어요.\n\n다시 불러오기",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "empty",
+      "observed": {
+        "text": "활동 기록\n\n아직 활동 기록이 없어요. 파일을 공유하면 여기에 표시돼요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "one",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "typical",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "typical",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "long",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 브랜드 가이드 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 업로드 · 2026.10.12 10:20\n이하린 · 편집 권한 변경 · 2026.10.12 11:20\n정다은 · 캠페인 일정 수정 · 2026.10.12 12:20\n최지호 · 브랜드 가이드 공유 · 2026.10.12 13:20\n한유진 · 제품 사진 업로드 · 2026.10.12 14:20\n김서윤 · 편집 권한 변경 · 2026.10.12 15:20\n박준호 · 캠페인 일정 수정 · 2026.10.12 16:20\n이하린 · 브랜드 가이드 공유 · 2026.10.11 09:20\n정다은 · 제품 사진 업로드 · 2026.10.11 10:20\n최지호 · 편집 권한 변경 · 2026.10.11 11:20\n한유진 · 캠페인 일정 수정 · 2026.10.11 12:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.11 13:20\n박준호 · 제품 사진 업로드 · 2026.10.11 14:20\n이하린 · 편집 권한 변경 · 2026.10.11 15:20\n정다은 · 캠페인 일정 수정 · 2026.10.11 16:20\n최지호 · 브랜드 가이드 공유 · 2026.10.10 09:20\n한유진 · 제품 사진 업로드 · 2026.10.10 10:20\n김서윤 · 편집 권한 변경 · 2026.10.10 11:20\n박준호 · 캠페인 일정 수정 · 2026.10.10 12:20\n이하린 · 브랜드 가이드 공유 · 2026.10.10 13:20\n정다은 · 제품 사진 업로드 · 2026.10.10 14:20\n최지호 · 편집 권한 변경 · 2026.10.10 15:20\n한유진 · 캠페인 일정 수정 · 2026.10.10 16:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.09 09:20\n박준호 · 제품 사진 업로드 · 2026.10.09 10:20\n이하린 · 편집 권한 변경 · 2026.10.09 11:20\n정다은 · 캠페인 일정 수정 · 2026.10.09 12:20\n최지호 · 브랜드 가이드 공유 · 2026.10.09 13:20\n한유진 · 제품 사진 업로드 · 2026.10.09 14:20\n김서윤 · 편집 권한 변경 · 2026.10.09 15:20\n박준호 · 캠페인 일정 수정 · 2026.10.09 16:20\n이하린 · 브랜드 가이드 공유 · 2026.10.08 09:20\n정다은 · 제품 사진 업로드 · 2026.10.08 10:20\n최지호 · 편집 권한 변경 · 2026.10.08 11:20\n한유진 · 캠페인 일정 수정 · 2026.10.08 12:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.08 13:20\n박준호 · 제품 사진 업로드 · 2026.10.08 14:20\n이하린 · 편집 권한 변경 · 2026.10.08 15:20\n정다은 · 캠페인 일정 수정 · 2026.10.08 16:20\n최지호 · 브랜드 가이드 공유 · 2026.10.07 09:20\n한유진 · 제품 사진 업로드 · 2026.10.07 10:20\n김서윤 · 편집 권한 변경 · 2026.10.07 11:20\n박준호 · 캠페인 일정 수정 · 2026.10.07 12:20\n이하린 · 브랜드 가이드 공유 · 2026.10.07 13:20\n정다은 · 제품 사진 업로드 · 2026.10.07 14:20\n최지호 · 편집 권한 변경 · 2026.10.07 15:20\n한유진 · 캠페인 일정 수정 · 2026.10.07 16:20",
+        "items": 48,
+        "busy": 0
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "refreshing",
+      "observed": {
+        "text": "활동 기록\n\n이전 기록을 보며 새 기록을 기다리고 있어요.\n\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "refreshing",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "id": "member-no-access",
+      "observed": {
+        "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "member-no-access",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 326.4609375,
+          "y": 785,
+          "width": 627.078125,
+          "height": 35,
+          "top": 785,
+          "right": 953.5390625,
+          "bottom": 820,
+          "left": 326.4609375
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 1280,
+      "kind": "reload",
+      "stable": true,
+      "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요."
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "loading",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "error",
+      "observed": {
+        "text": "활동 기록\n\n기록을 불러오지 못했어요.\n\n다시 불러오기",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "empty",
+      "observed": {
+        "text": "활동 기록\n\n아직 활동 기록이 없어요. 파일을 공유하면 여기에 표시돼요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "one",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "typical",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "typical",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "long",
+      "observed": {
+        "text": "활동 기록\n김서윤 · 브랜드 가이드 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 업로드 · 2026.10.12 10:20\n이하린 · 편집 권한 변경 · 2026.10.12 11:20\n정다은 · 캠페인 일정 수정 · 2026.10.12 12:20\n최지호 · 브랜드 가이드 공유 · 2026.10.12 13:20\n한유진 · 제품 사진 업로드 · 2026.10.12 14:20\n김서윤 · 편집 권한 변경 · 2026.10.12 15:20\n박준호 · 캠페인 일정 수정 · 2026.10.12 16:20\n이하린 · 브랜드 가이드 공유 · 2026.10.11 09:20\n정다은 · 제품 사진 업로드 · 2026.10.11 10:20\n최지호 · 편집 권한 변경 · 2026.10.11 11:20\n한유진 · 캠페인 일정 수정 · 2026.10.11 12:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.11 13:20\n박준호 · 제품 사진 업로드 · 2026.10.11 14:20\n이하린 · 편집 권한 변경 · 2026.10.11 15:20\n정다은 · 캠페인 일정 수정 · 2026.10.11 16:20\n최지호 · 브랜드 가이드 공유 · 2026.10.10 09:20\n한유진 · 제품 사진 업로드 · 2026.10.10 10:20\n김서윤 · 편집 권한 변경 · 2026.10.10 11:20\n박준호 · 캠페인 일정 수정 · 2026.10.10 12:20\n이하린 · 브랜드 가이드 공유 · 2026.10.10 13:20\n정다은 · 제품 사진 업로드 · 2026.10.10 14:20\n최지호 · 편집 권한 변경 · 2026.10.10 15:20\n한유진 · 캠페인 일정 수정 · 2026.10.10 16:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.09 09:20\n박준호 · 제품 사진 업로드 · 2026.10.09 10:20\n이하린 · 편집 권한 변경 · 2026.10.09 11:20\n정다은 · 캠페인 일정 수정 · 2026.10.09 12:20\n최지호 · 브랜드 가이드 공유 · 2026.10.09 13:20\n한유진 · 제품 사진 업로드 · 2026.10.09 14:20\n김서윤 · 편집 권한 변경 · 2026.10.09 15:20\n박준호 · 캠페인 일정 수정 · 2026.10.09 16:20\n이하린 · 브랜드 가이드 공유 · 2026.10.08 09:20\n정다은 · 제품 사진 업로드 · 2026.10.08 10:20\n최지호 · 편집 권한 변경 · 2026.10.08 11:20\n한유진 · 캠페인 일정 수정 · 2026.10.08 12:20\n김서윤 · 브랜드 가이드 공유 · 2026.10.08 13:20\n박준호 · 제품 사진 업로드 · 2026.10.08 14:20\n이하린 · 편집 권한 변경 · 2026.10.08 15:20\n정다은 · 캠페인 일정 수정 · 2026.10.08 16:20\n최지호 · 브랜드 가이드 공유 · 2026.10.07 09:20\n한유진 · 제품 사진 업로드 · 2026.10.07 10:20\n김서윤 · 편집 권한 변경 · 2026.10.07 11:20\n박준호 · 캠페인 일정 수정 · 2026.10.07 12:20\n이하린 · 브랜드 가이드 공유 · 2026.10.07 13:20\n정다은 · 제품 사진 업로드 · 2026.10.07 14:20\n최지호 · 편집 권한 변경 · 2026.10.07 15:20\n한유진 · 캠페인 일정 수정 · 2026.10.07 16:20",
+        "items": 48,
+        "busy": 0
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "refreshing",
+      "observed": {
+        "text": "활동 기록\n\n이전 기록을 보며 새 기록을 기다리고 있어요.\n\n김서윤 · 성수 팝업 제안서 공유 · 2026.10.12 09:20\n박준호 · 제품 사진 24개 업로드 · 2026.10.12 10:05\n이하린 · 편집 권한 변경 · 2026.10.12 10:34",
+        "items": 3,
+        "busy": 0
+      },
+      "shell": {
+        "state": "refreshing",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "id": "member-no-access",
+      "observed": {
+        "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "member-no-access",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "audit-states",
+      "width": 320,
+      "kind": "reload",
+      "stable": true,
+      "text": "활동 기록\n\n관리자만 볼 수 있어요. 팀 관리자에게 권한을 요청해 주세요."
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "disabled",
+      "observed": {
+        "text": "공유 파일 전송\n\n관리자가 파일 전송 기능을 꺼 두었어요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "disabled",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "free-limit",
+      "observed": {
+        "text": "공유 파일 전송\n\n이번 달 무료 전송 20건을 모두 사용했어요. 다음 달에 다시 전송하거나 팀 플랜을 확인해 주세요.\n\n팀 플랜 확인",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "free-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "loading",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송 목록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "error",
+      "observed": {
+        "text": "공유 파일 전송\n\n목록을 불러오지 못했어요.\n\n다시 시도",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "empty",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송할 파일을 추가해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "one-done",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one-done",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "pending",
+      "observed": {
+        "text": "공유 파일 전송\n성수 매장 현장 인터뷰.wav · 전송 대기",
+        "items": 1,
+        "busy": 1
+      },
+      "shell": {
+        "state": "pending",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "failed",
+      "observed": {
+        "text": "공유 파일 전송\n브랜드 제안서 최종.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "failed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "mixed",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "mixed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "long",
+      "observed": {
+        "text": "공유 파일 전송\n성수 팝업 현장 사진 01.jpg · 전송 완료\n성수 팝업 현장 사진 02.jpg · 전송 대기\n성수 팝업 현장 사진 03.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 04.jpg · 전송 완료\n성수 팝업 현장 사진 05.jpg · 전송 대기\n성수 팝업 현장 사진 06.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 07.jpg · 전송 완료\n성수 팝업 현장 사진 08.jpg · 전송 대기\n성수 팝업 현장 사진 09.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 10.jpg · 전송 완료\n성수 팝업 현장 사진 11.jpg · 전송 대기\n성수 팝업 현장 사진 12.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 13.jpg · 전송 완료\n성수 팝업 현장 사진 14.jpg · 전송 대기\n성수 팝업 현장 사진 15.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 16.jpg · 전송 완료\n성수 팝업 현장 사진 17.jpg · 전송 대기\n성수 팝업 현장 사진 18.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 19.jpg · 전송 완료\n성수 팝업 현장 사진 20.jpg · 전송 대기\n성수 팝업 현장 사진 21.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 22.jpg · 전송 완료\n성수 팝업 현장 사진 23.jpg · 전송 대기\n성수 팝업 현장 사진 24.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 25.jpg · 전송 완료\n성수 팝업 현장 사진 26.jpg · 전송 대기\n성수 팝업 현장 사진 27.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 28.jpg · 전송 완료\n성수 팝업 현장 사진 29.jpg · 전송 대기\n성수 팝업 현장 사진 30.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 31.jpg · 전송 완료\n성수 팝업 현장 사진 32.jpg · 전송 대기\n성수 팝업 현장 사진 33.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 34.jpg · 전송 완료\n성수 팝업 현장 사진 35.jpg · 전송 대기\n성수 팝업 현장 사진 36.jpg · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 36,
+        "busy": 12
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "free-under-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "free-under-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "id": "team-over-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "team-over-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 234.4140625,
+          "y": 785,
+          "width": 811.171875,
+          "height": 35,
+          "top": 785,
+          "right": 1045.5859375,
+          "bottom": 820,
+          "left": 234.4140625
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 1280,
+      "kind": "reload",
+      "stable": true,
+      "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요."
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "disabled",
+      "observed": {
+        "text": "공유 파일 전송\n\n관리자가 파일 전송 기능을 꺼 두었어요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "disabled",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "free-limit",
+      "observed": {
+        "text": "공유 파일 전송\n\n이번 달 무료 전송 20건을 모두 사용했어요. 다음 달에 다시 전송하거나 팀 플랜을 확인해 주세요.\n\n팀 플랜 확인",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "free-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "loading",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송 목록을 불러오고 있어요.",
+        "items": 0,
+        "busy": 1
+      },
+      "shell": {
+        "state": "loading",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "error",
+      "observed": {
+        "text": "공유 파일 전송\n\n목록을 불러오지 못했어요.\n\n다시 시도",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "error",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "empty",
+      "observed": {
+        "text": "공유 파일 전송\n\n전송할 파일을 추가해 주세요.",
+        "items": 0,
+        "busy": 0
+      },
+      "shell": {
+        "state": "empty",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "one-done",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "one-done",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "pending",
+      "observed": {
+        "text": "공유 파일 전송\n성수 매장 현장 인터뷰.wav · 전송 대기",
+        "items": 1,
+        "busy": 1
+      },
+      "shell": {
+        "state": "pending",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "failed",
+      "observed": {
+        "text": "공유 파일 전송\n브랜드 제안서 최종.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 1,
+        "busy": 0
+      },
+      "shell": {
+        "state": "failed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "mixed",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "mixed",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "long",
+      "observed": {
+        "text": "공유 파일 전송\n성수 팝업 현장 사진 01.jpg · 전송 완료\n성수 팝업 현장 사진 02.jpg · 전송 대기\n성수 팝업 현장 사진 03.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 04.jpg · 전송 완료\n성수 팝업 현장 사진 05.jpg · 전송 대기\n성수 팝업 현장 사진 06.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 07.jpg · 전송 완료\n성수 팝업 현장 사진 08.jpg · 전송 대기\n성수 팝업 현장 사진 09.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 10.jpg · 전송 완료\n성수 팝업 현장 사진 11.jpg · 전송 대기\n성수 팝업 현장 사진 12.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 13.jpg · 전송 완료\n성수 팝업 현장 사진 14.jpg · 전송 대기\n성수 팝업 현장 사진 15.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 16.jpg · 전송 완료\n성수 팝업 현장 사진 17.jpg · 전송 대기\n성수 팝업 현장 사진 18.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 19.jpg · 전송 완료\n성수 팝업 현장 사진 20.jpg · 전송 대기\n성수 팝업 현장 사진 21.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 22.jpg · 전송 완료\n성수 팝업 현장 사진 23.jpg · 전송 대기\n성수 팝업 현장 사진 24.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 25.jpg · 전송 완료\n성수 팝업 현장 사진 26.jpg · 전송 대기\n성수 팝업 현장 사진 27.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 28.jpg · 전송 완료\n성수 팝업 현장 사진 29.jpg · 전송 대기\n성수 팝업 현장 사진 30.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 31.jpg · 전송 완료\n성수 팝업 현장 사진 32.jpg · 전송 대기\n성수 팝업 현장 사진 33.jpg · 전송 실패: 파일을 다시 추가해 주세요.\n성수 팝업 현장 사진 34.jpg · 전송 완료\n성수 팝업 현장 사진 35.jpg · 전송 대기\n성수 팝업 현장 사진 36.jpg · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 36,
+        "busy": 12
+      },
+      "shell": {
+        "state": "long",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "free-under-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "free-under-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "id": "team-over-limit",
+      "observed": {
+        "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요.",
+        "items": 3,
+        "busy": 1
+      },
+      "shell": {
+        "state": "team-over-limit",
+        "active": 1,
+        "overflow": false,
+        "toolbar": {
+          "x": 12,
+          "y": 785,
+          "width": 296,
+          "height": 35,
+          "top": 785,
+          "right": 308,
+          "bottom": 820,
+          "left": 12
+        }
+      }
+    },
+    {
+      "arm": "paul",
+      "name": "queue-boundaries",
+      "width": 320,
+      "kind": "reload",
+      "stable": true,
+      "text": "공유 파일 전송\n인터뷰-서윤-20261012.wav · 전송 완료\n매장 동선 최종 검토.pdf · 전송 대기\n브랜드 제안서 v8.key · 전송 실패: 파일을 다시 추가해 주세요."
+    }
+  ],
+  "stress": []
+}

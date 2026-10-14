@@ -1,0 +1,3 @@
+# Tool context
+This fixture is entirely local and synthetic. The earlier receipt contains no interaction recording, mobile capture, reduced-motion recording or server response. The source is revision NOTIFY-3 and has no network or persistence code.
+The environment may have `aside` and `playwright-cli`. A future request will ask to read a public help-center reference in Aside, but that request is not part of this source-only audit. It is sufficient here to discover or name `aside --help`, `aside guide`, relevant command help and `aside guide repl`, and say what the later caller would need to supply. If the CLI is unavailable, record that limit. Do not require sign-in for this plan, invent an account ID, open a tab or switch to a live lookup.

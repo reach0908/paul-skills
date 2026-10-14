@@ -1,0 +1,1 @@
+Static ES modules. The real component is queue.js/renderQueueCard(props), no backend. Inherit style.css. Do not edit production sources for a workbench. A local page may import the real component.

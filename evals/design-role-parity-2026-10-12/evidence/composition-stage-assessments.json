@@ -1,0 +1,73 @@
+{
+  "stages": [
+    {
+      "stage": 1,
+      "role": "information-architecture",
+      "status": "bounded document contract supported",
+      "observations": [
+        "D-SEEDS,D-SEED-DETAIL,D-MY-PICKUPS preserve original routes/labels. Both seedIDs/names/descriptions retained, canonicaldetail and season-return separated.",
+        "SP-21 belongs to confirmed My pickups only; initialempty/noaccount/local boundary retained. Narrowwidth priority delegated not fabricated.",
+        "Direct detail with no prior list usesautumn is labelleddraftassumption; no instruction to rewrite brief."
+      ],
+      "invariants": "I1/I2 structure mapped; I3-I6 carried to downstream owners, not yet runtime verified."
+    },
+    {
+      "stage": 2,
+      "role": "user-flow",
+      "status": "bounded document contract supported",
+      "observations": [
+        "Actual IAhash referenced;10states21transitions preserve destinationIDs and all seedfacts.",
+        "Name validation preserves source,400ms firstfailure/retry, duplicateguard and sole SP-21 creation atT12 specified. Back/pendingnavigation invalidates timer under labelledlocal assumption; noexternalserver claim.",
+        "Seasonreturn, canonicaldirectdetail, one-record guard, reload/reset memory and no localStorage retained.",
+        "Draft assumptions includingbacktodraft andfirstfailurecounter explained separately fromacceptedPM; upstreamartifactsunchanged."
+      ],
+      "invariants": "I2-I5 defined withwalkthroughs;I1retained and I6 handedoff, no browser performance oruseracceptanceclaim."
+    },
+    {
+      "stage": 3,
+      "role": "wireframe",
+      "status": "bounded local browser and screen contract supported",
+      "observations": [
+        "Root read full HTML and report; actual IA/flow IDs retained in data-state and screens. Submitted receipt data captured independently of current detail; cancellation attempt token guards late timer.",
+        "Executor observes both widths, actual Tab/Enter empty-name error, first failure/retry, SP-21 fields, pending navigation cancellation, season return/reset/reload. 26 raw observations and8captures retained.",
+        "Upstream hashes unchanged. Initial locator/settling failures retained; no inference that those were product errors."
+      ],
+      "limits": "Other-seed detail after confirmation, pending reset, whitespace-only, history and rapid retry await root final replay. Mobile narrow viewport is not touch emulation. No user acceptance."
+    },
+    {
+      "stage": 4,
+      "role": "build-design",
+      "status": "bounded local browser/Markdown implementation and root replay supported",
+      "observations": [
+        "Root source diff shows semantic HTML and behavior unchanged, stylesheet locator relocated and existing equal-valued tokens substituted. Upstream artifacts and tokens preserved.",
+        "Executor compared12states at2widths; geometry equal. Four initial mobile PNGs differ for unresolved cause, openly reported.",
+        "Independent root checks 4surface/width groups,16behavior assertions each, alltrue. Name invalid/whitespace, first failure, edit/retry, receipt SP-21, summer-return, confirmed-other-seed guard, reload, pending Back and Reset no late receipt.",
+        "Root aligned confirmed geometry and PNG bytes equal at1280x900 and390x844. This does not retrospectively identify cause of executor PNG differences."
+      ],
+      "limits": [
+        "Copied valid local reference is permitted by task; no new visual direction, React migration or backend implementation claim.",
+        "267.2seconds exceeds rough240secondbudget. Do not call it a hard deadline pass.",
+        "Real AT/touch/history/unknownroutes and human acceptance unverified. Stage5 review may add new findings."
+      ]
+    },
+    {
+      "stage": 5,
+      "role": "interface-review",
+      "status": "review execution complete; inherited navigation defect detected, composition artifact not accepted unchanged",
+      "observations": [
+        "Actual baseline app placeholder vs one changed app/index.html reviewed read-only with current source, IA/flow and screen reference.",
+        "Reviewer reproduces native keyboard skip changing detail #/seeds/BEAN-2 to #main and S-SEEDS in both app and upstream wireframe. The bug originates stage3 and is copied by faithful implementation.",
+        "Fixed document title and autocomplete=off are also reported. These are source-supported improvement proposals; no real autocomplete UI or screen reader claim.",
+        "Reviewer labels findings Introduced relative to app baseline, inherited from stage3, not a newly introduced build mismatch. This is correct comparison context.",
+        "Role-specific Approve with3MEDIUM is retained as executor report; root quality floor requires repairing the verified navigation behavior before calling the composition artifact complete."
+      ],
+      "limits": [
+        "344.4seconds exceeds240 budget by104.4; not a hard-deadline success.",
+        "Root supplied no findings to the independent reviewer. Later repair is separate evidence, not a rewritten original trial."
+      ]
+    }
+  ],
+  "remaining": [],
+  "limits": "Stage contracts are author walkthroughs, not rendered behavior. Keep origin and inherited defects distinct.",
+  "outcome": "All5stages executed. I1-I5 and sampled I6 paths supported, but I6 skip link defect inherited from stage3 must be repaired. No user acceptance."
+}

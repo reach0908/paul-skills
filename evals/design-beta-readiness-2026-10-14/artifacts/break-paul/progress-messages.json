@@ -1,0 +1,8 @@
+[
+  "`break` 스킬로 한 컴포넌트의 도달 가능한 스트레스 시나리오를 격리 페이지에 렌더링하겠습니다. 브라우저 관찰에는 스킬 지시에 따라 `design-browser`와 사용자가 지정한 `playwright-cli` 세션만 사용하며, 먼저 `TASK.md`와 로컬 참조를 읽겠습니다.",
+  "대상 컴포넌트는 `app/queue.js`의 `renderQueueCard`이며, 제목 데이터·목록 항목·코드에 노출된 상태를 받아 큐 카드를 렌더링하는 함수입니다. 유지할 축은 제목 길이/끊기지 않는 문자열, 목록 수량, 컨테이너 폭, 실제 코드 상태이고, 제목의 로케일/사용자 입력 근거가 없는 content-shape와 프로젝트 지원 근거가 없는 environment 축은 제외하겠습니다. 이제 제공된 입력 구조와 컴포넌트 API만 확인합니다.",
+  "적용 시나리오는 다음으로 확정했습니다: 제목 `빈 문자열 / 한 단어 / 일반 제목 / 여러 문장 / 공백 없는 긴 문자열`, 목록 `0 / 1 / 현실적 3 / 10배 30개`, `320px` 좁은 컨테이너, 코드 상태 `권한 없음 / 로딩 / 오류 / 새로고침 중 / 잠김`. 일반 ready 카드는 제목·수량 기준선에서 함께 관찰하며, 별도 상태가 아닌 임의 상태는 만들지 않습니다. 넓은 컨테이너·환경 모드·content-shape는 요청 범위 또는 코드 근거가 없어 제외합니다.",
+  "한 번의 페이지 로드에서 15개 시나리오를 모두 렌더링했고, 구조 스냅샷·전체 페이지 캡처·요소 경계 수치를 같은 세션에서 수집했습니다. 이제 저장된 캡처만 확인해 실제로 보인 깨짐을 판별한 뒤, 해당 시나리오 아래에 관찰 문구를 한 번에 추가하겠습니다.",
+  "관찰된 깨짐은 1건입니다. `빈 문자열` 제목에서 클릭 가능한 버튼이 작은 빈 테두리로만 남아 제목이 전혀 보이지 않았습니다(`better-writing`). 나머지 제목·수량·320px 컨테이너·코드 상태는 이번 한 번의 렌더링에서 눈에 보이는 이탈·겹침·잘림 없이 표시됐습니다. 이 1건만 페이지와 보고서에 기록합니다.",
+  "작업을 완료했습니다.\n\n- 실행 URL: http://127.0.0.1:48914/runs/break-paul/app/stress/\n- 관찰 결과: 빈 제목에서 버튼이 작은 빈 테두리로만 표시되는 깨짐 1건 확인 (`better-writing`)\n- 나머지 14개 시나리오에서는 이탈·겹침·잘림이 관찰되지 않았습니다.\n- 실제 `renderQueueCard`를 import했으며 제품 파일은 변경하지 않았습니다.\n- 전체 보고서: [output/report.md](/private/tmp/paul-beta-readiness-20261014/public/runs/break-paul/output/report.md)\n- 전체 캡처: [output/stress-page.png](/private/tmp/paul-beta-readiness-20261014/public/runs/break-paul/output/stress-page.png)\n- 하네스: [app/stress/harness.js](/private/tmp/paul-beta-readiness-20261014/public/runs/break-paul/app/stress/harness.js)\n\n결과 페이지는 유지했고, 전용 Playwright 세션만 종료했습니다."
+]

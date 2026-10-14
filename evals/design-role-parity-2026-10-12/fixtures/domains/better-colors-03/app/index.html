@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>검토 보드 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>검토 보드</h1>
+
+<div class="row"><button id="theme">밝은/어두운 화면 전환</button></div>
+<section class="panel"><h2>주간 검토</h2><p class="muted">팀의 의견을 확인하고 이번 주 초안을 저장해요.</p><div class="row"><span class="badge success">✓ 완료 2</span><span class="badge waiting">◷ 대기 1</span></div><p>두 배지는 실행 버튼이 아닌 상태 요약이에요.</p><div class="row"><button id="save" class="primary">초안 저장</button><button disabled>승인 완료</button></div><p id="status" class="status" role="status"></p></section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

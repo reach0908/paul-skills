@@ -1,0 +1,38 @@
+{
+  "case": "full-package",
+  "threadId": "01a137d6-0519-7311-a944-89321be48243",
+  "turnCompleted": true,
+  "receipt": {
+    "name": "full-package",
+    "command": [
+      "codex",
+      "exec",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/paul-design-install-20261014/cases/full-package",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-install-discovery-20261014/full-package.final.md",
+      "-"
+    ],
+    "startedAt": "2026-10-14T00:35:34.721706+00:00",
+    "history": "new exec, no resume, prompt contains no previous messages",
+    "exitCode": 0,
+    "completedAt": "2026-10-14T00:40:18.699137+00:00"
+  },
+  "skillHeadersInSuccessfulReadOutputs": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing"
+  ],
+  "commandCount": 25,
+  "prompt": "현재 폴더의 index.html은 한국어 자료 보관함 화면입니다. 접근성, 배치, 문구, 글꼴, 색상과 인터랙션을 종합 검토해 주세요. 실제 코드 근거가 있는 문제와 검증하지 못한 부분을 구분해 간결하게 보고하세요. 이번에는 소스 검토만 하고 브라우저 실행이나 파일 수정은 하지 마세요.\n",
+  "final": "## 검토 범위\n\n[index.html](/private/tmp/paul-design-install-20261014/cases/full-package/index.html) 전체 8줄의 HTML·인라인 CSS·JavaScript를 검토했습니다. 별도 프레임워크, 디자인 토큰, 프로젝트 규칙 문서는 없습니다.\n\n| 영역 | 결과 |\n| --- | --- |\n| 접근성 | HIGH 1건 |\n| 배치 | HIGH 1건 |\n| 문구 | MEDIUM 1건 |\n| 글꼴 | LOW 1건 |\n| 색상 | 코드상 문제 없음 |\n| 인터랙션/UI | 추가 문제는 실행 검증 필요 |\n\n## 코드로 확인된 문제\n\n| 심각도 | 영역 | 위치 | 현재 | 권장 변경 | 영향 |\n| --- | --- | --- | --- | --- | --- |\n| HIGH | 접근성 | [index.html:6](/private/tmp/paul-design-install-20261014/cases/full-package/index.html:6) | 세 번째 열기 버튼에 `tabindex=\"-1\"` | 속성 삭제 | 클릭할 수 있지만 탭으로는 도달할 수 없습니다. WCAG 2.1.1 위반입니다. |\n| HIGH | 배치 | [index.html:2](/private/tmp/paul-design-install-20261014/cases/full-package/index.html:2) | `.cards{min-width:350px}` | `min-width` 삭제 | 320px 화면에서 `main` 좌우 패딩을 제외한 공간은 280px이므로 필연적으로 가로 넘침이 생깁니다. WCAG 1.4.10에 해당합니다. |\n| MEDIUM | 문구 | [index.html:7](/private/tmp/paul-design-install-20261014/cases/full-package/index.html:7), [index.html:8](/private/tmp/paul-design-install-20261014/cases/full-package/index.html:8) | 세 자료 모두 대화상자 제목이 `자료 상세`이고 설명만 복사 | 선택한 카드의 `h2`를 대화상자 제목으로 설정 | 열린 자료를 제목으로 식별할 수 없어 여러 자료를 확인할 때 맥락이 약합니다. 화면 낭독기에도 동일한 일반 제목만 전달됩니다. |\n| LOW | 글꼴 | [index.html:2](/private/tmp/paul-design-install-20261014/cases/full-package/index.html:2) | `font:16px/1.6 system-ui` | `font:1rem/1.6 system-ui` | 문서 전체 기준 크기가 브라우저 기본 글꼴 크기 설정을 따르지 않습니다. |\n\n색상은 선언값 기준으로 통과했습니다. WCAG 2 상대휘도식으로 계산한 대비는 본문/페이지 `13.43:1`, 본문/흰 카드 `14.17:1`, 카드 테두리/페이지 `4.30:1`, 버튼 테두리/흰색 `4.53:1`, 포커스 링/흰색 `7.32:1`입니다.\n\n## 검증하지 못한 부분\n\n요청에 따라 브라우저를 실행하지 않았으므로 다음은 확인하지 않았습니다.\n\n- 실제 탭 순서, Escape 닫기, 대화상자 포커스 이동·복귀\n- 화면 낭독기의 이름·역할·상태 안내\n- 320px 및 200% 확대에서의 실제 렌더링과 스크롤 범위\n- 한국어 줄바꿈, 운영체제별 `system-ui` 폴백, 대화상자 내용 넘침\n- 터치 환경의 hover/pressed 상태와 포커스 링의 실제 외관\n- 사용자 에이전트가 결정하는 대화상자 배경색의 최종 대비\n\n파일은 수정하지 않았습니다.\n\n**판정: Block** — 키보드 접근 불가와 320px 리플로 실패가 코드상 확정됩니다.",
+  "rawEvents": "/Users/jinhokim/dev/paul-skills/.scratch/design-install-discovery-20261014/full-package.events.jsonl",
+  "rawEventsSha256": "7598ea203ee300a0f96fa790040cbf5de938c7c5b3c8b7f55daaef00e0b607dc"
+}

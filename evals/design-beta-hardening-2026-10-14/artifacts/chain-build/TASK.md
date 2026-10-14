@@ -1,0 +1,1 @@
+REFERENCE.md의 선택된 로컬 시안을 기존 app 화면에 구현해 주세요. 실제 앞 단계 자료 input/map.md, input/flow.md, input/screens.md를 읽고 동작과 미결 정책을 보존하세요. 수정은 app/style.css만 허용합니다. 두 폭에서 렌더링된 값과 행동을 Playwright CLI로 비교해 output/report.md에 입력 버전·증거·미결 사항을 기록해 주세요. 이 테스트 시안의 변경은 선택된 상태이므로 재선택 질문 없이 진행하세요.

@@ -1,0 +1,104 @@
+{
+  "status": "pass",
+  "stages": 4,
+  "transferredFileInstances": 8,
+  "inputHashes": [
+    {
+      "stage": "chain-flow",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/output/map.md",
+      "target": "input/map.md",
+      "sha256": "7dc76c6789f4a882bfb11e455111cbb636de51ee99bdc1558a9d78efa972b455",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-wire",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/output/map.md",
+      "target": "input/map.md",
+      "sha256": "7dc76c6789f4a882bfb11e455111cbb636de51ee99bdc1558a9d78efa972b455",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-wire",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-flow/output/flow.md",
+      "target": "input/flow.md",
+      "sha256": "e12a8055e974344e87727ec1b39741632039076e0d83aeae8d067746ab71ba3f",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-build",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/output/map.md",
+      "target": "input/map.md",
+      "sha256": "7dc76c6789f4a882bfb11e455111cbb636de51ee99bdc1558a9d78efa972b455",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-build",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-flow/output/flow.md",
+      "target": "input/flow.md",
+      "sha256": "e12a8055e974344e87727ec1b39741632039076e0d83aeae8d067746ab71ba3f",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-build",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-wire/output/screens.md",
+      "target": "input/screens.md",
+      "sha256": "b77fe87920267f33415261b55662440d3e6a1d56477c3ace894e73ff6846ace5",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-build",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-wire/app/index.html",
+      "target": "app/index.html",
+      "sha256": "294cef294532832e642f5d7372b954c367b4f2101bdab3933bb1a42a53c54dc9",
+      "sourceStillMatches": true
+    },
+    {
+      "stage": "chain-build",
+      "source": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-wire/app/style.css",
+      "target": "app/style.css",
+      "sha256": "d036fc6a8eb7e110e78ca65f03bb924fde3968ef5b8f20360a26e4a6435e91ce",
+      "sourceStillMatches": true
+    }
+  ],
+  "htmlAndScriptByteIdentical": true,
+  "browserCombinations": [
+    {
+      "id": "chain-wire-1280",
+      "width": 1280,
+      "height": 900,
+      "padding": "16px",
+      "stateObservations": 9,
+      "keyboardControls": 14,
+      "capturePaths": 4
+    },
+    {
+      "id": "chain-wire-320",
+      "width": 320,
+      "height": 700,
+      "padding": "12px",
+      "stateObservations": 9,
+      "keyboardControls": 14,
+      "capturePaths": 4
+    },
+    {
+      "id": "chain-build-1280",
+      "width": 1280,
+      "height": 900,
+      "padding": "24px",
+      "stateObservations": 9,
+      "keyboardControls": 14,
+      "capturePaths": 4
+    },
+    {
+      "id": "chain-build-320",
+      "width": 320,
+      "height": 700,
+      "padding": "16px",
+      "stateObservations": 9,
+      "keyboardControls": 14,
+      "capturePaths": 4
+    }
+  ],
+  "stateObservations": 36,
+  "sourceLinkLimit": "The evaluator inspected the external destination; no internal source-section transition was claimed."
+}

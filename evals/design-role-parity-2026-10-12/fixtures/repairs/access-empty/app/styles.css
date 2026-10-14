@@ -1,0 +1,10 @@
+:root { color-scheme:light; font:16px/1.5 system-ui,sans-serif; color:#24211c; background:#f8f7f4; }
+* { box-sizing:border-box; }
+main { width:min(100% - 32px,720px); margin:24px auto; }
+label { display:block; font-weight:600; }
+button,input { font:inherit; padding:8px 12px; border:1px solid #6c6860; border-radius:8px; color:inherit; background:white; }
+input { width:100%; }
+button { margin-block:8px; }
+section { padding:16px; margin-block:16px; border:1px solid #6c6860; }
+:focus-visible { outline:3px solid #1745ad; outline-offset:3px; }
+[hidden] { display:none !important; }

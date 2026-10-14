@@ -1,0 +1,25 @@
+{
+  "role": "interface-review",
+  "id": "interface-review-no-change",
+  "kind": "preservation",
+  "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-no-change",
+  "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-no-change/TASK.md",
+  "required_input_capabilities": [
+    "filesystem_read",
+    "git"
+  ],
+  "timeout_seconds": 240,
+  "setup": {
+    "command": [
+      "python3",
+      "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+      "--case",
+      "interface-review-no-change",
+      "--destination",
+      "{workspace}"
+    ],
+    "cwd": "{repo_root}"
+  },
+  "start": null,
+  "evaluator_criteria_id": "interface-review-no-change"
+}

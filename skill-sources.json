@@ -12,6 +12,21 @@
       "ref": "main",
       "license": "MIT"
     },
+    "jakubkrehel-skills": {
+      "repository": "https://github.com/jakubkrehel/skills",
+      "ref": "main",
+      "license": "MIT"
+    },
+    "microsoft-playwright-cli": {
+      "repository": "https://github.com/microsoft/playwright-cli",
+      "ref": "main",
+      "license": "Apache-2.0"
+    },
+    "pbakaus-impeccable": {
+      "repository": "https://github.com/pbakaus/impeccable",
+      "ref": "main",
+      "license": "Apache-2.0"
+    },
     "gstack": {
       "repository": "https://github.com/garrytan/gstack",
       "ref": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
@@ -34,7 +49,7 @@
           "path": "skills/engineering/ask-matt",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
           "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:7aa057ba9d7febdcd394a9d1172cade032536a8f58731e1a2051db3d51f7cf31",
+          "localDigest": "sha256:45ab0e667eee9c2bf4162acbe69a971d59b4f4ea12d88c2a56e9ba3ef39a0ff0",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -43,6 +58,33 @@
               ],
               "decision": "keep-local",
               "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits. The experimental upstream-sync route was removed pending user validation and promotion approval."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Clarify the existing prototype route: keeping the original resolves the decision without an implementation change. Keep unpromoted design skills outside this router.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Route the nine user-approved design roles after promotion, preserve explicit interface-review invocation, and keep browser observations and engineering review verdicts separate.",
+              "report": "evals/design-promotion-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Add the eight user-approved design roles and their stage handoffs, preserving explicit component-workbench invocation and existing engineering flows.",
+              "report": "evals/design-final-promotion-2026-10-14/REPORT.md"
             },
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -286,14 +328,14 @@
     {
       "id": "prototype",
       "path": "skills/engineering/prototype",
-      "kind": "forked",
+      "kind": "adapted",
       "origins": [
         {
           "source": "mattpocock-skills",
           "path": "skills/engineering/prototype",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
           "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:63e8f2fb183a7e141c971966edb2d6bc2547df84f19d70d0ebbbe91d769e1ddf",
+          "localDigest": "sha256:4b084a38039f9391a95a4f23d4869879e84a7879a2047747bc7ba6202793ac9e",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -302,6 +344,34 @@
               ],
               "decision": "keep-local",
               "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Use playwright-cli for browser operations at the user's request; retain both prototype branches and their existing invocation behavior.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md",
+                "UI.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Use an explicit comparison question and existing UI baseline; treat keeping the original as a valid decision, separate from acceptance of the comparison mechanism.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
             }
           ]
         }
@@ -1019,6 +1089,686 @@
         }
       ],
       "influences": []
+    },
+    {
+      "id": "better-accessibility",
+      "path": "skills/design/better-accessibility",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-accessibility",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:7983b8c35ad2db97d10035cb12f7828d259aebefb637e43d541b130e7904eec8",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "forms.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Exercise focus continuity beyond reachability and repeated activation during asynchronous submissions. Preserve task impact, recovery and evidence limits after observed omissions in paired retests.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "focus-and-keyboard.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Distinguish native Tab entry from assigned focus and require the claimed viewport/state keyboard matrix after the article field trial exposed incomplete coverage. Preserve the imported role and criteria.",
+              "report": "evals/design-field-trial-2026-10-14/QA-REPAIR.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-colors",
+      "path": "skills/design/better-colors",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-colors",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for text, control and meaningful graphic contrast roles, including components already carrying another accessibility finding, after repeated non-text contrast omissions. Preserve owning accessibility thresholds.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-interface",
+      "path": "skills/design/better-interface",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:bcd19793555c1f7ac8c1c053850deaa64e40e691efcd59d34a1c1bbdb9892b58",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "review-format.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for applicable domain rules and reconcile supported findings; finish independent checks on a shared component before merging root causes. Repair observed lower-severity and non-text contrast omissions.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make unnamed change-review routing terminal before file inspection, distinguish user-only discovery filtering from absence, and pass the explicit user invocation with the resolved scope into the authorized six-domain review. Preserve source review rules and invocation metadata.",
+              "report": "evals/design-routing-repair-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-layout",
+      "path": "skills/design/better-layout",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-layout",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-typography",
+      "path": "skills/design/better-typography",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-typography",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-text.md",
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make the punctuation reference follow the product language policy, consistent with the entrypoint.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-ui",
+      "path": "skills/design/better-ui",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-ui",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:e7362449da19af531a06787d384d867fd6075e76b118313d1f613e0a9ca4c604",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Compare control and neighboring geometry when selection border thickness changes after an independent repeat found original reported a real 2px filter shift that Paul missed. Preserve intentional borders and exclude color-only or already reserved geometry. Re-evaluate the exposed and a new task plus composite dependencies.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-writing",
+      "path": "skills/design/better-writing",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-writing",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:df8ece59f9c820b3b0aaef08057b5403e6cfd915f185b233ba5551be88be50e1",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-copy.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "patterns.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Align action and progress templates with the already established natural target-language grammar.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Distinguish filtered empty results from absent or inaccessible content after data/permission changes. Independent replay found the Paul output offering filter-clear recovery after permanent deletion, while the original output suppressed that obsolete advice. Require replay of nearby search/filter recovery in the resulting state.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "break",
+      "path": "skills/design/break",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/break",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:c9115a2c56f03a0a2b88d56eab0ba5045fd29afff2bb4552ff3b21008a593e1a",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol. Permit one task-owned CLI session for the single visual pass; browser setup and debugging remain outside the budget.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Choose plausible upper-bound text before the single browser visit and combine it with the narrowest selected container. The previous output missed source-detected overflow because the stress data fitted; the repaired old and new fixtures expose actual overflow while the supported wrapping control stays clean. Preserve real imports, production CSS and one-pass observation. This is bounded task evidence, not universal superiority or promotion approval.",
+              "report": "evals/design-beta-hardening-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "build-design",
+      "path": "skills/design/build-design",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/build-design",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "agents/openai.yaml",
+                "browser-and-spec.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Condition Figma and visual comparison steps on the actual input; verify Markdown-only requirements against rendered values and states.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "explain-interface",
+      "path": "skills/design/explain-interface",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/explain-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "interface-review",
+      "path": "skills/design/interface-review",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/interface-review",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:cbed18f43c289d5aa56d21e6441cdc4c614c3ff281c7a76991e3f5610406284a",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Clarify the existing total-five consumer budget with an intermediate-stylesheet example after one of two Paul repetitions counted only rendered routes. Preserve the source scope bound and require separate repair evidence.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make unnamed change-review routing terminal before file inspection, distinguish user-only discovery filtering from absence, and pass the explicit user invocation with the resolved scope into the authorized six-domain review. Preserve source review rules and invocation metadata.",
+              "report": "evals/design-routing-repair-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "state-machine",
+      "path": "skills/design/state-machine",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/state-machine",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "variant",
+      "path": "skills/design/variant",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/variant",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Require native Tab and pointer access around fixed comparison/product controls in short viewports after independent 200-percent Chrome zoom replay found focused search hidden under the fixed selection bar in both original and Paul outputs. Preserve the one-axis role and source invocation policy.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "design-browser",
+      "path": "skills/design/design-browser",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "microsoft-playwright-cli",
+          "path": "README.md",
+          "revision": "b85c7a736bb473bf55b584e54a09ffa698d6d871",
+          "reason": "Documented CLI API and session lifecycle; independently authored design evidence procedure."
+        }
+      ]
+    },
+    {
+      "id": "information-architecture",
+      "path": "skills/design/information-architecture",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/shape.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Separate settled product context, real content and unresolved design decisions; independently authored destination and content-coverage procedure."
+        }
+      ]
+    },
+    {
+      "id": "user-flow",
+      "path": "skills/design/user-flow",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/shape.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Carry scoped tasks and material states forward from product decisions."
+        },
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/onboard.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Reach the task outcome with contextual guidance rather than a mandatory product tour."
+        },
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/harden.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Account for relevant failure, input and recovery conditions when specifying transitions."
+        }
+      ]
+    },
+    {
+      "id": "wireframe",
+      "path": "skills/design/wireframe",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/new-work.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Use inspectable HTML sketches for structural decisions inside an existing product context; independently authored screen/state handoff. No engine, concept-selection procedure or source text copied."
+        }
+      ]
     },
     {
       "id": "problem-discovery",

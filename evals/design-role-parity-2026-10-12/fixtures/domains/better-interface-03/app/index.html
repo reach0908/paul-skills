@@ -1,0 +1,24 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>Studio 초대 검토 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>Studio 초대 검토</h1>
+
+<section class="panel"><h2>초대 보내기</h2><form id="invite" novalidate>
+<label for="email">이메일</label><input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com" aria-describedby="hint error">
+<p id="hint">초대받을 멤버의 이메일을 입력해 주세요.</p><p id="error" class="error"></p><button id="send" class="primary">초대 보내기</button>
+</form><p id="status" class="status" role="status"></p></section>
+<section class="panel"><h2>초대 정책</h2><p>초대는 7일 뒤 만료돼요.</p><button id="details">초대 정책 자세히 보기</button></section>
+<dialog id="dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">초대 정책</h2><p>초대받은 멤버만 프로젝트에 접근할 수 있어요.</p><button id="close" autofocus>닫기</button></dialog>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+{
+  "role": "better-typography",
+  "repeat": 1,
+  "status": "bounded outcomes supported; repeat2 pending",
+  "review": "Both retain MEDIUM hierarchy and small-text-weight/line-height findings and LOW changing-number width finding; do not impose Latin line length or new fonts on Korean product.",
+  "implementation": "Both remove user-select:none and ellipsis, wrap the entire required URL and use1rem inputs. Final styles.css bytes identical. Actual worker browser evidence records selectable URL,320px reflow,16px inputs and32px root-text enlargement with preserved values/actions. Neither claims clipboard implementation or actual iOS testing.",
+  "preservation": "Both preserve justified14px professional density, existing system fallback and tabular numbers with actual mixed-script rendering observed.",
+  "scope": "Only permitted02/styles.css modified in both arms; all skill inputs unchanged.",
+  "evidence": [
+    "Both case output report.md, observations and execution records",
+    "Identical final CSS hash: cb729c17c738da10a29bbfcd536dbd5391588b002bb98bc53937d0acf26a7a31"
+  ],
+  "limits": [
+    "Actual iOS focus zoom not tested; default desktop Chrome narrow viewport distinguished.",
+    "Root did not repeat every worker typography action; assessed raw observations and identical implementation."
+  ]
+}

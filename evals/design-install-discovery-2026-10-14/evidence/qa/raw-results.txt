@@ -1,0 +1,1137 @@
+Command: playwright-cli -s=saved-materials-prestarted run-code --filename evidence/check-saved-materials.js
+Exit code: 1
+
+### Error
+Error: QA_ASSERTION_FAILURE
+{
+  "metadata": {
+    "url": "http://127.0.0.1:48827/",
+    "session": "saved-materials-prestarted",
+    "observedAt": "2026-10-14T00:33:49.820Z",
+    "requestedViewports": [
+      {
+        "width": 1440,
+        "height": 900
+      },
+      {
+        "width": 390,
+        "height": 900
+      },
+      {
+        "width": 320,
+        "height": 900
+      }
+    ],
+    "expectedMaterialCount": 3,
+    "maxTabPresses": 6,
+    "browserVersion": "152.0.7977.82",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/152.0.0.0 Safari/537.36"
+  },
+  "keyboardCases": [
+    {
+      "case": "keyboard-1440-one",
+      "requestedViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "targetId": "one",
+      "buttonName": "첫 기능 정하기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabCheck": "not applicable: first scoped material has no previous scoped material",
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "해결할 불편 하나에서 시작해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 1440,
+          "documentScrollWidth": 1440
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-1440-two",
+      "requestedViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "targetId": "two",
+      "buttonName": "변경 이력 남기기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Shift+Tab and Tab preserve the expected material order",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabFocus": {
+        "tag": "BUTTON",
+        "text": "첫 기능 정하기 열기",
+        "dataId": "one",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "restoredTargetFocus": {
+        "tag": "BUTTON",
+        "text": "변경 이력 남기기 열기",
+        "dataId": "two",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "다시 돌아갈 수 있도록 기록해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 1440,
+          "documentScrollWidth": 1440
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-1440-three",
+      "requestedViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "targetId": "three",
+      "buttonName": "완성한 화면 확인하기 열기",
+      "status": "fail",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 3,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 4,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 5,
+          "tag": "BODY",
+          "text": "<body>",
+          "dataId": null,
+          "tabIndex": -1,
+          "focusVisiblePseudo": false,
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(20, 43, 77)"
+        },
+        {
+          "step": 6,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3"
+      ],
+      "actualViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "error": "Target three was not reached within 6 real Tab presses"
+    },
+    {
+      "case": "keyboard-390-one",
+      "requestedViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "targetId": "one",
+      "buttonName": "첫 기능 정하기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabCheck": "not applicable: first scoped material has no previous scoped material",
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "해결할 불편 하나에서 시작해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 390,
+          "documentScrollWidth": 390
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-390-two",
+      "requestedViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "targetId": "two",
+      "buttonName": "변경 이력 남기기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Shift+Tab and Tab preserve the expected material order",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabFocus": {
+        "tag": "BUTTON",
+        "text": "첫 기능 정하기 열기",
+        "dataId": "one",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "restoredTargetFocus": {
+        "tag": "BUTTON",
+        "text": "변경 이력 남기기 열기",
+        "dataId": "two",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "다시 돌아갈 수 있도록 기록해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 390,
+          "documentScrollWidth": 390
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-390-three",
+      "requestedViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "targetId": "three",
+      "buttonName": "완성한 화면 확인하기 열기",
+      "status": "fail",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 3,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 4,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 5,
+          "tag": "BODY",
+          "text": "<body>",
+          "dataId": null,
+          "tabIndex": -1,
+          "focusVisiblePseudo": false,
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(20, 43, 77)"
+        },
+        {
+          "step": 6,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3"
+      ],
+      "actualViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "error": "Target three was not reached within 6 real Tab presses"
+    },
+    {
+      "case": "keyboard-320-one",
+      "requestedViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "targetId": "one",
+      "buttonName": "첫 기능 정하기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabCheck": "not applicable: first scoped material has no previous scoped material",
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "해결할 불편 하나에서 시작해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 370
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-320-two",
+      "requestedViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "targetId": "two",
+      "buttonName": "변경 이력 남기기 열기",
+      "status": "pass",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3",
+        "target is reachable with real Tab presses",
+        "target has a visible focus indicator",
+        "Shift+Tab and Tab preserve the expected material order",
+        "Enter opens the matching detail dialog",
+        "Enter closes the dialog and restores focus to its opener"
+      ],
+      "actualViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "shiftTabFocus": {
+        "tag": "BUTTON",
+        "text": "첫 기능 정하기 열기",
+        "dataId": "one",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "restoredTargetFocus": {
+        "tag": "BUTTON",
+        "text": "변경 이력 남기기 열기",
+        "dataId": "two",
+        "tabIndex": 0,
+        "focusVisiblePseudo": true,
+        "outlineStyle": "solid",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(21, 86, 160)"
+      },
+      "openState": {
+        "open": true,
+        "title": "자료 상세",
+        "detail": "다시 돌아갈 수 있도록 기록해요.",
+        "focus": {
+          "tag": "BUTTON",
+          "text": "닫기",
+          "dataId": null,
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        "layout": {
+          "documentClientWidth": 320,
+          "documentScrollWidth": 370
+        }
+      },
+      "closedState": {
+        "open": false,
+        "focus": {
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      }
+    },
+    {
+      "case": "keyboard-320-three",
+      "requestedViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "targetId": "three",
+      "buttonName": "완성한 화면 확인하기 열기",
+      "status": "fail",
+      "focusPath": [
+        {
+          "step": 1,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 2,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 3,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 4,
+          "tag": "BUTTON",
+          "text": "변경 이력 남기기 열기",
+          "dataId": "two",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        },
+        {
+          "step": 5,
+          "tag": "BODY",
+          "text": "<body>",
+          "dataId": null,
+          "tabIndex": -1,
+          "focusVisiblePseudo": false,
+          "outlineStyle": "none",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(20, 43, 77)"
+        },
+        {
+          "step": 6,
+          "tag": "BUTTON",
+          "text": "첫 기능 정하기 열기",
+          "dataId": "one",
+          "tabIndex": 0,
+          "focusVisiblePseudo": true,
+          "outlineStyle": "solid",
+          "outlineWidth": "3px",
+          "outlineColor": "rgb(21, 86, 160)"
+        }
+      ],
+      "assertions": [
+        "material count is exactly 3"
+      ],
+      "actualViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "initialFocus": {
+        "tag": "BODY",
+        "text": "<body>",
+        "dataId": null,
+        "tabIndex": -1,
+        "focusVisiblePseudo": false,
+        "outlineStyle": "none",
+        "outlineWidth": "3px",
+        "outlineColor": "rgb(20, 43, 77)"
+      },
+      "materialCount": 3,
+      "error": "Target three was not reached within 6 real Tab presses"
+    }
+  ],
+  "horizontalOverflowCases": [
+    {
+      "case": "horizontal-overflow-1440",
+      "requestedViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "status": "pass",
+      "assertions": [
+        "material count is exactly 3 before measurement",
+        "document, list, cards, and visible descendants fit viewport"
+      ],
+      "actualViewport": {
+        "width": 1440,
+        "height": 900
+      },
+      "materialCount": 3,
+      "measurements": {
+        "documentClientWidth": 1440,
+        "documentScrollWidth": 1440,
+        "bodyScrollWidth": 1440,
+        "cards": {
+          "left": 340,
+          "right": 1100,
+          "width": 760
+        },
+        "articles": [
+          {
+            "left": 340,
+            "right": 1100,
+            "width": 760
+          },
+          {
+            "left": 340,
+            "right": 1100,
+            "width": 760
+          },
+          {
+            "left": 340,
+            "right": 1100,
+            "width": 760
+          }
+        ],
+        "visibleOverflowingElements": []
+      }
+    },
+    {
+      "case": "horizontal-overflow-390",
+      "requestedViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "status": "pass",
+      "assertions": [
+        "material count is exactly 3 before measurement",
+        "document, list, cards, and visible descendants fit viewport"
+      ],
+      "actualViewport": {
+        "width": 390,
+        "height": 900
+      },
+      "materialCount": 3,
+      "measurements": {
+        "documentClientWidth": 390,
+        "documentScrollWidth": 390,
+        "bodyScrollWidth": 390,
+        "cards": {
+          "left": 20,
+          "right": 370,
+          "width": 350
+        },
+        "articles": [
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          },
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          },
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          }
+        ],
+        "visibleOverflowingElements": []
+      }
+    },
+    {
+      "case": "horizontal-overflow-320",
+      "requestedViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "status": "fail",
+      "assertions": [
+        "material count is exactly 3 before measurement"
+      ],
+      "actualViewport": {
+        "width": 320,
+        "height": 900
+      },
+      "materialCount": 3,
+      "measurements": {
+        "documentClientWidth": 320,
+        "documentScrollWidth": 370,
+        "bodyScrollWidth": 370,
+        "cards": {
+          "left": 20,
+          "right": 370,
+          "width": 350
+        },
+        "articles": [
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          },
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          },
+          {
+            "left": 20,
+            "right": 370,
+            "width": 350
+          }
+        ],
+        "visibleOverflowingElements": [
+          {
+            "tag": "SECTION",
+            "className": "cards",
+            "rect": {
+              "left": 20,
+              "right": 370,
+              "width": 350
+            }
+          },
+          {
+            "tag": "ARTICLE",
+            "className": null,
+            "rect": {
+              "left": 20,
+              "right": 370,
+              "width": 350
+            }
+          },
+          {
+            "tag": "H2",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          },
+          {
+            "tag": "P",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          },
+          {
+            "tag": "ARTICLE",
+            "className": null,
+            "rect": {
+              "left": 20,
+              "right": 370,
+              "width": 350
+            }
+          },
+          {
+            "tag": "H2",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          },
+          {
+            "tag": "P",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          },
+          {
+            "tag": "ARTICLE",
+            "className": null,
+            "rect": {
+              "left": 20,
+              "right": 370,
+              "width": 350
+            }
+          },
+          {
+            "tag": "H2",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          },
+          {
+            "tag": "P",
+            "className": null,
+            "rect": {
+              "left": 37,
+              "right": 353,
+              "width": 316
+            }
+          }
+        ]
+      },
+      "error": "Document scroll width 370px exceeds client width 320px"
+    }
+  ],
+  "summary": {
+    "expectedCaseCount": 12,
+    "completedCaseCount": 12,
+    "passed": 8,
+    "failed": 4,
+    "failedCases": [
+      {
+        "case": "keyboard-1440-three",
+        "error": "Target three was not reached within 6 real Tab presses"
+      },
+      {
+        "case": "keyboard-390-three",
+        "error": "Target three was not reached within 6 real Tab presses"
+      },
+      {
+        "case": "keyboard-320-three",
+        "error": "Target three was not reached within 6 real Tab presses"
+      },
+      {
+        "case": "horizontal-overflow-320",
+        "error": "Document scroll width 370px exceeds client width 320px"
+      }
+    ]
+  }
+}
+

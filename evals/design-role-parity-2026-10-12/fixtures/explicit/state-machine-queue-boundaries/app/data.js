@@ -1,0 +1,1 @@
+export const queueData={"enabled": true, "plan": "team", "used": 12, "limit": 20, "status": "ready", "files": [{"name": "인터뷰-서윤-20261012.wav", "status": "done"}, {"name": "매장 동선 최종 검토.pdf", "status": "pending"}, {"name": "브랜드 제안서 v8.key", "status": "failed"}]};

@@ -1,0 +1,2 @@
+# Review the loan catalogue organization
+Read the brief and current map. Staff say the present navigation works. Check whether the new condition-note content has a clear home, and document the smallest useful update in `design/ia.md`. Retain functioning routes, labels and object IDs. If you think a structural change is needed, explain the exact retrieval problem it fixes. Do not redesign the app or alter the supplied baseline.

@@ -1,0 +1,1 @@
+export const auditData={"role": "owner", "status": "ready", "refreshing": false, "items": [{"actor": "김서윤", "action": "성수 팝업 제안서 공유", "time": "2026.10.12 09:20"}, {"actor": "박준호", "action": "제품 사진 24개 업로드", "time": "2026.10.12 10:05"}, {"actor": "이하린", "action": "편집 권한 변경", "time": "2026.10.12 10:34"}]};

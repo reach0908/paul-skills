@@ -1,0 +1,44 @@
+--- before/better-interface/SKILL.md
++++ after/better-interface/SKILL.md
+@@ -1,6 +1,6 @@
+ ---
+ name: better-interface
+-description: Combines all of the `better-*` skills into a single review across accessibility, layout, writing, typography, color and UI polish.
++description: Reviews screens and flows across accessibility, layout, writing, typography, color and UI polish. Routes change-review requests to an explicit interface-review invocation; consolidates its authorized handoff.
+ metadata:
+   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
+ ---
+@@ -23,19 +23,26 @@
+ 
+ ## Core principles
+ 
+-### 1. Resolve the scope first
++### 1. Choose the review route before inspecting files
++
++For a request about what a branch, pull request, commit range, staged or uncommitted change introduced or worsened, first check the caller:
++
++- **The user explicitly invoked `interface-review`, which supplied its resolved scope and affected surfaces:** continue with that handoff. Keep its classification and report format. The cap and verdict cover `Introduced` and `Regression` findings only; pre-existing findings alone do not block the change.
++- **Otherwise:** finish with an instruction for the user to invoke `interface-review`. Use `$paul-skills:interface-review <target>` in Codex or `/paul-skills:interface-review <target>` in Claude Code. Preserve the requested target: `staged` for staged changes only, `working` for all uncommitted changes, `branch` for the current branch, `pr <number>` for a named pull request, or the exact ref/range they supplied. When no target is clear, omit it. This routing answer completes the task here: do not inspect the diff, run domain reviews or issue a review verdict.
++
++`interface-review` is user-invoked and may be hidden from the automatic skill list even when installed. Its absence there is not evidence of a missing installation and is not a fallback trigger. Do not search for, read or call it to bypass the user's invocation. A generic request to review changes does not authorize this handoff.
++
++A screen, flow, feature or repository audit proceeds below. A repository audit examines the current interface, not what a diff caused.
++
++### 2. Resolve the surface scope
+ 
+ Infer the screen, flow, feature or repository scope from the request and current workspace. State the resolved scope in the output.
++
++For an authorized `interface-review` handoff, use its resolved scope and affected surfaces unchanged instead of resolving a second target.
+ 
+ Cover all of it in every domain, including the empty, loading, error and narrow-width states where they exist.
+ 
+ When the scope is too large to inspect credibly, narrow it to one complete flow. Take the one the request centers on, or failing that the entry path every user must pass through. State the boundary and what it excluded. Never imply uninspected surfaces were reviewed.
+-
+-### 2. Send a change to `interface-review`
+-
+-A request naming a branch, pull request, commit range or uncommitted changes is a change review. Say so and ask the user to run `interface-review`, which is user-invoked and cannot be started from here. Never resolve a change scope yourself, because a guessed diff gives the report a scope nobody can check.
+-
+-When `interface-review` hands a review back, apply everything below to it. The cap and the verdict cover `Introduced` and `Regression` findings only, so a change whose only findings are `Pre-existing` is an `Approve`.
+ 
+ ### 3. Recon before judgment
+ 

@@ -1,0 +1,25 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>초대 요청 관리 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>초대 요청 관리</h1>
+
+<section class="panel"><h2>새 요청</h2><form id="invite" novalidate>
+<label for="email">이메일</label><input id="email" name="email" type="email" autocomplete="email" value="min@example.com" aria-describedby="error">
+<p id="error" class="error"></p><button id="send" class="primary">초대 보내기</button>
+</form><p id="status" class="status" role="status"></p><p>완료된 초대: <output id="count" class="metrics">0</output></p></section>
+<section class="panel"><h2>검토 대기</h2><ul class="list"><li id="request"><span>Mina의 Studio 요청</span><button id="remove">요청 보관</button></li><li><span>Jae의 Studio 요청</span><button id="next">다음 요청 검토</button></li></ul></section>
+<button id="details">초대 정책 보기</button>
+<div id="modal" class="overlay" role="dialog" aria-modal="true" aria-labelledby="modal-title" hidden><h2 id="modal-title">초대 정책</h2><p>초대는 7일 뒤 만료돼요.</p><button id="close">닫기</button></div>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

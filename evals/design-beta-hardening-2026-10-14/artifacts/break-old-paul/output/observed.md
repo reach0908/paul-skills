@@ -1,0 +1,226 @@
+- generic [active] [ref=e1] [box=0,0,1280,6784]:
+  - banner [ref=e2] [box=160,0,960,58]: 검토 대기 자료 스트레스 보고서
+  - main [ref=e3] [box=160,58,960,6727]:
+    - heading "renderQueueCard 시나리오" [level=1] [ref=e4] [box=176,90,928,38]
+    - paragraph [ref=e5] [box=176,144,928,26]: 제목 상한이 따로 없어 여러 문장은 약 90자, 끊기지 않는 문자열은 80자로 가정했습니다.
+    - generic [ref=e6] [box=176,190,928,6579]:
+      - generic [ref=e7] [box=176,190,928,214]:
+        - heading "제목 길이 · 빈 문자열" [level=2] [ref=e8] [box=176,190,928,38]
+        - region "검토 대기 자료" [ref=e10] [box=176,248,928,155]:
+          - heading "검토 대기 자료" [level=2] [ref=e11] [box=193,285,894,38]
+          - list [ref=e12] [box=193,343,894,27]:
+            - listitem [ref=e13] [box=217,343,870,27]:
+              - button [ref=e14] [cursor=pointer] [box=217,352,34,18]
+      - generic [ref=e15] [box=176,423,928,230]:
+        - heading "제목 길이 · 한 단어" [level=2] [ref=e16] [box=176,423,928,38]
+        - region "검토 대기 자료" [ref=e18] [box=176,481,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e19] [box=193,518,894,38]
+          - list [ref=e20] [box=193,577,894,44]:
+            - listitem [ref=e21] [box=217,577,870,44]:
+              - button "검토" [ref=e22] [cursor=pointer] [box=217,577,62,44]
+      - generic [ref=e23] [box=176,673,928,230]:
+        - heading "제목 길이 · 일반 제목" [level=2] [ref=e24] [box=176,673,928,38]
+        - region "검토 대기 자료" [ref=e26] [box=176,731,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e27] [box=193,768,894,38]
+          - list [ref=e28] [box=193,827,894,44]:
+            - listitem [ref=e29] [box=217,827,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e30] [cursor=pointer] [box=217,827,249,44]
+      - generic [ref=e31] [box=176,923,928,230]:
+        - heading "제목 길이 · 여러 문장(약 90자)" [level=2] [ref=e32] [box=176,923,928,38]
+        - region "검토 대기 자료" [ref=e34] [box=176,981,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e35] [box=193,1018,894,38]
+          - list [ref=e36] [box=193,1077,894,44]:
+            - listitem [ref=e37] [box=217,1077,870,44]:
+              - button "담당자가 고객 요청을 검토한 뒤 관련 부서와 확인하고, 필요한 보완 자료를 정리하여 다음 회의 전에 최종 의견을 남겨야 하는 운영 검토 자료입니다." [ref=e38] [cursor=pointer] [box=217,1077,947,44]
+      - generic [ref=e39] [box=176,1173,928,230]:
+        - heading "제목 길이 · 끊기지 않는 문자열(80자)" [level=2] [ref=e40] [box=176,1173,928,38]
+        - region "검토 대기 자료" [ref=e42] [box=176,1231,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e43] [box=193,1268,894,38]
+          - list [ref=e44] [box=193,1327,894,44]:
+            - listitem [ref=e45] [box=217,1327,870,44]:
+              - button "R-2026-10-14-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" [ref=e46] [cursor=pointer] [box=217,1327,878,44]
+      - generic [ref=e47] [box=176,1423,928,212]:
+        - heading "목록 수량 · 0개" [level=2] [ref=e48] [box=176,1423,928,38]
+        - region "검토 대기 자료" [ref=e50] [box=176,1481,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e51] [box=193,1518,894,38]
+          - paragraph [ref=e52] [box=193,1577,894,26]: 대기 중인 자료가 없습니다.
+      - generic [ref=e53] [box=176,1655,928,230]:
+        - heading "목록 수량 · 1개" [level=2] [ref=e54] [box=176,1655,928,38]
+        - region "검토 대기 자료" [ref=e56] [box=176,1713,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e57] [box=193,1750,894,38]
+          - list [ref=e58] [box=193,1809,894,44]:
+            - listitem [ref=e59] [box=217,1809,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e60] [cursor=pointer] [box=217,1809,249,44]
+      - generic [ref=e61] [box=176,1905,928,404]:
+        - heading "목록 수량 · 현실적 수량 5개" [level=2] [ref=e62] [box=176,1905,928,38]
+        - region "검토 대기 자료" [ref=e64] [box=176,1963,928,346]:
+          - heading "검토 대기 자료" [level=2] [ref=e65] [box=193,2000,894,38]
+          - list [ref=e66] [box=193,2059,894,218]:
+            - listitem [ref=e67] [box=217,2059,870,44]:
+              - button "1. 작은 팀에서 실패 후 다시 시도하기" [ref=e68] [cursor=pointer] [box=217,2059,264,44]
+            - listitem [ref=e69] [box=217,2102,870,44]:
+              - button "2. 작은 팀에서 실패 후 다시 시도하기" [ref=e70] [cursor=pointer] [box=217,2102,266,44]
+            - listitem [ref=e71] [box=217,2146,870,44]:
+              - button "3. 작은 팀에서 실패 후 다시 시도하기" [ref=e72] [cursor=pointer] [box=217,2146,267,44]
+            - listitem [ref=e73] [box=217,2189,870,44]:
+              - button "4. 작은 팀에서 실패 후 다시 시도하기" [ref=e74] [cursor=pointer] [box=217,2189,267,44]
+            - listitem [ref=e75] [box=217,2233,870,44]:
+              - button "5. 작은 팀에서 실패 후 다시 시도하기" [ref=e76] [cursor=pointer] [box=217,2233,266,44]
+      - generic [ref=e77] [box=176,2329,928,2366]:
+        - heading "목록 수량 · 현실적 수량의 10배 50개" [level=2] [ref=e78] [box=176,2329,928,38]
+        - region "검토 대기 자료" [ref=e80] [box=176,2388,928,2308]:
+          - heading "검토 대기 자료" [level=2] [ref=e81] [box=193,2425,894,38]
+          - list [ref=e82] [box=193,2483,894,2180]:
+            - listitem [ref=e83] [box=217,2483,870,44]:
+              - button "1. 작은 팀에서 실패 후 다시 시도하기" [ref=e84] [cursor=pointer] [box=217,2483,264,44]
+            - listitem [ref=e85] [box=217,2527,870,44]:
+              - button "2. 작은 팀에서 실패 후 다시 시도하기" [ref=e86] [cursor=pointer] [box=217,2527,266,44]
+            - listitem [ref=e87] [box=217,2570,870,44]:
+              - button "3. 작은 팀에서 실패 후 다시 시도하기" [ref=e88] [cursor=pointer] [box=217,2570,267,44]
+            - listitem [ref=e89] [box=217,2614,870,44]:
+              - button "4. 작은 팀에서 실패 후 다시 시도하기" [ref=e90] [cursor=pointer] [box=217,2614,267,44]
+            - listitem [ref=e91] [box=217,2657,870,44]:
+              - button "5. 작은 팀에서 실패 후 다시 시도하기" [ref=e92] [cursor=pointer] [box=217,2657,266,44]
+            - listitem [ref=e93] [box=217,2701,870,44]:
+              - button "6. 작은 팀에서 실패 후 다시 시도하기" [ref=e94] [cursor=pointer] [box=217,2701,267,44]
+            - listitem [ref=e95] [box=217,2744,870,44]:
+              - button "7. 작은 팀에서 실패 후 다시 시도하기" [ref=e96] [cursor=pointer] [box=217,2744,264,44]
+            - listitem [ref=e97] [box=217,2788,870,44]:
+              - button "8. 작은 팀에서 실패 후 다시 시도하기" [ref=e98] [cursor=pointer] [box=217,2788,267,44]
+            - listitem [ref=e99] [box=217,2832,870,44]:
+              - button "9. 작은 팀에서 실패 후 다시 시도하기" [ref=e100] [cursor=pointer] [box=217,2832,267,44]
+            - listitem [ref=e101] [box=217,2875,870,44]:
+              - button "10. 작은 팀에서 실패 후 다시 시도하기" [ref=e102] [cursor=pointer] [box=217,2875,274,44]
+            - listitem [ref=e103] [box=217,2919,870,44]:
+              - button "11. 작은 팀에서 실패 후 다시 시도하기" [ref=e104] [cursor=pointer] [box=217,2919,271,44]
+            - listitem [ref=e105] [box=217,2962,870,44]:
+              - button "12. 작은 팀에서 실패 후 다시 시도하기" [ref=e106] [cursor=pointer] [box=217,2962,274,44]
+            - listitem [ref=e107] [box=217,3006,870,44]:
+              - button "13. 작은 팀에서 실패 후 다시 시도하기" [ref=e108] [cursor=pointer] [box=217,3006,274,44]
+            - listitem [ref=e109] [box=217,3050,870,44]:
+              - button "14. 작은 팀에서 실패 후 다시 시도하기" [ref=e110] [cursor=pointer] [box=217,3050,274,44]
+            - listitem [ref=e111] [box=217,3093,870,44]:
+              - button "15. 작은 팀에서 실패 후 다시 시도하기" [ref=e112] [cursor=pointer] [box=217,3093,273,44]
+            - listitem [ref=e113] [box=217,3137,870,44]:
+              - button "16. 작은 팀에서 실패 후 다시 시도하기" [ref=e114] [cursor=pointer] [box=217,3137,274,44]
+            - listitem [ref=e115] [box=217,3180,870,44]:
+              - button "17. 작은 팀에서 실패 후 다시 시도하기" [ref=e116] [cursor=pointer] [box=217,3180,272,44]
+            - listitem [ref=e117] [box=217,3224,870,44]:
+              - button "18. 작은 팀에서 실패 후 다시 시도하기" [ref=e118] [cursor=pointer] [box=217,3224,274,44]
+            - listitem [ref=e119] [box=217,3268,870,44]:
+              - button "19. 작은 팀에서 실패 후 다시 시도하기" [ref=e120] [cursor=pointer] [box=217,3268,274,44]
+            - listitem [ref=e121] [box=217,3311,870,44]:
+              - button "20. 작은 팀에서 실패 후 다시 시도하기" [ref=e122] [cursor=pointer] [box=217,3311,276,44]
+            - listitem [ref=e123] [box=217,3355,870,44]:
+              - button "21. 작은 팀에서 실패 후 다시 시도하기" [ref=e124] [cursor=pointer] [box=217,3355,273,44]
+            - listitem [ref=e125] [box=217,3398,870,44]:
+              - button "22. 작은 팀에서 실패 후 다시 시도하기" [ref=e126] [cursor=pointer] [box=217,3398,276,44]
+            - listitem [ref=e127] [box=217,3442,870,44]:
+              - button "23. 작은 팀에서 실패 후 다시 시도하기" [ref=e128] [cursor=pointer] [box=217,3442,276,44]
+            - listitem [ref=e129] [box=217,3486,870,44]:
+              - button "24. 작은 팀에서 실패 후 다시 시도하기" [ref=e130] [cursor=pointer] [box=217,3486,276,44]
+            - listitem [ref=e131] [box=217,3529,870,44]:
+              - button "25. 작은 팀에서 실패 후 다시 시도하기" [ref=e132] [cursor=pointer] [box=217,3529,276,44]
+            - listitem [ref=e133] [box=217,3573,870,44]:
+              - button "26. 작은 팀에서 실패 후 다시 시도하기" [ref=e134] [cursor=pointer] [box=217,3573,276,44]
+            - listitem [ref=e135] [box=217,3616,870,44]:
+              - button "27. 작은 팀에서 실패 후 다시 시도하기" [ref=e136] [cursor=pointer] [box=217,3616,274,44]
+            - listitem [ref=e137] [box=217,3660,870,44]:
+              - button "28. 작은 팀에서 실패 후 다시 시도하기" [ref=e138] [cursor=pointer] [box=217,3660,276,44]
+            - listitem [ref=e139] [box=217,3704,870,44]:
+              - button "29. 작은 팀에서 실패 후 다시 시도하기" [ref=e140] [cursor=pointer] [box=217,3704,276,44]
+            - listitem [ref=e141] [box=217,3747,870,44]:
+              - button "30. 작은 팀에서 실패 후 다시 시도하기" [ref=e142] [cursor=pointer] [box=217,3747,276,44]
+            - listitem [ref=e143] [box=217,3791,870,44]:
+              - button "31. 작은 팀에서 실패 후 다시 시도하기" [ref=e144] [cursor=pointer] [box=217,3791,274,44]
+            - listitem [ref=e145] [box=217,3834,870,44]:
+              - button "32. 작은 팀에서 실패 후 다시 시도하기" [ref=e146] [cursor=pointer] [box=217,3834,276,44]
+            - listitem [ref=e147] [box=217,3878,870,44]:
+              - button "33. 작은 팀에서 실패 후 다시 시도하기" [ref=e148] [cursor=pointer] [box=217,3878,276,44]
+            - listitem [ref=e149] [box=217,3922,870,44]:
+              - button "34. 작은 팀에서 실패 후 다시 시도하기" [ref=e150] [cursor=pointer] [box=217,3922,276,44]
+            - listitem [ref=e151] [box=217,3965,870,44]:
+              - button "35. 작은 팀에서 실패 후 다시 시도하기" [ref=e152] [cursor=pointer] [box=217,3965,276,44]
+            - listitem [ref=e153] [box=217,4009,870,44]:
+              - button "36. 작은 팀에서 실패 후 다시 시도하기" [ref=e154] [cursor=pointer] [box=217,4009,276,44]
+            - listitem [ref=e155] [box=217,4052,870,44]:
+              - button "37. 작은 팀에서 실패 후 다시 시도하기" [ref=e156] [cursor=pointer] [box=217,4052,274,44]
+            - listitem [ref=e157] [box=217,4096,870,44]:
+              - button "38. 작은 팀에서 실패 후 다시 시도하기" [ref=e158] [cursor=pointer] [box=217,4096,276,44]
+            - listitem [ref=e159] [box=217,4139,870,44]:
+              - button "39. 작은 팀에서 실패 후 다시 시도하기" [ref=e160] [cursor=pointer] [box=217,4139,276,44]
+            - listitem [ref=e161] [box=217,4183,870,44]:
+              - button "40. 작은 팀에서 실패 후 다시 시도하기" [ref=e162] [cursor=pointer] [box=217,4183,276,44]
+            - listitem [ref=e163] [box=217,4227,870,44]:
+              - button "41. 작은 팀에서 실패 후 다시 시도하기" [ref=e164] [cursor=pointer] [box=217,4227,274,44]
+            - listitem [ref=e165] [box=217,4270,870,44]:
+              - button "42. 작은 팀에서 실패 후 다시 시도하기" [ref=e166] [cursor=pointer] [box=217,4270,276,44]
+            - listitem [ref=e167] [box=217,4314,870,44]:
+              - button "43. 작은 팀에서 실패 후 다시 시도하기" [ref=e168] [cursor=pointer] [box=217,4314,276,44]
+            - listitem [ref=e169] [box=217,4357,870,44]:
+              - button "44. 작은 팀에서 실패 후 다시 시도하기" [ref=e170] [cursor=pointer] [box=217,4357,277,44]
+            - listitem [ref=e171] [box=217,4401,870,44]:
+              - button "45. 작은 팀에서 실패 후 다시 시도하기" [ref=e172] [cursor=pointer] [box=217,4401,276,44]
+            - listitem [ref=e173] [box=217,4445,870,44]:
+              - button "46. 작은 팀에서 실패 후 다시 시도하기" [ref=e174] [cursor=pointer] [box=217,4445,277,44]
+            - listitem [ref=e175] [box=217,4488,870,44]:
+              - button "47. 작은 팀에서 실패 후 다시 시도하기" [ref=e176] [cursor=pointer] [box=217,4488,274,44]
+            - listitem [ref=e177] [box=217,4532,870,44]:
+              - button "48. 작은 팀에서 실패 후 다시 시도하기" [ref=e178] [cursor=pointer] [box=217,4532,277,44]
+            - listitem [ref=e179] [box=217,4575,870,44]:
+              - button "49. 작은 팀에서 실패 후 다시 시도하기" [ref=e180] [cursor=pointer] [box=217,4575,277,44]
+            - listitem [ref=e181] [box=217,4619,870,44]:
+              - button "50. 작은 팀에서 실패 후 다시 시도하기" [ref=e182] [cursor=pointer] [box=217,4619,276,44]
+      - generic [ref=e183] [box=176,4716,928,230]:
+        - heading "좁은 컨테이너 · 일반 제목 · 320px" [level=2] [ref=e184] [box=176,4716,928,38]
+        - region "검토 대기 자료" [ref=e186] [box=176,4774,320,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e187] [box=193,4811,286,38]
+          - list [ref=e188] [box=193,4869,286,44]:
+            - listitem [ref=e189] [box=217,4869,262,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e190] [cursor=pointer] [box=217,4869,249,44]
+      - generic [ref=e191] [box=176,4966,928,230]:
+        - heading "좁은 컨테이너 · 여러 문장 · 320px" [level=2] [ref=e192] [box=176,4966,928,38]
+        - region "검토 대기 자료" [ref=e194] [box=176,5024,320,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e195] [box=193,5061,286,38]
+          - list [ref=e196] [box=193,5119,286,44]:
+            - listitem [ref=e197] [box=217,5119,262,44]:
+              - button "담당자가 고객 요청을 검토한 뒤 관련 부서와 확인하고, 필요한 보완 자료를 정리하여 다음 회의 전에 최종 의견을 남겨야 하는 운영 검토 자료입니다." [ref=e198] [cursor=pointer] [box=217,5119,947,44]
+      - generic [ref=e199] [box=176,5216,928,230]:
+        - heading "좁은 컨테이너 · 끊기지 않는 문자열 · 320px" [level=2] [ref=e200] [box=176,5216,928,38]
+        - region "검토 대기 자료" [ref=e202] [box=176,5274,320,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e203] [box=193,5311,286,38]
+          - list [ref=e204] [box=193,5369,286,44]:
+            - listitem [ref=e205] [box=217,5369,262,44]:
+              - button "R-2026-10-14-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789" [ref=e206] [cursor=pointer] [box=217,5369,878,44]
+      - generic [ref=e207] [box=176,5466,928,212]:
+        - heading "상태 · 권한 없음" [level=2] [ref=e208] [box=176,5466,928,38]
+        - region "검토 대기 자료" [ref=e210] [box=176,5524,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e211] [box=193,5561,894,38]
+          - paragraph [ref=e212] [box=193,5619,894,26]: 이 자료를 검토할 권한이 없습니다.
+      - generic [ref=e213] [box=176,5698,928,212]:
+        - heading "상태 · 로딩" [level=2] [ref=e214] [box=176,5698,928,38]
+        - region "검토 대기 자료" [ref=e216] [box=176,5756,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e217] [box=193,5793,894,38]
+          - status [ref=e218] [box=193,5851,894,26]: 자료를 불러오는 중
+      - generic [ref=e219] [box=176,5930,928,256]:
+        - heading "상태 · 오류" [level=2] [ref=e220] [box=176,5930,928,38]
+        - region "검토 대기 자료" [ref=e222] [box=176,5988,928,197]:
+          - heading "검토 대기 자료" [level=2] [ref=e223] [box=193,6025,894,38]
+          - alert [ref=e224] [box=193,6083,894,26]: 자료를 불러오지 못했습니다.
+          - button "다시 시도" [ref=e225] [cursor=pointer] [box=193,6125,94,44]
+      - generic [ref=e226] [box=176,6205,928,272]:
+        - heading "상태 · 잠금" [level=2] [ref=e227] [box=176,6205,928,38]
+        - region "검토 대기 자료" [ref=e229] [box=176,6263,928,213]:
+          - heading "검토 대기 자료" [level=2] [ref=e230] [box=193,6300,894,38]
+          - list [ref=e231] [box=193,6359,894,44]:
+            - listitem [ref=e232] [box=217,6359,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [disabled] [ref=e233] [box=217,6359,249,44]
+          - paragraph [ref=e234] [box=193,6418,894,26]: 검토가 잠겨 있습니다.
+      - generic [ref=e235] [box=176,6497,928,272]:
+        - heading "상태 · 새로고침" [level=2] [ref=e236] [box=176,6497,928,38]
+        - region "검토 대기 자료" [ref=e238] [box=176,6555,928,213]:
+          - heading "검토 대기 자료" [level=2] [ref=e239] [box=193,6592,894,38]
+          - status [ref=e240] [box=193,6650,894,26]: 기존 자료를 보여주며 새로 확인하는 중
+          - list [ref=e241] [box=193,6692,894,44]:
+            - listitem [ref=e242] [box=217,6692,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e243] [cursor=pointer] [box=217,6692,249,44]

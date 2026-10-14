@@ -37,6 +37,8 @@ In both sub-shapes the floating bottom bar is identical.
 
 Default to **3 variants**. More than 5 stops being radically different and starts being noise, so cap there.
 
+State the unresolved design question and what the comparison should reveal. For an existing page, include its current version as the baseline within the variant count. A small perceived difference is not by itself a reason to expand the redesign.
+
 Write down the plan in one line, in the prototype's location or a top-of-file comment:
 
 > "Three variants of the settings page, switchable via `?variant=`, on the existing `/settings` route."
@@ -45,7 +47,7 @@ This works whether the user is here to push back or not.
 
 ### 2. Generate radically different variants
 
-Draft each variant. Hold each one to:
+Draft each alternative as a different answer to the stated question. Structural difference makes the tradeoff inspectable; it is not evidence that the alternative improves the product. Hold each one to:
 
 - The page's purpose and the data it has access to.
 - The project's component library / styling system (TailwindCSS, shadcn, MUI, plain CSS, whatever).
@@ -93,11 +95,13 @@ Put the switcher in a single shared component so both sub-shapes can reuse it. L
 
 ### 5. Hand it over
 
-Surface the URL (and the `?variant=` keys). The user will flip through whenever they get to it. The interesting feedback is usually **"I want the header from B with the sidebar from C"**, which is the actual design they want.
+Surface the URL (and the `?variant=` keys), the question and the material tradeoff of each alternative. The user will flip through whenever they get to it. Keeping the original is a valid answer, separately from whether the comparison tool was useful. The interesting feedback is usually **"I want the header from B with the sidebar from C"**, which is the actual design they want.
 
 ### 6. Capture the answer and clean up
 
-Once a variant has won, capture the answer (which variant and why), then capture the prototype the way the [SKILL](SKILL.md) describes. Fold the winner into the real code and move the rest onto the throwaway branch, not into main:
+If the original wins, record that decision and retain the existing product. Capture the comparison as evidence without inventing an implementation change.
+
+Once an alternative has won, capture the answer (which variant and why), then capture the prototype the way the [SKILL](SKILL.md) describes. Fold the winner into the real code and move the rest onto the throwaway branch, not into main:
 
 - **Sub-shape A**: fold the winner into the existing page; drop the losing variants and the switcher from main.
 - **Sub-shape B**: promote the winning variant to a real route; drop the throwaway route and the switcher from main.

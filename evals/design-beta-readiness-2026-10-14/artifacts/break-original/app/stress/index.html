@@ -1,0 +1,145 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>검토 대기 자료 카드 스트레스 리포트</title>
+    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../stress.css">
+  </head>
+  <body>
+    <header>검토 대기 자료 카드 스트레스 리포트</header>
+    <main>
+      <p>실제 <code>renderQueueCard</code>를 제목 길이, 목록 수량, 좁은 컨테이너, 코드상 상태별로 렌더링합니다.</p>
+      <div id="scenarios"></div>
+    </main>
+
+    <script type="module">
+      import { renderQueueCard } from '../queue.js';
+
+      const item = (id, title) => ({ id, title });
+      const typicalItems = [
+        item('R-72', '작은 팀에서 실패 후 다시 시도하기'),
+        item('R-73', '신규 고객 피드백 정리'),
+        item('R-74', '분기별 운영 지표 검토'),
+        item('R-75', '다음 배포 일정 확인'),
+      ];
+      const manyItems = Array.from({ length: 40 }, (_, index) =>
+        item(`R-${100 + index}`, `검토 대기 자료 ${index + 1}`),
+      );
+
+      const scenarios = [
+        {
+          label: '제목 길이 · 빈 문자열',
+          finding: '관찰: 제목 없는 항목이 보이는 라벨 없이 매우 좁은 빈 버튼으로 축소됩니다. 담당: better-accessibility',
+          props: { items: [item('TITLE-EMPTY', '')] },
+        },
+        {
+          label: '제목 길이 · 한 단어',
+          props: { items: [item('TITLE-WORD', '재시도')] },
+        },
+        {
+          label: '제목 길이 · 일반적인 제목',
+          props: { items: [typicalItems[0]] },
+        },
+        {
+          label: '제목 길이 · 여러 문장',
+          props: {
+            items: [
+              item(
+                'TITLE-SENTENCES',
+                '고객이 제출한 자료를 먼저 검토합니다. 누락된 항목이 있으면 담당자에게 확인을 요청하고, 답변이 오면 다시 검토 대기열에 추가합니다.',
+              ),
+            ],
+          },
+        },
+        {
+          label: '제목 길이 · 공백 없는 긴 문자열',
+          finding: '관찰: 제목 버튼이 카드의 오른쪽 경계를 넘어 페이지 밖으로 이어집니다. 담당: better-typography',
+          props: {
+            items: [
+              item(
+                'TITLE-UNBREAKABLE',
+                'https://example.com/reviews/ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ',
+              ),
+            ],
+          },
+        },
+        {
+          label: '목록 수량 · 0개',
+          props: { items: [] },
+        },
+        {
+          label: '목록 수량 · 1개',
+          props: { items: [typicalItems[0]] },
+        },
+        {
+          label: '목록 수량 · 현실적인 4개',
+          props: { items: typicalItems },
+        },
+        {
+          label: '목록 수량 · 현실적인 수량의 10배인 40개',
+          props: { items: manyItems },
+        },
+        {
+          label: '좁은 컨테이너 · 320px',
+          finding: '관찰: 제목 버튼이 320px 카드의 오른쪽 경계 밖으로 빠져나갑니다. 담당: better-layout',
+          width: '320px',
+          props: {
+            items: [
+              item(
+                'CONTAINER-NARROW',
+                '좁은 공간에서 검토할 자료의 제목이 길어지는 경우 확인',
+              ),
+            ],
+          },
+        },
+        {
+          label: '상태 · 검토 권한 없음',
+          props: { canEdit: false, items: typicalItems },
+        },
+        {
+          label: '상태 · 로딩',
+          props: { status: 'loading', items: typicalItems },
+        },
+        {
+          label: '상태 · 오류',
+          props: { status: 'error', items: typicalItems },
+        },
+        {
+          label: '상태 · 기존 목록을 보여주며 새로고침 중',
+          props: { refreshing: true, items: typicalItems },
+        },
+        {
+          label: '상태 · 잠김',
+          props: { locked: true, items: typicalItems },
+        },
+      ];
+
+      const report = document.querySelector('#scenarios');
+      for (const scenario of scenarios) {
+        const scenarioSection = document.createElement('section');
+        const label = document.createElement('p');
+        const labelText = document.createElement('strong');
+        labelText.textContent = scenario.label;
+        label.append(labelText);
+        scenarioSection.append(label);
+        if (scenario.finding) {
+          const finding = document.createElement('p');
+          finding.textContent = scenario.finding;
+          scenarioSection.append(finding);
+        }
+
+        const container = document.createElement('div');
+        if (scenario.width) {
+          container.style.width = scenario.width;
+          container.style.maxWidth = '100%';
+        }
+        container.append(renderQueueCard(scenario.props));
+        scenarioSection.append(container);
+        report.append(scenarioSection, document.createElement('hr'));
+      }
+    </script>
+  </body>
+</html>

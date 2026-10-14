@@ -1,0 +1,21 @@
+- generic [ref=f24e1]:
+  - banner [ref=f24e2]: 팀 운영 자료
+  - main [ref=f24e3]:
+    - generic [ref=f24e4]:
+      - text: 업무 메모
+      - textbox "업무 메모" [ref=f24e5]
+    - region "검토 대기 자료" [ref=f24e33]:
+      - heading "검토 대기 자료" [level=2] [ref=f24e34]
+      - alert [ref=f24e35]: 자료를 불러오지 못했습니다.
+      - button "다시 시도" [ref=f24e36] [cursor=pointer]
+  - navigation "States" [ref=f24e22]:
+    - button "권한 없음" [ref=f24e23] [cursor=pointer]
+    - button "불러오는 중" [ref=f24e24] [cursor=pointer]
+    - button "오류" [active] [pressed] [ref=f24e25] [cursor=pointer]
+    - button "비어 있음" [ref=f24e26] [cursor=pointer]
+    - button "자료 1개" [ref=f24e27] [cursor=pointer]
+    - button "일반 목록" [ref=f24e28] [cursor=pointer]
+    - button "긴 목록" [ref=f24e29] [cursor=pointer]
+    - button "새로 확인 중" [ref=f24e30] [cursor=pointer]
+    - button "잠김" [ref=f24e31] [cursor=pointer]
+    - button "확인 중·잠김" [ref=f24e32] [cursor=pointer]

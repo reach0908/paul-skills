@@ -1,0 +1,3 @@
+# Audit the existing evidence without a browser
+This is a source-only review. Do not start a server, launch a browser or repeat the previous run. Read `panel.html`, `previous-observations.json` and `tool-context.md`. Save `evidence/audit.md` with the supported claims, unsupported claims and the exact missing runtime observations for each unsupported claim. Preserve the existing files.
+Also give a short command-discovery plan for a later, separate Aside help-center reference lookup, using its installed help and browser guide if available. No account, tab or live lookup is needed now. Do not turn that future plan into observed results or change browser drivers.

@@ -2,6 +2,24 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.0
+
+### Minor Changes
+
+- [#14](https://github.com/reach0908/paul-skills/pull/14) [`471d9b2`](https://github.com/reach0908/paul-skills/commit/471d9b25c64b90a7b93f9012c40b51e075907202) Thanks [@reach0908](https://github.com/reach0908)! - Promote the eight user-approved design skills: information-architecture, user-flow, wireframe, build-design, state-machine, break, explain-interface and variant. Add their human docs and routing map while preserving four automatic and four explicit-only invocation policies.
+
+  The promoted break combines plausible long content with narrow containers. User-flow checks exit and return before starting and after completion, and keeps product flow planning separate from the explicit component workbench. Prior comparison and handoff evidence is recorded in `evals/design-beta-hardening-2026-10-14/REPORT.md`; promotion and installation evidence is in `evals/design-final-promotion-2026-10-14/REPORT.md`. Results are bounded to the tested local web and Codex paths, not universal source parity or Claude runtime certification.
+
+## 0.3.0
+
+### Minor Changes
+
+- [#11](https://github.com/reach0908/paul-skills/pull/11) [`c916158`](https://github.com/reach0908/paul-skills/commit/c916158b08e6354a800780d3c05a891ac3bfe48c) Thanks [@reach0908](https://github.com/reach0908)! - Promote nine user-approved design skills: better-interface, interface-review, better-accessibility, better-layout, better-writing, better-typography, better-colors, better-ui and design-browser. Ship them through the shared plugin with human docs and ask-matt routes while keeping the other eight design candidates in beta.
+  
+  The promoted bodies retain the evaluated files. Record original-source comparisons, product field checks, repaired invocation boundaries and fresh-session verification separately from installation and release status. These bounded checks do not establish universal source superiority or native-platform coverage.
+  
+  Keep IA, user-flow, wireframe, state-machine, break, explain-interface, variant and build-design as public beta source only. Preserve the original UI as a valid prototype comparison outcome and share the browser routing policy with prototype work. Include pinned provenance, Korean-language references, isolated trial fixtures and QA checks for counts, overflow, natural keyboard coverage and state continuity. Current trial preparers follow registered skill locations after promotion; historical execution identities remain frozen.
+
 ## 0.2.0
 
 ### Minor Changes

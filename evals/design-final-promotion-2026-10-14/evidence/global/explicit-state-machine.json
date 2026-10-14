@@ -1,0 +1,81 @@
+{
+  "case": "explicit-state-machine",
+  "target": "state-machine",
+  "threadId": "01a1390c-ef45-7ab3-99ea-9ac9628809f2",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0",
+  "checks": {
+    "publishedInputsMatch": true,
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true
+  },
+  "loadedSkills": [
+    "state-machine"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "state-machine",
+      "sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-state-machine",
+    "exitCode": 0,
+    "seconds": 20.65,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-release-20261014/explicit-state-machine",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-release-20261014/explicit-state-machine.final.md",
+      "-"
+    ],
+    "before": {},
+    "after": {},
+    "promptSha256": "16e8edcff13c6dd20ce4bed0888f5c5e82472973fd15dda7cd8394539ba784cc"
+  },
+  "prompt": "$paul-skills:state-machine\n설치된 이 스킬의 역할과 입력, 완료 조건, 이웃 역할과의 차이만 설명해줘. 이번에는 실제 구현, 조사, 브라우저 조작이나 파일 변경은 하지 마.",
+  "final": "### 역할\n\n하나의 실제 컴포넌트를 임시 페이지에 불러와, 코드에 이미 존재하는 모든 도달 가능한 상태를 모의 데이터로 전환해 보며 시각 작업을 할 수 있게 만드는 워크벤치입니다. 리뷰나 디자인 변경 자체가 목적은 아닙니다.\n\n### 입력\n\n- 대상 컴포넌트 하나\n- 프로덕션에서 렌더링되는 위치\n- 데이터가 들어오는 경로\n- 코드에 존재하는 상태 분기\n  - 예: `loading`, `empty`, `error`, `typical`, `member-no-access`\n- 필요하면 실제 제품 형태와 규모를 반영한 fixture 데이터\n\n페이지 전체처럼 여러 컴포넌트를 포함하는 범위는 바로 진행하지 않고, 먼저 하나를 선택해야 합니다.\n\n### 완료 조건\n\n- 실제 컴포넌트를 수정하거나 복제하지 않고 임시 route에서 렌더링\n- 코드로 도달 가능한 상태만 포함\n- `__state` 검색 파라미터 기반 switcher로 각 상태를 전환 가능\n- 모든 상태에서 mock 데이터가 실제로 표시되는지 확인\n- 사용자에게 다음을 전달하면 완료\n  - 임시 페이지 URL\n  - 상태 목록\n  - switcher 조작 키\n\n시각 수정과 임시 페이지 삭제는 완료 조건에 포함되지 않습니다. 삭제는 사용자가 요청한 뒤 별도로 수행합니다.\n\n### 이웃 역할과의 차이\n\n- `break`: 적대적·극단적 시나리오들을 한 화면에 쌓아 취약점을 확인합니다.\n- `variant`: 서로 다른 디자인 대안을 탐색하고 비교합니다.\n- `interface-review`: 완성된 인터페이스를 검토합니다.\n- `design-browser`: 브라우저 증거 수집과 렌더링·상호작용 확인을 지원합니다.\n- `state-machine`: 한 컴포넌트의 기존 상태들을 하나씩 전환하며 작업할 수 있는 임시 환경을 만듭니다. 평가나 대안 제작보다 “상태별 작업 공간 마련”에 초점이 있습니다.",
+  "commands": [],
+  "rawTraceSha256": "41b5f66b5b66e16eea8cfeb8d9fdf81a5317a4d22e0bf651d421beecc0540119"
+}

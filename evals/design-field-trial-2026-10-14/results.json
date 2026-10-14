@@ -1,0 +1,398 @@
+{
+  "audit_date": "2026-10-14",
+  "timezone": "Asia/Seoul",
+  "method": "offline re-derivation from preserved artifacts; no new browser run",
+  "integrity": {
+    "files": 465,
+    "mismatches": [],
+    "stable_during_copy": true
+  },
+  "labels": {
+    "before": {
+      "observations": 15,
+      "visible_name_matches": 0,
+      "new_tab_notices": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ]
+    },
+    "after": {
+      "observations": 15,
+      "visible_name_matches": 15,
+      "new_tab_notices": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ]
+    }
+  },
+  "initial_visual_pairs": [
+    {
+      "width": 1440,
+      "part": "full",
+      "size": [
+        1440,
+        6707
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "width": 1440,
+      "part": "card-",
+      "size": [
+        720,
+        514
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "width": 390,
+      "part": "full",
+      "size": [
+        390,
+        8820
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "width": 390,
+      "part": "card-",
+      "size": [
+        346,
+        737
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "width": 320,
+      "part": "full",
+      "size": [
+        320,
+        9141
+      ],
+      "changed_pixels": 0
+    },
+    {
+      "width": 320,
+      "part": "card-",
+      "size": [
+        284,
+        694
+      ],
+      "changed_pixels": 0
+    }
+  ],
+  "capture": {
+    "observations": 24,
+    "all_aligned_loaded_and_links_inside": true,
+    "no_overflow": true,
+    "before_desktop_offset_px": 38.953125,
+    "after_desktop_offset_px": 0,
+    "keyboard_viewport": 320,
+    "keyboard_initial_focus": "programmatic, followed by native Tab/Shift+Tab/Enter",
+    "original_harness_gap": "capture count and overflow are observations without explicit failure assertions; this audit asserts both"
+  },
+  "flows": [
+    {
+      "stage": "02-catalog-recovery",
+      "source": "evidence/flow-final.log",
+      "profiles": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "selection_and_reload": true,
+      "oauth_submitted": false,
+      "built_local_server": false
+    },
+    {
+      "stage": "02-catalog-recovery",
+      "source": "evidence/production-flow.log",
+      "profiles": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "selection_and_reload": true,
+      "oauth_submitted": false,
+      "built_local_server": true
+    },
+    {
+      "stage": "03-integration",
+      "source": "evidence/production-creator-onboarding.log",
+      "profiles": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "selection_and_reload": true,
+      "oauth_submitted": false,
+      "built_local_server": true
+    },
+    {
+      "stage": "04-reading",
+      "source": "creator-onboarding.log",
+      "profiles": 15,
+      "widths": [
+        1440,
+        390,
+        320
+      ],
+      "selection_and_reload": true,
+      "oauth_submitted": false,
+      "built_local_server": false
+    }
+  ],
+  "reading": [
+    {
+      "width": 1440,
+      "figures": 8,
+      "cards": 5,
+      "quotes": 5,
+      "unlinked_mentions": 0,
+      "structure": {
+        "subheadings": 5,
+        "lists": 5,
+        "takeaways": 6
+      },
+      "page_errors": 0
+    },
+    {
+      "width": 390,
+      "figures": 8,
+      "cards": 5,
+      "quotes": 5,
+      "unlinked_mentions": 0,
+      "structure": {
+        "subheadings": 5,
+        "lists": 5,
+        "takeaways": 6
+      },
+      "page_errors": 0
+    },
+    {
+      "width": 320,
+      "figures": 8,
+      "cards": 5,
+      "quotes": 5,
+      "unlinked_mentions": 0,
+      "structure": {
+        "subheadings": 5,
+        "lists": 5,
+        "takeaways": 6
+      },
+      "page_errors": 0
+    }
+  ],
+  "builds": [
+    {
+      "stage": "02-catalog-recovery",
+      "source": "evidence/build-final.log",
+      "static_pages": "521/521",
+      "build_completion_recorded": true
+    },
+    {
+      "stage": "03-integration",
+      "source": "evidence/build.log",
+      "static_pages": "521/521",
+      "build_completion_recorded": true
+    },
+    {
+      "stage": "04-reading",
+      "source": "build.log",
+      "static_pages": "521/521",
+      "build_completion_recorded": true
+    },
+    {
+      "stage": "05-capture-card",
+      "source": "build.log",
+      "static_pages": "521/521",
+      "build_completion_recorded": true
+    }
+  ],
+  "loaded_skill_files": [
+    {
+      "skill_relative_path": "design-browser/SKILL.md",
+      "sha256": "7156b10b8b9548e05cdd9df10a40c1aa711a70ce8a95c87703aba3ce5a2fa7d1",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-interface/SKILL.md",
+      "sha256": "a5228b2d838370228dea24b17593b629811ccdb398af7d2c495548db900a2aaf",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/SKILL.md",
+      "sha256": "18a457787a99b489d05320328a55ce8821dda126bff1b9658a4c2a4be428728a",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-layout/SKILL.md",
+      "sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-writing/SKILL.md",
+      "sha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-typography/SKILL.md",
+      "sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-colors/SKILL.md",
+      "sha256": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-ui/SKILL.md",
+      "sha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "interface-review/SKILL.md",
+      "sha256": "16de61136083b363817a35354fb8a3064e837b75b0226428f6b201fa82e587b4",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-interface/review-format.md",
+      "sha256": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "interface-review/scope-resolution.md",
+      "sha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "interface-review/removed-signals.md",
+      "sha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/focus-and-keyboard.md",
+      "sha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/semantics-and-aria.md",
+      "sha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/motion-and-zoom.md",
+      "sha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/hit-areas.md",
+      "sha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-accessibility/screen-readers.md",
+      "sha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-layout/spacing-and-adaptivity.md",
+      "sha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-layout/grouping-and-alignment.md",
+      "sha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-writing/korean-copy.md",
+      "sha256": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-typography/korean-text.md",
+      "sha256": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-colors/contrast.md",
+      "sha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "frozen_file_matches": true
+    },
+    {
+      "skill_relative_path": "better-ui/animations.md",
+      "sha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "frozen_file_matches": true
+    }
+  ],
+  "limits": {
+    "raw_model": null,
+    "tokens": null,
+    "cost": null,
+    "same_session_reuse": true,
+    "controlled_original_comparison": false,
+    "skill_promotion": false,
+    "runtime_rerun_this_audit": false
+  },
+  "thread_id": "01a10c76-c117-7112-a572-37b1668ad219",
+  "thread_title": "기획하기: 유입 콘텐츠와 SNS 홍보",
+  "phase_count": 5,
+  "decision": "bounded_local_field_success; no source-parity or promotion decision",
+  "independent_controlled_trials": 0,
+  "loaded_skills": 9,
+  "human_request": "commit, merge and deploy this article improvement",
+  "human_request_is_skill_promotion": false,
+  "release": {
+    "checked_at": "2026-10-14T01:33:53+09:00",
+    "pr": 271,
+    "state": "MERGED",
+    "head_sha": "5255d82fc989fa83bd0a673002f2a3cbff6a42f3",
+    "merge_sha": "d9e32693aedc3302686d52a2d983841d434e2784",
+    "ci_verify": "SUCCESS",
+    "deployment_ready_verified": false,
+    "live_behavior_verified": false,
+    "artifact_source_files_checked": 5,
+    "artifact_source_files_identical": 3,
+    "changed_files_are_harness_origin_allowlist_only": true,
+    "deployment_reported_by_target_thread": true,
+    "reported_deployed_sha_prefix": "d9e3269",
+    "latest_thread_snapshot_revision": 5,
+    "live_behavior_check_status_in_target_thread": "inProgress"
+  },
+  "report_validation": {
+    "repository_check": "PASS",
+    "repository_unittests": 36,
+    "selected_artifact_hashes": 8,
+    "broken_local_links": [],
+    "raw_snapshot_bytes": 126237068
+  },
+  "qa_repair": {
+    "report": "QA-REPAIR.md",
+    "runtime_rerun": true,
+    "layout_pass": 24,
+    "keyboard_pass": 24,
+    "negative_controls_rejected": 18,
+    "process_tests_pass": 3,
+    "product_pr": "https://github.com/reach0908/signal-feed/pull/272",
+    "source_parity_trials_added": 0,
+    "promotion": false,
+    "delivery": {
+      "state": "MERGED",
+      "pr": "https://github.com/reach0908/signal-feed/pull/272",
+      "tested_head": "36d3b420e8490692eed5c6c4154e8f8ec26d91be",
+      "merge_sha": "10128dcba86d6b38f54c3f1e40bab0aef4e824c0",
+      "merged_at": "2026-10-13T16:58:08Z",
+      "ci": "SUCCESS",
+      "main_synced": true,
+      "task_worktree_removed": true
+    }
+  }
+}

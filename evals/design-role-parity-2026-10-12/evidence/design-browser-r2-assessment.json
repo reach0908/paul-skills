@@ -1,0 +1,34 @@
+{
+  "role": "design-browser",
+  "repeat": 2,
+  "comparison": "Task contract and no-skill control; source parity not applicable",
+  "status": "useful bounded observations, with incomplete Paul controlled lazy-loading evidence; not an unqualified full-role pass",
+  "method": "Root read all6 reports, source-only claim tables, supplied task and raw control navigation/measurement code and JSON. Same source input hashes; no independent root runtime replay of the unchanged fixtures.",
+  "cases": [
+    {
+      "id": "design-browser-normal-whole-page-anchor",
+      "observations": "Both cover above/below anchor content, narrow layout, typed-name retention, first failed reservation then HG-12, contact hash with zero matching target and no source modification. Typed name is unconstrained, Jina and Mina are equivalent. Control follows task-owned servers; Paul uses supplied shared server and records URL.",
+      "coverageDifference": "Control fresh nonfragment navigation captures data-loaded false then true after scrolling, while Paul explicitly did not observe the unloaded state. Paul executes reservation on390 and static/full scrolling on1280; no desktop interaction replay or immediate pending capture is claimed.",
+      "decision": "Controlled lazy transition remains incomplete for Paul across both repeats. Full-page content observation is supported; do not infer missing transition coverage from screenshots."
+    },
+    {
+      "id": "design-browser-edge-keyboard-motion",
+      "observations": "Both actual Tab/Enter disclosure and refresh/cancel, running normal/reduce animation measurements,390px expanded documentwidth633 and retained previous status then completed Out for delivery. Paul reduce checks both widths; normal-mode mobile full repeat absent and disclosed. Control notes focus recovery concern without AT claim."
+    },
+    {
+      "id": "design-browser-reuse-preserve-source-only-audit",
+      "observations": "Both source-only no browser/server, label connection statically supported; keyboard,reduce,390 claims unobserved; production-save claim contradicted by local text-only handler. Installed Aside help/guide read and future plan separate from actual account/web activity."
+    }
+  ],
+  "evidence": [
+    "runs/design-browser-control-r2/cases/design-browser-normal-whole-page-anchor/evidence/observations.json",
+    "runs/design-browser-control-r2/cases/design-browser-normal-whole-page-anchor/evidence/observe.js",
+    "runs/design-browser-paul-r2/cases/design-browser-normal-whole-page-anchor/evidence/action-log.json",
+    "runs/design-browser-paul-r2/cases/design-browser-edge-keyboard-motion/evidence/measurements.json"
+  ],
+  "limits": [
+    "No real device, AT, operational save, continuous motion quality or cross-browser verification.",
+    "No causal or efficiency advantage over control; browser task instructions and elapsed time are not model-quality statistics.",
+    "Performance measurement supplement is a separate task."
+  ]
+}

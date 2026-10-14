@@ -1,0 +1,1 @@
+document.querySelector('#save').onclick=()=>document.querySelector('#status').textContent='검토를 저장했어요.';document.querySelector('#direction').onclick=()=>document.documentElement.dir=document.documentElement.dir==='rtl'?'ltr':'rtl';

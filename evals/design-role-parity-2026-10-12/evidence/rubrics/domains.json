@@ -1,0 +1,2908 @@
+{
+  "schema_version": 1,
+  "purpose": "Private evaluator rubric. Never copy into executor workspace or include in task prompts.",
+  "evaluation": {
+    "semantic_matching": "Judge meaning and evidence, not exact wording or finding count. Additional valid findings are allowed.",
+    "critical_miss": "A required HIGH whose root cause is absent, minimized or unsupported in the final report is a critical miss.",
+    "hallucination": "Penalize invented failure, invented runtime observation, fake numeric contrast or missing preservation context.",
+    "runtime": "Require observable evidence for visual/focus/state claims; source may support named platform risks if runtime is explicitly unverified.",
+    "coverage": "Three cases per role sample branches and do not prove full original-skill parity.",
+    "clean": "Preserve cases are not a predetermined all-pass oracle. Investigate newly supported findings.",
+    "scores": [
+      "required semantic recall",
+      "critical recall",
+      "supported precision",
+      "evidence accuracy",
+      "reference branch use",
+      "product intent preservation",
+      "completion and verification honesty"
+    ],
+    "mutation_contract": "Cases 01 and 03 plus every better-interface case are read-only. Case 02 for each of the six standalone domains authorizes app/index.html, app/styles.css and app/app.js changes. Compare immutable pre-run source with actual post-run output."
+  },
+  "role_branch_coverage": {
+    "better-accessibility": {
+      "covered": [
+        "accessible names",
+        "native versus custom keyboard activation",
+        "focus indicator",
+        "validation semantics",
+        "pending duplicate guard/name",
+        "focus after removal",
+        "custom and native dialog",
+        "reflow"
+      ],
+      "not_covered": [
+        "drag alternatives",
+        "roving tabs/combobox",
+        "SPA navigation focus",
+        "media captions",
+        "screen reader hardware matrix",
+        "sticky-focus obstruction",
+        "timed actionable toasts"
+      ]
+    },
+    "better-colors": {
+      "covered": [
+        "measured text and boundary contrast",
+        "alpha compositing",
+        "light/dark switch",
+        "semantic misuse",
+        "two-tier tokens",
+        "hex/tinted-neutral preservation",
+        "disabled exception",
+        "status versus action"
+      ],
+      "not_covered": [
+        "palette generation",
+        "OKLCH ramp spacing and hue",
+        "P3 gamut",
+        "image/gradient worst-region measurement",
+        "increased contrast",
+        "cross-culture financial colors",
+        "bulk conversion"
+      ]
+    },
+    "better-layout": {
+      "covered": [
+        "narrow-width clipping",
+        "scroll/disclosure cue",
+        "fixed dialog geometry",
+        "RTL physical positioning",
+        "local 2D table scroll exception",
+        "compact density",
+        "text growth"
+      ],
+      "not_covered": [
+        "hardware safe-area insets",
+        "mobile software keyboard",
+        "container shrink-to-fit collapse",
+        "multi-page hierarchy",
+        "visual/DOM reorder",
+        "true browser zoom at all widths"
+      ]
+    },
+    "better-typography": {
+      "covered": [
+        "heading hierarchy",
+        "small-text weight",
+        "unitless line-height",
+        "tabular counters",
+        "Korean mixed-script wrap",
+        "truncation full-value path",
+        "selection",
+        "mobile input size",
+        "intentional dense type"
+      ],
+      "not_covered": [
+        "downloaded font loading/synthesis",
+        "variable axes",
+        "fallback during network load",
+        "bidi rendering with Arabic/Hebrew",
+        "OpenType small caps",
+        "decorative text",
+        "real iOS focus zoom"
+      ]
+    },
+    "better-writing": {
+      "covered": [
+        "noun/action inventory",
+        "label-effect mismatch",
+        "recoverable error instructions",
+        "Korean natural grammar",
+        "destructive confirmation",
+        "filtered empty state",
+        "accurate undo",
+        "brand-voice preservation"
+      ],
+      "not_covered": [
+        "ICU multiple plural categories",
+        "CMS/server copy",
+        "locale date/list formatting",
+        "gender/device-specific copy",
+        "account typed-name confirmation",
+        "long multi-step onboarding"
+      ]
+    },
+    "better-ui": {
+      "covered": [
+        "concentric/asymmetric radii",
+        "press exact value",
+        "currentColor state",
+        "hover/high-frequency transition",
+        "reduced motion",
+        "keyframe reversal",
+        "theme suppression",
+        "scroll containment",
+        "static completion cue"
+      ],
+      "not_covered": [
+        "Motion library spring/bounce",
+        "icon crossfade exact spring",
+        "stagger enter/exit",
+        "content photo outlines",
+        "forced-colors shadow fallback",
+        "optical glyph adjustment",
+        "directional composite icon RTL",
+        "performance stutter evidence"
+      ]
+    },
+    "better-interface": {
+      "covered": [
+        "six-owner review",
+        "independent same-element causes",
+        "shared-root consolidation",
+        "HIGH triggers",
+        "lower-severity retention",
+        "read-only review",
+        "source/runtime distinction",
+        "scoped clear verdict"
+      ],
+      "not_covered": [
+        "change-scope routing",
+        "missing owner skill",
+        "more than 15 simultaneous findings",
+        "large-scope narrowing",
+        "human release authorization",
+        "all branches of the six owner references"
+      ]
+    }
+  },
+  "cases": [
+    {
+      "role": "better-accessibility",
+      "id": "better-accessibility-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "unnamed",
+          "semantic_expectation": "The icon-only help button has no accessible name. The email field has only a placeholder fallback and no visible bound label; distinguish these rather than falsely claiming the browser computes no email name.",
+          "criticality": "HIGH",
+          "source_anchor": "index.html:#help,#email",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "keyboard",
+          "semantic_expectation": "The div action is absent from Tab order and has no keyboard activation. The form blocks native submit.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:#send;styles.css:.pseudo",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "focus",
+          "semantic_expectation": "Keyboard focus on the native help button and email has no visible indicator.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:button:focus,input:focus",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "field-error",
+          "semantic_expectation": "Invalid email message is not associated with email and invalid state/focus are not set.",
+          "criticality": "MEDIUM",
+          "source_anchor": "app.js:email validation",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "visible-label",
+          "semantic_expectation": "Email uses placeholder alone instead of a visible bound label. The browser may expose the placeholder as name fallback, which does not repair the disappearing label.",
+          "criticality": "MEDIUM",
+          "source_anchor": "index.html:#email",
+          "measurement": "email.labels.length === 0",
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not require 44px targets as AA when actual 24px AA requirements are met.",
+        "Korean object-first action labels are valid."
+      ],
+      "reference_branches": [
+        "semantics-and-aria.md#accessible-names",
+        "focus-and-keyboard.md#focus-rings",
+        "forms.md#error-messaging"
+      ],
+      "runtime_measurement": "() => ({helpName:document.querySelector('#help').getAttribute('aria-label'),emailLabels:document.querySelector('#email').labels.length,sendTabIndex:document.querySelector('#send').tabIndex,focusOutline:getComputedStyle(document.querySelector('#email')).outlineStyle})",
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-accessibility-01"
+    },
+    {
+      "role": "better-accessibility",
+      "id": "better-accessibility-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "repeat-submit",
+          "semantic_expectation": "aria-disabled does not guard repeated form submission: two quick activations produce two completed invites.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:invite.onsubmit",
+          "measurement": "completed invite count after two activations > 1",
+          "required": true
+        },
+        {
+          "id": "pending-name",
+          "semantic_expectation": "Pending submit replaces its accessible name with an aria-hidden spinner.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:send.innerHTML",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "dialog",
+          "semantic_expectation": "Custom modal neither moves/contains focus nor closes on Escape; background stays keyboard accessible.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:details/close;index.html:#modal",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "continuity",
+          "semantic_expectation": "Archiving removes focused control and drops activeElement to body; next intended review needs navigation. Distinguish cost from absolute keyboard blocker.",
+          "criticality": "MEDIUM",
+          "source_anchor": "app.js:remove.onclick",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not claim a real email was sent.",
+        "Do not claim browser accessibility tree proves screen-reader announcement delivery."
+      ],
+      "reference_branches": [
+        "forms.md#submit-behavior",
+        "focus-and-keyboard.md#focus-trapping-and-restoration",
+        "SKILL.md#trap-and-restore-focus"
+      ],
+      "runtime_measurement": "() => ({count:document.querySelector('#count').value,active:document.activeElement.id || document.activeElement.tagName,modalHidden:document.querySelector('#modal').hidden,sendName:document.querySelector('#send').textContent})",
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Two activations while pending complete only one effect.",
+        "Submit retains accessible name and keyboard focus while pending.",
+        "Invalid email is named/described and input correction succeeds.",
+        "Modal opens with focus inside, background unavailable, Escape closes and focus returns.",
+        "Removing first request leaves focus at a useful related control and next review action works."
+      ],
+      "baseline_observation_id": "better-accessibility-02"
+    },
+    {
+      "role": "better-accessibility",
+      "id": "better-accessibility-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "Native dialog showModal supplies modal containment and Escape. Do not add a custom trap without evidence.",
+        "No animated transform exists, so do not demand a reduced-motion media query merely for its absence.",
+        "No navigation precedes main, so do not require a skip link solely by convention.",
+        "Pending guard preserves the visible button name and focus."
+      ],
+      "reference_branches": [
+        "forms.md#submit-behavior",
+        "focus-and-keyboard.md#focus-trapping-and-restoration",
+        "motion-and-zoom.md#zoom-and-reflow"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-accessibility-03"
+    },
+    {
+      "role": "better-colors",
+      "id": "better-colors-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "caption-contrast",
+          "semantic_expectation": "Caption uses separator token #cbd5e1 on white and fails required 4.5:1 for 16px text.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:.caption",
+          "measurement": "contrast(#cbd5e1,#ffffff) < 4.5",
+          "required": true
+        },
+        {
+          "id": "semantic-danger",
+          "semantic_expectation": "A safe save-draft action uses the danger semantic fill, misleading its meaning.",
+          "criticality": "HIGH",
+          "source_anchor": "index.html:#save;app.js:save.onclick",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "role-token",
+          "semantic_expectation": "Separator token is used as text; this remains a role mapping issue independently of the contrast measurement.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.caption",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not flag the labeled success status as color-only.",
+        "Do not migrate established hex notation to OKLCH."
+      ],
+      "reference_branches": [
+        "contrast.md#what-to-check",
+        "color-usage.md#one-color-one-meaning",
+        "token-naming.md#two-tiers"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-colors-01"
+    },
+    {
+      "role": "better-colors",
+      "id": "better-colors-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "alpha-contrast",
+          "semantic_expectation": "White text at alpha .45 over #334155 composites to a low-contrast pair below 4.5:1; measuring opaque white is wrong.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#overlay-copy",
+          "measurement": "contrast(composite([255,255,255],.45,[51,65,85]),[51,65,85]) < 4.5",
+          "required": true
+        },
+        {
+          "id": "dark-control-contrast",
+          "semantic_expectation": "Dark-mode white label on #94a3b8 control fails 4.5:1.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:html[data-theme=dark]",
+          "measurement": "contrast(#ffffff,#94a3b8) < 4.5",
+          "required": true
+        },
+        {
+          "id": "input-boundary",
+          "semantic_expectation": "Light-mode #cbd5e1 input border against white is below 3:1 and is its only boundary cue.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:input",
+          "measurement": "contrast(#cbd5e1,#ffffff) < 3",
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not compare preview text to the page surface.",
+        "Inactive controls, logos and decorative panel separators have different requirements."
+      ],
+      "reference_branches": [
+        "contrast.md#what-to-check",
+        "color-usage.md#light-dark-and-increased-contrast"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Alpha-composited preview text reaches 4.5:1 measured against #334155 or chosen actual background.",
+        "Dark primary control text reaches 4.5:1.",
+        "Light input required boundary reaches 3:1 against its adjacent surface.",
+        "Existing semantic token tier and hex notation remain; light and dark colors are remeasured."
+      ],
+      "baseline_observation_id": "better-colors-02"
+    },
+    {
+      "role": "better-colors",
+      "id": "better-colors-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "Multiple filled status categories are not competing primary actions.",
+        "Disabled control contrast is exempt from active-control requirements.",
+        "Tinted neutrals, hex notation and no gradients are legitimate choices."
+      ],
+      "reference_branches": [
+        "color-formats.md#choosing-a-notation",
+        "color-usage.md#one-colored-action-per-view",
+        "contrast.md#wcag-2-thresholds",
+        "token-naming.md#two-tiers"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-colors-03"
+    },
+    {
+      "role": "better-layout",
+      "id": "better-layout-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "narrow-action",
+          "semantic_expectation": "Minimum 760px grid plus nowrap project row clips content and project action outside the 320px page viewport.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:.workspace,.project-row,body",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "rail-cue",
+          "semantic_expectation": "Recommended document rail hides the next complete-width item and scrollbars without a visible cue.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:.rail;index.html:rail",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not demand container queries solely because a page-level breakpoint is used."
+      ],
+      "reference_branches": [
+        "spacing-and-adaptivity.md#hint-at-hidden-content",
+        "spacing-and-adaptivity.md#plan-for-growth-and-clipping",
+        "grouping-and-alignment.md#order-by-importance"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-layout-01"
+    },
+    {
+      "role": "better-layout",
+      "id": "better-layout-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "dialog-clips",
+          "semantic_expectation": "Fixed 580×640 dialog disables max constraints and scrolling, clipping body or confirm action at 320×568.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#dialog,.details",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "rtl-physical",
+          "semantic_expectation": "Event tag remains physically right in RTL instead of trailing left; text alignment/padding leaves wrong progression. Require observed geometry.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.event,.tag",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Native dialog focus semantics are not a layout failure.",
+        "Physical safe-area variables can be legitimate; this fixture has no safe-area positioning defect."
+      ],
+      "reference_branches": [
+        "spacing-and-adaptivity.md#plan-for-growth-and-clipping",
+        "grouping-and-alignment.md#logical-properties-for-anything-that-mirrors"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Dialog content and confirmation remain reachable at 320×568 with no page-level horizontal loss.",
+        "Dialog uses bounded responsive geometry and reachable scrolling for tall content.",
+        "Event trailing tag mirrors under RTL without overlap."
+      ],
+      "baseline_observation_id": "better-layout-02"
+    },
+    {
+      "role": "better-layout",
+      "id": "better-layout-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "A genuinely two-dimensional table with a visible scroll cue may scroll locally. Do not equate its width with page reflow failure.",
+        "Compact 8px table cells and separators are established density, not automatic spacing failures.",
+        "Visible native summary is a disclosure cue."
+      ],
+      "reference_branches": [
+        "grouping-and-alignment.md#logical-properties-for-anything-that-mirrors",
+        "spacing-and-adaptivity.md#hint-at-hidden-content",
+        "spacing-and-adaptivity.md#hold-structure-until-it-breaks"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-layout-03"
+    },
+    {
+      "role": "better-typography",
+      "id": "better-typography-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "role-size",
+          "semantic_expectation": "h2 is larger than its parent h1 without an overline convention.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:h1,h2",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "body-style",
+          "semantic_expectation": "14px weight 300 summary violates the small-text weight floor; fixed 16px line-height is tight for the wrapping note and does not scale with text.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.summary",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "counter",
+          "semantic_expectation": "Changing numeric output lacks tabular-nums.",
+          "criticality": "LOW",
+          "source_anchor": "styles.css:#counter",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not impose a Latin 65ch line length on Korean solely by character count.",
+        "Do not propose installing a different font."
+      ],
+      "reference_branches": [
+        "spacing-and-sizing.md#heading-hierarchy",
+        "spacing-and-sizing.md#line-height-for-wrapping-text",
+        "korean-text.md",
+        "variable-fonts-and-opentype.md#opentype-features"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-typography-01"
+    },
+    {
+      "role": "better-typography",
+      "id": "better-typography-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "hidden-value",
+          "semantic_expectation": "Required URL is ellipsized without a UI path to read its full value. Copy handler only sets a message.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#share-url;app.js:copy.onclick",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "selection",
+          "semantic_expectation": "Root user-select:none blocks selection of useful URL and prose.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:main",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "mobile-input",
+          "semantic_expectation": "14px input has no mobile override. Report iOS zoom as platform rule/source risk, not observed desktop Safari behavior.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:input",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not claim actual iOS zoom was observed in desktop Chromium.",
+        "Do not treat lang=ko with an English identifier as a missing global language."
+      ],
+      "reference_branches": [
+        "korean-text.md",
+        "details-and-accessibility.md#selection",
+        "details-and-accessibility.md#ios-input-zoom",
+        "wrapping-and-punctuation.md#measure-line-length"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Long mixed-script URL is selectable and fully readable at 320px through wrapping or explicit accessible expansion.",
+        "Mobile input computed font size is at least16px, with product-compatible choice or stated choice limitation.",
+        "Useful prose remains selectable and mixed Korean/English text is not aggressively globally broken."
+      ],
+      "baseline_observation_id": "better-typography-02"
+    },
+    {
+      "role": "better-typography",
+      "id": "better-typography-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "The documented 14px professional-tool body scale is a justified density choice.",
+        "Different script passages do not require a font migration or Latin tracking.",
+        "System fallback stack is deliberate; no downloadable font or synthesis issue is established.",
+        "Tabular numbers are already present on changing values."
+      ],
+      "reference_branches": [
+        "korean-text.md",
+        "spacing-and-sizing.md#units",
+        "details-and-accessibility.md#forms-and-editable-text",
+        "wrapping-and-punctuation.md#internationalization"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-typography-03"
+    },
+    {
+      "role": "better-writing",
+      "id": "better-writing-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "save-publish",
+          "semantic_expectation": "Save draft actually publishes the local project to everyone. Label and stated private context mislead the user about consequence.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:save.onclick;index.html:#save",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "generic-error",
+          "semantic_expectation": "Sync failure only says Oops/Something went wrong with no recovery instruction.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:sync.onclick",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "terms",
+          "semantic_expectation": "One object is called project, workspace and board across a single flow without a documented distinction.",
+          "criticality": "MEDIUM",
+          "source_anchor": "index.html:heading,#sync;app.js:save.onclick",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Korean noun-first action labels are natural, not a verb-order defect.",
+        "Do not infer live publication beyond local simulation."
+      ],
+      "reference_branches": [
+        "korean-copy.md",
+        "patterns.md#status-copy"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-writing-01"
+    },
+    {
+      "role": "better-writing",
+      "id": "better-writing-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "destructive-copy",
+          "semantic_expectation": "Irreversible shared-document deletion confirmation names neither document/consequence nor lost member access; Yes/No and playful body cannot convey the action.",
+          "criticality": "HIGH",
+          "source_anchor": "index.html:#dialog;PRODUCT.md",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "false-undo",
+          "semantic_expectation": "Success text says deletion canceled (삭제 취소) although document was removed and no undo exists.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:confirm.onclick",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "empty",
+          "semantic_expectation": "Filtered empty state omits query context and a clear next action. Existing search input means do not claim absolute inability to recover.",
+          "criticality": "MEDIUM",
+          "source_anchor": "index.html:#empty",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Native dialog and least-destructive initial focus are functional and outside copy defect.",
+        "Do not claim no confirmation exists; one exists but its wording is misleading."
+      ],
+      "reference_branches": [
+        "patterns.md#destructive-flows",
+        "korean-copy.md"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Deletion dialog names object, permanent consequence and affected members with explicit confirm/cancel labels.",
+        "Completed deletion no longer says deletion canceled.",
+        "Filtered empty state gives query context and usable recovery action.",
+        "Korean terminology remains consistent and copy changes do not silently change delete semantics."
+      ],
+      "baseline_observation_id": "better-writing-02"
+    },
+    {
+      "role": "better-writing",
+      "id": "better-writing-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "Warm metaphor in low-stakes onboarding is deliberate brand voice, not an automatic plain-language violation.",
+        "Reversible frequent archive correctly uses undo and does not require a confirmation dialog.",
+        "보관 취소 accurately restores the archived project; do not replace it with 삭제 취소."
+      ],
+      "reference_branches": [
+        "patterns.md#destructive-flows",
+        "patterns.md#status-copy",
+        "korean-copy.md"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-writing-03"
+    },
+    {
+      "role": "better-ui",
+      "id": "better-ui-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "motion",
+          "semantic_expectation": "Hover translate and press scale run regardless of reduced motion; transform hover is unguarded for pointer capability.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#bookmark:hover,#bookmark:active",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "radius",
+          "semantic_expectation": "Even nested inset uses equal 12px radii; outer should account for 8px inset plus 1px border.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.frame,.inner",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "transition",
+          "semantic_expectation": "High-frequency hover uses transform/400ms and transition all, press scale .9 instead of .96.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:#bookmark",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "icon-state",
+          "semantic_expectation": "Hardcoded dark stroke fails to follow selected white label state.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:#bookmark svg",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "No shadows is documented intent, not a missing elevation defect.",
+        "Do not claim touch hover stuck was observed if only desktop pointer was tested."
+      ],
+      "reference_branches": [
+        "surfaces.md#concentric-border-radius",
+        "animations.md#high-frequency-motion",
+        "animations.md#scale-on-press",
+        "performance.md#transition-only-what-changes",
+        "icons.md#one-svg-recolored-per-state"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-ui-01"
+    },
+    {
+      "role": "better-ui",
+      "id": "better-ui-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "reduced",
+          "semantic_expectation": "Drawer translation keyframes still run for reduced-motion users.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#drawer.open,@keyframes",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "interruption",
+          "semantic_expectation": "Removing open mid-keyframe resets immediately to base off-screen transform rather than retargeting transition.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:#drawer.open;app.js:toggle",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "scroll",
+          "semantic_expectation": "Scrollable side panel has no overscroll containment and may chain to tall page. Require runtime wheel evidence for actual chaining.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.scroll",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "theme",
+          "semantic_expectation": "Theme changes animate page colors for 700ms without suppression.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:body;app.js:theme",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not demand focus trapping on this non-modal review side panel.",
+        "Visible toggle is a cue for collapsed content."
+      ],
+      "reference_branches": [
+        "animations.md#interruptible-animations",
+        "animations.md#suppress-transitions-on-theme-switch",
+        "animations.md#reduced-motion-fallback",
+        "SKILL.md#contain-scroll-inside-overlays"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "implement",
+      "allowed_changed_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "expected_postconditions": [
+        "Drawer toggles mid-transition smoothly toward current state and ends matching aria-expanded.",
+        "Reduced motion removes drawer translation while preserving static visible state.",
+        "Panel scroll is contained.",
+        "Theme switch does not animate global color transitions."
+      ],
+      "baseline_observation_id": "better-ui-02"
+    },
+    {
+      "role": "better-ui",
+      "id": "better-ui-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "Asymmetric and greater-than-24px inset layers are separate surfaces; do not force the concentric-radius formula.",
+        "No-shadow convention is valid.",
+        "No expressive animation is needed on frequent filters.",
+        "Reduced motion does not require hiding completion feedback; static text persists."
+      ],
+      "reference_branches": [
+        "surfaces.md#concentric-border-radius",
+        "animations.md#scale-on-press",
+        "animations.md#high-frequency-motion",
+        "icons.md#one-svg-recolored-per-state"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-ui-03"
+    },
+    {
+      "role": "better-interface",
+      "id": "better-interface-01",
+      "case_kind": "ordinary",
+      "expected_findings": [
+        {
+          "id": "name",
+          "semantic_expectation": "Delete icon button has no accessible name.",
+          "criticality": "HIGH",
+          "source_anchor": "index.html:#delete",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "focus",
+          "semantic_expectation": "All native buttons lose the focus ring.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:button:focus",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "destructive",
+          "semantic_expectation": "Delete acts irreversibly without confirmation, undo or distinct destructive treatment.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:delete.onclick;index.html:#delete",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "semantic",
+          "semantic_expectation": "Safe draft-save action uses semantic danger fill.",
+          "criticality": "HIGH",
+          "source_anchor": "index.html:#save",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "contrast",
+          "semantic_expectation": "Caption separator color on white fails text contrast; semantic and contrast checks are independent.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:.caption",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "layout",
+          "semantic_expectation": "460px action row clips at 320px.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:.action-row,body",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "typography",
+          "semantic_expectation": "14px weight300 fixed18px line-height violates small-body type rules independently of contrast.",
+          "criticality": "MEDIUM",
+          "source_anchor": "styles.css:.caption",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not stop after accessibility; supported lower-severity typography issue should survive consolidation.",
+        "Same element can carry separate semantic-color and contrast/typography causes.",
+        "Do not call interface-review because this task names no change range."
+      ],
+      "reference_branches": [
+        "SKILL.md#use-domain-skills-as-the-sources-of-truth",
+        "SKILL.md#consolidate-systemic-findings",
+        "review-format.md#scope-and-coverage",
+        "review-format.md#findings"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-interface-01"
+    },
+    {
+      "role": "better-interface",
+      "id": "better-interface-02",
+      "case_kind": "state",
+      "expected_findings": [
+        {
+          "id": "duplicate",
+          "semantic_expectation": "Repeated submissions create multiple simulated files despite aria-disabled.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:export.onsubmit",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "pending-name",
+          "semantic_expectation": "Pending button removes name and leaves an aria-hidden spinner.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:b.innerHTML",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "error",
+          "semantic_expectation": "Invalid extension returns an untied generic error without a recovery instruction.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:name.endsWith",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "contrast",
+          "semantic_expectation": "White label on #cbd5e1 primary button fails 4.5:1 independent of async defects.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css::root",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "motion",
+          "semantic_expectation": "Preview translate runs under reduced motion.",
+          "criticality": "HIGH",
+          "source_anchor": "styles.css:@keyframes ready",
+          "measurement": null,
+          "required": true
+        },
+        {
+          "id": "motion-only",
+          "semantic_expectation": "Preview preparation leaves no persistent label, icon or state change; motion alone carries feedback.",
+          "criticality": "HIGH",
+          "source_anchor": "app.js:preview-button.onclick",
+          "measurement": null,
+          "required": true
+        }
+      ],
+      "expected_non_findings": [
+        "Do not merge button name, duplicate side effects and text contrast into one generic button finding.",
+        "Do not infer real file creation or downloads."
+      ],
+      "reference_branches": [
+        "review-format.md#verification",
+        "SKILL.md#use-domain-skills-as-the-sources-of-truth",
+        "SKILL.md#rank-by-user-impact",
+        "SKILL.md#consolidate-systemic-findings"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-interface-02"
+    },
+    {
+      "role": "better-interface",
+      "id": "better-interface-03",
+      "case_kind": "preserve",
+      "expected_findings": [],
+      "expected_non_findings": [
+        "Do not invent missing animation, shadow, color-ramp or framework requirements.",
+        "Do not treat lack of a repeated site header as a skip-link defect.",
+        "Native platform dialog behavior and synchronous labels are valid.",
+        "A no-findings report remains scoped to verified domains; screen reader and real 200% browser zoom remain separate checks."
+      ],
+      "reference_branches": [
+        "SKILL.md#evidence-not-taste",
+        "SKILL.md#use-domain-skills-as-the-sources-of-truth",
+        "review-format.md#scope-and-coverage",
+        "review-format.md#verdict"
+      ],
+      "runtime_measurement": null,
+      "source_files": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "allow_additional_evidence_supported_findings": true,
+      "never_auto_approve_preserve_case": true,
+      "mode": "review",
+      "allowed_changed_files": [],
+      "expected_postconditions": [],
+      "baseline_observation_id": "better-interface-03"
+    }
+  ],
+  "fixture_validation": {
+    "tool_version": "0.1.22",
+    "baseline": {
+      "tool": "Playwright CLI",
+      "session": "domain-fixture-smoke",
+      "started": "2026-10-12T08:39:53.594Z",
+      "browser": "152.0.7977.82",
+      "cases": [
+        {
+          "id": "better-accessibility-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "팀 초대 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "팀 초대 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "팀 초대 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "emailFocus": {
+              "labels": 0,
+              "outline": "rgb(36, 33, 28) none 3px",
+              "boxShadow": "none"
+            },
+            "afterEmailTab": {
+              "title": "팀 초대 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "help"
+            },
+            "validation": {
+              "snapshot": "- main:\n  - heading \"팀 초대\" [level=1]\n  - heading \"멤버 초대\" [level=2]\n  - paragraph: 팀의 프로젝트를 함께 편집할 멤버를 초대해요.\n  - textbox \"name@example.com\"\n  - paragraph: 이메일 주소를 확인하고 다시 입력해 주세요.\n  - button \"초대 보내기\"\n  - button\n  - status",
+              "title": "팀 초대 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"팀 초대\" [level=1]\n  - heading \"멤버 초대\" [level=2]\n  - paragraph: 팀의 프로젝트를 함께 편집할 멤버를 초대해요.\n  - textbox \"name@example.com\"\n  - paragraph\n  - button \"초대 보내기\"\n  - button\n  - status",
+            "title": "팀 초대 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-accessibility-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "pending": {
+              "snapshot": "- main:\n  - heading \"초대 요청 관리\" [level=1]\n  - heading \"새 요청\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\": min@example.com\n  - paragraph\n  - button [disabled]\n  - status\n  - paragraph:\n    - text: \"완료된 초대:\"\n    - status: \"0\"\n  - heading \"검토 대기\" [level=2]\n  - list:\n    - listitem:\n      - text: Mina의 Studio 요청\n      - button \"요청 보관\"\n    - listitem:\n      - text: Jae의 Studio 요청\n      - button \"다음 요청 검토\"\n  - button \"초대 정책 보기\"",
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "afterRepeat": {
+              "snapshot": "- main:\n  - heading \"초대 요청 관리\" [level=1]\n  - heading \"새 요청\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\": min@example.com\n  - paragraph\n  - button \"초대 보내기\"\n  - status: 초대를 보냈어요.\n  - paragraph:\n    - text: \"완료된 초대:\"\n    - status: \"2\"\n  - heading \"검토 대기\" [level=2]\n  - list:\n    - listitem:\n      - text: Mina의 Studio 요청\n      - button \"요청 보관\"\n    - listitem:\n      - text: Jae의 Studio 요청\n      - button \"다음 요청 검토\"\n  - button \"초대 정책 보기\"",
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "afterRemove": {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            "nextTab": {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "next"
+            },
+            "dialogOpen": {
+              "title": "초대 요청 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "details"
+            },
+            "afterEscape": {
+              "hidden": false,
+              "active": "details"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"초대 요청 관리\" [level=1]\n  - heading \"새 요청\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\": min@example.com\n  - paragraph\n  - button \"초대 보내기\"\n  - status\n  - paragraph:\n    - text: \"완료된 초대:\"\n    - status: \"0\"\n  - heading \"검토 대기\" [level=2]\n  - list:\n    - listitem:\n      - text: Mina의 Studio 요청\n      - button \"요청 보관\"\n    - listitem:\n      - text: Jae의 Studio 요청\n      - button \"다음 요청 검토\"\n  - button \"초대 정책 보기\"",
+            "title": "초대 요청 관리 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-accessibility-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "validation": {
+              "snapshot": "- main:\n  - heading \"Studio 멤버\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\" [invalid]:\n    - /placeholder: name@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph: name@example.com 형식으로 이메일을 입력해 주세요.\n  - button \"초대 보내기\"\n  - status\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "email"
+            },
+            "pending": {
+              "snapshot": "- main:\n  - heading \"Studio 멤버\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n    - text: min@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\" [disabled]\n  - status: 초대 보내는 중…\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "success": {
+              "snapshot": "- main:\n  - heading \"Studio 멤버\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n    - text: min@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\"\n  - status: 초대를 보냈어요.\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "dialogOpen": {
+              "title": "Studio 멤버 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "close"
+            },
+            "dialogEscape": {
+              "open": false,
+              "active": "details"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"Studio 멤버\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\"\n  - status\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+            "title": "Studio 멤버 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-colors-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "프로젝트 현황 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 현황 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 현황 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "light": [
+              {
+                "id": "",
+                "text": "다음 검토: 10월 16일 · Owner Mina",
+                "foreground": "rgb(203, 213, 225)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(203, 213, 225)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "save",
+                "text": "초안 저장",
+                "foreground": "rgb(255, 255, 255)",
+                "background": "rgb(167, 25, 48)",
+                "border": "rgb(167, 25, 48)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "export",
+                "text": "내보내기",
+                "foreground": "rgb(255, 255, 255)",
+                "background": "rgb(23, 69, 173)",
+                "border": "rgb(23, 69, 173)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "status",
+                "text": "",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(36, 33, 28)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "✓ 검토 완료",
+                "foreground": "rgb(22, 101, 52)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(22, 101, 52)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "색과 텍스트로 상태를 함께 표시해요.",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(36, 33, 28)",
+                "font": "16px",
+                "disabled": false
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"프로젝트 현황\" [level=1]\n  - heading \"Studio launch\" [level=2]\n  - paragraph: \"다음 검토: 10월 16일 · Owner Mina\"\n  - button \"초안 저장\"\n  - button \"내보내기\"\n  - status\n  - heading \"검토 상태\" [level=2]\n  - paragraph: ✓ 검토 완료\n  - paragraph: 색과 텍스트로 상태를 함께 표시해요.",
+            "title": "프로젝트 현황 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-colors-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "내보내기 미리보기 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "내보내기 미리보기 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "내보내기 미리보기 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "light": [
+              {
+                "id": "theme",
+                "text": "밝은/어두운 화면 전환",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(108, 104, 96)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "overlay-copy",
+                "text": "검토용 PDF · 내부 공유",
+                "foreground": "rgba(255, 255, 255, 0.45)",
+                "background": "rgb(51, 65, 85)",
+                "border": "rgba(255, 255, 255, 0.45)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "filename",
+                "text": "",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(108, 104, 96)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "download",
+                "text": "PDF 준비",
+                "foreground": "rgb(255, 255, 255)",
+                "background": "rgb(23, 69, 173)",
+                "border": "rgb(23, 69, 173)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "status",
+                "text": "",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(36, 33, 28)",
+                "font": "16px",
+                "disabled": false
+              }
+            ],
+            "dark": [
+              {
+                "id": "theme",
+                "text": "밝은/어두운 화면 전환",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(165, 175, 189)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "overlay-copy",
+                "text": "검토용 PDF · 내부 공유",
+                "foreground": "rgba(255, 255, 255, 0.45)",
+                "background": "rgb(51, 65, 85)",
+                "border": "rgba(255, 255, 255, 0.45)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "filename",
+                "text": "",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(165, 175, 189)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "download",
+                "text": "PDF 준비",
+                "foreground": "rgb(255, 255, 255)",
+                "background": "rgb(148, 163, 184)",
+                "border": "rgb(148, 163, 184)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "status",
+                "text": "",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(246, 244, 240)",
+                "font": "16px",
+                "disabled": false
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"내보내기 미리보기\" [level=1]\n  - button \"밝은/어두운 화면 전환\"\n  - heading \"Preview\" [level=2]\n  - paragraph: 검토용 PDF · 내부 공유\n  - text: 파일 이름\n  - textbox \"파일 이름\": studio-review.pdf\n  - button \"PDF 준비\"\n  - status",
+            "title": "내보내기 미리보기 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-colors-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "검토 보드 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 보드 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 보드 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "light": [
+              {
+                "id": "theme",
+                "text": "밝은/어두운 화면 전환",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(108, 104, 96)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "팀의 의견을 확인하고 이번 주 초안을 저장해요.",
+                "foreground": "rgb(70, 66, 57)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(70, 66, 57)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "✓ 완료 2",
+                "foreground": "rgb(20, 83, 45)",
+                "background": "rgb(220, 252, 231)",
+                "border": "rgb(20, 83, 45)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "◷ 대기 1",
+                "foreground": "rgb(113, 63, 18)",
+                "background": "rgb(254, 243, 199)",
+                "border": "rgb(113, 63, 18)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "두 배지는 실행 버튼이 아닌 상태 요약이에요.",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(36, 33, 28)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "save",
+                "text": "초안 저장",
+                "foreground": "rgb(255, 255, 255)",
+                "background": "rgb(23, 69, 173)",
+                "border": "rgb(23, 69, 173)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "승인 완료",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(108, 104, 96)",
+                "font": "16px",
+                "disabled": true
+              },
+              {
+                "id": "status",
+                "text": "",
+                "foreground": "rgb(36, 33, 28)",
+                "background": "rgb(255, 255, 255)",
+                "border": "rgb(36, 33, 28)",
+                "font": "16px",
+                "disabled": false
+              }
+            ],
+            "dark": [
+              {
+                "id": "theme",
+                "text": "밝은/어두운 화면 전환",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(165, 175, 189)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "팀의 의견을 확인하고 이번 주 초안을 저장해요.",
+                "foreground": "rgb(216, 211, 202)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(216, 211, 202)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "✓ 완료 2",
+                "foreground": "rgb(20, 83, 45)",
+                "background": "rgb(220, 252, 231)",
+                "border": "rgb(20, 83, 45)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "◷ 대기 1",
+                "foreground": "rgb(113, 63, 18)",
+                "background": "rgb(254, 243, 199)",
+                "border": "rgb(113, 63, 18)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "두 배지는 실행 버튼이 아닌 상태 요약이에요.",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(246, 244, 240)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "save",
+                "text": "초안 저장",
+                "foreground": "rgb(24, 34, 52)",
+                "background": "rgb(191, 219, 254)",
+                "border": "rgb(191, 219, 254)",
+                "font": "16px",
+                "disabled": false
+              },
+              {
+                "id": "",
+                "text": "승인 완료",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(165, 175, 189)",
+                "font": "16px",
+                "disabled": true
+              },
+              {
+                "id": "status",
+                "text": "",
+                "foreground": "rgb(246, 244, 240)",
+                "background": "rgb(35, 43, 54)",
+                "border": "rgb(246, 244, 240)",
+                "font": "16px",
+                "disabled": false
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"검토 보드\" [level=1]\n  - button \"밝은/어두운 화면 전환\"\n  - heading \"주간 검토\" [level=2]\n  - paragraph: 팀의 의견을 확인하고 이번 주 초안을 저장해요.\n  - text: ✓ 완료 2 ◷ 대기 1\n  - paragraph: 두 배지는 실행 버튼이 아닌 상태 요약이에요.\n  - button \"초안 저장\"\n  - button \"승인 완료\" [disabled]\n  - status",
+            "title": "검토 보드 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-layout-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "프로젝트 라이브러리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 라이브러리 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 776,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 라이브러리 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 776,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "actionBounds": {
+              "x": 619.03125,
+              "y": 120.59375,
+              "width": 117.234375,
+              "height": 42
+            },
+            "rail": {
+              "clientWidth": 254,
+              "scrollWidth": 508,
+              "scrollbar": "none"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"프로젝트 라이브러리\" [level=1]\n  - complementary:\n    - heading \"컬렉션\" [level=2]\n    - paragraph: 디자인 검토\n  - heading \"이번 주 프로젝트\" [level=2]\n  - text: Studio_서비스_개편_2026_Q4_공유용_프로젝트\n  - button \"프로젝트 열기\"\n  - status\n  - heading \"추천 문서\" [level=2]\n  - article:\n    - heading \"Review notes\" [level=3]\n    - paragraph: 오늘 검토할 메모예요.\n  - article:\n    - heading \"팀 결정 기록\" [level=3]\n    - button \"결정 기록 열기\"",
+            "title": "프로젝트 라이브러리 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-layout-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "팀 일정 확인 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "팀 일정 확인 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "팀 일정 확인 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "dialog": {
+              "x": 0,
+              "y": -36,
+              "width": 580,
+              "height": 640
+            },
+            "confirm": {
+              "x": 25,
+              "y": 487,
+              "width": 121.421875,
+              "height": 42
+            },
+            "rtl": {
+              "dir": "rtl",
+              "paddingRight": "72px",
+              "text": {
+                "x": 50.421875,
+                "y": 127.59375,
+                "width": 164.578125,
+                "height": 18,
+                "top": 127.59375,
+                "right": 215,
+                "bottom": 145.59375,
+                "left": 50.421875
+              },
+              "tag": {
+                "x": 259.3125,
+                "y": 124.59375,
+                "width": 27.6875,
+                "height": 24,
+                "top": 124.59375,
+                "right": 287,
+                "bottom": 148.59375,
+                "left": 259.3125
+              }
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"팀 일정 확인\" [level=1]\n  - heading \"다음 검토\" [level=2]\n  - text: 2026 Q4 · 프로젝트 검토 예정\n  - button \"LTR/RTL preview\"\n  - button \"검토 일정 자세히 보기\"\n  - status",
+            "title": "팀 일정 확인 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-layout-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "검토 결과 표 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 결과 표 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 결과 표 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "table": {
+              "clientWidth": 254,
+              "scrollWidth": 540,
+              "pageWidth": 320
+            },
+            "rtl": {
+              "snapshot": "- main:\n  - heading \"검토 결과 표\" [level=1]\n  - heading \"팀 진행 현황\" [level=2]\n  - button \"LTR/RTL preview\"\n  - button \"검토 저장\"\n  - status\n  - paragraph: 열이 화면보다 넓으면 표 안에서 가로로 스크롤할 수 있어요.\n  - region \"팀 진행 현황 표\":\n    - table:\n      - rowgroup:\n        - row \"프로젝트 담당 완료 검토일\":\n          - columnheader \"프로젝트\"\n          - columnheader \"담당\"\n          - columnheader \"완료\"\n          - columnheader \"검토일\"\n      - rowgroup:\n        - row \"Studio 한국어 서비스 Mina 12 2026-10-16\":\n          - cell \"Studio 한국어 서비스\"\n          - cell \"Mina\"\n          - cell \"12\"\n          - cell \"2026-10-16\"\n        - row \"Documentation Jae 8 2026-10-17\":\n          - cell \"Documentation\"\n          - cell \"Jae\"\n          - cell \"8\"\n          - cell \"2026-10-17\"\n  - group: 프로젝트 설명 전체 보기",
+              "title": "검토 결과 표 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "direction"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"검토 결과 표\" [level=1]\n  - heading \"팀 진행 현황\" [level=2]\n  - button \"LTR/RTL preview\"\n  - button \"검토 저장\"\n  - status\n  - paragraph: 열이 화면보다 넓으면 표 안에서 가로로 스크롤할 수 있어요.\n  - region \"팀 진행 현황 표\":\n    - table:\n      - rowgroup:\n        - row \"프로젝트 담당 완료 검토일\":\n          - columnheader \"프로젝트\"\n          - columnheader \"담당\"\n          - columnheader \"완료\"\n          - columnheader \"검토일\"\n      - rowgroup:\n        - row \"Studio 한국어 서비스 Mina 12 2026-10-16\":\n          - cell \"Studio 한국어 서비스\"\n          - cell \"Mina\"\n          - cell \"12\"\n          - cell \"2026-10-16\"\n        - row \"Documentation Jae 8 2026-10-17\":\n          - cell \"Documentation\"\n          - cell \"Jae\"\n          - cell \"8\"\n          - cell \"2026-10-17\"\n  - group: 프로젝트 설명 전체 보기",
+            "title": "검토 결과 표 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-typography-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "주간 검토 노트 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "주간 검토 노트 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "주간 검토 노트 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "type": [
+              {
+                "id": "",
+                "tag": "H1",
+                "text": "주간 검토 노트",
+                "size": "20px",
+                "weight": "700",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 288,
+                "scrollWidth": 288
+              },
+              {
+                "id": "",
+                "tag": "H2",
+                "text": "Studio 변경사항",
+                "size": "28px",
+                "weight": "700",
+                "lineHeight": "36.4px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "이번 주에는 프로젝트의 초대 흐름과 검토 화면을 정리했어요. 한국어 설명과 English product names가 함께 나와도 편하게 읽을 수",
+                "size": "14px",
+                "weight": "300",
+                "lineHeight": "16px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "검토한 화면: 11",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "counter",
+                "tag": "OUTPUT",
+                "text": "11",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 0,
+                "scrollWidth": 0
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"주간 검토 노트\" [level=1]\n  - heading \"Studio 변경사항\" [level=2]\n  - paragraph: 이번 주에는 프로젝트의 초대 흐름과 검토 화면을 정리했어요. 한국어 설명과 English product names가 함께 나와도 편하게 읽을 수 있어야 해요. 팀원이 남긴 메모를 읽고 다음 검토에서 확인할 내용을 준비해 주세요.\n  - paragraph:\n    - text: \"검토한 화면:\"\n    - status: \"11\"\n  - button \"화면 하나 더 검토\"",
+            "title": "주간 검토 노트 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-typography-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "공유 링크 확인 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "공유 링크 확인 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "공유 링크 확인 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "type": [
+              {
+                "id": "",
+                "tag": "H1",
+                "text": "공유 링크 확인",
+                "size": "28px",
+                "weight": "700",
+                "lineHeight": "33.6px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 288,
+                "scrollWidth": 288
+              },
+              {
+                "id": "",
+                "tag": "H2",
+                "text": "Studio 한국어 가이드",
+                "size": "20px",
+                "weight": "700",
+                "lineHeight": "26px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "공유할 주소를 확인해 주세요.",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "share-url",
+                "tag": "P",
+                "text": "https://studio.example.test/한국어_서비스_개편_프로젝트_2026_Q4/launch-review-for-all-collab",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 254,
+                "scrollWidth": 726
+              },
+              {
+                "id": "recipient",
+                "tag": "INPUT",
+                "text": "",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "21px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 252,
+                "scrollWidth": 252
+              },
+              {
+                "id": "status",
+                "tag": "P",
+                "text": "",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "none",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"공유 링크 확인\" [level=1]\n  - heading \"Studio 한국어 가이드\" [level=2]\n  - paragraph: 공유할 주소를 확인해 주세요.\n  - paragraph: https://studio.example.test/한국어_서비스_개편_프로젝트_2026_Q4/launch-review-for-all-collaborators\n  - text: 받는 사람 이메일\n  - textbox \"받는 사람 이메일\":\n    - /placeholder: name@example.com\n  - button \"공유 주소 복사\"\n  - status",
+            "title": "공유 링크 확인 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-typography-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "번역 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "번역 검토 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "번역 검토 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "type": [
+              {
+                "id": "",
+                "tag": "H1",
+                "text": "번역 검토",
+                "size": "24px",
+                "weight": "700",
+                "lineHeight": "28.8px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 288,
+                "scrollWidth": 288
+              },
+              {
+                "id": "",
+                "tag": "H2",
+                "text": "Studio 한국어 문서",
+                "size": "20px",
+                "weight": "700",
+                "lineHeight": "26px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "짧은 설명은 자연스러운 한국어로 적고, Studio와 API 같은 제품 이름은 원문을 유지해요. URL이나 코드 이름은 필요한 곳에서만 줄바꿈해",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "22.4px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "Keep product names unchanged. Review the actual Korean fallback, mixed-script wr",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "22.4px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "review_한국어_2026_Q4_documentation_very_long_identifier_for_copying",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "21px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "search",
+                "tag": "INPUT",
+                "text": "",
+                "size": "16px",
+                "weight": "400",
+                "lineHeight": "24px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 252,
+                "scrollWidth": 252
+              },
+              {
+                "id": "",
+                "tag": "P",
+                "text": "검토한 문서 11개",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "21px",
+                "variant": "normal",
+                "select": "auto",
+                "clientWidth": 254,
+                "scrollWidth": 254
+              },
+              {
+                "id": "count",
+                "tag": "OUTPUT",
+                "text": "11",
+                "size": "14px",
+                "weight": "400",
+                "lineHeight": "21px",
+                "variant": "tabular-nums",
+                "select": "auto",
+                "clientWidth": 0,
+                "scrollWidth": 0
+              }
+            ]
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"번역 검토\" [level=1]\n  - heading \"Studio 한국어 문서\" [level=2]\n  - paragraph: 짧은 설명은 자연스러운 한국어로 적고, Studio와 API 같은 제품 이름은 원문을 유지해요. URL이나 코드 이름은 필요한 곳에서만 줄바꿈해요.\n  - paragraph: Keep product names unchanged. Review the actual Korean fallback, mixed-script wrapping and table values before changing the type system.\n  - paragraph: review_한국어_2026_Q4_documentation_very_long_identifier_for_copying\n  - text: 문서 검색\n  - textbox \"문서 검색\":\n    - /placeholder: Studio 가이드\n  - paragraph:\n    - text: 검토한 문서\n    - status: \"11\"\n    - text: 개\n  - button \"문서 하나 더 검토\"",
+            "title": "번역 검토 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-writing-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "초안 설정 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "초안 설정 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "초안 설정 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "afterSave": {
+              "snapshot": "- main:\n  - heading \"초안 설정\" [level=1]\n  - heading \"프로젝트 초안\" [level=2]\n  - paragraph: 팀 내부에서 검토 중인 비공개 초안이에요.\n  - text: 프로젝트 이름\n  - textbox \"프로젝트 이름\": Studio launch\n  - button \"초안 저장\"\n  - button \"워크스페이스 동기화\"\n  - paragraph: \"공개 상태: 모든 사람에게 공개\"\n  - status: 보드를 발행했어요.",
+              "title": "초안 설정 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "save"
+            },
+            "error": {
+              "snapshot": "- main:\n  - heading \"초안 설정\" [level=1]\n  - heading \"프로젝트 초안\" [level=2]\n  - paragraph: 팀 내부에서 검토 중인 비공개 초안이에요.\n  - text: 프로젝트 이름\n  - textbox \"프로젝트 이름\": Studio launch\n  - button \"초안 저장\"\n  - button \"워크스페이스 동기화\"\n  - paragraph: \"공개 상태: 모든 사람에게 공개\"\n  - status: Oops! Something went wrong.",
+              "title": "초안 설정 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "sync"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"초안 설정\" [level=1]\n  - heading \"프로젝트 초안\" [level=2]\n  - paragraph: 팀 내부에서 검토 중인 비공개 초안이에요.\n  - text: 프로젝트 이름\n  - textbox \"프로젝트 이름\": Studio launch\n  - button \"초안 저장\"\n  - button \"워크스페이스 동기화\"\n  - paragraph: \"공개 상태: 비공개\"\n  - status",
+            "title": "초안 설정 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-writing-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "문서 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "문서 관리 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "문서 관리 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "empty": {
+              "snapshot": "- main:\n  - heading \"문서 관리\" [level=1]\n  - heading \"프로젝트 문서\" [level=2]\n  - text: 문서 검색\n  - textbox \"문서 검색\":\n    - /placeholder: 회의록\n    - text: missing\n  - paragraph: No results.\n  - status",
+              "title": "문서 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "query"
+            },
+            "dialog": {
+              "snapshot": "- main:\n  - heading \"문서 관리\" [level=1]\n  - heading \"프로젝트 문서\" [level=2]\n  - text: 문서 검색\n  - textbox \"문서 검색\":\n    - /placeholder: 회의록\n  - paragraph: Studio 발표 자료 · 공유 멤버 4명\n  - button \"문서 삭제\"\n  - dialog \"Are you sure?\":\n    - heading \"Are you sure?\" [level=2]\n    - paragraph: 정리할 준비가 됐나요?\n    - button \"No\"\n    - button \"Yes\"\n  - status",
+              "title": "문서 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "cancel"
+            },
+            "afterDelete": {
+              "snapshot": "- main:\n  - heading \"문서 관리\" [level=1]\n  - heading \"프로젝트 문서\" [level=2]\n  - text: 문서 검색\n  - textbox \"문서 검색\":\n    - /placeholder: 회의록\n  - status: 삭제 취소",
+              "title": "문서 관리 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"문서 관리\" [level=1]\n  - heading \"프로젝트 문서\" [level=2]\n  - text: 문서 검색\n  - textbox \"문서 검색\":\n    - /placeholder: 회의록\n  - paragraph: Studio 발표 자료 · 공유 멤버 4명\n  - button \"문서 삭제\"\n  - status",
+            "title": "문서 관리 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-writing-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "archive": {
+              "snapshot": "- main:\n  - heading \"프로젝트 보관함\" [level=1]\n  - heading \"프로젝트\" [level=2]\n  - paragraph: 다음 아이디어도 여기에서 자라요.\n  - paragraph: 보관하지 않은 프로젝트가 없어요. 아래에서 보관을 취소하면 다시 볼 수 있어요.\n  - paragraph: 프로젝트를 보관했어요.\n  - button \"보관 취소\"\n  - heading \"표시 이름\" [level=2]\n  - text: 표시 이름\n  - textbox \"표시 이름\"\n  - paragraph: 2자 이상 입력해 주세요.\n  - paragraph\n  - button \"표시 이름 저장\"\n  - status",
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "undo"
+            },
+            "undo": {
+              "snapshot": "- main:\n  - heading \"프로젝트 보관함\" [level=1]\n  - heading \"프로젝트\" [level=2]\n  - paragraph: 다음 아이디어도 여기에서 자라요.\n  - paragraph: Studio launch\n  - button \"프로젝트 보관\"\n  - heading \"표시 이름\" [level=2]\n  - text: 표시 이름\n  - textbox \"표시 이름\"\n  - paragraph: 2자 이상 입력해 주세요.\n  - paragraph\n  - button \"표시 이름 저장\"\n  - status",
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "archive"
+            },
+            "error": {
+              "snapshot": "- main:\n  - heading \"프로젝트 보관함\" [level=1]\n  - heading \"프로젝트\" [level=2]\n  - paragraph: 다음 아이디어도 여기에서 자라요.\n  - paragraph: Studio launch\n  - button \"프로젝트 보관\"\n  - heading \"표시 이름\" [level=2]\n  - text: 표시 이름\n  - textbox \"표시 이름\" [invalid]\n  - paragraph: 2자 이상 입력해 주세요.\n  - paragraph: 표시 이름을 2자 이상 입력한 뒤 다시 저장해 주세요.\n  - button \"표시 이름 저장\"\n  - status",
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "name"
+            },
+            "success": {
+              "snapshot": "- main:\n  - heading \"프로젝트 보관함\" [level=1]\n  - heading \"프로젝트\" [level=2]\n  - paragraph: 다음 아이디어도 여기에서 자라요.\n  - paragraph: Studio launch\n  - button \"프로젝트 보관\"\n  - heading \"표시 이름\" [level=2]\n  - text: 표시 이름\n  - textbox \"표시 이름\": Mina\n  - paragraph: 2자 이상 입력해 주세요.\n  - paragraph\n  - button \"표시 이름 저장\"\n  - status: 표시 이름을 저장했어요.",
+              "title": "프로젝트 보관함 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BUTTON"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"프로젝트 보관함\" [level=1]\n  - heading \"프로젝트\" [level=2]\n  - paragraph: 다음 아이디어도 여기에서 자라요.\n  - paragraph: Studio launch\n  - button \"프로젝트 보관\"\n  - heading \"표시 이름\" [level=2]\n  - text: 표시 이름\n  - textbox \"표시 이름\"\n  - paragraph: 2자 이상 입력해 주세요.\n  - paragraph\n  - button \"표시 이름 저장\"\n  - status",
+            "title": "프로젝트 보관함 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-ui-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "저장한 화면 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "저장한 화면 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "저장한 화면 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "reduced": {
+              "transform": "matrix(1, 0, 0, 1, 0, -8)",
+              "transition": "0.4s"
+            },
+            "selected": {
+              "textColor": "rgb(36, 33, 28)",
+              "stroke": "rgb(23, 23, 23)",
+              "measurement_limit": "Taken immediately after click during 400ms transition; initial text color is not its final selected-state color. Inspect final state separately."
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"저장한 화면\" [level=1]\n  - heading \"검토 카드\" [level=2]\n  - paragraph: Studio home · 홈 화면\n  - button \"저장\"\n  - status",
+            "title": "저장한 화면 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-ui-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "검토 패널 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 패널 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "검토 패널 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "during": "matrix(1, 0, 0, 1, 226.274, 0)",
+            "reversed": "matrix(1, 0, 0, 1, 330, 0)",
+            "reduced": {
+              "animation": "slide-in",
+              "overscroll": "auto"
+            },
+            "theme": {
+              "transition": "background-color 0.7s, color 0.7s",
+              "animations": 2
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"검토 패널\" [level=1]\n  - button \"밝은/어두운 화면 전환\"\n  - button \"검토 패널 열기\"\n  - paragraph: 패널에서 최근 검토 내역을 확인해요.\n  - region \"최근 검토\":\n    - heading \"최근 검토\" [level=2]\n    - paragraph: 1. Studio home\n    - paragraph: 2. 프로젝트 초대\n    - paragraph: 3. 공유 설정\n    - paragraph: 4. 검토 알림\n    - paragraph: 5. 프로젝트 설명\n    - paragraph: 6. 문서 저장\n    - paragraph: 7. 팀 멤버\n    - paragraph: 8. 프로필\n    - paragraph: 9. 검토 결과\n    - paragraph: 10. 프로젝트 보관",
+            "title": "검토 패널 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-ui-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "빠른 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "빠른 검토 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "빠른 검토 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "reduced": {
+              "snapshot": "- main:\n  - heading \"빠른 검토\" [level=1]\n  - heading \"화면 목록\" [level=2]\n  - group \"검토 범위\":\n    - button \"전체\"\n    - button \"저장됨\" [pressed]\n  - paragraph: 저장된 화면 1개 · Studio home\n  - button \"검토 완료\"\n  - status: 검토를 완료했어요.",
+              "title": "빠른 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "mark"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"빠른 검토\" [level=1]\n  - heading \"화면 목록\" [level=2]\n  - group \"검토 범위\":\n    - button \"전체\" [pressed]\n    - button \"저장됨\"\n  - paragraph: Studio home · 홈 화면\n  - button \"검토 완료\"\n  - status",
+            "title": "빠른 검토 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-interface-01",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "공유 프로젝트 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "공유 프로젝트 검토 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "공유 프로젝트 검토 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 493,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "deleted": {
+              "snapshot": "- main:\n  - heading \"공유 프로젝트 검토\" [level=1]\n  - heading \"Studio release\" [level=2]\n  - paragraph: 공유 멤버 4명 · 마지막 수정 10월 12일\n  - button \"초안 저장\"\n  - button\n  - status: 발표 자료를 영구 삭제했어요.",
+              "title": "공유 프로젝트 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "delete"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"공유 프로젝트 검토\" [level=1]\n  - heading \"Studio release\" [level=2]\n  - paragraph: 공유 멤버 4명 · 마지막 수정 10월 12일\n  - button \"초안 저장\"\n  - button\n  - status\n  - heading \"발표 자료\" [level=2]\n  - paragraph: 팀에 공유한 프로젝트 요약이에요.",
+            "title": "공유 프로젝트 검토 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-interface-02",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "pending": {
+              "snapshot": "- main:\n  - heading \"내보내기 요청\" [level=1]\n  - heading \"검토 PDF 준비\" [level=2]\n  - text: 파일 이름\n  - textbox \"파일 이름\": studio-review.pdf\n  - button [disabled]\n  - status\n  - paragraph:\n    - text: \"생성된 파일:\"\n    - status: \"0\"\n  - heading \"Preview\" [level=2]\n  - paragraph: Studio 검토 PDF\n  - button \"미리보기 준비\"",
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "afterRepeat": {
+              "snapshot": "- main:\n  - heading \"내보내기 요청\" [level=1]\n  - heading \"검토 PDF 준비\" [level=2]\n  - text: 파일 이름\n  - textbox \"파일 이름\": studio-review.pdf\n  - button \"PDF 준비\"\n  - status: PDF가 준비됐어요.\n  - paragraph:\n    - text: \"생성된 파일:\"\n    - status: \"2\"\n  - heading \"Preview\" [level=2]\n  - paragraph: Studio 검토 PDF\n  - button \"미리보기 준비\"",
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "error": {
+              "snapshot": "- main:\n  - heading \"내보내기 요청\" [level=1]\n  - heading \"검토 PDF 준비\" [level=2]\n  - text: 파일 이름\n  - textbox \"파일 이름\": review\n  - button \"PDF 준비\"\n  - status: Something went wrong.\n  - paragraph:\n    - text: \"생성된 파일:\"\n    - status: \"2\"\n  - heading \"Preview\" [level=2]\n  - paragraph: Studio 검토 PDF\n  - button \"미리보기 준비\"",
+              "title": "내보내기 요청 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "reducedAnimation": {
+              "animation": "ready",
+              "text": "Studio 검토 PDF"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"내보내기 요청\" [level=1]\n  - heading \"검토 PDF 준비\" [level=2]\n  - text: 파일 이름\n  - textbox \"파일 이름\": studio-review.pdf\n  - button \"PDF 준비\"\n  - status\n  - paragraph:\n    - text: \"생성된 파일:\"\n    - status: \"0\"\n  - heading \"Preview\" [level=2]\n  - paragraph: Studio 검토 PDF\n  - button \"미리보기 준비\"",
+            "title": "내보내기 요청 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        },
+        {
+          "id": "better-interface-03",
+          "errors": [],
+          "layouts": [
+            {
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "BODY"
+            },
+            {
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 768,
+              "scrollWidth": 768,
+              "active": "BODY"
+            },
+            {
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 320,
+              "scrollWidth": 320,
+              "active": "BODY"
+            }
+          ],
+          "observations": {
+            "validation": {
+              "snapshot": "- main:\n  - heading \"Studio 초대 검토\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\" [invalid]:\n    - /placeholder: name@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph: name@example.com 형식으로 이메일을 입력해 주세요.\n  - button \"초대 보내기\"\n  - status\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "email"
+            },
+            "pending": {
+              "snapshot": "- main:\n  - heading \"Studio 초대 검토\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n    - text: min@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\" [disabled]\n  - status: 초대 보내는 중…\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "success": {
+              "snapshot": "- main:\n  - heading \"Studio 초대 검토\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n    - text: min@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\"\n  - status: 초대를 보냈어요.\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "send"
+            },
+            "dialogOpen": {
+              "title": "Studio 초대 검토 | Studio Desk",
+              "width": 1280,
+              "scrollWidth": 1280,
+              "active": "close"
+            },
+            "dialogEscape": {
+              "open": false,
+              "active": "details"
+            }
+          },
+          "initial": {
+            "snapshot": "- main:\n  - heading \"Studio 초대 검토\" [level=1]\n  - heading \"초대 보내기\" [level=2]\n  - text: 이메일\n  - textbox \"이메일\":\n    - /placeholder: name@example.com\n  - paragraph: 초대받을 멤버의 이메일을 입력해 주세요.\n  - paragraph\n  - button \"초대 보내기\"\n  - status\n  - heading \"초대 정책\" [level=2]\n  - paragraph: 초대는 7일 뒤 만료돼요.\n  - button \"초대 정책 자세히 보기\"",
+            "title": "Studio 초대 검토 | Studio Desk",
+            "width": 1280,
+            "scrollWidth": 1280,
+            "active": "BODY"
+          }
+        }
+      ],
+      "finished": "2026-10-12T08:40:01.424Z"
+    },
+    "limitations": [
+      "Smoke checks are not trial outcomes.",
+      "Native screen-reader delivery, real browser zoom, touch device behavior, true iOS Safari and OS forced colors were not verified.",
+      "Viewport resizing was performed at 1280,768,320 CSS px.",
+      "The custom modal and async guard defects are confirmed by real keyboard activation."
+    ],
+    "executable_probe": "async page => {\n const root='http://127.0.0.1:18769/';\n const roles=['better-accessibility','better-colors','better-layout','better-typography','better-writing','better-ui','better-interface'];\n const out={tool:'Playwright CLI',session:'domain-fixture-smoke',started:new Date().toISOString(),browser:await page.context().browser().version(),cases:[]};\n async function read(){return await page.evaluate(()=>({title:document.title,width:innerWidth,scrollWidth:document.documentElement.scrollWidth,active:document.activeElement.id||document.activeElement.tagName}));}\n async function state(){return {snapshot:await page.locator('body').ariaSnapshot(),...await read()};}\n for(const role of roles)for(let n=1;n<=3;n++){\n  const id=role+'-0'+n; const entry={id,errors:[],layouts:[],observations:{}};\n  const listener=e=>entry.errors.push(e.message);page.on('pageerror',listener);\n  await page.emulateMedia({reducedMotion:'no-preference',colorScheme:'light'});\n  await page.setViewportSize({width:1280,height:800});await page.goto(root+id+'/app/');entry.initial=await state();\n  for(const width of [1280,768,320]){await page.setViewportSize({width,height:800});entry.layouts.push(await read());}\n  await page.setViewportSize({width:1280,height:800});\n  if(id==='better-accessibility-01'){\n   await page.locator('#email').focus();entry.observations.emailFocus=await page.locator('#email').evaluate(e=>({labels:e.labels.length,outline:getComputedStyle(e).outline,boxShadow:getComputedStyle(e).boxShadow}));\n   await page.keyboard.press('Tab');entry.observations.afterEmailTab=await read();\n   await page.locator('#send').click();entry.observations.validation=await state();\n  }\n  if(id==='better-accessibility-02'||id==='better-interface-02'){\n   await page.locator('#send').focus();await page.keyboard.press('Enter');await page.keyboard.press('Enter');entry.observations.pending=await state();await page.waitForTimeout(800);entry.observations.afterRepeat=await state();\n   if(id==='better-accessibility-02'){\n    await page.locator('#remove').focus();await page.keyboard.press('Enter');entry.observations.afterRemove=await read();await page.keyboard.press('Tab');entry.observations.nextTab=await read();\n    await page.locator('#details').focus();await page.keyboard.press('Enter');entry.observations.dialogOpen=await read();await page.keyboard.press('Escape');entry.observations.afterEscape=await page.locator('#modal').evaluate(e=>({hidden:e.hidden,active:document.activeElement.id}));\n   }else{\n    await page.locator('#name').fill('review');await page.locator('#send').click();await page.waitForTimeout(800);entry.observations.error=await state();\n    await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#preview-button').click();entry.observations.reducedAnimation=await page.locator('#preview').evaluate(e=>({animation:getComputedStyle(e).animationName,text:e.textContent}));\n   }\n  }\n  if(id==='better-accessibility-03'||id==='better-interface-03'){\n   await page.locator('#send').click();entry.observations.validation=await state();await page.locator('#email').fill('min@example.com');await page.locator('#send').focus();await page.keyboard.press('Enter');await page.keyboard.press('Enter');entry.observations.pending=await state();await page.waitForTimeout(700);entry.observations.success=await state();\n   await page.locator('#details').focus();await page.keyboard.press('Enter');entry.observations.dialogOpen=await read();await page.keyboard.press('Escape');entry.observations.dialogEscape=await page.locator('#dialog').evaluate(e=>({open:e.open,active:document.activeElement.id}));\n  }\n  if(role==='better-colors'){\n   const pairs=async()=>await page.evaluate(()=>Array.from(document.querySelectorAll('p,button,input,.badge')).map(e=>{const s=getComputedStyle(e);let a=e;while(a&&getComputedStyle(a).backgroundColor==='rgba(0, 0, 0, 0)')a=a.parentElement;return {id:e.id,text:e.textContent.slice(0,80),foreground:s.color,background:a?getComputedStyle(a).backgroundColor:null,border:s.borderColor,font:s.fontSize,disabled:e.disabled||false};}));\n   entry.observations.light=pairs?await pairs():null;\n   if(n>1){await page.locator('#theme').click();entry.observations.dark=await pairs();}\n  }\n  if(id==='better-layout-01'){\n   await page.setViewportSize({width:320,height:568});entry.observations.actionBounds=await page.locator('#open').boundingBox();entry.observations.rail=await page.locator('.rail').evaluate(e=>({clientWidth:e.clientWidth,scrollWidth:e.scrollWidth,scrollbar:getComputedStyle(e).scrollbarWidth}));await page.screenshot({path:'/tmp/domain-fixture-smoke/layout01-320.png'});\n  }\n  if(id==='better-layout-02'){\n   await page.setViewportSize({width:320,height:568});await page.locator('#open').click();entry.observations.dialog=await page.locator('#dialog').boundingBox();entry.observations.confirm=await page.locator('#confirm').boundingBox();await page.screenshot({path:'/tmp/domain-fixture-smoke/layout02-dialog.png'});await page.keyboard.press('Escape');await page.locator('#direction').click();entry.observations.rtl=await page.locator('.event').evaluate(e=>({dir:document.documentElement.dir,paddingRight:getComputedStyle(e).paddingRight,text:e.firstElementChild.getBoundingClientRect().toJSON(),tag:e.lastElementChild.getBoundingClientRect().toJSON()}));\n  }\n  if(id==='better-layout-03'){\n   await page.setViewportSize({width:320,height:568});entry.observations.table=await page.locator('.table-scroll').evaluate(e=>({clientWidth:e.clientWidth,scrollWidth:e.scrollWidth,pageWidth:document.documentElement.scrollWidth}));await page.locator('#direction').click();entry.observations.rtl=await state();\n  }\n  if(role==='better-typography'){\n   await page.setViewportSize({width:320,height:568});entry.observations.type=await page.evaluate(()=>Array.from(document.querySelectorAll('h1,h2,p,input,output')).map(e=>{let s=getComputedStyle(e);return {id:e.id,tag:e.tagName,text:e.textContent.slice(0,80),size:s.fontSize,weight:s.fontWeight,lineHeight:s.lineHeight,variant:s.fontVariantNumeric,select:s.userSelect,clientWidth:e.clientWidth,scrollWidth:e.scrollWidth};}));\n  }\n  if(id==='better-writing-01'){\n   await page.locator('#save').click();entry.observations.afterSave=await state();await page.locator('#sync').click();entry.observations.error=await state();\n  }\n  if(id==='better-writing-02'){\n   await page.locator('#query').fill('missing');entry.observations.empty=await state();await page.locator('#query').fill('');await page.locator('#remove').click();entry.observations.dialog=await state();await page.locator('#confirm').click();entry.observations.afterDelete=await state();\n  }\n  if(id==='better-writing-03'){\n   await page.locator('#archive').click();entry.observations.archive=await state();await page.locator('#undo').click();entry.observations.undo=await state();await page.locator('#form button').click();entry.observations.error=await state();await page.locator('#name').fill('Mina');await page.locator('#form button').click();entry.observations.success=await state();\n  }\n  if(id==='better-ui-01'){\n   await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#bookmark').hover();await page.waitForTimeout(450);entry.observations.reduced=await page.locator('#bookmark').evaluate(e=>({transform:getComputedStyle(e).transform,transition:getComputedStyle(e).transition}));await page.locator('#bookmark').click();entry.observations.selected=await page.locator('#bookmark').evaluate(e=>({textColor:getComputedStyle(e).color,stroke:getComputedStyle(e.querySelector('svg')).stroke}));\n  }\n  if(id==='better-ui-02'){\n   await page.locator('#toggle').click();await page.waitForTimeout(250);entry.observations.during=await page.locator('#drawer').evaluate(e=>getComputedStyle(e).transform);await page.locator('#toggle').click();entry.observations.reversed=await page.locator('#drawer').evaluate(e=>getComputedStyle(e).transform);\n   await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#toggle').click();entry.observations.reduced=await page.locator('#drawer').evaluate(e=>({animation:getComputedStyle(e).animationName,overscroll:getComputedStyle(e.querySelector('.scroll')).overscrollBehavior}));\n   await page.locator('#theme').click();entry.observations.theme=await page.locator('body').evaluate(e=>({transition:getComputedStyle(e).transition,animations:e.getAnimations().length}));\n  }\n  if(id==='better-ui-03'){\n   await page.emulateMedia({reducedMotion:'reduce'});await page.locator('#saved').click();await page.locator('#mark').click();entry.observations.reduced=await state();\n  }\n  if(id==='better-interface-01'){\n   await page.locator('#delete').click();entry.observations.deleted=await state();\n  }\n  page.off('pageerror',listener);out.cases.push(entry);\n }\n out.finished=new Date().toISOString();return out;\n}\n"
+  },
+  "measured_contrast_baselines": [
+    {
+      "pair": "caption/input #cbd5e1 vs white",
+      "ratio": 1.48470221380943
+    },
+    {
+      "pair": "rgba white .45 composited on #334155",
+      "composited_rgb": [
+        142.8,
+        150.5,
+        161.5
+      ],
+      "ratio": 3.4895794399269313
+    },
+    {
+      "pair": "white on dark-mode #94a3b8",
+      "ratio": 2.5640413904962034
+    }
+  ],
+  "source_hashes": {
+    "evals/design-role-parity-2026-10-12/fixtures/domains/README.md": "5aad732b9a5e131cd64444b08623718699587e678c2147a75497238f52a1b336",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/TASK.md": "ed02f34dc19bc44d2c227ba50cd57beb60d8612de59c27fd2113ff83bca69902",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/app.js": "6bc9307517bef39aef60fa94005cfd1aad6d4a008485b1f699b7ee411b7d19e1",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/index.html": "5716b153683919a4bd681e30e8f373ad73f16a6e1fd248beefff777462c69536",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/styles.css": "b12e32b5b946bf46bf4252876914379db2408924e0e4c334aefc8e598e9a0b79",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/TASK.md": "d25898045f4cf4ef0a77e7629854fc156f46279231e88952f7db32fe975855a2",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/app.js": "eb59c4c8ae6681c9e8d584dd16cd19b7a41624c0e7bb11c1167e536201e70eee",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/index.html": "72ef0e52cabd19011f9d92cf8d28f0891b9eaaf7c10d877fc40e54ee3e117c52",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/styles.css": "697a1e4cdd28785054552815f3c42edeb8e4634f1184bb9fb2a0487761367b93",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/TASK.md": "564caca383c50fd13acee260108a01cc32a1ee7edb2dc0f5454ce69b5e7aadba",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/app.js": "bd3fc80ca67293f5a066376650f968a4215e24931ec9b44cc29c7c481bbaaa2c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/index.html": "04e19a9df8db4085e4f895954edf4b851aa88ef2e674ab06a8959f3a8bd527b5",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/styles.css": "d5df55a90fd6a1d830309cabc993290273a6e4f3325f2788047b0c7d7e7decc3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/TASK.md": "7d709747577c5fe8b1b6fa1209ad3b68c72d8fd604874203d7828c598a71cc05",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/app/app.js": "f4f6ff529ed5d9e997404b2767ed4b8beea3ff17e78753ee08069cb7f383b043",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/app/index.html": "302ab42006f624cb234dc9b19baeb35e23525a61611254dc4465f94aa6a9e444",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/app/styles.css": "a71445bd71c2d8cccccb034a857042afe496cf6a167cd850433bad7fb73e7625",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/TASK.md": "e8911350bffdd2d3f1baec938035138145f53ed2ecc71c282e7e46fc72985afb",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/app/app.js": "f1afa61b6cf0cdd92515bd342c22352a7401455c39669b4ddd28d60e82c6d329",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/app/index.html": "d1ff27db4202fb986d77522685d3b0a51659a9bc9913ac69d54e8caef3eeb7e5",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/app/styles.css": "6fffc584b932d2c98c4f2970345e5ef905f820dcee6b7af6fda504b3fa1a7e3c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/TASK.md": "c70ea47b1c96d1f6a9381c77fd2deabf2a1a9f29be4116f428331c322e7b97f4",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/app/app.js": "89e5b49932251f76fe34a5a4e4d1be26b5c1d744b22e5a6bfba9dd273d3600db",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/app/index.html": "8cc9060775b752f71d07094fb78351da3acb7b031645b8b39ac8766b0e2471ef",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/app/styles.css": "6be4a32e40be72c9806ddbcf3e4c9a3b3b78e46b4e31651a9cafb097fb1c598a",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/TASK.md": "eecca155cf28f69fed327ab3aae972fc28570afa8b2887afaa51569c3b559f8f",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/app/app.js": "be7da93e73a56b72600c32f58542c2c80c377f02bb4fbb18bdc3d288c2b04d0a",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/app/index.html": "6230efe8844eeac8254102346b93d7be117d195c237c2818d2f244a97a9f2d5c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/app/styles.css": "4fac9f86db05ab26fa342491666de76a789b084563fdc1796aa8b253b2661a81",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/TASK.md": "ee5a6ac6dbb99653f5ed27a1cb8b1f25998450db248ac95a97c47870edb6e57e",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/app.js": "81d3aaa28eb0972e8399ed247d9a616ed2222c87a480be13778bcb2273c09069",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/index.html": "e4b0adfcdff894a4c3d2dbff7a67b4dddd5a9ecd4c102fc123b60be6c4323d50",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/styles.css": "5464219a5fb0929ad7d7ed37d2b367884fbb4ce5dff9713879fa95041b3ba201",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/TASK.md": "a7ae39896cd2876b52a0c46d132658ec205cd9959c5930996cde25afd843aa2b",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/app.js": "bd3fc80ca67293f5a066376650f968a4215e24931ec9b44cc29c7c481bbaaa2c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/index.html": "bcd448a3420bf48908d009facef0b086a4bff5a7f162ebf2d177c6fd32dfa820",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/styles.css": "d5df55a90fd6a1d830309cabc993290273a6e4f3325f2788047b0c7d7e7decc3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/TASK.md": "605a36e53a041acc88faef6ea5437f3b58048d8c15d4300b1bef25a347dea9ff",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/app/app.js": "bf2bc80445fdb03f6f003d34f000da098365522d82a168058ae88cacfdeda9ce",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/app/index.html": "c280dd912becf403f761fccd0ca5cc1524f06d0e7d29593f92280c669f4ca088",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/app/styles.css": "1fc828b247192b4c0b147738c4f14850f76a30c6603946d4ffe4752bce365746",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/TASK.md": "3181aebfd42a3bfd836411a025cfe412786283dfff06a0efc94d181f672bb034",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/app/app.js": "871b494a31d3bbc9205e22f9658bb32322a2e60d4935faabb2e5740cbd4abf4d",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/app/index.html": "3b250c1b8de6f1b9c8d0425dc5483ef0796cd00150295979c5729d1bc469a670",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/app/styles.css": "4449f650b39d5f85b432c174f0bf6ceeeffa264ce71a5635388fb8e5612636b6",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/TASK.md": "b7f9e606871b7433b4537bcc7d2c0ce0668b79e3460dc98cdb82ff1743e6ed6c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/app/app.js": "c6d4a70999a51462d231ef1d8c3cbade045fd2ba5babf7fefd5992971ab25e7a",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/app/index.html": "9eb35b84fee2b33cd0453b30b6bc42caadee4ef654c1cd0b6d6a2845457fbf9f",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/app/styles.css": "82a4582e159fe9d91dfa5ea58200cea971fb04e220568eebe2df2f60a66918e1",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/TASK.md": "340be001af1231884145cd0ac8abab5ece2b483bd9dc0603c3267c7905f171bf",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/app/app.js": "8a74c779ea677d05a7337aa6dd81899cf7cf70c1d2bb1aa878506a9f79fbb43e",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/app/index.html": "d9d421e30df32b1ba6997e7c48bca1ac081d3c0ec593802eb7e4039f2840be37",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/app/styles.css": "927be7c3cf744c57990c76a57a3db6b4c272ba458dd9d67f0ad338cdac242e56",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/TASK.md": "8b9af8eb66eec7a58e569b9dabfd2635abb684f0973088bfe319be68ccaa21ee",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/app/app.js": "71192cd2d2dc9351505f79859025a33bac1766a23d29785e8e0b747c509ac9f9",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/app/index.html": "2fbe65bfd2c124ddde8108f71612795eb95c424dd6ee75ed2b450138dee35128",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/app/styles.css": "c41dd8b49319bc65c38d971ddcf3366ce2eb80c1dbef7647046950d265941d02",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-03/TASK.md": "05b74db11a56524c8f854da0489f51ddd229b94977db58169987258ae0cf8bc0",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-03/app/PRODUCT.md": "a863f5b0a517d598c472d5a317b53e16e281c109a4429bf3060122cb7b3724ef",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-03/app/app.js": "832b53988d343c299f0524c1ee7dfeacb19d7def947cec953ebe15e6e424824e",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-03/app/index.html": "6273faf593547b3e1a1e3fce9506c53f4750f6f52faa63e7b4cefcd69d8d5900",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-03/app/styles.css": "88a09069302fe4779345e83cc4ccccacef893dd63110ca05575cee1adea99b76",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/TASK.md": "dca5fd848c8fd6ab2b3e938b17ac114bcc01d1067e70b6ec0dcaae2a5b6cbf8f",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/app/app.js": "35a49db5638db77cf964ac6e6c5dc3dfd9b5ac4ed7669b57167badc0091d541f",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/app/index.html": "27adaf78528490bfe9ecdc29dd17da55de1a6ccee881e476db6b839f2402467c",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/app/styles.css": "b3da1d3beb6206e9cda215b8d65163a282c0cab8f3a37ce81cc3f991e7b6d7b9",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/TASK.md": "fa8a55e092cbad7d9845a5102694a1a50c4423996413fb9e197ab2a069345b2d",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/app/app.js": "5688ec228095d302c3686b3aaa8da03e40ae5140789094856d5e71d893f45a5f",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/app/index.html": "85b67d35830a5395b9cb3e6fcfe9f627f197eeee0fd630f599e04c1822e36889",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/app/styles.css": "1f1f13151f5e114fdc3a9077328b8799236df5e12398bf3263116129f6961b33",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-03/TASK.md": "6d0ca533ac6d72feb07fa0579844e3856a62755c7515886e3fa52f1ed3cbea12",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-03/app/PRODUCT.md": "92bea35249b1aef8b9e88015824aa55d63cd66ced046563b5644a722a9730448",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-03/app/app.js": "80cebc853a62fe686a020b5ad6e914dfb1b619cc72173a11eb1dced549fc51d0",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-03/app/index.html": "93d84e8e6e93f236524003adfa5969e22aa7c2c2afd540258b3735070c8becc2",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-03/app/styles.css": "a6e40325d05d7437fe1b6237b9a68d331a331c1b73dda09187df2c355f871d46",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/TASK.md": "e67b2da1755d508a8ab501cd76374d86463a13f5ecf72ec5b572fc9e08195202",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/app/PRODUCT.md": "e6ab34c8c6b270b020e66baad132437c09bef1a5105e7be43e113a2d80bdaba3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/app/app.js": "872439c91c90557a0ff852ce8f5c23bb90fc7917f535786ff89f52d5e6478b36",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/app/index.html": "c1b4d0fcf61f026888e59ba15e84ff3e1d44d147f5f5e53dc6c946b14fcfd8b5",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/app/styles.css": "d5df55a90fd6a1d830309cabc993290273a6e4f3325f2788047b0c7d7e7decc3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-02/TASK.md": "fc2210b313ae60b82e474d1151c290cf3934d1a2e63d575cc0528e48993a39a8",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-02/app/PRODUCT.md": "4f014ae1f12c3335ca8ee692761c9e54952a6393e2cec52787b60416b5fb35b2",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-02/app/app.js": "9b0017f4a2643849f399418fd04eb1a6840b01b26c73081899fed6f6f670e903",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-02/app/index.html": "d26b3375210db8d1fc40a8abbb2084c06b9b8a24de7aeb5ecaa011e251f2ffa5",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-02/app/styles.css": "d5df55a90fd6a1d830309cabc993290273a6e4f3325f2788047b0c7d7e7decc3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-03/TASK.md": "f62d15de5e70b75c5e0de979f7fc1ef499227bb30e5aecd790c64df3be5ad195",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-03/app/PRODUCT.md": "1e2d55fd55a487486ad3bd6d7197aefa46c426f98287b4aca93502cbfa7a0af5",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-03/app/app.js": "12b87e597ba8ac842c439f140ba07d3ff468033dbddf77bde76f89672d5d147a",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-03/app/index.html": "202bbe7ee3f0b5090b1d571d697b47fbf1108683505fb1c87778e5c9da6053c1",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-03/app/styles.css": "d5df55a90fd6a1d830309cabc993290273a6e4f3325f2788047b0c7d7e7decc3",
+    "evals/design-role-parity-2026-10-12/fixtures/domains/cases.json": "ae11c5b2e8c4ec819644600e906f07bcfc894fe0ce6c07aa7070fd2aa66564ba"
+  }
+}

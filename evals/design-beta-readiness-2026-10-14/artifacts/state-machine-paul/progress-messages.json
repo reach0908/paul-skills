@@ -1,0 +1,9 @@
+[
+  "`state-machine` 스킬과 그 브라우저 검증 지침(`design-browser`)을 먼저 읽고, `TASK.md`의 허용 범위와 입력만 사용해 작업하겠습니다. 이후 지정된 Playwright 세션 하나로 모든 상태를 확인하고, 결과와 검증 한계를 `output/report.md`에 기록하겠습니다.",
+  "작업 범위는 `app/queue.js`의 `renderQueueCard` 한 컴포넌트입니다. 프로덕션 분기와 데이터 경계를 확인해 도달 가능한 상태만 정의하고, 원본 컴포넌트·스타일은 건드리지 않은 채 `app/states/` 아래의 삭제 가능한 단일 작업대 폴더로 구성하겠습니다. 브라우저에서는 URL/reload와 키보드 동작까지 실제 관찰합니다.",
+  "분기 분석 결과 작업대 상태는 `no-access`, `loading`, `error`, `empty`, `one-item`, `typical`, `long-list`, `refreshing`, `locked`, `refreshing-locked`로 정했습니다. `canEdit` 선행 반환, `status`, 빈 배열, 갱신 표시, 잠금 표시의 실제 조건만 사용하며, 요금제·소유자 역할·기능 플래그·페이지네이션처럼 코드에 없는 상태는 만들지 않습니다. 이제 이 상태 목록과 스위처를 한 폴더에 구현합니다.",
+  "작업대가 실제 컴포넌트를 import해 열렸고, 기본 URL은 `__state=typical`로 정규화되었습니다. 콘솔 오류 없이 실제 제목 6개가 렌더링되는 것을 확인했습니다. 다음으로 각 상태를 직접 URL로 열어 구조·개수·ARIA 상태를 확인하고, reload 및 실제 키 입력 시나리오를 검증하겠습니다.",
+  "10개 상태의 예상 항목 수·잠금 수·`aria-busy`·대표 문구·활성 스위처를 모두 대조했고 10/10이 일치했습니다. reload는 `one-item`을 유지했고, 화살표·숫자 8·H 토글·스위처 클릭도 URL과 화면을 함께 갱신했습니다. 입력에 포커스된 동안에는 같은 키가 입력값에만 반영되고 상태/스위처는 바뀌지 않았습니다. 마지막으로 데스크톱·좁은 화면 캡처와 오버플로 측정을 남기겠습니다.",
+  "상태 작업대와 한국어 보고서를 모두 작성했습니다. 작업대는 `app/states/queue-card/`만 삭제하면 정리되고, 원본 컴포넌트·스타일·프로덕션 페이지는 변경하지 않았습니다. 최종 파일과 문법을 확인한 뒤 지정된 Playwright 세션만 닫겠습니다.",
+  "완료했습니다.\n\n- 실행 URL: <http://127.0.0.1:48914/runs/state-machine-paul/app/states/queue-card/?__state=typical>\n- 작업대: [index.html](/private/tmp/paul-beta-readiness-20261014/public/runs/state-machine-paul/app/states/queue-card/index.html)\n- 상태·fixture 로직: [queue-card-states.js](/private/tmp/paul-beta-readiness-20261014/public/runs/state-machine-paul/app/states/queue-card/queue-card-states.js)\n- 한국어 결과 보고서: [report.md](/private/tmp/paul-beta-readiness-20261014/public/runs/state-machine-paul/output/report.md)\n\n도달 가능한 10개 상태, URL/reload, 화살표·숫자키·H, 입력 중 단축키 무시, 좁은 화면과 스크롤 유지를 Playwright CLI로 확인했습니다. 캡처는 `output/captures/`에 보존했습니다.\n\n원본 컴포넌트와 스타일은 수정하지 않았으며, 지정된 브라우저 세션만 닫았습니다. 작업대는 `app/states/queue-card/` 폴더 하나를 삭제하면 정리됩니다."
+]

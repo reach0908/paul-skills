@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>문서 관리 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>문서 관리</h1>
+
+<section class="panel"><h2>프로젝트 문서</h2><label for="query">문서 검색</label><input id="query" name="query" placeholder="회의록"><div id="results"><p id="doc">Studio 발표 자료 · 공유 멤버 4명</p><button id="remove" class="danger">문서 삭제</button></div><p id="empty" hidden>No results.</p></section>
+<dialog id="dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">Are you sure?</h2><p>정리할 준비가 됐나요?</p><div class="row"><button id="cancel" autofocus>No</button><button id="confirm" class="danger">Yes</button></div></dialog><p id="status" class="status" role="status"></p>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+{
+  "case": "implicit-diff-r2",
+  "threadId": "01a137d0-612b-7b50-8799-e00e85498bb4",
+  "turnCompleted": true,
+  "receipt": {
+    "name": "implicit-diff-r2",
+    "command": [
+      "codex",
+      "exec",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/paul-design-install-20261014/cases/implicit-diff-r2",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-install-discovery-20261014/implicit-diff-r2.final.md",
+      "-"
+    ],
+    "startedAt": "2026-10-14T00:29:25.256341+00:00",
+    "history": "new exec, no resume, prompt contains no previous messages",
+    "exitCode": 0,
+    "completedAt": "2026-10-14T00:31:25.382898+00:00"
+  },
+  "skillHeadersInSuccessfulReadOutputs": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing"
+  ],
+  "commandCount": 14,
+  "prompt": "현재 작업 트리의 미커밋 변경이 UI를 나쁘게 만들었는지 검토해 주세요. 읽기 전용이며 브라우저 실행은 필요 없습니다.\n",
+  "final": "네. 시각적 모양은 그대로지만, 키보드 접근성이 악화된 `HIGH` 회귀가 1건 있습니다.\n\n### 범위와 결과\n\n작업 트리의 유일한 변경인 정적 HTML/CSS/JS 파일 한 줄만 검토했습니다. 프로젝트 규약 문서는 없었으며 기존 문제는 범위에서 제외했습니다.\n\n| 분야 | 결과 |\n| --- | --- |\n| 접근성 | 회귀 1건 |\n| 레이아웃·문구·타이포그래피·색상·UI 디테일 | 변경 영향 없음 |\n\n### 발견 사항\n\n| 심각도 | 상태 | 위치 | 현재 | 수정 | 이유 |\n| --- | --- | --- | --- | --- | --- |\n| HIGH | Introduced | [index.html:6](/private/tmp/paul-design-install-20261014/cases/implicit-diff-r2/index.html:6) | `<button … tabindex=\"-1\">` | `tabindex=\"-1\"` 삭제 | 세 번째 카드 버튼이 Tab 순서에서 제외됩니다. 포인터로는 열 수 있지만 키보드로는 접근할 수 없어 WCAG 2.1.1 Keyboard를 위반합니다. |\n\n`tabindex=\"-1\"`은 JavaScript로 초점을 이동할 요소에 쓰는 값인데, 이 코드에는 해당 버튼을 `focus()`하는 경로도 없습니다.\n\n검증:\n\n- `git diff --check`: 통과\n- 버튼, `tabindex`, 클릭 및 포커스 처리 정적 검사: 키보드 대체 경로 없음\n- 브라우저·런타임 검증: 요청에 따라 실행하지 않음\n- 파일 수정: 없음\n\n**판정: Block** — `tabindex=\"-1\"`을 제거하기 전에는 반영하지 않는 것이 좋습니다.",
+  "rawEvents": "/Users/jinhokim/dev/paul-skills/.scratch/design-install-discovery-20261014/implicit-diff-r2.events.jsonl",
+  "rawEventsSha256": "aed2ee0c3a281cfa83ed03e4c9f771d10ef2a7207ce9cf987d50067e54e378ca"
+}

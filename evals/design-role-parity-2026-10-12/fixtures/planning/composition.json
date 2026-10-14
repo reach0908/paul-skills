@@ -1,0 +1,92 @@
+{
+  "schema_version": 1,
+  "id": "seed-pickup-five-stage",
+  "separate_from_role_cases": true,
+  "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/composition",
+  "preparation": "Copy outside existing Git checkouts, then python3 prepare.py",
+  "invariant_source": "brief.md#traceable-requirements",
+  "invariants": [
+    "I1",
+    "I2",
+    "I3",
+    "I4",
+    "I5",
+    "I6"
+  ],
+  "stages": [
+    {
+      "stage": 1,
+      "role": "information-architecture",
+      "task": "stages/01-ia.md",
+      "timeout_seconds": 240,
+      "inputs": [
+        "brief.md"
+      ],
+      "outputs": [
+        "design/ia.md"
+      ]
+    },
+    {
+      "stage": 2,
+      "role": "user-flow",
+      "task": "stages/02-flow.md",
+      "timeout_seconds": 240,
+      "inputs": [
+        "brief.md",
+        "design/ia.md"
+      ],
+      "outputs": [
+        "design/flow.md"
+      ]
+    },
+    {
+      "stage": 3,
+      "role": "wireframe",
+      "task": "stages/03-wireframe.md",
+      "timeout_seconds": 240,
+      "inputs": [
+        "brief.md",
+        "design/ia.md",
+        "design/flow.md",
+        "app/tokens.css"
+      ],
+      "outputs": [
+        "design/index.html",
+        "design/screens.md"
+      ]
+    },
+    {
+      "stage": 4,
+      "role": "build-design",
+      "task": "stages/04-build.md",
+      "timeout_seconds": 240,
+      "inputs": [
+        "brief.md",
+        "design/ia.md",
+        "design/flow.md",
+        "design/index.html",
+        "design/screens.md",
+        "app/"
+      ],
+      "outputs": [
+        "app/index.html",
+        "design/build-report.md"
+      ]
+    },
+    {
+      "stage": 5,
+      "role": "interface-review",
+      "task": "stages/05-review.md",
+      "timeout_seconds": 240,
+      "inputs": [
+        "brief.md",
+        "baseline.json",
+        "design/",
+        "app/"
+      ],
+      "outputs": [
+        "review/report.md"
+      ]
+    }
+  ]
+}

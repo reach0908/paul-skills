@@ -15,6 +15,8 @@ You invoke this by typing `/ask-matt`; the agent won't reach for it on its own.
 | Two skills that look interchangeable | The line between them, and it is usually one concrete test rather than a matter of taste. [grill-me](https://github.com/reach0908/paul-skills/blob/main/docs/productivity/grill-me.md) or [grill-with-docs](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/grill-with-docs.md) turns on whether you are in a working directory; [grill-with-docs](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/grill-with-docs.md) or [wayfinder](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/wayfinder.md) turns on whether the effort fits one session |
 | A long session and a decision about the [context](https://www.aihero.dev/ai-coding-dictionary/context) | The ordered tree over the five options at a phase boundary |
 | A question needing source evidence before a decision | [research](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/research.md), using local material directly and Aside CLI for web discovery |
+| Planning is settled and screens need to take shape | [information-architecture](https://github.com/reach0908/paul-skills/blob/main/docs/design/information-architecture.md), [user-flow](https://github.com/reach0908/paul-skills/blob/main/docs/design/user-flow.md), [wireframe](https://github.com/reach0908/paul-skills/blob/main/docs/design/wireframe.md), then [build-design](https://github.com/reach0908/paul-skills/blob/main/docs/design/build-design.md); start at the first unresolved step |
+| An interface needs review | [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) for a screen, or an explicit [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) invocation for a change; focused domain skills when the issue is already bounded |
 | A skill you have already picked | Nothing useful. Invoke that skill directly. |
 
 ## Prerequisites
@@ -25,11 +27,12 @@ The tracker-dependent routes (triage, `to-spec`, `to-tickets`, `implement`) assu
 
 ## Flows, not skills
 
-The skill's leading word is **flow**, a path *through* the skills rather than a single skill. When you name your situation, the router places you at a step on a flow. That is a different answer from "here is the skill that matches your keywords". There are five kinds of route, and the skill itself describes them in full:
+The skill's leading word is **flow**, a path *through* the skills rather than a single skill. When you name your situation, the router places you at a step on a flow. That is a different answer from "here is the skill that matches your keywords". There are six kinds of route, and the skill itself describes them in full:
 
 - **The main flow**, idea to ship. Grill, spec, tickets, implement (one ticket at a time, or the whole task graph in parallel with [implement-spec](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/implement-spec.md)), review, then [retro](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/retro.md), which feeds what the build taught back into the agent's environment. It has two branches. One is a prototype detour, for when a question needs runnable code to settle it. The other is the spec-and-tickets split, which is only worth its cost when the build spans more than one session.
 - **On-ramps**, for a situation that generates work and then merges onto the main flow: incoming bug reports, something broken, or an effort too foggy and too large to hold in one session.
 - **Codebase health**, upkeep rather than feature work. [improve-codebase-architecture](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/improve-codebase-architecture.md) surveys the code for deepening opportunities, and each one it finds re-enters the main flow as an idea.
+- **Design**, from agreed content and task transitions through local wireframes and an approved build. For an existing interface: a complete screen review, an explicitly invoked change review, or one focused domain. [design-browser](https://github.com/reach0908/paul-skills/blob/main/docs/design/design-browser.md) supplies browser observations while the reviewer owns the verdict.
 - **Standalones**, which sit off every flow and which you use on their own: the prototype, the questionnaire, the research run.
 - **A vocabulary layer underneath**, the two references the other skills pull in when the words rather than the process are the problem.
 
@@ -46,6 +49,10 @@ The skill's other key idea is the **phase boundary**. A phase is a chunk of work
 | **`/compact`** | None of the above. It is the default, and the tree often ends here |
 
 People often get two of these wrong, which is why the router gives the order and not only the list. `/handoff` looks like the general way to move between context windows, but it is not. All it gives you is portability. `/compact` is the last option in the tree, not the first, because each of the four options above it is cheaper or more precise.
+
+An existing UI can remain unchanged after a prototype comparison. The router returns to implementation only when the decision calls for a change.
+
+Component workbenches remain explicit choices: [state-machine](https://github.com/reach0908/paul-skills/blob/main/docs/design/state-machine.md) exposes existing states, [break](https://github.com/reach0908/paul-skills/blob/main/docs/design/break.md) observes hostile-content failures, [variant](https://github.com/reach0908/paul-skills/blob/main/docs/design/variant.md) compares directions, and [explain-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/explain-interface.md) explains a reference. The router recommends these; the user invokes them.
 
 ## Product, design and engineering
 
@@ -68,7 +75,7 @@ People keep asking for one in the README. This skill is that list. A static tabl
 
 **It told me half the skills aren't installed.**
 
-This is a known bug, and it is not fixed. Most of the skills the router routes you through set `disable-model-invocation: true`, which means the harness leaves them out of the skill list it injects into the agent's context. The agent reads that list as exhaustive and reports them missing. In one reported session, it declared the whole spec-and-tickets flow absent and rerouted to bare `/grilling` and `/tdd`. Sixteen of the plugin's twenty-seven skills carry the flag, so this is the common case rather than an edge. They are installed. Type the slash command anyway, or check `.claude-plugin/plugin.json`, which is the authority on what is present.
+This is a known bug, and it is not fixed. Most of the skills the router routes you through set `disable-model-invocation: true`, which means the harness leaves them out of the skill list it injects into the agent's context. The agent reads that list as exhaustive and reports them missing. In one reported session, it declared the whole spec-and-tickets flow absent and rerouted to bare `/grilling` and `/tdd`. User-invoked skills deliberately carry this flag. They are installed. Type the slash command anyway, or check `.claude-plugin/plugin.json`, which is the authority on what is present.
 
 **It described a skill's behaviour, and the skill doesn't do that.**
 

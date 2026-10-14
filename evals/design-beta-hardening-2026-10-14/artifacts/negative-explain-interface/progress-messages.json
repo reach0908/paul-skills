@@ -1,0 +1,6 @@
+[
+  "지정된 작업공간의 `TASK.md`와 그 안에서 명시한 입력·로컬 스킬만 확인해 바로 작업하겠습니다. 외부 저장소나 이전 결과는 열지 않고, 산출물은 모두 이 작업공간 안에만 작성하겠습니다.",
+  "이 요청은 코드 구현이나 화면 분석이 아니라 짧은 인터페이스 기술 설명 작성에 해당하므로, 로컬 `better-writing` 스킬의 지침만 적용해 문단과 최소 예제를 구성하겠습니다. 브라우저는 사용하지 않습니다.",
+  "핵심 구분은 “무엇을 샘플링해 흐리게 하는가”입니다. `filter`는 요소가 그린 결과 전체를, `backdrop-filter`는 요소 뒤편의 픽셀만 처리한다는 점이 예제에서 바로 드러나도록 정리해 두겠습니다.",
+  "`filter: blur(8px)`는 해당 요소와 그 안의 텍스트·이미지 등 렌더링 결과 전체를 흐리게 하지만, 요소 뒤의 배경에는 영향을 주지 않습니다. 반면 `backdrop-filter: blur(8px)`는 요소 뒤로 비치는 배경만 흐리게 하므로 요소 안의 텍스트는 선명하게 유지됩니다. 효과가 보이도록 보통 요소 배경을 투명하거나 반투명하게 설정합니다.\n\n```html\n<div class=\"scene\">\n  <div class=\"card filter\">이 글자까지 흐려집니다</div>\n  <div class=\"card backdrop\">이 글자는 선명합니다</div>\n</div>\n\n<style>\n  .scene { background: url(\"background.jpg\") center / cover; }\n  .card { padding: 20px; background: rgb(255 255 255 / 30%); }\n  .filter { filter: blur(8px); }\n  .backdrop { backdrop-filter: blur(8px); }\n</style>\n```\n\n결과는 [ANSWER.md](/private/tmp/paul-beta-hardening-20261014/public/runs/negative-explain-interface/ANSWER.md)에 저장했습니다. 요청에 따라 브라우저 렌더링 검증은 하지 않았으며, 예시의 `background.jpg`는 설명용 경로입니다."
+]

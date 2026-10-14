@@ -1,0 +1,195 @@
+[
+  {
+    "case": "state-machine-audit-states",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "25d7ca3092b9e50f4e1941f188d3aed8c2d77c90015fccde7830d440ae6e852e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "dcc796a9acb76044c471ce68176c8028d80855384255c1cd2afa922650ab3e4b",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/audit-log.js",
+        "pass": true,
+        "actual": "b2149b81b571f1af17f919d07ac4fd0ec1dbb751accc9981a1031fdbf5b093d6",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "data.js",
+        "pass": true,
+        "actual": "97f430074a4da4d45ce3e676e2b4a7ea9c38f888aea438052f820566f6fe6108",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "321267a5a3f80752355e5251833888a59e268a9cb42ff99e5cff42a95353a42e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "exists",
+        "path": "workbench/audit/index.html",
+        "pass": true,
+        "actual": true,
+        "meaning": "Runnable state workbench delivered."
+      },
+      {
+        "type": "tree_contains",
+        "path": "workbench/audit",
+        "pass": true,
+        "actual": {
+          "audit-log.js": true,
+          "__state": true
+        },
+        "meaning": "Harness imports actual component and supports state URLs."
+      }
+    ]
+  },
+  {
+    "case": "state-machine-queue-boundaries",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "53864ff91cb0598fcc41b80e05d7d75f4e811a3bd69041e6c13145dc6dfc4986",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "69fc2aa4c694d7794ee78aea547b0ddd9a21a7eedc15331a5031756567428515",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/upload-queue.js",
+        "pass": true,
+        "actual": "9fa3ca7b4ebd4340fa2bca0d8221dc31785c77ddd700af469c719be9a5e111f8",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "data.js",
+        "pass": true,
+        "actual": "83f6c380bd3bf07cef32f3b1d01f460c0688fa347100cdd435b897520774bfea",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "41870392ad123752698fa1a214987bafdbf4ac5395214c1efc779087bbcfbfb8",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "DESIGN-NOTES.md",
+        "pass": true,
+        "actual": "99ac73dc190eb5fa8b3706155a0d624ae4b8df96737625cdc550e0d2c6f39363",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "exists",
+        "path": "workbench/uploads/index.html",
+        "pass": true,
+        "actual": true,
+        "meaning": "Edge-state workbench exists."
+      },
+      {
+        "type": "tree_contains",
+        "path": "workbench/uploads",
+        "pass": true,
+        "actual": {
+          "upload-queue.js": true,
+          "__state": true
+        },
+        "meaning": "Real component import and state permalink."
+      }
+    ]
+  },
+  {
+    "case": "state-machine-remove-workbench",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "25d7ca3092b9e50f4e1941f188d3aed8c2d77c90015fccde7830d440ae6e852e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "dcc796a9acb76044c471ce68176c8028d80855384255c1cd2afa922650ab3e4b",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/audit-log.js",
+        "pass": true,
+        "actual": "b2149b81b571f1af17f919d07ac4fd0ec1dbb751accc9981a1031fdbf5b093d6",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "data.js",
+        "pass": true,
+        "actual": "97f430074a4da4d45ce3e676e2b4a7ea9c38f888aea438052f820566f6fe6108",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "321267a5a3f80752355e5251833888a59e268a9cb42ff99e5cff42a95353a42e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "docs/state-policy.md",
+        "pass": true,
+        "actual": "6d920c0f315cce6ff6fa72c9b35bb04757c2a9bc7d332cb5cbf6f65ff88cd888",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "server-notes.txt",
+        "pass": true,
+        "actual": "8b9378f93217bc3c535a312328597bbfc61f39ef1f428d2b9bdac31a2e8d6cf3",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "absent",
+        "path": "workbench/audit",
+        "pass": true,
+        "actual": false,
+        "meaning": "User-authorized workbench removal completed."
+      },
+      {
+        "type": "tree_not_contains",
+        "path": ".",
+        "pass": true,
+        "actual": {
+          "previewAuditFixtures": false,
+          "workbench/audit": false,
+          "__state": false
+        },
+        "meaning": "Temporary route, data and selector references removed from app source."
+      }
+    ]
+  }
+]

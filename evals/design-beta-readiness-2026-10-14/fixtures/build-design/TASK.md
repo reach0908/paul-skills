@@ -1,0 +1,1 @@
+REFERENCE.md와 ref/의 승인된 로컬 시안에 맞춰 app/index.html의 #target만 구현해 주세요. 파일 수정은 app/index.html·app/style.css로 제한하고 기존 app.js 동작 및 주변 영역은 보존합니다. 실제 이미지/HTML과1280×900·320×700에서 비교하고 pending/error/empty/disabled 및 키보드 동작도 확인하세요. output/report.md에 source revision, 각폭 캡처, 맞춘 값과 미결 시각처리를 남기세요. 사용자 선택은 이미 승인된 상태입니다.

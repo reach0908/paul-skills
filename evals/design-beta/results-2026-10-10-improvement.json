@@ -1,0 +1,2019 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-10",
+  "purpose": "Repair observed review omissions and validate input-specific build behavior without promotion",
+  "baseline": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+  "settings": {
+    "model": "inherited; exact identifier not exposed",
+    "effort": "inherited; no override",
+    "tokenUsage": null,
+    "cost": null,
+    "budgetPerArm": "7 minutes, 45 browser CLI invocations requested; actual limits in each execution record",
+    "tools": "Microsoft playwright-cli 0.1.22 and Chrome 152.0.7977.82",
+    "isolation": "fresh agent contexts, explicit arm-local files, shared host and filesystem; automatic skill discovery untested",
+    "control": "original vs Paul; no no-skill arm"
+  },
+  "changes": [
+    {
+      "id": "better-accessibility",
+      "before": "sha256:238ace6229a5f49e09d484559358cccab80d4db45c2fb9755a25445ac8296c04",
+      "after": "sha256:1ae4a7c9343f687cc01fabfb940d0206d477947276f833652221235c0e5853d9",
+      "paths": [
+        "SKILL.md",
+        "forms.md"
+      ]
+    },
+    {
+      "id": "better-colors",
+      "before": "sha256:aece11072150298b3bdf65d0d62949f32bbbc3c43a01190f3ae532240fe68880",
+      "after": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+      "paths": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "better-interface",
+      "before": "sha256:8884945622252193f55049216de11e466c6de3b221699ac70b4c00ac447a427d",
+      "after": "sha256:242d3a9f5e70f3863bc23287bface5eb64f25492740ef1d851b170846b62e7cb",
+      "paths": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "better-typography",
+      "before": "sha256:4946d1418abef818dfea119f31ab1d4b61b17234867f2e28f254e20bf7505a0d",
+      "after": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+      "paths": [
+        "wrapping-and-punctuation.md"
+      ]
+    },
+    {
+      "id": "better-writing",
+      "before": "sha256:213903b6f9b1cf684f5ba49d4b00f1980027b885008072d77eb12fc1a1509ae6",
+      "after": "sha256:b230bc4d0f351826898219c84ed202762be2874b9ed7b61b53d13ae0c3429e2e",
+      "paths": [
+        "SKILL.md",
+        "patterns.md"
+      ]
+    },
+    {
+      "id": "build-design",
+      "before": "sha256:1befb8208f0b35e06be0d20c47b10ba4703b81803f34c0e7f49fdf89f0260499",
+      "after": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+      "paths": [
+        "SKILL.md"
+      ]
+    },
+    {
+      "id": "design-browser",
+      "before": "sha256:4829e7013f50ce6a183e6f498e6cb0d38d2e816d3c655e7676027ac8a0bb6dae",
+      "after": "sha256:02e585b10a44417aca0ae01d6facd5278ecadd5da838dad9e91a47d4495c7416",
+      "paths": [
+        "SKILL.md"
+      ]
+    }
+  ],
+  "sourceAudit": "source-audit-2026-10-10-repair.json",
+  "arms": {
+    "r1-a": {
+      "arm": "upstream",
+      "candidate": "v1",
+      "case": "reading-list-review-v1-retest",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r1-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r1-a/output/execution.json",
+      "outputs": {
+        "output/console-evidence.txt": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+        "output/contrast-long-invalid-evidence.txt": "52a05def14bac26ae58b5e26a3d17a3654505ad5edb5cbc62c04603849a57be8",
+        "output/desktop-initial.png": "cf94ab78635e7a5fdb733b17ba85fb5acbc718acc68a92d3322edb0957534392",
+        "output/empty-320.png": "01a9d1dfb0db51bd9224bf6a60467d9e2d8b0d95dc58bf27d71830f20afdaca8",
+        "output/execution.json": "c4dbfa6e30dcbb82c8a788f55d365abc3d423cced9d7d8239e0c7278b15b4731",
+        "output/failure.png": "79f4cc7d3742095cd7c1620aab175fa6767787f862ea8fef60356f501e287c1d",
+        "output/initial-console.log": "5828aa11b5ab7839c265da96cd6690eec988cb83f5c20a4252cc5c46cccb8638",
+        "output/initial-structure.yml": "e712151fcde8f7966fdede29bf504a8d5db230d8a85c438d964a8347a3dda517",
+        "output/keyboard-evidence.txt": "9b11f35eb638e63bfcac900a0a064a5f2b265a417a98c51a26f2d450e97ca517",
+        "output/keyboard-save-focus.png": "4cfe59107efcfb975f8e848376348abd72151d4eddd15396fa95cd79f20e16be",
+        "output/long-url-320.png": "c4c6a826cd7291a1bd3721809580a6d4009b1abf905b7bd8801ffd4535ae22b9",
+        "output/long-url-row-320.png": "ae8a795cb503d5d4ca0126c2cca6dff9bfc949e6a93952404285e95f9520b93e",
+        "output/long-url-row-evidence.txt": "7da43afecb8b92da55023c5148d33bdfa523893a51bca2712ee882f317a6d492",
+        "output/repeat-and-icons.png": "013ca51b0fbf2d9bd261df114881fd842a052b9d019370e08fc78bd53779131e",
+        "output/repeat-type-evidence.txt": "a52f11c258f3845d5a2331d829ad4c2cbd9765ebebc281cc7e103facea4fe498",
+        "output/responsive-remove-evidence.txt": "09cf1a724293d587e2a17ff94ae1021df254fa3988b78925d58d66c015667138",
+        "output/review.md": "c7e2bafcddbac38154800aa9d27b67de6cc1296534abdcd19e3c568fdd53e488",
+        "output/session-close.txt": "9147fcc68ce45f30b3914d3ac47e77e6a27b03e9cd4fb1212001b9a5bc2e506a",
+        "output/states-evidence.txt": "687d9ccbcf240a3b4afda23d212b5d4dd602db24b9d2e5de5857bbf937c7269b",
+        "output/success-reduced.png": "ac34de795d99a0a3821af795f0e77dd61a2bd7612f27040b856849c53bf60769",
+        "output/viewport-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744",
+        "output/width-320.png": "e3ad701d546d7985aa6f1ad9445cb7bbe7a33134031a67237be0bcef86041b5f",
+        "output/width-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 3,
+        "LOW": 2
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "duplicate-submit",
+          "icon-consistency",
+          "tabular-numerals"
+        ],
+        "notReported": [
+          "post-delete-focus"
+        ]
+      }
+    },
+    "r1-b": {
+      "arm": "paul",
+      "candidate": "v1",
+      "case": "reading-list-review-v1-retest",
+      "bundleDigest": "a8a4b3a787388c367a24a3695823a0d312fdd7f7f84c6d51b8da455bc91e622b",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r1-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r1-b/output/execution.json",
+      "outputs": {
+        "output/console.log": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+        "output/desktop-metrics.log": "8fb9034039f763bfd57181bbe407cda77527ab2d38c4867e63f3264d264698e5",
+        "output/desktop.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/domain-notes.md": "1646c210a2291296c9606dfd4f713c9d934ee85ec341d768ad4ec7445f5abf67",
+        "output/empty-320.png": "4e9bd316e4a12dbde8ecf785e00d4d0a0b1689ef5a592a1e2967f77dfb9f0161",
+        "output/empty.png": "efc75eab0b8aeba2453aad79c26414790e6f0b4908b5d7050abc08b68dd06e3e",
+        "output/execution.json": "66beb880c326dd4c11882acb6fff057cc3dc5c0d7b6c1eb667e627531c0e277c",
+        "output/failure-320.png": "ad0d05df3985aac92c9a31dcd1af3ef51964014e027d9a4ab05b3c3fd500873e",
+        "output/failure.png": "6ecea3f91651189995c808c64d4dc36c6c5b1528020c7a7b71832e97a9e1ec25",
+        "output/final-check.js": "e30156433363f10231b32d0f8b2530a7a7fe59d7b2bf61b4094e4cd29c7ee9e8",
+        "output/final-check.log": "72a6f418d1245ede48049ae667bdf57b70fe0f0cbbe7a9e9408070b589c980fc",
+        "output/final-success.png": "24d3fd6e0692243cee1d8b958cae5da5db3952366d2cf61f59b6f4ceba79a78a",
+        "output/flow-check.js": "b97964251270d22ac1db0968cfe13e63ea13aa7bf601583e6fef8e81b4357ac3",
+        "output/flow-check.log": "f9b77c4e5172fe5b96d61473f03d8cb3590f49f1ed5eedec388beef6a2f4d6b0",
+        "output/keyboard-focus.png": "4cfe59107efcfb975f8e848376348abd72151d4eddd15396fa95cd79f20e16be",
+        "output/long-url-320.png": "0152391e28aa8c3162cb952f0f1086ddcd967d09be7226bd5f19abfeb2f37bf6",
+        "output/narrow-320.png": "e3ad701d546d7985aa6f1ad9445cb7bbe7a33134031a67237be0bcef86041b5f",
+        "output/narrow-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a",
+        "output/reduced-motion.png": "9c0d244e9f89dde876e2ac424a064f2d8a2bceb2622584bb0e1423dbcc4b48cc",
+        "output/responsive-motion-check.js": "b37f11deda34cd2eeb6b1dae04577a17d3abe7b9b3b9dbef37864600c2db427b",
+        "output/responsive-motion-check.log": "35505c34838a3f785e510448dc4d428573026480b27e827516ffe88bd3381ef2",
+        "output/review.md": "b0147e2d1a6d91f899ec9d6bb134b4a56934b0d282211f5914fcfcfad32ecfff",
+        "output/session-close.log": "91fe63b73c21334aa519c5ecb998bfa53abdc469837ad1d85d9c9a5e677f978e",
+        "output/success.png": "57e3e206d7464fe4238f6f43b88a2e9a6b915de97c7e4c3f4fa95cb0f0b55ec2",
+        "output/viewport-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 4,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "duplicate-submit",
+          "icon-consistency",
+          "tabular-numerals"
+        ],
+        "notReported": [
+          "post-delete-focus"
+        ]
+      }
+    },
+    "r2-a": {
+      "arm": "upstream",
+      "candidate": "v1",
+      "case": "export-jobs-v1",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r2-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r2-a/output/execution.json",
+      "outputs": {
+        "output/close.log": "e6f42c4ab25599f3175a272c8091547a09dc372d7e2ebd11c2edf57179f507f2",
+        "output/computed.log": "e154e0fad37150c136df2fe86b3173ab79638e99b36aeecd37e45d8f3feac4a0",
+        "output/console.log": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+        "output/desktop-inspection-retry.log": "30b8497435d8b09a56e80a6a96e645c0d67d15ba84ad21ead9d684f702c9c79a",
+        "output/desktop-inspection.log": "d9d6e086adbd52f61386b9fef6c05cb665d122950cd3f56eeabe90bb0e83160c",
+        "output/desktop.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/execution.json": "6b7b793b0d6fde3edf6266f0e0ac9ac4a6c8f1b671a1100e1eb06de98185a20f",
+        "output/failure.png": "31cea61ed801c90bed7a9651de12dcfdf4504626ae91a9b490d40a6cfb3ff1fd",
+        "output/focus-computed.log": "ca50461f58338306796693ebbab9d0fdfc71da2f028f3ad33e002e4749d3bedd",
+        "output/keyboard-focus.png": "bfc68ecd84c0184654101d187dd4f741938091698b413cdf7a5cb660db0a3b30",
+        "output/keyboard-return.log": "6d9daf546fee2ae1a2058637743d4bb36cbaa0c7142c5c4d14aca73548e007d4",
+        "output/review.md": "82979a10a4110899820d1dd77330c46802d53adc2aff04780bc163b80c8c3786",
+        "output/runtime-probe-return.js": "a3c6cfc5bf596596d62155ce9b0ee97f54d2eb360344f65b28690a617f8092ea",
+        "output/runtime-probe.js": "63f0b86c244258957d5649ebc38ad33d17c3d1bc59bc8299eb9d7b9782259038",
+        "output/runtime-return.log": "eab48109a30d8d4e0c200a6fd31fbe4b875af8cb3ce276a535c97e608baecc1e",
+        "output/runtime.log": "c0136da32adb03cfed499b880551e4dce4a182f16fffc0164d2faa46c2bccd8a",
+        "output/width-320.png": "5ffd6acc9e5a0b30dace53bd2f4b26d93d55744e2a42541fcd8bbe88c717e9ad",
+        "output/width-390.png": "26a4d371521bac261dbd65c9756661686420d4ea7ed69e963e44105b78433ce0"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding"
+        ],
+        "notReported": [
+          "voice-policy",
+          "status-graphic-contrast"
+        ]
+      }
+    },
+    "r2-b": {
+      "arm": "paul",
+      "candidate": "v1",
+      "case": "export-jobs-v1",
+      "bundleDigest": "a8a4b3a787388c367a24a3695823a0d312fdd7f7f84c6d51b8da455bc91e622b",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r2-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r2-b/output/execution.json",
+      "outputs": {
+        "output/320-error.png": "0ad83e7dec40b0c5b887240e5218204ab17017e34e0bee14664c6d44d0d8c9ac",
+        "output/320-success.png": "9664f7ebccb337c25757b3c6692b9a4dece43c4e351cf46f8b85635346affc2a",
+        "output/320-viewport-crop.png": "9426594b890bb2dfbe1dd0608b809a0ff836c4e35ff70cd004146a0a6474d7d6",
+        "output/browser-results.json": "48d521065e1b07d5cbd657b2ea0d4e0700ccbb69550e6a49ce172b0de84f0156",
+        "output/browser-results.log": "ea24e85c46e6ac1bba3d5afb163a061940a095eaf3a2d6e60d6fe04f12ab1b42",
+        "output/browser-review.js": "c69409abb03a201fb206c91f62bf998e970bbdf08c34231f0252a1822e1c0262",
+        "output/close.log": "39d2a519af679ecaeade02c7a8f1caf33789916ca30b9a1d79e20d09c8423a3f",
+        "output/contrast.json": "ce6b16d9aadcc951cfc26698dca2f7a5a2b6a26c0358abe97f1a8b16f2b914c2",
+        "output/error.png": "9d46f9f1f5a7363db8e3722e9f2fc51a8d4bd26b39e03ae286f504c321048c65",
+        "output/execution.json": "a3c4da2bb087c0e0609ea08ae17662653c3c79fa8c90a9da0ec7df625aff0367",
+        "output/focus-create.png": "bfc68ecd84c0184654101d187dd4f741938091698b413cdf7a5cb660db0a3b30",
+        "output/followup-browser.js": "17b0537ffd1414a2a933ab7256d6ce6f56cd6334f65df07b905dd5093b9a3717",
+        "output/followup-results.json": "938b24e0b88d1071be07d144c028761a543ff2cc3cd162c61308a1590e371d7c",
+        "output/followup-results.log": "ec04b147e8e4920ef8b60c4824b4e6526c6d5e273cdedbccde40cd2dd67d96a7",
+        "output/loading.png": "cde6f2ea0c7c6f1d59f329d376235916657f31af69a9e308fc5f325b0e8a91dd",
+        "output/open-failed.log": "120601e892b2f5a4289f891140a3943217cb576d93d221a22943d09b8e0797b2",
+        "output/open.log": "a0ec0719e62d4e5d4bf5ea3fd8d1350c2146fec3682389a6d34aa7c43b8a3a63",
+        "output/review.md": "986b4dd270b25b7a1383f227bb041c5fa78f14ac9c6f748595266be2891eb8bc",
+        "output/source-sha256.json": "9e965e6c2514fa25326a0cf7f1bbd67a28b2d6bad29005d3f45e6bd4e52e5a8d",
+        "output/text-200-percent.png": "1d995b4735e5c02a399deec7144adca7fbb10a3866c819d80980bc6c6ff9c4c5",
+        "output/unavailable-activated.png": "758dbb0a15b32084cf569fdaba934e675d1fd563a25d6e708c65949953d3c092",
+        "output/viewport-1280.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/viewport-320.png": "2686af76d079ada6dbb6b4c1e706d665c319213acc0a7a070fdab643ad2d06db",
+        "output/viewport-390.png": "e547673d1e63c650c62bbaa8294ba4b8155bb9ff6c072d4a3ebe8a9e397b1043"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 4,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy",
+          "status-graphic-contrast"
+        ],
+        "notReported": []
+      }
+    },
+    "r3-a": {
+      "arm": "upstream",
+      "candidate": null,
+      "case": "reading-list-v2-retest",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r3-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r3-a/output/execution.json",
+      "outputs": {
+        "output/browser-check.js": "cd8ebbb7fed7671d3b4d965e4514af979792ba597af90775f3182b3073b156ab",
+        "output/browser-check.log": "14426a8da834df8fc498f615c75adfe446bbc835702b9eee100839a8230fce6c",
+        "output/desktop.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/empty.png": "0d1f7ac6414ac9b75b3c9ae184241ded385cbe80392873684a72942c4783e420",
+        "output/execution.json": "3f8ac3bcece734d0d4b07e73585876806adafa6e3b82c6779c1f4129992e0e80",
+        "output/failure.png": "5835b59dc42fdb6246031e07fc4780d62544b722f42ccbdb5499dbe5cdc2cd01",
+        "output/final-check.js": "6f639af31ed2f180041093746e7447d3699223f45451dbd34ac4a572cb9c0572",
+        "output/final-check.log": "4cfd1b1399c9a3920a2ece73de057c2af340a8aee60d36fa6c4b6c16553151f4",
+        "output/focus-save.png": "4cfe59107efcfb975f8e848376348abd72151d4eddd15396fa95cd79f20e16be",
+        "output/invalid-url.png": "21f4c1107edf342ada68c14ec927f59dc0af215e3ca81ffb5befcd90f2304d18",
+        "output/loading.png": "4ea59c7d11a78213cf5e9d75f24fe79add915ebe8edb7c93d88c13f9f79d538e",
+        "output/long-url.png": "70db757e4f01201c94f26aab20d0c385c3ddaa83dcaef7140cc4a466aeb29b4e",
+        "output/reduced-motion-success.png": "e6902ece423f3fb2289707a7dc20466899fd1cac0efa5a44522b9c81cfcc4048",
+        "output/review.md": "e0cb027e72b660d27ed2d3ec00fa868c5f1995891af939d65d9b72964024a48c",
+        "output/session-close.log": "2470e87a17328d47d384bc9a76d3a841dc0a7898b6fbac1bcbaad8a8cec07d57",
+        "output/viewport-320.png": "3f29c99b258638daed2e8215e74a11f4e47e732da700907618158b8f29aa1b3a",
+        "output/width-320.png": "e3ad701d546d7985aa6f1ad9445cb7bbe7a33134031a67237be0bcef86041b5f",
+        "output/width-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 2,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "icon-consistency"
+        ],
+        "notReported": [
+          "duplicate-submit",
+          "post-delete-focus",
+          "tabular-numerals"
+        ]
+      }
+    },
+    "r3-b": {
+      "arm": "paul",
+      "candidate": "v2",
+      "case": "reading-list-v2-retest",
+      "bundleDigest": "b0e7e55020efd34613914d4f1e3a15a1a6001d9f05967a69ec052796c0907b0f",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r3-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r3-b/output/execution.json",
+      "outputs": {
+        "output/close.log": "ef78dcdb1e009b928ff7749abdcb48d003696b236a59554301c6d553030527e6",
+        "output/desktop.png": "cf94ab78635e7a5fdb733b17ba85fb5acbc718acc68a92d3322edb0957534392",
+        "output/empty.png": "483935d8da88a811e132426c8063b1b6137e3a1d8d23c33099f264f292b199d3",
+        "output/execution.json": "87610360ee991f13401ed68533a392f1d6422ef4179afc6eceff7d528e118057",
+        "output/failed-attempts.json": "a5a4a5cf62a6182174b7e91407166e3645cfd3972048d31157c608b122560529",
+        "output/failure.png": "6ecea3f91651189995c808c64d4dc36c6c5b1528020c7a7b71832e97a9e1ec25",
+        "output/focus-save.png": "cf94ab78635e7a5fdb733b17ba85fb5acbc718acc68a92d3322edb0957534392",
+        "output/followup.js": "9425a34e7269c71d8db1508aba3266d78b58f28f1eca9bd31f6da8f76377ea88",
+        "output/followup.log": "e1f563c9426a311987dd6f0405ea2fae53f9af2ea35df5cfbcee4b1bbbebd96a",
+        "output/long-unbroken-320.png": "513473d2743dc8001ff2e50420b94d11f0dfb1b6efa11e9bd2e167eab5df7b81",
+        "output/long-url-320.png": "75fedf1c9309eb79625b1bcd48c380fcd6e5a16bc2ab6e239494484039dd8f66",
+        "output/open.log": "e0a71fcb5f72f129ccd5c92ed1f0dc5ac2226b0068e2b8d7f4539a6cf89d47f4",
+        "output/reduced-motion.png": "7f7a20edc952374cd3b9bef0125dfd55af7bf8ca1694d526d7bbfa1e49cfa3cb",
+        "output/resize.log": "00fbc489a8b75d486c904bebaa2ff4c5181e5b7ca864f1c8ef613d84c888e479",
+        "output/review.md": "47ce2b1c1f5b5275bd92a654f7177b9c5d9b84f537a9eb3bf6a8d17fb3fd22bb",
+        "output/scenario.js": "29e213cc4ffcc680929dc88c51978005ae8b3225e77b7518739ff16b8c2bdedb",
+        "output/scenario.log": "65018f8f8c985f22e13c3f065a3c0e9ba98d90f811a6b810c9eaab16c1b057ee",
+        "output/success-final.png": "29c987af49a5138c97163893e89c9f617d5b79db0c2a3674b0ee9f2faf5fca33",
+        "output/success.png": "caed7f3db63854d1910c66e5d52a4ef6c2fa55d8a14e0dac55d1002ba56dcc95",
+        "output/viewport-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744",
+        "output/width-320.png": "e3ad701d546d7985aa6f1ad9445cb7bbe7a33134031a67237be0bcef86041b5f",
+        "output/width-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 2,
+        "LOW": 2
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "icon-consistency",
+          "tabular-numerals"
+        ],
+        "notReported": [
+          "duplicate-submit",
+          "post-delete-focus"
+        ]
+      }
+    },
+    "r4-a": {
+      "arm": "upstream",
+      "candidate": null,
+      "case": "export-jobs-v2-retest",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r4-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r4-a/output/execution.json",
+      "outputs": {
+        "output/browser-check.js": "79e620d1e4739e8187f8181e03f7c0d1892306c8cbcad25467f8019b835b1124",
+        "output/browser-command.json": "401e40e68053cf266586bf2ffc5d41a1c5735719c4978e8f1d0ef0271419ed09",
+        "output/browser-results.txt": "f9ef91b002a6eb68e4234befe7c6c6848abd6a3a08dffeeb603e197508a5bde5",
+        "output/close.txt": "ab6036d253b44cd82ff12c8104b8fd4364be6cf98b49a10cac54d873e88628f7",
+        "output/desktop.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/execution.json": "fc02cfcf2cfac18e1e03679b36301ab82dd5a4af2e6547ba02e85203c1a9dd26",
+        "output/failure.png": "6c42da4317e7b25cb7469862f6b1da4a61ba6f49a4413be553fc68bc6c97e692",
+        "output/final-check.js": "ce2ffcaff9fcee66ba172dcaebc59341489c1e514878bb0e95841763e7c387cb",
+        "output/final-command.json": "3d03bd96202bf7e8ba9072e62982447d0101ec81797d1e0e295ce2c7886a3f7a",
+        "output/final-results.txt": "09bce7343b24e9b02759541084807a0ef53490d4b171bac50d22f5d26c419e8d",
+        "output/keyboard-focus.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/review.md": "1aabd05c0381c4fc39b67cefba1af2bd68f1a1493455743192180898651bc83b",
+        "output/viewport-320.png": "61b0d0b960d43b5f484f2ef594db1f65e3359ea4fce6f1a1f6f0c5c585db447d",
+        "output/viewport-390.png": "23c9d4bb43a5190c32f291bc4cad1734cd01a0c7fdcd6517f890f32a5d34b72c",
+        "output/width-320.png": "a1edca4ae605104e67fd0be2595fac33d102417638d69e85d2077799bb53c312",
+        "output/width-390.png": "9b9850f44c25d366cbbe8c283c53f41ac4e52ecfcf458393c29a44090d20ad2a"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 4,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy",
+          "status-graphic-contrast"
+        ],
+        "notReported": []
+      }
+    },
+    "r4-b": {
+      "arm": "paul",
+      "candidate": "v2",
+      "case": "export-jobs-v2-retest",
+      "bundleDigest": "b0e7e55020efd34613914d4f1e3a15a1a6001d9f05967a69ec052796c0907b0f",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "index.html": true,
+          "CONVENTIONS.md": true,
+          "style.css": true,
+          "app.js": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r4-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r4-b/output/execution.json",
+      "outputs": {
+        "output/320-viewport.png": "01a4f40d2931564cf358be28a85f23720b8c25132fd1461253a3bc9c5285fbef",
+        "output/390-viewport.png": "0f044e18fe4842eb2831fa4ecdc17527b3ce58329e22ea04b06a4956a8a41e0f",
+        "output/browser-results.log": "5aa0513fc9f3b6826a0b33677aaf298314e7ef3799b4f2468d33a0160a217fde",
+        "output/close.log": "38670720794459a7c14bc4292684b0caec9c2caf20351b0641136de901dda0bc",
+        "output/console.log": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+        "output/create-focus.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/desktop.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/execution.json": "061a78d2a05d8aac14c0f8aa15084471009a2edd3d531556f912956466f25206",
+        "output/failure.png": "ab5f49e3d4adaed0ac3a28972fedb71c115ba39cd3f7957e264883271d0e6d9f",
+        "output/observations.json": "48fbdde60dbf50b97d93f63a2473154d20a9023e37a9a6c3d46f800759e3b5ae",
+        "output/open.log": "73c437a88ea654f9784bfe684de88609481987e359d9640511c7218431caa8ae",
+        "output/review.md": "dc6e92f485764041596526f4ee55b62ea3c175185c1374d48494af8d6f847dcd",
+        "output/scenario.js": "c8f0f17b9c277b9bba5aba0457e92bc09784eee0a60876039a059e45dde7ac21",
+        "output/second-close.log": "38670720794459a7c14bc4292684b0caec9c2caf20351b0641136de901dda0bc",
+        "output/second-open.log": "1e42aa13227a83a2d3fb903dac3be49cf51dd0f437800a26fbdaf75fc3a388c5",
+        "output/text-resize-200.png": "1d995b4735e5c02a399deec7144adca7fbb10a3866c819d80980bc6c6ff9c4c5",
+        "output/typography-check.js": "ec91c7e22480319aa95299d45ce2485bcfb60be4230c328fa74b35fdb3b992f9",
+        "output/typography-results.log": "43220486f15fbb502821581a39a8deee325add435b2e027a07622216508e5253",
+        "output/width-320.png": "be6ce751c4ee9080bb2b1ef9ec0588e0aa33bd270ed600e08072ad9d6f881f8a",
+        "output/width-390.png": "d448b14d87366db4ffd589b1694ae4c106e87b50c93c269999a05aa1d33fe58a"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 3,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy"
+        ],
+        "notReported": [
+          "status-graphic-contrast"
+        ]
+      }
+    },
+    "r5-a": {
+      "arm": "upstream",
+      "candidate": "v3",
+      "case": "reading-list-v3-retest",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a",
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r5-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r5-a/output/execution.json",
+      "outputs": {
+        "output/browser-adaptivity.log": "04e22ef81faf5753b9367b68dcdc3eef566db2fbbd9b2b108ea26a3581114ed0",
+        "output/browser-close.log": "20127339538563b98e3020a04d643ac66bc2bfaa443fe24b60ce2ad1b088420b",
+        "output/browser-desktop.log": "da4f22c554551f72248b3d793a79f529b50c0c9dc097b72b9610c7af531a92e5",
+        "output/browser-extra.log": "e8477db26942cb6455f69c33b4f3df4db6a2b1383a33047d0f1fbceb8e85e56c",
+        "output/browser-flow.log": "1643fb19e3a2061479018815bd481e6f9a0b6eb8bc8cbbcd21472a2336b07e70",
+        "output/desktop.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/empty.png": "efc75eab0b8aeba2453aad79c26414790e6f0b4908b5d7050abc08b68dd06e3e",
+        "output/execution.json": "4d0faab7f6418758cd00e02c52f41ee83bc737580d3bb4c2aafa023a851f6fd0",
+        "output/failure.png": "fe49dd78ef1196b3fbfdb561291981524f09dad9179699c2ba1864a74843d7c7",
+        "output/focus-brand.png": "cf94ab78635e7a5fdb733b17ba85fb5acbc718acc68a92d3322edb0957534392",
+        "output/keyboard-focus.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/long-url-320.png": "0e0ab489837516b406c578da09ff598026d70f9b87693c5b31a49738ceaae973",
+        "output/reduced-motion.png": "b25afaf2992df7b9b3dc60abb9e2d4f0767b3842ff1893854367aeb86b80b4f1",
+        "output/repeated-save.png": "d582cbfaae4aae45cd33dafb2ef925d4a6e19b56d2b18d5b05107653362686ae",
+        "output/review.md": "b4d7e993ed62742e2025eaf1a683c66bca94cf5e0feac9220b96603e71d2fc75",
+        "output/success.png": "9078dfa1a2cf4db575c9cea06625dc6c2d5ae9220251548fced4b39c03e37b43",
+        "output/width-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744",
+        "output/width-390.png": "ec95cf9fede6c6fce1eab8e040345c028413fb6b2f7c78c2635cf5d20fb9a7d7"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 3,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "duplicate-submit",
+          "icon-consistency"
+        ],
+        "notReported": [
+          "post-delete-focus",
+          "tabular-numerals"
+        ]
+      }
+    },
+    "r5-b": {
+      "arm": "paul",
+      "candidate": "v3",
+      "case": "reading-list-v3-retest",
+      "bundleDigest": "da242c9bd0202156d9edd4e64c9eab4d42a75491f6bf2d1b479d2873bc1ddc82",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a",
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r5-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r5-b/output/execution.json",
+      "outputs": {
+        "output/browser-results.txt": "a348cc1ce88a3db581ad25f293bbb74dbda241ee8968b3576791177ac022f871",
+        "output/close.txt": "38412d54a0d51459cb78729491e98784d4c63727c0fcd96f4dd4d0ba172555e8",
+        "output/desktop-initial.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/empty.png": "3cfc090c80488f664c5eb8f702032261307fe32822add565f4a7a47a47b2c90e",
+        "output/execution.json": "99f6d3a635f863270fdd3c52dc80fa343432b42c5da760b90122d4040ceeb76e",
+        "output/failure.png": "79f4cc7d3742095cd7c1620aab175fa6767787f862ea8fef60356f501e287c1d",
+        "output/followup-results.txt": "f7da276d5ca2c01bd8d60b9fa64b2dbf1f20ceda15e610386defdaafe84f89f8",
+        "output/followup.js": "c2052c104b58d8718423c5a6f84eb12ff809ef5e3428cdfb7dae49a4282a1f41",
+        "output/long-url-320.png": "631f60c72f5a39207016bd64c3b4c40c8f9ebf1a4e3af0f34db0d5e5717185a1",
+        "output/long-url-390-viewport.png": "9365ce0ec96a9ce639e32ab7c658df1881ee3ad7c446bd5f1362b2e45918da06",
+        "output/mobile-320.png": "e3ad701d546d7985aa6f1ad9445cb7bbe7a33134031a67237be0bcef86041b5f",
+        "output/mobile-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a",
+        "output/reduced-motion.png": "c1d4b21fdce6a466de316fd41db7a79f2aa27b203b7c219885adddf6edc51a52",
+        "output/review.md": "d7df7697a48cf842eb318537034c181b380aab72d37a6f6ab79baaa92327f833",
+        "output/save-focused.png": "f2f533dcf6b2cf63a42d696d475abc13f7e70cc8daec23ba709e8a1f09a38272",
+        "output/scenario.js": "22f8a5ab345833f3b36055bddd1432cc105f722061e27676a652651fe93203c8",
+        "output/success-settled.png": "0286841644035e25f68d2c58008e177aaea5607678fe909a2feebb892dbb1fb3",
+        "output/success.png": "07695673aabf831a3dcdb7eb3b56cf5bd2240548a64890357be41edc2edfbc7e",
+        "output/unbroken-results.txt": "f494753e4a96405e13da7678b631a88ae286c2180cb9a3527811708e5adb9f41",
+        "output/unbroken-url-320.png": "678ddb82f417262e461dd978e8f83484b664658fb44adcb321c6263ceb5eed0f",
+        "output/viewport-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "duplicate-submit",
+          "post-delete-focus",
+          "icon-consistency",
+          "tabular-numerals"
+        ],
+        "notReported": []
+      },
+      "reportCapNote": "Tabular numerals is reported outside the 15-row table and in execution findings.excluded_by_cap with source and computed-style evidence; it is counted as detected, not as a full table row. Relative font units is an additional source-based recommendation, not a measured zoom failure."
+    },
+    "r6-a": {
+      "arm": "upstream",
+      "candidate": "v3",
+      "case": "export-jobs-v3-retest",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b",
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r6-a/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r6-a/output/execution.json",
+      "outputs": {
+        "output/320-viewport.png": "0e66e4472ab903f3632a4860411cfccd43b78f6d1bf31346c1fa8a9b66a91391",
+        "output/browser-checks.js": "02007474908e6a374887a55524ba0d0b285cff64c0f30f4ed6b9095c13b17f66",
+        "output/browser-results.txt": "db4e0235f4c2d34201d7c13c8112b5e353d0d9da4227ace94b3a00d4808e8812",
+        "output/css-zoom-200.png": "8cc6626f7408d9ee22654a2a1b8202c82726eab8f9deb0163997054f5dbebd41",
+        "output/desktop.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/execution.json": "eb6bf1c1394e9a07c82d48ab5fa1bd6af89e7425ab91aa499dfa7d71bb116d10",
+        "output/failed-syntax-check.js": "421edc4e4b49ec2f7dcd022c830f1f558d1a9d1c6b0e1b812bb157ad4020e3c4",
+        "output/failure.png": "ab5f49e3d4adaed0ac3a28972fedb71c115ba39cd3f7957e264883271d0e6d9f",
+        "output/initial-console-check.js": "fa24750e012053664e5ae512639b2c00c0a40d6383e3eb17c99e08a76e47fd48",
+        "output/keyboard-download.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/mobile-320.png": "68895dd5195bb4708bcaeb506e0b69750a142fcf3793385605b49b314b6dd978",
+        "output/mobile-390.png": "ed12eba1fe126eb97290b13b3cbc29ce19848d8d2a83332844b92c55d7fc2e48",
+        "output/review.md": "9ab2d97e3f394088fcf9a44057f530b0c95424f5f18bee43e233615e05e35d49",
+        "output/unavailable-activated.png": "e46b3ed7754543fb5b4842945879b1753b94bd541187dc1368378cebc740d553",
+        "output/visual-checks.js": "33801e2a40f2dc6c134d18febf413ab8246f27345ae97123d9a7e671ff0494f6",
+        "output/visual-results.txt": "365d7b8874e271d83dee42ad45c845cb795abe55e80231016cffde204d74fc79"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 3,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy"
+        ],
+        "notReported": [
+          "status-graphic-contrast"
+        ]
+      }
+    },
+    "r6-b": {
+      "arm": "paul",
+      "candidate": "v3",
+      "case": "export-jobs-v3-retest",
+      "bundleDigest": "da242c9bd0202156d9edd4e64c9eab4d42a75491f6bf2d1b479d2873bc1ddc82",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b",
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r6-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r6-b/output/execution.json",
+      "outputs": {
+        "output/browser-run-failed.txt": "f4a9c37974a108731a9ae6c63ab0579991800d96824774665475c53987acf7a8",
+        "output/browser-run.txt": "94d740a1aa6818be0d54c30ca9f69183fe8f17b7b2230613eb8b1c8f4cc7547d",
+        "output/desktop.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+        "output/details-run.txt": "9299c6989de5d6946f4b0b35ae383ab28a7a7286b6bb5de58825b786b0d3a13b",
+        "output/details.js": "c70ba46c12e890ffa1eacb4da6187babb37cb1cdbf652e138aa1bc3dadcb3c3f",
+        "output/execution.json": "b513ce0883bd0d08d422709210786833ed01b913cc82fed492055312d57a66d5",
+        "output/failure.png": "6c42da4317e7b25cb7469862f6b1da4a61ba6f49a4413be553fc68bc6c97e692",
+        "output/focus-create.png": "bfc68ecd84c0184654101d187dd4f741938091698b413cdf7a5cb660db0a3b30",
+        "output/observations.json": "74ba5634a28a58ed26e439b955948399aaac762793f1669240c30c01255ac082",
+        "output/review.md": "680f646396e59a5dbb218647e3c621e0ee862e47966df11d99f92b5d14df556c",
+        "output/scenario.js": "2b661a366d1d88b8cbca56bb64e6f86e7313b964281e5939dab1d5e2d3e21800",
+        "output/viewport-320.png": "c4cedd462122d47eb71930447dbf6c0a67083031d050a146561f52e9a369ac5a",
+        "output/viewport-390.png": "4d4c04759be8ff08714054da06f7ebcd47219c1e079eec65302633e73212b989",
+        "output/width-320.png": "454f3b72fba76f52ddf8cbeb7640581800c394a7162ab97f9523e53b8ca853dd",
+        "output/width-390.png": "2b64edadb2adabff250fd250eadd18e7b9a79d7b476a4d416af68ddc2412b028"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 3,
+        "LOW": 2
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy"
+        ],
+        "notReported": [
+          "status-graphic-contrast"
+        ]
+      }
+    },
+    "r7-b": {
+      "arm": "paul",
+      "candidate": "v4",
+      "case": "reading-list-v4-retest",
+      "bundleDigest": "825d460082d15e0114c50a65babc6b1ddf00e8b8d8dbc14d7addf4dd84facba9",
+      "taskDigest": "58eb6c5520aa7b489991d7c0204da99bc893d2d39359fd684e900080fe04faae",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "34d8cf19e1489e34cc8ce313ad8a9386f8a0ed8ac040f19fd1a17020627db6bf",
+        "app.js": "d34726ff600b20729507c6edefd7d58b679e531faf37684dafdaf89f6f43596a",
+        "index.html": "16db5cabc5862daeb959ad5411ba22f77d4a50490b45a83c0f6369846346c806",
+        "style.css": "78f9b030a8b8ab19a5c2a5a31ad2d787bb72ea3f41fe6f9da34c4735b9add528"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r7-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r7-b/output/execution.json",
+      "outputs": {
+        "output/browser-close.log": "fd46ddd56d6aefc2ce76b408e5015b3ba11aca6dcd6ce7ee57f15ab96e26cbfd",
+        "output/browser-evidence.log": "5bb616961bd3927feabb13568fcb5a54c6fa8810bb55da85e8b8a7e2407d15ce",
+        "output/browser-open.log": "aee7dd5b91eafe9ec5049bfd79038a10c61c55314e814021fdd2534812caf9c1",
+        "output/contrast.json": "04ee8f33697ccf01bac845c0c472777b2ee9d049e641a5a61c3c52fe3da79bfa",
+        "output/desktop.png": "69e71bae6eb55b41fd39cbb34827bed9c20123c1529043048fc7b5862ae9502e",
+        "output/duplicate-success.png": "bba395978f02d9401881d317c1a96f6634cc74cc2846510d5ea13213d99e7f73",
+        "output/empty.png": "3cfc090c80488f664c5eb8f702032261307fe32822add565f4a7a47a47b2c90e",
+        "output/execution.json": "7bd3d8ac28c55543530c4d304617023ae524f0137327fdb200d79b68f05a4baa",
+        "output/failure.png": "37e8677f53e538bc6a4e3e6f3698db4128497e19804abe9df251436f752ea58e",
+        "output/keyboard-focus.png": "4cfe59107efcfb975f8e848376348abd72151d4eddd15396fa95cd79f20e16be",
+        "output/long-url-320.png": "4c1bfe22a7ee0840a6cb1897c1f1ee52a497d2311790a78400d69d047c5dd883",
+        "output/mobile-320.png": "ab905de72aa5018eb61462f8c4ecca99192973768d348bec918d7fc572039744",
+        "output/mobile-390.png": "2b9c36607257ab2d15ccc73105da37ad1b93cd51f9c2c839dbc986429e30078a",
+        "output/observations.json": "bbed5fb06c34005d3d9155bb9eaccb9b762309abffab64159574412d50fb86a6",
+        "output/reduced-motion.png": "5ffd345ed5a7313a72a8606263e437ef3fb3158c0cd6dd47a9122c4019332e1e",
+        "output/review.md": "e62978deab7172937168310d04306da4833cb90f60e3be225fe13a582d9f2d5e",
+        "output/scenario.js": "fbaa234c5290e976189ea4a83200c85aabdf2a74b5b94208339ae3f88a3e6bd8",
+        "output/supplement-close.log": "fd46ddd56d6aefc2ce76b408e5015b3ba11aca6dcd6ce7ee57f15ab96e26cbfd",
+        "output/supplement-open.log": "b82fcc04ef58fa310974595c97dd7c1df299502fb48a58e69e5af3233372e183",
+        "output/supplement.js": "8a5d319fae3a38be77e8cec5c94029dba1ede37ce87a0c61ca9f52a0720f8770",
+        "output/supplement.log": "455d310b8340d7357bf25faf6de968c4b8d105f3fd9928b6f196d3ee5c08473e",
+        "output/unbroken-url-320.png": "14cb5bbf25918ade6c4d3b28751e3e68536539b7f1c4a491e918cab2406dc6f0"
+      },
+      "tableCounts": {
+        "HIGH": 9,
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "name-input",
+          "keyboard-save",
+          "focus",
+          "name-remove",
+          "delete-recovery",
+          "reflow",
+          "contrast",
+          "error-recovery",
+          "reduced-motion",
+          "long-url",
+          "dynamic-status-and-error-binding",
+          "duplicate-submit",
+          "post-delete-focus",
+          "icon-consistency",
+          "tabular-numerals"
+        ],
+        "notReported": []
+      },
+      "candidateExactlyMatchesFinalSkillTree": true
+    },
+    "r8-b": {
+      "arm": "paul",
+      "candidate": "v4",
+      "case": "export-jobs-v4-retest",
+      "bundleDigest": "825d460082d15e0114c50a65babc6b1ddf00e8b8d8dbc14d7addf4dd84facba9",
+      "taskDigest": "ae3bf51c5fc8cd825b1a4f536bd75846c3d1e0a99af837645ba4534bdd28638b",
+      "fixtureFiles": {
+        "CONVENTIONS.md": "7fa5bc4b1e2b258fac171f1668981db4beb62460fdcc409818163509e404b4f9",
+        "app.js": "fe52a01a1a90438cc2d6d846ad2fa19845f09b364445aeb3fa26c3af24a28a8b",
+        "index.html": "81f3711d44b06f92149f8fabf3f033d7754523ff712d57a59676c38ffdb96016",
+        "style.css": "8e8b40e9a1e8f41e95cf0d52e53d8b2d150aac028d39a0ffcccbfade0cd69f50"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "CONVENTIONS.md": true,
+          "app.js": true,
+          "index.html": true,
+          "style.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/r8-b/output/review.md",
+      "execution": ".scratch/design-quality-improvement-20261010/r8-b/output/execution.json",
+      "outputs": {
+        "output/browser-command-retry.log": "b3174bca9edd756e9a6af282d5b7dc5e0c4c5902e5897b60730a30af20ba1d2a",
+        "output/browser-command.log": "a5bd29f2c3a7398ce49ca6b78187726c7224ccc0ee55e9f65adb893cd1f8dc76",
+        "output/browser-evidence.json": "d1175e0d37337cfbba0a690ebbe9100b52c648f3b0f96b5b24ef77a1a8febea3",
+        "output/browser-review.js": "aee8f01b1c98d6569a56d74a7b44c8c6d74a0922bc0787b908c8d8c15933401a",
+        "output/close.log": "d4be127bd672b07d56791ad93e692addca71bfb61e73a01ab1f9d016418bb993",
+        "output/contrast.json": "52cee0f552065b7bb2e0ce8a562cdfb46d7033fb73a7373f3adc40a3485aaa80",
+        "output/execution.json": "b8adc81a59ced4b9384bb3728dfa8921db8f040b3a06454aa4e181e83de49c5a",
+        "output/failure-1280.png": "d5ba17a9845f2b1e3f35c43e200458502076c9f2093287f62130bf450e82697b",
+        "output/final-check-retry.log": "b2a1c329306eeeffb49fb5b5e27356f6be834e729a53b52f6399d232100adf4b",
+        "output/final-check.js": "7ce406eec2314ebd8ae2a9d06a62edadb8edf04893de5d91927d1fff96655207",
+        "output/final-check.log": "cb59dc9462faf273238f7e14697cc3988032a9469c35c79b8dd247627a42fb71",
+        "output/final-evidence.json": "5afa51075df6c29289a42f347cded432bcc3c625a12554a1c1959e0f591b1104",
+        "output/keyboard-create.png": "bfc68ecd84c0184654101d187dd4f741938091698b413cdf7a5cb660db0a3b30",
+        "output/review.md": "957e1b322adbf85c6e396b6e3f0f4417c6c1b3a6f6c374a7ca085f8ddcb008c3",
+        "output/success-1280.png": "23343659e8faf5a17c582da1259ca1e0e4955ee74b0f573b65535f9b60114bce",
+        "output/text-enlargement-simulation.png": "ee3a9fd8eb8ffebf4d528b9aa3c99609a80f463c60d57acf8e5b0e8462c7aba9",
+        "output/viewport-320.png": "34d85d288aeeed497b10beb57e22f3ce20f23c18a8f875ece40862acdaac320e",
+        "output/viewport-390.png": "6956cf29150f46850a2e3b1d9451386f951074d310b8cb858d350e010190c401",
+        "output/width-1280.png": "dc998eeff9ce4df4f07d37d8eda7444e067b90a51fbcbcac28632c7a3c75d7ac",
+        "output/width-320.png": "cc3884f6bfc7aa97bb5bcb9d99b9dac8dc2d851bebb67f60a91380c39aa29b6b",
+        "output/width-390.png": "04f5b96aac7dae53452008185586cb5000733a496f18ba599384fb6add5253ea"
+      },
+      "tableCounts": {
+        "HIGH": 6,
+        "MEDIUM": 5,
+        "LOW": 1
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "Block",
+      "adjudicatedCauses": {
+        "reported": [
+          "disabled-action",
+          "focus",
+          "reflow",
+          "color-only-status",
+          "clipped-summary",
+          "error-recovery",
+          "tabular-numerals",
+          "small-light-type",
+          "error-binding",
+          "voice-policy",
+          "status-graphic-contrast"
+        ],
+        "notReported": []
+      },
+      "candidateExactlyMatchesFinalSkillTree": true
+    },
+    "image-a": {
+      "arm": "upstream",
+      "candidate": "v3",
+      "case": "image-rename-form-v1",
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "e7421dba45f4eb71fc497c3c85826ff68df7a8e74c3d86a0c4d08c0c5a5807b7",
+      "fixtureFiles": {
+        "app.js": "540c6405b88cda116728e24d1132b3ef37c39a0c2124b78149af1d377ab6ed95",
+        "index.html": "839dabe42c66c27988cacad9c420ca36f82364f30ad709ff62833d9b07922b9e",
+        "screen.css": "a03e4593c73740750dc5cb60459d3371da0876ccc36da8f03f1dce7aa4a19a9c",
+        "tokens.css": "38d57ebc195114f15fd53bff73621311fe20c13b67d8589e68bf9af0bd57c539"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "app.js": true,
+          "index.html": true,
+          "screen.css": false,
+          "tokens.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/image-a/output/report.md",
+      "execution": ".scratch/design-quality-improvement-20261010/image-a/output/execution.json",
+      "outputs": {
+        "output/built-1280.png": "6e9e1370aa5db2cacadbea51579749c2f3b6e2f0ea8ac54608833f6514619816",
+        "output/built-390.png": "50639f9e7e410ad2ebc813742e32720f65512375a83bd9f53123174029f355b6",
+        "output/execution.json": "7d404e0c05f5a2215c4d4c3ab3e5e2d8bda3fbe4d027c7fbf9383020482e4eef",
+        "output/failure-1280.png": "c5a0263c74710dc1ae3d3ce90a8aaf0179b14270e5a30cedb6e37e545930165c",
+        "output/failure-390.png": "0ae7f22e03c0d5216418e43bccf68e8750570007392dcc4f118b54ef5076f795",
+        "output/final-verification.txt": "8699dfcbafabd4aed2ff2ce08017a614eb052e512c1acf2aa1fa9e9a1d85e2e5",
+        "output/geometry.txt": "bc21ac255230354e8ae0d57b985f03e9e1bd494c7664fd8fa2a0e4028b31a4c6",
+        "output/pending-1280.png": "313474fe2fab4b4ed3222be1c7ea935eb993d3f4f6c67f6236cb99b96b753dd2",
+        "output/pending-390.png": "c9c55bd26e4f7741f995a9f756b604ae757c595520824e378703d353a5e37581",
+        "output/preserved-before.sha256": "7cb6c29e9f724f3142dfc8592fdae3a3aa0b7ddd941ac92cef8ceca8caa2f5d6",
+        "output/report.md": "e0e3aac290c3491e5dec68c1fc61e52048471beaa81462c0d29da9442febaae8",
+        "output/state-verification.txt": "2995d196bcd2f0e1d7333fec093416d3eee1318ee4c9fad4ac016c823fd83014",
+        "output/success-1280.png": "e7103765f3e1a5ac8fddbe9c5976de5fd5465cf73c12d1bced457cf807b42569",
+        "output/success-390.png": "25d8e104c9422aba88383c4eae3768bcb9f6f1f0943e1435c4243d4a5fbfcb54"
+      },
+      "tableCounts": {
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "see implementation assessment"
+    },
+    "image-b": {
+      "arm": "paul",
+      "candidate": "v3",
+      "case": "image-rename-form-v1",
+      "bundleDigest": "da242c9bd0202156d9edd4e64c9eab4d42a75491f6bf2d1b479d2873bc1ddc82",
+      "taskDigest": "e7421dba45f4eb71fc497c3c85826ff68df7a8e74c3d86a0c4d08c0c5a5807b7",
+      "fixtureFiles": {
+        "app.js": "540c6405b88cda116728e24d1132b3ef37c39a0c2124b78149af1d377ab6ed95",
+        "index.html": "839dabe42c66c27988cacad9c420ca36f82364f30ad709ff62833d9b07922b9e",
+        "screen.css": "a03e4593c73740750dc5cb60459d3371da0876ccc36da8f03f1dce7aa4a19a9c",
+        "tokens.css": "38d57ebc195114f15fd53bff73621311fe20c13b67d8589e68bf9af0bd57c539"
+      },
+      "inputChecks": {
+        "task": true,
+        "skills": true,
+        "app": {
+          "app.js": true,
+          "index.html": true,
+          "screen.css": false,
+          "tokens.css": true
+        },
+        "references": true
+      },
+      "report": ".scratch/design-quality-improvement-20261010/image-b/output/report.md",
+      "execution": ".scratch/design-quality-improvement-20261010/image-b/output/execution.json",
+      "outputs": {
+        "output/built-1280.png": "d2e4940e4e0fa1b294ef0969cfc6922c9aa8bd7db69a7ca7d5c19df219610e4e",
+        "output/built-390.png": "d5534f62a3d8d6a00001a3d4329da897feb0dc177896ed4598625b0f5940a3e0",
+        "output/desktop-evidence.txt": "24f4891b8ec669fc458f564c4f9fe622965b1580400f5c56af6b77c462462a2b",
+        "output/desktop-state-evidence.txt": "2ef2c0e45bdee89c0641a4c8a6d04c7d0d8bd3800fe33d7c8a2316f18fb57962",
+        "output/execution.json": "5513ffc54dbeef69507cea96b461e925888bfd38aafbb787ab291cffdd39e7fe",
+        "output/failure-1280.png": "ff84b19bf8b0fdfb9819ba8f9626dcd106acda2af68ae3a79f44251db648360d",
+        "output/failure-390.png": "d43b3446f842350b8b8923f05b79c46e66d0e40133bbfa39a38aeb64da698906",
+        "output/keyboard-button-390.png": "9fdae457594ef94393c2aeeddbe1561d6fcbe35f64a47a0232839dfd51dff8c2",
+        "output/keyboard-input-390.png": "fc2d04f183374862ae47bd6d08e5382449ae7856eb0f9bb978f3b90eac04c711",
+        "output/layout-evidence.txt": "596bf59cea52bd03ca6b609a4f5c246efd2683d7b1aa9c3d3347c471bcee8112",
+        "output/pending-1280.png": "63f80d22874f61a203e9d76375900cc6f4565313ff6bbfbd588eaf9cd4ac6b69",
+        "output/pending-390.png": "2a899e5aa5748a589a7cedcba7124a71585c6d9234250a21cc9b313d333733bc",
+        "output/report.md": "72dda2d2ef61eb0912d50d8eba2481fb1c9a422cc5e3922b27b41b8fa2e38eba",
+        "output/state-evidence.txt": "e6d78a65deac8ad7e7bea47133f2bc6683c690dad61588ad7fc1a20c292bee24",
+        "output/success-1280.png": "98ecbbf020fe70255da5de980127c90585d4c7a9ef0763e849d08f0278f7c5e7",
+        "output/success-390.png": "632ea49dc6904cd5b1f7ce4c5fe5dd07be6029aa16427082451fe24f5a0b8b50"
+      },
+      "tableCounts": {
+        "HIGH": 0,
+        "MEDIUM": 0,
+        "LOW": 0
+      },
+      "model": null,
+      "tokenUsage": null,
+      "cost": null,
+      "productVerdict": "see implementation assessment"
+    }
+  },
+  "bundles": {
+    "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866": {
+      "skills/better-accessibility/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-accessibility/SKILL.md": "df0cafe0e75a08548cf46a2a430f46c198e7e0ee9d46bdf7884c2afefb44b70e",
+      "skills/better-accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+      "skills/better-accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "skills/better-accessibility/forms.md": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+      "skills/better-accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "skills/better-accessibility/motion-and-zoom.md": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "skills/better-accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "skills/better-accessibility/semantics-and-aria.md": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "skills/better-colors/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-colors/SKILL.md": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
+      "skills/better-colors/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+      "skills/better-colors/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+      "skills/better-colors/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+      "skills/better-colors/contrast.md": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "skills/better-colors/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+      "skills/better-colors/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+      "skills/better-colors/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+      "skills/better-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-interface/SKILL.md": "23416fef4d08e0417927b6eb6763b7b08ed832451abfb9e26ea699262a28abcb",
+      "skills/better-interface/agents/openai.yaml": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+      "skills/better-interface/review-format.md": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01",
+      "skills/better-layout/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-layout/SKILL.md": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
+      "skills/better-layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+      "skills/better-layout/grouping-and-alignment.md": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "skills/better-layout/spacing-and-adaptivity.md": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "skills/better-typography/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-typography/SKILL.md": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
+      "skills/better-typography/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+      "skills/better-typography/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+      "skills/better-typography/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+      "skills/better-typography/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+      "skills/better-typography/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+      "skills/better-typography/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+      "skills/better-typography/wrapping-and-punctuation.md": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
+      "skills/better-ui/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-ui/SKILL.md": "fb9807bb5c59a3ca9d4a27b25f56b36e5596251d280fb30c4b7f2ff8b6f4fe2d",
+      "skills/better-ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+      "skills/better-ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "skills/better-ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+      "skills/better-ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+      "skills/better-ui/icons.md": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+      "skills/better-ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+      "skills/better-ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+      "skills/better-writing/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-writing/SKILL.md": "ef6843cbfcbafa62614b1a6e012c0b1ab6fd33eee0bdd84123cf49fe275c3a31",
+      "skills/better-writing/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+      "skills/better-writing/patterns.md": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+      "skills/break/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/break/SKILL.md": "6b231897f10477fe2a9d335b457e53c670b07a8291a08b5d8dad3981b658b9d0",
+      "skills/break/agents/openai.yaml": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+      "skills/break/scenarios.md": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+      "skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/build-design/SKILL.md": "c5b3f67eba6f88c703a89f2698cdd6f0baf5e149a86cc68da08bb919db577202",
+      "skills/build-design/agents/openai.yaml": "858842fc00a7d7f086201a02c33af730d41fb00fab1ace92b7109fd8ba23f518",
+      "skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+      "skills/explain-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/explain-interface/SKILL.md": "6795aff9a133b94c6398a95b5c8958a2eaccade5db18f58e752bc02460a356e0",
+      "skills/explain-interface/agents/openai.yaml": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+      "skills/explain-interface/find-the-effect.md": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+      "skills/explain-interface/from-an-image.md": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+      "skills/explain-interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+      "skills/explain-interface/read-the-system.md": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+      "skills/interface-review/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/interface-review/SKILL.md": "8977988d63d7c17b8b0cd334ebd722d4e2dff00af0f152de2bc6f100d13d59ce",
+      "skills/interface-review/agents/openai.yaml": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+      "skills/interface-review/removed-signals.md": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "skills/interface-review/scope-resolution.md": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "skills/state-machine/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/state-machine/SKILL.md": "f944409b17c9c0641e8049dd628ee93610279f882779a81f8876e6466aea586d",
+      "skills/state-machine/agents/openai.yaml": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+      "skills/state-machine/switcher.md": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+      "skills/variant/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/variant/SKILL.md": "e5bb95b72aa1589f72f350e2201be031129155db3cb27e9c3bec284ee08bc245",
+      "skills/variant/agents/openai.yaml": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+      "skills/variant/picker.md": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    },
+    "a8a4b3a787388c367a24a3695823a0d312fdd7f7f84c6d51b8da455bc91e622b": {
+      "skills/better-accessibility/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-accessibility/SKILL.md": "e57d2631d02b6c7291bb57a0f23dc1b6fa3dfabdbf2b8b7bae9aa58b19823a50",
+      "skills/better-accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+      "skills/better-accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "skills/better-accessibility/forms.md": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+      "skills/better-accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "skills/better-accessibility/motion-and-zoom.md": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "skills/better-accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "skills/better-accessibility/semantics-and-aria.md": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "skills/better-colors/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-colors/SKILL.md": "b3733eedaaecff1fb85d9c7a926694bb43ed862ad9b1c5029a6e8a6de0acfe43",
+      "skills/better-colors/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+      "skills/better-colors/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+      "skills/better-colors/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+      "skills/better-colors/contrast.md": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "skills/better-colors/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+      "skills/better-colors/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+      "skills/better-colors/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+      "skills/better-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-interface/SKILL.md": "b9a5062b3ca32d2d2d558880e06a2102dfb6f3b40b93e294d529ad70b85530dc",
+      "skills/better-interface/agents/openai.yaml": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+      "skills/better-interface/review-format.md": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+      "skills/better-layout/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-layout/SKILL.md": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "skills/better-layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+      "skills/better-layout/grouping-and-alignment.md": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "skills/better-layout/spacing-and-adaptivity.md": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "skills/better-typography/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-typography/SKILL.md": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "skills/better-typography/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+      "skills/better-typography/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+      "skills/better-typography/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+      "skills/better-typography/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+      "skills/better-typography/korean-text.md": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+      "skills/better-typography/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+      "skills/better-typography/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+      "skills/better-typography/wrapping-and-punctuation.md": "7a09070681d74456a117bf79f006c56f822c316a5b7ad28202c0737cc524557c",
+      "skills/better-ui/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-ui/SKILL.md": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d",
+      "skills/better-ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+      "skills/better-ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "skills/better-ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+      "skills/better-ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+      "skills/better-ui/icons.md": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+      "skills/better-ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+      "skills/better-ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+      "skills/better-writing/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-writing/SKILL.md": "1a91b300594ee7acf804a8c117cc45ff4fb077d28e7c48cd2e945d66065d9e70",
+      "skills/better-writing/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+      "skills/better-writing/korean-copy.md": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+      "skills/better-writing/patterns.md": "89a4aa4267a737f3bafe143340463c8d7722ee00e857ecd38df2bfc362117359",
+      "skills/break/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/break/SKILL.md": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f",
+      "skills/break/agents/openai.yaml": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+      "skills/break/scenarios.md": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+      "skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/build-design/SKILL.md": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "skills/build-design/agents/openai.yaml": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+      "skills/build-design/browser-and-spec.md": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+      "skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+      "skills/design-browser/SKILL.md": "d43cd77b66089523f8a4eb33ee6399bd0c68330547d1f4eb5aefc5abc9bb258c",
+      "skills/design-browser/agents/openai.yaml": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+      "skills/design-browser/references/aside.md": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+      "skills/design-browser/references/tool-comparison.md": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+      "skills/explain-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/explain-interface/SKILL.md": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+      "skills/explain-interface/agents/openai.yaml": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+      "skills/explain-interface/find-the-effect.md": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+      "skills/explain-interface/from-an-image.md": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+      "skills/explain-interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+      "skills/explain-interface/read-the-system.md": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+      "skills/interface-review/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/interface-review/SKILL.md": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba",
+      "skills/interface-review/agents/openai.yaml": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+      "skills/interface-review/removed-signals.md": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "skills/interface-review/scope-resolution.md": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "skills/state-machine/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/state-machine/SKILL.md": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "skills/state-machine/agents/openai.yaml": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+      "skills/state-machine/switcher.md": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+      "skills/variant/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/variant/SKILL.md": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446",
+      "skills/variant/agents/openai.yaml": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+      "skills/variant/picker.md": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    },
+    "b0e7e55020efd34613914d4f1e3a15a1a6001d9f05967a69ec052796c0907b0f": {
+      "skills/better-accessibility/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-accessibility/SKILL.md": "84b8f4159004b576494a2ca2c8a08bad3c5a29a168bb7f51afdb0e2b8461ac6f",
+      "skills/better-accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+      "skills/better-accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "skills/better-accessibility/forms.md": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+      "skills/better-accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "skills/better-accessibility/motion-and-zoom.md": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "skills/better-accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "skills/better-accessibility/semantics-and-aria.md": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "skills/better-colors/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-colors/SKILL.md": "b3733eedaaecff1fb85d9c7a926694bb43ed862ad9b1c5029a6e8a6de0acfe43",
+      "skills/better-colors/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+      "skills/better-colors/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+      "skills/better-colors/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+      "skills/better-colors/contrast.md": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "skills/better-colors/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+      "skills/better-colors/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+      "skills/better-colors/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+      "skills/better-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-interface/SKILL.md": "b9a5062b3ca32d2d2d558880e06a2102dfb6f3b40b93e294d529ad70b85530dc",
+      "skills/better-interface/agents/openai.yaml": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+      "skills/better-interface/review-format.md": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+      "skills/better-layout/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-layout/SKILL.md": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "skills/better-layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+      "skills/better-layout/grouping-and-alignment.md": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "skills/better-layout/spacing-and-adaptivity.md": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "skills/better-typography/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-typography/SKILL.md": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "skills/better-typography/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+      "skills/better-typography/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+      "skills/better-typography/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+      "skills/better-typography/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+      "skills/better-typography/korean-text.md": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+      "skills/better-typography/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+      "skills/better-typography/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+      "skills/better-typography/wrapping-and-punctuation.md": "7a09070681d74456a117bf79f006c56f822c316a5b7ad28202c0737cc524557c",
+      "skills/better-ui/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-ui/SKILL.md": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d",
+      "skills/better-ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+      "skills/better-ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "skills/better-ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+      "skills/better-ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+      "skills/better-ui/icons.md": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+      "skills/better-ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+      "skills/better-ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+      "skills/better-writing/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-writing/SKILL.md": "1a91b300594ee7acf804a8c117cc45ff4fb077d28e7c48cd2e945d66065d9e70",
+      "skills/better-writing/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+      "skills/better-writing/korean-copy.md": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+      "skills/better-writing/patterns.md": "89a4aa4267a737f3bafe143340463c8d7722ee00e857ecd38df2bfc362117359",
+      "skills/break/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/break/SKILL.md": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f",
+      "skills/break/agents/openai.yaml": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+      "skills/break/scenarios.md": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+      "skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/build-design/SKILL.md": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "skills/build-design/agents/openai.yaml": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+      "skills/build-design/browser-and-spec.md": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+      "skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+      "skills/design-browser/SKILL.md": "d43cd77b66089523f8a4eb33ee6399bd0c68330547d1f4eb5aefc5abc9bb258c",
+      "skills/design-browser/agents/openai.yaml": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+      "skills/design-browser/references/aside.md": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+      "skills/design-browser/references/tool-comparison.md": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+      "skills/explain-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/explain-interface/SKILL.md": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+      "skills/explain-interface/agents/openai.yaml": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+      "skills/explain-interface/find-the-effect.md": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+      "skills/explain-interface/from-an-image.md": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+      "skills/explain-interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+      "skills/explain-interface/read-the-system.md": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+      "skills/interface-review/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/interface-review/SKILL.md": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba",
+      "skills/interface-review/agents/openai.yaml": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+      "skills/interface-review/removed-signals.md": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "skills/interface-review/scope-resolution.md": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "skills/state-machine/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/state-machine/SKILL.md": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "skills/state-machine/agents/openai.yaml": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+      "skills/state-machine/switcher.md": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+      "skills/variant/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/variant/SKILL.md": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446",
+      "skills/variant/agents/openai.yaml": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+      "skills/variant/picker.md": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    },
+    "da242c9bd0202156d9edd4e64c9eab4d42a75491f6bf2d1b479d2873bc1ddc82": {
+      "skills/better-accessibility/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-accessibility/SKILL.md": "18a457787a99b489d05320328a55ce8821dda126bff1b9658a4c2a4be428728a",
+      "skills/better-accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+      "skills/better-accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "skills/better-accessibility/forms.md": "60b313755f61b842c7113c4a32602554bc1a0ce58269215df13d54f78305a950",
+      "skills/better-accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "skills/better-accessibility/motion-and-zoom.md": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "skills/better-accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "skills/better-accessibility/semantics-and-aria.md": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "skills/better-colors/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-colors/SKILL.md": "b3733eedaaecff1fb85d9c7a926694bb43ed862ad9b1c5029a6e8a6de0acfe43",
+      "skills/better-colors/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+      "skills/better-colors/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+      "skills/better-colors/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+      "skills/better-colors/contrast.md": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "skills/better-colors/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+      "skills/better-colors/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+      "skills/better-colors/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+      "skills/better-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-interface/SKILL.md": "b9a5062b3ca32d2d2d558880e06a2102dfb6f3b40b93e294d529ad70b85530dc",
+      "skills/better-interface/agents/openai.yaml": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+      "skills/better-interface/review-format.md": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+      "skills/better-layout/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-layout/SKILL.md": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "skills/better-layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+      "skills/better-layout/grouping-and-alignment.md": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "skills/better-layout/spacing-and-adaptivity.md": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "skills/better-typography/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-typography/SKILL.md": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "skills/better-typography/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+      "skills/better-typography/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+      "skills/better-typography/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+      "skills/better-typography/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+      "skills/better-typography/korean-text.md": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+      "skills/better-typography/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+      "skills/better-typography/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+      "skills/better-typography/wrapping-and-punctuation.md": "7a09070681d74456a117bf79f006c56f822c316a5b7ad28202c0737cc524557c",
+      "skills/better-ui/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-ui/SKILL.md": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d",
+      "skills/better-ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+      "skills/better-ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "skills/better-ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+      "skills/better-ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+      "skills/better-ui/icons.md": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+      "skills/better-ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+      "skills/better-ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+      "skills/better-writing/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-writing/SKILL.md": "1a91b300594ee7acf804a8c117cc45ff4fb077d28e7c48cd2e945d66065d9e70",
+      "skills/better-writing/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+      "skills/better-writing/korean-copy.md": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+      "skills/better-writing/patterns.md": "89a4aa4267a737f3bafe143340463c8d7722ee00e857ecd38df2bfc362117359",
+      "skills/break/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/break/SKILL.md": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f",
+      "skills/break/agents/openai.yaml": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+      "skills/break/scenarios.md": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+      "skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/build-design/SKILL.md": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "skills/build-design/agents/openai.yaml": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+      "skills/build-design/browser-and-spec.md": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+      "skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+      "skills/design-browser/SKILL.md": "d43cd77b66089523f8a4eb33ee6399bd0c68330547d1f4eb5aefc5abc9bb258c",
+      "skills/design-browser/agents/openai.yaml": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+      "skills/design-browser/references/aside.md": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+      "skills/design-browser/references/tool-comparison.md": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+      "skills/explain-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/explain-interface/SKILL.md": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+      "skills/explain-interface/agents/openai.yaml": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+      "skills/explain-interface/find-the-effect.md": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+      "skills/explain-interface/from-an-image.md": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+      "skills/explain-interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+      "skills/explain-interface/read-the-system.md": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+      "skills/interface-review/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/interface-review/SKILL.md": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba",
+      "skills/interface-review/agents/openai.yaml": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+      "skills/interface-review/removed-signals.md": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "skills/interface-review/scope-resolution.md": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "skills/state-machine/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/state-machine/SKILL.md": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "skills/state-machine/agents/openai.yaml": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+      "skills/state-machine/switcher.md": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+      "skills/variant/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/variant/SKILL.md": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446",
+      "skills/variant/agents/openai.yaml": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+      "skills/variant/picker.md": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    },
+    "825d460082d15e0114c50a65babc6b1ddf00e8b8d8dbc14d7addf4dd84facba9": {
+      "skills/better-accessibility/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-accessibility/SKILL.md": "18a457787a99b489d05320328a55ce8821dda126bff1b9658a4c2a4be428728a",
+      "skills/better-accessibility/agents/openai.yaml": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+      "skills/better-accessibility/focus-and-keyboard.md": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+      "skills/better-accessibility/forms.md": "60b313755f61b842c7113c4a32602554bc1a0ce58269215df13d54f78305a950",
+      "skills/better-accessibility/hit-areas.md": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+      "skills/better-accessibility/motion-and-zoom.md": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+      "skills/better-accessibility/screen-readers.md": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+      "skills/better-accessibility/semantics-and-aria.md": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+      "skills/better-colors/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-colors/SKILL.md": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33",
+      "skills/better-colors/agents/openai.yaml": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+      "skills/better-colors/color-formats.md": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+      "skills/better-colors/color-usage.md": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+      "skills/better-colors/contrast.md": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+      "skills/better-colors/palette-generation.md": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+      "skills/better-colors/palette-structure.md": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+      "skills/better-colors/token-naming.md": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+      "skills/better-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-interface/SKILL.md": "a5228b2d838370228dea24b17593b629811ccdb398af7d2c495548db900a2aaf",
+      "skills/better-interface/agents/openai.yaml": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+      "skills/better-interface/review-format.md": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+      "skills/better-layout/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-layout/SKILL.md": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "skills/better-layout/agents/openai.yaml": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+      "skills/better-layout/grouping-and-alignment.md": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+      "skills/better-layout/spacing-and-adaptivity.md": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+      "skills/better-typography/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-typography/SKILL.md": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "skills/better-typography/agents/openai.yaml": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+      "skills/better-typography/choosing-fonts.md": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+      "skills/better-typography/css-cheat-sheet.md": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+      "skills/better-typography/details-and-accessibility.md": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+      "skills/better-typography/korean-text.md": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+      "skills/better-typography/spacing-and-sizing.md": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+      "skills/better-typography/variable-fonts-and-opentype.md": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+      "skills/better-typography/wrapping-and-punctuation.md": "7a09070681d74456a117bf79f006c56f822c316a5b7ad28202c0737cc524557c",
+      "skills/better-ui/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-ui/SKILL.md": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d",
+      "skills/better-ui/agents/openai.yaml": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+      "skills/better-ui/animations.md": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+      "skills/better-ui/enter-exit.md": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+      "skills/better-ui/icon-transitions.md": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+      "skills/better-ui/icons.md": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+      "skills/better-ui/performance.md": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+      "skills/better-ui/surfaces.md": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+      "skills/better-writing/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/better-writing/SKILL.md": "1a91b300594ee7acf804a8c117cc45ff4fb077d28e7c48cd2e945d66065d9e70",
+      "skills/better-writing/agents/openai.yaml": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+      "skills/better-writing/korean-copy.md": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+      "skills/better-writing/patterns.md": "89a4aa4267a737f3bafe143340463c8d7722ee00e857ecd38df2bfc362117359",
+      "skills/break/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/break/SKILL.md": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f",
+      "skills/break/agents/openai.yaml": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+      "skills/break/scenarios.md": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+      "skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/build-design/SKILL.md": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "skills/build-design/agents/openai.yaml": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+      "skills/build-design/browser-and-spec.md": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+      "skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+      "skills/design-browser/SKILL.md": "d43cd77b66089523f8a4eb33ee6399bd0c68330547d1f4eb5aefc5abc9bb258c",
+      "skills/design-browser/agents/openai.yaml": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+      "skills/design-browser/references/aside.md": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+      "skills/design-browser/references/tool-comparison.md": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+      "skills/explain-interface/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/explain-interface/SKILL.md": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+      "skills/explain-interface/agents/openai.yaml": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+      "skills/explain-interface/find-the-effect.md": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+      "skills/explain-interface/from-an-image.md": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+      "skills/explain-interface/no-browser.md": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+      "skills/explain-interface/read-the-system.md": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+      "skills/interface-review/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/interface-review/SKILL.md": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba",
+      "skills/interface-review/agents/openai.yaml": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+      "skills/interface-review/removed-signals.md": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+      "skills/interface-review/scope-resolution.md": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+      "skills/state-machine/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/state-machine/SKILL.md": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "skills/state-machine/agents/openai.yaml": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+      "skills/state-machine/switcher.md": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+      "skills/variant/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+      "skills/variant/SKILL.md": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446",
+      "skills/variant/agents/openai.yaml": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+      "skills/variant/picker.md": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a"
+    }
+  },
+  "limitations": [
+    "Development cases informed local repair; no hidden holdout or statistical non-inferiority claim",
+    "Do not aggregate different candidate versions as repeats of the final version",
+    "A review finding count is not a quality score",
+    "Browser observations do not prove assistive technology speech, mobile device behavior, deployment or user approval",
+    "Raw local artifacts are not part of the promoted plugin"
+  ],
+  "generatedAt": "2026-10-10T02:09:44.386281+00:00",
+  "candidate": "v4",
+  "finalReviewBundleDigest": "825d460082d15e0114c50a65babc6b1ddf00e8b8d8dbc14d7addf4dd84facba9",
+  "acceptanceRecords": {
+    "retest-rubric.json": {
+      "writtenBeforeDispatch": "2026-10-09T16:18:41.283477+00:00",
+      "case": "reading-list-review-v1",
+      "expectedCore": [
+        {
+          "id": "name-input",
+          "source": "index.html:20",
+          "criterion": "url input has no persistent visible label; placeholder supplies fallback name"
+        },
+        {
+          "id": "keyboard-save",
+          "source": "app.js:15",
+          "criterion": "save div has no keyboard handler; pointer-only save"
+        },
+        {
+          "id": "focus",
+          "source": "style.css:25",
+          "criterion": "focus indicator removed without replacement"
+        },
+        {
+          "id": "name-remove",
+          "source": "index.html:28",
+          "criterion": "remove icon buttons lack accessible names"
+        },
+        {
+          "id": "delete-recovery",
+          "source": "app.js:9",
+          "criterion": "removal has no confirmation or undo; consequence unclear"
+        },
+        {
+          "id": "reflow",
+          "source": "style.css:34",
+          "criterion": "360px minimum card width causes overflow at 320"
+        },
+        {
+          "id": "contrast",
+          "source": "style.css:3",
+          "criterion": "source metadata #a0a6a3 on white below 4.5:1"
+        },
+        {
+          "id": "error-recovery",
+          "source": "app.js:20",
+          "criterion": "error text gives no cause or recovery"
+        }
+      ],
+      "additionalValidFindings": "accept independently verified findings outside core; this is not exhaustive ground truth",
+      "negativeControls": [
+        "flat no-shadow style is intentional",
+        "native system fonts are intentional",
+        "mock backend absence is documented, not a product defect"
+      ],
+      "grading": "Report each core detection and evidence, independently verify extra findings. Critical misses cannot be compensated by cosmetic findings. Do not infer global equivalence from one example.",
+      "toolComparison": false,
+      "corrections": [
+        {
+          "at": "2026-10-09T16:20:58.479978+00:00",
+          "reason": "Independent browser snapshot exposes placeholder text as the input name. Correct the evaluator premise before reading arm outputs. The valid concern is absence of a persistent visible label, not absence of any computed name.",
+          "old": "url input has no accessible label/name",
+          "new": "url input has no persistent visible label; placeholder supplies fallback name"
+        }
+      ]
+    },
+    "independent-rubric.json": {
+      "case": "export-jobs-v1",
+      "writtenBeforeDispatch": "2026-10-10T01:38:42.466162+00:00",
+      "core": [
+        "aria-disabled action still initiates work",
+        "button focus outline removed",
+        "360px cards overflow at 320",
+        "status dots rely on color alone",
+        "summary clipped without full-text path",
+        "generic failure lacks recovery",
+        "changing count lacks tabular numerals",
+        "13px metadata uses 300 weight"
+      ],
+      "negativeControls": [
+        "plain quotes and three dots are deliberate",
+        "Korean object action labels are deliberate",
+        "system font flat surfaces and local mock limitations are deliberate"
+      ],
+      "judgment": "Confirm baseline findings independently; preserve every valid original finding or explain factual invalidity. Important new unsupported claims block acceptance. Additional findings judged from artifact, not count."
+    },
+    "final-acceptance.json": {
+      "caseRevision": "reading-list original fixture and export-jobs-v1",
+      "candidate": "v2",
+      "recordedAt": "2026-10-10T01:47:15.872320+00:00",
+      "criteria": [
+        "All eight seeded concerns in each applicable case have evidence-supported findings",
+        "Retain every additional valid original finding at any severity, including numerical alignment and focus continuity observed in the earlier source run",
+        "Respect deliberate language and punctuation choices; no unsupported failure claims",
+        "Preserve original and candidate input files",
+        "No auto-promotion or claims about unexecuted roles"
+      ],
+      "focusContinuity": "Read actual next-key action and affected task context, not only document.activeElement",
+      "comparison": "final current paired run plus previous findings union; preserve intermediate omissions",
+      "limits": "Finite development cases, not statistical non-inferiority or hidden holdout"
+    },
+    "v3-acceptance.json": {
+      "caseRevision": "reading-list original fixture and export-jobs-v1",
+      "candidate": "v3",
+      "recordedAt": "2026-10-10T01:51:08.545581+00:00",
+      "criteria": [
+        "All eight seeded concerns in each applicable case have evidence-supported findings",
+        "Retain every additional valid original finding at any severity, including numerical alignment and focus continuity observed in the earlier source run",
+        "Respect deliberate language and punctuation choices; no unsupported failure claims",
+        "Preserve original and candidate input files",
+        "No auto-promotion or claims about unexecuted roles"
+      ],
+      "focusContinuity": "Read actual next-key action and affected task context, not only document.activeElement",
+      "comparison": "final current paired run plus previous findings union; preserve intermediate omissions",
+      "limits": "Finite development cases, not statistical non-inferiority or hidden holdout",
+      "reason": "v2 omitted pending repeat activation and treated keyboard reachability as sufficient to dismiss focus continuity; original acceptance causes preserved"
+    },
+    "v4-acceptance.json": {
+      "caseRevision": "reading-list original fixture and export-jobs-v1",
+      "candidate": "v4",
+      "recordedAt": "2026-10-10T02:01:10.802717+00:00",
+      "criteria": [
+        "All eight seeded concerns in each applicable case have evidence-supported findings",
+        "Retain every additional valid original finding at any severity, including numerical alignment and focus continuity observed in the earlier source run",
+        "Respect deliberate language and punctuation choices; no unsupported failure claims",
+        "Preserve original and candidate input files",
+        "No auto-promotion or claims about unexecuted roles"
+      ],
+      "focusContinuity": "Read actual next-key action and affected task context, not only document.activeElement",
+      "comparison": "final current paired run plus previous findings union; preserve intermediate omissions",
+      "limits": "Finite development cases, not statistical non-inferiority or hidden holdout",
+      "reason": "Repeated omission of non-text contrast; clarify owned role coverage and independent causes",
+      "comparator": "Reuse immutable original r5-a and r6-a results plus all prior valid findings; identical tasks, fixtures, tools, inherited settings and budgets. Candidate alone changed. No additional original run is claimed."
+    },
+    "image-acceptance.json": {
+      "recordedAt": "2026-10-10T01:53:18.573833+00:00",
+      "case": "image-rename-form-v1",
+      "criteria": [
+        "Preserve readonly markup, tokens and behavior script",
+        "Match supplied screenshot panel and control geometry within 2 CSS px at both widths, existing token colors and type",
+        "Retain native keyboard and idle/pending/failure/retry/success behavior",
+        "Produce rendered evidence, distinguish estimated image values and measured output",
+        "No unapproved styles, unrelated edits, external effects or unsupported completion claim"
+      ],
+      "limits": "Single simple implementation case, no Figma, human visual acceptance pending, not general image fidelity parity"
+    }
+  },
+  "finalDecisions": {
+    "reading-list": {
+      "status": "No regression observed in this case",
+      "original": "r5-a plus prior valid source findings",
+      "candidate": "r7-b",
+      "preservedHistoricalCauses": 15,
+      "missedHistoricalCauses": [],
+      "coreFound": 8,
+      "coreTotal": 8,
+      "reportCap": "Tabular numerals is named outside the table; actual #count fontVariantNumeric normal is in observations.json. Dynamic-status and error-binding appear as separate rows. No semantic omission is counted as solved by a higher finding count.",
+      "additional": "Relative font units is a source-based recommendation, not an observed zoom failure."
+    },
+    "export-jobs": {
+      "status": "No regression observed in this case",
+      "original": "r6-a plus prior valid source findings including r4-a non-text contrast",
+      "candidate": "r8-b",
+      "preservedHistoricalCauses": 11,
+      "missedHistoricalCauses": [],
+      "coreFound": 8,
+      "coreTotal": 8,
+      "extraFinding": "Pending button state is not exposed while the busy guard works; the recommendation follows the source submit-behavior rule, not a reproduced duplicate effect.",
+      "sharedFixNote": "Adding visible status text and making the dot decorative can resolve both color-only meaning and its contrast obligation; the two current failures still have separate evidence."
+    },
+    "image-implementation": {
+      "case": "image-rename-form-v1",
+      "decision": "No regression observed in this case",
+      "criteriaFixedBeforeDispatch": "image-acceptance.json",
+      "measured": [
+        {
+          "viewport": [
+            1280,
+            900
+          ],
+          "originalAndPaulGeometryEqual": true,
+          "maximumGeometryErrorCssPx": 0.8125,
+          "renderedEvidence": {
+            "visual-reference": "1c311e4d7c4f9a5aad37278bf51d3f6fc5d66ab53d89f4f14f175dccbd3f6ddc",
+            "image-a": "6e9e1370aa5db2cacadbea51579749c2f3b6e2f0ea8ac54608833f6514619816",
+            "image-b": "d2e4940e4e0fa1b294ef0969cfc6922c9aa8bd7db69a7ca7d5c19df219610e4e"
+          },
+          "keyboardAndStateReplay": "pass"
+        },
+        {
+          "viewport": [
+            390,
+            844
+          ],
+          "originalAndPaulGeometryEqual": true,
+          "maximumGeometryErrorCssPx": 0.8125,
+          "renderedEvidence": {
+            "visual-reference": "fbfb611498085d504f26e08a722f4f0c6839fc24a063b2164a1068bd6ba3a083",
+            "image-a": "50639f9e7e410ad2ebc813742e32720f65512375a83bd9f53123174029f355b6",
+            "image-b": "d5534f62a3d8d6a00001a3d4329da897feb0dc177896ed4598625b0f5940a3e0"
+          },
+          "keyboardAndStateReplay": "pass"
+        }
+      ],
+      "candidateSkillsExactAtFinal": [
+        "build-design",
+        "design-browser"
+      ],
+      "pixelIdentity": "not claimed; PNG byte hashes differ; comparison is visual inspection plus measured geometry/colors, not a pixel-diff score",
+      "codePreservation": "only screen.css changed in each arm; markup, tokens and behavior JS hashes preserved",
+      "limits": [
+        "Single simple image-input case",
+        "No Figma-derived task",
+        "No human visual acceptance or promotion",
+        "Actual screen-reader speech untested"
+      ],
+      "rootReplay": {
+        "code": "judge/build-check.js",
+        "results": "judge/build-results.json",
+        "ownedSession": "qi-build-judge",
+        "closed": true
+      }
+    },
+    "markdown-only": {
+      "status": "Observable specification contract passed",
+      "sourceParity": "not applicable to this added input branch; no original/no-skill comparison",
+      "report": ".scratch/design-quality-improvement-20261010/markdown-build/output/report.md",
+      "execution": ".scratch/design-quality-improvement-20261010/markdown-build/output/execution.json",
+      "onlyChangedInput": "app/screen.css",
+      "checked": "1280 and 390 geometry, tokens, copy and native keyboard, pending/failure/retry/success; parent replayed both widths",
+      "promptLimitation": "The executor was also told not to claim absent image fidelity, so that reporting behavior is not blind",
+      "inputHashes": {
+        "task.md": "e3dff8b49526704961b62058919bf3d5f61dc788c95ed4de37518b01b5e8d3b6",
+        "SPEC.md": "dfacd231a41573fbe1b2c3d0d1cbf50599fefcf757906bc8f741df7f99bdddb7",
+        "app/index.html": "839dabe42c66c27988cacad9c420ca36f82364f30ad709ff62833d9b07922b9e",
+        "app/tokens.css": "38d57ebc195114f15fd53bff73621311fe20c13b67d8589e68bf9af0bd57c539",
+        "app/screen.css": "0eac49368dc9130f87590087a3c0ae73950591319696b265f9bdf5a9c89ee09a",
+        "app/app.js": "540c6405b88cda116728e24d1132b3ef37c39a0c2124b78149af1d377ab6ed95",
+        ".agents/skills/build-design/LICENSE": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+        ".agents/skills/build-design/figma.md": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+        ".agents/skills/build-design/browser-and-spec.md": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+        ".agents/skills/build-design/SKILL.md": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+        ".agents/skills/build-design/agents/openai.yaml": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+        ".agents/skills/design-browser/SKILL.md": "d43cd77b66089523f8a4eb33ee6399bd0c68330547d1f4eb5aefc5abc9bb258c",
+        ".agents/skills/design-browser/references/tool-comparison.md": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+        ".agents/skills/design-browser/references/aside.md": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+        ".agents/skills/design-browser/agents/openai.yaml": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7"
+      },
+      "outputs": {
+        "output/1280-button-focus.png": "13d39d6fdb8bd4b473ccf7c786b090160775ca2d41b8a969ee6c82dc2798ed76",
+        "output/1280-failure.png": "48b744857a47599ebc2c7b038f247aac7a56724fd990dcac4c44a6028e5ce507",
+        "output/1280-idle.png": "1c311e4d7c4f9a5aad37278bf51d3f6fc5d66ab53d89f4f14f175dccbd3f6ddc",
+        "output/1280-keyboard-focus.png": "d7dd8e693082eccfd670fda88b6f0b09e6611c1715566fcc20f7663dea024833",
+        "output/1280-pending.png": "ecf9dd99374dc6879029ffdaae5cea1f2049f7a7ba4cc08c276356708c3436cb",
+        "output/1280-success.png": "b97d59b8e0ab365213303e62d6c5517aaa7a252c6bc306df7be7ada3c359bba9",
+        "output/390-button-focus.png": "1ba1a7f030dd14f0fe531e5e2d19fffc02ba8cdabfc8549398df911df336ec2f",
+        "output/390-failure.png": "7aba7404646ad4ef31f8df6be707b1140d70cdabfc6625f0717267ed02060d34",
+        "output/390-idle.png": "fbfb611498085d504f26e08a722f4f0c6839fc24a063b2164a1068bd6ba3a083",
+        "output/390-keyboard-focus.png": "fce60391c3ae87596547ea62bb46653368c6521ae75407f05c7ffeb0ddc95fa2",
+        "output/390-pending.png": "e06040e5c7e365f80a7b82561efd8b76d89c7a845a2bbcb710476ecf31cb2feb",
+        "output/390-success.png": "2939368f3739105a24dbba7ef92f15669a23fa3517bc9d8ffea427b515f6d4c4",
+        "output/browser-close.txt": "ba6160f2c28e4c9bd5e7ebf99422ac46aa4d422f3136f389fff9ef55fac981ad",
+        "output/browser-console.txt": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+        "output/browser-observations.json": "898069e43d6d227cbd12403501e3312a728c88bb9f1fcae4ee16b544b4bbb39a",
+        "output/browser-open-attempt-1.txt": "e16a833ce62d27f2af0d508f3ec83b0aee893a1ed1cf99eb66fc811cf8f40a6a",
+        "output/browser-open-attempt-2.txt": "f7599e0cde7d81cede1f1a00cb6f9bfe6a2ba7e79ddcd1973bd096bd28326a6a",
+        "output/browser-scenario-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "output/browser-scenario.js": "f975441cf4243efcc1f67d02184f63aef0959a1a6e51e9b35bfc6d2bb1cda067",
+        "output/button-observations.json": "aa783e1c544289e4ee8e705debd4d7696ff7ceefa50214743f0aed08f9a7b702",
+        "output/button-scenario-stderr.txt": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "output/button-scenario.js": "ed91fb668aa30231c26bba65d23a5a5f0769f7d78158fa4f4dd50827479c00e5",
+        "output/execution.json": "de91276143946aa5223d39e7a39618bdf570931056ae7ca3697050c4de4ec704",
+        "output/observations-decoded.json": "366040c8fc41011fc447bf6f9c07b5d6181f0dc86562cbdc1ff33b1b9f606bfd",
+        "output/report.md": "fd640d2aa4dee7ae79f2369af7ae5b75baa9d087bd6b52e6baa01a12f55439d9"
+      }
+    }
+  },
+  "validation": {
+    "npmRunCheck": {
+      "status": "pass",
+      "tests": 36,
+      "skillRecords": 56,
+      "promotedSkills": 27
+    },
+    "claudePluginValidateStrict": "pass",
+    "quickValidate": "all 7 changed skills passed on their final instructions; checks are format-level",
+    "gitDiffCheck": "pass",
+    "immutableSourceHashes": "65/65",
+    "registeredDigests": "13/13",
+    "invocationAndLicenses": "13/13",
+    "sourceFiles": {
+      "identical": 46,
+      "modified": 18,
+      "deleted": 0
+    }
+  },
+  "overall": "Scoped cases passed; role-wide parity and all-17 acceptance not established; no promotion, install, commit, push or release",
+  "unverified": [
+    "All 17 skills as a complete product workflow",
+    "Standalone outcome quality of every domain beyond these composed reviews",
+    "Figma and complex multi-route implementation",
+    "User-only interface-review, variant, state-machine, break, explain-interface tasks",
+    "IA/user-flow/wireframe comparative quality beyond earlier smoke evidence",
+    "Dedicated motion design, design-system architecture and performance QA",
+    "Real assistive technology and device behavior",
+    "Automatic plugin discovery and no-skill value/cost comparisons"
+  ],
+  "rootEvidence": {
+    "judge/build-check.js": "e354da8d34a75333c645f9829fd7caa538f09746b35ba93d7264acf008fcbb5e",
+    "judge/build-close.txt": "c97eb42b8c1ee1b5f8eb75c63466b805006ac7a055ab851ed9f6d130423fc904",
+    "judge/build-image-a-1280.png": "6e9e1370aa5db2cacadbea51579749c2f3b6e2f0ea8ac54608833f6514619816",
+    "judge/build-image-a-390.png": "50639f9e7e410ad2ebc813742e32720f65512375a83bd9f53123174029f355b6",
+    "judge/build-image-b-1280.png": "d2e4940e4e0fa1b294ef0969cfc6922c9aa8bd7db69a7ca7d5c19df219610e4e",
+    "judge/build-image-b-390.png": "d5534f62a3d8d6a00001a3d4329da897feb0dc177896ed4598625b0f5940a3e0",
+    "judge/build-markdown-build-1280.png": "1c311e4d7c4f9a5aad37278bf51d3f6fc5d66ab53d89f4f14f175dccbd3f6ddc",
+    "judge/build-markdown-build-390.png": "fbfb611498085d504f26e08a722f4f0c6839fc24a063b2164a1068bd6ba3a083",
+    "judge/build-open.txt": "5050345c4b177fb06b91cb0ecbefa5b91f6e5a317c7a1427215ecfef83000026",
+    "judge/build-results.json": "60469a46bbb0a18d892c00ef157cc45ebe9cbe4e646c6acdacb79b418c01f417",
+    "judge/build-results.txt": "14089252010c192a60146df331277dd53ac222d40bd364da612a0da466426552",
+    "judge/build-visual-reference-1280.png": "1c311e4d7c4f9a5aad37278bf51d3f6fc5d66ab53d89f4f14f175dccbd3f6ddc",
+    "judge/build-visual-reference-390.png": "fbfb611498085d504f26e08a722f4f0c6839fc24a063b2164a1068bd6ba3a083",
+    "judge/capture-reference.js": "b81eb9529f85f1c89ea5d63f10a891a91f307b1efc344e48bf3e345d5298dd5e",
+    "judge/capture-reference.txt": "e54696c0c11234d3d6ab6205d6a34c32b0eeb9055cb345e5ea99c847c73defe4",
+    "judge/export-1280.png": "bcbcd2833a33398e541596510a8cdb664cc670a35f5212a9179194a3d154913b",
+    "judge/export-320.png": "2686af76d079ada6dbb6b4c1e706d665c319213acc0a7a070fdab643ad2d06db",
+    "judge/export-390.png": "e547673d1e63c650c62bbaa8294ba4b8155bb9ff6c072d4a3ebe8a9e397b1043",
+    "judge/export-check.js": "7b21778cf1dd207bcf6b835029d1812b544ac270096460224622c5a693eb7daa",
+    "judge/export-check.txt": "9b8b4b859a833e94d508299c5d1469f982100947aa6b327b7614cb1b908f0b07",
+    "judge/focus-check-failed.js": "077c6b955382e6d4de0d446654f7f8027699891ef85886d5fa2ab6e4251b55c3",
+    "judge/focus-check.js": "6872796a00d6569bd8489834a177518533d7948b2459a5553c2b6b4674798ac0",
+    "judge/focus-close-retry.txt": "66c581e8808b1941eafd1c6fb86d49b1e4edbc98e06455c4fc816aeee9b299e2",
+    "judge/focus-close.txt": "66c581e8808b1941eafd1c6fb86d49b1e4edbc98e06455c4fc816aeee9b299e2",
+    "judge/focus-open-retry.txt": "d64b0b8a4fa7c9b19801e3d447f2bc258b6020b0ddc5646b06bf294fab8a6ac7",
+    "judge/focus-open.txt": "2e0e83ecef61b0d73ac5b9e4e0ec101b4ae6e1255bc9a629c5045593e7d83072",
+    "judge/focus-results-failed.txt": "a1ae526af559623d71dee4ba2ce94ab8821ba25f9af99e72da26dfac8dcbe868",
+    "judge/focus-results.txt": "4d1f6ccbd6501549816db349c61fbeef46be55ba8a45a73fbeb068d6818559e2"
+  },
+  "rootRetries": [
+    "Early export/reference commands used an incorrect relative path; repeated in the intended working directory",
+    "Focus probe first used destructured page argument and returned TypeError; failed script/result preserved and retried with the CLI page argument",
+    "Sandbox daemon cache access required scoped escalation; no auto-review denial",
+    "Image arms could not run PIL pixel diffs; parent used independent browser geometry/state replay and visual inspection, not a pixel-equality claim"
+  ]
+}

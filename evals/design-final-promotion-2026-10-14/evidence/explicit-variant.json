@@ -1,0 +1,92 @@
+{
+  "case": "explicit-variant",
+  "target": "variant",
+  "threadId": "01a13900-6b48-73e1-96dd-c513dd06da48",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0-trial.20261014",
+  "checks": {
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true
+  },
+  "loadedSkills": [
+    "variant"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "variant",
+      "sha256": "0eec1591a0e8e5dfa1e6f79dfab7ab6baeacb67f3c9a36429ea650b514e92867",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-variant",
+    "exitCode": 0,
+    "seconds": 34.4,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-20261014/explicit-variant",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-promotion-20261014/explicit-variant.final.md",
+      "-"
+    ],
+    "before": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "after": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "promptSha256": "af5b8c9c35968c3798ff36301477e213dcc53efbf015384d3c234aac6eb69987"
+  },
+  "prompt": "$paul-skills:variant\n설치된 이 스킬의 역할과 입력, 완료 조건, 이웃 역할과의 차이만 설명해줘. 이번에는 실제 구현, 조사, 브라우저 조작이나 파일 변경은 하지 마.",
+  "final": "`paul-skills:variant`는 작업 중인 **하나의 UI 컴포넌트**에 대해 의도적으로 다른 후보를 만들고, 사용자가 직접 비교·선택하도록 돕는 스킬입니다. 후보를 평가하거나 순위를 매기지는 않습니다.\n\n### 역할\n\n- 하나의 UI 조각에 기본 3개 변형을 만듭니다. 요청할 때만 5개로 늘립니다.\n- 구조·밀도·강조·타이포그래피·문구 중 **하나를 주축**으로 정합니다.\n- 각 변형은 같은 접근성·반응형·상태 처리 기준을 충족해야 합니다.\n- 실제 화면 맥락에서 URL 파라미터와 picker로 한 번에 하나씩 비교하게 합니다.\n- 각 후보의 적합한 상황과 비용만 제시하고 선택은 사용자에게 맡깁니다.\n- 선택 후에는 고른 안을 정식 구현하고 비교용 harness와 나머지 후보를 제거합니다.\n\n### 필요한 입력\n\n- 탐색할 **단일 UI 조각**: 예를 들어 “대시보드”가 아니라 “지표 카드”\n- 한 문장짜리 brief:\n  - 무엇인지\n  - 어디에 표시되는지\n  - 무엇을 해야 하는지\n- 해당 UI가 놓일 실제 화면과 주변 요소\n- 프로젝트의 디자인 시스템, 컴포넌트, 토큰, 밀도와 문체\n- 변형할 주축과 각 후보의 위치\n  - 예: 밀도 축의 `여유로운 / 기본 / 조밀한`\n- 현실적인 콘텐츠와 실제에 가까운 데이터 규모\n\n프로젝트 맥락이 없으면 중립 회색, 하나의 강조색, 시스템 글꼴을 사용했다는 전제도 입력에 포함됩니다.\n\n### 완료 조건\n\n탐색 단계는 다음을 만족하면 끝납니다.\n\n- 후보마다 주축상의 위치가 명확하고 서로 겹치지 않습니다.\n- 모든 후보가 접근성, 키보드, 대비, 320px 너비, 200% 확대, 오류 복구 등의 공통 품질 기준을 통과합니다.\n- 실제 페이지 맥락과 현실적인 데이터로 렌더링됩니다.\n- picker로 후보를 전환할 수 있으며 작업 상태가 보존됩니다.\n- 모든 후보의 렌더링, 상호작용, 콘솔 상태를 확인합니다.\n- 후보별 “적합한 상황”과 “비용”을 제시하되 선호 후보를 표시하지 않습니다.\n- picker 위치, 전환 방법, 검토한 화면 너비를 전달합니다.\n\n사용자가 하나를 선택한 뒤의 최종 완료 조건은 **선택안의 정식 반영과 나머지 후보·picker·`__variant` 관련 코드의 완전한 제거**입니다.\n\n### 이웃 역할과의 차이\n\n| 역할 | 차이 |\n|---|---|\n| `interface-review`, `better-interface` | 기존 UI의 문제를 검토합니다. `variant`는 여러 대안을 직접 비교합니다. |\n| `break` | 한 컴포넌트를 극한 조건으로 스트레스 테스트합니다. 후보 디자인 탐색이 목적은 아닙니다. |\n| `state-machine` | 컴포넌트의 상태와 전이를 다룹니다. 시각적 방향 비교와는 다릅니다. |\n| `prototype` | 더 넓은 UI·로직 질문을 위한 일회성 실험입니다. `variant`는 단일 컴포넌트 비교에 한정됩니다. |\n| `better-layout` | 구조와 밀도 축의 구체적인 설계 기준을 담당합니다. |\n| `better-colors` | 강조와 색상 사용을 담당합니다. |\n| `better-typography` | 글자 크기, 굵기, 행 길이 등의 축을 담당합니다. |\n| `better-writing` | 라벨, 어조, 문구량을 담당합니다. |\n| `design-browser` | 구현된 후보를 브라우저에서 관찰하고 검증하는 증거 수집 역할입니다. |\n\n핵심적으로 `variant`는 **“어느 안이 최고인가”를 결정하는 스킬이 아니라, 하나의 명확한 축에서 선택할 가치가 있는 안들을 만들고 공정하게 비교시키는 역할**입니다.",
+  "commands": [],
+  "rawTraceSha256": "0db5a815f7331b4d654630637d7d2971b0ed72830037c7ebfa8d716c334d73e3"
+}

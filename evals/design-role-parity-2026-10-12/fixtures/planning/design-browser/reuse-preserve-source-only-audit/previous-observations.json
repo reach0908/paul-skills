@@ -1,0 +1,43 @@
+{
+  "fixture_revision": "NOTIFY-3",
+  "captured_at": "2026-10-08T03:00:00Z",
+  "source": "Synthetic prior receipt; no live session is attached",
+  "observations": [
+    {
+      "id": "OBS-1",
+      "kind": "static-source",
+      "value": "Email checkbox has an enclosing label."
+    },
+    {
+      "id": "OBS-2",
+      "kind": "screenshot-description",
+      "viewport": [
+        1280,
+        900
+      ],
+      "value": "Heading Notifications, checked Email updates and Save settings visible."
+    }
+  ],
+  "prior_claims": [
+    {
+      "id": "CL-1",
+      "text": "The checkbox has a programmatic label."
+    },
+    {
+      "id": "CL-2",
+      "text": "Keyboard focus is visible throughout the save path."
+    },
+    {
+      "id": "CL-3",
+      "text": "Reduced motion is respected during saving."
+    },
+    {
+      "id": "CL-4",
+      "text": "The page is usable at 390 pixels wide."
+    },
+    {
+      "id": "CL-5",
+      "text": "Settings were saved to the production account."
+    }
+  ]
+}

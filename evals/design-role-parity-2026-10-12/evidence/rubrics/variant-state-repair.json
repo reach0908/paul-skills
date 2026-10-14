@@ -1,0 +1,25 @@
+{
+  "id": "variant-state-repair",
+  "frozenBeforeDispatch": true,
+  "cases": {
+    "variant-footer-emphasis": [
+      "Required base footer rubric applies.",
+      "Clear selection then switch every visual direction with button and keyboard. Zero selection, disabled export and clear feedback persist; search text persists.",
+      "Short320x450 and actual200percent Chrome zoom preserve adjacent input focus/reachability."
+    ],
+    "variant-quantity": [
+      "Three density positions only, BOOK-SPRING name/description and neighboring pickup info preserved.",
+      "Change quantity2to5, enable gift, activate quote, switch all variants. Quantity5, giftchecked, same feedback and enabled/disabled meaning persist.",
+      "Boundary1 disables decrement, boundary12 disables increment; changing appearance does not reenable or reset.",
+      "Search typing remains independent of picker shortcuts; actual keyboard and pointer work at1440/320 and short320x450.",
+      "No real order, storage or network and no favorite or claims beyond evidence."
+    ],
+    "variant-select-and-clean": [
+      "Base semantic rubric plus known CSS hash exception."
+    ]
+  },
+  "criticalFailures": [
+    "Appearance switch resets working quantity/selection/gift or re-enables an unavailable action.",
+    "False runtime claims or off-scope production actions."
+  ]
+}

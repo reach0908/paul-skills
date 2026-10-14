@@ -1,0 +1,20 @@
+{
+  "role": "better-typography",
+  "repeat": 2,
+  "status": "bounded outcomes supported",
+  "review": "Both identify inverted hierarchy, thin fixed-line-height body and shifting numeric widths. Paul separately simulates doubled body size and clearly distinguishes overlap under that condition from native browser zoom; this is not an unsupported claim of measured native zoom. Both retain intentional dense clean typography and working numeric alignment.",
+  "implementation": "Root fresh-browser replay across two arms,1280/320 widths,normal/root-font200 verifies full URL wraps without document or text overflow, native triple-click includes every URL character, mobile input is16px then32px, entry survives and existing local status action executes. Triple-click includes trailing paragraph newlines, so raw strings are preserved and full-value selection is assessed with trailing whitespace excluded.",
+  "differences": "Original uses1rem input everywhere. Paul preserves desktop0.875rem but uses1rem below500px; both meet the task mobile reading/selection contract. Not a demand for desktop16px in this fixture.",
+  "sourceScope": "Only allowed CSS changed; read-only cases preserve all inputs.",
+  "evidence": [
+    "typography-r2.json",
+    "typography-r2-raw.txt",
+    "better-typography-original-r2-scope.json",
+    "better-typography-paul-r2-scope.json"
+  ],
+  "limits": [
+    "Actual iOS input auto-zoom, OS clipboard and all browser/font combinations unverified.",
+    "This root expansion changes root font size and is not native browser page zoom.",
+    "The fixture copy action only changes a status string; copying to OS clipboard is not claimed."
+  ]
+}

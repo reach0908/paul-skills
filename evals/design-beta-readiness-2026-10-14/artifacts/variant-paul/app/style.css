@@ -1,0 +1,57 @@
+*{box-sizing:border-box}html{font:100%/1.6 system-ui;scroll-padding-bottom:88px}body{margin:0;padding-bottom:88px;color:#17212b;background:#f3f5f7} :root{--space-1:8px;--space-2:16px;--space-3:24px;--space-4:32px;--brand:#174b82;--ink:#17212b;--surface:#fff;--border:#60758c;--radius:8px;--type-title:1.5rem;--type-body:1rem}main,header{max-width:960px;margin:auto;padding:var(--space-2)}button,input,select,textarea{font:inherit}button{padding:8px 16px;color:var(--ink);background:var(--surface);border:1px solid var(--border);border-radius:var(--radius);cursor:pointer}button:disabled{opacity:.6;cursor:not-allowed}:focus-visible{outline:3px solid #b13f00;outline-offset:3px}input,textarea{max-width:100%;padding:8px;border:1px solid var(--border)}.card{border:1px solid var(--border);border-radius:var(--radius);background:white}.items{display:grid;gap:16px}.tools{display:flex;gap:8px;flex-wrap:wrap}.notice{border-left:4px solid var(--brand);padding:8px}a{color:var(--brand)}[hidden]{display:none!important}h1{font-size:var(--type-title)}
+
+a,input,textarea,button{scroll-margin-bottom:88px}
+
+#target h2,
+#target p{margin-block:0}
+#target label{display:grid}
+#target textarea{width:100%;resize:vertical}
+
+/* Primary axis: density. The same content and controls remain in the same DOM. */
+#target[data-variant="airy"]{display:grid;gap:var(--space-3);padding:var(--space-4)}
+#target[data-variant="airy"] label{gap:12px}
+#target[data-variant="airy"] textarea{min-height:136px}
+#target[data-variant="airy"] .tools{gap:12px}
+#target[data-variant="airy"] .tools button{min-height:48px;padding-inline:20px}
+
+#target[data-variant="balanced"]{display:grid;gap:var(--space-2);padding:20px}
+#target[data-variant="balanced"] label{gap:var(--space-1)}
+#target[data-variant="balanced"] textarea{min-height:96px}
+
+#target[data-variant="compact"]{display:grid;grid-template-columns:minmax(0,1fr) auto;gap:8px 16px;padding:12px 16px}
+#target[data-variant="compact"] h2,
+#target[data-variant="compact"]>p:first-of-type,
+#target[data-variant="compact"] label{grid-column:1/-1}
+#target[data-variant="compact"] label{grid-template-columns:max-content minmax(0,1fr);align-items:start;gap:12px}
+#target[data-variant="compact"] textarea{min-height:64px}
+#target[data-variant="compact"] .tools{align-self:center;gap:6px}
+#target[data-variant="compact"] .tools button{padding:6px 10px}
+#target[data-variant="compact"] #status{align-self:center;justify-self:end;white-space:nowrap}
+
+/* Comparison chrome intentionally does not use product tokens. */
+.variant-picker{all:unset;position:fixed;bottom:max(24px,env(safe-area-inset-bottom));left:50%;translate:-50% 0;z-index:9999;display:flex;width:max-content;gap:2px;max-width:calc(100vw - 32px);overflow-x:auto;scrollbar-width:none;padding:4px;border-radius:999px;background:rgb(20 20 20/.9);box-shadow:inset 0 0 0 1px rgb(255 255 255/.1),0 8px 24px rgb(0 0 0/.25);font:13px/1 system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif;user-select:none}
+.variant-picker button{all:unset;flex:none;padding:7px 14px;border-radius:999px;font:inherit;color:rgb(255 255 255/.6);cursor:pointer}
+.variant-picker button:hover{color:rgb(255 255 255/.85)}
+.variant-picker button[aria-pressed="true"]{background:rgb(255 255 255/.14);color:#fff}
+.variant-picker button:focus-visible{outline:2px solid rgb(255 255 255/.7);outline-offset:2px}
+.variant-picker[hidden]{display:none!important}
+
+@media(max-width:480px){
+  html{scroll-padding-top:72px;scroll-padding-bottom:0}
+  body{padding-top:64px;padding-bottom:16px}
+  main,header{padding:12px}
+  a,input,textarea,button{scroll-margin-top:72px;scroll-margin-bottom:16px}
+  .variant-picker{top:max(16px,env(safe-area-inset-top));bottom:auto}
+  #target[data-variant="airy"]{gap:20px;padding:24px 20px}
+  #target[data-variant="airy"] .tools{display:grid;grid-template-columns:1fr}
+  #target[data-variant="balanced"]{padding:16px}
+  #target[data-variant="balanced"] .tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr))}
+  #target[data-variant="compact"]{grid-template-columns:1fr;padding:12px;gap:8px}
+  #target[data-variant="compact"] label{grid-template-columns:1fr;gap:4px}
+  #target[data-variant="compact"] .tools{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));width:100%}
+  #target[data-variant="compact"] #status{justify-self:start}
+}
+
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{scroll-behavior:auto!important}
+}

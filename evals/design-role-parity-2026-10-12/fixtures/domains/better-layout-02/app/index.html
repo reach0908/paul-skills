@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>팀 일정 확인 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>팀 일정 확인</h1>
+
+<section class="panel"><h2>다음 검토</h2><div class="event"><span>2026 Q4 · 프로젝트 검토</span><span class="tag">예정</span></div><div class="row"><button id="direction">LTR/RTL preview</button><button id="open" class="primary">검토 일정 자세히 보기</button></div></section>
+<dialog id="dialog" aria-labelledby="dialog-title"><h2 id="dialog-title">프로젝트 검토 일정</h2><p>모든 멤버가 확인할 일정이에요.</p><div class="details"><p>일정: 2026년 10월 16일 오후 2시</p><p>담당: Studio 서비스개편 태스크포스</p><p>준비: 지난 주 피드백과 새 화면을 확인해 주세요.</p></div><button id="confirm" class="primary">일정 확인 완료</button><button id="close">닫기</button></dialog><p id="status" class="status" role="status"></p>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

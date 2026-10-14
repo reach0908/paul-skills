@@ -1,0 +1,1 @@
+document.querySelector('#save').onclick=()=>document.querySelector('#status').textContent='초안을 저장했어요.';document.querySelector('#delete').onclick=()=>{document.querySelector('#document').remove();document.querySelector('#status').textContent='발표 자료를 영구 삭제했어요.';};

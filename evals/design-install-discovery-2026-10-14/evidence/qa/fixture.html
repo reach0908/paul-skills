@@ -1,0 +1,8 @@
+<!doctype html><html lang="ko"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>저장한 자료</title>
+<style>body{margin:0;background:#f7f9fc;color:#142b4d;font:16px/1.6 system-ui}main{padding:20px;max-width:760px;margin:auto}.cards{display:grid;gap:16px;min-width:350px}article{padding:16px;background:white;border:1px solid #66788d;border-radius:12px}button{font:inherit;padding:10px 16px;color:#142b4d;background:white;border:1px solid #66788d;border-radius:8px}button:focus-visible{outline:3px solid #1556a0;outline-offset:3px}dialog{max-width:280px}dialog::backdrop{background:#0008}</style>
+<main><h1>저장한 자료</h1><p>자료를 선택하면 읽을 내용을 확인할 수 있어요.</p><section class="cards" aria-label="저장한 자료 목록">
+<article><h2>첫 기능 정하기</h2><p>해결할 불편 하나에서 시작해요.</p><button data-id="one">첫 기능 정하기 열기</button></article>
+<article><h2>변경 이력 남기기</h2><p>다시 돌아갈 수 있도록 기록해요.</p><button data-id="two">변경 이력 남기기 열기</button></article>
+<article><h2>완성한 화면 확인하기</h2><p>다양한 화면과 조작 방법으로 확인해요.</p><button data-id="three" tabindex="-1">완성한 화면 확인하기 열기</button></article>
+</section><dialog aria-labelledby="detail-title"><h2 id="detail-title">자료 상세</h2><p id="detail-content"></p><form method="dialog"><button>닫기</button></form></dialog></main>
+<script>const dialog=document.querySelector('dialog');document.querySelectorAll('[data-id]').forEach(b=>b.addEventListener('click',()=>{document.querySelector('#detail-content').textContent=b.closest('article').querySelector('p').textContent;dialog.showModal()}));</script></html>

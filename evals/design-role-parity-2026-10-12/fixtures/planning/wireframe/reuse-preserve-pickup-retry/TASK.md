@@ -1,0 +1,2 @@
+# Add a retry state to the existing pickup wireframe
+The baseline `index.html` already contains the accepted content and navigation. Evolve it into `design/index.html`, preserving that working structure and the selected North area. Add only the agreed mocked failure and retry in `change.md`, with a concise `design/screens.md` mapping. Keep the original input untouched. Check the changed path and return context at 1280x900 and 390x844 with keyboard input if the installed Playwright CLI is available. This is still a low-fidelity prototype, not a visual redesign.

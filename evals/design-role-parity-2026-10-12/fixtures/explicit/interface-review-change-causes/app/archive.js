@@ -1,0 +1,1 @@
+export function renderArchive(root) { const button=document.createElement('button'); button.innerHTML='<svg aria-hidden="true" width="16" height="16"><path d="M1 1H15V15H1Z"/></svg>'; button.addEventListener('click',()=>{document.querySelector('#notice').textContent='공유 링크를 보관했어요.';}); root.append(button); }

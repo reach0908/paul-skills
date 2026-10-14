@@ -1,0 +1,215 @@
+{
+  "status": "case contracts supported; final repeat and human visual acceptance pending",
+  "observations": [
+    {
+      "case": "build-image",
+      "arm": "original",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-image",
+      "arm": "paul",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-image",
+      "arm": "original",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-image",
+      "arm": "paul",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-image",
+      "arm": "original",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-image",
+      "arm": "paul",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-export",
+      "arm": "original",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-export",
+      "arm": "paul",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-export",
+      "arm": "original",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-export",
+      "arm": "paul",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-export",
+      "arm": "original",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-export",
+      "arm": "paul",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-preserve",
+      "arm": "original",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-preserve",
+      "arm": "paul",
+      "width": 1280,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-preserve",
+      "arm": "original",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-preserve",
+      "arm": "paul",
+      "width": 390,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": {
+        "pending": {
+          "busy": "true",
+          "disabled": true
+        },
+        "failure": "저장하지 못했어요. 내용을 확인하고 다시 시도하세요.",
+        "focus": "BUTTON",
+        "success": "저장했어요.",
+        "invalid": null
+      }
+    },
+    {
+      "case": "build-preserve",
+      "arm": "original",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    },
+    {
+      "case": "build-preserve",
+      "arm": "paul",
+      "width": 320,
+      "visibleElementGeometryError": 0,
+      "overflow": false,
+      "behavior": null
+    }
+  ],
+  "geometryInterpretation": "Paul uses vertical main padding where reference/original use external margins. The transparent MAIN box differs by48/64px; visible heading/panels/input/button/aside positions and dimensions are identical. The task asks for image fidelity, not invisible box-model identity. Kept raw MAIN measurements rather than treating them as a visual regression.",
+  "rootVisualInspection": [
+    "reference390",
+    "paul390"
+  ],
+  "behavior": "Both arms independently replayed native Enter to pending/failure then Tab/Space to retry/success on all3cases.",
+  "limits": [
+    "No pixel-diff score",
+    "No live Figma required by user",
+    "Second repeat pending",
+    "Subjective human acceptance pending"
+  ]
+}

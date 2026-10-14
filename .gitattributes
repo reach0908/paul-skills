@@ -1,0 +1,31 @@
+# Preserve byte-exact historical trial inputs and CLI evidence.
+# Patch context spaces are syntax; other listed files retain recorded EOF bytes.
+evals/design-beta-readiness-2026-10-14/artifacts/information-architecture-control/output/map.md whitespace=-blank-at-eof,-blank-at-eol
+evals/design-field-trial-2026-10-14/release-harness-diff.patch -whitespace
+evals/design-install-discovery-2026-10-14/evidence/qa/console.txt whitespace=-blank-at-eof
+evals/design-install-discovery-2026-10-14/evidence/qa/raw-results.txt whitespace=-blank-at-eof
+evals/design-install-discovery-2026-10-14/evidence/qa/session-close.txt whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-01/app/app.js whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-02/app/app.js whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-accessibility-03/app/app.js whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-colors-03/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-02/app/app.js whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-interface-03/app/app.js whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-layout-03/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-typography-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-ui-02/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-role-parity-2026-10-12/fixtures/domains/better-writing-01/app/PRODUCT.md whitespace=-blank-at-eof
+evals/design-routing-repair-2026-10-14/evidence/better-interface.patch -whitespace
+evals/design-routing-repair-2026-10-14/evidence/interface-review.patch -whitespace

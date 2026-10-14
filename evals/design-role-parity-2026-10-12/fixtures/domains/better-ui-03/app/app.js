@@ -1,0 +1,1 @@
+for(const b of document.querySelectorAll('.tab'))b.onclick=()=>{for(const t of document.querySelectorAll('.tab'))t.setAttribute('aria-pressed',String(t===b));document.querySelector('#result').textContent=b.id==='saved'?'저장된 화면 1개 · Studio home':'Studio home · 홈 화면';};document.querySelector('#mark').onclick=()=>document.querySelector('#status').textContent='검토를 완료했어요.';

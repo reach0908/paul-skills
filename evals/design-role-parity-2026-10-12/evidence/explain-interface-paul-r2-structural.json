@@ -1,0 +1,80 @@
+[
+  {
+    "case": "explain-interface-layered-glow",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "ca3115310e03058f54ca98e47ef8fe0af1ee9861c1b10d994a69bf3736e0c863",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "deb6c1acbc8ec21ce536014de03979c2ddb2e4acaadb04a2c2246ba088b7f1b9",
+        "meaning": "Preserves the supplied production file exactly."
+      }
+    ]
+  },
+  {
+    "case": "explain-interface-runtime-reveal",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "89ec07d35aad3fe1892d1c2e61daa8790aadcdf933cd5580f3fa251d876f2811",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "d330b98a0706d223749983f59e22a552584d0add6b1ced954f0f3acce41c536a",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "f3a52201c1ebdbacfd2161cf7805776ff9cc89e7c1c6ea8388593f4cfd60b48e",
+        "meaning": "Preserves the supplied production file exactly."
+      }
+    ]
+  },
+  {
+    "case": "explain-interface-image-only",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "reference.png",
+        "pass": true,
+        "actual": "0d465e257d863b39ac1d3b45f8f1bf972552e851aeeeefdcda380f0c8cc89a42",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "IMAGE-NOTES.md",
+        "pass": true,
+        "actual": "427e624ef5e6480353be1364a657bf26ce67ad7a8173d060f7c9ea16e041cc54",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "absent",
+        "path": "index.html",
+        "pass": true,
+        "actual": false,
+        "meaning": "Image explanation does not rebuild an app."
+      },
+      {
+        "type": "absent",
+        "path": "app.js",
+        "pass": true,
+        "actual": false,
+        "meaning": "No unnecessary executable reconstruction."
+      }
+    ]
+  }
+]

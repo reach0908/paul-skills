@@ -1,0 +1,15 @@
+{
+  "frozenBeforeExecution": true,
+  "case": "variant-fixed-toolbar",
+  "required": [
+    "Three coherent density positions of the actual booking summary in real page context",
+    "Preserve booking details, confirmation local action and functional list search",
+    "URL-selected single variant, labelled picker, keyboard controls and editable guards",
+    "At 320 by 450 effective CSS viewport, native Tab to search and confirm retains visible focus target clear of product bar and picker",
+    "Pointer access after scrolling, no horizontal overflow and no dropped details",
+    "No preferred variant ranking or external booking",
+    "No product token or purpose rewrite"
+  ],
+  "exposedRetest": "variant-footer-emphasis at effective320x450, plus usual desktop/mobile and native200percent zoom if available.",
+  "judging": "Visible control is checked using screenshot, rect overlap, elementFromPoint and actual keyboard/pointer actions. A locator timeout alone does not establish permanent inaccessibility."
+}

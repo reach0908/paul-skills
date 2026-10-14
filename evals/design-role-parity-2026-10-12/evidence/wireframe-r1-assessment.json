@@ -1,0 +1,123 @@
+{
+  "role": "wireframe",
+  "repeat": 1,
+  "comparison": "task contract and no-skill utility; source parity not applicable",
+  "status": "bounded required behavior supported for both; repeat2 pending",
+  "method": "Read complete HTML/spec and reports; root replayed 12 arm/width/case combinations with real keyboard and pointer actions. Inspect final structured observations against contract.",
+  "evidence": [
+    "adjudication/wireframe-r1.json",
+    "adjudication/wireframe-r1-raw.txt",
+    "adjudication/wireframe-return-r1-raw.txt",
+    "adjudication/wireframe-r1-contract-checks.json"
+  ],
+  "cases": [
+    {
+      "id": "wireframe-normal-repair-checkin",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both provide runnable neutral HTML and all RD revision/destination/state mappings with mock limits.",
+        "Both preserve Q-31 and add one Q-32 after completion, not during pending.",
+        "Root empty-submit retains note, focuses first missing field; Cancel preserves confirmed queue.",
+        "Root native Enter repeated during pending yields one new record and visible full receipt.",
+        "Both requested widths have labelled inputs, actual Tab/Enter entry/completion and no document overflow; staff notes secondary.",
+        "Both report real browser evidence and limits, no user acceptance; Paul final digest supplied."
+      ],
+      "criticalFailures": [],
+      "artifactDigests": {
+        "control": "50bd7fab8c004aaae0314552fb1a020a964eb171257159431e066ec07f889394",
+        "paul": "3220943e4149cd2b502f7ae60b734d4b6bc5c17cc257c25a589ecb564f8b6889"
+      }
+    },
+    {
+      "id": "wireframe-edge-lab-slot",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both map LAB input revisions and required L-states in HTML/spec.",
+        "Both scenario controls deterministically expose unavailable and empty.",
+        "Root confirms long note/sample retained, slot cleared, alternate confirms LAB-73.",
+        "Root confirms empty Refresh retains draft, Cancel no record, repeated pending input guarded.",
+        "Root both widths no overflow, native Tab/Enter Confirm; Paul final optional note is accessible native disclosure.",
+        "Both POLICY-R unresolved, memory only. Root separately retested final Paul disclosure version where executor disclosed partial revalidation."
+      ],
+      "criticalFailures": [],
+      "artifactDigests": {
+        "control": "6eb06357ab5554a5c4607512462b87dccead92b6d414ab17a53e6fc98f1bb94e",
+        "paul": "4d7cfbe2e8e4e93adc477efc507e83a6d4f659f7f1d96051e7890a0b8a5b1fbb"
+      }
+    },
+    {
+      "id": "wireframe-reuse-preserve-pickup-retry",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both evolve supplied neutral layout and keep Help/content/navigation.",
+        "Both preserve NP mappings, P-18 and North on error return/revisit.",
+        "Both actual Enter first pending to error, Space Retry pending to RC-18; guards repeat.",
+        "Root waits visible route before reading; error/done revisit retain state and Reset restores.",
+        "Both actual Tab/Enter/Space path and requested widths observed; full assistive-tech path unclaimed.",
+        "Both Markdown maps changes/baseline and mock limits; original index unchanged."
+      ],
+      "criticalFailures": [],
+      "artifactDigests": {
+        "control": "af111edfbf987a667f94e60a8e3c62f6686a09e99361d6673d73279ff260fcf4",
+        "paul": "773c6d840cc849ad2f3e593324cf3893f792093514ab60823866f850ec8e7a28"
+      }
+    }
+  ],
+  "limits": [
+    "Actual mobile devices and assistive technology untested.",
+    "No user acceptance, production backend or global installation.",
+    "Root capture errors and premature navigation observations preserved separately, no product failure inferred from them.",
+    "Final composite observations replace two control pickup rows with wait-for-visible return replay; raw originals retained."
+  ]
+}

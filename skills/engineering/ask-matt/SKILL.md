@@ -81,6 +81,34 @@ Not feature work, just upkeep.
 
 - **`/improve-codebase-architecture`** runs whenever you have a spare moment to keep the codebase good for agents to operate in. It surfaces **deepening opportunities**; picking one _generates an idea_ you can take into the main flow at `/grill-with-docs`. It's the survey that finds the candidates; **`/codebase-design`** (below) is the bench you design the chosen one on.
 
+## Design
+
+Use this route once the product intent is known. Enter at the first unsettled step; existing decisions do not need another planning pass. A review preserves deliberate design choices; a prototype comparison can conclude that the original should stay.
+
+| Situation | What to recommend |
+| --- | --- |
+| Organize agreed content and findability | **`/information-architecture`** for destinations, labels and navigation |
+| Specify task actions, outcomes, interruption or recovery | **`/user-flow`** for the transition contract, including exit and return |
+| Decide screen hierarchy and responsive action placement | **`/wireframe`** for local interactive screens plus Markdown |
+| Implement an approved prototype, screen specification or image | **`/build-design`** for source-to-code mapping and comparison |
+| Work on the reachable states of one existing component | Ask the user to invoke **`/state-machine`** for a removable state workbench |
+| Observe one component under plausible hostile content | Ask the user to invoke **`/break`** for a single-look stress page |
+| Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |
+| Choose among visual directions for one component | Ask the user to invoke **`/variant`** for a comparison in its real page |
+| Review a screen or flow across disciplines | **`/better-interface`**, which loads all six domain owners and consolidates one report |
+| Review what a branch, PR, staged or uncommitted change caused | Ask the user to invoke **`/interface-review`** with their target; it owns scope and classification, then composes `better-interface` |
+| Keyboard, focus, semantics, names or announcements | **`/better-accessibility`** |
+| Grouping, spacing, reading order, responsive structure or RTL | **`/better-layout`** |
+| Labels, errors, empty states, confirmations or product vocabulary | **`/better-writing`** |
+| Type scale, wrapping, truncation, font behavior or text selection | **`/better-typography`** |
+| Palettes, semantic color tokens or contrast measurement | **`/better-colors`** |
+| Surfaces, icon states, optical details or motion | **`/better-ui`** |
+| Browser observations for a review or comparison | **`/design-browser`**, which uses Playwright CLI for development checks and Aside for research or general browsing, unless the user specifies a tool |
+
+The planning chain is `information-architecture → user-flow → wireframe → build-design`. Pass source revisions, stable destination/state IDs and unresolved decisions forward; continue only through the steps the user requested. Product flow planning uses `user-flow` directly and does not authorize loading the `state-machine` workbench. Broader throwaway UI or logic questions belong to `prototype`.
+
+`state-machine`, `break`, `explain-interface`, `variant` and `interface-review` are user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
+
 ## Vocabulary underneath
 
 Two model-invoked references that run *beneath* the other skills, each the single source of truth for its vocabulary. Reach for them directly when the **words**, not the process, are the problem; or let the skills above pull them in.
@@ -106,7 +134,7 @@ Off the main flow entirely.
 
 - **`/grill-me`**: the same relentless interview as `/grill-with-docs`, but **stateless**: it saves nothing locally and builds no `GLOSSARY.md`. Reach for it when you are **not working in a working directory** (sharpening a plan, a design, a piece of writing, anything with no repo under it). If you are in a working directory, use `/grill-with-docs` instead: it runs the same interview and leaves a paper trail, so it is strictly the better one.
 - **`/grilling`** is the interview primitive itself: rounds, the frontier, facts are the agent's job and decisions are yours. `/grill-me` and `/grill-with-docs` are the two named ways in, and `/triage`, `/wayfinder` and `/improve-codebase-architecture` all run it internally. Reach for it directly only when you want the interview with no wrapper around it.
-- **`/prototype`** is a small, throwaway program that answers one design question: does this state model feel right, or what should this UI look like. Throwaway is a constraint on how the code is written, not a promise to destroy it: the answer folds into the real code, and the prototype itself is kept as a **primary source** on a `prototype/<name>` branch out of main, pointed at from the implementation issue. It's the detour in step 2 of the main flow, but reach for it any time a design question is hard to settle on paper.
+- **`/prototype`** is a small, throwaway program that answers one design question: does this state model feel right, or what should this UI look like. Throwaway is a constraint on how the code is written, not a promise to destroy it: the answer folds into the real code, and the prototype itself is kept as a **primary source** on a `prototype/<name>` branch out of main, pointed at from the implementation issue. It's the detour in step 2 of the main flow, but reach for it any time a design question is hard to settle on paper. When comparing an existing UI, keeping the original can settle the question without an implementation change.
 - **`/research`**: investigate a bounded question against **primary sources**, using local material directly and the **Aside CLI** for web discovery. It checks scope and evidence, then leaves one cited Markdown file with verification limits and unresolved gaps. An existing research executor does the work directly; a standalone caller can delegate while continuing other work. Take the file into the main flow at `/grill-with-docs` to inform the decision.
 - **`/to-questionnaire`** comes in when the thing blocking you isn't in your head or the codebase but in **someone else's**, and it writes them a questionnaire to fill in. It's the inverse of `/grill-me`: instead of interviewing you about the subject, it interviews you about the **send** (who it's going to, what you need back) and aims the questions at the gap. What comes back is material for `/grill-with-docs` or `/to-spec`.
 - **`/wizard`** is for the steps only a **human** can take: provisioning infrastructure, setting up credentials or CI secrets, clicking through an unfamiliar third-party dashboard, running a one-off migration or cutover. It generates an interactive bash script that opens each URL, captures each value, and writes it into `.env` and GitHub secrets, so the procedure stops being something you re-explain to an agent every time. Model-invoked, so the agent reaches for it the moment it hits a wall only you can pass. If the agent could just do it itself, it should; this is for where a human is genuinely in the loop.
