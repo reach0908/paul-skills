@@ -61,12 +61,20 @@ Not feature work, just upkeep.
 
 - **`/improve-codebase-architecture`** runs whenever you have a spare moment to keep the codebase good for agents to operate in. It surfaces **deepening opportunities**; picking one _generates an idea_ you can take into the main flow at `/grill-with-docs`. It's the survey that finds the candidates; **`/codebase-design`** (below) is the bench you design the chosen one on.
 
-## Design review
+## Design
 
-Use this route once the product intent is known and an interface or implementation is available. A review preserves deliberate design choices; a prototype comparison can conclude that the original should stay.
+Use this route once the product intent is known. Enter at the first unsettled step; existing decisions do not need another planning pass. A review preserves deliberate design choices; a prototype comparison can conclude that the original should stay.
 
 | Situation | What to recommend |
 | --- | --- |
+| Organize agreed content and findability | **`/information-architecture`** for destinations, labels and navigation |
+| Specify task actions, outcomes, interruption or recovery | **`/user-flow`** for the transition contract, including exit and return |
+| Decide screen hierarchy and responsive action placement | **`/wireframe`** for local interactive screens plus Markdown |
+| Implement an approved prototype, screen specification or image | **`/build-design`** for source-to-code mapping and comparison |
+| Work on the reachable states of one existing component | Ask the user to invoke **`/state-machine`** for a removable state workbench |
+| Observe one component under plausible hostile content | Ask the user to invoke **`/break`** for a single-look stress page |
+| Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |
+| Choose among visual directions for one component | Ask the user to invoke **`/variant`** for a comparison in its real page |
 | Review a screen or flow across disciplines | **`/better-interface`**, which loads all six domain owners and consolidates one report |
 | Review what a branch, PR, staged or uncommitted change caused | Ask the user to invoke **`/interface-review`** with their target; it owns scope and classification, then composes `better-interface` |
 | Keyboard, focus, semantics, names or announcements | **`/better-accessibility`** |
@@ -77,7 +85,9 @@ Use this route once the product intent is known and an interface or implementati
 | Surfaces, icon states, optical details or motion | **`/better-ui`** |
 | Browser observations for a review or comparison | **`/design-browser`**, which uses Playwright CLI for development checks and Aside for research or general browsing, unless the user specifies a tool |
 
-`interface-review` is user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
+The planning chain is `information-architecture → user-flow → wireframe → build-design`. Pass source revisions, stable destination/state IDs and unresolved decisions forward; continue only through the steps the user requested. Product flow planning uses `user-flow` directly and does not authorize loading the `state-machine` workbench. Broader throwaway UI or logic questions belong to `prototype`.
+
+`state-machine`, `break`, `explain-interface`, `variant` and `interface-review` are user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
 
 ## Vocabulary underneath
 

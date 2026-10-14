@@ -1,0 +1,9 @@
+[
+  "요청하신 제한을 그대로 따르겠습니다. 디자인/제품 스킬이나 다른 에이전트는 사용하지 않고, `TASK.md`와 제공된 입력만 확인한 뒤 기존 `beta-user-flow-control` Playwright CLI 세션으로 관찰·검증하겠습니다.",
+  "`TASK.md`의 산출물은 화면 구현이 아니라 T-SAVE의 상태·전이 표 한 개이며, 서버 정책 미확정 사항은 확정하지 않아야 합니다. 이제 제공 입력(`BRIEF.md`)만 읽고, 지정된 세션에서 시작 상태와 과업 URL을 확인하겠습니다.",
+  "지정 세션의 첫 스냅샷은 `The browser 'beta-user-flow-control' is not open`으로 실패해, 평가자 설명과 실제 세션 상태가 달랐습니다. 같은 이름의 과업 소유 세션만 `about:blank`로 다시 열어 URL을 확인하겠습니다. 이는 지시된 공통 브라우저 준비이며, 관찰 결과로 간주하지 않겠습니다.",
+  "브라우저 시작은 샌드박스 환경에서 실제로 차단됐습니다. 실패 명령은 `playwright-cli -s=beta-user-flow-control open about:blank`이고, Chrome이 `SIGABRT`로 종료되며 `TargetClosedError`/`kill EPERM`이 기록됐습니다. 지시대로 우회하지 않고, 브라우저 관찰 공백은 보고서에 명시하겠습니다. 문서는 제공 입력만 근거로 작성하되, 미정인 인증 복구 API와 실패 후 정책은 열린 결정으로 남깁니다.",
+  "상태 모델과 전이 표를 작성했습니다. 최종 검증에서는 입력에 없는 정상 직행 경로나 API 세부를 끼워 넣지 않았는지 확인하고, 실패한 시작 시도가 유령 세션을 남기지 않았는지도 Playwright CLI 목록으로만 확인하겠습니다.",
+  "최종 점검 결과, 실제 시나리오에 없는 “첫 요청의 정상 직행 성공” 전이는 제거했습니다. 현재 명세는 첫 요청 타임아웃 → 첫 상태 확인 `pending` → 두 번째 확인 `succeeded`/`S-72` 경로만 확정하며, 실제 실패와 인증 복구 후 재조회는 별도로 구분합니다. Playwright CLI 목록도 `(no browsers)`여서 닫을 세션은 없습니다.",
+  "작업을 완료했습니다.\n\n- [T-SAVE 상태·전이 명세](</private/tmp/paul-beta-readiness-20261014/public/runs/user-flow-control/output/flow.md>)\n- [작업 보고서](</private/tmp/paul-beta-readiness-20261014/public/runs/user-flow-control/output/report.md>)\n- 실행 URL: `http://127.0.0.1:48914/runs/user-flow-control/`\n\n화면 코드는 변경하지 않았습니다. Playwright는 Chrome 시작이 `SIGABRT`/`TargetClosedError`로 차단되어 페이지 관찰과 캡처를 수행하지 못했으며, 이를 보고서에 명시했습니다. 인증 복구 API와 실패 후 재시도 정책은 미결로 유지했습니다."
+]

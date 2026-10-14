@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>첨부 파일 스트레스 관찰</title>
+    <link rel="stylesheet" href="../style.css">
+  </head>
+  <body>
+    <main>
+      <h1>첨부 파일 스트레스 관찰</h1>
+      <p>대상: 실제 <code>renderAttachments</code> 컴포넌트. 파일명은 제품 제약인 최대 220자 안에서만 사용했습니다.</p>
+      <p>유지한 축: 파일명 길이와 문자 형태, 항목 수, 760px/280px 컨테이너, 단일행/줄바꿈 모드, 정상·빈·로딩·읽기 전용 상태.</p>
+      <p>제외한 축: 프로젝트가 별도 테마나 모션 모드를 지원한다는 근거가 없어 환경 모드는 제외했습니다.</p>
+      <p id="result-summary">관찰 전</p>
+      <div id="scenarios"></div>
+    </main>
+    <script type="module" src="./stress.js"></script>
+  </body>
+</html>

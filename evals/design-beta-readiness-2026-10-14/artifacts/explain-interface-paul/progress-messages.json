@@ -1,0 +1,9 @@
+[
+  "`explain-interface`를 사용해 요청된 화면/효과만 증거 기반으로 설명하겠습니다. 먼저 TASK.md와 해당 스킬의 필수 절차, 브라우저 관찰 지침, 설치된 Playwright CLI 도움말을 읽은 뒤 지정된 세션만 사용하겠습니다.",
+  "TASK는 두 페이지 전체 시스템 분석이며, 데스크톱/모바일과 두 테마, WAAPI opacity 및 reduced-motion 경로까지 요구합니다. 따라서 `read-the-system.md`의 전체 시스템 절차를 적용하고, 브라우저에서는 구조·계산 스타일·애니메이션을 각각 별도 증거로 수집하겠습니다. 소스 파일은 읽지 않겠습니다.",
+  "초기 스냅샷에서 index 페이지는 내비게이션 링크, 테마 토글, 저장 완료 카드와 재생 버튼으로 구성됨을 확인했습니다. 이제 네트워크 출처와 CSSOM 접근 가능 여부를 분리해 기록하고, 4개 뷰포트/테마 조합 및 두 페이지에서 같은 측정식을 반복하겠습니다. 교차 출처 CSS는 “읽힌 authored CSS”와 “브라우저가 적용한 computed style”을 혼동하지 않도록 따로 다룹니다.",
+  "반응형·테마 전환의 실제 값은 확인했습니다. 600px 이하에서 2:1 그리드가 1열로 바뀌고, `--site-space` 24→16px, 제목 24→20px로 바뀝니다. 테마 토글은 시스템 색상 에뮬레이션과 별개로 `<html data-theme>`의 세 가지 의미 토큰(surface/ink/brand)만 교체했습니다. 다음은 재생 버튼의 WAAPI 중간 상태와 reduced-motion 우회 경로를 실제로 실행해 확인합니다.",
+  "모션은 normal 상태에서 실제로 `opacity 0 / translateY(12px)`에서 시작해 300ms(전체의 25%)에 `opacity≈0.9 / 1px`, 1200ms에 `1 / 0px`로 끝나는 단일 WAAPI 애니메이션이었습니다. reduced-motion에서는 애니메이션 객체를 만들지 않고 인라인 최종값으로 즉시 전환됐습니다. 마지막으로 대표 효과의 레이어 순서와 실제 문서 내비게이션 방식을 확인한 뒤 보고서를 작성하겠습니다.",
+  "관찰을 마쳤고 이제 결과 파일을 작성합니다. 설명에는 각 주장마다 `측정 / 도출 / 추정`을 붙이고, 교차 출처 CSS의 CSSOM 실패와 별도 HTTP 응답 읽기, 실제 computed style을 분리해 적겠습니다. 보고서는 실행 URL·세션·캡처·미확인 범위를 재현용으로 요약합니다.",
+  "분석을 완료했습니다. 사이트 소스는 수정하지 않았습니다.\n\n- 상세 설명: [output/explanation.md](/private/tmp/paul-beta-readiness-20261014/public/runs/explain-interface-paul/output/explanation.md)\n- 실행 보고서·한계: [output/report.md](/private/tmp/paul-beta-readiness-20261014/public/runs/explain-interface-paul/output/report.md)\n- 캡처 9개: [output/captures](/private/tmp/paul-beta-readiness-20261014/public/runs/explain-interface-paul/output/captures)\n\n실행 URL:\n\n- `http://127.0.0.1:48914/runs/explain-interface-paul/app/index.html`\n- `http://127.0.0.1:48914/runs/explain-interface-paul/app/detail.html`\n\n지정된 Playwright 세션만 사용했으며 관찰 후 해당 세션만 종료했습니다. 교차 출처 CSS의 CSSOM 제한, computed style 측정값, WAAPI와 reduced-motion 경로, 미확인 범위도 보고서에 구분해 기록했습니다."
+]

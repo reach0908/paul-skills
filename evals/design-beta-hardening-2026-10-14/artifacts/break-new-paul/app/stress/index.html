@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>첨부 파일 스트레스 보고서</title>
+    <link rel="stylesheet" href="../style.css">
+    <style>
+      .scenario { margin: 32px 0; }
+      .scenario-label { margin: 0 0 8px; }
+      .scenario-note { margin: 8px 0 0; }
+      .container-760 { width: 760px; max-width: 100%; }
+      .container-280 { width: 280px; max-width: 100%; }
+    </style>
+  </head>
+  <body>
+    <main>
+      <h1>첨부 파일 스트레스 보고서</h1>
+      <p>실제 <code>renderAttachments</code>를 제품 스타일 그대로 렌더링했습니다.</p>
+      <div id="scenarios"></div>
+    </main>
+    <script type="module">
+      import { renderAttachments } from '../attachment.js';
+
+      const typical = '회의록_다음분기_검토.pdf';
+      const longReadable = '다음 분기 프로젝트 검토 회의에서 확정한 실행 계획과 담당자별 후속 조치 및 참고 자료를 함께 정리한 첨부 파일 최종 검토본입니다.pdf';
+      const maxStem = '프로젝트최종첨부자료승인본'.repeat(30).slice(0, 216);
+      const maxUnbreakable = `${maxStem}.pdf`;
+      const realisticItems = [
+        { name: typical },
+        { name: '예산안_검토의견.xlsx' },
+        { name: '프로젝트_일정표_v3.png' },
+      ];
+      const manyItems = Array.from({ length: 30 }, (_, index) => ({
+        name: `첨부자료_${String(index + 1).padStart(2, '0')}_검토본.pdf`,
+      }));
+
+      const findings = {
+        '내용 길이 · 760px · 단일행 · 빈 파일명': '관찰된 깨짐: 파일명이 보이지 않고 버튼이 26×18px로 축소됩니다. 담당: better-writing.',
+        '내용 길이 · 760px · 단일행 · 여러 구절': '관찰된 깨짐: 버튼 오른쪽 끝이 컴포넌트 경계를 약 125px 벗어납니다. 담당: better-typography.',
+        '최대 길이 · 760px · 단일행 · 줄바꿈 없는 220자': '관찰된 깨짐: 버튼 오른쪽 끝이 컴포넌트 경계를 약 2,301px 벗어납니다. 담당: better-typography.',
+        '최대 길이 · 280px · 단일행 · 줄바꿈 없는 220자': '관찰된 깨짐: 버튼 오른쪽 끝이 컴포넌트 경계를 약 2,781px 벗어납니다. 담당: better-typography.',
+      };
+
+      const scenarios = [
+        { label: '정상 · 760px · 단일행 · 대표 파일명 1개', width: 760, props: { items: [{ name: typical }] } },
+        { label: '정상 · 760px · 줄바꿈 · 대표 파일명 1개', width: 760, props: { items: [{ name: typical }], wrapNames: true } },
+        { label: '내용 길이 · 760px · 단일행 · 빈 파일명', width: 760, props: { items: [{ name: '' }] } },
+        { label: '내용 길이 · 760px · 단일행 · 한 단어', width: 760, props: { items: [{ name: '회의록.pdf' }] } },
+        { label: '내용 길이 · 760px · 단일행 · 여러 구절', width: 760, props: { items: [{ name: longReadable }] } },
+        { label: '최대 길이 · 760px · 단일행 · 줄바꿈 없는 220자', width: 760, props: { items: [{ name: maxUnbreakable }] } },
+        { label: '최대 길이 · 280px · 단일행 · 줄바꿈 없는 220자', width: 280, props: { items: [{ name: maxUnbreakable }] } },
+        { label: '최대 길이 · 760px · 줄바꿈 · 줄바꿈 없는 220자', width: 760, props: { items: [{ name: maxUnbreakable }], wrapNames: true } },
+        { label: '최대 길이 · 280px · 줄바꿈 · 줄바꿈 없는 220자', width: 280, props: { items: [{ name: maxUnbreakable }], wrapNames: true } },
+        { label: '내용 형태 · 280px · 줄바꿈 · 이모지와 혼합 텍스트', width: 280, props: { items: [{ name: '📎 회의자료_최종본_검토완료 ✅.pdf' }], wrapNames: true } },
+        { label: '내용 형태 · 280px · 줄바꿈 · RTL과 혼합 방향', width: 280, props: { items: [{ name: 'خطة_المشروع_OpenAI_2026_최종.pdf' }], wrapNames: true } },
+        { label: '내용 형태 · 280px · 줄바꿈 · 발음 구별 부호와 큰 문자', width: 280, props: { items: [{ name: 'Crème_Brûlée_Árvíztűrő_회의록_ภาษาไทย.pdf' }], wrapNames: true } },
+        { label: '수량 · 760px · 항목 0개', width: 760, props: { items: [] } },
+        { label: '수량 · 760px · 항목 3개', width: 760, props: { items: realisticItems } },
+        { label: '수량 · 760px · 항목 30개', width: 760, props: { items: manyItems } },
+        { label: '상태 · 760px · 불러오는 중', width: 760, props: { loading: true } },
+        { label: '상태 · 760px · 읽기 전용', width: 760, props: { items: realisticItems, readOnly: true } },
+        { label: '컨테이너 · 280px · 단일행 · 대표 파일명 1개', width: 280, props: { items: [{ name: typical }] } },
+        { label: '컨테이너 · 280px · 줄바꿈 · 대표 파일명 1개', width: 280, props: { items: [{ name: typical }], wrapNames: true } },
+      ];
+
+      const host = document.querySelector('#scenarios');
+      for (const scenario of scenarios) {
+        const section = document.createElement('section');
+        section.className = 'scenario';
+        section.dataset.scenario = scenario.label;
+
+        const label = document.createElement('h2');
+        label.className = 'scenario-label';
+        label.textContent = scenario.label;
+
+        const container = document.createElement('div');
+        container.className = `container-${scenario.width}`;
+        container.append(renderAttachments(scenario.props));
+
+        section.append(label);
+        if (findings[scenario.label]) {
+          const note = document.createElement('p');
+          note.className = 'scenario-note';
+          note.textContent = findings[scenario.label];
+          section.append(note);
+        }
+        section.append(container);
+        host.append(section);
+      }
+    </script>
+  </body>
+</html>

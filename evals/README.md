@@ -43,3 +43,7 @@ Human review owns qualitative acceptance. Reuse deterministic output checks wher
 Before a paid matrix, choose models from currently supported host options, fix a budget/stop condition, and get any needed spending authorization. The initial in-session trials use inherited host settings and support no model-ranking claim.
 
 The [approved nine-skill promotion](design-promotion-2026-10-14/REPORT.md) records user authorization, unchanged evaluated skill files, current package checks and release/install evidence. Historical trial snapshots stay separate from the promoted catalog.
+
+The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/REPORT.md) records new source comparisons and the break and user-flow weaknesses. Its [hardening follow-up](design-beta-hardening-2026-10-14/REPORT.md) preserves those results, tests bounded repairs and actual invocation, and passes generated IA, flow and screen artifacts into subsequent stages. Neither report is a promotion authorization.
+
+- [Remaining eight design skills: promotion and installation](design-final-promotion-2026-10-14/REPORT.md) records user approval, unchanged candidate files, packaging and fresh discovery.

@@ -1,0 +1,2 @@
+/* Served from localhost while the page origin is 127.0.0.1. */
+:root{--site-space:24px;--site-type:1.5rem;--surface:#ffffff;--ink:#17212b;--brand:#174b82}body{background:var(--surface);color:var(--ink)}[data-theme="dark"]{--surface:#17212b;--ink:#f3f5f7;--brand:#8dbbfa}main{padding:var(--site-space)}h1{font-size:var(--site-type)}.site-grid{display:grid;grid-template-columns:2fr 1fr;gap:var(--site-space)}@media(max-width:600px){:root{--site-space:16px;--site-type:1.25rem}.site-grid{grid-template-columns:1fr}}

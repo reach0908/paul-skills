@@ -1,0 +1,9 @@
+### Result
+[{"arm":"original","index":3,"text":"검토 대기 자료\n운영팀이 다음 배포 전에 확인해야 할 자료입니다. 담당자와 일정을 확인하고 의견을 남겨 주세요. 검토가 끝나면 다음 담당자에게 전달합니다."},{"arm":"original","index":4,"text":"검토 대기 자료\n검토대기자료제목이중간에한번도끊기지않고아주오랫동안계속이어지는문자열ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"},{"arm":"original","index":11,"text":"검토 대기 자료\n\n이 자료를 검토할 권한이 없습니다."},{"arm":"paul","index":3,"text":"검토 대기 자료\n담당자가 고객 요청을 검토한 뒤 관련 부서와 확인하고, 필요한 보완 자료를 정리하여 다음 회의 전에 최종 의견을 남겨야 하는 운영 검토 자료입니다."},{"arm":"paul","index":10,"text":"검토 대기 자료\n담당자가 고객 요청을 검토한 뒤 관련 부서와 확인하고, 필요한 보완 자료를 정리하여 다음 회의 전에 최종 의견을 남겨야 하는 운영 검토 자료입니다."},{"arm":"paul","index":11,"text":"검토 대기 자료\nR-2026-10-14-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789"}]
+### Ran Playwright code
+```js
+await (async page => { const output=[]; for(const arm of ["original","paul"]){ await page.goto(`http://127.0.0.1:48924/runs/break-old-${arm}/app/stress/`); await page.setViewportSize({width:1280,height:720}); const cards=page.locator(".card"); const indices=arm==="original"?[3,4,11]:[3,10,11]; for(const index of indices){ const e=cards.nth(index); await e.scrollIntoViewIfNeeded(); await page.screenshot({path:`/Users/jinhokim/dev/paul-skills/evals/design-beta-hardening-2026-10-14/evidence/break-${arm}-scenario-${index}.png`}); output.push({arm,index,text:(await e.innerText()).slice(0,180)}); }} return output; })(page);
+```
+### Page
+- Page URL: http://127.0.0.1:48924/runs/break-old-paul/app/stress/
+- Page Title: 검토 대기 자료 스트레스 보고서

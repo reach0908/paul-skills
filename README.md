@@ -18,7 +18,7 @@ Paul Skills uses its own version sequence starting at **0.1.0**, with release ta
 | [Product management](skills/product-management/README.md) | Product discovery, strategy, prioritization, requirements, and outcomes. |
 | [Design](skills/design/README.md) | User experience, interaction, visual design, and design evaluation. |
 
-Design includes nine promoted review and browser-evidence skills. Product management has no promoted skills yet. New skills enter a domain after user validation and explicit promotion approval.
+Design includes seventeen promoted skills for planning, local prototypes, implementation and review. Product management has no promoted skills yet. New skills enter a domain after user validation and explicit promotion approval.
 
 ## Installation
 
@@ -112,14 +112,22 @@ General workflow tools, not code-specific.
 
 ### Design
 
-Focused interface review and browser evidence for local, responsive web work.
+Composable planning, local prototypes, design implementation, interface review and browser evidence for responsive web work.
 
 **User-invoked**
 
+- **[state-machine](./skills/design/state-machine/SKILL.md)**: Render reachable component states with real components, local fixtures and a switcher on a removable workbench.
+- **[break](./skills/design/break/SKILL.md)**: Stress a real component with plausible hostile content on one temporary page and report observed breakage.
+- **[explain-interface](./skills/design/explain-interface/SKILL.md)**: Explain a site or effect with measured, derived and inferred evidence, without claiming an image reveals its source.
+- **[variant](./skills/design/variant/SKILL.md)**: Compare one component along a chosen design axis in its real page while preserving task state.
 - **[interface-review](./skills/design/interface-review/SKILL.md)**: Review a branch, pull request or uncommitted change, separating introduced and regressed findings from existing problems.
 
 **Model-invoked**
 
+- **[information-architecture](./skills/design/information-architecture/SKILL.md)**: Map agreed content to stable destinations, labels and navigation paths.
+- **[user-flow](./skills/design/user-flow/SKILL.md)**: Specify task actions, transitions, feedback and recovery, including exit and return without losing state.
+- **[wireframe](./skills/design/wireframe/SKILL.md)**: Build interactive low-fidelity screens and Markdown specifications from agreed content and flows.
+- **[build-design](./skills/design/build-design/SKILL.md)**: Implement an approved local prototype, screen specification or design reference with existing tokens and components.
 - **[better-interface](./skills/design/better-interface/SKILL.md)**: Combine six domain reviews into one evidence-backed interface report; route unnamed changes to explicit interface-review.
 - **[better-accessibility](./skills/design/better-accessibility/SKILL.md)**: Check semantics, names, keyboard and focus behavior, forms, announcements, motion preferences and zoom.
 - **[better-layout](./skills/design/better-layout/SKILL.md)**: Check grouping, alignment, reading order and responsive structure under resizing, translation and RTL.

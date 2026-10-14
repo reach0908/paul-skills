@@ -1,0 +1,7 @@
+[
+  "TASK.md와 제공 입력만 확인한 뒤, 지정된 Playwright CLI 세션으로 현재 상태를 관찰하고 필요한 파일만 수정하겠습니다. 마지막에는 실제 확인한 상태와 미검증 항목을 `output/report.md`에 한국어로 남기겠습니다.",
+  "결정본의 핵심 전이를 그대로 유지하겠습니다: 첫 저장은 `timeout-unknown`, 상태 확인은 `pending → succeeded(S-72)`, 재클릭은 같은 요청으로 중복 방지됩니다. 초안·결과와 목록 문맥은 로컬 저장소에 남기고, 초기화는 별도 버튼에서만 수행하도록 구현하겠습니다.",
+  "1280×900 화면에서 상세와 저장 패널이 정상 노출되는 것을 확인했습니다. 이제 실제 키 입력으로 메모를 넣고, 저장·상태 확인·닫기/복귀·목록 왕복을 순서대로 검증한 뒤 두 폭의 가로 넘침을 수치로 확인하겠습니다.",
+  "저장 전이는 실제 조작에서 `timeout-unknown → pending → succeeded(S-72)`로 확인됐고, 패널을 닫은 뒤 새로고침해도 메모와 영수증이 복원됐습니다. 목록 왕복 시 검색어·태그·정렬·R-72 위치도 유지됐으며, 320px에서 검색과 내 보관함이 계속 노출되고 가로 넘침은 0px입니다. 캡처를 시각 점검한 뒤 보고서를 마무리하겠습니다.",
+  "구현과 브라우저 검증을 완료했습니다.\n\n- 실행 URL: http://127.0.0.1:48914/runs/wireframe-control/app/index.html\n- 구현: [app/index.html](/private/tmp/paul-beta-readiness-20261014/public/runs/wireframe-control/app/index.html)\n- 화면·전이 문서: [output/screens.md](/private/tmp/paul-beta-readiness-20261014/public/runs/wireframe-control/output/screens.md)\n- 검증 보고서: [output/report.md](/private/tmp/paul-beta-readiness-20261014/public/runs/wireframe-control/output/report.md)\n\n확인 결과:\n\n- `timeout-unknown → pending → succeeded(S-72)` 전이\n- 중복 저장 방지\n- 닫기·새로고침 후 초안과 결과 복원\n- 목록 왕복 문맥 보존\n- 키보드 본문 건너뛰기와 출처 내부 이동\n- 1280×900 및 320×700에서 가로 넘침 없음\n- 콘솔 오류·경고 0건\n\n지정 Playwright 세션은 관찰 후 닫았습니다. 캡처 3개도 `output/`에 저장했습니다."
+]

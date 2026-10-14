@@ -1,0 +1,170 @@
+- generic [active] [ref=e1] [box=0,0,1280,5271]:
+  - banner [ref=e2] [box=160,0,960,58]: 검토 대기 카드 스트레스 페이지
+  - main [ref=e3] [box=160,58,960,5213]:
+    - paragraph [ref=e4] [box=176,90,928,26]:
+      - text: 아래 각 섹션은 실제
+      - code [ref=e5] [box=303,96,117,15]: renderQueueCard
+      - text: 를 한 번씩 렌더링합니다.
+    - generic [ref=e6] [box=176,135,928,5120]:
+      - generic [ref=e7] [box=176,135,928,214]:
+        - heading "제목 길이 — 빈 문자열" [level=2] [ref=e8] [box=176,135,928,38]
+        - region "검토 대기 자료" [ref=e9] [box=176,193,928,155]:
+          - heading "검토 대기 자료" [level=2] [ref=e10] [box=193,230,894,38]
+          - list [ref=e11] [box=193,289,894,27]:
+            - listitem [ref=e12] [box=217,289,870,27]:
+              - button [ref=e13] [cursor=pointer] [box=217,298,34,18]
+      - generic [ref=e14] [box=176,369,928,230]:
+        - heading "제목 길이 — 한 단어" [level=2] [ref=e15] [box=176,369,928,38]
+        - region "검토 대기 자료" [ref=e16] [box=176,427,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e17] [box=193,464,894,38]
+          - list [ref=e18] [box=193,522,894,44]:
+            - listitem [ref=e19] [box=217,522,870,44]:
+              - button "회고" [ref=e20] [cursor=pointer] [box=217,522,62,44]
+      - generic [ref=e21] [box=176,619,928,230]:
+        - heading "제목 길이 — 일반 제목" [level=2] [ref=e22] [box=176,619,928,38]
+        - region "검토 대기 자료" [ref=e23] [box=176,677,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e24] [box=193,714,894,38]
+          - list [ref=e25] [box=193,772,894,44]:
+            - listitem [ref=e26] [box=217,772,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e27] [cursor=pointer] [box=217,772,249,44]
+      - generic [ref=e28] [box=176,869,928,230]:
+        - heading "제목 길이 — 여러 문장" [level=2] [ref=e29] [box=176,869,928,38]
+        - region "검토 대기 자료" [ref=e30] [box=176,927,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e31] [box=193,964,894,38]
+          - list [ref=e32] [box=193,1022,894,44]:
+            - listitem [ref=e33] [box=217,1022,870,44]:
+              - button "작은 팀에서 실패한 뒤 무엇을 기록해야 할까요? 다시 시도할 시점을 정하고, 다음 실험의 책임자와 확인 방법을 함께 남깁니다." [ref=e34] [cursor=pointer] [box=217,1022,814,44]
+      - generic [ref=e35] [box=176,1119,928,230]:
+        - heading "제목 길이 — 공백 없는 긴 문자열" [level=2] [ref=e36] [box=176,1119,928,38]
+        - region "검토 대기 자료" [ref=e37] [box=176,1177,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e38] [box=193,1214,894,38]
+          - list [ref=e39] [box=193,1272,894,44]:
+            - listitem [ref=e40] [box=217,1272,870,44]:
+              - button "https://example.com/library/operations/retrospective/retry/decision-record/abcdefghijklmnopqrstuvwxyz0123456789" [ref=e41] [cursor=pointer] [box=217,1272,880,44]
+      - generic [ref=e42] [box=176,1369,928,212]:
+        - heading "목록 수량 — 0개" [level=2] [ref=e43] [box=176,1369,928,38]
+        - region "검토 대기 자료" [ref=e44] [box=176,1427,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e45] [box=193,1464,894,38]
+          - paragraph [ref=e46] [box=193,1522,894,26]: 대기 중인 자료가 없습니다.
+      - generic [ref=e47] [box=176,1601,928,230]:
+        - heading "목록 수량 — 1개" [level=2] [ref=e48] [box=176,1601,928,38]
+        - region "검토 대기 자료" [ref=e49] [box=176,1659,928,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e50] [box=193,1696,894,38]
+          - list [ref=e51] [box=193,1754,894,44]:
+            - listitem [ref=e52] [box=217,1754,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e53] [cursor=pointer] [box=217,1754,249,44]
+      - generic [ref=e54] [box=176,1851,928,317]:
+        - heading "목록 수량 — 현실적 3개" [level=2] [ref=e55] [box=176,1851,928,38]
+        - region "검토 대기 자료" [ref=e56] [box=176,1909,928,259]:
+          - heading "검토 대기 자료" [level=2] [ref=e57] [box=193,1946,894,38]
+          - list [ref=e58] [box=193,2004,894,131]:
+            - listitem [ref=e59] [box=217,2004,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e60] [cursor=pointer] [box=217,2004,249,44]
+            - listitem [ref=e61] [box=217,2048,870,44]:
+              - button "운영 회고를 다음 실험으로 연결하는 방법" [ref=e62] [cursor=pointer] [box=217,2048,290,44]
+            - listitem [ref=e63] [box=217,2091,870,44]:
+              - button "작은 조직의 의사결정 기록 만들기" [ref=e64] [cursor=pointer] [box=217,2091,245,44]
+      - generic [ref=e65] [box=176,2188,928,1494]:
+        - heading "목록 수량 — 현실적 수량의 10배인 30개" [level=2] [ref=e66] [box=176,2188,928,38]
+        - region "검토 대기 자료" [ref=e67] [box=176,2246,928,1436]:
+          - heading "검토 대기 자료" [level=2] [ref=e68] [box=193,2283,894,38]
+          - list [ref=e69] [box=193,2341,894,1308]:
+            - listitem [ref=e70] [box=217,2341,870,44]:
+              - 'button "1번째 검토 자료: 작은 팀의 운영 기록" [ref=e71] [cursor=pointer] [box=217,2341,264,44]'
+            - listitem [ref=e72] [box=217,2385,870,44]:
+              - 'button "2번째 검토 자료: 작은 팀의 운영 기록" [ref=e73] [cursor=pointer] [box=217,2385,267,44]'
+            - listitem [ref=e74] [box=217,2428,870,44]:
+              - 'button "3번째 검토 자료: 작은 팀의 운영 기록" [ref=e75] [cursor=pointer] [box=217,2428,267,44]'
+            - listitem [ref=e76] [box=217,2472,870,44]:
+              - 'button "4번째 검토 자료: 작은 팀의 운영 기록" [ref=e77] [cursor=pointer] [box=217,2472,267,44]'
+            - listitem [ref=e78] [box=217,2516,870,44]:
+              - 'button "5번째 검토 자료: 작은 팀의 운영 기록" [ref=e79] [cursor=pointer] [box=217,2516,267,44]'
+            - listitem [ref=e80] [box=217,2559,870,44]:
+              - 'button "6번째 검토 자료: 작은 팀의 운영 기록" [ref=e81] [cursor=pointer] [box=217,2559,267,44]'
+            - listitem [ref=e82] [box=217,2603,870,44]:
+              - 'button "7번째 검토 자료: 작은 팀의 운영 기록" [ref=e83] [cursor=pointer] [box=217,2603,266,44]'
+            - listitem [ref=e84] [box=217,2646,870,44]:
+              - 'button "8번째 검토 자료: 작은 팀의 운영 기록" [ref=e85] [cursor=pointer] [box=217,2646,267,44]'
+            - listitem [ref=e86] [box=217,2690,870,44]:
+              - 'button "9번째 검토 자료: 작은 팀의 운영 기록" [ref=e87] [cursor=pointer] [box=217,2690,267,44]'
+            - listitem [ref=e88] [box=217,2734,870,44]:
+              - 'button "10번째 검토 자료: 작은 팀의 운영 기록" [ref=e89] [cursor=pointer] [box=217,2734,274,44]'
+            - listitem [ref=e90] [box=217,2777,870,44]:
+              - 'button "11번째 검토 자료: 작은 팀의 운영 기록" [ref=e91] [cursor=pointer] [box=217,2777,272,44]'
+            - listitem [ref=e92] [box=217,2821,870,44]:
+              - 'button "12번째 검토 자료: 작은 팀의 운영 기록" [ref=e93] [cursor=pointer] [box=217,2821,274,44]'
+            - listitem [ref=e94] [box=217,2864,870,44]:
+              - 'button "13번째 검토 자료: 작은 팀의 운영 기록" [ref=e95] [cursor=pointer] [box=217,2864,274,44]'
+            - listitem [ref=e96] [box=217,2908,870,44]:
+              - 'button "14번째 검토 자료: 작은 팀의 운영 기록" [ref=e97] [cursor=pointer] [box=217,2908,274,44]'
+            - listitem [ref=e98] [box=217,2952,870,44]:
+              - 'button "15번째 검토 자료: 작은 팀의 운영 기록" [ref=e99] [cursor=pointer] [box=217,2952,274,44]'
+            - listitem [ref=e100] [box=217,2995,870,44]:
+              - 'button "16번째 검토 자료: 작은 팀의 운영 기록" [ref=e101] [cursor=pointer] [box=217,2995,274,44]'
+            - listitem [ref=e102] [box=217,3039,870,44]:
+              - 'button "17번째 검토 자료: 작은 팀의 운영 기록" [ref=e103] [cursor=pointer] [box=217,3039,273,44]'
+            - listitem [ref=e104] [box=217,3082,870,44]:
+              - 'button "18번째 검토 자료: 작은 팀의 운영 기록" [ref=e105] [cursor=pointer] [box=217,3082,274,44]'
+            - listitem [ref=e106] [box=217,3126,870,44]:
+              - 'button "19번째 검토 자료: 작은 팀의 운영 기록" [ref=e107] [cursor=pointer] [box=217,3126,274,44]'
+            - listitem [ref=e108] [box=217,3169,870,44]:
+              - 'button "20번째 검토 자료: 작은 팀의 운영 기록" [ref=e109] [cursor=pointer] [box=217,3169,276,44]'
+            - listitem [ref=e110] [box=217,3213,870,44]:
+              - 'button "21번째 검토 자료: 작은 팀의 운영 기록" [ref=e111] [cursor=pointer] [box=217,3213,274,44]'
+            - listitem [ref=e112] [box=217,3257,870,44]:
+              - 'button "22번째 검토 자료: 작은 팀의 운영 기록" [ref=e113] [cursor=pointer] [box=217,3257,276,44]'
+            - listitem [ref=e114] [box=217,3300,870,44]:
+              - 'button "23번째 검토 자료: 작은 팀의 운영 기록" [ref=e115] [cursor=pointer] [box=217,3300,276,44]'
+            - listitem [ref=e116] [box=217,3344,870,44]:
+              - 'button "24번째 검토 자료: 작은 팀의 운영 기록" [ref=e117] [cursor=pointer] [box=217,3344,276,44]'
+            - listitem [ref=e118] [box=217,3387,870,44]:
+              - 'button "25번째 검토 자료: 작은 팀의 운영 기록" [ref=e119] [cursor=pointer] [box=217,3387,276,44]'
+            - listitem [ref=e120] [box=217,3431,870,44]:
+              - 'button "26번째 검토 자료: 작은 팀의 운영 기록" [ref=e121] [cursor=pointer] [box=217,3431,277,44]'
+            - listitem [ref=e122] [box=217,3475,870,44]:
+              - 'button "27번째 검토 자료: 작은 팀의 운영 기록" [ref=e123] [cursor=pointer] [box=217,3475,275,44]'
+            - listitem [ref=e124] [box=217,3518,870,44]:
+              - 'button "28번째 검토 자료: 작은 팀의 운영 기록" [ref=e125] [cursor=pointer] [box=217,3518,277,44]'
+            - listitem [ref=e126] [box=217,3562,870,44]:
+              - 'button "29번째 검토 자료: 작은 팀의 운영 기록" [ref=e127] [cursor=pointer] [box=217,3562,277,44]'
+            - listitem [ref=e128] [box=217,3605,870,44]:
+              - 'button "30번째 검토 자료: 작은 팀의 운영 기록" [ref=e129] [cursor=pointer] [box=217,3605,277,44]'
+      - generic [ref=e130] [box=176,3702,320,230]:
+        - heading "컨테이너 — 320px" [level=2] [ref=e131] [box=176,3702,320,38]
+        - region "검토 대기 자료" [ref=e132] [box=176,3760,320,172]:
+          - heading "검토 대기 자료" [level=2] [ref=e133] [box=193,3797,286,38]
+          - list [ref=e134] [box=193,3855,286,44]:
+            - listitem [ref=e135] [box=217,3855,262,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e136] [cursor=pointer] [box=217,3855,249,44]
+      - generic [ref=e137] [box=176,3952,928,212]:
+        - heading "상태 — 권한 없음" [level=2] [ref=e138] [box=176,3952,928,38]
+        - region "검토 대기 자료" [ref=e139] [box=176,4010,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e140] [box=193,4047,894,38]
+          - paragraph [ref=e141] [box=193,4105,894,26]: 이 자료를 검토할 권한이 없습니다.
+      - generic [ref=e142] [box=176,4184,928,212]:
+        - heading "상태 — 로딩" [level=2] [ref=e143] [box=176,4184,928,38]
+        - region "검토 대기 자료" [ref=e144] [box=176,4242,928,154]:
+          - heading "검토 대기 자료" [level=2] [ref=e145] [box=193,4279,894,38]
+          - status [ref=e146] [box=193,4337,894,26]: 자료를 불러오는 중
+      - generic [ref=e147] [box=176,4416,928,256]:
+        - heading "상태 — 오류" [level=2] [ref=e148] [box=176,4416,928,38]
+        - region "검토 대기 자료" [ref=e149] [box=176,4474,928,197]:
+          - heading "검토 대기 자료" [level=2] [ref=e150] [box=193,4511,894,38]
+          - alert [ref=e151] [box=193,4569,894,26]: 자료를 불러오지 못했습니다.
+          - button "다시 시도" [ref=e152] [cursor=pointer] [box=193,4611,94,44]
+      - generic [ref=e153] [box=176,4692,928,272]:
+        - heading "상태 — 기존 자료를 표시하며 새로고침 중" [level=2] [ref=e154] [box=176,4692,928,38]
+        - region "검토 대기 자료" [ref=e155] [box=176,4750,928,213]:
+          - heading "검토 대기 자료" [level=2] [ref=e156] [box=193,4787,894,38]
+          - status [ref=e157] [box=193,4845,894,26]: 기존 자료를 보여주며 새로 확인하는 중
+          - list [ref=e158] [box=193,4887,894,44]:
+            - listitem [ref=e159] [box=217,4887,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [ref=e160] [cursor=pointer] [box=217,4887,249,44]
+      - generic [ref=e161] [box=176,4983,928,272]:
+        - heading "상태 — 잠김" [level=2] [ref=e162] [box=176,4983,928,38]
+        - region "검토 대기 자료" [ref=e163] [box=176,5041,928,213]:
+          - heading "검토 대기 자료" [level=2] [ref=e164] [box=193,5078,894,38]
+          - list [ref=e165] [box=193,5137,894,44]:
+            - listitem [ref=e166] [box=217,5137,870,44]:
+              - button "작은 팀에서 실패 후 다시 시도하기" [disabled] [ref=e167] [box=217,5137,249,44]
+          - paragraph [ref=e168] [box=193,5196,894,26]: 검토가 잠겨 있습니다.

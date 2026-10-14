@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="ko">
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>검토 대기 자료 상태 작업대</title>
+  <link rel="stylesheet" href="../../style.css">
+  <style>
+    .state-switcher {
+      all: unset;
+      position: fixed;
+      bottom: max(24px, env(safe-area-inset-bottom));
+      left: 50%;
+      translate: -50% 0;
+      z-index: 9999;
+      display: flex;
+      gap: 2px;
+      max-width: calc(100vw - 32px);
+      overflow-x: auto;
+      scrollbar-width: none;
+      padding: 4px;
+      border-radius: 999px;
+      background: rgb(20 20 20 / 0.9);
+      box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1), 0 8px 24px rgb(0 0 0 / 0.25);
+      font: 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      user-select: none;
+    }
+
+    .state-switcher button {
+      all: unset;
+      flex: none;
+      padding: 7px 14px;
+      border-radius: 999px;
+      font: inherit;
+      color: rgb(255 255 255 / 0.6);
+      cursor: pointer;
+    }
+
+    .state-switcher button:hover {
+      color: rgb(255 255 255 / 0.85);
+    }
+
+    .state-switcher button[aria-pressed="true"] {
+      background: rgb(255 255 255 / 0.14);
+      color: rgb(255 255 255);
+    }
+
+    .state-switcher button:focus-visible {
+      outline: 2px solid rgb(255 255 255 / 0.7);
+      outline-offset: 2px;
+    }
+  </style>
+  <body>
+    <header>팀 운영 자료</header>
+    <main>
+      <label>업무 메모 <input id="memo"></label>
+      <div id="queue"></div>
+    </main>
+    <nav class="state-switcher" aria-label="States"></nav>
+    <script type="module" src="./queue-card-states.js"></script>
+  </body>
+</html>

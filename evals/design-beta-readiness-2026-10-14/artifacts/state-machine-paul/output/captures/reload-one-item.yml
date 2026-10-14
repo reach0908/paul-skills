@@ -1,0 +1,22 @@
+- generic [active] [ref=f22e1]:
+  - banner [ref=f22e2]: 팀 운영 자료
+  - main [ref=f22e3]:
+    - generic [ref=f22e4]:
+      - text: 업무 메모
+      - textbox "업무 메모" [ref=f22e5]
+    - region "검토 대기 자료" [ref=f22e7]:
+      - heading "검토 대기 자료" [level=2] [ref=f22e8]
+      - list [ref=f22e9]:
+        - listitem [ref=f22e10]:
+          - button "작은 팀에서 실패 후 다시 시도하기" [ref=f22e11] [cursor=pointer]
+  - navigation "States" [ref=f22e12]:
+    - button "권한 없음" [ref=f22e13] [cursor=pointer]
+    - button "불러오는 중" [ref=f22e14] [cursor=pointer]
+    - button "오류" [ref=f22e15] [cursor=pointer]
+    - button "비어 있음" [ref=f22e16] [cursor=pointer]
+    - button "자료 1개" [pressed] [ref=f22e17] [cursor=pointer]
+    - button "일반 목록" [ref=f22e18] [cursor=pointer]
+    - button "긴 목록" [ref=f22e19] [cursor=pointer]
+    - button "새로 확인 중" [ref=f22e20] [cursor=pointer]
+    - button "잠김" [ref=f22e21] [cursor=pointer]
+    - button "확인 중·잠김" [ref=f22e22] [cursor=pointer]

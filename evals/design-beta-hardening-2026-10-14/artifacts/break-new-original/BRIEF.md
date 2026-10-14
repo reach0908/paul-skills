@@ -1,0 +1,2 @@
+# Attachment card AC-19
+Internal task attachments have human-readable filenames, maximum 220 Unicode characters. Existing usage presents a list within a normal 760px panel and a 280px sidebar. Both legacy single-line and supported wrapping modes exist in production. Do not change the policy, component or CSS. Empty and loading states are reachable; names, item counts, read-only state and the wrapping prop can vary. A typical filename is 회의록_다음분기_검토.pdf. No backend or account is required.

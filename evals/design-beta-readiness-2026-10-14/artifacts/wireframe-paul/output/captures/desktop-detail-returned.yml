@@ -1,0 +1,88 @@
+- generic [active] [ref=f1e1]:
+  - link "본문으로 건너뛰기" [ref=f1e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f1e3]:
+    - generic [ref=f1e4]:
+      - link "공유 자료함" [ref=f1e5] [cursor=pointer]:
+        - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+      - navigation "주요 메뉴" [ref=f1e6]:
+        - link "자료함" [ref=f1e7] [cursor=pointer]:
+          - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+        - link "내 보관함" [ref=f1e8] [cursor=pointer]:
+          - /url: "#saved-preview"
+        - link "도움말" [ref=f1e9] [cursor=pointer]:
+          - /url: "#help-note"
+    - search [ref=f1e10]:
+      - generic [ref=f1e11]: 자료 검색
+      - generic [ref=f1e12]:
+        - textbox "자료 검색" [ref=f1e13]: 작은 팀
+        - button "검색" [ref=f1e14] [cursor=pointer]
+  - main [ref=f1e15]:
+    - generic [ref=f1e129]:
+      - generic "목록 문맥" [ref=f1e130]:
+        - link "← 자료 목록으로" [ref=f1e131] [cursor=pointer]:
+          - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+        - generic [ref=f1e132]: 검색 ‘작은 팀’ · 태그 ‘운영’ · 최신순
+      - article [ref=f1e133]:
+        - generic [ref=f1e134]: 자료 R-72
+        - heading "작은 팀에서 실패 후 다시 시도하기" [level=1] [ref=f1e135]
+        - paragraph [ref=f1e136]: 작은 팀이 실패를 기록하고, 다음 시도의 범위를 줄이며, 책임을 나누는 방법을 정리한 실무 자료입니다.
+        - generic [ref=f1e137]:
+          - generic [ref=f1e138]:
+            - term [ref=f1e139]: 작성자
+            - definition [ref=f1e140]: 김하나
+          - generic [ref=f1e141]:
+            - term [ref=f1e142]: 태그
+            - definition [ref=f1e143]:
+              - generic [ref=f1e144]: 운영
+              - generic [ref=f1e145]: 회고
+        - navigation "자료 안에서 이동" [ref=f1e146]:
+          - link "본문으로 건너뛰기" [ref=f1e147] [cursor=pointer]:
+            - /url: "#article-body"
+          - link "출처 구역으로 이동" [ref=f1e148] [cursor=pointer]:
+            - /url: "#source-region"
+        - region [ref=f1e149]:
+          - heading "본문" [level=2] [ref=f1e150]
+          - paragraph [ref=f1e151]: 실패 직후에는 원인을 단정하는 대신 관찰한 사실과 추측을 나눠 적습니다. 다시 시도할 때는 한 번에 바꾸는 조건을 줄이고, 확인할 지표와 중단 기준을 먼저 합의합니다.
+          - paragraph [ref=f1e152]: 회고 기록은 책임을 묻기 위한 문서가 아니라 다음 결정을 돕는 자료입니다. 팀원이 나중에 돌아와도 당시의 가정과 결과를 이해할 수 있어야 합니다.
+        - region [ref=f1e153]:
+          - generic [ref=f1e154]:
+            - generic [ref=f1e155]:
+              - paragraph [ref=f1e156]: T-SAVE
+              - heading "내 보관함에 저장" [level=2] [ref=f1e157]
+            - generic [ref=f1e158]: 저장됨
+          - generic [ref=f1e159]: 내 메모
+          - textbox "내 메모" [ref=f1e160]:
+            - /placeholder: 나중에 기억할 내용을 적으세요.
+            - text: 다음 회고에서 중단 기준을 먼저 합의하기
+          - paragraph [ref=f1e161]: 메모 초안은 이 브라우저에 유지됩니다.
+          - generic [ref=f1e162]:
+            - button "저장 확인됨" [disabled] [ref=f1e163]
+            - button "진행 상태 보기" [ref=f1e164] [cursor=pointer]
+          - paragraph [ref=f1e165]: 같은 요청의 중복 저장은 막혀 있습니다. 새 저장 대신 기존 요청의 상태를 확인하세요.
+          - complementary [ref=f1e166]:
+            - strong [ref=f1e167]: 모의 동작
+            - paragraph [ref=f1e168]: 실제 계정·서버에 접근하지 않습니다. 네트워크 응답과 영수증을 로컬에서 재현합니다.
+          - generic [ref=f1e169]:
+            - button "시나리오 재설정" [ref=f1e170] [cursor=pointer]
+            - generic [ref=f1e171]: 초안과 모의 저장 결과를 지웁니다.
+        - region [ref=f1e172]:
+          - heading "출처" [level=2] [ref=f1e173]
+          - paragraph [ref=f1e174]:
+            - text: "원문:"
+            - link "example.org의 원문 열기 (새 탭)" [ref=f1e175] [cursor=pointer]:
+              - /url: https://example.org/articles/small-team-retry
+              - text: example.org의 원문 열기
+              - generic [ref=f1e176]: (새 탭)
+        - region [ref=f1e177]:
+          - heading "내 보관함 안내" [level=2] [ref=f1e178]
+          - paragraph [ref=f1e179]: 저장이 확인되면 이 자료와 내 메모가 내 보관함에 표시됩니다.
+        - complementary [ref=f1e180]:
+          - heading "아직 정하지 않은 정책" [level=2] [ref=f1e181]
+          - list [ref=f1e182]:
+            - listitem [ref=f1e183]: 인증 복구 뒤 같은 키로 작업을 다시 조회하는 서버 API
+            - listitem [ref=f1e184]: 초대가 만료된 팀 자료의 읽기 권한
+  - contentinfo [ref=f1e70]:
+    - paragraph [ref=f1e71]:
+      - strong [ref=f1e72]: 도움말
+      - text: 이 화면의 네트워크 요청과 저장 결과는 모두 모의 동작입니다.

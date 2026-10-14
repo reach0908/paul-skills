@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>검토 대기 자료 스트레스 보고서</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../stress.css">
+<header>검토 대기 자료 스트레스 보고서</header>
+<main>
+  <p>대상: 제목과 목록 데이터 및 표시 상태를 받아 검토 대기 자료 카드를 렌더링하는 <code>renderQueueCard</code>.</p>
+  <p>포함: 제목 길이와 끊기지 않는 문자열, 목록 수량, 좁은 컨테이너, 코드에 있는 상태. 제외: 넓은 컨테이너, 문자 형태, 테마·확대·모션.</p>
+  <div id="scenarios"></div>
+</main>
+<script type="module">
+  import {renderQueueCard} from '../queue.js';
+
+  const typicalItems = [
+    {id: 'R-72', title: '작은 팀에서 실패 후 다시 시도하기'},
+    {id: 'R-73', title: '배포 전 접근 권한 확인'},
+    {id: 'R-74', title: '신규 구성원 온보딩 문서 검토'},
+    {id: 'R-75', title: '고객 문의 대응 흐름 정리'},
+    {id: 'R-76', title: '분기별 운영 계획 확정'},
+  ];
+
+  const item = (title, id = 'R-72') => ({id, title});
+  const manyItems = Array.from({length: 50}, (_, index) => item(`검토 자료 ${index + 1}`, `R-${index + 100}`));
+
+  const scenarios = [
+    {label: '제목 길이 — 빈 문자열', finding: '관찰: 제목 글자 없이 빈 버튼만 표시됨. 담당: better-writing.', props: {items: [item('')]}},
+    {label: '제목 길이 — 한 단어', props: {items: [item('검토')]}},
+    {label: '제목 길이 — 일반 제목', props: {items: [typicalItems[0]]}},
+    {label: '제목 길이 — 여러 문장', finding: '관찰: 한 줄 버튼이 카드의 오른쪽 테두리를 넘어감. 담당: better-typography.', props: {items: [item('운영팀이 다음 배포 전에 확인해야 할 자료입니다. 담당자와 일정을 확인하고 의견을 남겨 주세요. 검토가 끝나면 다음 담당자에게 전달합니다.')]}},
+    {label: '제목 길이 — 끊기지 않는 긴 문자열', finding: '관찰: 줄바꿈이나 말줄임 없이 버튼이 카드의 오른쪽 테두리를 넘어감. 담당: better-typography.', props: {items: [item('검토대기자료제목이중간에한번도끊기지않고아주오랫동안계속이어지는문자열ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789')]}},
+    {label: '목록 수량 — 0개', props: {items: []}},
+    {label: '목록 수량 — 1개', props: {items: [typicalItems[0]]}},
+    {label: '목록 수량 — 현실적 수량 5개', props: {items: typicalItems}},
+    {label: '목록 수량 — 현실적 수량의 10배(50개)', props: {items: manyItems}},
+    {label: '좁은 컨테이너 — 320px', props: {items: [typicalItems[0]]}, width: '320px'},
+    {label: '좁은 컨테이너 — flex 형제에 눌린 폭', finding: '관찰: 제목이 글자 단위로 세로로 갈라지고 버튼이 좁은 카드의 오른쪽 경계를 넘어감. 담당: better-layout.', props: {items: [typicalItems[0]]}, squeezed: true},
+    {label: '상태 — 권한 없음', props: {canEdit: false, items: [typicalItems[0]]}},
+    {label: '상태 — 로딩', props: {status: 'loading'}},
+    {label: '상태 — 오류', props: {status: 'error'}},
+    {label: '상태 — 기존 목록을 보여주며 새로고침', props: {refreshing: true, items: typicalItems}},
+    {label: '상태 — 검토 잠금', props: {locked: true, items: typicalItems}},
+  ];
+
+  const report = document.querySelector('#scenarios');
+  for (const scenario of scenarios) {
+    const block = document.createElement('section');
+    const label = document.createElement('h2');
+    label.textContent = scenario.label;
+    block.append(label);
+    if (scenario.finding) {
+      const finding = document.createElement('p');
+      finding.textContent = scenario.finding;
+      block.append(finding);
+    }
+
+    if (scenario.squeezed) {
+      const row = document.createElement('div');
+      row.style.display = 'flex';
+      row.style.width = '320px';
+      const sibling = document.createElement('div');
+      sibling.style.flex = '0 0 240px';
+      sibling.textContent = '고정 형제';
+      const holder = document.createElement('div');
+      holder.style.minWidth = '0';
+      holder.style.flex = '1';
+      holder.append(renderQueueCard(scenario.props));
+      row.append(sibling, holder);
+      block.append(row);
+    } else {
+      const holder = document.createElement('div');
+      if (scenario.width) holder.style.width = scenario.width;
+      holder.append(renderQueueCard(scenario.props));
+      block.append(holder);
+    }
+
+    report.append(block);
+  }
+</script>
+</html>
