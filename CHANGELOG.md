@@ -2,6 +2,14 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.0
+
+### Minor Changes
+
+- [#14](https://github.com/reach0908/paul-skills/pull/14) [`471d9b2`](https://github.com/reach0908/paul-skills/commit/471d9b25c64b90a7b93f9012c40b51e075907202) Thanks [@reach0908](https://github.com/reach0908)! - Promote the eight user-approved design skills: information-architecture, user-flow, wireframe, build-design, state-machine, break, explain-interface and variant. Add their human docs and routing map while preserving four automatic and four explicit-only invocation policies.
+  
+  The promoted break combines plausible long content with narrow containers. User-flow checks exit and return before starting and after completion, and keeps product flow planning separate from the explicit component workbench. Prior comparison and handoff evidence is recorded in `evals/design-beta-hardening-2026-10-14/REPORT.md`; promotion and installation evidence is in `evals/design-final-promotion-2026-10-14/REPORT.md`. Results are bounded to the tested local web and Codex paths, not universal source parity or Claude runtime certification.
+
 ## 0.3.0
 
 ### Minor Changes
