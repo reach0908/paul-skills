@@ -1,0 +1,54 @@
+{
+  "cases": [
+    {
+      "case": "better-accessibility-01",
+      "mode": "review",
+      "allowed": [],
+      "changed": [],
+      "missing": [],
+      "added": [],
+      "toolArtifacts": [
+        "app/.playwright-cli/page-2026-10-12T11-01-58-070Z.yml",
+        "app/.playwright-cli/page-2026-10-12T11-02-41-503Z.yml"
+      ],
+      "unexpected": []
+    },
+    {
+      "case": "better-accessibility-02",
+      "mode": "implement",
+      "allowed": [
+        "app/index.html",
+        "app/styles.css",
+        "app/app.js"
+      ],
+      "changed": [
+        "app/app.js",
+        "app/index.html",
+        "app/styles.css"
+      ],
+      "missing": [],
+      "added": [],
+      "toolArtifacts": [
+        "app/.playwright-cli/page-2026-10-12T11-03-49-038Z.yml",
+        "app/.playwright-cli/page-2026-10-12T11-04-36-607Z.yml",
+        "app/.playwright-cli/page-2026-10-12T11-05-06-315Z.yml"
+      ],
+      "unexpected": []
+    },
+    {
+      "case": "better-accessibility-03",
+      "mode": "review",
+      "allowed": [],
+      "changed": [],
+      "missing": [],
+      "added": [],
+      "toolArtifacts": [
+        "app/.playwright-cli/page-2026-10-12T11-06-44-974Z.yml"
+      ],
+      "unexpected": []
+    }
+  ],
+  "skillsUnchanged": true,
+  "scopePass": true,
+  "semanticResult": "NOT_GRADED"
+}

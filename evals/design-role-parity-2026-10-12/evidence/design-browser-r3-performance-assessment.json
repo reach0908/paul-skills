@@ -1,0 +1,39 @@
+{
+  "role": "design-browser",
+  "kind": "performance supplement",
+  "status": "bounded measurement contract supported in both conditions",
+  "samplesPerCondition": 3,
+  "control": {
+    "handlerToDomMs": [
+      151.7,
+      150.3,
+      150.3
+    ],
+    "longTaskMs": [
+      156,
+      152,
+      151
+    ]
+  },
+  "paul": {
+    "handlerToDomMs": [
+      150.4,
+      150.2,
+      150.4
+    ],
+    "longTaskMs": [
+      152,
+      152,
+      152
+    ]
+  },
+  "method": "Root read both full reports and raw observations. Three fresh documents each, same 150ms busy-loop/120-label fixture, click before/after state, supported observer registered before click with buffered:false, User Timing read directly. Every sample starts Ready/0 and ends 120 labels ready/120.",
+  "conditions": "Playwright CLI0.1.22 Chrome152.0.7977.82 1280x900, no CPU/network throttling, headless, same local host, no controlled CPU contention or hardware state. Owned sessions closed.",
+  "scope": "Input hashes preserved; root read scope receipts.",
+  "limits": [
+    "handler-to-dom excludes input queue, layout/paint and presentation; it is not INP.",
+    "Long tasks overlap the measured handler but unknown attribution does not identify function-level costs.",
+    "Console-output collection and session/cache errors retained; unavailable initial measurements excluded explicitly.",
+    "The 0.1ms median difference is not an arm advantage or product performance comparison. No token/cost measurements."
+  ]
+}

@@ -1,0 +1,416 @@
+{
+  "scope": "Final representative branch map, not universal equivalence. plannedBranches are inventory candidates, not automatically marked executed. Use manual assessment files and public branch-coverage.md for observations.",
+  "roles": {
+    "better-accessibility": {
+      "plannedBranches": [
+        "accessible names",
+        "native versus custom keyboard activation",
+        "focus indicator",
+        "validation semantics",
+        "pending duplicate guard/name",
+        "focus after removal",
+        "custom and native dialog",
+        "reflow"
+      ],
+      "outsideSuite": [
+        "drag alternatives",
+        "roving tabs/combobox",
+        "SPA navigation focus",
+        "media captions",
+        "screen reader hardware matrix",
+        "sticky-focus obstruction",
+        "timed actionable toasts"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "better-accessibility-r1-assessment.json",
+        "better-accessibility-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-colors": {
+      "plannedBranches": [
+        "measured text and boundary contrast",
+        "alpha compositing",
+        "light/dark switch",
+        "semantic misuse",
+        "two-tier tokens",
+        "hex/tinted-neutral preservation",
+        "disabled exception",
+        "status versus action"
+      ],
+      "outsideSuite": [
+        "palette generation",
+        "OKLCH ramp spacing and hue",
+        "P3 gamut",
+        "image/gradient worst-region measurement",
+        "increased contrast",
+        "cross-culture financial colors",
+        "bulk conversion"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "better-colors-r1-assessment.json",
+        "better-colors-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-layout": {
+      "plannedBranches": [
+        "narrow-width clipping",
+        "scroll/disclosure cue",
+        "fixed dialog geometry",
+        "RTL physical positioning",
+        "local 2D table scroll exception",
+        "compact density",
+        "text growth"
+      ],
+      "outsideSuite": [
+        "hardware safe-area insets",
+        "mobile software keyboard",
+        "container shrink-to-fit collapse",
+        "multi-page hierarchy",
+        "visual/DOM reorder",
+        "true browser zoom at all widths"
+      ],
+      "status": "bounded representative outcomes supported",
+      "coverageAdjustment": "Root r1 additionally replays native200percent at effective640/320px in LTR/RTL; not all widths.",
+      "assessmentFiles": [
+        "better-layout-r1-assessment.json",
+        "better-layout-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-typography": {
+      "plannedBranches": [
+        "heading hierarchy",
+        "small-text weight",
+        "unitless line-height",
+        "tabular counters",
+        "Korean mixed-script wrap",
+        "truncation full-value path",
+        "selection",
+        "mobile input size",
+        "intentional dense type"
+      ],
+      "outsideSuite": [
+        "downloaded font loading/synthesis",
+        "variable axes",
+        "fallback during network load",
+        "bidi rendering with Arabic/Hebrew",
+        "OpenType small caps",
+        "decorative text",
+        "real iOS focus zoom"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "better-typography-r1-assessment.json",
+        "better-typography-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-writing": {
+      "plannedBranches": [
+        "noun/action inventory",
+        "label-effect mismatch",
+        "recoverable error instructions",
+        "Korean natural grammar",
+        "destructive confirmation",
+        "filtered empty state",
+        "accurate undo",
+        "brand-voice preservation"
+      ],
+      "outsideSuite": [
+        "ICU multiple plural categories",
+        "CMS/server copy",
+        "locale date/list formatting",
+        "gender/device-specific copy",
+        "account typed-name confirmation",
+        "long multi-step onboarding"
+      ],
+      "status": "bounded representative outcomes supported",
+      "coverageAdjustment": "Repair adds deletion/access loss then filter recovery and verifies stale success-message finding.",
+      "assessmentFiles": [
+        "better-writing-r1-assessment.json",
+        "better-writing-r2-assessment.json",
+        "better-writing-r3-repair-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-ui": {
+      "plannedBranches": [
+        "concentric/asymmetric radii",
+        "press exact value",
+        "currentColor state",
+        "hover/high-frequency transition",
+        "reduced motion",
+        "keyframe reversal",
+        "theme suppression",
+        "scroll containment",
+        "static completion cue",
+        "selection border geometry and reserved-border control"
+      ],
+      "outsideSuite": [
+        "Motion library spring/bounce",
+        "icon crossfade exact spring",
+        "stagger enter/exit",
+        "content photo outlines",
+        "forced-colors shadow fallback",
+        "optical glyph adjustment",
+        "directional composite icon RTL",
+        "performance stutter evidence"
+      ],
+      "status": "bounded representative outcomes supported",
+      "coverageAdjustment": "r2 supported LOW border-geometry omission requires new r3 pair and current composite bundles; not yet accepted.",
+      "assessmentFiles": [
+        "better-ui-r1-assessment.json",
+        "better-ui-r2-assessment.json",
+        "better-ui-r3-repair-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "better-interface": {
+      "plannedBranches": [
+        "six-owner review",
+        "independent same-element causes",
+        "shared-root consolidation",
+        "HIGH triggers",
+        "lower-severity retention",
+        "read-only review",
+        "source/runtime distinction",
+        "scoped clear verdict"
+      ],
+      "outsideSuite": [
+        "change-scope routing",
+        "missing owner skill",
+        "more than 15 simultaneous findings",
+        "large-scope narrowing",
+        "human release authorization",
+        "all branches of the six owner references"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "better-interface-r1-assessment.json",
+        "better-interface-r2-assessment.json",
+        "better-interface-r4-dependency-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "interface-review": {
+      "plannedBranches": [
+        "base/head plus working-tree scope",
+        "introduced versus regression versus pre-existing",
+        "shared token consumer trace",
+        "no-change preserve case",
+        "consumer budget repair"
+      ],
+      "outsideSuite": [
+        "large real application",
+        "missing Git history",
+        "every exclusion pattern"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "interface-review-pair-assessment.json",
+        "interface-review-r5-repair-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "variant": {
+      "plannedBranches": [
+        "one visual axis",
+        "actual components",
+        "URL picker and shortcuts",
+        "editable guards",
+        "selected promotion and cleanup",
+        "short-screen focus",
+        "state preservation after switch"
+      ],
+      "outsideSuite": [
+        "human aesthetic acceptance",
+        "all color/theme combinations",
+        "physical touch and assistive technology"
+      ],
+      "status": "bounded objective outcomes supported; human visual acceptance pending",
+      "assessmentFiles": [
+        "variant-r1-assessment.json",
+        "variant-r2-assessment.json",
+        "variant-r3-focus-repair-assessment.json",
+        "variant-r4-state-repair-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "state-machine": {
+      "plannedBranches": [
+        "source-derived states",
+        "role and feature gates",
+        "plan limit boundaries",
+        "pending with no timer",
+        "URL persistence",
+        "workbench removal and product preservation"
+      ],
+      "outsideSuite": [
+        "every arbitrary component prop combination",
+        "all browser/AT combinations"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "state-machine-r1-assessment.json",
+        "state-machine-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "break": {
+      "plannedBranches": [
+        "real component import",
+        "content length and character shapes",
+        "quantity",
+        "narrow/squeezed/wide containers",
+        "supported state props only",
+        "one-pass annotated inspection",
+        "leave product unchanged"
+      ],
+      "outsideSuite": [
+        "native zoom and reduced-motion stress execution",
+        "real-language bidi correctness",
+        "arbitrary dynamic composite widgets"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "break-r1-assessment.json",
+        "break-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "explain-interface": {
+      "plannedBranches": [
+        "source/computed layers",
+        "pseudo-elements",
+        "runtime compound animation and easing",
+        "reduced motion",
+        "image-only reconstruction and uncertainty",
+        "untrusted-page instruction boundary"
+      ],
+      "outsideSuite": [
+        "remote authenticated references",
+        "real GPU/perceptual motion performance"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "explain-interface-r1-assessment.json",
+        "explain-interface-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "build-design": {
+      "plannedBranches": [
+        "local image estimate",
+        "local structured export data",
+        "existing token/component mapping",
+        "preserved required error/loading states",
+        "rendered comparison",
+        "Markdown and browser prototype via composition"
+      ],
+      "outsideSuite": [
+        "real backend wiring",
+        "human visual acceptance"
+      ],
+      "excludedByUser": [
+        "live Figma workflow"
+      ],
+      "status": "bounded objective outcomes supported; human visual acceptance pending",
+      "assessmentFiles": [
+        "build-r1-assessment.json",
+        "build-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "information-architecture": {
+      "plannedBranches": [
+        "brief to content/navigation map",
+        "canonical object ownership",
+        "mobile priority",
+        "permission unknowns",
+        "stable IDs during existing-map extension"
+      ],
+      "outsideSuite": [
+        "real participant tree tests",
+        "large enterprise taxonomy",
+        "native navigation"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "information-architecture-r1-assessment.json",
+        "information-architecture-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "user-flow": {
+      "plannedBranches": [
+        "happy/error/pending flows",
+        "receipt-gated success",
+        "recovery/idempotency contracts",
+        "unresolved server policy",
+        "preserve existing IDs and return context"
+      ],
+      "outsideSuite": [
+        "actual server idempotency implementation",
+        "real participant task study",
+        "native device navigation"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "user-flow-r1-assessment.json",
+        "user-flow-r2-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "wireframe": {
+      "plannedBranches": [
+        "local interactive screens plus Markdown",
+        "field validation and focus",
+        "pending/retry/empty/cancel",
+        "existing retry extension",
+        "mobile geometry",
+        "input/ID preservation"
+      ],
+      "outsideSuite": [
+        "high-fidelity human acceptance",
+        "real backend persistence",
+        "full assistive technology matrix"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "wireframe-r1-assessment.json",
+        "wireframe-r2-assessment.json",
+        "wireframe-r3-navigation-assessment.json"
+      ],
+      "promotionApproved": false
+    },
+    "design-browser": {
+      "plannedBranches": [
+        "whole page beyond anchor",
+        "keyboard native actions",
+        "responsive observations",
+        "motion/reduced-motion",
+        "source-only evidence audit",
+        "no external writes",
+        "local performance supplement"
+      ],
+      "outsideSuite": [
+        "actual logged-in Aside research comparison",
+        "real user INP",
+        "real mobile hardware",
+        "cross-browser matrix"
+      ],
+      "status": "bounded representative outcomes supported",
+      "assessmentFiles": [
+        "design-browser-r1-assessment.json",
+        "design-browser-r2-assessment.json",
+        "design-browser-r3-performance-assessment.json",
+        "design-browser-r4-transition-assessment.json"
+      ],
+      "promotionApproved": false
+    }
+  }
+}

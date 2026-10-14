@@ -1,0 +1,26 @@
+[
+  {
+    "role": "build-design",
+    "id": "build-image",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/build/build-image",
+    "task": "TASK.md",
+    "timeout_seconds": 300,
+    "kind": "image"
+  },
+  {
+    "role": "build-design",
+    "id": "build-export",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/build/build-export",
+    "task": "TASK.md",
+    "timeout_seconds": 300,
+    "kind": "export"
+  },
+  {
+    "role": "build-design",
+    "id": "build-preserve",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/build/build-preserve",
+    "task": "TASK.md",
+    "timeout_seconds": 300,
+    "kind": "preserve"
+  }
+]

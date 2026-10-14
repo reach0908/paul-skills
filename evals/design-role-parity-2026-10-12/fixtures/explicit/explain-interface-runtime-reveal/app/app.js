@@ -1,0 +1,3 @@
+let active=[];
+function reveal(){active.forEach(a=>a.cancel());active=[];const reduce=matchMedia('(prefers-reduced-motion: reduce)').matches;document.querySelectorAll('.chunk').forEach((el,i)=>{if(reduce)return;active.push(el.animate([{opacity:0,transform:'translateY(24px)',filter:'blur(8px)',offset:0},{opacity:.85,transform:'translateY(4px)',filter:'blur(1px)',offset:.2},{opacity:1,transform:'translateY(0)',filter:'blur(0)',offset:1}],{duration:900,delay:i*160,easing:'cubic-bezier(.2,.7,.3,1)',fill:'both'}));});document.querySelector('#status').textContent=reduce?'모션 감소 설정을 적용했어요.':'문장이 순서대로 나타나요.';}
+document.querySelector('#replay').addEventListener('click',reveal);reveal();

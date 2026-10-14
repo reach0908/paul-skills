@@ -1,0 +1,69 @@
+{
+  "date": "2026-10-14",
+  "recommendation": "Recommend promotion of the first nine candidates within the evaluated local responsive-web scope; actual promotion requires explicit user approval.",
+  "promotionExecuted": false,
+  "candidates": [
+    {
+      "skill": "better-interface",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-accessibility",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-layout",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-writing",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-typography",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-colors",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "better-ui",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "design-browser",
+      "judgment": "ready-for-user-approved-promotion"
+    },
+    {
+      "skill": "interface-review",
+      "judgment": "ready-for-user-approved-promotion"
+    }
+  ],
+  "freshFinalContexts": 7,
+  "freshFinalPassed": 7,
+  "allContextsIncludingFailedCandidate": 13,
+  "firstAttemptFailedCases": [
+    "implicit-staged",
+    "implicit-review"
+  ],
+  "finalScreenReviews": 2,
+  "knownValidFindingsRetainedPerFinalScreenReview": 4,
+  "severityVariability": true,
+  "changedCandidateFiles": [
+    "skills/design/better-interface/SKILL.md",
+    "skills/design/interface-review/SKILL.md"
+  ],
+  "referenceEvidence": [
+    "evals/design-role-parity-2026-10-12/RESULTS.md",
+    "evals/design-field-trial-2026-10-14/QA-REPAIR.md",
+    "evals/design-install-discovery-2026-10-14/REPORT.md"
+  ],
+  "limits": [
+    "No universal original-or-better guarantee.",
+    "Historical source trials were not rerun with the edited prompt bodies.",
+    "Fresh sessions were Codex CLI gpt-5.6-sol xhigh, not desktop UI or Claude Code model runs.",
+    "No new browser QA in this routing repair.",
+    "One first-attempt screen review omitted a valid writing finding; preserve this observed variance."
+  ]
+}

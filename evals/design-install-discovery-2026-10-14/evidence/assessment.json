@@ -1,0 +1,30 @@
+{
+  "recommendation": "promote-seven-after-user-approval; hold-review-composition-two; keep-other-eight-beta",
+  "promotionExecuted": false,
+  "ready": [
+    "better-accessibility",
+    "better-layout",
+    "better-writing",
+    "better-typography",
+    "better-colors",
+    "better-ui",
+    "design-browser"
+  ],
+  "holdForRouting": [
+    "better-interface",
+    "interface-review"
+  ],
+  "routingBoundaryFailures": 2,
+  "routingBoundaryRuns": 2,
+  "installationSkills": 9,
+  "fullPackageSkills": 36,
+  "qaExpectedCases": 12,
+  "qaCompletedCases": 12,
+  "qaExpectedDefectsDetected": 4,
+  "limitations": [
+    "Independent Codex CLI model gpt-5.6-sol, not desktop gpt-6.1-sol",
+    "Browser startup failed in nested sandbox; execution retried with blank browser prestarted",
+    "Not a universal original-quality guarantee",
+    "No Claude Code model execution or public release install"
+  ]
+}

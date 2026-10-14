@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>내보내기 요청 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>내보내기 요청</h1>
+
+<section class="panel"><h2>검토 PDF 준비</h2><form id="export" novalidate><label for="name">파일 이름</label><input id="name" name="filename" value="studio-review.pdf"><button id="send" class="primary">PDF 준비</button></form><p id="message" role="status" class="status"></p><p>생성된 파일: <output id="count" class="metrics">0</output></p></section>
+<section class="panel"><h2>Preview</h2><p id="preview">Studio 검토 PDF</p><button id="preview-button">미리보기 준비</button></section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

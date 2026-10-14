@@ -1,0 +1,26 @@
+{
+  "role": "user-flow",
+  "repeat": 2,
+  "comparison": "Task contract and no-skill control; source parity not applicable",
+  "status": "bounded requested walkthroughs supported in both arms; no demonstrated Paul advantage",
+  "method": "Root read all six transition contracts, supplied policies and task; preserved-input receipts verified. Document-only semantic adjudication, no server/runtime evidence.",
+  "cases": [
+    {
+      "id": "user-flow-normal-tool-reservation",
+      "observations": "Both reuse TL-PM-9/TL-IA-2 inline D-TOOL, full receipt fields, duplicate pending guard, missing-date feedback with note retained, transient Retry/Edit, invalid-date clearing without restoration, and guaranteed precommit Cancel. Return keeps drills and valid session draft. Pending Back stays an explicit unapproved proposal or unresolved policy."
+    },
+    {
+      "id": "user-flow-edge-upload-commit",
+      "observations": "Both separate saved expense from tab-local file/progress, JPEG/PNG <=4MiB including exact boundary, same-key timeout query/retry, definitive failure before new attempt and receipt-ID success. COMMIT-2 and key-delivery loss remain unresolved without invented cancellation. Both requested timeout -> status-pending -> receipt paths are documented.",
+      "limit": "Paul U10 returns status-pending to E-UPLOADING and awaits a server event; another manual status query from this state is not specified. A repeated poll-only server contract was not supplied or tested; do not infer end-to-end recovery for that transport."
+    },
+    {
+      "id": "user-flow-reuse-preserve-return-pickup",
+      "observations": "Both preserve all9 accepted RP-FLOW-4 rows and IDs/routes; add No access recovery, clear only historical selected date once, retain new selection over Back/error/Retry, reference previous booking for new attempt, preserve history and open-return filter. Pending cancellation remains absent. Control labels its extra recovery-only R1 exit as an addition."
+    }
+  ],
+  "limits": [
+    "Author walkthroughs are not runtime or real-user results.",
+    "Neither output establishes actual server duplicate suppression, cancellation implementation, cross-session persistence or a complete API event-delivery contract."
+  ]
+}

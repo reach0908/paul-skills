@@ -1,0 +1,2 @@
+# Make an interactive repair check-in wireframe
+Use the accepted inputs to create one low-fidelity, local interactive wireframe at `design/index.html` and its screen/state specification at `design/screens.md`. Implement the short form, validation, pending, success and return behavior using local mock data. Keep the IA and flow IDs traceable. Check 1280x900 and 390x844 plus keyboard operation with the installed Playwright CLI when available, and record any verification limit. No packages, backend or polished brand direction are needed.

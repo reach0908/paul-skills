@@ -1,0 +1,21 @@
+{
+  "role": "better-ui",
+  "repeat": 2,
+  "status": "core motion supported; supported LOW original finding missed by Paul, repair pending",
+  "review": "Both detect reduced-motion violations, sticky touch hover, broad400ms transition,wrong icon color and concentric radius issue. Both preserve asymmetric surfaces, static feedback and border-based design.",
+  "implementation": "Root replay confirms mid-flight retargeting rather than immediate endpoint jump, closed visibility, reduced-motion opacity with zero translation, contained panel wheel with page scroll0, immediate theme color without active transitions, and320px no overflow. Both preserve required source scope.",
+  "omission": "Original case03 reports selected-border geometry movement. Root confirms saved-button x104.6875 to102.6875 and width71.53125 to73.53125, plus1px vertical change. Paul reports none. This is LOW polish, not broken activation, but remains a supported omission requiring repair. Original report also cites first-button width59.6875 to57.6875; keep the element distinction clear.",
+  "currentCandidate": "A new instruction compares border-thickness geometry; use separate r3 repair evidence before acceptance. r2 frozen outputs remain unchanged.",
+  "evidence": [
+    "ui-r2.json",
+    "ui-r2-raw.txt",
+    "ui-r2-border.json",
+    "ui-r2-border-raw.txt",
+    "better-ui-original-r2-scope.json",
+    "better-ui-paul-r2-scope.json"
+  ],
+  "limits": [
+    "10percent animation playback and physical device behavior not tested.",
+    "Timing samples show bounded behavior, not GPU smoothness or real-world performance."
+  ]
+}

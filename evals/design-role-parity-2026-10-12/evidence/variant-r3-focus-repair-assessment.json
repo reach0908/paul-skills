@@ -1,0 +1,10 @@
+{
+  "role": "variant",
+  "repeat": 3,
+  "source": "focus repair snapshot, predates current state-preservation repair",
+  "status": "focus repair supported in tested cases; current candidate still requires r4 state repair verification",
+  "evidence": "variant-focus-repair-native.json",
+  "rootReplay": "24 conditions across two arms, two fixed overlay layouts, three visual variants and effective 640x450/320x450 native 200 percent Chrome zoom. Ten native Tabs per condition, elementFromPoint checks for control and label centers, pointer input after a wheel scroll, actual export/confirm Enter.",
+  "result": "No sampled focused control or label center was covered; all pointer input attempts succeeded; no document overflow; task actions returned their expected local messages in both arms.",
+  "limitations": ["Center visibility does not certify every pixel of the focus outline", "Ten Tabs are sampled paths, not every dynamic state", "Original improved without changed instructions, so no causal claim that the Paul instruction alone produced the outcome", "Human visual acceptance remains separate"]
+}

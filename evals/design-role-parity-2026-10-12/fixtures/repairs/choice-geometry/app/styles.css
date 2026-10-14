@@ -1,0 +1,11 @@
+* { box-sizing:border-box; }
+body { margin:0; background:#f8f7f4; color:#24211c; font:1rem/1.5 system-ui,sans-serif; }
+main { max-width:720px; margin:24px auto; padding:16px; }
+h1 { font-size:1.75rem; } h2 { font-size:1.25rem; }
+section { padding:16px; margin-block:16px; background:white; border:1px solid #dedbd5; border-radius:8px; }
+.choices { display:flex; flex-wrap:wrap; align-items:center; gap:12px; }
+button { font:inherit; padding:8px 12px; min-height:44px; border:1px solid #6c6860; border-radius:8px; background:white; color:inherit; }
+button[aria-pressed=true] { border-color:#1745ad; background:#eff6ff; }
+.location button[aria-pressed=true] { border-width:4px; }
+.receipt button { border-width:2px; }
+button:focus-visible { outline:3px solid #1745ad; outline-offset:3px; }

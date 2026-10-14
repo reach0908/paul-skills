@@ -1,0 +1,36 @@
+--- snapshot/scripts/verify-article-creator-onboarding.mjs
++++ PR/scripts/verify-article-creator-onboarding.mjs
+@@ -3,9 +3,14 @@
+ import { mkdirSync, readFileSync } from 'node:fs';
+ import { resolve } from 'node:path';
+ 
+-// Anonymous local preview only: no login, account writes or OAuth submission.
++// Fresh anonymous browser only: no login, account writes or OAuth submission.
+ const origin = process.argv[2] ?? 'http://127.0.0.1:8884';
+-assert.ok(/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(origin), 'Local preview only');
++const publicReadOnly =
++  origin === 'https://inflfeed.com' && process.argv[4] === '--public-read-only';
++assert.ok(
++  /^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(origin) || publicReadOnly,
++  'Use a local preview or explicitly opt in to the anonymous public-page check',
++);
+ const evidence = process.argv[3] ? resolve(process.argv[3]) : null;
+ if (evidence) mkdirSync(evidence, { recursive: true });
+ const article = JSON.parse(
+
+--- snapshot/scripts/verify-curation-article-reading.mjs
++++ PR/scripts/verify-curation-article-reading.mjs
+@@ -4,7 +4,12 @@
+ import { resolve } from 'node:path';
+ 
+ const origin = process.argv[2] ?? 'http://127.0.0.1:8884';
+-assert.ok(/^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(origin), 'Local preview only');
++const publicReadOnly =
++  origin === 'https://inflfeed.com' && process.argv[4] === '--public-read-only';
++assert.ok(
++  /^http:\/\/(127\.0\.0\.1|localhost):\d+$/.test(origin) || publicReadOnly,
++  'Use a local preview or explicitly opt in to the anonymous public-page check',
++);
+ const evidence = process.argv[3] ? resolve(process.argv[3]) : null;
+ if (evidence) mkdirSync(evidence, { recursive: true });
+ const article = JSON.parse(

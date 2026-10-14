@@ -1,0 +1,596 @@
+[
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [
+        {
+          "id": "area",
+          "value": "north",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  }
+]

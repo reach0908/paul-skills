@@ -1,0 +1,149 @@
+[
+  {
+    "case": "break-project-content",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "e0d1feec0a7796981c0dd3b4bf462ddb5008ca9eb8e2a9debc92df9d4eeb80e4",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "332f6d9cbc29b33b31023098fc3a56c3a05ffe7f7550ff1f62c6b38eef2bd205",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/project-card.js",
+        "pass": true,
+        "actual": "fc5e626ef4be0583787090faabc04389788e13182f8f2fe42594d4165128587d",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "690fc672d8532088d7df4c46f8d40a9dcb346f43512de6f136d00f4feaf94718",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "exists",
+        "path": "stress/project-card/index.html",
+        "pass": true,
+        "actual": true,
+        "meaning": "Visual stress report exists."
+      },
+      {
+        "type": "tree_contains",
+        "path": "stress/project-card",
+        "pass": true,
+        "actual": {
+          "project-card.js": true
+        },
+        "meaning": "Actual component imported."
+      }
+    ]
+  },
+  {
+    "case": "break-tag-quantity",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "183652c93dc7225e6b80f984d5d9d53861a21890b3c09a902b57c15c8f923112",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "8848fc116f6ba491ef73247e1754f59fb4a128d9d54120748a0e8cf3ac5dab0b",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/tag-strip.js",
+        "pass": true,
+        "actual": "416f74fae61df78cba748eb1f0cafa9b579cb0df381662e5c9084d574dde83b9",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "0f9e280df0fa714ed9062f6147086dbe59802dc83765767c6f8527bb91f57a46",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "exists",
+        "path": "stress/tags/index.html",
+        "pass": true,
+        "actual": true,
+        "meaning": "Quantity stress report exists."
+      },
+      {
+        "type": "tree_contains",
+        "path": "stress/tags",
+        "pass": true,
+        "actual": {
+          "tag-strip.js": true
+        },
+        "meaning": "Actual repeating component imported."
+      }
+    ]
+  },
+  {
+    "case": "break-fixed-control",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "4bff8c5eee56e8929f57450b28c44d4e973e6471a7c8420c31188e4ecc3ce6c4",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "6f7e31d4f719d5ff5df8e08be32ab4957080015ddaa606f7056976a1f0e647b4",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/save-button.js",
+        "pass": true,
+        "actual": "1252bae302fab6c3510c6e2002c01bce7629d362c9664639b5f92bd9b67c049a",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "200b2ecad6c1eb2ef1b8055c4d0b956ad5848c451ef77aa26e2e69047ed15059",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "exists",
+        "path": "stress/save-button/index.html",
+        "pass": true,
+        "actual": true,
+        "meaning": "Bounded report page exists even on clean result."
+      },
+      {
+        "type": "tree_contains",
+        "path": "stress/save-button",
+        "pass": true,
+        "actual": {
+          "save-button.js": true
+        },
+        "meaning": "Imports unchanged fixed-label control."
+      }
+    ]
+  }
+]

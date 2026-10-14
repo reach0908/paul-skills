@@ -1,0 +1,12 @@
+{
+  "role": "interface-review",
+  "candidate": "initial-20261012",
+  "case": "interface-review-shared-token",
+  "status": "needs reconciliation after second repeat",
+  "observation": "original-r1 counts metadata.css plus4routes within5consumers; paul-r1 traces metadata.css then renders5routes, discloses2unrendered routes. Source says5consumers total across both hops. Paul interprets budget as5screens.",
+  "impact": "No discovered original finding lost; Paul uses one extra detailed consumer if intermediates count. Not classified as a critical product defect. Clarify source budget semantics before role verdict.",
+  "evidence": [
+    "runs/interface-review-original-r1/cases/interface-review-shared-token/output/report.md",
+    "runs/interface-review-paul-r1/cases/interface-review-shared-token/output/report.md"
+  ]
+}

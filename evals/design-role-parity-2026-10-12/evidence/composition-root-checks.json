@@ -1,0 +1,105 @@
+{
+  "groups": [
+    {
+      "surface": "design",
+      "width": 1280,
+      "checks": {
+        "identity": true,
+        "invalid": true,
+        "whitespace": true,
+        "pending": true,
+        "failure": true,
+        "backKeepsInput": true,
+        "confirmation": true,
+        "myPickups": true,
+        "seasonReturn": true,
+        "otherSeedNoForm": true,
+        "sameReceipt": true,
+        "reloadEmpty": true,
+        "cancelNoLateRecord": true,
+        "pendingResetNoLateRecord": true,
+        "sampleNoOverflow": true,
+        "keyboardIndicator": true
+      }
+    },
+    {
+      "surface": "design",
+      "width": 390,
+      "checks": {
+        "identity": true,
+        "invalid": true,
+        "whitespace": true,
+        "pending": true,
+        "failure": true,
+        "backKeepsInput": true,
+        "confirmation": true,
+        "myPickups": true,
+        "seasonReturn": true,
+        "otherSeedNoForm": true,
+        "sameReceipt": true,
+        "reloadEmpty": true,
+        "cancelNoLateRecord": true,
+        "pendingResetNoLateRecord": true,
+        "sampleNoOverflow": true,
+        "keyboardIndicator": true
+      }
+    },
+    {
+      "surface": "app",
+      "width": 1280,
+      "checks": {
+        "identity": true,
+        "invalid": true,
+        "whitespace": true,
+        "pending": true,
+        "failure": true,
+        "backKeepsInput": true,
+        "confirmation": true,
+        "myPickups": true,
+        "seasonReturn": true,
+        "otherSeedNoForm": true,
+        "sameReceipt": true,
+        "reloadEmpty": true,
+        "cancelNoLateRecord": true,
+        "pendingResetNoLateRecord": true,
+        "sampleNoOverflow": true,
+        "keyboardIndicator": true
+      }
+    },
+    {
+      "surface": "app",
+      "width": 390,
+      "checks": {
+        "identity": true,
+        "invalid": true,
+        "whitespace": true,
+        "pending": true,
+        "failure": true,
+        "backKeepsInput": true,
+        "confirmation": true,
+        "myPickups": true,
+        "seasonReturn": true,
+        "otherSeedNoForm": true,
+        "sameReceipt": true,
+        "reloadEmpty": true,
+        "cancelNoLateRecord": true,
+        "pendingResetNoLateRecord": true,
+        "sampleNoOverflow": true,
+        "keyboardIndicator": true
+      }
+    }
+  ],
+  "comparison": [
+    {
+      "width": 1280,
+      "sampledGeometryEqual": true,
+      "receiptPngBytesEqual": true
+    },
+    {
+      "width": 390,
+      "sampledGeometryEqual": true,
+      "receiptPngBytesEqual": true
+    }
+  ],
+  "limits": "Root replay extends but does not rewrite executor coverage. Native Tab/Enter/Space used; pending repeated Enter is not an independent activation while button is disabled. Programmatic duplicate form submissions were separately observed by executors. No real AT, touch, server or user acceptance."
+}

@@ -1,0 +1,208 @@
+[
+  {
+    "arm": "original",
+    "snapshot": "- main:\n  - heading \"검토 패널\" [level=1]\n  - button \"밝은/어두운 화면 전환\"\n  - button \"검토 패널 열기\"\n  - paragraph: 패널에서 최근 검토 내역을 확인해요.",
+    "entering": {
+      "x": 192.86,
+      "opacity": "0.468002",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "true"
+    },
+    "reversed": {
+      "x": 146.119,
+      "opacity": "0.666066",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "false"
+    },
+    "exiting": {
+      "x": 290.184,
+      "opacity": "0.131314",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "false"
+    },
+    "closed": {
+      "x": 330,
+      "opacity": "0",
+      "visibility": "hidden",
+      "animations": [],
+      "expanded": "false"
+    },
+    "scroll": {
+      "page": 0,
+      "panel": 160,
+      "contain": "contain"
+    },
+    "theme": {
+      "background": "rgb(22, 27, 34)",
+      "animations": []
+    },
+    "reducedMid": {
+      "x": 0,
+      "opacity": "0.177558",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "true"
+    },
+    "reducedFinal": {
+      "x": 0,
+      "opacity": "1",
+      "visibility": "visible",
+      "animations": [],
+      "expanded": "true"
+    },
+    "narrow": {
+      "innerWidth": 320,
+      "scroll": 320
+    }
+  },
+  {
+    "arm": "paul",
+    "snapshot": "- main:\n  - heading \"검토 패널\" [level=1]\n  - button \"밝은/어두운 화면 전환\"\n  - button \"검토 패널 열기\"\n  - paragraph: 패널에서 최근 검토 내역을 확인해요.",
+    "entering": {
+      "x": 73.988,
+      "opacity": "0.339405",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        }
+      ],
+      "expanded": "true"
+    },
+    "reversed": {
+      "x": 57.3055,
+      "opacity": "0.488353",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "false"
+    },
+    "exiting": {
+      "x": 190.476,
+      "opacity": "0.0699526",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        },
+        {
+          "playState": "running",
+          "property": "transform"
+        },
+        {
+          "playState": "running",
+          "property": "visibility"
+        }
+      ],
+      "expanded": "false"
+    },
+    "closed": {
+      "x": 330,
+      "opacity": "0",
+      "visibility": "hidden",
+      "animations": [],
+      "expanded": "false"
+    },
+    "scroll": {
+      "page": 0,
+      "panel": 160,
+      "contain": "contain"
+    },
+    "theme": {
+      "background": "rgb(22, 27, 34)",
+      "animations": []
+    },
+    "reducedMid": {
+      "x": 0,
+      "opacity": "0.177553",
+      "visibility": "visible",
+      "animations": [
+        {
+          "playState": "running",
+          "property": "opacity"
+        }
+      ],
+      "expanded": "true"
+    },
+    "reducedFinal": {
+      "x": 0,
+      "opacity": "1",
+      "visibility": "visible",
+      "animations": [],
+      "expanded": "true"
+    },
+    "narrow": {
+      "innerWidth": 320,
+      "scroll": 320
+    }
+  }
+]

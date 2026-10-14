@@ -1,0 +1,115 @@
+{
+  "role": "user-flow",
+  "repeat": 1,
+  "comparison": "task contract and no-skill utility; source parity not applicable",
+  "status": "bounded three-case contract supported in both conditions; repeat2 pending; no demonstrated Paul advantage",
+  "method": "Root read all six complete flow.md artifacts and pre-execution rubric; collector verified input preservation.",
+  "cases": [
+    {
+      "id": "user-flow-normal-tool-reservation",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both reuse TL-PM-9/TL-IA-2 and inline D-TOOL; no extra purchase flow.",
+        "Both define source/event/guard/feedback/target/data, separate destination from state.",
+        "Both require complete server receipt and guard repeated pending Reserve.",
+        "Both missing-date, transient Retry/Edit and invalid-date alternatives preserve note.",
+        "Both apply supplied precommit Cancel guarantee and preserve drills and valid same-session draft.",
+        "Both success/error/cancel/Back walkthroughs explicitly document-only, no runtime claim."
+      ],
+      "criticalFailures": [],
+      "artifacts": {
+        "control": "runs/user-flow-control-r1/cases/user-flow-normal-tool-reservation/design/flow.md",
+        "paul": "runs/user-flow-paul-r1/cases/user-flow-normal-tool-reservation/design/flow.md"
+      }
+    },
+    {
+      "id": "user-flow-edge-upload-commit",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both define employee, EX-44/EX-6, existing amount/memo and receipt success.",
+        "Both treat timeout as unknown with same-key check/retry; pre-key timeout remains a separate unresolved recovery dependency.",
+        "Both guard repeated Submit and separate status pending from receipt confirmation.",
+        "Both validate JPEG/PNG <=4MiB, preserve saved fields and allow reselection after definitive failure.",
+        "Both carry COMMIT-2 for pending/unknown leave without choosing cancel, continue or warning policy.",
+        "Both include invalid, timeout/pending/success, definitive failure/new attempt and draft-filter return walkthroughs."
+      ],
+      "criticalFailures": [],
+      "artifacts": {
+        "control": "runs/user-flow-control-r1/cases/user-flow-edge-upload-commit/design/flow.md",
+        "paul": "runs/user-flow-paul-r1/cases/user-flow-edge-upload-commit/design/flow.md"
+      }
+    },
+    {
+      "id": "user-flow-reuse-preserve-return-pickup",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both preserve RP-FLOW-4 transitions R1-R5/EXIT, routes, pending no-cancel and status=open.",
+        "Both add R6_PICKUP_FAILED with No access, old reference, reschedule and intentional exit.",
+        "Both clear historical selected date once on failure, retaining newly chosen date on Back/error/reentry.",
+        "Both new attempt references old booking, guards duplicates, retains new selection on retry and old history on success.",
+        "Both separate accepted table from reschedule data additions; Paul labels optional reentry N05 proposal explicitly.",
+        "Both required reschedule/error/retry/exit walkthroughs and unmodified source verified."
+      ],
+      "criticalFailures": [],
+      "artifacts": {
+        "control": "runs/user-flow-control-r1/cases/user-flow-reuse-preserve-return-pickup/design/flow.md",
+        "paul": "runs/user-flow-paul-r1/cases/user-flow-reuse-preserve-return-pickup/design/flow.md"
+      }
+    }
+  ],
+  "limits": [
+    "Document walkthrough only; server concurrency and actual runtime untested.",
+    "COMMIT-2 and missing server-key recovery intentionally unresolved in both outputs."
+  ]
+}

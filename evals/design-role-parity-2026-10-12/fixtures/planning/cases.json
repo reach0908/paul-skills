@@ -1,0 +1,151 @@
+{
+  "schema_version": 1,
+  "task_field": "Path relative to fixture_directory",
+  "execution_order": "array order; repeat in fresh contexts",
+  "cases": [
+    {
+      "role": "information-architecture",
+      "id": "information-architecture-normal-community-kitchen",
+      "kind": "normal",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/information-architecture/normal-community-kitchen",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "information-architecture",
+      "id": "information-architecture-edge-field-repair",
+      "kind": "edge",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/information-architecture/edge-field-repair",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "information-architecture",
+      "id": "information-architecture-reuse-preserve-museum-loans",
+      "kind": "reuse-preserve",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/information-architecture/reuse-preserve-museum-loans",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "user-flow",
+      "id": "user-flow-normal-tool-reservation",
+      "kind": "normal",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/user-flow/normal-tool-reservation",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "user-flow",
+      "id": "user-flow-edge-upload-commit",
+      "kind": "edge",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/user-flow/edge-upload-commit",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "user-flow",
+      "id": "user-flow-reuse-preserve-return-pickup",
+      "kind": "reuse-preserve",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/user-flow/reuse-preserve-return-pickup",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "wireframe",
+      "id": "wireframe-normal-repair-checkin",
+      "kind": "normal",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/wireframe/normal-repair-checkin",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "wireframe",
+      "id": "wireframe-edge-lab-slot",
+      "kind": "edge",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/wireframe/edge-lab-slot",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "wireframe",
+      "id": "wireframe-reuse-preserve-pickup-retry",
+      "kind": "reuse-preserve",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/wireframe/reuse-preserve-pickup-retry",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "design"
+    },
+    {
+      "role": "design-browser",
+      "id": "design-browser-normal-whole-page-anchor",
+      "kind": "normal",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/design-browser/normal-whole-page-anchor",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "evidence"
+    },
+    {
+      "role": "design-browser",
+      "id": "design-browser-edge-keyboard-motion",
+      "kind": "edge",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/design-browser/edge-keyboard-motion",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "evidence"
+    },
+    {
+      "role": "design-browser",
+      "id": "design-browser-reuse-preserve-source-only-audit",
+      "kind": "reuse-preserve",
+      "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/planning/design-browser/reuse-preserve-source-only-audit",
+      "task": "TASK.md",
+      "task_format": "relative_path",
+      "timeout_seconds": 240,
+      "original_parity": "not_applicable",
+      "control": "no_skill_utility",
+      "output_directory": "evidence"
+    }
+  ]
+}

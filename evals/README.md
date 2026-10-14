@@ -20,6 +20,20 @@ Supply `task.json` and the skill to an independent agent. Do not supply this eva
 
 ## Records and decisions
 
+The [design beta](design-beta/README.md) adds pinned Jakub, Paul and no-skill workspaces with one shared browser-review task. Its first candidate smoke uses an explicitly loaded bundle against a public page. This is separate from automatic host discovery and from the repeated controlled trials needed to compare skill quality.
+
+The [design planning beta](design-planning/README.md) exercises IA, user-flow and wireframe as separate roles on one synthetic brief. Its source map distinguishes original authoring from the Jakub adaptations.
+
+The [design inventory and quality record](design-beta/inventory-and-quality-2026-10-10.md) audits the 17 candidates and the original-quality acceptance floor. Its bounded paired reading-list exercise compares actual review outputs, without treating one case as proof of role parity.
+
+The [17-role design evaluation](design-role-parity-2026-10-12/RESULTS.md) records repeated source comparisons, no-skill controls, observed repairs and the local IA-to-review handoff. Representative results, subjective acceptance and untested branches are reported separately.
+
+The [INFLFEED article field review](design-field-trial-2026-10-14/REPORT.md) reconstructs five completed local stages from one real product session, with preserved evidence, nine loaded design skills, and explicit QA limits. It records local results and release status separately and adds no controlled source-parity trials or promotion decision.
+
+Its [QA repair](design-field-trial-2026-10-14/QA-REPAIR.md) strengthens count and overflow assertions and natural keyboard coverage, with 24 capture paths, 18 browser negative controls and process-failure tests. These are harness checks, not additional controlled skill trials.
+
+The [installation and discovery trial](design-install-discovery-2026-10-14/REPORT.md) checks isolated plugin installation and fresh Codex CLI selection. The follow-up [review routing repair](design-routing-repair-2026-10-14/REPORT.md) preserves failed attempts, verifies explicit and implicit review boundaries, and reassesses the first nine candidates without executing promotion.
+
 `model-recommendations.json` separates measured recommendations from unmeasured candidates. A record includes skill revision or content digest, exact model and reasoning effort, host/version, protocol version, case IDs, trial count, evidence location, and decision status. Missing telemetry is `null`, never zero. Unsupported models/settings are explicit outcomes, not silently substituted.
 
 Record input/output/cache/reasoning tokens when supplied by the host, duration, retries, human interventions, and provider cost. Distinguish estimated list-price cost from actual billed cost. Cost per successful task includes failed trials and retries; total experiment cost also includes judges and infrastructure. Do not claim token savings from prompt length alone.
@@ -27,3 +41,5 @@ Record input/output/cache/reasoning tokens when supplied by the host, duration, 
 Human review owns qualitative acceptance. Reuse deterministic output checks where possible; calibrate any model judge against human decisions. A candidate must not edit its own grading criteria or holdout. Keep private holdout cases outside the candidate checkout, with a versioned evaluator-owned protocol. Publish only redacted, permitted evidence.
 
 Before a paid matrix, choose models from currently supported host options, fix a budget/stop condition, and get any needed spending authorization. The initial in-session trials use inherited host settings and support no model-ranking claim.
+
+The [approved nine-skill promotion](design-promotion-2026-10-14/REPORT.md) records user authorization, unchanged evaluated skill files, current package checks and release/install evidence. Historical trial snapshots stay separate from the promoted catalog.

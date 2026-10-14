@@ -1,0 +1,98 @@
+[
+  {
+    "arm": "original",
+    "pending": {
+      "label": "초대 보내기 ◌",
+      "disabled": "true",
+      "focus": "send"
+    },
+    "count": "1",
+    "failure": {
+      "focus": "email",
+      "error": "이메일 주소를 확인하고 다시 입력해 주세요.",
+      "describedby": "error"
+    },
+    "recovery": {
+      "error": "",
+      "invalid": null,
+      "value": "fixed@example.com"
+    },
+    "continuation": "next",
+    "next": "Jae의 요청을 열었어요.",
+    "modal": [
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "BODY",
+        "open": true
+      },
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "BODY",
+        "open": true
+      }
+    ],
+    "restored": "details",
+    "narrow": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  },
+  {
+    "arm": "paul",
+    "pending": {
+      "label": "초대 보내기 ◌",
+      "disabled": "true",
+      "focus": "send"
+    },
+    "count": "1",
+    "failure": {
+      "focus": "email",
+      "error": "이메일 주소를 확인하고 다시 입력해 주세요.",
+      "describedby": "error"
+    },
+    "recovery": {
+      "error": "",
+      "invalid": null,
+      "value": "fixed@example.com"
+    },
+    "continuation": "next",
+    "next": "Jae의 요청을 열었어요.",
+    "modal": [
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "BODY",
+        "open": true
+      },
+      {
+        "focus": "close",
+        "open": true
+      },
+      {
+        "focus": "close",
+        "open": true
+      }
+    ],
+    "restored": "details",
+    "narrow": {
+      "width": 320,
+      "scrollWidth": 320
+    }
+  }
+]

@@ -1,0 +1,11 @@
+{
+  "case": "variant-select-and-clean",
+  "appliesTo": [
+    "variant-original-r1",
+    "variant-paul-r1"
+  ],
+  "check": "style.css exact SHA256",
+  "decision": "overconstrained check; not an executor failure",
+  "evidence": "Both conditions preserve all existing style.css bytes and append the two selected ledger rules from temporary comparison CSS. Task explicitly requests promotion into production conventions. Tokens, unrelated rules and support note remain unchanged.",
+  "retained": "Raw frozen rubric and failed structural receipts kept unchanged."
+}

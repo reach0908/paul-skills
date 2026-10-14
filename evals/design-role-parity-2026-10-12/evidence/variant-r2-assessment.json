@@ -1,0 +1,12 @@
+{
+  "role": "variant",
+  "repeat": 2,
+  "status": "hold: verified Paul appearance-switch state regression; repaired instruction requires fresh paired evaluation",
+  "evidence": ["variant-r2.json", "variant-r2-native-zoom.json", "footer-r2-obstruction.json"],
+  "rootReplay": "28 aligned normal visits and 24 native 200 percent zoom conditions; no horizontal overflow; real keyboard actions, editable-input shortcut guards and selected cleanup exercised.",
+  "verifiedRegression": "Clear selection to zero, then switch visual emphasis. Original retains zero; Paul resets to eight. The task requests appearance alternatives, so this resets working state without an explicit reset action.",
+  "originalFailure": "At effective 320x450 native zoom the original footer covers the focused search center. One manual wheel and pointer retry remained intercepted. This does not claim permanent inaccessibility. Paul r2 search was reachable under the replayed conditions.",
+  "rubricReconciliation": "Selected cleanup necessarily appends the two chosen CSS rules. Whole-CSS byte identity is an evaluator overconstraint, not a product regression.",
+  "repair": "Current variant instruction preserves working inputs, selection, disabled states and feedback when changing a visual axis. A fresh quantity/gift/quote task accompanies the exposed footer case in r4-state-repair.",
+  "limitations": ["Human aesthetic acceptance pending", "Not a full contrast audit", "Frozen r2 predates focus and state repairs; it cannot certify current candidate behavior"]
+}

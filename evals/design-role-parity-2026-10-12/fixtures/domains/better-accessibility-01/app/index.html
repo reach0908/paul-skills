@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>팀 초대 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>팀 초대</h1>
+
+<section class="panel"><h2>멤버 초대</h2>
+<form id="invite" novalidate><p>팀의 프로젝트를 함께 편집할 멤버를 초대해요.</p>
+<input id="email" name="email" type="email" autocomplete="email" placeholder="name@example.com">
+<p id="error" class="error"></p><div class="row">
+<div id="send" class="primary pseudo" role="button">초대 보내기</div>
+<button id="help" type="button"><svg aria-hidden="true" viewBox="0 0 24 24"><path d="M12 5v10m0 3v1"/></svg></button>
+</div></form><p id="status" class="status" role="status"></p>
+</section><section id="help-text" class="panel" hidden><h2>초대 도움말</h2><p>이메일로 팀 프로젝트 접근 권한을 보내요.</p></section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

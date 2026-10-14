@@ -1,0 +1,31 @@
+{
+  "headRefOid": "36d3b420e8490692eed5c6c4154e8f8ec26d91be",
+  "mergeCommit": {
+    "oid": "10128dcba86d6b38f54c3f1e40bab0aef4e824c0"
+  },
+  "mergedAt": "2026-10-13T16:58:08Z",
+  "state": "MERGED",
+  "statusCheckRollup": [
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-13T16:57:08Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://github.com/reach0908/signal-feed/actions/runs/38434060649/job/115423368671",
+      "name": "verify",
+      "startedAt": "2026-10-13T16:52:38Z",
+      "status": "COMPLETED",
+      "workflowName": "CI"
+    },
+    {
+      "__typename": "CheckRun",
+      "completedAt": "2026-10-13T16:52:34Z",
+      "conclusion": "SUCCESS",
+      "detailsUrl": "https://dashboard.gitguardian.com",
+      "name": "GitGuardian Security Checks",
+      "startedAt": "2026-10-13T16:52:33Z",
+      "status": "COMPLETED",
+      "workflowName": ""
+    }
+  ],
+  "url": "https://github.com/reach0908/signal-feed/pull/272"
+}

@@ -1,0 +1,2 @@
+# Draft the sample drop-off screens
+Build `design/index.html` and `design/screens.md` from the accepted IA and flow below. A scientist must recover when a chosen slot becomes unavailable and also see a useful empty-slot state. Include deterministic local scenario controls so both can be reproduced, keeping the simulation obvious. Use low fidelity and check keyboard operation, 1280x900 and 390x844 when the installed Playwright CLI is available. Keep unresolved policy visible without inventing a screen that commits it.

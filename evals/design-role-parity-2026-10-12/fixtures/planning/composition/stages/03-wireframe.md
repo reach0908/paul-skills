@@ -1,0 +1,2 @@
+# Build a low-fidelity task sequence
+Read `brief.md`, `design/ia.md`, `design/flow.md` and `app/tokens.css`. Create `design/index.html` and `design/screens.md` with the agreed list, detail/form, error/retry, receipt and My pickups behavior. Use the supplied neutral tokens through a relative stylesheet link. Preserve source IDs and trace I1 through I6. Local mock behavior must be visibly identified. Check 1280x900, 390x844 and keyboard operation with the installed Playwright CLI if available, recording actual evidence or the exact limit. Preserve the upstream files.

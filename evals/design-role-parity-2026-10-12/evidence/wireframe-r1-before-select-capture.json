@@ -1,0 +1,3151 @@
+[
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "normal-repair-checkin",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-normal-repair-checkin/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "invalid": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "name",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-INVALID\n\nCheck in item\n\nEnter the customer and the item to add it to the queue.\n\nPlease enter customer name and item description.\n\nCustomer name (required)\nItem description (required)\nExample: Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\nContact note (optional)\nStaff use only. No SMS is sent.\nCheck in\nCancel",
+      "state": "S-INVALID",
+      "forms": [
+        {
+          "id": "name",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "item",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "submit",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-PENDING\n\nCheck in item\n\nEnter the customer and the item to add it to the queue.\n\nCustomer name (required)\nItem description (required)\nExample: Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\nContact note (optional)\nStaff use only. No SMS is sent.\n\nChecking in… Please wait.\n\nCheck in\nCancel",
+      "state": "S-PENDING",
+      "forms": [
+        {
+          "id": "name",
+          "value": "Hana",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "item",
+          "value": "Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.",
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-DONE\n\nItem checked in\n\nConfirmation saved in this local demo.\n\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\nBack to queue",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to queue",
+          "disabled": false
+        }
+      ]
+    },
+    "queue": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\n\nStaff note: Call after 17:00",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\n\nStaff note: Call after 17:00",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "edge-lab-slot",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-edge-lab-slot/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EDIT\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "confirm",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-PENDING\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\n\nConfirming… Please wait.\n\nConfirm",
+      "state": "L-PENDING",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": true,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        }
+      ]
+    },
+    "unavailable": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "feedback",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-UNAVAILABLE\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\n\nThat time is no longer available. Your sample details are saved here. Choose another time below.\n\nAvailable drop-off times (choose one)\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-UNAVAILABLE",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK · L-DONE\n\nDrop-off confirmed\nLAB-73\n\nSample: SOIL-42\n\nTime: 10:00–10:30\n\nMy drop-offs",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "mine",
+          "text": "My drop-offs",
+          "disabled": false
+        }
+      ]
+    },
+    "mine": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-MINE /my-drop-offs\n\nMy drop-offs\nLAB-73 · SOIL-42\n\nDrop-off: 10:00–10:30\n\nHandling note: Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright.\n\nBook a drop-off",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "new",
+          "text": "Book a drop-off",
+          "disabled": false
+        }
+      ]
+    },
+    "empty": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "note",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EMPTY\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nNo times available\n\nNo drop-off times are currently available in this simulation. Refresh to try again; your sample details will stay.\n\nRefresh slots\nConfirm\nCancel",
+      "state": "L-EMPTY",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "refresh",
+          "text": "Refresh slots",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "refreshed": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EDIT\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-MINE /my-drop-offs\n\nMy drop-offs\n\nNo confirmed drop-offs in this demo.\n\nBook a drop-off",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "new",
+          "text": "Book a drop-off",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "back",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "normal-repair-checkin",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-normal-repair-checkin/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "invalid": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "name",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-INVALID\n\nCheck in item\n\nEnter the customer and the item to add it to the queue.\n\nPlease enter customer name and item description.\n\nCustomer name (required)\nItem description (required)\nExample: Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\nContact note (optional)\nStaff use only. No SMS is sent.\nCheck in\nCancel",
+      "state": "S-INVALID",
+      "forms": [
+        {
+          "id": "name",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "item",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "submit",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-PENDING\n\nCheck in item\n\nEnter the customer and the item to add it to the queue.\n\nCustomer name (required)\nItem description (required)\nExample: Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\nContact note (optional)\nStaff use only. No SMS is sent.\n\nChecking in… Please wait.\n\nCheck in\nCancel",
+      "state": "S-PENDING",
+      "forms": [
+        {
+          "id": "name",
+          "value": "Hana",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "item",
+          "value": "Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.",
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-CHECKIN · S-DONE\n\nItem checked in\n\nConfirmation saved in this local demo.\n\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\nBack to queue",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to queue",
+          "disabled": false
+        }
+      ]
+    },
+    "queue": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\n\nStaff note: Call after 17:00",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting\nQ-32 · Hana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nWaiting\n\nStaff note: Call after 17:00",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "start",
+      "body": "Repair desk\nLocal wireframe · design draft · no real submissions\nReset demo\n\nD-QUEUE · S-QUEUE\n\nRepair queue\nCheck in item\nQ-31 · Mina\n\nDesk lamp\n\nWaiting",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "start",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "edge-lab-slot",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-edge-lab-slot/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EDIT\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "confirm",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-PENDING\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\n\nConfirming… Please wait.\n\nConfirm",
+      "state": "L-PENDING",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": true,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        }
+      ]
+    },
+    "unavailable": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "feedback",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-UNAVAILABLE\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\n\nThat time is no longer available. Your sample details are saved here. Choose another time below.\n\nAvailable drop-off times (choose one)\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-UNAVAILABLE",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK · L-DONE\n\nDrop-off confirmed\nLAB-73\n\nSample: SOIL-42\n\nTime: 10:00–10:30\n\nMy drop-offs",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "mine",
+          "text": "My drop-offs",
+          "disabled": false
+        }
+      ]
+    },
+    "mine": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-MINE /my-drop-offs\n\nMy drop-offs\nLAB-73 · SOIL-42\n\nDrop-off: 10:00–10:30\n\nHandling note: Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright.\n\nBook a drop-off",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "new",
+          "text": "Book a drop-off",
+          "disabled": false
+        }
+      ]
+    },
+    "empty": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "note",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EMPTY\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nNo times available\n\nNo drop-off times are currently available in this simulation. Refresh to try again; your sample details will stay.\n\nRefresh slots\nConfirm\nCancel",
+      "state": "L-EMPTY",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "refresh",
+          "text": "Refresh slots",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "refreshed": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-BOOK /drop-off · L-EDIT\n\nBook a sample drop-off\nSample label (required)\nHandling note (optional)\nInclude transport and receiving instructions.\nAvailable drop-off times (choose one)\n09:00–09:30\n10:00–10:30\n11:00–11:30\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00–09:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "10:00–10:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:00–11:30",
+          "checked": false,
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\nLocal low-fidelity simulation · design draft\nDemo scenario (resets demo, never submits)\nAvailable times · succeeds\nChosen time becomes unavailable\nNo available times\n Reset scenario\n\nPOLICY-R open: retention after closing the tab is undecided. This demo uses memory only. Reload resets the simulation.\n\nD-MINE /my-drop-offs\n\nMy drop-offs\n\nNo confirmed drop-offs in this demo.\n\nBook a drop-off",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset scenario",
+          "disabled": false
+        },
+        {
+          "id": "new",
+          "text": "Book a drop-off",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-control-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "back",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "retry",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection… Please wait.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "retry",
+          "text": "Retry",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: first confirmation fails after 400 ms; Retry succeeds. No real collection operation. Reload resets this demo.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 1280,
+    "kind": "normal-repair-checkin",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-normal-repair-checkin/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "invalid": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "customer",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nCheck in item\n\nCustomer name and item description are required.\n\nComplete the missing required fields. Your other entries are kept.\n\nCustomer name (required)\n\nEnter the customer name.\n\nItem description (required)\n\nEnter the item description.\n\nContact note (optional)\n\nCheck in item\nCancel",
+      "state": "S-INVALID",
+      "forms": [
+        {
+          "id": "customer",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "item",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in item",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "submit",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nCheck in item\n\nCustomer name and item description are required.\n\nCustomer name (required)\nItem description (required)\nContact note (optional)\n\nChecking in…\n\nCheck in item\nCancel",
+      "state": "S-PENDING",
+      "forms": [
+        {
+          "id": "customer",
+          "value": "Hana",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "item",
+          "value": "Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.",
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in item",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nItem checked in\nQ-32 · Waiting\n\nHana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nBack to queue",
+      "state": "S-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "return",
+          "text": "Back to queue",
+          "disabled": false
+        }
+      ]
+    },
+    "queue": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes\nQ-32 · Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nHana · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes\nQ-32 · Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nHana · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 1280,
+    "kind": "edge-lab-slot",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-edge-lab-slot/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "label",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\nHandling note (optional)\n\nConfirming…\n\nConfirm\nCancel",
+      "state": "L-PENDING",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": true,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "unavailable": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 11:30\nToday 14:00\nHandling note (optional)\nHandling note (optional)\n\nThat time is no longer available. Your sample and note are kept. Choose another time.\n\nConfirm\nCancel",
+      "state": "L-UNAVAILABLE",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nDrop-off confirmed\nLAB-73 · SOIL-42\n\nToday 11:30\n\nMy drop-offs",
+      "state": "L-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "mine",
+          "text": "My drop-offs",
+          "disabled": false
+        }
+      ]
+    },
+    "mine": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nMy drop-offs\nLAB-73 · SOIL-42\n\nToday 11:30",
+      "state": "D-MINE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        }
+      ]
+    },
+    "empty": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "note",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\n\nNo times are available. Refresh to check again.\n\nRefresh slots\nHandling note (optional)\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EMPTY",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "refresh",
+          "text": "Refresh slots",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "refreshed": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nMy drop-offs\n\nNo confirmed drop-offs.",
+      "state": "D-MINE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 1280,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection…\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection…\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nCollected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nCollected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 1280,
+        "h": 900
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 390,
+    "kind": "normal-repair-checkin",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-normal-repair-checkin/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "invalid": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "customer",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nCheck in item\n\nCustomer name and item description are required.\n\nComplete the missing required fields. Your other entries are kept.\n\nCustomer name (required)\n\nEnter the customer name.\n\nItem description (required)\n\nEnter the item description.\n\nContact note (optional)\n\nCheck in item\nCancel",
+      "state": "S-INVALID",
+      "forms": [
+        {
+          "id": "customer",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "item",
+          "value": "",
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in item",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "submit",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nCheck in item\n\nCustomer name and item description are required.\n\nCustomer name (required)\nItem description (required)\nContact note (optional)\n\nChecking in…\n\nCheck in item\nCancel",
+      "state": "S-PENDING",
+      "forms": [
+        {
+          "id": "customer",
+          "value": "Hana",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "item",
+          "value": "Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.",
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Call after 17:00",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "submit",
+          "text": "Check in item",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nItem checked in\nQ-32 · Waiting\n\nHana\n\nVintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nBack to queue",
+      "state": "S-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "return",
+          "text": "Back to queue",
+          "disabled": false
+        }
+      ]
+    },
+    "queue": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes\nQ-32 · Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nHana · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes\nQ-32 · Vintage adjustable desk lamp with a flickering warm light and a loose brass switch near the base.\n\nHana · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Repair desk\n\nLocal simulation · unsaved memory resets on reload.\n\nReset simulation\nRepair queue\nCheck in item\nQ-31 · Desk lamp\n\nMina · Waiting\n\nStaff notes",
+      "state": "S-QUEUE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "checkin",
+          "text": "Check in item",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 390,
+    "kind": "edge-lab-slot",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-edge-lab-slot/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "label",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "confirm",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\nHandling note (optional)\n\nConfirming…\n\nConfirm\nCancel",
+      "state": "L-PENDING",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": true,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": true
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": true
+        }
+      ]
+    },
+    "unavailable": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 11:30\nToday 14:00\nHandling note (optional)\n\nThat time is no longer available. Your sample and note are kept. Choose another time.\n\nConfirm\nCancel",
+      "state": "L-UNAVAILABLE",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-42",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. Keep upright. ",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nDrop-off confirmed\nLAB-73 · SOIL-42\n\nToday 11:30\n\nMy drop-offs",
+      "state": "L-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "mine",
+          "text": "My drop-offs",
+          "disabled": false
+        }
+      ]
+    },
+    "mine": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nMy drop-offs\nLAB-73 · SOIL-42\n\nToday 11:30",
+      "state": "D-MINE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        }
+      ]
+    },
+    "empty": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "note",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\n\nNo times are available. Refresh to check again.\n\nRefresh slots\nHandling note (optional)\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EMPTY",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "refresh",
+          "text": "Refresh slots",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": true
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "refreshed": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nBook a sample drop-off\nSample label (required)\nDrop-off time (required)\nToday 09:00\nToday 11:30\nToday 14:00\nHandling note (optional)\n\nConfirm\nCancel",
+      "state": "L-EDIT",
+      "forms": [
+        {
+          "id": "label",
+          "value": "SOIL-empty",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "09:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "11:30",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "",
+          "value": "14:00",
+          "checked": false,
+          "disabled": false
+        },
+        {
+          "id": "note",
+          "value": "Keep this note",
+          "disabled": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "confirm",
+          "text": "Confirm",
+          "disabled": false
+        },
+        {
+          "id": "cancel",
+          "text": "Cancel",
+          "disabled": false
+        }
+      ]
+    },
+    "cancel": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "heading",
+      "body": "Sample drop-off\n\nLocal simulation. Reload clears memory. POLICY-R: retention after closing a tab is unresolved.\n\nMock scenario\nChosen slot becomes unavailable\nNo slots\nSuccess\nReset simulation\nMy drop-offs\n\nNo confirmed drop-offs.",
+      "state": "D-MINE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        }
+      ]
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 390,
+    "kind": "reuse-preserve-pickup-retry",
+    "url": "http://127.0.0.1:48812/runs/wireframe-paul-r1/cases/wireframe-reuse-preserve-pickup-retry/design/?rootReplay=1",
+    "initial": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "pending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection…\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "error": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "back": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    },
+    "revisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConnection interrupted.\n\nRetry Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-ERROR",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "retryPending": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "collect",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nConfirming collection…\n\nConfirm collected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-PENDING",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Confirm collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": true
+        }
+      ]
+    },
+    "done": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nCollected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "doneRevisit": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "status",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nVegetable box pickup\n\nOrder P-18, North hall, Friday 17:30\n\nCollection confirmed. Receipt RC-18\n\nCollected Back to pickups\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-DONE",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "collect",
+          "text": "Collected",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back to pickups",
+          "disabled": false
+        }
+      ]
+    },
+    "reset": {
+      "viewport": {
+        "w": 390,
+        "h": 844
+      },
+      "overflow": false,
+      "focused": "open",
+      "body": "Neighborhood pickups\nPickups\nHelp\n\nLocal simulation: mock latency and failure only. Reload clears memory.\n\nReset simulation\nPickups\nArea \nAll areas\nNorth\nVegetable box\n\nOrder P-18, North hall, Friday 17:30\n\nView pickup\nHelp\n\nCollection is confirmed only after you see a receipt number.",
+      "state": "P-READY",
+      "forms": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset simulation",
+          "disabled": false
+        },
+        {
+          "id": "open",
+          "text": "View pickup",
+          "disabled": false
+        }
+      ]
+    }
+  }
+]

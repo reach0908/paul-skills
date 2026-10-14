@@ -1,0 +1,35 @@
+{
+  "role": "better-ui",
+  "repeat": 3,
+  "candidate": "selection-border-geometry repair",
+  "status": "observed r2 omission reconciled; new geometry case and existing motion regression supported in both conditions",
+  "method": "Root read all6 reports, verified unchanged review inputs and allowed implementation mutations, matched geometry findings to independent original fixtures, and replayed both modified motion outputs.",
+  "cases": [
+    {
+      "id": "better-ui-03",
+      "result": "Both now report verified2px adjacent filter movement and preserve intended asymmetric/no-shadow style. Paul separates longer status-copy reflow from border geometry. Review sources unchanged."
+    },
+    {
+      "id": "better-ui-choice-geometry",
+      "result": "Both detect6px adjacent place-control movement at1280/320 and exclude reserved2px receipt controls. Actual independent choice/status semantics retained. Review sources unchanged."
+    },
+    {
+      "id": "better-ui-02",
+      "result": "Root replay: both intermediate retarget then330px/opacity0/hidden, reduce transform0 with opacity feedback, wheel containment page0/panel160, immediate dark background22/27/34 without animations, documentwidth320. Changes restricted to allowed app files."
+    }
+  ],
+  "severityReconciliation": "Both executors call border movement MEDIUM in this run. Root keeps the exposed2px movement as supported LOW usability polish absent demonstrated functional impairment. Detection and correct cause matter; not a new higher-severity product failure.",
+  "evidence": [
+    "ui-r2-border.json",
+    "ui-geometry-fixture.json",
+    "ui-r3.json",
+    "better-ui-original-r3-geometry-repair-scope.json",
+    "better-ui-paul-r3-geometry-repair-scope.json"
+  ],
+  "limits": [
+    "Only one additional fresh execution pair per current repair version; repeated exposed case is development evidence.",
+    "No controlled causal claim from instruction change; original also detected both geometry cases.",
+    "Not complete frame smoothness, every short-screen state, real touch or assistive technology coverage.",
+    "Composite current-dependency runs adjudicated separately."
+  ]
+}

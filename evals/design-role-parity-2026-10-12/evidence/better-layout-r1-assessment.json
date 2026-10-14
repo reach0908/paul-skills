@@ -1,0 +1,18 @@
+{
+  "role": "better-layout",
+  "repeat": 1,
+  "status": "bounded outcomes supported; repeat2 pending",
+  "review": "Both locate narrow-screen inaccessible project action and absent rail discovery cue. Reports distinguish viewport boundaries from full-page screenshot dimensions and preserve source.",
+  "implementation": "Both implement bounded responsive dialog and mirror event layout. Root independently replays eight combinations: both arms, LTR/RTL, actual Chrome200percent zoom with effective640x450 and320x450. Every dialog, last detail paragraph and confirm remains reachable; actual confirm closes dialog and reports success.",
+  "preservation": "Both retain compact table, local2D scroll with visible cue, and native disclosure without inventing page-reflow violation. Worker raw keyboard/RTL observations support reports.",
+  "differences": "Paul adds named focusable scroll region and visibility-conditioned hint, using JS in allowed files; original uses existing browser scroll region. Both preserve required semantics and data.",
+  "evidence": [
+    "layout-r1.json",
+    "layout-r1-raw.txt"
+  ],
+  "limits": [
+    "No real mobile software keyboard/safe-area hardware or all browser engines.",
+    "Text-growth stress performed by workers as font-size200percent; root native zoom is separately described.",
+    "No full-role acceptance until second repeat."
+  ]
+}

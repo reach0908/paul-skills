@@ -1,0 +1,29 @@
+{
+  "role": "better-accessibility",
+  "repeat": 2,
+  "casesPerCondition": 3,
+  "status": "bounded implementation and review outcomes supported; clean fixture caveat reconciled",
+  "review": "Both report all required accessible-name, native-keyboard, persistent-label, error association and focus defects. Severity grouping differs; equivalent causes and repairs are compared, not row counts. Paul additionally records stale error after correction. Both preserve review-only source.",
+  "implementation": "Root fresh-session replay confirms retained pending label/focus and aria-disabled, two Enter activations produce one completion, invalid email receives focus and error description, corrected retry succeeds and clears error, archive focuses next item, modal excludes background fields and Escape returns trigger. 320px has no document overflow. BODY in native dialog Tab cycle does not imply background field is reachable.",
+  "cleanFixtureReconciliation": {
+    "finding": "An unconditional asynchronous dialog close listener refocuses details after the user has already focused email/send.",
+    "evidence": [
+      "a11y-clean-close-focus-raw.txt",
+      "a11y-clean-close-focus.json"
+    ],
+    "scope": "First fresh-page sequence for each arm reproduces focus theft within milliseconds of Escape. Later loops share state, so they are not independent samples. This proves a rapid automation/load-sensitive edge, not its frequency at ordinary human speed.",
+    "comparison": "Paul reported this as unresolved with failed and isolated retry evidence. Root confirms source cause in both identical fixtures. Original did not report it. The frozen clean label does not invalidate a real additional finding; no unsupported finding or candidate regression is inferred.",
+    "disposition": "Record fixture defect and root finding without rewriting executor reports or the review-only fixture."
+  },
+  "sourceScope": "Both domain scope checks pass. Tool-generated .playwright-cli logs are separately inventoried; an initial overly broad check is retained.",
+  "evidence": [
+    "a11y-r2.json",
+    "a11y-r2-raw.txt",
+    "better-accessibility-original-r2-scope.json",
+    "better-accessibility-paul-r2-scope.json"
+  ],
+  "limits": [
+    "No actual screen reader, full WCAG certification, native 200 percent zoom for these forms, or physical touch device.",
+    "Native modal close race needs broader timing and browser coverage before prevalence or severity claims."
+  ]
+}

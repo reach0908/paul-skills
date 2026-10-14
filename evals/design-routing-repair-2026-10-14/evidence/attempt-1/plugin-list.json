@@ -1,0 +1,11 @@
+{
+  "command": [
+    "codex",
+    "plugin",
+    "list",
+    "--json"
+  ],
+  "exitCode": 0,
+  "stdout": "{\n  \"installed\": [\n    {\n      \"pluginId\": \"paul-skills@paul-design-routing-trial-20261014\",\n      \"name\": \"paul-skills\",\n      \"marketplaceName\": \"paul-design-routing-trial-20261014\",\n      \"version\": \"0.2.0-routing-trial.20261014\",\n      \"installed\": true,\n      \"enabled\": true,\n      \"source\": {\n        \"source\": \"local\",\n        \"path\": \"/private/tmp/paul-design-routing-20261014/marketplace/plugin\"\n      },\n      \"marketplaceSource\": {\n        \"sourceType\": \"local\",\n        \"source\": \"/private/tmp/paul-design-routing-20261014/marketplace\"\n      },\n      \"installPolicy\": \"AVAILABLE\",\n      \"authPolicy\": \"ON_INSTALL\"\n    }\n  ],\n  \"available\": []\n}\n",
+  "stderr": ""
+}

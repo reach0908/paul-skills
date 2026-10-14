@@ -1,0 +1,2413 @@
+{
+  "auditDate": "2026-10-10",
+  "scope": "17 local design beta skills; existing promoted prototype discussed separately",
+  "primarySourceMethod": "Read local sources; git show each pinned upstream file; compare SHA-256 and Git-compatible modes; reuse provenance compare.py digest; no network or browser.",
+  "upstreamRepository": "https://github.com/jakubkrehel/skills",
+  "upstreamRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+  "summary": {
+    "betaSkills": 17,
+    "adapted": 13,
+    "original": 4,
+    "unchangedWholeAdaptations": 0,
+    "modelInvoked": 12,
+    "userOnly": 5,
+    "manifestFilesVerified": 65,
+    "manifestHashesMatching": 65,
+    "upstreamSkillFiles": 64,
+    "upstreamFilesUnchanged": 48,
+    "upstreamFilesModified": 16,
+    "upstreamFilesDeleted": 0,
+    "upstreamSupportingReferences": 38,
+    "supportingReferencesUnchanged": 36,
+    "supportingReferencesModified": 2,
+    "retainedMitNotices": 13,
+    "localDigestsMatching": 13,
+    "invocationPoliciesPreserved": 13,
+    "localBetaFiles": 90
+  },
+  "helperAggregateLimit": "UNKNOWN only because jakubkrehel-skills repositoryReview is unrecorded; all 13 per-skill helper statuses are UNCHANGED relative to registered local digest. This is not a upstream-equality or quality verdict.",
+  "skills": [
+    {
+      "skill": "better-accessibility",
+      "path": "skills/in-progress/better-accessibility",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-accessibility",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:238ace6229a5f49e09d484559358cccab80d4db45c2fb9755a25445ac8296c04",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:238ace6229a5f49e09d484559358cccab80d4db45c2fb9755a25445ac8296c04",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "focus-and-keyboard.md",
+        "forms.md",
+        "hit-areas.md",
+        "motion-and-zoom.md",
+        "screen-readers.md",
+        "semantics-and-aria.md"
+      ],
+      "sourceFileCount": 8,
+      "localFileCount": 9,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "focus-and-keyboard.md",
+        "forms.md",
+        "hit-areas.md",
+        "motion-and-zoom.md",
+        "screen-readers.md",
+        "semantics-and-aria.md"
+      ],
+      "role": "시맨틱 HTML, 키보드·포커스, 접근 가능한 이름, 폼·알림, 모션·확대 리뷰 및 수정",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "기존 WCAG 기준·두 번의 점검(키보드와 스크린리더)·도메인 소유권·보고 규칙은 삭제나 완화 없이 보존됨."
+      ],
+      "actualRisk": "도메인 규칙 손실은 발견하지 못함. 기존 smoke는 실제 보조공학과 200% 확대를 점검하지 않아 접근성 완전성을 보장하지 않음. 새 adapter 경로의 실행 동등성은 미검증.",
+      "riskClass": "validation-gap",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-accessibility/SKILL.md",
+          "line": 10
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-accessibility/SKILL.md",
+          "line": 108
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "df0cafe0e75a08548cf46a2a430f46c198e7e0ee9d46bdf7884c2afefb44b70e",
+          "localMode": "100644",
+          "localSha256": "e57d2631d02b6c7291bb57a0f23dc1b6fa3dfabdbf2b8b7bae9aa58b19823a50",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+          "localMode": "100644",
+          "localSha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+          "status": "equal"
+        },
+        {
+          "path": "focus-and-keyboard.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+          "localMode": "100644",
+          "localSha256": "3b97fab2629261751e33ffb4a22ef52fb8706082a914fa2243cf92e8180eb84b",
+          "status": "equal"
+        },
+        {
+          "path": "forms.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+          "localMode": "100644",
+          "localSha256": "66557dc714093f45f6cc0ab8e248092cb2e3bc994609c6e629135f0ddf09e0f4",
+          "status": "equal"
+        },
+        {
+          "path": "hit-areas.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+          "localMode": "100644",
+          "localSha256": "7ce9ee5c5420d046f1d87b466e5fe5978d90d17632a2ad084a803ad34d607d53",
+          "status": "equal"
+        },
+        {
+          "path": "motion-and-zoom.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+          "localMode": "100644",
+          "localSha256": "1a15404327c8c73010888c7665b2083d9c1b312202cb6ad241b342d49a170714",
+          "status": "equal"
+        },
+        {
+          "path": "screen-readers.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+          "localMode": "100644",
+          "localSha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a",
+          "status": "equal"
+        },
+        {
+          "path": "semantics-and-aria.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+          "localMode": "100644",
+          "localSha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-colors",
+      "path": "skills/in-progress/better-colors",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-colors",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:aece11072150298b3bdf65d0d62949f32bbbc3c43a01190f3ae532240fe68880",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:aece11072150298b3bdf65d0d62949f32bbbc3c43a01190f3ae532240fe68880",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "color-formats.md",
+        "color-usage.md",
+        "contrast.md",
+        "palette-generation.md",
+        "palette-structure.md",
+        "token-naming.md"
+      ],
+      "sourceFileCount": 8,
+      "localFileCount": 9,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "color-formats.md",
+        "color-usage.md",
+        "contrast.md",
+        "palette-generation.md",
+        "palette-structure.md",
+        "token-naming.md"
+      ],
+      "role": "색상 램프·의미 토큰·포맷 변환·실제 렌더링 대비 측정",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "측정하지 않은 대비 수치 금지, 프로젝트 토큰 존중, 권한 없는 색상 변경 금지 등 색상 지침은 그대로임."
+      ],
+      "actualRisk": "색상 기준 손실은 발견하지 못함. 기존 리뷰에서 읽혔다는 사실은 램프 생성·색역 계산·그라디언트 대비의 정확성 검증이 아니며 후자는 기존 한계에 명시됨.",
+      "riskClass": "validation-gap",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-colors/SKILL.md",
+          "line": 12
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-colors/SKILL.md",
+          "line": 54
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "e74f1c413a4094dc2a73fb0baa0da2241465e01d593b0257ba995500df9b0068",
+          "localMode": "100644",
+          "localSha256": "b3733eedaaecff1fb85d9c7a926694bb43ed862ad9b1c5029a6e8a6de0acfe43",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+          "localMode": "100644",
+          "localSha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+          "status": "equal"
+        },
+        {
+          "path": "color-formats.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+          "localMode": "100644",
+          "localSha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+          "status": "equal"
+        },
+        {
+          "path": "color-usage.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+          "localMode": "100644",
+          "localSha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+          "status": "equal"
+        },
+        {
+          "path": "contrast.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+          "localMode": "100644",
+          "localSha256": "a524a229232a522fc752be9503bba8caffd76894d04c941a1e7e982817d6fefc",
+          "status": "equal"
+        },
+        {
+          "path": "palette-generation.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+          "localMode": "100644",
+          "localSha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+          "status": "equal"
+        },
+        {
+          "path": "palette-structure.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+          "localMode": "100644",
+          "localSha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+          "status": "equal"
+        },
+        {
+          "path": "token-naming.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+          "localMode": "100644",
+          "localSha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-interface",
+      "path": "skills/in-progress/better-interface",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-interface",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:8884945622252193f55049216de11e466c6de3b221699ac70b4c00ac447a427d",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md",
+              "review-format.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:8884945622252193f55049216de11e466c6de3b221699ac70b4c00ac447a427d",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        },
+        {
+          "path": "review-format.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 4,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "review-format.md"
+      ],
+      "role": "6개 도메인 리뷰를 증거·심각도·범위에 따라 통합하는 전체 화면 리뷰",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "모호한 Load를 각 도메인 Skill 호출 또는 설치 파일·관련 참조 읽기로 구체화.",
+        "review-format에 revision·route·state·viewport·input·관찰 시간과 증거 종류 분리 추가. Approve를 인간 수용·접근성 완전 준수·출시 허가와 분리. 원래 severity·15개 cap·읽기 전용·미검토 표시는 보존."
+      ],
+      "actualRisk": "완화된 리뷰 기준은 발견하지 못함. 명시 경로로 읽은 시험은 자동 스킬 발견이나 6개 도메인의 독립 정확성을 검증하지 않음.",
+      "riskClass": "validation-gap",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-interface/SKILL.md",
+          "line": 48
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-interface/review-format.md",
+          "line": 32
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "23416fef4d08e0417927b6eb6763b7b08ed832451abfb9e26ea699262a28abcb",
+          "localMode": "100644",
+          "localSha256": "3c69f9ea80cd573798f9159244b2e541b7273c13a69e51580bd54208d606675d",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+          "localMode": "100644",
+          "localSha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+          "status": "equal"
+        },
+        {
+          "path": "review-format.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "4bb2715d6cd7c8afbd984cbe71148a214c9d43ffd535ba00789f7709ee743c01",
+          "localMode": "100644",
+          "localSha256": "931e18c4577b7c7491724ca66768e153702f4487ff229c83e04623d209882440",
+          "status": "modified"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md",
+        "review-format.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-layout",
+      "path": "skills/in-progress/better-layout",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-layout",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "grouping-and-alignment.md",
+        "spacing-and-adaptivity.md"
+      ],
+      "sourceFileCount": 4,
+      "localFileCount": 5,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "grouping-and-alignment.md",
+        "spacing-and-adaptivity.md"
+      ],
+      "role": "그룹·정렬·읽기 순서·반응형 구조·번역 확장·RTL",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "pseudo-localization + 독일어 한 로케일 테스트를 실제 목표 언어의 긴 콘텐츠·혼합 식별자 우선, 이어 pseudo-localization으로 교체. 한국어 렌더링은 typography로 위임. 두 원본 참조는 동일."
+      ],
+      "actualRisk": "독일어를 반드시 점검하는 제약은 제거됨. 목표 언어 중심 정책에는 부합하지만 다국어 제품에서 실제 지원 언어 범위를 좁게 해석하면 원본과 다른 coverage가 나올 수 있음. 퇴행 실행 증거는 없음.",
+      "riskClass": "intentional-scope-change",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-layout/SKILL.md",
+          "line": 66
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "8c5883ccb23c27c39b7c58d101154ff35e032410e0dc4794be9ab7fe070c2297",
+          "localMode": "100644",
+          "localSha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+          "localMode": "100644",
+          "localSha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+          "status": "equal"
+        },
+        {
+          "path": "grouping-and-alignment.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+          "localMode": "100644",
+          "localSha256": "30057c8e063a3cb0026140c82de0c16510080c7c306876caacba1206d7e2483a",
+          "status": "equal"
+        },
+        {
+          "path": "spacing-and-adaptivity.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+          "localMode": "100644",
+          "localSha256": "1b7e015f520b5e34cf9712fbb6586deb57a7c9f9902b54aa465719e9e5678958",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-typography",
+      "path": "skills/in-progress/better-typography",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-typography",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:4946d1418abef818dfea119f31ab1d4b61b17234867f2e28f254e20bf7505a0d",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md",
+              "korean-text.md",
+              "wrapping-and-punctuation.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:4946d1418abef818dfea119f31ab1d4b61b17234867f2e28f254e20bf7505a0d",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        },
+        {
+          "path": "korean-text.md",
+          "change": "added"
+        },
+        {
+          "path": "wrapping-and-punctuation.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "choosing-fonts.md",
+        "css-cheat-sheet.md",
+        "details-and-accessibility.md",
+        "spacing-and-sizing.md",
+        "variable-fonts-and-opentype.md"
+      ],
+      "sourceFileCount": 8,
+      "localFileCount": 10,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "choosing-fonts.md",
+        "css-cheat-sheet.md",
+        "details-and-accessibility.md",
+        "spacing-and-sizing.md",
+        "variable-fonts-and-opentype.md",
+        "wrapping-and-punctuation.md"
+      ],
+      "role": "폰트·타입 스케일·행간·자간·줄바꿈·잘림·언어별 렌더링",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "60–75자를 모든 언어의 정확한 실패 기준에서 Latin 출발점으로 완화하고 실제 폰트·내용으로 점검하도록 변경. ch를 임의 문자 개수가 아닌 0의 advance width로 정정.",
+        "타이포그래피 문장부호 강제 치환을 제품 언어·문장부호 정책 우선으로 변경. korean-text.md에 한글 fallback·혼합문자·keep-all/overflow-wrap·lang·확대 관찰 추가."
+      ],
+      "actualRisk": "의도적 완화가 있으므로 원본과 같은 판정은 보장되지 않음. SKILL.md 87행은 문장부호를 정책상 옵션으로 설명하지만 wrapping-and-punctuation.md 11–18행은 여전히 Instead of/Use 명령형 표라서 정책보다 치환표가 우선될 여지가 있음. 자간 본문도 일반 수치 처방을 유지하므로 한국어 참조를 함께 읽는지가 중요함.",
+      "riskClass": "static-inconsistency",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/SKILL.md",
+          "line": 18
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/SKILL.md",
+          "line": 56
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/SKILL.md",
+          "line": 62
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/SKILL.md",
+          "line": 87
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/wrapping-and-punctuation.md",
+          "line": 11
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-typography/korean-text.md",
+          "line": 3
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "e60ca6467ba60e68f95ed2d2cfa35f2a850d96ef2a0c0d3fcfcfd9510e51f184",
+          "localMode": "100644",
+          "localSha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+          "localMode": "100644",
+          "localSha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+          "status": "equal"
+        },
+        {
+          "path": "choosing-fonts.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+          "localMode": "100644",
+          "localSha256": "abd2c084ce7f9c3908dbfa09636ab87a2db731204c1e804b081e4fbd7e4d612d",
+          "status": "equal"
+        },
+        {
+          "path": "css-cheat-sheet.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+          "localMode": "100644",
+          "localSha256": "9aac06b524a25a780b950ab046735aab6f45c551fcab2ebf90a8faf7f12db3c9",
+          "status": "equal"
+        },
+        {
+          "path": "details-and-accessibility.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+          "localMode": "100644",
+          "localSha256": "705176db1784beed8b85086dd92dcfad6658e61fa8f9d017e648005029b7ab23",
+          "status": "equal"
+        },
+        {
+          "path": "korean-text.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff",
+          "status": "added"
+        },
+        {
+          "path": "spacing-and-sizing.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+          "localMode": "100644",
+          "localSha256": "db91919a92c1b7de16761e8d8a5addffabcde3dce97ff579f7cbbb585f42cb0f",
+          "status": "equal"
+        },
+        {
+          "path": "variable-fonts-and-opentype.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+          "localMode": "100644",
+          "localSha256": "3b8bfa85c483d1bd08490203f232c2002b838f89059d341e6b69cde040bf6556",
+          "status": "equal"
+        },
+        {
+          "path": "wrapping-and-punctuation.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "44ef7be30b3342c0a81f7b07c2f7138c9743b8df8c8edab518907e8ec0abd68a",
+          "localMode": "100644",
+          "localSha256": "4b8815988f870f6a85f7848b3fa15e9ae1cbdcc317bd643a0c1eb5d2bf529ed0",
+          "status": "modified"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md",
+        "wrapping-and-punctuation.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE",
+        "korean-text.md"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-ui",
+      "path": "skills/in-progress/better-ui",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-ui",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:5008b74603b954edb58eb497bb532fd13ad9ae6dcf619ddbb8ddb91df967674a",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:5008b74603b954edb58eb497bb532fd13ad9ae6dcf619ddbb8ddb91df967674a",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "animations.md",
+        "enter-exit.md",
+        "icon-transitions.md",
+        "icons.md",
+        "performance.md",
+        "surfaces.md"
+      ],
+      "sourceFileCount": 8,
+      "localFileCount": 9,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "animations.md",
+        "enter-exit.md",
+        "icon-transitions.md",
+        "icons.md",
+        "performance.md",
+        "surfaces.md"
+      ],
+      "role": "표면·그림자·아이콘·모션·시각적 마감",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "도메인 본문과 6개 참조는 그대로. 정확한 easing·scale·timing 처방, 프로젝트 관습 예외, 기반 인터랙션 우선 원칙이 보존됨."
+      ],
+      "actualRisk": "Paul 이식에서 마감 지침을 잃지는 않음. 원본의 정확한 수치 처방 자체가 특정 제품의 시각적 수용을 보장하지 않으며, 이전 읽기 전용 smoke는 실제 모션 수정 품질을 검증하지 않음.",
+      "riskClass": "inherited-prescription-and-validation-gap",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-ui/SKILL.md",
+          "line": 14
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-ui/SKILL.md",
+          "line": 44
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "fb9807bb5c59a3ca9d4a27b25f56b36e5596251d280fb30c4b7f2ff8b6f4fe2d",
+          "localMode": "100644",
+          "localSha256": "a9e1c1a42b75f1f5bac036d39ad99be009b5315deea45a4417dbe68b68dc923d",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+          "localMode": "100644",
+          "localSha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+          "status": "equal"
+        },
+        {
+          "path": "animations.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+          "localMode": "100644",
+          "localSha256": "0e9ee790191d0761a6adf27fdf1e4279d79ecbe5d0d916fc331a28a8c86f39b3",
+          "status": "equal"
+        },
+        {
+          "path": "enter-exit.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+          "localMode": "100644",
+          "localSha256": "de087d3bc69461343409c275dea7d94bca6c1158558b887b7909ce505cdfa70a",
+          "status": "equal"
+        },
+        {
+          "path": "icon-transitions.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+          "localMode": "100644",
+          "localSha256": "676b344e7b22c37692a520c7ea2ab8fad3b3c8943a833f8133e51042297e9f06",
+          "status": "equal"
+        },
+        {
+          "path": "icons.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+          "localMode": "100644",
+          "localSha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd",
+          "status": "equal"
+        },
+        {
+          "path": "performance.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+          "localMode": "100644",
+          "localSha256": "db59db84ab371903b7ebdb69f1e92bdc0f2e041331d9dd65d312e4d1b5d449d6",
+          "status": "equal"
+        },
+        {
+          "path": "surfaces.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+          "localMode": "100644",
+          "localSha256": "35a76b7c4e6da0fc933559e73ca8712fb7b804c383c6f69c25be3b9616ff2721",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "better-writing",
+      "path": "skills/in-progress/better-writing",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/better-writing",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:213903b6f9b1cf684f5ba49d4b00f1980027b885008072d77eb12fc1a1509ae6",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md",
+              "korean-copy.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:213903b6f9b1cf684f5ba49d4b00f1980027b885008072d77eb12fc1a1509ae6",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        },
+        {
+          "path": "korean-copy.md",
+          "change": "added"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "patterns.md"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 5,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "patterns.md"
+      ],
+      "role": "행동 라벨·오류·빈 상태·확인·제품 용어·톤",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "영어 동사 우선 라벨을 목표 언어의 자연스러운 행동명으로 변경하고 한국어 명사+동사 예시 추가. OK!/Let’s go! 절대 금지를 결과를 식별할 맥락 요구로 완화.",
+        "korean-copy.md에 해요체/합니다체, 조사, 일관된 한국어 명사, 실제 복구 수단·쿼리 보존을 추가. patterns.md는 그대로."
+      ],
+      "actualRisk": "한국어 자연 어순 원칙을 추가했지만 파괴적 확인 지침 99행과 마지막 검출 표 133행은 여전히 verb plus object를 요구함. patterns.md의 진행/완료 템플릿도 영어 문법을 전제. 새 언어 원칙과 잔존 규칙의 우선순위가 불명확하여 한국어를 다시 영어 어순으로 교정할 위험이 있음. 실제 발생은 미관찰.",
+      "riskClass": "static-inconsistency",
+      "qualityValidationStatus": "이전 Paul 단일 읽기 전용 리뷰에서 로드됨. 현행 SKILL.md는 이후 라우팅 변경으로 당시 입력 해시와 다름. 원본/무스킬 비교, 반복 실행, 독립 역할별 성능은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-writing/SKILL.md",
+          "line": 59
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-writing/SKILL.md",
+          "line": 99
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-writing/SKILL.md",
+          "line": 133
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-writing/patterns.md",
+          "line": 18
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/better-writing/korean-copy.md",
+          "line": 3
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "ef6843cbfcbafa62614b1a6e012c0b1ab6fd33eee0bdd84123cf49fe275c3a31",
+          "localMode": "100644",
+          "localSha256": "b88bac9e402807d6619becceb4ec00befa8b5e78d2c9ec0249e537f5707d2134",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+          "localMode": "100644",
+          "localSha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+          "status": "equal"
+        },
+        {
+          "path": "korean-copy.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00",
+          "status": "added"
+        },
+        {
+          "path": "patterns.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+          "localMode": "100644",
+          "localSha256": "93ed5285d2009213b600e6f5af53ae3f7e3ff0114014146779aeda1c1ab42077",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE",
+        "korean-copy.md"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "break",
+      "path": "skills/in-progress/break",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/break",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:26c4cce857f6287944c8d4f3cf9f9d9c2112dabb9036c6d57c8a5287240ec1fc",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol. Permit one task-owned CLI session for the single visual pass; browser setup and debugging remain outside the budget.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:26c4cce857f6287944c8d4f3cf9f9d9c2112dabb9036c6d57c8a5287240ec1fc",
+      "localDigestMatches": true,
+      "invocation": "User",
+      "codexImplicitDisabled": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "scenarios.md"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 4,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "User",
+      "upstreamCodexImplicitDisabled": true,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "scenarios.md"
+      ],
+      "role": "실제 컴포넌트를 격리된 한 페이지에 최악 입력별로 렌더링하고 한 번 관찰",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "이미 열린 브라우저만 허용하고 실행 자체를 금지하던 예산을 선택한 driver의 task-owned CLI session 한 개로 확장. 설치·디버깅·시나리오별 별도 실행·두 번째 점검은 여전히 제외."
+      ],
+      "actualRisk": "원본의 zero-launch 제약은 완화됨. 일반 adapter의 폭넓은 관찰 절차를 기계적으로 적용하면 one-look 예산이 흐려질 수 있으나 본문에 한 번의 로드·관찰 제한은 남아 있음. 명시 실행으로 예산 준수 확인이 필요함.",
+      "riskClass": "intentional-budget-change",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/break/SKILL.md",
+          "line": 17
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/break/SKILL.md",
+          "line": 49
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "6b231897f10477fe2a9d335b457e53c670b07a8291a08b5d8dad3981b658b9d0",
+          "localMode": "100644",
+          "localSha256": "d3857dd38d2b54ce2a4289e75c2c80d9bd4cade23ae550ebf4ba38461606944f",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+          "localMode": "100644",
+          "localSha256": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+          "status": "equal"
+        },
+        {
+          "path": "scenarios.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+          "localMode": "100644",
+          "localSha256": "1db84afedc194c5959dfcb8ecad3466fc929e197159216c9db72588ed88c1fc5",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "build-design",
+      "path": "skills/in-progress/build-design",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/build-design",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:1befb8208f0b35e06be0d20c47b10ba4703b81803f34c0e7f49fdf89f0260499",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md",
+              "agents/openai.yaml",
+              "browser-and-spec.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:1befb8208f0b35e06be0d20c47b10ba4703b81803f34c0e7f49fdf89f0260499",
+      "localDigestMatches": true,
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "change": "modified"
+        },
+        {
+          "path": "browser-and-spec.md",
+          "change": "added"
+        }
+      ],
+      "equalFiles": [
+        "figma.md"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 5,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "Model",
+      "upstreamCodexImplicitDisabled": false,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "figma.md"
+      ],
+      "role": "합의된 디자인을 기존 토큰·컴포넌트로 구현하고 참조와 비교",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "Figma/이미지에서 browser prototype/Markdown screen spec까지 입력 확장. entrypoint·Codex short description·browser-and-spec.md 변경.",
+        "디자인 우선으로 접근성 충돌을 그대로 구현하던 지침을 작업 중인 접근성과 필요한 동작 보존으로 반전. 그림에 없는 상태 제거 지침은 기존 loading/error/empty/permission/keyboard 보존으로 반전.",
+        "없는 화면 값을 명시적 unknown/프로젝트 default로 허용. 모든 차이는 rounding/question이어야 하던 완료 기준에 승인 또는 보류 deviation을 추가. 기존 작업 전체 revert 대신 이번 실행의 무관 수정만 제거."
+      ],
+      "actualRisk": "가장 큰 행동 변경이며 단순 원본 보존으로 품질을 추론할 수 없음. 새 Markdown 경로는 스크린샷·정확한 값 부재를 허용하지만 55행은 design screenshot 옆 비교, 83행은 Figma 응답을 전제로 한다. Markdown-only 실행에서 불필요한 Figma 요청, 없는 시각 증거의 대체, 검증 불가 판정 중 어느 경로를 택할지 모호함. deviation을 기록한 종료와 수용 완료도 구분해 시험해야 함.",
+      "riskClass": "static-inconsistency-and-unrun-behavior",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 14
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 20
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 28
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 49
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 55
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 59
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/SKILL.md",
+          "line": 83
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/build-design/browser-and-spec.md",
+          "line": 11
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "c5b3f67eba6f88c703a89f2698cdd6f0baf5e149a86cc68da08bb919db577202",
+          "localMode": "100644",
+          "localSha256": "0123ead23a1a3647bc5120a067f664b370aca7db5c30e617270a151f4d4ffdc7",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "858842fc00a7d7f086201a02c33af730d41fb00fab1ace92b7109fd8ba23f518",
+          "localMode": "100644",
+          "localSha256": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+          "status": "modified"
+        },
+        {
+          "path": "browser-and-spec.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "466378b04fc083e9e15e521c4001d48e2b6dc1d0e23f91a7af2c90766d2d0d7d",
+          "status": "added"
+        },
+        {
+          "path": "figma.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+          "localMode": "100644",
+          "localSha256": "998359b07687762f0d4a7dc320b76fb6e985ff1e468f91ef1a14e4bcaac18942",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE",
+        "browser-and-spec.md"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "explain-interface",
+      "path": "skills/in-progress/explain-interface",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/explain-interface",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+      "localDigestMatches": true,
+      "invocation": "User",
+      "codexImplicitDisabled": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "find-the-effect.md",
+        "from-an-image.md",
+        "no-browser.md",
+        "read-the-system.md"
+      ],
+      "sourceFileCount": 6,
+      "localFileCount": 7,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "User",
+      "upstreamCodexImplicitDisabled": true,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "find-the-effect.md",
+        "from-an-image.md",
+        "no-browser.md",
+        "read-the-system.md"
+      ],
+      "role": "URL·스크린샷의 레이어·효과·애니메이션 구현을 측정/도출/추론으로 설명",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "Chrome DevTools MCP의 구체적 함수·trace 명령 추천을 선택 도구의 page-evaluation API와 설치된 도움말로 교체. 원본 4개 참조·페이지를 지시로 취급하지 않는 제약·세 증거 수준은 보존."
+      ],
+      "actualRisk": "도구 고정성은 줄었지만 구체적인 resize/network/performance API 힌트를 잃어 실행 시 API 탐색 비용과 미지원 측정이 생길 수 있음. Aside/Playwright에서 원본 page 함수와 motion/performance 설명을 실제 재현하지 않았음.",
+      "riskClass": "intentional-tool-abstraction",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/explain-interface/SKILL.md",
+          "line": 44
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/explain-interface/SKILL.md",
+          "line": 50
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/explain-interface/SKILL.md",
+          "line": 56
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "6795aff9a133b94c6398a95b5c8958a2eaccade5db18f58e752bc02460a356e0",
+          "localMode": "100644",
+          "localSha256": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+          "localMode": "100644",
+          "localSha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+          "status": "equal"
+        },
+        {
+          "path": "find-the-effect.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+          "localMode": "100644",
+          "localSha256": "baa6a8e168908ab9f9c95af106a10a10277375e796e3f206855d7bd04c4232df",
+          "status": "equal"
+        },
+        {
+          "path": "from-an-image.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+          "localMode": "100644",
+          "localSha256": "11dda70e17116dd8b3967fcdaf8973043beda4e7a78a50cd7c6939e896957b77",
+          "status": "equal"
+        },
+        {
+          "path": "no-browser.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+          "localMode": "100644",
+          "localSha256": "0b18239c712a877356610257a1a33e773062afab05646789075b2a643b0afe8f",
+          "status": "equal"
+        },
+        {
+          "path": "read-the-system.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+          "localMode": "100644",
+          "localSha256": "cc0ea0470e72b17b2fab60b9c1a8fdd11298b58f96c3e4ad1d17e61605bd0482",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "interface-review",
+      "path": "skills/in-progress/interface-review",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/interface-review",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:071359a09e6912e071585f660865443c24cc2d14ec166f155965b10431ff155e",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:071359a09e6912e071585f660865443c24cc2d14ec166f155965b10431ff155e",
+      "localDigestMatches": true,
+      "invocation": "User",
+      "codexImplicitDisabled": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "removed-signals.md",
+        "scope-resolution.md"
+      ],
+      "sourceFileCount": 4,
+      "localFileCount": 5,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "User",
+      "upstreamCodexImplicitDisabled": true,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "removed-signals.md",
+        "scope-resolution.md"
+      ],
+      "role": "브랜치·PR·미커밋 diff의 도입/회귀/기존 문제 분류 및 디자인 리뷰",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "일반 code-review의 Standards와 Spec 보고를 디자인 verdict와 분리하고 base/head/working-tree/design revision만 공유하도록 추가. better-interface handoff를 명시적 Skill 호출/참조 읽기로 구체화."
+      ],
+      "actualRisk": "scope·양쪽 diff·읽기 전용·도입/회귀 분류 규칙 손실은 발견하지 못함. User-only 진입과 downstream Model 호출이 실제 호스트에서 지켜지는지는 이번 정적 비교로 검증되지 않음.",
+      "riskClass": "validation-gap",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/interface-review/SKILL.md",
+          "line": 15
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/interface-review/SKILL.md",
+          "line": 99
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/interface-review/SKILL.md",
+          "line": 105
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "8977988d63d7c17b8b0cd334ebd722d4e2dff00af0f152de2bc6f100d13d59ce",
+          "localMode": "100644",
+          "localSha256": "07ca95b153bdeca32aa57e76ae53ff983cb30551ca3855bd969660ee5c649eba",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+          "localMode": "100644",
+          "localSha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+          "status": "equal"
+        },
+        {
+          "path": "removed-signals.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+          "localMode": "100644",
+          "localSha256": "a7f14e158bcfc6020912604fa9c10290141eae8617ccc03a1f0e2d625438b2ac",
+          "status": "equal"
+        },
+        {
+          "path": "scope-resolution.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+          "localMode": "100644",
+          "localSha256": "93eb3900d9149d3f51cb2713212d23025d2549b284b859be1d38d09ad7a4fe4e",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "state-machine",
+      "path": "skills/in-progress/state-machine",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/state-machine",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+      "localDigestMatches": true,
+      "invocation": "User",
+      "codexImplicitDisabled": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "switcher.md"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 4,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "User",
+      "upstreamCodexImplicitDisabled": true,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "switcher.md"
+      ],
+      "role": "기존 코드의 한 컴포넌트 상태들을 mock 데이터와 switcher로 노출하는 작업대",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "상태 발견·데이터 경계 mocking·상태 전환·재점검·사용자 요청 후 정리 및 switcher 참조는 그대로."
+      ],
+      "actualRisk": "상태 표시 절차 손실은 발견하지 못함. 명칭이 비슷한 user-flow는 새 과업 전이를 설계하며 이 스킬은 기존 구현 상태를 보여 준다. 역할 구분은 문서에 있으나 자동/명시 라우팅 실행 증거는 없음.",
+      "riskClass": "validation-gap",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/state-machine/SKILL.md",
+          "line": 11
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/state-machine/SKILL.md",
+          "line": 23
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/state-machine/SKILL.md",
+          "line": 45
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "f944409b17c9c0641e8049dd628ee93610279f882779a81f8876e6466aea586d",
+          "localMode": "100644",
+          "localSha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+          "localMode": "100644",
+          "localSha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+          "status": "equal"
+        },
+        {
+          "path": "switcher.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+          "localMode": "100644",
+          "localSha256": "86f61daa6dc2e2c318bec9b4b35115647eb84e7b4f247f5a6690484e7deadc7b",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "variant",
+      "path": "skills/in-progress/variant",
+      "origin": {
+        "source": "jakubkrehel-skills",
+        "path": "skills/variant",
+        "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+        "localDigest": "sha256:fd3cc7388f2657877a0a915d6e2cf0e0133cc9d08994c1b7be959cb32c2f6db5",
+        "decisions": [
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "LICENSE",
+              "SKILL.md"
+            ],
+            "decision": "adapt",
+            "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+            "report": "evals/design-beta/README.md"
+          },
+          {
+            "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+            "paths": [
+              "SKILL.md"
+            ],
+            "decision": "keep-local",
+            "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+            "report": "evals/design-beta/browser-routing-2026-10-10.md"
+          }
+        ]
+      },
+      "classification": "modified",
+      "localDigest": "sha256:fd3cc7388f2657877a0a915d6e2cf0e0133cc9d08994c1b7be959cb32c2f6db5",
+      "localDigestMatches": true,
+      "invocation": "User",
+      "codexImplicitDisabled": true,
+      "files": [
+        {
+          "path": "LICENSE",
+          "change": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "change": "modified"
+        }
+      ],
+      "equalFiles": [
+        "agents/openai.yaml",
+        "picker.md"
+      ],
+      "sourceFileCount": 3,
+      "localFileCount": 4,
+      "upstreamPathsCoveredByManifest": true,
+      "licenseMatches": true,
+      "upstreamInvocation": "User",
+      "upstreamCodexImplicitDisabled": true,
+      "invocationPreserved": true,
+      "supportingFiles": [
+        "picker.md"
+      ],
+      "role": "한 컴포넌트의 한 주요 축을 달리한 후보들을 실제 페이지의 picker로 비교",
+      "semanticChanges": [
+        "공통 패키징: Paul provenance와 원본 MIT LICENSE 추가. 브라우저 증거는 목적·기대 관찰을 design-browser에 전달하고, 도구가 없으면 호출자 정책·설치된 도움말·검증 한계를 사용한다.",
+        "명시적 variant 요청은 하나의 컴포넌트 비교 harness를 소유하고 넓은 UI/logic 질문은 prototype 역할이라고 추가. User-only 이웃은 인간의 선택으로 유지."
+      ],
+      "actualRisk": "원본의 안전 기준·한 축·실제 문맥·후보 비순위화는 보존됨. prototype과 달리 기존안을 후보에 반드시 넣는 규칙은 없음. 이는 이식 중 삭제가 아닌 보존된 원본의 공백이며, 기존안을 선호한 사용자 피드백을 variant에도 반영할지는 별도 결정이 필요함.",
+      "riskClass": "inherited-baseline-gap",
+      "qualityValidationStatus": "기존 결과의 skillsRead 목록에 없음. 이 역할의 실제 실행, 현행 라우팅, 원본 대비 결과 동등성·개선은 미검증. prototype 비교가 유용했다는 피드백은 variant 실행 증거가 아님.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/variant/SKILL.md",
+          "line": 15
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/variant/SKILL.md",
+          "line": 33
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/variant/SKILL.md",
+          "line": 68
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/variant/SKILL.md",
+          "line": 90
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "LICENSE",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed1dfe988fc40511b4845ccd9050a143a2002fee3bedc8064c47fa342b5d8d4f",
+          "status": "added"
+        },
+        {
+          "path": "SKILL.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "e5bb95b72aa1589f72f350e2201be031129155db3cb27e9c3bec284ee08bc245",
+          "localMode": "100644",
+          "localSha256": "c09319594bccafb7ee78ad67014c350cab79dff257db5a2a9cc99605e282b446",
+          "status": "modified"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": "100644",
+          "upstreamSha256": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+          "localMode": "100644",
+          "localSha256": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+          "status": "equal"
+        },
+        {
+          "path": "picker.md",
+          "upstreamMode": "100644",
+          "upstreamSha256": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a",
+          "localMode": "100644",
+          "localSha256": "0cc1b3980b4f2ab1c4310e21b6b9df5557191e51e98b550347e796e9fcf2d38a",
+          "status": "equal"
+        }
+      ],
+      "changedFiles": [
+        "SKILL.md"
+      ],
+      "deletedFiles": [],
+      "addedFiles": [
+        "LICENSE"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "design-browser",
+      "path": "skills/in-progress/design-browser",
+      "classification": "original",
+      "registry": {
+        "id": "design-browser",
+        "path": "skills/in-progress/design-browser",
+        "kind": "original",
+        "origins": [],
+        "influences": [
+          {
+            "source": "microsoft-playwright-cli",
+            "path": "README.md",
+            "revision": "b85c7a736bb473bf55b584e54a09ffa698d6d871",
+            "reason": "Documented CLI API and session lifecycle; independently authored design evidence procedure."
+          }
+        ]
+      },
+      "localDigest": "sha256:4829e7013f50ce6a183e6f498e6cb0d38d2e816d3c655e7676027ac8a0bb6dae",
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "change": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "change": "added"
+        },
+        {
+          "path": "references/aside.md",
+          "change": "added"
+        },
+        {
+          "path": "references/tool-comparison.md",
+          "change": "added"
+        }
+      ],
+      "sourceFileCount": 0,
+      "localFileCount": 4,
+      "role": "목적별 브라우저 경로 선택, 세션 소유, 관찰 증거 수집·반환",
+      "semanticChanges": [
+        "독립 작성. Microsoft Playwright CLI README의 API/세션 수명주기를 참고했고 source-map에는 installed Aside help와 사용자 라우팅 요구가 추가 맥락으로 기록됨. 다른 스킬의 fork가 아님.",
+        "명시 도구 우선, research/general browsing은 Aside, development verification/미분류는 Playwright, 충분한 static evidence면 browser 없이 판단. verdict는 분석 agent, design acceptance는 인간에게 남김."
+      ],
+      "actualRisk": "13개 파생 스킬이 공유하는 의존점이므로 여기의 라우팅/관찰 실패가 넓게 전파될 수 있음. 현재 Aside branch 및 도구 비교 절차의 브라우저 실행 증거는 없음. docs/help를 읽은 사실과 7개 요청 분류를 실제 개발 QA 성공이나 비용 우위로 오해하면 안 됨.",
+      "riskClass": "shared-dependency-validation-gap",
+      "qualityValidationStatus": "이전 Playwright review/planning smoke + 후속 7개 instruction-level 라우팅 사례 기록. 현재 SKILL.md·openai.yaml은 두 smoke 입력과 다르고 새 참조 2개도 당시 bundle에 없음. 현행 Aside 실행·효율 비교·자동 발견 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/SKILL.md",
+          "line": 10
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/SKILL.md",
+          "line": 16
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/SKILL.md",
+          "line": 35
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/SKILL.md",
+          "line": 64
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/references/aside.md",
+          "line": 3
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/design-browser/references/tool-comparison.md",
+          "line": 5
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "SKILL.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "7dd10aed11182e2dc3c161c2cf5d9babf3d96904b21aecf7a2d16d652745ddbb",
+          "status": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+          "status": "added"
+        },
+        {
+          "path": "references/aside.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "c81bd55f6f0e359454f7c7ff0041ce56e1f27c6da42e9c5830289becd96f8d02",
+          "status": "added"
+        },
+        {
+          "path": "references/tool-comparison.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "f67c045f56e4f30ac0c91679ea154a3546a91623cbd7342fd2f2cb8050e32751",
+          "status": "added"
+        }
+      ],
+      "changedFiles": [],
+      "deletedFiles": [],
+      "addedFiles": [
+        "SKILL.md",
+        "agents/openai.yaml",
+        "references/aside.md",
+        "references/tool-comparison.md"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "information-architecture",
+      "path": "skills/in-progress/information-architecture",
+      "classification": "original",
+      "registry": {
+        "id": "information-architecture",
+        "path": "skills/in-progress/information-architecture",
+        "kind": "original",
+        "origins": [],
+        "influences": [
+          {
+            "source": "pbakaus-impeccable",
+            "path": "skill/reference/shape.md",
+            "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+            "reason": "Separate settled product context, real content and unresolved design decisions; independently authored destination and content-coverage procedure."
+          }
+        ]
+      },
+      "localDigest": "sha256:f3812ec0cf05cb9063593ebe0f3eb3b520c6d5c38e886321978bfa557ea41343",
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "change": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "change": "added"
+        }
+      ],
+      "sourceFileCount": 0,
+      "localFileCount": 2,
+      "role": "콘텐츠의 목적지·라벨·내비게이션·찾기 경로를 설계",
+      "semanticChanges": [
+        "독립 작성. shape의 제품 맥락·실제 콘텐츠·미결정 구분을 참고했지만 discovery interview, visual-world 선택, 명시 확인 후 중단 절차를 복제하지 않음.",
+        "PM 결정을 입력으로 받고 destination ID·content coverage·retrieval walkthrough를 산출. task transition은 user-flow, 화면 구성은 wireframe에 남김. 기존 구조 유지도 유효 결과로 명시."
+      ],
+      "actualRisk": "상당한 역할 축소/재구성이므로 Impeccable shape와 동등 기능이라고 말할 수 없음. 저자 walkthrough는 실제 사용자 findability 연구가 아니며 card-sort/tree-test는 기존 증거가 있을 때만 사용. 확인된 범위 밖 사용자 성과는 미검증.",
+      "riskClass": "original-with-bounded-evidence",
+      "qualityValidationStatus": "현재 두 파일 모두 planning 시험 입력 해시와 일치. 합성 독서 라이브러리 단일 실행에서 IA→flow→screen ID 연속성·범위 보존을 검토. 비교 품질·실사용자 수용·자동 발견 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/information-architecture/SKILL.md",
+          "line": 10
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/information-architecture/SKILL.md",
+          "line": 24
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/information-architecture/SKILL.md",
+          "line": 34
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/information-architecture/SKILL.md",
+          "line": 49
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "SKILL.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20",
+          "status": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "1e9346a23d718dcc493d429989eed9c4439aa5b05c11429c52e9d352614ae387",
+          "status": "added"
+        }
+      ],
+      "changedFiles": [],
+      "deletedFiles": [],
+      "addedFiles": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "user-flow",
+      "path": "skills/in-progress/user-flow",
+      "classification": "original",
+      "registry": {
+        "id": "user-flow",
+        "path": "skills/in-progress/user-flow",
+        "kind": "original",
+        "origins": [],
+        "influences": [
+          {
+            "source": "pbakaus-impeccable",
+            "path": "skill/reference/shape.md",
+            "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+            "reason": "Carry scoped tasks and material states forward from product decisions."
+          },
+          {
+            "source": "pbakaus-impeccable",
+            "path": "skill/reference/onboard.md",
+            "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+            "reason": "Reach the task outcome with contextual guidance rather than a mandatory product tour."
+          },
+          {
+            "source": "pbakaus-impeccable",
+            "path": "skill/reference/harden.md",
+            "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+            "reason": "Account for relevant failure, input and recovery conditions when specifying transitions."
+          }
+        ]
+      },
+      "localDigest": "sha256:88ed20779e0334a5fdf0adc6f69f2be871fe0673241ae5128881e3656f3226a1",
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "change": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "change": "added"
+        }
+      ],
+      "sourceFileCount": 0,
+      "localFileCount": 2,
+      "role": "과업의 행동·가드·피드백·상태 전이·보존 데이터·복구 경로를 설계",
+      "semanticChanges": [
+        "독립 작성. shape의 task/state, onboard의 결과·맥락 중심 접근, harden의 입력/실패/복구 아이디어를 참고. onboarding 구현이나 hardening 명령의 복제는 아님.",
+        "IA 목적지 ID를 소비하고 authoritative transition table을 산출. 화면 구성·production logic을 소유하지 않으며 state-machine 작업대를 필수로 호출하지 않음."
+      ],
+      "actualRisk": "실제 API·인증·영속성·동시성 보장을 검증하는 역할이 아님. 저자 walkthrough와 mock 브라우저 결과를 사용자 과업 성공 또는 production 검증으로 확대할 위험은 문서가 제한하고 있으나 별도 제품 실행은 미검증.",
+      "riskClass": "original-with-bounded-evidence",
+      "qualityValidationStatus": "planning 단일 합성 실행에서 일부 성공·복구·중복 입력·이탈 경로를 관찰. 현행 SKILL.md는 routing follow-up으로 당시 해시와 다름. 모든 branch/양쪽 viewport 및 comparative quality 미검증.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/user-flow/SKILL.md",
+          "line": 10
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/user-flow/SKILL.md",
+          "line": 22
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/user-flow/SKILL.md",
+          "line": 32
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/user-flow/SKILL.md",
+          "line": 44
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "SKILL.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "906ded2f6a4b56a4a675294b8831d28c250409df86654874cba7c2e90c3d986a",
+          "status": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "f730ebf5fb0c3b30f67bfd9a73bc2fd930f96659c1521e9b5135825e806ff16a",
+          "status": "added"
+        }
+      ],
+      "changedFiles": [],
+      "deletedFiles": [],
+      "addedFiles": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    },
+    {
+      "skill": "wireframe",
+      "path": "skills/in-progress/wireframe",
+      "classification": "original",
+      "registry": {
+        "id": "wireframe",
+        "path": "skills/in-progress/wireframe",
+        "kind": "original",
+        "origins": [],
+        "influences": [
+          {
+            "source": "pbakaus-impeccable",
+            "path": "skill/reference/new-work.md",
+            "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+            "reason": "Use inspectable HTML sketches for structural decisions inside an existing product context; independently authored screen/state handoff. No engine, concept-selection procedure or source text copied."
+          }
+        ]
+      },
+      "localDigest": "sha256:4b7136d96b8013178911d1f58387821a4d033b5903ed908bceb33b2454c2a3e1",
+      "invocation": "Model",
+      "codexImplicitDisabled": false,
+      "files": [
+        {
+          "path": "SKILL.md",
+          "change": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "change": "added"
+        }
+      ],
+      "sourceFileCount": 0,
+      "localFileCount": 2,
+      "role": "IA·flow를 낮은 충실도의 인터랙티브 화면과 Markdown screen/state 계약으로 구현",
+      "semanticChanges": [
+        "독립 작성. new-work의 기존 맥락 속 HTML sketch 아이디어를 참고. Impeccable concept-seed, 무작위 후보, visual world, comp gate, reviewer/doc engine은 가져오지 않음.",
+        "일반적으로 하나의 해법을 만들고 구조적 선택이 열려 있을 때만 prototype에 좁은 비교를 위임. ID·mock 경계·실제 경로 점검·반응형 우선순위를 기록하고 시각 방향·production 구현은 분리."
+      ],
+      "actualRisk": "완성 디자인 생성기가 아니라 구조 결정용 스킬이다. prototype의 UI branch는 구조적 변형 비교에 적합하지만 더 넓은 polish·production 주장을 하면 역할 경계가 무너짐. 현재 문서는 rendered/checked/accepted를 구분하며 단일 smoke가 이를 일반적으로 보장하지는 않음.",
+      "riskClass": "original-with-bounded-evidence",
+      "qualityValidationStatus": "planning 단일 합성 실행에서 runnable HTML과 일부 desktop/mobile·키보드·긴 콘텐츠 경로 관찰. 현행 SKILL.md는 routing follow-up으로 당시 해시와 다름. 인간 수용·production 준비·비교 우위 없음.",
+      "evidence": [
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/wireframe/SKILL.md",
+          "line": 10
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/wireframe/SKILL.md",
+          "line": 24
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/wireframe/SKILL.md",
+          "line": 28
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/wireframe/SKILL.md",
+          "line": 34
+        },
+        {
+          "path": "/Users/jinhokim/dev/paul-skills/skills/in-progress/wireframe/SKILL.md",
+          "line": 46
+        }
+      ],
+      "fileInventory": [
+        {
+          "path": "SKILL.md",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "f591f9f533dcd259d275ddfda324c07ac85e8801b1fbb5e96a9da9614d87247a",
+          "status": "added"
+        },
+        {
+          "path": "agents/openai.yaml",
+          "upstreamMode": null,
+          "upstreamSha256": null,
+          "localMode": "100644",
+          "localSha256": "ffe5ce5bfec220ff9199f173247f5b79fef1b53b39992432b69b3a0fea3ae31a",
+          "status": "added"
+        }
+      ],
+      "changedFiles": [],
+      "deletedFiles": [],
+      "addedFiles": [
+        "SKILL.md",
+        "agents/openai.yaml"
+      ],
+      "comparativeQualityEstablished": false,
+      "sourcePreservationMeansOutcomeEquivalence": false
+    }
+  ],
+  "prototype": {
+    "path": "skills/engineering/prototype",
+    "includedInBetaCount": false,
+    "kind": "adapted",
+    "source": "https://github.com/mattpocock/skills",
+    "originPath": "skills/engineering/prototype",
+    "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+    "sourceRevisionIndependentlyComparedInThisAudit": false,
+    "currentLocalDigest": "sha256:4b084a38039f9391a95a4f23d4869879e84a7879a2047747bc7ba6202793ac9e",
+    "registeredLocalDigestMatches": true,
+    "role": "Broader throwaway UI or logic question; UI variations with existing baseline and keep-original outcome. Not imported from Jakub variant.",
+    "qualityEvidence": "Record says user preferred existing page and found comparison useful; this accepts mechanism only, not redesigns or all skills."
+  },
+  "limitations": [
+    "No product execution, fresh browser run, package test rerun, promotion or source edit.",
+    "Content comparison cannot establish output quality or equivalence.",
+    "Existing runtime evidence is bounded and many current files differ from tested inputs.",
+    "Registered Microsoft README influence was read from source map/registry only; pinned Git object not locally available in supplied clone.",
+    "No current upstream remote freshness claim; pins only.",
+    "Original classification is consistent with inspected authored text and named influences, not a proof about all possible unrecorded sources."
+  ],
+  "scopeNote": "Source audit completed independently before this turn paired trial consolidation. Historical runtime status fields do not include results-2026-10-10-comparison.json."
+}

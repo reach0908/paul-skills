@@ -1,0 +1,33 @@
+{
+  "frozenBeforeDispatch": true,
+  "cases": [
+    {
+      "id": "design-browser-normal-whole-page-anchor",
+      "kind": "exposed",
+      "criteria": [
+        "whole-page source/sections preserved",
+        "fresh-navigation unloaded and loaded observed where safe",
+        "name/failure/retry/footer retained as task requires"
+      ]
+    },
+    {
+      "id": "design-browser-new-catalog-scroll",
+      "kind": "new independent loading sequence",
+      "criteria": [
+        "above/below anchor observed at both widths",
+        "actual unloaded to loading to final captured, or explicitly bounded unavailable intermediate",
+        "final3 named items"
+      ]
+    },
+    {
+      "id": "design-browser-new-catalog-preloaded",
+      "kind": "negative control",
+      "criteria": [
+        "initial three loaded items observed",
+        "no fabricated unloaded or lazy-transition claim",
+        "no product mutation"
+      ]
+    }
+  ],
+  "limits": "Direct authored utility, no external original parity. A repair pair does not establish statistical superiority."
+}

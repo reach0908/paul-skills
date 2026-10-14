@@ -1,0 +1,15 @@
+{
+  "role": "better-writing",
+  "repeat": 3,
+  "status": "state-aware empty-copy repair supported; dependent composite roles require current-bundle reruns",
+  "evidence": ["writing-repair.json", "writing-repair-raw.txt"],
+  "rootReplay": "Both arm outputs: search and clear before deletion, cancel then confirm deletion, search and clear after deletion; permission revocation followed by matching, nonmatching and empty queries; help action; valid-name save followed by invalid-name save.",
+  "observations": [
+    "Paul now keeps permanent deletion copy and suppresses search recovery when the data no longer exists, while preserving valid search recovery before deletion.",
+    "Both arms distinguish permission loss from filtering, preserve data-deletion distinction and provide the existing local help action without inventing restored access.",
+    "Both reviews independently identify the previously unseeded stale success message after a later invalid submission. Root reproduced error and previous success together. Reporting this is a valid review finding, not a false positive on a nominal clean fixture.",
+    "Original r3 still suggests alternate search after deletion; this cannot restore the absent document and is weaker than its r1 behavior. A verified source error is not the acceptance target."
+  ],
+  "preservation": "Required source-only third case remains unchanged; deletion/access simulation policy, styles and input contract are preserved by recorded receipts.",
+  "limitations": ["One fresh paired repair run is not a statistical effect estimate", "Local simulated deletion and permission only", "Human tone preference and assistive technology not certified", "Base repeat 2 remains pending and uses the frozen pre-repair snapshot"]
+}

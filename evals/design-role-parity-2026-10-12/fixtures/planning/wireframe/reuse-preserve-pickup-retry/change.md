@@ -1,0 +1,5 @@
+# Accepted pickup change
+Baseline revision NP-WF-4. Accepted sources NP-IA-2 and NP-FLOW-5.
+Destinations D-PICKUPS (#pickups) and D-PICKUP (#pickup-P-18). States P-LIST, P-READY, P-PENDING, P-ERROR, P-DONE. The existing Help destination remains.
+The first Confirm collected request must enter P-PENDING for 400 ms and then P-ERROR with the message Connection interrupted. P-ERROR exposes Retry and Back to pickups; it keeps order P-18, location North hall and Friday 17:30. Retry enters pending, then P-DONE with receipt RC-18. Disable repeated confirm/retry while pending. Back from P-ERROR preserves the North filter. Revisiting detail returns to the error with Retry available. Done remains confirmed for this in-memory session.
+Add a clearly marked local Reset simulation control. Reset restores the initial state and North filter. No real collection operation, new destinations, saved browser storage, animation showcase or design system. Keep neutral appearance and established content. Mock latency and failure are not production behavior.
