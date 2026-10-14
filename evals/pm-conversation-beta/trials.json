@@ -1,0 +1,111 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "protocol": "Development forward tests, synthetic fixtures; no statistical/source-parity claim",
+  "host": "Codex desktop collaboration; explicitly read candidate files; inherited settings",
+  "model": null,
+  "reasoningEffort": null,
+  "tokens": null,
+  "cost": null,
+  "promotion": "Not authorized",
+  "cases": [
+    {
+      "id": "builder-dialogue-v1",
+      "agent": "office_hours_builder_trial",
+      "fresh": true,
+      "userTurns": 4,
+      "skillSnapshot": "skill-snapshots/office-hours-v1",
+      "input": "artifacts/office-builder/user-turns.json",
+      "outputs": [
+        "artifacts/office-builder/turn-01.md",
+        "artifacts/office-builder/turn-02.md",
+        "artifacts/office-builder/turn-03.md",
+        "artifacts/office-builder/turn-04.md",
+        "artifacts/office-builder/product-brief.md"
+      ],
+      "assessment": "Responsive idea development and user approach choice preserved; full saved record was summarized rather than reproduced; source-example overlap limits novelty claim"
+    },
+    {
+      "id": "record-v2",
+      "agent": "office_record_recheck",
+      "fresh": true,
+      "skillSnapshot": "skill-snapshots/office-hours-v2",
+      "input": "fixtures/record-recheck-task.md",
+      "outputs": [
+        "artifacts/office-record-recheck/response.md",
+        "artifacts/office-record-recheck/decision-record.md"
+      ],
+      "assessment": "Scope preserved; complete saved-record presentation still absent"
+    },
+    {
+      "id": "record-v3",
+      "agent": "office_record_recheck_v3",
+      "fresh": true,
+      "skillPath": "skills/in-progress/office-hours",
+      "input": "fixtures/record-recheck-task.md",
+      "outputs": [
+        "artifacts/office-record-recheck-v3/response.md",
+        "artifacts/office-record-recheck-v3/product-brief.md",
+        "artifacts/office-record-recheck-v3/startup-mode-shift.md"
+      ],
+      "assessment": "Full saved-record inclusion verified; continued startup-mode shift distinguishes interest from demand. Same user request, not a controlled performance comparison"
+    },
+    {
+      "id": "handoff",
+      "agent": "pm_handoff_forward_test",
+      "fresh": true,
+      "skillPath": "skills/in-progress/product-brief",
+      "input": "fixtures/handoff-task.md",
+      "outputs": [
+        "artifacts/handoff/HANDOFF.md",
+        "artifacts/handoff/EXECUTION-NOTES.md",
+        "artifacts/handoff/input-integrity.json"
+      ],
+      "assessment": "Approved choices, conditional design readiness and input integrity preserved; no downstream design role was executed"
+    },
+    {
+      "id": "prototype-v1",
+      "agent": "prototype_test_coordinator",
+      "fresh": true,
+      "participantFresh": true,
+      "participants": 1,
+      "tasks": 2,
+      "skillSnapshot": "skill-snapshots/prototype-user-test-v1",
+      "input": "fixtures/walkthrough-task.md",
+      "outputs": [
+        "artifacts/coordinator/result.md",
+        "artifacts/coordinator/actual-dispatch-manifest.json",
+        "artifacts/coordinator/evidence-integrity-check.json"
+      ],
+      "assessment": "Actual UI behavior, post-task interview and intent mismatch observed. Original setup failures and 8m20s retry overrun retained; task 2 is bounded partial completion"
+    },
+    {
+      "id": "prototype-preflight-v2",
+      "agent": "prototype_test_preflight_recheck",
+      "fresh": true,
+      "participantFresh": true,
+      "participants": 1,
+      "tasks": 1,
+      "skillPath": "skills/in-progress/prototype-user-test",
+      "outputs": [
+        "artifacts/prototype-recheck/report.md",
+        "artifacts/prototype-recheck/verification.json",
+        "artifacts/prototype-recheck/participant/packet.md",
+        "artifacts/prototype-recheck/participant/attempt.md",
+        "artifacts/prototype-recheck/participant/interview.md"
+      ],
+      "assessment": "124.615s and 5 UI actions, unassisted recovery within bound; list-context mismatch still observed. Participant remains blind; moderator incidental unrelated status exposure disclosed"
+    }
+  ],
+  "skillTrees": {
+    "skills/in-progress/office-hours": "sha256:5385db836f69425e32a903d412e5c81af0b7e320f105377855d19ffe3c197708",
+    "skills/in-progress/prototype-user-test": "sha256:c84c896ad8c47dd20f0a91b4b72c3c4f8fc60e6b8a42e418faa08de2748ccb9a",
+    "skills/in-progress/problem-discovery": "sha256:3c3c200934e3f475020fb198174cf770527530fb543c964856697a3d10ede6e9",
+    "skills/in-progress/product-brief": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+    "skills/in-progress/experiment-design": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e"
+  },
+  "fullRecordChecks": {
+    "office-record-recheck": false,
+    "office-record-recheck-v3": true
+  }
+}

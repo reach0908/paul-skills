@@ -1,0 +1,66 @@
+[
+  {
+    "file": "participant-dispatch-01.txt",
+    "sha256": "c0b60d2e19d546ca88a9b806b955999151f3314ffb5e58ced513d8b48a9529f6",
+    "transport": "spawn_agent",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true,
+    "fork_turns": "none"
+  },
+  {
+    "file": "participant-dispatch-02-tool-retry.txt",
+    "sha256": "b23499d9cf1d88cb7c19ab5180842ae1d5054fa62855c317644a4e01f43aca07",
+    "transport": "followup_task",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-03-retry-bound.txt",
+    "sha256": "a81385af3516f3f34865777126050c869fc8ff80d989a6b478a77e201c75e60b",
+    "transport": "send_message",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-04-session-permission.txt",
+    "sha256": "268d68f324da4f5eadb5e7fb0e66674dcc0a7a645350688c0ff112e5d3b311d5",
+    "transport": "send_message",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-05-pty-recovery.txt",
+    "sha256": "9ce7ff27605fff45d95fa814274e429f351d1185f08b894ae25bb983cdb2c2ae",
+    "transport": "followup_task",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-06-task-2.txt",
+    "sha256": "6af33288fe8e6982f2363196b9f765e1fe2bd2c9531ce3daf48a93d0f108e735",
+    "transport": "followup_task",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-07-deadline.txt",
+    "sha256": "d157e2ab5e9dcac90ed9f0cf1b83427f14a52f640c696658ce2bfa655ab0cbbd",
+    "transport": "send_message",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-08-interview.txt",
+    "sha256": "20d15de0a9bd4e6371a569b559c5df152df91db433aa8064c44b1eb3bc373701",
+    "transport": "followup_task",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  },
+  {
+    "file": "participant-dispatch-09-close.txt",
+    "sha256": "c210591ebb7f6b14f31fa5e621eb791b4d26cde0045ee2b29ee7511a4bb99908",
+    "transport": "followup_task",
+    "recipient": "/root/prototype_test_coordinator/fresh_participant",
+    "actually_sent": true
+  }
+]
