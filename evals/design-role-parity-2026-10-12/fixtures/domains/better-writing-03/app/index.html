@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<title>프로젝트 보관함 | Studio Desk</title>
+<link rel="icon" href="data:,">
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<main id="main">
+<h1>프로젝트 보관함</h1>
+
+<section class="panel"><h2>프로젝트</h2><p>다음 아이디어도 여기에서 자라요.</p><div id="project"><p>Studio launch</p><button id="archive">프로젝트 보관</button></div><p id="empty" hidden>보관하지 않은 프로젝트가 없어요. 아래에서 보관을 취소하면 다시 볼 수 있어요.</p><div id="undo-row" hidden><p>프로젝트를 보관했어요.</p><button id="undo">보관 취소</button></div></section>
+<section class="panel"><h2>표시 이름</h2><form id="form" novalidate><label for="name">표시 이름</label><input id="name" name="name" autocomplete="name" aria-describedby="hint error"><p id="hint">2자 이상 입력해 주세요.</p><p id="error" class="error"></p><button class="primary">표시 이름 저장</button></form><p id="status" class="status" role="status"></p></section>
+
+</main>
+<script src="app.js"></script>
+</body>
+</html>

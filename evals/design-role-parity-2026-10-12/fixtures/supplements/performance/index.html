@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Local label printer</title>
+<style>
+body{font:16px/1.5 system-ui;margin:24px;max-width:720px}button{font:inherit;padding:10px 16px}button:focus-visible{outline:3px solid #1257a6;outline-offset:3px}ul{padding-left:24px}.label{padding:3px}#status{min-height:24px}
+</style>
+<h1>Local label printer</h1>
+<p>Render 120 fictional shelf labels locally. The first load has no rendered labels.</p>
+<button id="render">Render labels</button>
+<p id="status" role="status">Ready</p>
+<ul id="labels"></ul>
+<script>
+document.querySelector('#render').addEventListener('click',()=>{
+  performance.clearMarks(); performance.clearMeasures();
+  performance.mark('labels:start');
+  const end=performance.now()+150;
+  while(performance.now()<end){}
+  const fragment=document.createDocumentFragment();
+  for(let i=1;i<=120;i++){
+    const li=document.createElement('li');li.className='label';
+    li.textContent=`Shelf ${String(i).padStart(3,'0')}: local sample`;
+    fragment.append(li);
+  }
+  document.querySelector('#labels').replaceChildren(fragment);
+  document.querySelector('#status').textContent='120 labels ready';
+  performance.mark('labels:dom-ready');
+  performance.measure('labels:handler-to-dom','labels:start','labels:dom-ready');
+});
+</script>
+</html>

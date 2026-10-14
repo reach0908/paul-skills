@@ -1,0 +1,31 @@
+--- before/interface-review/SKILL.md
++++ after/interface-review/SKILL.md
+@@ -15,6 +15,12 @@
+ Correctness, tests, security and performance belong to the project's general code review. Name such a concern once, point at that review and drop it. Keep Paul `code-review`'s Standards and Spec reports separate from this design verdict. Share the base, head, working-tree scope and design revision, not a merged score.
+ 
+ For browser evidence, call the Skill tool with "design-browser" and pass the task purpose and expected observations. Without a Skill tool, read its installed SKILL.md. Follow its tool routing; if unavailable, use the caller's tool policy and installed help, and report verification limits.
++
++## Entry condition
++
++Start only when the user explicitly invokes `interface-review` by name. A generic change-review request or another skill's referral is not an invocation. If reached that way, return the user-facing invocation with their target and stop before resolving scope. In Codex use `$paul-skills:interface-review`; in Claude Code use `/paul-skills:interface-review`.
++
++Being hidden from the automatic skill list is expected for this user-invoked skill. Its explicit invocation opens the change-review workflow below and authorizes the model-invoked `better-interface` handoff.
+ 
+ ## The change, not the codebase
+ 
+@@ -98,7 +104,14 @@
+ 
+ ### 7. Hand the review to `better-interface`
+ 
+-Call the Skill tool with "better-interface". If the host exposes no Skill tool, read its installed SKILL.md and applicable references. Pass the scope block, affected surfaces and a status on every finding, and report in the format below.
++Call the Skill tool with "better-interface". If the host exposes no Skill tool, read its installed SKILL.md and applicable references. Supply an explicit handoff containing:
++
++- The user's `interface-review` invocation and target.
++- The resolved scope block: base, head, committed and uncommitted scope, file inventory and exclusions.
++- The affected surfaces, expansion limits and permitted verification.
++- A status on every candidate finding, with before/after evidence for the owning domain to confirm.
++
++This is the authorized change-review branch of `better-interface`. It keeps this scope and the report format below while applying its six domain checks, ranking and consolidation. Continue through the handoff rather than requesting the same user invocation again.
+ 
+ If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
+ 

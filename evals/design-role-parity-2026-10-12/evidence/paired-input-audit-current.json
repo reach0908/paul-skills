@@ -1,0 +1,595 @@
+[
+  {
+    "run": "interface-review-paul-r1",
+    "peer": "interface-review-original-r1",
+    "comparedInputs": 27,
+    "different": [
+      "cases/interface-review-change-causes/setup-receipt.json",
+      "cases/interface-review-no-change/setup-receipt.json",
+      "cases/interface-review-shared-token/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/interface-review-change-causes/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/interface-review-no-change/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/interface-review-shared-token/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "interface-review-paul-r2",
+    "peer": "interface-review-original-r2",
+    "comparedInputs": 27,
+    "different": [
+      "cases/interface-review-change-causes/setup-receipt.json",
+      "cases/interface-review-no-change/setup-receipt.json",
+      "cases/interface-review-shared-token/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/interface-review-change-causes/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/interface-review-no-change/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/interface-review-shared-token/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "variant-paul-r1",
+    "peer": "variant-original-r1",
+    "comparedInputs": 25,
+    "different": [
+      "cases/variant-footer-emphasis/setup-receipt.json",
+      "cases/variant-select-and-clean/setup-receipt.json",
+      "cases/variant-usage-density/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/variant-footer-emphasis/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-select-and-clean/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-usage-density/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "variant-paul-r2",
+    "peer": "variant-original-r2",
+    "comparedInputs": 25,
+    "different": [
+      "cases/variant-footer-emphasis/setup-receipt.json",
+      "cases/variant-select-and-clean/setup-receipt.json",
+      "cases/variant-usage-density/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/variant-footer-emphasis/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-select-and-clean/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-usage-density/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "state-machine-paul-r1",
+    "peer": "state-machine-original-r1",
+    "comparedInputs": 29,
+    "different": [
+      "cases/state-machine-audit-states/setup-receipt.json",
+      "cases/state-machine-queue-boundaries/setup-receipt.json",
+      "cases/state-machine-remove-workbench/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/state-machine-audit-states/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/state-machine-queue-boundaries/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/state-machine-remove-workbench/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "state-machine-paul-r2",
+    "peer": "state-machine-original-r2",
+    "comparedInputs": 29,
+    "different": [
+      "cases/state-machine-audit-states/setup-receipt.json",
+      "cases/state-machine-queue-boundaries/setup-receipt.json",
+      "cases/state-machine-remove-workbench/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/state-machine-audit-states/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/state-machine-queue-boundaries/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/state-machine-remove-workbench/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "break-paul-r1",
+    "peer": "break-original-r1",
+    "comparedInputs": 21,
+    "different": [
+      "cases/break-fixed-control/setup-receipt.json",
+      "cases/break-project-content/setup-receipt.json",
+      "cases/break-tag-quantity/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/break-fixed-control/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/break-project-content/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/break-tag-quantity/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "break-paul-r2",
+    "peer": "break-original-r2",
+    "comparedInputs": 21,
+    "different": [
+      "cases/break-fixed-control/setup-receipt.json",
+      "cases/break-project-content/setup-receipt.json",
+      "cases/break-tag-quantity/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/break-fixed-control/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/break-project-content/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/break-tag-quantity/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "explain-interface-paul-r1",
+    "peer": "explain-interface-original-r1",
+    "comparedInputs": 16,
+    "different": [
+      "cases/explain-interface-image-only/setup-receipt.json",
+      "cases/explain-interface-layered-glow/setup-receipt.json",
+      "cases/explain-interface-runtime-reveal/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/explain-interface-image-only/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/explain-interface-layered-glow/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/explain-interface-runtime-reveal/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "explain-interface-paul-r2",
+    "peer": "explain-interface-original-r2",
+    "comparedInputs": 16,
+    "different": [
+      "cases/explain-interface-image-only/setup-receipt.json",
+      "cases/explain-interface-layered-glow/setup-receipt.json",
+      "cases/explain-interface-runtime-reveal/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/explain-interface-image-only/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/explain-interface-layered-glow/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/explain-interface-runtime-reveal/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-accessibility-paul-r1",
+    "peer": "better-accessibility-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-accessibility-paul-r2",
+    "peer": "better-accessibility-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-colors-paul-r1",
+    "peer": "better-colors-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-colors-paul-r2",
+    "peer": "better-colors-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-layout-paul-r1",
+    "peer": "better-layout-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-layout-paul-r2",
+    "peer": "better-layout-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-typography-paul-r1",
+    "peer": "better-typography-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-typography-paul-r2",
+    "peer": "better-typography-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-writing-paul-r1",
+    "peer": "better-writing-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-writing-paul-r2",
+    "peer": "better-writing-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-ui-paul-r1",
+    "peer": "better-ui-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-ui-paul-r2",
+    "peer": "better-ui-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-interface-paul-r1",
+    "peer": "better-interface-original-r1",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-interface-paul-r2",
+    "peer": "better-interface-original-r2",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "build-design-paul-r1",
+    "peer": "build-design-original-r1",
+    "comparedInputs": 22,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "build-design-paul-r2",
+    "peer": "build-design-original-r2",
+    "comparedInputs": 22,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "information-architecture-paul-r1",
+    "peer": "information-architecture-control-r1",
+    "comparedInputs": 9,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "information-architecture-paul-r2",
+    "peer": "information-architecture-control-r2",
+    "comparedInputs": 9,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "user-flow-paul-r1",
+    "peer": "user-flow-control-r1",
+    "comparedInputs": 7,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "user-flow-paul-r2",
+    "peer": "user-flow-control-r2",
+    "comparedInputs": 7,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "wireframe-paul-r1",
+    "peer": "wireframe-control-r1",
+    "comparedInputs": 10,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "wireframe-paul-r2",
+    "peer": "wireframe-control-r2",
+    "comparedInputs": 10,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "design-browser-paul-r1",
+    "peer": "design-browser-control-r1",
+    "comparedInputs": 10,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "design-browser-paul-r2",
+    "peer": "design-browser-control-r2",
+    "comparedInputs": 10,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "variant-paul-r3-focus-repair",
+    "peer": "variant-original-r3-focus-repair",
+    "comparedInputs": 20,
+    "different": [
+      "cases/variant-footer-emphasis/setup-receipt.json",
+      "cases/variant-usage-density/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/variant-footer-emphasis/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-usage-density/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-writing-paul-r3-empty-repair",
+    "peer": "better-writing-original-r3-empty-repair",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "design-browser-paul-r3-performance",
+    "peer": "design-browser-control-r3-performance",
+    "comparedInputs": 2,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "variant-paul-r4-state-repair",
+    "peer": "variant-original-r4-state-repair",
+    "comparedInputs": 23,
+    "different": [
+      "cases/variant-footer-emphasis/setup-receipt.json",
+      "cases/variant-select-and-clean/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/variant-footer-emphasis/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/variant-select-and-clean/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-ui-paul-r3-geometry-repair",
+    "peer": "better-ui-original-r3-geometry-repair",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "interface-review-paul-r5-budget-repair",
+    "peer": "interface-review-original-r5-budget-repair",
+    "comparedInputs": 35,
+    "different": [
+      "cases/interface-review-change-causes/setup-receipt.json",
+      "cases/interface-review-shared-token/setup-receipt.json"
+    ],
+    "setupReconciliation": [
+      {
+        "file": "cases/interface-review-change-causes/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      },
+      {
+        "file": "cases/interface-review-shared-token/setup-receipt.json",
+        "difference": "workspace path identifies the arm; all other receipt fields equal"
+      }
+    ],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "better-interface-paul-r4-ui-writing-dependency",
+    "peer": "better-interface-original-r4-ui-writing-dependency",
+    "comparedInputs": 15,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "design-browser-paul-r4-transitions",
+    "peer": "design-browser-control-r4-transitions",
+    "comparedInputs": 7,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  },
+  {
+    "run": "wireframe-paul-r3-navigation",
+    "peer": "wireframe-control-r3-navigation",
+    "comparedInputs": 10,
+    "different": [],
+    "setupReconciliation": [],
+    "unexpectedDifferences": [],
+    "productInputsEqual": true
+  }
+]

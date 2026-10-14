@@ -1,0 +1,2 @@
+# Extend the existing return pickup flow
+The accepted return flow in `current-flow.md` works. Add only the newly agreed failed-pickup recovery from `change.md` and save `design/flow.md`. Preserve the existing state and destination IDs, working exits and draft-retention rules. Mark new behavior distinctly and give walkthroughs for the changed path plus any affected existing path. Do not change the input files.

@@ -1,0 +1,1 @@
+document.querySelector('#save').onclick=()=>document.querySelector('#status').textContent='초안이 저장됐어요.';document.querySelector('#export').onclick=()=>document.querySelector('#status').textContent='내보내기 파일을 준비했어요.';

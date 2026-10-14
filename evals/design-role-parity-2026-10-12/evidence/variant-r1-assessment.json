@@ -1,0 +1,31 @@
+{
+  "role": "variant",
+  "repeat": 1,
+  "caseCountPerCondition": 3,
+  "status": "acceptance held: root native zoom replay exposes focused search hidden under fixed footer in both conditions",
+  "rootReplay": {
+    "viewportWidths": [
+      1440,
+      320
+    ],
+    "visits": 28,
+    "horizontalOverflow": 0,
+    "actions": "Plan, export, clear and invoice actions re-executed using native Enter/Space in both arms.",
+    "switcher": "Numeric shortcut, H visibility, URL selection and editable arrow guard confirmed.",
+    "source": "Required selected CSS promotion recorded as a rubric overconstraint, not a product regression."
+  },
+  "additionalPaulBehavior": "Footer task says search remains usable. Paul adds local filtering to existing search field; original leaves fixture field unimplemented. Treated as supported task interpretation, not a parity regression.",
+  "limitations": [
+    "Native 200% browser zoom not tested by either arm; original CSS zoom smoke is not equivalent.",
+    "Full contrast combinations not yet independently measured.",
+    "Human aesthetic acceptance pending.",
+    "No token/cost telemetry available."
+  ],
+  "earlierDecision": "required implementation behavior supported; repeat 2 and subjective review pending",
+  "followup": {
+    "raw": "variant-native-zoom-r1.txt",
+    "tabAndScroll": "footer-obstruction.txt",
+    "evidence": "Real native200percent zoom in temporary Chrome profile; both search centers are covered when focused by Tab at effective320x450. Manual scroll can recover in some states; no permanent-inaccessibility claim.",
+    "repair": "variant instruction sharpened; new repair runs pending"
+  }
+}

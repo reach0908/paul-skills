@@ -1,0 +1,8 @@
+# Sample drop-off contract
+Revisions LAB-PM-5, LAB-IA-2, LAB-FLOW-6. Selected task paths accepted. Retention after closing the tab remains open as POLICY-R.
+D-BOOK /drop-off, D-MINE /my-drop-offs. One screen can host L-EDIT, L-PENDING and L-UNAVAILABLE. A confirmation summary can be an in-place L-DONE state.
+Content: Sample label, multiline handling note, available drop-off times. Sample label is required. Long note fixture: Keep upright in the blue insulated transport box; notify the receiving technician before opening because the temperature log is attached under the outer lid.
+L-EDIT choose one available slot and provide label -> Confirm -> L-PENDING. Disable repeated Confirm. After a 400 ms mock response, outcome is either L-DONE with reference LAB-73 or L-UNAVAILABLE. On unavailable, preserve label/note, clear only selected slot, display alternatives and return to L-EDIT when another slot is chosen. The next successful mock confirms LAB-73.
+L-EMPTY has no slots, explanatory text and Refresh slots. Refresh returns available times in this mock and retains label/note. L-DONE shows sample/slot/reference and an action to D-MINE, represented by a local list containing this confirmed record.
+Cancel from editing or unavailable returns to D-MINE without a new record. No cancel from pending in this slice. Provide scenario reset without submitting. Do not persist to localStorage or choose POLICY-R silently; memory for the current tab is enough and reload behavior must be labelled simulated.
+Mobile priority: sample identity, selected time or absence of times, feedback and next action. No calendar library, payments or lab-system integration.

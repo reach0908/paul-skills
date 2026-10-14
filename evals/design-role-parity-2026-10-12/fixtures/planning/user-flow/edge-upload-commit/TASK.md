@@ -1,0 +1,2 @@
+# Specify the safe part of an expense upload flow
+Read `policy.md` and save `design/flow.md`. Handle draft validation, upload progress, timeout, retry and the confirmed receipt. The commitment policy for leaving during upload is deliberately unresolved; carry that dependency forward and do the unaffected work without waiting for an answer. Do not decide whether a leave action cancels the server operation.

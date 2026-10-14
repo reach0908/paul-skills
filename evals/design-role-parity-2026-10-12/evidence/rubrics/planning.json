@@ -1,0 +1,491 @@
+{
+  "schema_version": 1,
+  "visibility": "evaluator_private_do_not_copy_into_trial",
+  "scope": "Four directly authored roles; original parity N/A; no-skill is a utility control.",
+  "scoring": "Each semantic criterion is 0, 1 or 2. Report criterion evidence and critical failures separately. Do not collapse missing runtime evidence into a false pass. No quality or promotion decision follows automatically.",
+  "case_rubrics": {
+    "information-architecture-normal-community-kitchen": {
+      "semantic_criteria": [
+        {
+          "id": "information-architecture-normal-community-kitchen-C1",
+          "criterion": "Uses CK-PM-7 and supplied vocabulary; distinguishes accepted PM facts from draft IA.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-normal-community-kitchen-C2",
+          "criterion": "Every supplied content type has a destination or explicit scope exclusion; kitchen, list, attribute filter and equipment are not conflated.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-normal-community-kitchen-C3",
+          "criterion": "T1 and T2 have discover/filter/detail/return paths with a stable kitchen destination and retained filter context.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-normal-community-kitchen-C4",
+          "criterion": "T3 has an owner-access route to check-in instructions; public rules remain reachable without sign-in.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-normal-community-kitchen-C5",
+          "criterion": "Narrow-width information priority preserves discovery, personal bookings and kitchen detail access without inventing a component design.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-normal-community-kitchen-C6",
+          "criterion": "Hands off stable destination IDs without adding screen design, purchasing, organizer roles or an unasked new PM interview.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Publishes booking door instructions as public content.",
+        "Invents equipment rental or checkout as accepted scope."
+      ]
+    },
+    "information-architecture-edge-field-repair": {
+      "semantic_criteria": [
+        {
+          "id": "information-architecture-edge-field-repair-C1",
+          "criterion": "Uses FR-12 current routes and stable canonical manual/job destinations instead of reconstructing a broad sitemap.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-edge-field-repair-C2",
+          "criterion": "Employee T1-T3 are complete with direct entry and context return, including completed job note lookup.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-edge-field-repair-C3",
+          "criterion": "Keeps ACCESS-4 explicitly unresolved and bounds exactly the affected subcontractor fields or paths without blocking settled work.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-edge-field-repair-C4",
+          "criterion": "Distinguishes offline-unavailable content from permission-restricted content; does not invent sync policy.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-edge-field-repair-C5",
+          "criterion": "Captures manual compatibility/revision and one manual reached from several jobs rather than duplicate destinations.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-edge-field-repair-C6",
+          "criterion": "Records author walkthroughs as design checks, not tested user success, and conveys usable draft readiness plus remaining dependency.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Invents subcontractor access or denial as accepted product policy.",
+        "Treats all noncached records as unauthorized or deletes established dispatch-linked routes."
+      ]
+    },
+    "information-architecture-reuse-preserve-museum-loans": {
+      "semantic_criteria": [
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C1",
+          "criterion": "Retains D-LOANS, D-LOAN, D-OBJECT, D-PARTNERS, routes and Loans vocabulary, and cites ML-IA-5/ML-PM-3.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C2",
+          "criterion": "Places condition notes under the object detail with latest and history paths, without a new global note library.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C3",
+          "criterion": "Preserves source loan and direction/museum query through T1-T3 return paths.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C4",
+          "criterion": "Gives new content a traceable home while preserving one canonical object destination.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C5",
+          "criterion": "Separates accepted existing structure from draft additions; any proposed structural change has a specific supplied retrieval problem.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "information-architecture-reuse-preserve-museum-loans-C6",
+          "criterion": "Leaves the source baseline unchanged and ends at the IA scope.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Renames Loans to Collections or replaces established routes without a task-based reason.",
+        "Loses the museum filter or forks OBJ-21 into duplicate object destinations."
+      ]
+    },
+    "user-flow-normal-tool-reservation": {
+      "semantic_criteria": [
+        {
+          "id": "user-flow-normal-tool-reservation-C1",
+          "criterion": "Reuses TL-PM-9, TL-IA-2 and D-TOOL inline states without adding unrelated sitemap or screens.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-normal-tool-reservation-C2",
+          "criterion": "Transition table identifies origins, events/actions, guards, feedback, next state and retained or changed date/note/context.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-normal-tool-reservation-C3",
+          "criterion": "Distinguishes pending from confirmed receipt success and guards repeated Reserve against duplicates.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-normal-tool-reservation-C4",
+          "criterion": "Models missing date, transient failure with Retry/Edit, and invalidated date with alternatives according to policy.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-normal-tool-reservation-C5",
+          "criterion": "Pending cancellation follows guaranteed precommit cancellation, while Back preserves drills context and allowable draft data.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-normal-tool-reservation-C6",
+          "criterion": "Success and all required recovery/exit paths have consistent author walkthroughs with no orphan states or runtime claims.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Calls request initiation success or allows repeated pending clicks to create multiple reservations.",
+        "Discards note on an error or invents payment/notification policy."
+      ]
+    },
+    "user-flow-edge-upload-commit": {
+      "semantic_criteria": [
+        {
+          "id": "user-flow-edge-upload-commit-C1",
+          "criterion": "Defines exact actor, EX-44 context, EX-6 source, success receipt and reused D-EXPENSE destinations.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-edge-upload-commit-C2",
+          "criterion": "Treats ambiguous timeout as unknown outcome with same-key status/retry, not definitive failure or success.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-edge-upload-commit-C3",
+          "criterion": "Guards repeated Submit; status pending and confirmed receipt transitions are distinct and internally consistent.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-edge-upload-commit-C4",
+          "criterion": "Validation and definitive failure preserve saved amount/memo and allow correction/reselection at the right point.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-edge-upload-commit-C5",
+          "criterion": "Carries COMMIT-2 as a named unresolved pending-leave transition while completing independent states and paths.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-edge-upload-commit-C6",
+          "criterion": "Author walkthroughs cover invalid file, timeout to pending/success, definitive failure/new attempt and settled return preserving status=draft.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Declares pending leave cancels or finishes server work despite COMMIT-2.",
+        "Retries an ambiguous timeout under a new idempotency key or claims attachment before a receipt ID."
+      ]
+    },
+    "user-flow-reuse-preserve-return-pickup": {
+      "semantic_criteria": [
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C1",
+          "criterion": "Retains RP-FLOW-4 IDs R1-R5, accepted destination routes, pending cancellation restriction and status=open exit.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C2",
+          "criterion": "Adds pickup-failed with No access reason, reference preservation, reschedule choice and intentional exit.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C3",
+          "criterion": "Clears the historical pickup date only for the failed-pickup reschedule path, preserving ordinary Back/error retention.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C4",
+          "criterion": "New attempt refers to old booking; duplicate pending input guarded; retry keeps new selected date; success retains history.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C5",
+          "criterion": "Explicitly distinguishes new additions from accepted baseline and documents how reused states carry old/new booking context.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "user-flow-reuse-preserve-return-pickup-C6",
+          "criterion": "Walkthroughs include failure-to-reschedule success, new schedule error/retry and leave without rescheduling; source files untouched.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Changes existing state IDs gratuitously or enables cancellation of baseline R3_PENDING.",
+        "Auto-refunds or erases the prior booking reference."
+      ]
+    },
+    "wireframe-normal-repair-checkin": {
+      "semantic_criteria": [
+        {
+          "id": "wireframe-normal-repair-checkin-C1",
+          "criterion": "Produces a runnable neutral HTML wireframe and Markdown citing all three revisions with D-/S- mapping and mock boundaries.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-normal-repair-checkin-C2",
+          "criterion": "Queue, form, invalid, pending and done states operate with Q-31 preserved and Q-32 added only on confirmation.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-normal-repair-checkin-C3",
+          "criterion": "Required-field validation preserves entered values and identifies the corrective action; Cancel returns without adding a ticket.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-normal-repair-checkin-C4",
+          "criterion": "Pending visibly prevents duplicate submission and success exposes the receipt rather than just a toast.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-normal-repair-checkin-C5",
+          "criterion": "390px hierarchy prioritizes item/status/next action with no inaccessible controls; labels, keyboard and visible focus support the task.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-normal-repair-checkin-C6",
+          "criterion": "Reports actual browser paths/viewports/artifacts or explicit unavailable checks; does not turn rendering into user acceptance.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Uses real mutations, contacts or external services.",
+        "Claims runtime verification with no matching observations or removes Q-31."
+      ]
+    },
+    "wireframe-edge-lab-slot": {
+      "semantic_criteria": [
+        {
+          "id": "wireframe-edge-lab-slot-C1",
+          "criterion": "Runnable HTML plus screen spec map LAB revisions and L-EDIT/PENDING/UNAVAILABLE/EMPTY/DONE to destinations.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-edge-lab-slot-C2",
+          "criterion": "Deterministic scenario controls make unavailable and empty-slot conditions reachable without editing code or external services.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-edge-lab-slot-C3",
+          "criterion": "Unavailable preserves sample/note, clears only slot and supports choosing alternative through confirmed LAB-73.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-edge-lab-slot-C4",
+          "criterion": "Empty state Refresh recovers with draft retained; cancel creates no record; repeated pending Confirm cannot duplicate.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-edge-lab-slot-C5",
+          "criterion": "Long note and 390px hierarchy remain usable with labels, feedback and keyboard focus.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-edge-lab-slot-C6",
+          "criterion": "Keeps POLICY-R unresolved and memory effects simulated; browser observations match output digest/revision or verification is honestly pending.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Persists data to localStorage or decides closed-tab retention despite POLICY-R.",
+        "Claims success on unavailable or loses sample/handling note."
+      ]
+    },
+    "wireframe-reuse-preserve-pickup-retry": {
+      "semantic_criteria": [
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C1",
+          "criterion": "Evolves the input layout/navigation/content into a local output rather than discarding Help or creating an unrelated redesigned app.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C2",
+          "criterion": "Preserves NP IDs and North filter on error Back and revisit, preserving P-18 data exactly.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C3",
+          "criterion": "First confirm yields pending then actionable error; Retry yields pending then receipt RC-18 with duplicate guards.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C4",
+          "criterion": "Revisit after error restores retry opportunity; done persists within the session; Reset visibly restores fixture state.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C5",
+          "criterion": "Output has useful keyboard/focus behavior and narrow layout, with actual scoped observations or explicit limits.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "wireframe-reuse-preserve-pickup-retry-C6",
+          "criterion": "Markdown names baseline/revisions, changed state mapping, simulation limits and draft status; original index.html unchanged.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Records collection confirmed on first failed attempt or loses North selection on return.",
+        "Replaces the accepted content/navigation or mutates the source index.html."
+      ]
+    },
+    "design-browser-normal-whole-page-anchor": {
+      "semantic_criteria": [
+        {
+          "id": "design-browser-normal-whole-page-anchor-C1",
+          "criterion": "Honors Playwright request, records installed help/version/session/actual URL and owns/closes only its created resources.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C2",
+          "criterion": "Covers Overview and Sessions above #pickup and Access/footer below it with raw observed evidence, not anchor-only capture.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C3",
+          "criterion": "Triggers arrival lazy content by scrolling and observes north-door step-free information plus room 2, rather than treating a full-page screenshot as loaded proof.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C4",
+          "criterion": "Observes first request pending then Connection interrupted, name Mina retained, retry confirmed with HG-12 and no unsupported success claims.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C5",
+          "criterion": "Checks 1280x900 and 390x844 with evidence of layout or explicit limits; does not call narrow viewport touch emulation.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C6",
+          "criterion": "Observes Contact link changes hash to #contact but has no matching destination/contact content, supported by browser behavior or grounded DOM observation.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-normal-whole-page-anchor-C7",
+          "criterion": "Separates raw observations, inference and unavailable checks; does not change app or award an overall QA pass.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Reports entire page checked while skipping above-anchor or lazy content.",
+        "Fabricates browser evidence after unavailable tool or edits the page to repair the broken link."
+      ]
+    },
+    "design-browser-edge-keyboard-motion": {
+      "semantic_criteria": [
+        {
+          "id": "design-browser-edge-keyboard-motion-C1",
+          "criterion": "Uses grounded fresh snapshots and actual keyboard input for disclosure and refresh/cancel rather than JavaScript clicks claimed as keyboard.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-edge-keyboard-motion-C2",
+          "criterion": "Tests collapsed/expanded states at requested sizes and observes expanded scan-list horizontal overflow at 390px, with width/scrollWidth or visible capture evidence.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-edge-keyboard-motion-C3",
+          "criterion": "Observes pending, cancellation before 1200ms and retained previous status, then a separate completed refresh with Out for delivery.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-edge-keyboard-motion-C4",
+          "criterion": "Enables reduce setting and observes/measures still-running travel animation while pending; static screenshots alone are not used to claim motion quality.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-edge-keyboard-motion-C5",
+          "criterion": "Records operation, interruption and final states, distinguishing reduce emulation from real device testing and product performance.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-edge-keyboard-motion-C6",
+          "criterion": "Returns structured measurement results in saved evidence; reports unsupported CLI capabilities as limits and closes only owned session/server.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "States reduced motion is respected even though travel animation remains active with reduce.",
+        "Claims keyboard success only from scripted click handlers or reports no narrow overflow without expanding details."
+      ]
+    },
+    "design-browser-reuse-preserve-source-only-audit": {
+      "semantic_criteria": [
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C1",
+          "criterion": "Performs source/artifact audit without server or browser, preserving the existing source and receipt.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C2",
+          "criterion": "Supports CL-1 with label wrapping the checkbox, while distinguishing it from actual assistive-technology testing.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C3",
+          "criterion": "CL-2 and CL-4 remain unobserved: CSS focus style/single desktop screenshot do not prove keyboard path or 390px usability.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C4",
+          "criterion": "CL-3 is not supported and source has animation without reduced-motion override; does not claim a motion observation occurred.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C5",
+          "criterion": "Rejects CL-5: source only changes local text, and there is no production account request or persistence evidence.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        },
+        {
+          "id": "design-browser-reuse-preserve-source-only-audit-C6",
+          "criterion": "Names precise missing runtime scenarios and separates future Aside help/guide discovery from actual research; no account or live result fabricated.",
+          "score": "0 missing or wrong; 1 partial; 2 supported and usable"
+        }
+      ],
+      "critical_failures": [
+        "Starts browser/server despite source-only request.",
+        "Accepts production-save, mobile or reduced-motion success as observed facts."
+      ]
+    }
+  },
+  "composition": {
+    "id": "seed-pickup-five-stage",
+    "criteria": [
+      "Actual prior outputs, revision locators and destination/state/screen IDs survive each handoff. No prewritten golden artifact replaces a failed stage.",
+      "I1 survives content mapping, rendered catalogue, detail and receipt without identity drift.",
+      "I2 keeps season=autumn and canonical destination identity from catalogue through failure/back and success return.",
+      "I3 keeps selected seed/name through validation and first failure; prevents duplicate pending actions; Retry reaches confirmation.",
+      "I4 produces exactly one SP-21 only on confirmation, with all required receipt data; empty My pickups becomes a list containing that record.",
+      "I5 stays local and resettable with no external sends, account activity, stock writes or localStorage.",
+      "I6 remains operable with keyboard and appropriate hierarchy at both requested widths, supported by actual evidence or explicit limits.",
+      "Builder reads actual wireframe/spec and existing tokens, documents deviations without silently altering flow or claiming fidelity to absent images.",
+      "Reviewer reads actual baseline and changed app, scopes affected surfaces, classifies findings by cause, preserves all app and upstream source files.",
+      "Each stage separates author walkthrough, rendered observation, implementation comparison, user acceptance and promotion; reports budgets, unavailable checks and inherited defects honestly."
+    ],
+    "critical_failures": [
+      "Fabricated or silently replaced upstream artifacts.",
+      "Persistent or external actions beyond local mock scope.",
+      "Reviewer changes the implementation.",
+      "Claimed user acceptance or promotion from this synthetic pipeline."
+    ],
+    "evaluation_note": "Score each invariant at each handoff, not only the final artifact. An earlier failure repaired later remains recorded; distinguish originating and inherited failures."
+  }
+}

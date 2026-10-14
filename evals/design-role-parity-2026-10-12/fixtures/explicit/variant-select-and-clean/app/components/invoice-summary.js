@@ -1,0 +1,1 @@
+export function renderInvoice(root, invoice) { root.innerHTML=`<section class="panel"><h2>${invoice.name}</h2><p>${invoice.amount.toLocaleString('ko-KR')}원</p><button data-download>명세서 받기</button><p role="status"></p></section>`;root.querySelector('[data-download]').onclick=()=>root.querySelector('[role=status]').textContent='10월 명세서를 준비했어요.'; }

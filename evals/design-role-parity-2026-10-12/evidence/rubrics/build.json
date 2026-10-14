@@ -1,0 +1,86 @@
+{
+  "build-image": {
+    "required": [
+      "reference visual fidelity at1280and390",
+      "preserve HTML,JS,tokens exact",
+      "native keyboard submit",
+      "pending guard and error retry success",
+      "320reflow",
+      "evidence fidelity"
+    ],
+    "geometryToleranceCssPx": 2,
+    "referenceDirectory": ".scratch/design-role-parity-20261012/reference-build/build-image",
+    "cleanExpected": false,
+    "branches": [
+      "image input",
+      "existing tokens",
+      "state preservation",
+      "rendered comparison"
+    ],
+    "excluded": [
+      "live Figma tool integration",
+      "multi-route app"
+    ],
+    "critical": [
+      "lost submit behavior",
+      "forged verification",
+      "changed readonly files"
+    ]
+  },
+  "build-export": {
+    "required": [
+      "reference visual fidelity at1280and390",
+      "preserve HTML,JS,tokens exact",
+      "native keyboard submit",
+      "pending guard and error retry success",
+      "320reflow",
+      "evidence fidelity"
+    ],
+    "geometryToleranceCssPx": 2,
+    "referenceDirectory": ".scratch/design-role-parity-20261012/reference-build/build-export",
+    "cleanExpected": false,
+    "branches": [
+      "image input",
+      "existing tokens",
+      "state preservation",
+      "rendered comparison"
+    ],
+    "excluded": [
+      "live Figma tool integration",
+      "multi-route app"
+    ],
+    "critical": [
+      "lost submit behavior",
+      "forged verification",
+      "changed readonly files"
+    ]
+  },
+  "build-preserve": {
+    "required": [
+      "reference visual fidelity at1280and390",
+      "preserve HTML,JS,tokens exact",
+      "native keyboard submit",
+      "pending guard and error retry success",
+      "320reflow",
+      "evidence fidelity"
+    ],
+    "geometryToleranceCssPx": 2,
+    "referenceDirectory": ".scratch/design-role-parity-20261012/reference-build/build-preserve",
+    "cleanExpected": true,
+    "branches": [
+      "image input",
+      "existing tokens",
+      "state preservation",
+      "rendered comparison"
+    ],
+    "excluded": [
+      "live Figma tool integration",
+      "multi-route app"
+    ],
+    "critical": [
+      "lost submit behavior",
+      "forged verification",
+      "changed readonly files"
+    ]
+  }
+}

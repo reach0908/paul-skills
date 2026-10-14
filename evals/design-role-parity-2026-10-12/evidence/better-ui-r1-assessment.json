@@ -1,0 +1,17 @@
+{
+  "role": "better-ui",
+  "repeat": 1,
+  "status": "bounded outcomes supported; repeat2 pending",
+  "review": "Both retain all supported motion/hover/radius/icon/press-transition findings, including actual touch-emulation hover behavior. Splitting press and transition scope changes row count, not semantic coverage.",
+  "implementation": "Independent root replay observes intermediate opening/closing transitions ending at hidden/aria-expanded=false, reduced-motion opacity without translation, final visible state, internal wheel containment with page scroll0, instant theme color and no document overflow at320.",
+  "preservation": "Both retain asymmetric independent surfaces, intentional absence of shadows, frequent-filter behavior and persistent non-motion completion cue.",
+  "evidence": [
+    "ui-r1.json",
+    "ui-r1-raw.txt"
+  ],
+  "measurementRecovery": "Initial root sequence set reduced-motion after navigation; retained separately as ui-r1-initial-media-order. Replayed with identical no-preference before each navigation. Exact intermediate transform values are timing samples, not performance or smoothness rankings.",
+  "limits": [
+    "No real touch hardware or full perceptual motion acceptance.",
+    "No10percent DevTools playback or application performance measurement."
+  ]
+}

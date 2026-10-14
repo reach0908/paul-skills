@@ -1,0 +1,16 @@
+{
+  "role": "interface-review",
+  "repeats": 2,
+  "casesPerCondition": 6,
+  "status": "core task outcomes supported; one process-budget ambiguity requires reconciliation",
+  "requiredFindings": {
+    "copyNameRegression": "both conditions both repeats",
+    "archiveNameIntroduced": "both conditions both repeats",
+    "sharedContrastRegression": "both conditions both repeats"
+  },
+  "falsePositives": "No false removal findings on valid labelledby or focus replacement; clean/ahead-zero handled without artificial review in all four runs.",
+  "sourcePreservation": "All four run structural receipts pass; no source changes.",
+  "validAdditionalFinding": "Paul r1 detects archive graphic black fill against #174cb4 at 2.729:1. Source confirms unstyled SVG defaults black; icon is only visible content, so relevant non-text contrast finding. No extra points required for parity.",
+  "difference": "Paul r1 renders five routes in addition to shared CSS, exceeding total-five consumer convention by one; the other three runs use CSS plus four routes. Original valid findings preserved.",
+  "remaining": "Clarify consumer counting before final instruction-version acceptance. Actual screenreader, forced colors and whole-product audit not covered."
+}

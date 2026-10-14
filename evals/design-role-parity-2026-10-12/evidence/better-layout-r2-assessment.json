@@ -1,0 +1,19 @@
+{
+  "role": "better-layout",
+  "repeat": 2,
+  "status": "bounded outcomes supported",
+  "review": "Both detect narrow fixed-grid clipping and hidden next card. Keyboard execution success does not erase discoverability or initial viewport defects. Both clean reviews retain intentional local two-dimensional table scrolling, disclosure and save.",
+  "implementation": "Both preserve app.js and content, separate scrollable dialog body from actions, remove physical positioning from tag. Executor reports cover 1280/768/320 widths and root-text 200 percent. Root additionally tests actual Chrome 200 percent zoom at effective640/320 by450, LTR/RTL, eight combinations. Document width matches viewport, complete last paragraph and confirm action are in bounds; confirmation closes dialog and sets status in every combination.",
+  "evidence": [
+    "layout-r2-native.json",
+    "layout-r2-native-raw.txt",
+    "better-layout-original-r2-scope.json",
+    "better-layout-paul-r2-scope.json"
+  ],
+  "evaluatorCorrection": "Initial root replay used obsolete .dialog-content selector from repeat1. Timeout is preserved separately, inspected output uses .dialog-body. Corrected replay did not alter app.",
+  "limits": [
+    "Native zoom is not combined with all text-expansion/localization combinations.",
+    "Physical touch, screen reader and linguistic bidirectional punctuation not certified."
+  ],
+  "visualInspection": "Root inspected Paul after-320-true.png: enlarged long body is scrollable and action area remains visible. Screenshot alone does not prove all body text is visible at once."
+}

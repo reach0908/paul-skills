@@ -1,0 +1,27 @@
+{
+  "role": "interface-review",
+  "id": "interface-review-change-causes",
+  "kind": "normal",
+  "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes",
+  "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes/TASK.md",
+  "required_input_capabilities": [
+    "filesystem_read",
+    "git",
+    "local_http_server",
+    "browser_optional"
+  ],
+  "timeout_seconds": 240,
+  "setup": {
+    "command": [
+      "python3",
+      "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+      "--case",
+      "interface-review-change-causes",
+      "--destination",
+      "{workspace}"
+    ],
+    "cwd": "{repo_root}"
+  },
+  "start": null,
+  "evaluator_criteria_id": "interface-review-change-causes"
+}

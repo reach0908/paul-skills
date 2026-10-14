@@ -1,0 +1,1 @@
+import {renderSaveButton} from './components/save-button.js';renderSaveButton(document.querySelector('#save'));document.addEventListener('record-save',()=>document.querySelector('#saved').textContent='기록을 저장했어요.');

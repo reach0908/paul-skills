@@ -1,0 +1,1 @@
+document.querySelector('#bookmark').onclick=e=>{const b=e.currentTarget,on=b.getAttribute('aria-pressed')!=='true';b.setAttribute('aria-pressed',on);document.querySelector('#status').textContent=on?'화면을 저장했어요.':'저장을 취소했어요.';};

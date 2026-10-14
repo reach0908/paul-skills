@@ -1,0 +1,14 @@
+{
+  "role": "better-accessibility",
+  "repeat": 1,
+  "casesPerCondition": 3,
+  "status": "bounded outcomes supported; repeat2 pending",
+  "review": "Both identify all required naming/keyboard/focus/label/error findings, distinguish placeholder fallback from visible label, and preserve source.",
+  "implementation": "Root fresh-session replay confirms one completion after two pending Enter activations, label and focus retained, invalid-email focus/description, successful correction with input preserved and error cleared, archive-to-next continuity, native modal background controls excluded and Escape restores trigger. 320px no document overflow.",
+  "preservation": "Both clean-case reviews preserve42px controls without confusing44px preference with24px AA. No required finding missed or unsupported original finding copied.",
+  "differences": "Original validates on client and clears valid corrected input immediately; Paul preserves original asynchronous policy and clears on retry. Frozen task postconditions require corrected retry to succeed, not a specific validation timing. Both supported.",
+  "limits": [
+    "Actual screen-reader speech and full WCAG conformance not tested.",
+    "Native200percent zoom root probe was on variant role, not these forms."
+  ]
+}

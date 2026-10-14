@@ -1,0 +1,2 @@
+# Specify reservation and recovery
+Read `brief.md` and the actual `design/ia.md` from the preceding stage. Save `design/flow.md` with stable state IDs, a transition table, data-retention rules and author walkthroughs. Cover required name, pending, first failure, retry, Back, success and My pickups. Reuse the IA destination IDs and trace I2 through I5. Identify any input contradiction without rewriting the earlier artifact. No screens or code yet.

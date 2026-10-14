@@ -49,6 +49,8 @@ The experimental `upstream-sync` skill can review one or more registered sources
 
 Every imported skill has a frontmatter pointer to the canonical source inventory. The inventory records the historical import and the completed review independently. Upstream changes can be intentionally rejected without losing their history. See [the provenance contract](../skills/in-progress/upstream-sync/references/provenance.md).
 
+For the design skill work, the [original-quality floor](../evals/design-beta/quality-floor.md) is the first acceptance gate: adaptations and benchmark-derived capabilities must preserve at least the relevant original's outcomes. Record actual paired evidence and unresolved regressions. Source identity and package checks establish no outcome parity, and a single passing example does not justify promotion.
+
 ## Migration order
 
 The first pilot is the original `upstream-sync` skill. Its development checks and release rehearsal are recorded, but user acceptance is still pending. The existing forked catalog stays available. Next, migrate owned skills into `in-progress/` in small PRs after checking duplicate names, embedded helpers, runtime dependencies, licenses, and publication visibility. The private research inventory and backup stay local; a public fork is not permission to publish private skill bodies.

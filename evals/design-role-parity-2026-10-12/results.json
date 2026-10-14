@@ -1,0 +1,1084 @@
+{
+  "recordedAt": "2026-10-12T12:48:24.921548+00:00",
+  "status": "representative evaluation and observed-defect repair completed; not universal parity or promotion",
+  "baseContexts": 68,
+  "baseCaseExecutions": 204,
+  "repairContexts": 16,
+  "supplementContexts": 2,
+  "roleContexts": 86,
+  "roleCaseExecutions": 252,
+  "compositionContexts": 5,
+  "roles": [
+    {
+      "role": "interface-review",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/interface-review",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:aa661aa4d5c70ca7e6996b6d3768881037b1b1c45e2ac9e1c5144151bd598a2c",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Clarify the existing total-five consumer budget with an intermediate-stylesheet example after one of two Paul repetitions counted only rendered routes. Preserve the source scope bound and require separate repair evidence.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:aa661aa4d5c70ca7e6996b6d3768881037b1b1c45e2ac9e1c5144151bd598a2c",
+      "baseRuns": 4,
+      "additionalRuns": 2,
+      "runIds": [
+        "interface-review-original-r1",
+        "interface-review-paul-r1",
+        "interface-review-original-r2",
+        "interface-review-paul-r2",
+        "interface-review-original-r5-budget-repair",
+        "interface-review-paul-r5-budget-repair"
+      ],
+      "caseExecutions": 18,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "변경 원인·삭제 신호·동등 대체·공유 소비자 범위·변경 없음",
+      "repair": "소비자 총수 해석 보강",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "interface-review-pair-assessment.json",
+        "interface-review-r5-repair-assessment.json"
+      ],
+      "branchLimits": [
+        "large real application",
+        "missing Git history",
+        "every exclusion pattern"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "variant",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/variant",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Require native Tab and pointer access around fixed comparison/product controls in short viewports after independent 200-percent Chrome zoom replay found focused search hidden under the fixed selection bar in both original and Paul outputs. Preserve the one-axis role and source invocation policy.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+      "baseRuns": 4,
+      "additionalRuns": 4,
+      "runIds": [
+        "variant-original-r1",
+        "variant-paul-r1",
+        "variant-original-r2",
+        "variant-paul-r2",
+        "variant-original-r3-focus-repair",
+        "variant-paul-r3-focus-repair",
+        "variant-original-r4-state-repair",
+        "variant-paul-r4-state-repair"
+      ],
+      "caseExecutions": 24,
+      "decision": "bounded objective outcomes supported; human visual acceptance pending",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "실제 컴포넌트 비교·선택안 이관·정리·초점·작업 상태 유지",
+      "repair": "짧은 화면 초점 가림과 안 전환의 작업 상태 초기화 보강",
+      "pendingHuman": true,
+      "assessmentFiles": [
+        "variant-r1-assessment.json",
+        "variant-r2-assessment.json",
+        "variant-r3-focus-repair-assessment.json",
+        "variant-r4-state-repair-assessment.json"
+      ],
+      "branchLimits": [
+        "human aesthetic acceptance",
+        "all color/theme combinations",
+        "physical touch and assistive technology"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "state-machine",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/state-machine",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "state-machine-original-r1",
+        "state-machine-paul-r1",
+        "state-machine-original-r2",
+        "state-machine-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "소스 상태 8개 및 경계 12개, URL·reload·정리",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "state-machine-r1-assessment.json",
+        "state-machine-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "every arbitrary component prop combination",
+        "all browser/AT combinations"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "break",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/break",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:26c4cce857f6287944c8d4f3cf9f9d9c2112dabb9036c6d57c8a5287240ec1fc",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol. Permit one task-owned CLI session for the single visual pass; browser setup and debugging remain outside the budget.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:26c4cce857f6287944c8d4f3cf9f9d9c2112dabb9036c6d57c8a5287240ec1fc",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "break-original-r1",
+        "break-paul-r1",
+        "break-original-r2",
+        "break-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "실제 컴포넌트의 내용·수량·폭 경계, 재현 가능한 결함, 제품 소스 보존",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "break-r1-assessment.json",
+        "break-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "native zoom and reduced-motion stress execution",
+        "real-language bidi correctness",
+        "arbitrary dynamic composite widgets"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "explain-interface",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/explain-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "explain-interface-original-r1",
+        "explain-interface-paul-r1",
+        "explain-interface-original-r2",
+        "explain-interface-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "효과 계층·복합 blur·시간 도출·WAAPI·이미지 가설 구분",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "explain-interface-r1-assessment.json",
+        "explain-interface-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "remote authenticated references",
+        "real GPU/perceptual motion performance"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-accessibility",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-accessibility",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:1ae4a7c9343f687cc01fabfb940d0206d477947276f833652221235c0e5853d9",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "forms.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Exercise focus continuity beyond reachability and repeated activation during asynchronous submissions. Preserve task impact, recovery and evidence limits after observed omissions in paired retests.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:1ae4a7c9343f687cc01fabfb940d0206d477947276f833652221235c0e5853d9",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "better-accessibility-original-r1",
+        "better-accessibility-paul-r1",
+        "better-accessibility-original-r2",
+        "better-accessibility-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "이름·폼·중복 제출·키보드·모달·제거 뒤 초점. 새 닫힘 초점 경쟁도 별도 재현",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-accessibility-r1-assessment.json",
+        "better-accessibility-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "drag alternatives",
+        "roving tabs/combobox",
+        "SPA navigation focus",
+        "media captions",
+        "screen reader hardware matrix",
+        "sticky-focus obstruction",
+        "timed actionable toasts"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-colors",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-colors",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for text, control and meaningful graphic contrast roles, including components already carrying another accessibility finding, after repeated non-text contrast omissions. Preserve owning accessibility thresholds.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "better-colors-original-r1",
+        "better-colors-paul-r1",
+        "better-colors-original-r2",
+        "better-colors-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "실제 렌더링 대비·CSS 우선순위·밝음/어두움. 잘못된 초기 검사 기준 보정",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-colors-r1-assessment.json",
+        "better-colors-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "palette generation",
+        "OKLCH ramp spacing and hue",
+        "P3 gamut",
+        "image/gradient worst-region measurement",
+        "increased contrast",
+        "cross-culture financial colors",
+        "bulk conversion"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-layout",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-layout",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "better-layout-original-r1",
+        "better-layout-paul-r1",
+        "better-layout-original-r2",
+        "better-layout-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "좁은 폭·LTR/RTL·실제 200% 확대에서 본문과 행동 접근",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-layout-r1-assessment.json",
+        "better-layout-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "hardware safe-area insets",
+        "mobile software keyboard",
+        "container shrink-to-fit collapse",
+        "multi-page hierarchy",
+        "visual/DOM reorder",
+        "true browser zoom at all widths"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-typography",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-typography",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-text.md",
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make the punctuation reference follow the product language policy, consistent with the entrypoint.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "better-typography-original-r1",
+        "better-typography-paul-r1",
+        "better-typography-original-r2",
+        "better-typography-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "계층·숫자·긴 URL 원문 복원과 선택·모바일 16px·글자 확대",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-typography-r1-assessment.json",
+        "better-typography-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "downloaded font loading/synthesis",
+        "variable axes",
+        "fallback during network load",
+        "bidi rendering with Arabic/Hebrew",
+        "OpenType small caps",
+        "decorative text",
+        "real iOS focus zoom"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-writing",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-writing",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:df8ece59f9c820b3b0aaef08057b5403e6cfd915f185b233ba5551be88be50e1",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-copy.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "patterns.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Align action and progress templates with the already established natural target-language grammar.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Distinguish filtered empty results from absent or inaccessible content after data/permission changes. Independent replay found the Paul output offering filter-clear recovery after permanent deletion, while the original output suppressed that obsolete advice. Require replay of nearby search/filter recovery in the resulting state.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:df8ece59f9c820b3b0aaef08057b5403e6cfd915f185b233ba5551be88be50e1",
+      "baseRuns": 4,
+      "additionalRuns": 2,
+      "runIds": [
+        "better-writing-original-r1",
+        "better-writing-paul-r1",
+        "better-writing-original-r2",
+        "better-writing-paul-r2",
+        "better-writing-original-r3-empty-repair",
+        "better-writing-paul-r3-empty-repair"
+      ],
+      "caseExecutions": 18,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "용어·행동·확인·회복 문구 및 삭제/권한 상실 뒤 빈 상태",
+      "repair": "데이터·접근 상실 뒤 잘못된 검색 회복 안내 보강",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-writing-r1-assessment.json",
+        "better-writing-r2-assessment.json",
+        "better-writing-r3-repair-assessment.json"
+      ],
+      "branchLimits": [
+        "ICU multiple plural categories",
+        "CMS/server copy",
+        "locale date/list formatting",
+        "gender/device-specific copy",
+        "account typed-name confirmation",
+        "long multi-step onboarding"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-ui",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-ui",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:e7362449da19af531a06787d384d867fd6075e76b118313d1f613e0a9ca4c604",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Compare control and neighboring geometry when selection border thickness changes after an independent repeat found original reported a real 2px filter shift that Paul missed. Preserve intentional borders and exclude color-only or already reserved geometry. Re-evaluate the exposed and a new task plus composite dependencies.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:e7362449da19af531a06787d384d867fd6075e76b118313d1f613e0a9ca4c604",
+      "baseRuns": 4,
+      "additionalRuns": 2,
+      "runIds": [
+        "better-ui-original-r1",
+        "better-ui-paul-r1",
+        "better-ui-original-r2",
+        "better-ui-paul-r2",
+        "better-ui-original-r3-geometry-repair",
+        "better-ui-paul-r3-geometry-repair"
+      ],
+      "caseExecutions": 18,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "반전 가능한 모션·reduce·스크롤·테마와 선택 테두리 geometry",
+      "repair": "유효한 LOW 위치 이동 지적 누락 보강, 정상 대조 보존",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-ui-r1-assessment.json",
+        "better-ui-r2-assessment.json",
+        "better-ui-r3-repair-assessment.json"
+      ],
+      "branchLimits": [
+        "Motion library spring/bounce",
+        "icon crossfade exact spring",
+        "stagger enter/exit",
+        "content photo outlines",
+        "forced-colors shadow fallback",
+        "optical glyph adjustment",
+        "directional composite icon RTL",
+        "performance stutter evidence"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "better-interface",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:242d3a9f5e70f3863bc23287bface5eb64f25492740ef1d851b170846b62e7cb",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "review-format.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for applicable domain rules and reconcile supported findings; finish independent checks on a shared component before merging root causes. Repair observed lower-severity and non-text contrast omissions.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:242d3a9f5e70f3863bc23287bface5eb64f25492740ef1d851b170846b62e7cb",
+      "baseRuns": 4,
+      "additionalRuns": 2,
+      "runIds": [
+        "better-interface-original-r1",
+        "better-interface-paul-r1",
+        "better-interface-original-r2",
+        "better-interface-paul-r2",
+        "better-interface-original-r4-ui-writing-dependency",
+        "better-interface-paul-r4-ui-writing-dependency"
+      ],
+      "caseExecutions": 18,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "6분야 원인별 검토·낮은 심각도·중복 통합·읽기 전용",
+      "repair": "공유 UI·문구 의존성 갱신",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "better-interface-r1-assessment.json",
+        "better-interface-r2-assessment.json",
+        "better-interface-r4-dependency-assessment.json"
+      ],
+      "branchLimits": [
+        "change-scope routing",
+        "missing owner skill",
+        "more than 15 simultaneous findings",
+        "large-scope narrowing",
+        "human release authorization",
+        "all branches of the six owner references"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "build-design",
+      "kind": "adapted",
+      "source": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/build-design",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "agents/openai.yaml",
+                "browser-and-spec.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Condition Figma and visual comparison steps on the actual input; verify Markdown-only requirements against rendered values and states.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "candidateDigest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "build-design-original-r1",
+        "build-design-paul-r1",
+        "build-design-original-r2",
+        "build-design-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded objective outcomes supported; human visual acceptance pending",
+      "sourceParity": "valid observed original capabilities preserved in this suite",
+      "finding": "로컬 이미지·디자인 데이터·Markdown/브라우저 참조, 토큰/동작 보존, 좌표·상태 비교",
+      "repair": null,
+      "pendingHuman": true,
+      "assessmentFiles": [
+        "build-r1-assessment.json",
+        "build-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "real backend wiring",
+        "human visual acceptance"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "information-architecture",
+      "kind": "original",
+      "source": [],
+      "candidateDigest": "sha256:f3812ec0cf05cb9063593ebe0f3eb3b520c6d5c38e886321978bfa557ea41343",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "information-architecture-control-r1",
+        "information-architecture-paul-r1",
+        "information-architecture-control-r2",
+        "information-architecture-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "not applicable; task contract and no-skill utility control",
+      "finding": "기존 PM·객체·권한 미결·목적지와 필터·return 보존",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "information-architecture-r1-assessment.json",
+        "information-architecture-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "real participant tree tests",
+        "large enterprise taxonomy",
+        "native navigation"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "user-flow",
+      "kind": "original",
+      "source": [],
+      "candidateDigest": "sha256:88ed20779e0334a5fdf0adc6f69f2be871fe0673241ae5128881e3656f3226a1",
+      "baseRuns": 4,
+      "additionalRuns": 0,
+      "runIds": [
+        "user-flow-control-r1",
+        "user-flow-paul-r1",
+        "user-flow-control-r2",
+        "user-flow-paul-r2"
+      ],
+      "caseExecutions": 12,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "not applicable; task contract and no-skill utility control",
+      "finding": "확인된 결과·중복 방지·회복·취소·미정 서버 정책과 기존 전이 보존",
+      "repair": null,
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "user-flow-r1-assessment.json",
+        "user-flow-r2-assessment.json"
+      ],
+      "branchLimits": [
+        "actual server idempotency implementation",
+        "real participant task study",
+        "native device navigation"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "wireframe",
+      "kind": "original",
+      "source": [],
+      "candidateDigest": "sha256:ab88c42bcc7c41134e37adcb29430cc60c05cedcb537431eacd77d3e36287f81",
+      "baseRuns": 4,
+      "additionalRuns": 2,
+      "runIds": [
+        "wireframe-control-r1",
+        "wireframe-paul-r1",
+        "wireframe-control-r2",
+        "wireframe-paul-r2",
+        "wireframe-control-r3-navigation",
+        "wireframe-paul-r3-navigation"
+      ],
+      "caseExecutions": 16,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "not applicable; task contract and no-skill utility control",
+      "finding": "실제 조작 HTML·화면 명세·오류·Retry·receipt·reset",
+      "repair": "화면 내 링크가 해시 라우터를 통해 과업을 이탈하는 문제 보강",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "wireframe-r1-assessment.json",
+        "wireframe-r2-assessment.json",
+        "wireframe-r3-navigation-assessment.json"
+      ],
+      "branchLimits": [
+        "high-fidelity human acceptance",
+        "real backend persistence",
+        "full assistive technology matrix"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    },
+    {
+      "role": "design-browser",
+      "kind": "original",
+      "source": [],
+      "candidateDigest": "sha256:5e6ecea3d842ecf760cccb3ed13b38c163f7f1af23e99e87e74b2a910bf83794",
+      "baseRuns": 4,
+      "additionalRuns": 4,
+      "runIds": [
+        "design-browser-control-r1",
+        "design-browser-paul-r1",
+        "design-browser-control-r2",
+        "design-browser-paul-r2",
+        "design-browser-control-r3-performance",
+        "design-browser-paul-r3-performance",
+        "design-browser-control-r4-transitions",
+        "design-browser-paul-r4-transitions"
+      ],
+      "caseExecutions": 20,
+      "decision": "bounded representative outcomes supported",
+      "sourceParity": "not applicable; task contract and no-skill utility control",
+      "finding": "전체 페이지·키보드·모션·source-only 증거 경계·User Timing/long task·로딩 전후와 정상 대조",
+      "repair": "anchor가 이미 로딩을 유발했을 때 시작 상태 관찰 보강",
+      "pendingHuman": false,
+      "assessmentFiles": [
+        "design-browser-r1-assessment.json",
+        "design-browser-r2-assessment.json",
+        "design-browser-r3-performance-assessment.json",
+        "design-browser-r4-transition-assessment.json"
+      ],
+      "branchLimits": [
+        "actual logged-in Aside research comparison",
+        "real user INP",
+        "real mobile hardware",
+        "cross-browser matrix"
+      ],
+      "universalParityProven": false,
+      "promotionApproved": false
+    }
+  ],
+  "scope": "13pinned Jakub adaptations and4independently authored candidates, all in-progress. Local images/Markdown/browser only; Figma excluded.",
+  "limitations": [
+    "Two base repeats percondition;3cases share eachrolecontext. Repairversions have fewer fresh repeats; exposed cases are development evidence.",
+    "Source pin is d574cc8a576dc24256ad38268b8d03d86724a1b3, not a claim about future upstream HEAD.",
+    "Different candidate/dependency hashes across repairs are preserved perrun; earlier outcomes are not relabeled current whole-bundle executions.",
+    "No exact model/effort override, model-ranking, token/cost, Aside-versus-Playwright efficiency, automatic invocation or universal quality guarantee.",
+    "Independent executor contexts share a filesystem and use instructed isolation, not a security sandbox perarm.",
+    "Root adjudication is agent assessment with reproducible behavior checks; subjective visual acceptance remains human.",
+    "Raw logs/screenshots remain local scratch; portable structured evidence and hashes do not make those files publicly available."
+  ]
+}

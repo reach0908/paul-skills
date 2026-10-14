@@ -1,0 +1,1238 @@
+[
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "seed-skip",
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "invalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-FAILED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-CONFIRMED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-FILLED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-EDIT",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "Cancel",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "control",
+    "width": 1280,
+    "kind": "station-section",
+    "snapshot": "- link \"Skip to main\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"Global\":\n    - link \"Stations\":\n      - /url: \"#/stations\"\n    - link \"Reservations\":\n      - /url: \"#/reservations\"\n    - button \"Reset\"\n  - paragraph: Local mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n- main:\n  - heading \"Stations\" [level=1]\n  - paragraph: Choose a station to collect its key.\n  - article:\n    - heading \"Moon workbench\" [level=2]:\n      - link \"Moon workbench\":\n        - /url: \"#/stations/MOON-9\"\n    - paragraph: MOON-9\n    - paragraph: \"Pickup: Tuesday 10:00 at North desk.\"\n    - paragraph: Bring closed-toe shoes.",
+    "invalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "preparationInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "afterPreparationTab": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterPreparation": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/stations/MOON-9",
+      "state": "confirmed",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nPreparation\n\nBring closed-toe shoes.\n\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/stations/MOON-9",
+      "state": "confirmed",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nPreparation\n\nBring closed-toe shoes.\n\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/stations",
+      "state": "list",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nStations\n\nChoose a station to collect its key.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nBring closed-toe shoes.",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "seed-skip",
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "invalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-FAILED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-CONFIRMED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-FILLED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-EDIT",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "Cancel",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "control",
+    "width": 390,
+    "kind": "station-section",
+    "snapshot": "- link \"Skip to main\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"Global\":\n    - link \"Stations\":\n      - /url: \"#/stations\"\n    - link \"Reservations\":\n      - /url: \"#/reservations\"\n    - button \"Reset\"\n  - paragraph: Local mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n- main:\n  - heading \"Stations\" [level=1]\n  - paragraph: Choose a station to collect its key.\n  - article:\n    - heading \"Moon workbench\" [level=2]:\n      - link \"Moon workbench\":\n        - /url: \"#/stations/MOON-9\"\n    - paragraph: MOON-9\n    - paragraph: \"Pickup: Tuesday 10:00 at North desk.\"\n    - paragraph: Bring closed-toe shoes.",
+    "invalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "preparationInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "afterPreparationTab": {
+      "hash": "#/stations/MOON-9",
+      "state": "invalid",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\n\nEnter your name. Your note is kept.\n\nPreparation\n\nBring closed-toe shoes.\n\nSubmit to simulate a reservation.\n\nSubmit\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterPreparation": {
+      "hash": "#/stations/MOON-9",
+      "state": "pending",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nName (required)\nNote (optional)\nPreparation\n\nBring closed-toe shoes.\n\nProcessing mock request (250 ms). Not confirmed yet.\n\nProcessing\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/stations/MOON-9",
+      "state": "confirmed",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nPreparation\n\nBring closed-toe shoes.\n\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/stations/MOON-9",
+      "state": "confirmed",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nPreparation instructions\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nPreparation\n\nBring closed-toe shoes.\n\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\nKP-9 · Mock reservation confirmed\nReference\nKP-9\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMoon workbench · MOON-9\nPickup\nTuesday 10:00\nPlace\nNorth desk\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/stations",
+      "state": "list",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nStations\n\nChoose a station to collect its key.\n\nMoon workbench\n\nMOON-9\n\nPickup: Tuesday 10:00 at North desk.\n\nBring closed-toe shoes.",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/reservations",
+      "state": "records",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock. Not a real booking. No accounts, external requests or storage. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nBrowse Stations",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 1280,
+    "kind": "seed-skip",
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "invalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-FAILED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-CONFIRMED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-FILLED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-EDIT",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "Cancel",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 1280,
+    "kind": "station-section",
+    "snapshot": "- link \"Skip to main\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"Global\":\n    - link \"Stations\":\n      - /url: \"#/stations\"\n    - link \"Reservations\":\n      - /url: \"#/reservations\"\n    - button \"Reset\"\n  - paragraph: Local mock only. No real booking, account, external request or persistence. Reload starts fresh.\n- main:\n  - heading \"Stations\" [level=1]\n  - paragraph: Choose a station for key pickup.\n  - article:\n    - paragraph: MOON-9\n    - heading \"Moon workbench\" [level=2]:\n      - link \"Moon workbench\":\n        - /url: \"#/stations/MOON-9\"\n    - term: Pickup\n    - definition: Tuesday 10:00\n    - term: Place\n    - definition: North desk",
+    "invalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "preparationInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "afterPreparationTab": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "A",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterPreparation": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-CONFIRMED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-CONFIRMED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-FILLED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/stations",
+      "state": "ST-LIST",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nStations\n\nChoose a station for key pickup.\n\nMOON-9\n\nMoon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-EMPTY",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-EMPTY",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 390,
+    "kind": "seed-skip",
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "invalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-INVALID",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-PENDING-FIRST",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-FAILED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "focus": "BUTTON",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-CONFIRMED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-FILLED",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘\n씨앗\n가을 강낭콩 · BEAN-2 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/seeds/BEAN-2",
+      "state": "S-EDIT",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "Cancel",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/my-pickups",
+      "state": "S-PICKUPS-EMPTY",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  },
+  {
+    "arm": "paul",
+    "width": 390,
+    "kind": "station-section",
+    "snapshot": "- link \"Skip to main\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"Global\":\n    - link \"Stations\":\n      - /url: \"#/stations\"\n    - link \"Reservations\":\n      - /url: \"#/reservations\"\n    - button \"Reset\"\n  - paragraph: Local mock only. No real booking, account, external request or persistence. Reload starts fresh.\n- main:\n  - heading \"Stations\" [level=1]\n  - paragraph: Choose a station for key pickup.\n  - article:\n    - paragraph: MOON-9\n    - heading \"Moon workbench\" [level=2]:\n      - link \"Moon workbench\":\n        - /url: \"#/stations/MOON-9\"\n    - term: Pickup\n    - definition: Tuesday 10:00\n    - term: Place\n    - definition: North desk",
+    "invalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "name",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "skipInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "preparationInvalid": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "afterPreparationTab": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-INVALID",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nEnter your name to continue.\n\nSubmit\nBack",
+      "focus": "A",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true"
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingBeforeJump": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "H1",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterSkip": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "main",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "pendingAfterPreparation": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-PENDING",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nName (required)\nNote (optional)\n\nPreparation instructions\n\nPreparation\n\nBring closed-toe shoes.\n\nProcessing local mock (250ms). Not yet confirmed.\n\nProcessing…\nBack",
+      "focus": "preparation",
+      "inputs": [
+        {
+          "id": "name",
+          "value": "하늘",
+          "invalid": null
+        },
+        {
+          "id": "note",
+          "value": "Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. ",
+          "invalid": null
+        }
+      ],
+      "overflow": false
+    },
+    "finished": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-CONFIRMED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "receipt": {
+      "hash": "#/stations/MOON-9",
+      "state": "ST-CONFIRMED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nMoon workbench\n\nMOON-9\n\nPickup\nTuesday 10:00\nPlace\nNorth desk\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nView Reservations\nBack",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "records": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-FILLED",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\nKP-9 · Confirmed local mock\nName\n하늘\nNote\nKeep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. Keep this note. \nStation\nMOON-9 · Moon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "afterBack": {
+      "hash": "#/stations",
+      "state": "ST-LIST",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nStations\n\nChoose a station for key pickup.\n\nMOON-9\n\nMoon workbench\nPickup\nTuesday 10:00\nPlace\nNorth desk",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "cancelRecords": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-EMPTY",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    },
+    "reload": {
+      "hash": "#/reservations",
+      "state": "ST-RECORDS-EMPTY",
+      "body": "Skip to main\nStations\nReservations\nReset\n\nLocal mock only. No real booking, account, external request or persistence. Reload starts fresh.\n\nReservations\n\nNo confirmed reservations yet.\n\nFind a station",
+      "focus": "H1",
+      "inputs": [],
+      "overflow": false
+    }
+  }
+]

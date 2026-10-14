@@ -1,0 +1,1 @@
+document.querySelector('#save').onclick=()=>{document.querySelector('#visibility').textContent='공개 상태: 모든 사람에게 공개';document.querySelector('#message').textContent='보드를 발행했어요.';};document.querySelector('#sync').onclick=()=>document.querySelector('#message').textContent='Oops! Something went wrong.';

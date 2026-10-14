@@ -1,0 +1,38 @@
+{
+  "role": "break",
+  "id": "break-fixed-control",
+  "kind": "preservation",
+  "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-fixed-control",
+  "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-fixed-control/TASK.md",
+  "required_input_capabilities": [
+    "filesystem_read",
+    "filesystem_write",
+    "local_http_server",
+    "browser"
+  ],
+  "timeout_seconds": 240,
+  "setup": {
+    "command": [
+      "python3",
+      "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+      "--case",
+      "break-fixed-control",
+      "--destination",
+      "{workspace}"
+    ],
+    "cwd": "{repo_root}"
+  },
+  "start": {
+    "command": [
+      "python3",
+      "-m",
+      "http.server",
+      "{port}",
+      "--bind",
+      "127.0.0.1"
+    ],
+    "cwd": "{workspace}",
+    "url": "http://127.0.0.1:{port}/"
+  },
+  "evaluator_criteria_id": "break-fixed-control"
+}

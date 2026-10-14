@@ -1,0 +1,18 @@
+{
+  "role": "better-colors",
+  "repeat": 2,
+  "status": "bounded outcomes supported",
+  "review": "Both detect low-contrast caption and destructive color on a non-destructive save. Clean-state badges are not actions; disabled exceptions and decorative separators are treated correctly. Review-only input unchanged.",
+  "implementation": "Both independent CSS outputs are byte-identical. Root fresh-browser replay confirms caption 10.355:1, dark PDF 11.220:1, light/dark input borders 5.546:1 and 6.439:1. Filename entry and local PDF-ready status survive real theme switching.",
+  "oracleReconciliation": "The supposed weak input border is overridden by input:not([type=checkbox]); both correctly reject this seeded expectation rather than invent a failure. Removed literal override did not change rendered border.",
+  "limits": [
+    "Paul measured fewer widths in cases01/02 and explicitly reports this. Current media rules do not change these color pairs; narrower full interaction coverage is not inferred.",
+    "Full hover/focus palettes, forced colors, color-gamut devices and real PDF generation are outside these cases."
+  ],
+  "evidence": [
+    "colors-r2-raw.txt",
+    "colors-r2.json",
+    "better-colors-original-r2-scope.json",
+    "better-colors-paul-r2-scope.json"
+  ]
+}

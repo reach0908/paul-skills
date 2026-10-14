@@ -1,0 +1,2 @@
+# Organize the community kitchen information
+Read `brief.md` and `content.csv`. Create `design/ia.md` so a member can find a suitable kitchen slot, see what equipment is available, and find their own booking again. Cover the supplied content without expanding product scope. Show destinations, meaningful labels, routes into and back from detail, and the content-to-destination mapping. Give later flow work stable destination IDs. This request ends at the information map; no screens or booking flow are needed.

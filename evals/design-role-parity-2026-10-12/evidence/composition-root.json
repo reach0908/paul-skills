@@ -1,0 +1,4642 @@
+[
+  {
+    "surface": "design",
+    "width": 1280,
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "initial": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "seasonFocus": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "season",
+        "tag": "SELECT",
+        "text": "가을 · autumn여름 · summer",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "detail": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "invalid": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "whitespace": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "   ",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "   ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "pending": {
+      "state": "S-PENDING-FIRST",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 216,
+          "y": 594.34375,
+          "w": 63.71875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 291.71875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "failure": {
+      "state": "S-FAILED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "BUTTON",
+        "text": "Retry",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Retry",
+          "x": 216,
+          "y": 594.34375,
+          "w": 56.46875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 284.46875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "editAfterFailure": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "retryPending": {
+      "state": "S-PENDING-RETRY",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘 수정  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘 수정  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 216,
+          "y": 594.34375,
+          "w": 63.71875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 291.71875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "confirmed": {
+      "state": "S-CONFIRMED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "mine": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "returned": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nSUN-5 · 한 봉지\n\n해바라기\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "SUN-5 · 한 봉지해바라기햇볕이 잘 드는 넓은 자리에서 자랍니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "otherSeed": {
+      "state": "S-DETAIL-RECORDED",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n이미 모의 예약 한 건이 있습니다. 현재 상세의 씨앗과 기존 예약은 다를 수 있습니다. 새 시연은 Reset demo로 시작하세요.\n\n기존 My pickups 보기\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "가을 강낭콩",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        }
+      ]
+    },
+    "sameReceipt": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "reload": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    },
+    "cancel": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "취소 이름",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "취소 이름",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "cancelMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    },
+    "resetPending": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "resetMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    }
+  },
+  {
+    "surface": "design",
+    "width": 390,
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "initial": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "seasonFocus": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "season",
+        "tag": "SELECT",
+        "text": "가을 · autumn여름 · summer",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "detail": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "invalid": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "whitespace": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "   ",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "   ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "pending": {
+      "state": "S-PENDING-FIRST",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 12,
+          "y": 601.671875,
+          "w": 63.71875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 87.71875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "failure": {
+      "state": "S-FAILED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "BUTTON",
+        "text": "Retry",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Retry",
+          "x": 12,
+          "y": 601.671875,
+          "w": 56.46875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 80.46875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "editAfterFailure": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "retryPending": {
+      "state": "S-PENDING-RETRY",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘 수정  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘 수정  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 12,
+          "y": 601.671875,
+          "w": 63.71875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 87.71875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "confirmed": {
+      "state": "S-CONFIRMED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "mine": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "returned": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nSUN-5 · 한 봉지\n\n해바라기\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "SUN-5 · 한 봉지해바라기햇볕이 잘 드는 넓은 자리에서 자랍니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 200.59375
+        }
+      ]
+    },
+    "otherSeed": {
+      "state": "S-DETAIL-RECORDED",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n이미 모의 예약 한 건이 있습니다. 현재 상세의 씨앗과 기존 예약은 다를 수 있습니다. 새 시연은 Reset demo로 시작하세요.\n\n기존 My pickups 보기\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "가을 강낭콩",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        }
+      ]
+    },
+    "sameReceipt": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "reload": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    },
+    "cancel": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "취소 이름",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "취소 이름",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "cancelMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    },
+    "resetPending": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "resetMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    }
+  },
+  {
+    "surface": "app",
+    "width": 1280,
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "initial": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "seasonFocus": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "season",
+        "tag": "SELECT",
+        "text": "가을 · autumn여름 · summer",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "detail": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "invalid": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "whitespace": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "   ",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "   ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "pending": {
+      "state": "S-PENDING-FIRST",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 216,
+          "y": 594.34375,
+          "w": 63.71875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 291.71875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "failure": {
+      "state": "S-FAILED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "BUTTON",
+        "text": "Retry",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Retry",
+          "x": 216,
+          "y": 594.34375,
+          "w": 56.46875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 284.46875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "editAfterFailure": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "retryPending": {
+      "state": "S-PENDING-RETRY",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘 수정  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘 수정  ",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 216,
+          "y": 594.34375,
+          "w": 63.71875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 291.71875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "confirmed": {
+      "state": "S-CONFIRMED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "mine": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "returned": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nSUN-5 · 한 봉지\n\n해바라기\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "SUN-5 · 한 봉지해바라기햇볕이 잘 드는 넓은 자리에서 자랍니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "otherSeed": {
+      "state": "S-DETAIL-RECORDED",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n이미 모의 예약 한 건이 있습니다. 현재 상세의 씨앗과 기존 예약은 다를 수 있습니다. 새 시연은 Reset demo로 시작하세요.\n\n기존 My pickups 보기\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "가을 강낭콩",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        }
+      ]
+    },
+    "sameReceipt": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 258.59375
+        }
+      ]
+    },
+    "reload": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    },
+    "cancel": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "취소 이름",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 216,
+          "y": 271.75,
+          "w": 848,
+          "h": 152.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "취소 이름",
+          "x": 216,
+          "y": 472.34375,
+          "w": 420,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 216,
+          "y": 594.34375,
+          "w": 69.171875,
+          "h": 42
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 297.171875,
+          "y": 594.34375,
+          "w": 53.734375,
+          "h": 42
+        }
+      ]
+    },
+    "cancelMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    },
+    "resetPending": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 216,
+          "y": 317.75,
+          "w": 848,
+          "h": 216.59375
+        }
+      ]
+    },
+    "resetMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 1280,
+        "height": 900
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 216,
+          "y": 131,
+          "w": 848,
+          "h": 42
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 216,
+          "y": 191.75,
+          "w": 848,
+          "h": 136.59375
+        }
+      ]
+    }
+  },
+  {
+    "surface": "app",
+    "width": 390,
+    "snapshot": "- link \"본문으로 이동\":\n  - /url: \"#main\"\n- banner:\n  - navigation \"전역 탐색\":\n    - link \"Seeds\":\n      - /url: \"#/seeds\"\n    - link \"My pickups\":\n      - /url: \"#/my-pickups\"\n    - button \"Reset demo\"\n  - paragraph: 로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n- main:\n  - heading \"Seeds\" [level=1]\n  - paragraph: 토요일에 받을 씨앗 한 봉지를 골라 주세요.\n  - text: 계절\n  - combobox \"계절\":\n    - option \"가을 · autumn\" [selected]\n    - option \"여름 · summer\"\n  - article:\n    - paragraph: BEAN-2 · 한 봉지\n    - heading \"가을 강낭콩\" [level=2]:\n      - link \"가을 강낭콩\":\n        - /url: \"#/seeds/BEAN-2\"\n    - paragraph: 작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n    - paragraph: 상세에서 수령 시간과 장소를 확인하세요.",
+    "initial": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "seasonFocus": {
+      "state": "S-SEEDS",
+      "hash": "",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "season",
+        "tag": "SELECT",
+        "text": "가을 · autumn여름 · summer",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "detail": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "invalid": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "whitespace": {
+      "state": "S-INVALID",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n이름을 입력해 주세요. 씨앗과 입력 내용은 유지됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "   ",
+          "invalid": "true",
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "   ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "pending": {
+      "state": "S-PENDING-FIRST",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 12,
+          "y": 601.671875,
+          "w": 63.71875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 87.71875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "failure": {
+      "state": "S-FAILED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 모의 요청이 실패했습니다. 예약 내역은 없습니다. 같은 내용으로 Retry하거나 Back으로 수정하세요.\nRetry\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "BUTTON",
+        "text": "Retry",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Retry",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Retry",
+          "x": 12,
+          "y": 601.671875,
+          "w": 56.46875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 80.46875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "editAfterFailure": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘  ",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "retryPending": {
+      "state": "S-PENDING-RETRY",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n모의 처리 중입니다 (400ms). 아직 확정되지 않았습니다.\n처리 중\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "  하늘 수정  ",
+          "invalid": null,
+          "readonly": true
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "처리 중",
+          "disabled": true
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "  하늘 수정  ",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "처리 중",
+          "x": 12,
+          "y": 601.671875,
+          "w": 63.71875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 87.71875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "confirmed": {
+      "state": "S-CONFIRMED",
+      "hash": "#/seeds/SUN-5",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n해바라기\n\nSUN-5 · summer · 한 봉지\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n시뮬레이션이 완료되었습니다. 실제 예약이 아닙니다.\n\nMy pickups에서 다시 확인\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "해바라기",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "해바라기",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "mine": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "returned": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nSUN-5 · 한 봉지\n\n해바라기\n\n햇볕이 잘 드는 넓은 자리에서 자랍니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "SUN-5 · 한 봉지해바라기햇볕이 잘 드는 넓은 자리에서 자랍니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 200.59375
+        }
+      ]
+    },
+    "otherSeed": {
+      "state": "S-DETAIL-RECORDED",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n\n이미 모의 예약 한 건이 있습니다. 현재 상세의 씨앗과 기존 예약은 다를 수 있습니다. 새 시연은 Reset demo로 시작하세요.\n\n기존 My pickups 보기\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "가을 강낭콩",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        }
+      ]
+    },
+    "sameReceipt": {
+      "state": "S-PICKUPS-FILLED",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\nSP-21 · 모의 예약 확정\n참조번호\nSP-21\n신청 이름\n하늘 수정\n씨앗\n해바라기 · SUN-5 · 한 봉지\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "SP-21 · 모의 예약 확정참조번호SP-21신청 이름하늘 수정씨앗해바라기 · SUN-5 · 한 봉지수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 242.59375
+        }
+      ]
+    },
+    "reload": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": true
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    },
+    "cancel": {
+      "state": "S-EDIT",
+      "hash": "#/seeds/BEAN-2",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\n가을 강낭콩\n\nBEAN-2 · autumn · 한 봉지\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n토요일 수령 안내\n수령 시간\n토요일 10:00~12:00\n수령 장소\nNorth community garden desk\n신청 이름 (필수)\n첫 요청은 모의 실패합니다. Retry하면 모의 예약이 확정됩니다.\nSubmit\nBack",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "name",
+        "tag": "INPUT",
+        "text": "",
+        "outline": "rgb(51, 51, 51) solid 3px",
+        "visible": true
+      },
+      "inputs": [
+        {
+          "id": "name",
+          "value": "취소 이름",
+          "invalid": null,
+          "readonly": false
+        }
+      ],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        },
+        {
+          "id": "",
+          "text": "Submit",
+          "disabled": false
+        },
+        {
+          "id": "back",
+          "text": "Back",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "가을 강낭콩",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "토요일 수령 안내수령 시간토요일 10:00~12:00수령 장소North community garden desk",
+          "x": 12,
+          "y": 269.078125,
+          "w": 366,
+          "h": 136.59375
+        },
+        {
+          "tag": "INPUT",
+          "text": "취소 이름",
+          "x": 12,
+          "y": 453.671875,
+          "w": 366,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Submit",
+          "x": 12,
+          "y": 601.671875,
+          "w": 69.171875,
+          "h": 44
+        },
+        {
+          "tag": "BUTTON",
+          "text": "Back",
+          "x": 93.171875,
+          "y": 601.671875,
+          "w": 53.734375,
+          "h": 44
+        }
+      ]
+    },
+    "cancelMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    },
+    "resetPending": {
+      "state": "S-SEEDS",
+      "hash": "#/seeds",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nSeeds\n\n토요일에 받을 씨앗 한 봉지를 골라 주세요.\n\n계절\n가을 · autumn\n여름 · summer\n\nBEAN-2 · 한 봉지\n\n가을 강낭콩\n\n작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.\n\n상세에서 수령 시간과 장소를 확인하세요.",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "Seeds",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "Seeds",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "ARTICLE",
+          "text": "BEAN-2 · 한 봉지가을 강낭콩작은 화분에서도 기를 수 있는 키 작은 강낭콩 품종입니다.상세에서 수령 시간과 장소를 확인하세요.",
+          "x": 12,
+          "y": 321.078125,
+          "w": 366,
+          "h": 224.59375
+        }
+      ]
+    },
+    "resetMine": {
+      "state": "S-PICKUPS-EMPTY",
+      "hash": "#/my-pickups",
+      "body": "본문으로 이동\nSeeds\nMy pickups\nReset demo\n\n로컬 시뮬레이션 · 실제 예약, 계정, 전송, 저장, 재고 확보가 없습니다. 새로고침하면 초기화됩니다.\n\nMy pickups\n아직 확정된 수령 내역이 없습니다.\n\n확정된 모의 예약만 여기에 표시됩니다.\n\nSeeds로 이동",
+      "overflow": false,
+      "viewport": {
+        "width": 390,
+        "height": 844
+      },
+      "focused": {
+        "id": "",
+        "tag": "H1",
+        "text": "My pickups",
+        "outline": "rgb(34, 34, 34) none 0px",
+        "visible": false
+      },
+      "inputs": [],
+      "buttons": [
+        {
+          "id": "reset",
+          "text": "Reset demo",
+          "disabled": false
+        }
+      ],
+      "geometry": [
+        {
+          "tag": "H1",
+          "text": "My pickups",
+          "x": 12,
+          "y": 137,
+          "w": 366,
+          "h": 36
+        },
+        {
+          "tag": "SECTION",
+          "text": "아직 확정된 수령 내역이 없습니다.확정된 모의 예약만 여기에 표시됩니다.",
+          "x": 12,
+          "y": 189.078125,
+          "w": 366,
+          "h": 120.59375
+        }
+      ]
+    }
+  }
+]

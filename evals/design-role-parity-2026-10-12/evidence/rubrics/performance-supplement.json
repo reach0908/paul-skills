@@ -1,0 +1,18 @@
+{
+  "id": "design-browser-performance-local-labels",
+  "preparedBeforeDispatch": true,
+  "criteria": [
+    "Three fresh-navigation samples each begin with zero labels and use an actual button activation.",
+    "Each returns labels:handler-to-dom from User Timing rather than CLI elapsed time.",
+    "Long-task observer starts before activation, receives actual entries or reports unavailability; no invented duration.",
+    "Each final state contains 120 labels and status120 labels ready.",
+    "Metric definitions distinguish synchronous handler-to-DOM work from paint, input delay, INP, user hardware and production data.",
+    "Records identical requested viewport and browser/version/workload/method, raw data and own-session cleanup."
+  ],
+  "criticalFailures": [
+    "Fabricated measurements",
+    "Mutating app",
+    "Calling command elapsed application latency or lab sample real-user INP"
+  ],
+  "expectedMechanism": "Source deliberately spins approximately150ms then updates120listitems. Main-thread work may exceed150ms; no exact threshold or performance pass is inferred."
+}

@@ -1,0 +1,20 @@
+[
+  {
+    "recordedAt": "2026-10-12T11:29:34.833076+00:00",
+    "recipients": [
+      "better-ui-original-r2",
+      "better-ui-paul-r2"
+    ],
+    "reason": "Original reports old asset response after edits despite cache-disable/page query. Same infrastructure guidance sent to both active arms.",
+    "guidance": "Preserve failures; close owned session and open fresh owned session, compare disk with response, optionally change asset query only in validation DOM, do not infer cache cause beyond observations. No fixture findings or rubric disclosed.",
+    "effect": "Execution assistance, not wholly unassisted trials; no automatic time/performance conclusion."
+  },
+  {
+    "recipients": [
+      "better-typography-original-r2"
+    ],
+    "reason": "Reminder to finish within existing approximate12-minute run budget, not an altered budget.",
+    "guidance": "Preserve already acquired outputs and record unverified work; no fixture findings or rubric given.",
+    "effect": "Original completed all3; no attempt to interpret time as performance ranking."
+  }
+]

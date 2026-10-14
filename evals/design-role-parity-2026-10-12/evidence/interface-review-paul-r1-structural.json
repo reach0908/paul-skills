@@ -1,0 +1,174 @@
+[
+  {
+    "case": "interface-review-change-causes",
+    "checks": [
+      {
+        "type": "git_status",
+        "path": null,
+        "pass": true,
+        "actual": [
+          " M app.js",
+          "?? archive.js"
+        ],
+        "meaning": "Review remains read-only."
+      },
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "14d6bbfef0b672cb6468e736b6ea576a05e51671a204ba27d02cd025171001e1",
+        "meaning": "Read-only review preserves final working-tree content."
+      },
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "b5ef3aeb2be74713e69e6ce3afc9160c753ec1c8406180354b88547fe1acf3ba",
+        "meaning": "Read-only review preserves final working-tree content."
+      },
+      {
+        "type": "sha256",
+        "path": "app.js",
+        "pass": true,
+        "actual": "bef8c78f3f236336eee5dba79a43b2415d4547742198a5cd5ef6cc8df828983c",
+        "meaning": "Read-only review preserves final working-tree content."
+      },
+      {
+        "type": "sha256",
+        "path": "CONVENTIONS.md",
+        "pass": true,
+        "actual": "0838d1f6bb32d155a4eaf827ca94111d82463aaf3a4b31c074a71b97f572592c",
+        "meaning": "Read-only review preserves final working-tree content."
+      },
+      {
+        "type": "sha256",
+        "path": "package-lock.json",
+        "pass": true,
+        "actual": "6ce6685dfb8d854700ff419d6ac788359b1f5ff08da8497dce444c06d4ec02f7",
+        "meaning": "Read-only review preserves final working-tree content."
+      },
+      {
+        "type": "sha256",
+        "path": "archive.js",
+        "pass": true,
+        "actual": "5a921394209efc5b8a66838f3db5af1bddba3ce4e3623f91435fe059dda0bc07",
+        "meaning": "Read-only review preserves final working-tree content."
+      }
+    ]
+  },
+  {
+    "case": "interface-review-no-change",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "69fc2aa4c694d7794ee78aea547b0ddd9a21a7eedc15331a5031756567428515",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "3d133af01fdc58e991cb8dae4a4dee500357a97315aa5f59cc9b60c7a5af6491",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "git_status",
+        "path": null,
+        "pass": true,
+        "actual": [],
+        "meaning": "No-change handling must stay read-only."
+      }
+    ]
+  },
+  {
+    "case": "interface-review-shared-token",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": true,
+        "actual": "69fc2aa4c694d7794ee78aea547b0ddd9a21a7eedc15331a5031756567428515",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "tokens.css",
+        "pass": true,
+        "actual": "944c68614f661db465018cb47c18418b30f4334ead997603004b54279c454ae7",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "index.html",
+        "pass": true,
+        "actual": "d0efe00eaafc6ef287f9b563332a9c1168d70e1d9074cddb60826583dc211914",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "components/metadata.css",
+        "pass": true,
+        "actual": "c69b661561cb9bb0be3e607138e20b3b71dc76687389cb00706b508e9438857c",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/billing.html",
+        "pass": true,
+        "actual": "297fadcb8ea01771efe2732963d1da68f46b40f5a2951c7bc06766342217a3ab",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/dashboard.html",
+        "pass": true,
+        "actual": "c2846fecac37f4d3b846548e6c53884f1ab89f2db6fc0fa9bacd1f0fb1d5a52e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/members.html",
+        "pass": true,
+        "actual": "d98b18e8191967983b63d4f8d579048978bbe4cec16acc61dc27d27411831cbb",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/projects.html",
+        "pass": true,
+        "actual": "d8d466e03a14c9b7cd7208aa1beb075c564a272262470007c992a2328352610e",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/reports.html",
+        "pass": true,
+        "actual": "0dd7b7e44ad8c441be944c862b0ddff94d10cdc9b28a59e805ceed633c4f323f",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/settings.html",
+        "pass": true,
+        "actual": "550fedad318686f7575beffe24347182f7f9de1288ed80514cea1900a5514a6f",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "routes/support.html",
+        "pass": true,
+        "actual": "a3606ad9a1d87d7ecb01867a1cf8dd97f7964d80d04845b6264d1aea6ef75d9b",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "git_status",
+        "path": null,
+        "pass": true,
+        "actual": [],
+        "meaning": "Read-only review leaves clean head unchanged."
+      }
+    ]
+  }
+]

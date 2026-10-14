@@ -1,0 +1,65 @@
+[
+  {
+    "case": "variant-footer-emphasis",
+    "checks": [
+      {
+        "type": "tree_contains",
+        "path": ".",
+        "pass": true,
+        "actual": {
+          "__variant": true,
+          "aria-pressed": true
+        },
+        "meaning": "Delivered comparison contains permalink and active-state controls; semantic and browser checks still required."
+      }
+    ]
+  },
+  {
+    "case": "variant-select-and-clean",
+    "checks": [
+      {
+        "type": "sha256",
+        "path": "style.css",
+        "pass": false,
+        "actual": "bdd31d2bcac628a378c25860db55d9c6dd1711934680de0fd031ad661d278a00",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "sha256",
+        "path": "notes/support.md",
+        "pass": true,
+        "actual": "5ca30f72d4552cd0bca45409a48f09287249888e8e1368e3aabee11c9bd83172",
+        "meaning": "Preserves the supplied production file exactly."
+      },
+      {
+        "type": "absent",
+        "path": "variants",
+        "pass": true,
+        "actual": false,
+        "meaning": "Temporary comparison folder removed."
+      },
+      {
+        "type": "not_contains",
+        "path": null,
+        "pass": true,
+        "actual": [],
+        "meaning": "No comparison imports or alternatives remain."
+      }
+    ]
+  },
+  {
+    "case": "variant-usage-density",
+    "checks": [
+      {
+        "type": "tree_contains",
+        "path": ".",
+        "pass": true,
+        "actual": {
+          "__variant": true,
+          "aria-pressed": true
+        },
+        "meaning": "Delivered comparison contains permalink and active-state controls; semantic and browser checks still required."
+      }
+    ]
+  }
+]

@@ -1,0 +1,36 @@
+{
+  "head_sha": "5255d82fc989fa83bd0a673002f2a3cbff6a42f3",
+  "scope": "only these five saved source files, not entire release tree",
+  "files": [
+    {
+      "path": "src/components/editorial/curation-article.tsx",
+      "snapshot_sha256": "86fb77bf1eb16c12e1f32c2d3e77955f5d9288b15bb6ca7dfa2ee252c9d2db28",
+      "pr_head_sha256": "86fb77bf1eb16c12e1f32c2d3e77955f5d9288b15bb6ca7dfa2ee252c9d2db28",
+      "matches": true
+    },
+    {
+      "path": "src/components/editorial/curation-article.module.css",
+      "snapshot_sha256": "f5e44ccbda98b9befa48e5317938ecd558e443f73fb3682b140022059e318932",
+      "pr_head_sha256": "f5e44ccbda98b9befa48e5317938ecd558e443f73fb3682b140022059e318932",
+      "matches": true
+    },
+    {
+      "path": "scripts/verify-article-source-labels.mjs",
+      "snapshot_sha256": "ac18152e6830128402de5327e1f253cef15221aee9ad969b168fbb8d09347735",
+      "pr_head_sha256": "ac18152e6830128402de5327e1f253cef15221aee9ad969b168fbb8d09347735",
+      "matches": true
+    },
+    {
+      "path": "scripts/verify-article-creator-onboarding.mjs",
+      "snapshot_sha256": "150783cac4b8f42f15dd096a08aaae7cd6e82ae04f936a6dc15e194e524331e7",
+      "pr_head_sha256": "6ad0705043e4c1d38c198204fcd94dab1d88527aff580f870fd2598158de4d7a",
+      "matches": false
+    },
+    {
+      "path": "scripts/verify-curation-article-reading.mjs",
+      "snapshot_sha256": "f69111cbe2508de3a9a16c4b034aab262b31e840fb1aa6ea1862fcaf3a01990d",
+      "pr_head_sha256": "e9696a07892d2a5770412de5239bf081ce81cadc0e14bd467e068433b419b747",
+      "matches": false
+    }
+  ]
+}

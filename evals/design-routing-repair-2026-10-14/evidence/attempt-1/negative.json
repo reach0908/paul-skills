@@ -1,0 +1,69 @@
+{
+  "attempt": 1,
+  "case": "negative",
+  "threadId": "01a137ed-97d3-75a2-abd1-6b399e596193",
+  "receipt": {
+    "name": "negative",
+    "command": [
+      "codex",
+      "exec",
+      "--json",
+      "--sandbox",
+      "workspace-write",
+      "-C",
+      "/private/tmp/paul-design-routing-20261014/cases/negative",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-routing-repair-20261014/negative.final.md",
+      "-"
+    ],
+    "startedAt": "2026-10-14T01:01:19.288634+00:00",
+    "history": "new exec, no resume, prompt contains no previous messages",
+    "exitCode": 0,
+    "completedAt": "2026-10-14T01:01:30.761501+00:00"
+  },
+  "prompt": "17 곱하기 6의 값만 답해 주세요.\n",
+  "input": {
+    "priorCase": "negative",
+    "workspace": "/private/tmp/paul-design-routing-20261014/cases/negative",
+    "promptSha256": "d7cdf95cb2c60f50386ebbe46cb1f8bb4506bf931ce0451864a6bd1ef11388bf",
+    "fileSha256": "3f3af13d66c048848f827d443c9f8e5ffea84cbab0fc48024fc82fdfe02030e5"
+  },
+  "loadedSkillHeaders": [],
+  "catalog": {
+    "model": "gpt-5.6-sol",
+    "effort": "xhigh",
+    "automaticallyAvailable": [
+      "paul-skills:better-accessibility",
+      "paul-skills:better-colors",
+      "paul-skills:better-interface",
+      "paul-skills:better-layout",
+      "paul-skills:better-typography",
+      "paul-skills:better-ui",
+      "paul-skills:better-writing",
+      "paul-skills:code-review",
+      "paul-skills:codebase-design",
+      "paul-skills:design-browser",
+      "paul-skills:diagnosing-bugs",
+      "paul-skills:domain-modeling",
+      "paul-skills:grilling",
+      "paul-skills:pr",
+      "paul-skills:prototype",
+      "paul-skills:research",
+      "paul-skills:tdd",
+      "paul-skills:wizard",
+      "paul-skills:writing-for-agents"
+    ]
+  },
+  "final": "102",
+  "checks": {
+    "sourceUnchanged": true,
+    "freshSessionCompleted": true,
+    "userOnlySkillHidden": true,
+    "noToolUse": true,
+    "correctArithmetic": true
+  },
+  "status": "pass",
+  "commands": [],
+  "rawEvents": "/Users/jinhokim/dev/paul-skills/.scratch/design-routing-repair-20261014/negative.events.jsonl",
+  "rawEventsSha256": "b2d1d0e550b88b8714db1828ad6ea0da1ec338c555b201140b04d9e833fc56e6"
+}

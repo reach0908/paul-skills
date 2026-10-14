@@ -1,0 +1,27 @@
+{
+  "role": "better-writing",
+  "repeat": 1,
+  "status": "repair required for state-dependent empty recovery copy",
+  "requiredCases": "Both identify required misleading publish, generic error and terminology; correct destructive confirmation and completion; preserve warm brand voice and actual archive undo.",
+  "regression": {
+    "case": "better-writing-02",
+    "severity": "HIGH for misleading recovery advice, not actual data restoration",
+    "trigger": "Delete the only document, then enter a query and clear it.",
+    "original": "Checks results still exist before showing filtered guidance; no obsolete recovery advice after deletion.",
+    "paul": "Shows clear-query guidance although the data set has been permanently removed; clearing hides message but restores no content.",
+    "scope": "Additional supported state combination discovered in original output and independently replayed; not an original frozen expected finding.",
+    "evidence": [
+      "writing-r1.json",
+      "writing-r1-raw.txt"
+    ]
+  },
+  "repair": "Added state-aware empty recovery verification to responsible writing role; effect not yet measured.",
+  "dependencyImpact": [
+    "better-interface invokes all six owner roles, so current dependency requires a fresh paired rerun.",
+    "interface-review consumer-budget repair will use current dependency snapshot before dispatch; earlier preparation retained as superseded without execution."
+  ],
+  "limits": [
+    "External deletion/access revocation not tested; fixture is local simulation.",
+    "No mobile or real assistive technology claim."
+  ]
+}

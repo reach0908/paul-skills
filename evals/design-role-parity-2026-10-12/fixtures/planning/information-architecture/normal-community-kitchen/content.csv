@@ -1,0 +1,9 @@
+content_id,type,title,parent,attributes
+K-A,kitchen,해솔 주방,,capacity=8|oven=yes|mixer=no
+K-B,kitchen,골목 공유 주방,,capacity=4|oven=yes|mixer=yes
+E-1,equipment,Stand mixer guide,K-B,public
+S-A1,slot,Saturday 10:00 to 12:00,K-A,date=2026-10-17
+S-B1,slot,Saturday 14:00 to 16:00,K-B,date=2026-10-17
+B-18,booking,My Kitchen B booking,K-B,owner=current_member
+I-18,check-in,Use the side door code,B-18,owner_only
+R-1,access-rules,Cleaning and food safety,,public

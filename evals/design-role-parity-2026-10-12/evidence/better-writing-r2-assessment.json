@@ -1,0 +1,20 @@
+{
+  "role": "better-writing",
+  "repeat": 2,
+  "status": "frozen pre-repair bundle; core findings supported, known empty-recovery defect remains in both outputs",
+  "review": "Both identify draft-save/publication mismatch, naming drift and non-actionable sync error. Paul additionally catches stale prior success after later invalid save. App bytes of case03 equal independently replayed r3 case03 for both arms; that is a supported added finding, not a false positive. Original reports none in case03.",
+  "implementation": "Both correct destructive target, permanence,4-member access effect,cancel and completion. Root confirms cancellation preserves result and deletion removes it. Both pre-repair outputs still recommend changing/clearing a nonempty query after deleting the sole document. For empty query the node is hidden by source; raw innerText alone is not evidence of visible copy in that state. Scoped claims did not claim the post-deletion search path, but inaccurate visible recovery guidance remains when a query is entered.",
+  "currentCandidate": "Use separate better-writing-r3-repair-assessment for current digest. Do not retroactively apply repaired results to frozen r2 inputs. Dependent composite reviews are separately queued.",
+  "sourceScope": "Only permitted HTML/JS edited; review fixtures preserved.",
+  "evidence": [
+    "writing-r2.json",
+    "writing-r2-raw.txt",
+    "better-writing-original-r2-scope.json",
+    "better-writing-paul-r2-scope.json",
+    "better-writing-r3-repair-assessment.json"
+  ],
+  "limitations": [
+    "No server persistence or actual shared access change.",
+    "Existing nonempty-query matcher hides all results; search algorithm correctness is not certified."
+  ]
+}

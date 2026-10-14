@@ -1,0 +1,524 @@
+[
+  {
+    "role": "interface-review",
+    "id": "interface-review-change-causes",
+    "kind": "normal",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "git",
+      "local_http_server",
+      "browser_optional"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "interface-review-change-causes",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": null,
+    "evaluator_criteria_id": "interface-review-change-causes"
+  },
+  {
+    "role": "interface-review",
+    "id": "interface-review-shared-token",
+    "kind": "edge",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-shared-token",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-shared-token/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "git",
+      "local_http_server",
+      "browser_optional"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "interface-review-shared-token",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": null,
+    "evaluator_criteria_id": "interface-review-shared-token"
+  },
+  {
+    "role": "interface-review",
+    "id": "interface-review-no-change",
+    "kind": "preservation",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-no-change",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-no-change/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "git"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "interface-review-no-change",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": null,
+    "evaluator_criteria_id": "interface-review-no-change"
+  },
+  {
+    "role": "variant",
+    "id": "variant-usage-density",
+    "kind": "normal",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-usage-density",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-usage-density/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "variant-usage-density",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "variant-usage-density"
+  },
+  {
+    "role": "variant",
+    "id": "variant-footer-emphasis",
+    "kind": "edge",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-footer-emphasis",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-footer-emphasis/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "variant-footer-emphasis",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "variant-footer-emphasis"
+  },
+  {
+    "role": "variant",
+    "id": "variant-select-and-clean",
+    "kind": "preservation",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-select-and-clean",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/variant-select-and-clean/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "variant-select-and-clean",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "variant-select-and-clean"
+  },
+  {
+    "role": "state-machine",
+    "id": "state-machine-audit-states",
+    "kind": "normal",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-audit-states",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-audit-states/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "state-machine-audit-states",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "state-machine-audit-states"
+  },
+  {
+    "role": "state-machine",
+    "id": "state-machine-queue-boundaries",
+    "kind": "edge",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-queue-boundaries",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-queue-boundaries/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "state-machine-queue-boundaries",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "state-machine-queue-boundaries"
+  },
+  {
+    "role": "state-machine",
+    "id": "state-machine-remove-workbench",
+    "kind": "preservation",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-remove-workbench",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/state-machine-remove-workbench/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "state-machine-remove-workbench",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "state-machine-remove-workbench"
+  },
+  {
+    "role": "break",
+    "id": "break-project-content",
+    "kind": "normal",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-project-content",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-project-content/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "break-project-content",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "break-project-content"
+  },
+  {
+    "role": "break",
+    "id": "break-tag-quantity",
+    "kind": "edge",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-tag-quantity",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-tag-quantity/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "break-tag-quantity",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "break-tag-quantity"
+  },
+  {
+    "role": "break",
+    "id": "break-fixed-control",
+    "kind": "preservation",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-fixed-control",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/break-fixed-control/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "break-fixed-control",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "break-fixed-control"
+  },
+  {
+    "role": "explain-interface",
+    "id": "explain-interface-layered-glow",
+    "kind": "normal",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-layered-glow",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-layered-glow/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "explain-interface-layered-glow",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "explain-interface-layered-glow"
+  },
+  {
+    "role": "explain-interface",
+    "id": "explain-interface-runtime-reveal",
+    "kind": "edge",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-runtime-reveal",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-runtime-reveal/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "filesystem_write",
+      "local_http_server",
+      "browser"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "explain-interface-runtime-reveal",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": {
+      "command": [
+        "python3",
+        "-m",
+        "http.server",
+        "{port}",
+        "--bind",
+        "127.0.0.1"
+      ],
+      "cwd": "{workspace}",
+      "url": "http://127.0.0.1:{port}/"
+    },
+    "evaluator_criteria_id": "explain-interface-runtime-reveal"
+  },
+  {
+    "role": "explain-interface",
+    "id": "explain-interface-image-only",
+    "kind": "preservation",
+    "fixture_directory": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-image-only",
+    "task": "evals/design-role-parity-2026-10-12/fixtures/explicit/explain-interface-image-only/TASK.md",
+    "required_input_capabilities": [
+      "filesystem_read",
+      "image_view"
+    ],
+    "timeout_seconds": 240,
+    "setup": {
+      "command": [
+        "python3",
+        "{repo_root}/evals/design-role-parity-2026-10-12/fixtures/explicit/prepare.py",
+        "--case",
+        "explain-interface-image-only",
+        "--destination",
+        "{workspace}"
+      ],
+      "cwd": "{repo_root}"
+    },
+    "start": null,
+    "evaluator_criteria_id": "explain-interface-image-only"
+  }
+]

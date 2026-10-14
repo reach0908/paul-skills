@@ -18,7 +18,7 @@ Paul Skills uses its own version sequence starting at **0.1.0**, with release ta
 | [Product management](skills/product-management/README.md) | Product discovery, strategy, prioritization, requirements, and outcomes. |
 | [Design](skills/design/README.md) | User experience, interaction, visual design, and design evaluation. |
 
-Product management and design currently have no promoted skills. New skills enter a domain after user validation and explicit promotion approval.
+Design includes nine promoted review and browser-evidence skills. Product management has no promoted skills yet. New skills enter a domain after user validation and explicit promotion approval.
 
 ## Installation
 
@@ -109,3 +109,22 @@ General workflow tools, not code-specific.
 
 - **[grilling](./skills/productivity/grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. The reusable interview primitive behind `grill-me`, `grill-with-docs`, `triage`, `wayfinder` and `improve-codebase-architecture`.
 - **[writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
+
+### Design
+
+Focused interface review and browser evidence for local, responsive web work.
+
+**User-invoked**
+
+- **[interface-review](./skills/design/interface-review/SKILL.md)**: Review a branch, pull request or uncommitted change, separating introduced and regressed findings from existing problems.
+
+**Model-invoked**
+
+- **[better-interface](./skills/design/better-interface/SKILL.md)**: Combine six domain reviews into one evidence-backed interface report; route unnamed changes to explicit interface-review.
+- **[better-accessibility](./skills/design/better-accessibility/SKILL.md)**: Check semantics, names, keyboard and focus behavior, forms, announcements, motion preferences and zoom.
+- **[better-layout](./skills/design/better-layout/SKILL.md)**: Check grouping, alignment, reading order and responsive structure under resizing, translation and RTL.
+- **[better-writing](./skills/design/better-writing/SKILL.md)**: Write and review interface copy that matches the product voice, actual behavior and recovery paths.
+- **[better-typography](./skills/design/better-typography/SKILL.md)**: Check type scale, font behavior, wrapping, truncation, text selection and language-aware rendering.
+- **[better-colors](./skills/design/better-colors/SKILL.md)**: Build and audit semantic color roles and palettes, and measure contrast without replacing a consistent project system.
+- **[better-ui](./skills/design/better-ui/SKILL.md)**: Polish surfaces, icons and motion while preserving working interactions, geometry and project conventions.
+- **[design-browser](./skills/design/design-browser/SKILL.md)**: Collect bounded browser evidence using Playwright CLI for QA and Aside for research and general browsing.

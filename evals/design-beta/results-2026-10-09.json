@@ -1,0 +1,137 @@
+{
+  "date": "2026-10-09",
+  "status": "first beta packaging and independent candidate smoke complete; human acceptance pending",
+  "scope": "First beta import and browser adapter; no promotion or production edits",
+  "baseCommit": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e",
+  "jakubRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+  "playwrightReadmeRevision": "b85c7a736bb473bf55b584e54a09ffa698d6d871",
+  "tool": {
+    "package": "@playwright/cli",
+    "before": "0.1.1",
+    "installed": "0.1.22",
+    "verifiedVersion": true,
+    "betaSkillsGloballyInstalled": false
+  },
+  "deterministic": {
+    "repositoryCheck": "pass",
+    "unitTests": 36,
+    "pluginValidateStrict": "pass",
+    "isolatedLinks": 98,
+    "localReferenceLinks": 115,
+    "retainedMitNotices": 13,
+    "importedDigestsMatch": true,
+    "quickValidate": {
+      "modelSkillsPassed": 9,
+      "userSkillsRejected": 5,
+      "reason": "The bundled generic validator does not allow the repository-required disable-model-invocation key. Repository invocation checks pass."
+    },
+    "nodeVersion": "22.19.0",
+    "npmVersion": "10.9.4",
+    "npmInvocation": "npm exec --yes --package=npm@10.9.4 -- npm run check",
+    "globalNpmChanged": false
+  },
+  "arms": {
+    "no-skill": {
+      "bundleDigest": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+      "taskDigest": "0bd724114bc3091a191e868886055625b519434440499be11c6300bccf958eb5",
+      "files": 0,
+      "executed": false
+    },
+    "upstream": {
+      "bundleDigest": "86b3b09f582b39c36302d840e7793d42e9693a492fb952cb1b54fe8f88099866",
+      "taskDigest": "0bd724114bc3091a191e868886055625b519434440499be11c6300bccf958eb5",
+      "files": 77,
+      "executed": false
+    },
+    "paul": {
+      "bundleDigest": "5d454ac976df7503e0b50319916eb87f8203573f3bca84017327f3e62708ffd1",
+      "taskDigest": "0bd724114bc3091a191e868886055625b519434440499be11c6300bccf958eb5",
+      "files": 82,
+      "executed": true
+    }
+  },
+  "behavior": {
+    "runs": 1,
+    "model": null,
+    "reasoningEffort": null,
+    "host": "Codex desktop",
+    "hostVersion": null,
+    "inputTokens": null,
+    "outputTokens": null,
+    "cacheTokens": null,
+    "reasoningTokens": null,
+    "providerCost": null,
+    "humanInterventions": 0,
+    "artifactLocation": ".scratch/design-skills-beta/trials/paul/output",
+    "publication": "raw product evidence kept local",
+    "discovery": "explicit skill paths; independent global host discovery not proven",
+    "browserVersion": "HeadlessChrome 152.0.0.0",
+    "session": "paul-design-trial",
+    "sessionClosed": true,
+    "agent": "design_trial",
+    "decision": "scope and evidence checks passed for this one read-only review; comparative benefit unmeasured",
+    "domainsRead": [
+      "accessibility",
+      "layout",
+      "writing",
+      "typography",
+      "colors",
+      "ui"
+    ],
+    "skillsRead": [
+      "better-interface",
+      "design-browser",
+      "better-accessibility",
+      "better-layout",
+      "better-writing",
+      "better-typography",
+      "better-colors",
+      "better-ui"
+    ],
+    "viewports": [
+      [
+        1440,
+        900
+      ],
+      [
+        390,
+        900
+      ],
+      [
+        320,
+        900
+      ]
+    ],
+    "candidateSkillFilesUnchanged": true,
+    "highFindings": 0,
+    "mediumFindings": 1,
+    "reviewDigest": "121b78bf8473e9c39e969c9817ec2fa5794f81267bf6b1759d09d8bfcab2f274",
+    "executionRecordDigest": "de8ca35784a86c251deaf738c6dc548cebbaef190637ee3c1d6fdc3ff194e888",
+    "evidenceFiles": 58,
+    "evidenceManifestDigest": "08d05c5b6bad29562d697f2ea438052aba62b004b1717a71d4a258cf1d8d70e8",
+    "toolRecoveries": [
+      "Initial sandbox EPERM recovered through authorized escalation.",
+      "An empty run-code console.log result was repeated using return."
+    ],
+    "automaticDiscoveryValidated": false,
+    "allSkillRolesValidated": false
+  },
+  "limitations": [
+    "No repeated or controlled comparison has been run.",
+    "A live URL has no supplied deployment revision.",
+    "The review pilot cannot validate implementation or User-only skill behavior.",
+    "Human visual acceptance and promotion remain pending.",
+    "Actual assistive technology, 200 percent zoom, real mobile input and gradient contrast were not checked.",
+    "The bundled generic validator rejects the five repository-required User-skill frontmatter flags."
+  ],
+  "humanFeedback": {
+    "date": "2026-10-09",
+    "scope": "Subsequent full-page prototype comparison, separate from the initial review smoke",
+    "designDecision": "Retain the original page",
+    "comparisonMechanism": "User found the interactive prototype comparison useful",
+    "limits": [
+      "Acceptance is for the comparison mechanism, not the proposed redesigns or all beta skills.",
+      "No comparative skill-quality conclusion or promotion approval."
+    ]
+  }
+}

@@ -1,0 +1,2 @@
+# Map the settled field repair information
+Use `brief.md` to map where a technician finds current assignments, device manuals and saved job notes. Save `design/ia.md`. The subcontractor access decision is pending and I cannot answer it during this run. Carry that exact dependency forward while making the settled employee paths usable. Avoid replacing missing policy with a guess. No UI implementation is requested.

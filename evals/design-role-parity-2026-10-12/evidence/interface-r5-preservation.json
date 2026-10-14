@@ -1,0 +1,103 @@
+{
+  "initialInspectionError": "Attempted nonexistent setup-receipt for new repair fixture; corrected using its committed setup procedure, without changing fixture.",
+  "cases": [
+    {
+      "arm": "original",
+      "case": "interface-review-change-causes",
+      "status": " M app.js\n?? archive.js\n",
+      "setup": {
+        "case": "interface-review-change-causes",
+        "workspace": "/Users/jinhokim/dev/paul-skills/.scratch/design-role-parity-20261012/runs/interface-review-original-r5-budget-repair/cases/interface-review-change-causes/app",
+        "task_file": "/Users/jinhokim/dev/paul-skills/evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes/TASK.md",
+        "base": "0ceb8aba9131fcef017685bac47c39e72a7a22a3",
+        "head": "10aef0a2a249afee46d3e28e60248613f5f5f309",
+        "ahead": 1,
+        "status": [
+          " M app.js",
+          "?? archive.js"
+        ]
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    },
+    {
+      "arm": "original",
+      "case": "interface-review-shared-token",
+      "status": "",
+      "setup": {
+        "case": "interface-review-shared-token",
+        "workspace": "/Users/jinhokim/dev/paul-skills/.scratch/design-role-parity-20261012/runs/interface-review-original-r5-budget-repair/cases/interface-review-shared-token/app",
+        "task_file": "/Users/jinhokim/dev/paul-skills/evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-shared-token/TASK.md",
+        "base": "61d1ddb273abaea12290e088c74e9640da9f11f9",
+        "head": "24689a6e753ed7c4f63be3e866d0ac332c1a5e92",
+        "ahead": 1,
+        "status": []
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    },
+    {
+      "arm": "original",
+      "case": "interface-review-consumer-budget",
+      "status": "",
+      "setup": {
+        "expectedStatus": "",
+        "basis": "prepare_budget_repair.py commits all fixture inputs before execution"
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    },
+    {
+      "arm": "paul",
+      "case": "interface-review-change-causes",
+      "status": " M app.js\n?? archive.js\n",
+      "setup": {
+        "case": "interface-review-change-causes",
+        "workspace": "/Users/jinhokim/dev/paul-skills/.scratch/design-role-parity-20261012/runs/interface-review-paul-r5-budget-repair/cases/interface-review-change-causes/app",
+        "task_file": "/Users/jinhokim/dev/paul-skills/evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-change-causes/TASK.md",
+        "base": "0ceb8aba9131fcef017685bac47c39e72a7a22a3",
+        "head": "10aef0a2a249afee46d3e28e60248613f5f5f309",
+        "ahead": 1,
+        "status": [
+          " M app.js",
+          "?? archive.js"
+        ]
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    },
+    {
+      "arm": "paul",
+      "case": "interface-review-shared-token",
+      "status": "",
+      "setup": {
+        "case": "interface-review-shared-token",
+        "workspace": "/Users/jinhokim/dev/paul-skills/.scratch/design-role-parity-20261012/runs/interface-review-paul-r5-budget-repair/cases/interface-review-shared-token/app",
+        "task_file": "/Users/jinhokim/dev/paul-skills/evals/design-role-parity-2026-10-12/fixtures/explicit/interface-review-shared-token/TASK.md",
+        "base": "61d1ddb273abaea12290e088c74e9640da9f11f9",
+        "head": "24689a6e753ed7c4f63be3e866d0ac332c1a5e92",
+        "ahead": 1,
+        "status": []
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    },
+    {
+      "arm": "paul",
+      "case": "interface-review-consumer-budget",
+      "status": "",
+      "setup": {
+        "expectedStatus": "",
+        "basis": "prepare_budget_repair.py commits all fixture inputs before execution"
+      },
+      "changedInputs": 0,
+      "missingInputs": 0,
+      "skillsUnchanged": true
+    }
+  ]
+}

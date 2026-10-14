@@ -1,0 +1,1 @@
+document.querySelector('#open').onclick=()=>document.querySelector('#status').textContent='프로젝트를 열었어요.';document.querySelector('#decision').onclick=()=>document.querySelector('#status').textContent='결정 기록을 열었어요.';

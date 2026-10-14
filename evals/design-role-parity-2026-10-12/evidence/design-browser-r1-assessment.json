@@ -1,0 +1,111 @@
+{
+  "role": "design-browser",
+  "repeat": 1,
+  "comparison": "task contract and no-skill utility; direct source parity not applicable",
+  "status": "bounded observations supported; controlled lazy transition not established; repeat2 and performance supplement pending",
+  "method": "Root read reports, actual source, full relevant raw command/measurement structures and source-only audits; no separate root replay of this unmodified fixture.",
+  "cases": [
+    {
+      "id": "design-browser-normal-whole-page-anchor",
+      "scores": {
+        "control": [
+          2,
+          2,
+          1,
+          1,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          1,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both use requested CLI0.1.22/Chrome152, own sessions/servers, and close only owned resources. Paul uses supplied shared server; control follows TASK starter. Same fixture hashes.",
+        "Both scroll/capture overview, sessions, pickup, access and footer; actual body/section data recorded.",
+        "Both observe arrival details, but anchor initially already triggers lazy loading. Loading transition is not captured; report explicitly bounded.",
+        "Both first failure/retry HG-12 and typed-name retention. Paul additionally captures immediate pending; control observes only post-attempt states.",
+        "Both actual1280x900/390x844 dimensions and overflow evidence, no touch-device claim.",
+        "Both click contact, observe #contact with zero target and no new contact content.",
+        "Both separate observations/limits from verdict and preserve source."
+      ],
+      "criticalFailures": [],
+      "sourcePreserved": true
+    },
+    {
+      "id": "design-browser-edge-keyboard-motion",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both actual Tab/Space disclosure and Enter/Space refresh/cancel, grounded selectors and keyboard logs.",
+        "Both collapsed390 versus expanded633 document width and actual captures.",
+        "Both pending cancellation before1200ms preserves prior status, separate completed refresh reaches Out for delivery.",
+        "Both reduce matchMedia true and changing transform/currentTime with running animation.",
+        "Both interruption and final states, no motion-quality/performance/hardware inference from screenshots.",
+        "Both structured raw results and tool failure records, scoped cleanup."
+      ],
+      "criticalFailures": [],
+      "sourcePreserved": true
+    },
+    {
+      "id": "design-browser-reuse-preserve-source-only-audit",
+      "scores": {
+        "control": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ],
+        "paul": [
+          2,
+          2,
+          2,
+          2,
+          2,
+          2
+        ]
+      },
+      "criterionEvidence": [
+        "Both preserve source/receipt, no browser/server in source-only case.",
+        "Both label wrapping supports CL1, explicitly not AT validation.",
+        "Both CL2/CL4 unobserved and exact future scenarios named.",
+        "Both CL3 unsupported with source pulse and absent reduce override, no invented execution.",
+        "Both CL5 unsupported by local-only source, no persistence/network evidence.",
+        "Both read installed Aside help only; future research plan distinguished from actual browser/account/web access."
+      ],
+      "criticalFailures": [],
+      "sourcePreserved": true
+    }
+  ],
+  "limits": [
+    "Initial anchor itself exposes the lazy region, so successful arrival-content observation does not establish ability to trigger loading from a controlled unloaded state.",
+    "No real device, screen reader or continuous motion-quality assessment.",
+    "No evidence of Aside versus Playwright efficiency advantage.",
+    "Typed Jina/Haneul equivalent to default Mina for retention task; name was not prescribed."
+  ]
+}

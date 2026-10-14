@@ -1,0 +1,1 @@
+document.querySelector('#theme')?.addEventListener('click',()=>{document.documentElement.dataset.theme=document.documentElement.dataset.theme==='dark'?'light':'dark';});document.querySelector('#save').onclick=()=>document.querySelector('#status').textContent='초안이 저장됐어요.';

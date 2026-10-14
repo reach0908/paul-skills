@@ -1,0 +1,173 @@
+{
+  "date": "2026-10-10",
+  "case": "reading-library-v1",
+  "status": "bounded_development_exercise_completed",
+  "inputManifest": "input-manifest.json",
+  "inputHashesVerified": {
+    "skills/in-progress/information-architecture/SKILL.md": true,
+    "skills/in-progress/information-architecture/agents/openai.yaml": true,
+    "skills/in-progress/user-flow/SKILL.md": true,
+    "skills/in-progress/user-flow/agents/openai.yaml": true,
+    "skills/in-progress/wireframe/SKILL.md": true,
+    "skills/in-progress/wireframe/agents/openai.yaml": true,
+    "skills/in-progress/design-browser/SKILL.md": true,
+    "skills/in-progress/design-browser/agents/openai.yaml": true,
+    "evals/design-planning/brief.md": true
+  },
+  "executionMode": "one independent executor given explicit skill paths and synthetic brief",
+  "sourceChangesDuringRun": false,
+  "runtime": {
+    "exercise": "galpi-design-planning-single-brief",
+    "result": "artifacts_created_and_selected_local_behaviors_checked",
+    "artifactRoot": "/Users/jinhokim/dev/paul-skills/.scratch/design-planning-trial-20261009",
+    "url": "http://127.0.0.1:48763/",
+    "server": {
+      "bind": "127.0.0.1",
+      "port": 48763,
+      "execSessionId": 82313,
+      "leftRunning": true,
+      "command": "python3 -m http.server 48763 --bind 127.0.0.1"
+    },
+    "browser": {
+      "driver": "official playwright-cli",
+      "cliVersion": "0.1.22",
+      "browserVersion": "Chrome 152.0.7977.82",
+      "session": "paul-planning-trial",
+      "sessionClosed": true,
+      "viewports": [
+        {
+          "width": 1280,
+          "height": 900
+        },
+        {
+          "width": 390,
+          "height": 844
+        }
+      ],
+      "deviceEmulation": false,
+      "observationWindowUTC": "2026-10-09T15:04:00Z/2026-10-09T15:11:00Z"
+    },
+    "artifacts": {
+      "ia": "01-information-architecture.md",
+      "flow": "02-user-flow.md",
+      "screenSpec": "03-wireframe.md",
+      "runnable": "index.html",
+      "executionRecord": "execution-record.md",
+      "digests": "evidence/digests.txt"
+    },
+    "htmlSha256": "eebd182e7f9a93a462cc34420b2881c0f5bcc689d5ec625d78e88b6559429bfa",
+    "observed": [
+      "author search and type filter preserve context through detail and back",
+      "successful add yields one weekly item and already-added detail state",
+      "weekly removal preserves the library original",
+      "simulated failure preserves detail and supports successful retry",
+      "delayed add blocks three repeated pointer inputs with request count remaining one",
+      "leaving a pending add and returning after success preserves completion",
+      "deleted original displays reason and disables add and original actions",
+      "no search results and empty library have distinct recovery actions",
+      "original and save entry points display local boundary dialogs",
+      "reset restores four library records and empty weekly list",
+      "mobile long title, identity and add action remain visible without horizontal overflow",
+      "Tab and Enter complete mobile add and weekly navigation",
+      "browser back retains search and type",
+      "skip link focuses main without replacing the detail route",
+      "observed network log contains only loopback HTML requests and console has no errors"
+    ],
+    "limits": [
+      "single fictional task with no comparative evaluation or human acceptance",
+      "not every state repeated at both widths",
+      "mobile failure, delay, deleted and empty states not separately walked",
+      "pending-leave-failure, pending-dialog, pending-reset, forward navigation and typing during completion not separately walked",
+      "title partial-match positive case not separately executed",
+      "local timers and memory only; no production API, persistence, identity or concurrency guarantee",
+      "no real device, assistive technology, zoom or cross-browser verification"
+    ],
+    "humanAccepted": false,
+    "comparativeSkillQualityEstablished": false,
+    "productionReadyClaimed": false
+  },
+  "maintainerAudit": {
+    "method": "Read IA, flow, screen specification, execution record and runtime logs; viewed final desktop library and mobile long-title captures. No second independent browser replay.",
+    "checks": [
+      {
+        "criterion": "preserve agreed product scope and two destinations",
+        "result": "observed in IA and rendered artifacts"
+      },
+      {
+        "criterion": "carry destination, state and transition IDs across stages",
+        "result": "observed in flow and screen mapping"
+      },
+      {
+        "criterion": "preserve detail and search context across failure/retry and navigation",
+        "result": "observed in executor browser evidence"
+      },
+      {
+        "criterion": "label simulation and external boundaries",
+        "result": "observed in UI, screen specification and execution record"
+      },
+      {
+        "criterion": "mobile prioritization and long Korean content",
+        "result": "observed in mobile capture and measurements"
+      },
+      {
+        "criterion": "report unexecuted branches honestly",
+        "result": "specific omissions retained in runtime.limits"
+      }
+    ],
+    "excludedEvidence": [
+      "02-week-retention.log transient count before hashchange render; superseded by 03-week-stable.log and later checks"
+    ]
+  },
+  "artifactRoot": ".scratch/design-planning-trial-20261009",
+  "artifactRetention": "Local ignored development artifacts; hashes identify inspected files, not a published artifact archive.",
+  "artifactHashes": {
+    ".scratch/design-planning-trial-20261009/01-information-architecture.md": "b25ba7006fb3b608369c81dd82eaec04e77eae4e63a3018da489f67269bc5df1",
+    ".scratch/design-planning-trial-20261009/02-user-flow.md": "4e7cc0d36f172e762b2891cf4ae08165e96b8369c3d344217d59bc630743f425",
+    ".scratch/design-planning-trial-20261009/03-wireframe.md": "66a2abbc57d5f3ec4189a808a1427a05e849168264f89a038ca62ec7866eb20b",
+    ".scratch/design-planning-trial-20261009/README.md": "6436ab7613d76a61709fb1600c17703db4be982a86160f4769cca04c6c1ae8a5",
+    ".scratch/design-planning-trial-20261009/evidence/01-add-success.log": "45245bfbfea5e82583b198319163ba1b09d63ed15123f6483154ec6b739212b3",
+    ".scratch/design-planning-trial-20261009/evidence/02-week-retention.log": "14922c39a591aab084a0875ea5cf2c08e92fe0b8d1b5dea1e6e2c4f26ac6844a",
+    ".scratch/design-planning-trial-20261009/evidence/03-week-stable.log": "3ab0f423daa767008866b75d3e52bb3d248fde7408d54a35ee5dfaf96101ceea",
+    ".scratch/design-planning-trial-20261009/evidence/04-remove-original.log": "32e792d5b40f8b7dd72fbaf6ae919ced082fc5c67f33e14886ae342dd3d74b91",
+    ".scratch/design-planning-trial-20261009/evidence/05-failure.log": "64c8a07041a5c546aef6c1964ca6227e3ee94dd8409283b5f471442fa24d9e03",
+    ".scratch/design-planning-trial-20261009/evidence/06-retry-retention.log": "c455e1e46e0aef0a8164f8d45e5769971c400cb8b5c273524540743f8bf3e015",
+    ".scratch/design-planning-trial-20261009/evidence/07-delay-repeat-exit.log": "7d088f9c4aafcd141f3da973b1c806cd755deb7b7fe852e76c5c9985566811e1",
+    ".scratch/design-planning-trial-20261009/evidence/08-original-unavailable.log": "785533fa99abee59d00352de70e08069fee5e85ee4d9a9803067d26e4b65a705",
+    ".scratch/design-planning-trial-20261009/evidence/09-empty-states.log": "b465f184b97ee7a82bf9da28c17166c826c695220c017b5385f4c6978a45aef2",
+    ".scratch/design-planning-trial-20261009/evidence/10-reset.log": "6639357d00426cba5b10489cbf1af76110ab9a8968d988e68b49853892ea5ce9",
+    ".scratch/design-planning-trial-20261009/evidence/11-mobile-long.log": "7598d736e599b3a342f70044487b9b17a4721a36973f9623718a3d3f9e664ad5",
+    ".scratch/design-planning-trial-20261009/evidence/12-mobile-keyboard.log": "728c17d09ad78f331e5ff4e572f73711d5260093608c969e770181e768f51c14",
+    ".scratch/design-planning-trial-20261009/evidence/13-browser-back.log": "64312e62037f069e6bd66cf3e0cfd4dc0308326a3e7742d14ecdd9436004c030",
+    ".scratch/design-planning-trial-20261009/evidence/14-network.log": "5f81e25aa4e8c022a93cd49ff388555390d94850803a5db299c6d3293df86ecf",
+    ".scratch/design-planning-trial-20261009/evidence/15-console.log": "d0e5634bb0c1271965327ad2ac18107af18fa7da6d2c9ce13e03eeda6cb603db",
+    ".scratch/design-planning-trial-20261009/evidence/16-network-static.log": "546795eceaddc5fe7cb0819f18ee01d72de4f02f0503c598b2a080e42b657c70",
+    ".scratch/design-planning-trial-20261009/evidence/17-skip-link.log": "5453cdf776b894dfcf33c9570776b2a0c3462693e9029c7beff03b1840366ec1",
+    ".scratch/design-planning-trial-20261009/evidence/18-final-desktop.log": "9b62c070bf05fa84cd550715ba508e3bfc3aff512290659b0745fa0740fdef8f",
+    ".scratch/design-planning-trial-20261009/evidence/19-session-close.log": "6b5efc351367d1f838c100210f0bf2ca4ecec4c139f10d8a4fb821f9d09d6f7a",
+    ".scratch/design-planning-trial-20261009/evidence/desktop-failure.png": "22785ac96551cb38b06b72fe9a20b256131d6d2fb536f7f37d95bf5942db5fa6",
+    ".scratch/design-planning-trial-20261009/evidence/desktop-library.png": "57cf0c4f02ca371273645abf1cbfd8b5b91dd3a4aa962af25e5352da8de4e037",
+    ".scratch/design-planning-trial-20261009/evidence/digests.txt": "252316596586a68c2115e844ba096e2fe24a4a677bd87a9921b80fc01dcf7d6c",
+    ".scratch/design-planning-trial-20261009/evidence/mobile-keyboard-focus.png": "a3d578565c84e97a4404b57d4599d83310eb718c0f42de55a561001b0deed208",
+    ".scratch/design-planning-trial-20261009/evidence/mobile-library.png": "764dae06251d7c20710eb7b23dccfd7a137ac05c5d339b30491ef6234365c11e",
+    ".scratch/design-planning-trial-20261009/evidence/mobile-long-detail.png": "54177db3d189e01e8791d6fd7be356247cb57da8a338b7b963cc605d8e33b93f",
+    ".scratch/design-planning-trial-20261009/evidence/mobile-weekly.png": "d6f17c7c8138f6347fd3ade0759291145dc64f626b13037374d47d31efe826b6",
+    ".scratch/design-planning-trial-20261009/execution-record.md": "959005e5b46bad2a451b125ff012a8336bd0c5b61d04d7ef7ef57103a91d59ab",
+    ".scratch/design-planning-trial-20261009/index.html": "eebd182e7f9a93a462cc34420b2881c0f5bcc689d5ec625d78e88b6559429bfa",
+    ".scratch/design-planning-trial-20261009/result.json": "d4b7b2c458423a539150d7461c8b38cd31a56a0a4d6e5c0af5492605d3bcd70b"
+  },
+  "model": null,
+  "reasoningEffort": null,
+  "tokens": null,
+  "cost": null,
+  "comparative": false,
+  "humanAccepted": false,
+  "promotionAuthorized": false,
+  "limitations": [
+    "Single development brief, not held-out evaluation.",
+    "Explicit path use does not test automatic skill discovery.",
+    "No baseline/no-skill/upstream comparison or model recommendation.",
+    "Browser executor observations and maintainer artifact audit are not independent runtime replication.",
+    "Mock data and local timers do not demonstrate production API, persistence, auth or server-side duplicate protection.",
+    "Not all states were tested at both viewports; runtime.limits enumerates gaps."
+  ]
+}
