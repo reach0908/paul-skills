@@ -1,0 +1,80 @@
+{
+  "case_id": "explicit-interface-review",
+  "session_id": "01a139c1-8377-7481-8318-cf9b74da0e99",
+  "host_version": "codex-cli 0.146.0",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "installed_version": "0.4.1",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "neutral_working_directory": true,
+    "exact_target_host_injected": true,
+    "no_unauthorized_hidden_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "대상은 `working`, 즉 **모든 미커밋 변경(추적·미추적 파일 포함)**입니다. 이번에는 실제 저장소와 diff를 읽지 않았으므로 확인된 결함이나 판정은 없습니다.\n\n필요한 입력:\n\n- 기준이 되는 현재 `HEAD`\n- 미커밋 파일 목록과 전체 diff\n- 변경 의도(작업 설명, 이슈 또는 요구사항)\n- 프로젝트의 UI 규칙·디자인 시스템 문서\n- 변경 파일이 영향을 주는 화면과 직접 소비자\n\n분류 방식:\n\n- `Introduced`: 변경이 새로 만든 결함\n- `Regression`: 변경 전에는 정상이었으나 변경으로 약화된 동작\n- `Pre-existing`: 변경 전부터 있었고 이번 변경이 악화하지 않은 결함  \n  기존 결함은 최대 3개만 별도로 알리며 승인 여부에는 반영하지 않습니다.\n\n완료 조건:\n\n- 범위·제외 파일·영향 화면을 명시\n- 접근성, 레이아웃, 문구, 타이포그래피, 색상, UI 완성도별 근거 또는 미검토 사유 기록\n- 모든 발견에 원인 기반 상태와 전후 근거 부여\n- `Introduced`/`Regression`만으로 최종 판정\n- 브라우저 검증을 하지 않았다면 시각·런타임 항목을 `Not verified`로 표시\n- `HIGH`가 있으면 `Block`, 없으면 검토한 영역에 한해 `Approve`",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-interface",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57",
+      "full_body_equal": true
+    }
+  ],
+  "loaded_file_hashes": {
+    "interface-review": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57",
+    "better-interface": "e4ab6510803d4beb6a2a3ac9a818214d585e7e420e9568648cce85ad559f9e13"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/interface-review/SKILL.md && sed -n '1,280p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "1d16c37006d4eec7a45e4059a6b019125841ca4a73661cde4061c3008599c1ed"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/interface-review/scope-resolution.md; sed -n '1,260p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/better-interface/review-format.md\"",
+      "exit_code": 0,
+      "output_sha256": "a6539ecd86523103ac00fd43ff713e9e443956727ffd335a44c247913dbdc9da"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 86315,
+      "cached_input_tokens": 64768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1070,
+      "reasoning_output_tokens": 352
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "422a9cb7ae7cb4824281d55127502d313ed37bf6d1e2343d991d33c0d7f4e33d",
+  "cases_sha256": "7f02f3659a9631833ebedacd250592c833c4dfda91e8df8bffc68b400eae8102",
+  "stream_sha256": "6b32ebe06a0c68583becadbc67489172266a6add3f11154c16d5592cd62f8365",
+  "transcript_sha256": "40cb9fa1dfa73c08aaedf0a3ffecec223a98df38de5e643879ab7dfd75c67032",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 31.53
+}

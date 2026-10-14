@@ -1,0 +1,186 @@
+{
+  "arm": "installed",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "ffc4c802ff34bb7062e6afe3e9ba0bb38b35ab2a7b1a2393ffa6621d4643d601",
+  "schema_version": 1,
+  "case_id": "boundary-interface-review",
+  "mode": "boundary",
+  "protocol_version": 1,
+  "trial_directory_name": "case_001",
+  "expected": "better-interface",
+  "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "492eb20b-f2e9-404d-ac4b-cc9c097c5885",
+  "started_at": "2026-10-14T09:29:16.246438+00:00",
+  "host_init_session_id": "492eb20b-f2e9-404d-ac4b-cc9c097c5885",
+  "host_result_session_id": "492eb20b-f2e9-404d-ac4b-cc9c097c5885",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.1",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "5bb2fa10-2db2-4c8c-9e71-9286222b8b7c",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "7ee022e7-9882-4909-a13e-c601e5f7ea2f",
+      "file_sha256": "e4ab6510803d4beb6a2a3ac9a818214d585e7e420e9568648cce85ad559f9e13",
+      "body_sha256": "76dfa563d1fa160b3632d5bed42d8e2eacac1629366b49d3b95967d14a8a91a1",
+      "host_message_sha256": "1d528804ee11df19c1e112a7d748f5e212b439a4c7a629e446ba46b916b1f231",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "현재 작업 트리의 커밋하지 않은 UI 변경 전체 리뷰 (회귀 탐지). 이번 응답은 준비/짧은 명세까지만, 제품 파일 수정·브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_01CET25Rj4pNjDbaaT61FXWS",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "efca547576e3f6c84f16add90167cafeac14f1e13cf8ee0d738737d06939403a"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "`/paul-skills:interface-review working`\n\n커밋하지 않은 변경이 만든 회귀를 리뷰하는 일은 직접 호출해야 하는 `interface-review`가 맡고 있어서 제가 대신 시작할 수 없으니 위 명령을 직접 실행해 주세요. 이번 조건(준비나 짧은 명세까지만, 제품 파일 수정 금지, 브라우저와 외부 서비스 실행 금지, 입력이 없으면 확인된 결과처럼 말하지 않고 필요한 입력을 명시)은 그 리뷰에도 그대로 적용됩니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "actual_global_no_override": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": true,
+    "explicit_handoff": true,
+    "no_domain_calls": true,
+    "no_file_inspection": true
+  },
+  "pass": true,
+  "duration_seconds": 11.09,
+  "duration_api_ms": 9257,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 14958,
+    "cache_read_input_tokens": 18138,
+    "output_tokens": 744,
+    "output_tokens_details": {
+      "thinking_tokens": 354
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14958,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 420,
+        "cache_read_input_tokens": 14406,
+        "cache_creation_input_tokens": 4284,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4284
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 744,
+      "cacheReadInputTokens": 18138,
+      "cacheCreationInputTokens": 14958,
+      "webSearchRequests": 0,
+      "costUSD": 0.1381876,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 354,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1381876,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "7e7c4a4840f865efd9a9eb5be865240489bbe3a69f44f591e402596173b0ab4e",
+  "cases_sha256": "7f02f3659a9631833ebedacd250592c833c4dfda91e8df8bffc68b400eae8102",
+  "stream_sha256": "fd3482fcb16e2645c66195b2689f9c5a9f5d25e0c5808046616d51243d046ab7",
+  "transcript_sha256": "10c035d42e30c9c465f88b45b95ad761d4a0625f96ff7bc3696838eb8270d1a1",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

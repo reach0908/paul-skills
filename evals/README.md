@@ -49,3 +49,5 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [Remaining eight design skills: promotion and installation](design-final-promotion-2026-10-14/REPORT.md) records user approval, unchanged candidate files, packaging and fresh discovery.
 - [Claude Code discovery and invocation for all 17 design skills](design-claude-discovery-2026-10-14/REPORT.md) records actual global-installation model runs, explicit command expansion, natural selection and user-only boundaries. It preserves and excludes exploratory runs whose working-directory names could prime selection.
 - [Claude review-routing repair and regression evidence](design-claude-routing-repair-2026-10-14/REPORT.md) distinguishes the released baseline, session-only candidates, all 17 normal entry points, target-preserving routing and an actual local Git review handoff. Failed attempts and grader corrections remain visible.
+
+- [Design routing patch 0.4.1 release](./design-routing-patch-release-2026-10-14/REPORT.md): both global installs verified; fresh Claude 6/6 and Codex 5/6, with one remaining staged-routing failure and two initial model compatibility failures preserved.

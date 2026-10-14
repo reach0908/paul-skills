@@ -1,0 +1,67 @@
+{
+  "version": "0.4.1",
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "boundary-interface-review",
+      "mode": "boundary",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "installed",
+      "fixture": "empty"
+    },
+    {
+      "id": "repair-staged",
+      "mode": "boundary",
+      "arm": "installed",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 접근성과 레이아웃 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-current-audit",
+      "mode": "implicit",
+      "arm": "installed",
+      "fixture": "git",
+      "expected": "better-interface",
+      "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-direct-router",
+      "mode": "boundary",
+      "arm": "installed",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "explicit",
+      "prompt": "/paul-skills:better-interface 스테이징된 UI 변경만 검토해서 이번 변경이 망가뜨린 부분을 찾아줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "explicit-interface-review",
+      "mode": "explicit",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "installed",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-information-architecture",
+      "mode": "implicit",
+      "expected": "information-architecture",
+      "prompt": "기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "installed",
+      "fixture": "empty"
+    }
+  ]
+}

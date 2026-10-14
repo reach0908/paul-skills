@@ -1,0 +1,37 @@
+{
+  "planned": 6,
+  "completed": 6,
+  "by_arm": {
+    "installed": {
+      "completed": 6,
+      "passed": 6
+    }
+  },
+  "by_mode_installed": {
+    "explicit": {
+      "completed": 1,
+      "passed": 1
+    },
+    "implicit": {
+      "completed": 2,
+      "passed": 2
+    },
+    "boundary": {
+      "completed": 3,
+      "passed": 3
+    },
+    "handoff": {
+      "completed": 0,
+      "passed": 0
+    }
+  },
+  "failures": [],
+  "reported_cost_usd": 1.6676284,
+  "actual_billed_usd": null,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "efforts": [
+    "xhigh"
+  ]
+}
