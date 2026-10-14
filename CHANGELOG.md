@@ -2,6 +2,12 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.3
+
+### Patch Changes
+
+- [#23](https://github.com/reach0908/paul-skills/pull/23) [`98098fa`](https://github.com/reach0908/paul-skills/commit/98098fa69cffc6495f1f5264de7feaad3bac37cc) Thanks [@reach0908](https://github.com/reach0908)! - Clarify better-colors reporting so calculated pairs, rendered checks and pending inputs retain their evidence scope in the final summary. Preserve valid calculations for fully specified compositing, and keep unresolved image or backdrop checks pending. Add bounded Codex and Claude regression evidence without treating non-reproduction as proof that a stochastic response error is eliminated.
+
 ## 0.4.2
 
 ### Patch Changes
