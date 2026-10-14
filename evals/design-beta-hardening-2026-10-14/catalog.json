@@ -1,0 +1,467 @@
+{
+  "id": 2,
+  "result": {
+    "data": [
+      {
+        "cwd": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia",
+        "skills": [
+          {
+            "name": "better-accessibility",
+            "description": "Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2.",
+            "interface": {
+              "displayName": "Better Accessibility",
+              "shortDescription": "Focus, keyboard, ARIA, forms and screen readers",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-accessibility/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-colors",
+            "description": "Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast.",
+            "interface": {
+              "displayName": "Better Colors",
+              "shortDescription": "Building, naming and applying color systems",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-colors/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-interface",
+            "description": "Reviews screens and flows across accessibility, layout, writing, typography, color and UI polish. Routes change-review requests to an explicit interface-review invocation; consolidates its authorized handoff.",
+            "interface": {
+              "displayName": "Better Interface",
+              "shortDescription": "Cross-discipline interface review",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-interface/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-layout",
+            "description": "Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored.",
+            "interface": {
+              "displayName": "Better Layout",
+              "shortDescription": "Structure, grouping, alignment and adaptive layout",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-layout/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-typography",
+            "description": "Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation.",
+            "interface": {
+              "displayName": "Better Typography",
+              "shortDescription": "Fonts, type scales, spacing and wrapping",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-typography/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-ui",
+            "description": "Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation.",
+            "interface": {
+              "displayName": "Better UI",
+              "shortDescription": "Design engineering details for polished interfaces",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-ui/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "better-writing",
+            "description": "Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next.",
+            "interface": {
+              "displayName": "Better Writing",
+              "shortDescription": "UX writing, interface copy and microcopy",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/better-writing/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "break",
+            "description": "Renders a component you choose under every scenario that can reach it on a temporary page and stress tests it.",
+            "interface": {
+              "displayName": "Break",
+              "shortDescription": "Render one component under hostile inputs and report what breaks",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/break/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "build-design",
+            "description": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+            "interface": {
+              "displayName": "Build Design",
+              "shortDescription": "Build UI from a browser, spec or design file",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/build-design/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "design-browser",
+            "description": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+            "interface": {
+              "displayName": "Design Browser",
+              "shortDescription": "Route browser work and collect UI evidence",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/design-browser/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "explain-interface",
+            "description": "Explains how a website, a visual effect or an animation was built, from a live URL or a screenshot.",
+            "interface": {
+              "displayName": "Explain Interface",
+              "shortDescription": "How was this built? From a URL or a screenshot",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/explain-interface/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "information-architecture",
+            "description": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+            "interface": {
+              "displayName": "Information Architecture",
+              "shortDescription": "Map content, destinations and navigation",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $information-architecture for the scoped product design task and preserve existing decisions."
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/information-architecture/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "interface-review",
+            "description": "Reviews a branch, pull request or uncommitted change for the interface problems it introduced or regressed, across accessibility, layout, writing, typography, color and UI.",
+            "interface": {
+              "displayName": "Interface Review",
+              "shortDescription": "Branch, PR and working-tree interface review",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/interface-review/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "prototype",
+            "description": "Build a throwaway prototype to answer a design question. Use when the user wants to sanity-check whether a state model or logic feels right, or explore what a UI should look like.",
+            "interface": {
+              "displayName": "Prototype",
+              "shortDescription": "Prototype to answer a design question",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/prototype/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "state-machine",
+            "description": "Renders every state of a component you choose on a throwaway page, with mock data and a switcher, so you can work on each state.",
+            "interface": {
+              "displayName": "State Machine",
+              "shortDescription": "Every state of one component on a throwaway page, behind a switcher",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/state-machine/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "user-flow",
+            "description": "Design the actions, decisions and recovery paths for a product task. Use when mapping a user journey through screens or specifying task transitions before implementation, rather than displaying an existing component's coded states.",
+            "interface": {
+              "displayName": "User Flow",
+              "shortDescription": "Map task actions, branches and recovery",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $user-flow for the scoped product design task and preserve existing decisions."
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/user-flow/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "variant",
+            "description": "Builds multiple variants of a component you're working on and helps you iterate and pick one.",
+            "interface": {
+              "displayName": "Variant",
+              "shortDescription": "Several versions of one UI piece behind a picker",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/variant/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "wireframe",
+            "description": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation.",
+            "interface": {
+              "displayName": "Wireframe",
+              "shortDescription": "Build interactive low-fidelity screen flows",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $wireframe for the scoped product design task and preserve existing decisions."
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/public/runs/chain-ia/.agents/skills/wireframe/SKILL.md",
+            "scope": "repo",
+            "enabled": true
+          },
+          {
+            "name": "experiment-design",
+            "description": "Design a bounded test of a consequential product assumption or interpret its results. Use for demand, usability, AI quality or feasibility decisions with outcome-dependent next actions; ordinary interface QA, screen variants and browser checks belong to design roles.",
+            "interface": {
+              "displayName": "Experiment Design",
+              "shortDescription": "Test product assumptions with bounded decision criteria",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/Users/jinhokim/.agents/skills/experiment-design/SKILL.md",
+            "scope": "user",
+            "enabled": true
+          },
+          {
+            "name": "imagegen",
+            "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+            "interface": {
+              "displayName": "Image Gen",
+              "shortDescription": "Generate or edit images for websites, games, and more",
+              "iconSmall": "/Users/jinhokim/.agents/skills/imagegen/assets/imagegen-small.svg",
+              "iconLarge": "/Users/jinhokim/.agents/skills/imagegen/assets/imagegen.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Generate or edit the visual assets for this task with the built-in `image_gen` tool by default. First confirm that the task actually calls for a raster image; if the project already has SVG/vector/code-native assets and the user wants to extend or match those, do not use this skill. If the task includes reference images, treat them as references unless the user clearly wants an existing image modified. For multi-asset requests, loop built-in calls rather than treating batch as a separate top-level mode. Only use the fallback CLI if the user explicitly asks for it, and keep CLI-only controls such as `generate-batch`, `quality`, `input_fidelity`, masks, and output paths on that fallback path."
+            },
+            "path": "/Users/jinhokim/.agents/skills/imagegen/SKILL.md",
+            "scope": "user",
+            "enabled": true
+          },
+          {
+            "name": "problem-discovery",
+            "description": "Clarify the user, situation, current alternative and smallest useful problem scope. Use when an idea or proposed solution still leaves the product problem open; reuse sufficient context instead of starting another interview.",
+            "interface": {
+              "displayName": "Problem Discovery",
+              "shortDescription": "Clarify the problem using the context already available",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/Users/jinhokim/.agents/skills/problem-discovery/SKILL.md",
+            "scope": "user",
+            "enabled": true
+          },
+          {
+            "name": "product-brief",
+            "description": "Create or update a concise product decision brief from conversation, research or prototype feedback. Use when preserving product scope and behavior or handing the latest decisions to design and engineering; leave screens and technical specs to their own roles.",
+            "interface": {
+              "displayName": "Product Brief",
+              "shortDescription": "Preserve product decisions and prepare the next role",
+              "iconSmall": null,
+              "iconLarge": null,
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/Users/jinhokim/.agents/skills/product-brief/SKILL.md",
+            "scope": "user",
+            "enabled": true
+          },
+          {
+            "name": "imagegen",
+            "description": "Generate or edit raster images when the task benefits from AI-created bitmap visuals such as photos, illustrations, textures, sprites, mockups, or transparent-background cutouts. Use when Codex should create a brand-new image, transform an existing image, or derive visual variants from references, and the output should be a bitmap asset rather than repo-native code or vector. Do not use when the task is better handled by editing existing SVG/vector/code-native assets, extending an established icon or logo system, or building the visual directly in HTML/CSS/canvas.",
+            "interface": {
+              "displayName": "Image Gen",
+              "shortDescription": "Generate or edit images for websites, games, and more",
+              "iconSmall": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/imagegen/assets/imagegen-small.svg",
+              "iconLarge": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/imagegen/assets/imagegen.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $imagegen to make or edit an image for this project."
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/imagegen/SKILL.md",
+            "scope": "system",
+            "enabled": true
+          },
+          {
+            "name": "openai-docs",
+            "description": "Use when the user asks how to build with OpenAI products or APIs, asks about Codex itself or choosing Codex surfaces, needs up-to-date official documentation with citations, help choosing the latest model for a use case, latest/current/default-model prompting guidance, or model upgrade and prompt-upgrade guidance; use OpenAI docs MCP tools for non-Codex docs questions, use the Codex manual helper first for broad Codex self-knowledge, and restrict fallback browsing to official OpenAI domains.",
+            "interface": {
+              "displayName": "OpenAI Docs",
+              "shortDescription": "Reference OpenAI docs, Codex self-knowledge, and model migration guidance",
+              "iconSmall": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/openai-docs/assets/openai-small.svg",
+              "iconLarge": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/openai-docs/assets/openai.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use OpenAI Docs for official docs lookup, questions about Codex itself or Codex surfaces, model selection, model migration, and prompt-upgrade work."
+            },
+            "dependencies": {
+              "tools": [
+                {
+                  "type": "mcp",
+                  "value": "openaiDeveloperDocs",
+                  "description": "OpenAI Developer Docs MCP server",
+                  "transport": "streamable_http",
+                  "url": "https://developers.openai.com/mcp"
+                }
+              ]
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/openai-docs/SKILL.md",
+            "scope": "system",
+            "enabled": true
+          },
+          {
+            "name": "plugin-creator",
+            "description": "Create and scaffold plugin directories for Codex with a required `.codex-plugin/plugin.json`, optional plugin folders/files, valid manifest defaults, and personal-marketplace entries by default. Use when Codex needs to create a new personal plugin, add optional plugin structure, generate or update marketplace entries for plugin ordering and availability metadata, or update an existing local plugin during development with the CLI-driven cachebuster and reinstall flow.",
+            "interface": {
+              "displayName": "Plugin Creator",
+              "shortDescription": "Scaffold plugins and marketplace entries",
+              "iconSmall": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/plugin-creator/assets/plugin-creator-small.svg",
+              "iconLarge": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/plugin-creator/assets/plugin-creator.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": "Use $plugin-creator to scaffold a valid plugin in the personal marketplace, then validate it before handing it back."
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/plugin-creator/SKILL.md",
+            "scope": "system",
+            "enabled": true
+          },
+          {
+            "name": "skill-installer",
+            "description": "Install Codex skills into $CODEX_HOME/skills from a curated list or a GitHub repo path. Use when a user asks to list installable skills, install a curated skill, or install a skill from another repo (including private repos).",
+            "shortDescription": "Install curated skills from openai/skills or other repos",
+            "interface": {
+              "displayName": "Skill Installer",
+              "shortDescription": "Install curated skills from openai/skills or other repos",
+              "iconSmall": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/skill-installer/assets/skill-installer-small.svg",
+              "iconLarge": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/skill-installer/assets/skill-installer.png",
+              "iconSmallUrl": null,
+              "iconLargeUrl": null,
+              "brandColor": null,
+              "defaultPrompt": null
+            },
+            "path": "/private/tmp/paul-beta-hardening-20261014/codex-home/skills/.system/skill-installer/SKILL.md",
+            "scope": "system",
+            "enabled": true
+          }
+        ],
+        "errors": []
+      }
+    ]
+  }
+}

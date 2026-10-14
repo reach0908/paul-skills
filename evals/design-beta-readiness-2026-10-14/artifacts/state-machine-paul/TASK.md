@@ -1,0 +1,1 @@
+app/queue.js의 renderQueueCard 하나를 위한 상태 작업대를 app/states/ 안에 만들어 주세요. 실제 코드를 통해 도달 가능한 상태만 찾고, 원본 컴포넌트와 스타일 파일은 수정하지 말아 주세요. 실제 컴포넌트를 import하고 데이터 경계에서 모의 props를 공급하세요. 로딩은 자동 완료시키지 않습니다. 상태 URL·reload·화살표/숫자키/H, 입력 중 단축키 무시를 포함해 Playwright CLI로 확인하고 output/report.md에 남겨 주세요. 페이지는 유지하고 정리는 한 폴더 삭제로 가능하게 해 주세요.

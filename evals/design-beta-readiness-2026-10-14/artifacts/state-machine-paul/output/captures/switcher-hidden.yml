@@ -1,0 +1,22 @@
+- generic [active] [ref=f22e1]:
+  - banner [ref=f22e2]: 팀 운영 자료
+  - main [ref=f22e3]:
+    - generic [ref=f22e4]:
+      - text: 업무 메모
+      - textbox "업무 메모" [ref=f22e5]
+    - region "검토 대기 자료" [ref=f22e38]:
+      - heading "검토 대기 자료" [level=2] [ref=f22e39]
+      - status [ref=f22e40]: 기존 자료를 보여주며 새로 확인하는 중
+      - list [ref=f22e41]:
+        - listitem [ref=f22e42]:
+          - button "작은 팀에서 실패 후 다시 시도하기" [ref=f22e43] [cursor=pointer]
+        - listitem [ref=f22e44]:
+          - button "주간 운영 회고를 30분 안에 끝내는 법" [ref=f22e45] [cursor=pointer]
+        - listitem [ref=f22e46]:
+          - button "고객 요청을 우선순위로 바꾸는 기준" [ref=f22e47] [cursor=pointer]
+        - listitem [ref=f22e48]:
+          - button "담당자가 없을 때 결정을 남기는 방법" [ref=f22e49] [cursor=pointer]
+        - listitem [ref=f22e50]:
+          - button "작은 장애에서 배운 내용을 공유하기" [ref=f22e51] [cursor=pointer]
+        - listitem [ref=f22e52]:
+          - button "반복 업무를 점검하는 월간 체크리스트" [ref=f22e53] [cursor=pointer]

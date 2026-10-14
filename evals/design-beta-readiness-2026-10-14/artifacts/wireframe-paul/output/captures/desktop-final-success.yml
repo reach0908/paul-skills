@@ -1,0 +1,103 @@
+- generic [active] [ref=f5e1]:
+  - link "본문으로 건너뛰기" [ref=f5e2] [cursor=pointer]:
+    - /url: "#main-content"
+  - banner [ref=f5e3]:
+    - generic [ref=f5e4]:
+      - link "공유 자료함" [ref=f5e5] [cursor=pointer]:
+        - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+      - navigation "주요 메뉴" [ref=f5e6]:
+        - link "자료함" [ref=f5e7] [cursor=pointer]:
+          - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+        - link "내 보관함" [ref=f5e8] [cursor=pointer]:
+          - /url: "#saved-preview"
+        - link "도움말" [ref=f5e9] [cursor=pointer]:
+          - /url: "#help-note"
+    - search [ref=f5e10]:
+      - generic [ref=f5e11]: 자료 검색
+      - generic [ref=f5e12]:
+        - textbox "자료 검색" [ref=f5e13]: 작은 팀
+        - button "검색" [ref=f5e14] [cursor=pointer]
+  - main [ref=f5e15]:
+    - generic [ref=f5e91]:
+      - generic "목록 문맥" [ref=f5e92]:
+        - link "← 자료 목록으로" [ref=f5e93] [cursor=pointer]:
+          - /url: "?view=library&q=%EC%9E%91%EC%9D%80+%ED%8C%80&tag=%EC%9A%B4%EC%98%81&sort=newest"
+        - generic [ref=f5e94]: 검색 ‘작은 팀’ · 태그 ‘운영’ · 최신순
+      - article [ref=f5e95]:
+        - generic [ref=f5e96]: 자료 R-72
+        - heading "작은 팀에서 실패 후 다시 시도하기" [level=1] [ref=f5e97]
+        - paragraph [ref=f5e98]: 작은 팀이 실패를 기록하고, 다음 시도의 범위를 줄이며, 책임을 나누는 방법을 정리한 실무 자료입니다.
+        - generic [ref=f5e99]:
+          - generic [ref=f5e100]:
+            - term [ref=f5e101]: 작성자
+            - definition [ref=f5e102]: 김하나
+          - generic [ref=f5e103]:
+            - term [ref=f5e104]: 태그
+            - definition [ref=f5e105]:
+              - generic [ref=f5e106]: 운영
+              - generic [ref=f5e107]: 회고
+        - navigation "자료 안에서 이동" [ref=f5e108]:
+          - link "본문으로 건너뛰기" [ref=f5e109] [cursor=pointer]:
+            - /url: "#article-body"
+          - link "출처 구역으로 이동" [ref=f5e110] [cursor=pointer]:
+            - /url: "#source-region"
+        - region [ref=f5e111]:
+          - heading "본문" [level=2] [ref=f5e112]
+          - paragraph [ref=f5e113]: 실패 직후에는 원인을 단정하는 대신 관찰한 사실과 추측을 나눠 적습니다. 다시 시도할 때는 한 번에 바꾸는 조건을 줄이고, 확인할 지표와 중단 기준을 먼저 합의합니다.
+          - paragraph [ref=f5e114]: 회고 기록은 책임을 묻기 위한 문서가 아니라 다음 결정을 돕는 자료입니다. 팀원이 나중에 돌아와도 당시의 가정과 결과를 이해할 수 있어야 합니다.
+        - region [ref=f5e115]:
+          - generic [ref=f5e116]:
+            - generic [ref=f5e117]:
+              - paragraph [ref=f5e118]: T-SAVE
+              - heading "내 보관함에 저장" [level=2] [ref=f5e119]
+            - generic [ref=f5e120]: 저장됨
+          - generic [ref=f5e121]: 내 메모
+          - textbox "내 메모" [ref=f5e122]:
+            - /placeholder: 나중에 기억할 내용을 적으세요.
+            - text: 목록을 다녀와도 유지되는 초안
+          - paragraph [ref=f5e123]: 메모 초안은 이 브라우저에 유지됩니다.
+          - button "저장 확인됨" [disabled] [ref=f5e125]
+          - paragraph [ref=f5e126]: 같은 요청의 중복 저장은 막혀 있습니다. 새 저장 대신 기존 요청의 상태를 확인하세요.
+          - region [ref=f5e127]:
+            - generic [ref=f5e128]:
+              - heading "저장 요청 상태" [level=3] [ref=f5e129]
+              - button "닫기" [ref=f5e130] [cursor=pointer]
+            - status [ref=f5e131]:
+              - strong [ref=f5e132]: 저장을 확인했습니다.
+              - paragraph [ref=f5e133]: 내 보관함에 자료와 메모가 있습니다. 유일한 영수증은 S-72입니다.
+            - generic [ref=f5e134]:
+              - generic [ref=f5e135]:
+                - term [ref=f5e136]: 자료
+                - definition [ref=f5e137]: R-72
+              - generic [ref=f5e138]:
+                - term [ref=f5e139]: 요청
+                - definition [ref=f5e140]: SAVE-R72-1
+              - generic [ref=f5e141]:
+                - term [ref=f5e142]: 영수증
+                - definition [ref=f5e143]: S-72
+          - complementary [ref=f5e144]:
+            - strong [ref=f5e145]: 모의 동작
+            - paragraph [ref=f5e146]: 실제 계정·서버에 접근하지 않습니다. 네트워크 응답과 영수증을 로컬에서 재현합니다.
+          - generic [ref=f5e147]:
+            - button "시나리오 재설정" [ref=f5e148] [cursor=pointer]
+            - generic [ref=f5e149]: 초안과 모의 저장 결과를 지웁니다.
+        - region [ref=f5e150]:
+          - heading "출처" [level=2] [ref=f5e151]
+          - paragraph [ref=f5e152]:
+            - text: "원문:"
+            - link "example.org의 원문 열기 (새 탭)" [ref=f5e153] [cursor=pointer]:
+              - /url: https://example.org/articles/small-team-retry
+              - text: example.org의 원문 열기
+              - generic [ref=f5e154]: (새 탭)
+        - region [ref=f5e155]:
+          - heading "내 보관함 안내" [level=2] [ref=f5e156]
+          - paragraph [ref=f5e157]: 저장이 확인되면 이 자료와 내 메모가 내 보관함에 표시됩니다.
+        - complementary [ref=f5e158]:
+          - heading "아직 정하지 않은 정책" [level=2] [ref=f5e159]
+          - list [ref=f5e160]:
+            - listitem [ref=f5e161]: 인증 복구 뒤 같은 키로 작업을 다시 조회하는 서버 API
+            - listitem [ref=f5e162]: 초대가 만료된 팀 자료의 읽기 권한
+  - contentinfo [ref=f5e88]:
+    - paragraph [ref=f5e89]:
+      - strong [ref=f5e90]: 도움말
+      - text: 이 화면의 네트워크 요청과 저장 결과는 모두 모의 동작입니다.

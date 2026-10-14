@@ -17,13 +17,3 @@ npx skills@latest add reach0908/paul-skills --skill=<name>
 
 - **[chief-of-staff](./chief-of-staff/SKILL.md)**: Coordinate a stateful personal work overview. Experimental, outside the default plugin.
 - **[upstream-sync](./upstream-sync/SKILL.md)**: Review source repository changes and selectively improve local skills. Awaiting user validation and promotion approval; intended destination is `productivity/`.
-
-- **[break](./break/SKILL.md)**: Renders a component you choose under every scenario that can reach it on a temporary page and stress tests it. User-invoked.
-- **[build-design](./build-design/SKILL.md)**: Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design. Model-invoked.
-- **[explain-interface](./explain-interface/SKILL.md)**: Explains how a website, a visual effect or an animation was built, from a live URL or a screenshot. User-invoked.
-- **[state-machine](./state-machine/SKILL.md)**: Renders every state of a component you choose on a throwaway page, with mock data and a switcher, so you can work on each state. User-invoked.
-- **[variant](./variant/SKILL.md)**: Builds multiple variants of a component you're working on and helps you iterate and pick one. User-invoked.
-
-- **[information-architecture](./information-architecture/SKILL.md)**: Maps scoped content to destinations, labels and navigation using the agreed product brief. Model-invoked.
-- **[user-flow](./user-flow/SKILL.md)**: Specifies task actions, branches, feedback and recovery with stable state references. Model-invoked.
-- **[wireframe](./wireframe/SKILL.md)**: Builds low-fidelity interactive screens and a Markdown specification from agreed content and task flows. Model-invoked.

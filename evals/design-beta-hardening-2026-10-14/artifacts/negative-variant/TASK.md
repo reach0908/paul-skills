@@ -1,0 +1,1 @@
+다음 카드의 패딩만 16px에서 24px로 바꾸는 CSS 조각을 작성해 주세요: .card { padding: 16px; border-radius: 8px; } 다른 디자인 선택과 비교 화면은 필요 없습니다.

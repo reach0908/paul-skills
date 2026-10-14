@@ -1,0 +1,20 @@
+<!doctype html>
+<html lang="ko">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="icon" href="data:,">
+    <title>검토 대기 자료 상태 작업대</title>
+    <link rel="stylesheet" href="../../style.css">
+    <link rel="stylesheet" href="./switcher.css">
+  </head>
+  <body>
+    <header>팀 운영 자료</header>
+    <main>
+      <label>업무 메모 <input id="memo" autocomplete="off"></label>
+      <div id="queue"></div>
+    </main>
+    <nav class="state-switcher" aria-label="States"></nav>
+    <script type="module" src="./workbench.js"></script>
+  </body>
+</html>

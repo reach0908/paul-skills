@@ -1,0 +1,1 @@
+Static ES modules. Import renderAttachments and inherit style.css. Both wrapNames=false and wrapNames=true are actual supported modes. No application state or external calls.

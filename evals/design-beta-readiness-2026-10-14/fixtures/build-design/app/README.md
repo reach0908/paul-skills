@@ -1,0 +1,1 @@
+Static app, no build step. Target is #target only. Existing controls and ID hooks are functional; keep those behaviors and neighboring search/header unchanged. Tokens live in style.css.

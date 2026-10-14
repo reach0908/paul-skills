@@ -1,0 +1,508 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자료 상세 R-72 · T-SAVE 와이어프레임</title>
+  <link rel="icon" href="data:,">
+  <link rel="stylesheet" href="./style.css">
+  <style>
+    body { min-width: 0; }
+    header { border-bottom: 1px solid var(--border); background: var(--surface); }
+    footer { max-width: 960px; margin: var(--space-4) auto 0; padding: var(--space-2); border-top: 1px solid var(--border); }
+    h1, h2, h3, p { margin-top: 0; }
+    h2 { font-size: 1.2rem; }
+    h3 { font-size: 1rem; }
+    code { overflow-wrap: anywhere; }
+    .skip-link { position: absolute; left: var(--space-2); top: -80px; z-index: 10; padding: 8px 12px; color: var(--ink); background: var(--surface); border: 2px solid var(--ink); }
+    .skip-link:focus { top: var(--space-1); }
+    .masthead { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); }
+    .product-name { font-weight: 700; }
+    .prototype-label { display: block; color: #3d4d5d; font-size: .875rem; font-weight: 400; }
+    .global-nav { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+    .global-nav button { padding: 6px 10px; }
+    .page-head { display: grid; gap: var(--space-2); margin-bottom: var(--space-3); }
+    .back-row { display: flex; align-items: center; justify-content: space-between; gap: var(--space-2); flex-wrap: wrap; }
+    .eyebrow, .meta, .route-label { color: #3d4d5d; font-size: .875rem; }
+    .route-label { margin: 0; }
+    .summary { max-width: 68ch; font-size: 1.05rem; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: var(--space-1); padding: 0; margin: 0; list-style: none; }
+    .tag { padding: 2px 8px; border: 1px solid var(--border); border-radius: 999px; background: var(--surface); }
+    .item-actions { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+    .detail-layout { display: grid; grid-template-columns: minmax(0, 1fr) minmax(260px, 320px); grid-template-areas: "body save"; gap: var(--space-3); align-items: start; }
+    .article-body { grid-area: body; min-width: 0; }
+    .save-region { grid-area: save; min-width: 0; }
+    .save-region .card { display: grid; gap: var(--space-2); }
+    .state-heading { display: flex; justify-content: space-between; gap: var(--space-1); align-items: flex-start; }
+    .state-id { white-space: nowrap; padding: 2px 6px; border: 1px solid var(--border); font-size: .8rem; font-weight: 600; }
+    .status-copy { margin: 0; }
+    .status-unknown { border-left-color: #8a5200; background: #fff8e8; }
+    .status-success { border-left-color: #2f6e3f; background: #edf8ef; }
+    .status-pending { background: #eef5fb; }
+    label { display: block; font-weight: 600; }
+    textarea { width: 100%; min-height: 112px; resize: vertical; background: var(--surface); }
+    textarea[readonly] { background: #eef1f4; }
+    .field-help { display: block; margin-top: 4px; color: #3d4d5d; font-size: .875rem; }
+    .primary { color: white; background: var(--brand); border-color: var(--brand); }
+    .danger-quiet { border-color: #8a5200; }
+    .task-actions { display: flex; flex-wrap: wrap; gap: var(--space-1); }
+    .task-actions > * { flex: 1 1 auto; }
+    .boundary { margin: 0; padding-top: var(--space-2); border-top: 1px solid var(--border); }
+    .boundary summary { cursor: pointer; font-weight: 600; }
+    .boundary dl, .facts { display: grid; grid-template-columns: auto minmax(0, 1fr); gap: 4px var(--space-1); margin-bottom: 0; }
+    .boundary dd, .facts dd { margin: 0; overflow-wrap: anywhere; }
+    .closed-card { border-style: dashed; }
+    .closed-card .task-actions { margin-top: 0; }
+    .article-body section + section { margin-top: var(--space-3); }
+    .article-placeholder { min-height: 360px; }
+    .results-context { display: grid; gap: var(--space-2); margin-bottom: var(--space-3); }
+    .search-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(120px, auto) minmax(120px, auto); gap: var(--space-1); }
+    .search-grid input, .search-grid select { width: 100%; min-width: 0; }
+    .result-card { scroll-margin-top: var(--space-3); }
+    .result-card[aria-current="true"] { outline: 3px solid #b13f00; outline-offset: 3px; }
+    .empty { padding: var(--space-3); text-align: center; }
+    .policy-list { margin-bottom: 0; }
+    .prototype-note { margin: 0; color: #3d4d5d; font-size: .875rem; }
+    .visually-hidden { position: absolute !important; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); white-space: nowrap; border: 0; }
+    #announcer { position: fixed; left: var(--space-2); bottom: var(--space-2); max-width: min(420px, calc(100vw - 32px)); padding: 8px 12px; color: white; background: var(--ink); border-radius: var(--radius); }
+    @media (max-width: 620px) {
+      header, main, footer { padding: 12px; }
+      .masthead { align-items: flex-start; flex-direction: column; }
+      .global-nav { width: 100%; }
+      .global-nav button { flex: 1 1 auto; }
+      .detail-layout { grid-template-columns: minmax(0, 1fr); grid-template-areas: "save" "body"; }
+      .search-grid { grid-template-columns: minmax(0, 1fr); }
+      .task-actions { flex-direction: column; }
+      .task-actions > * { width: 100%; }
+      .facts, .boundary dl { grid-template-columns: minmax(0, 1fr); }
+      .facts dt, .boundary dt { font-weight: 700; }
+      h1 { overflow-wrap: anywhere; }
+    }
+  </style>
+</head>
+<body>
+  <a class="skip-link" href="#main-content">주요 내용으로 건너뛰기</a>
+  <header>
+    <div class="masthead">
+      <div class="product-name">공유 자료함 <span class="prototype-label">PB-72 rev.3 · 저충실도 동작 시안</span></div>
+      <nav class="global-nav" aria-label="기존 목적지">
+        <button type="button" data-route="library">자료 검색 <span aria-hidden="true">· D-LIB</span></button>
+        <button type="button" data-route="saved">내 보관함 <span aria-hidden="true">· D-SAVED</span></button>
+        <button type="button" data-route="help">도움말 <span aria-hidden="true">· D-HELP</span></button>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main-content" tabindex="-1">
+    <div id="screen"></div>
+  </main>
+
+  <footer>
+    <p class="prototype-note">로컬 프로토타입입니다. 네트워크·저장·인증은 모두 모의 동작이며 실제 계정이나 API를 사용하지 않습니다.</p>
+  </footer>
+  <div id="announcer" role="status" aria-live="polite" hidden></div>
+
+  <script>
+    (() => {
+      'use strict';
+
+      const STORAGE_KEY = 'chain-wire-t-save-v1';
+      const SOURCE_URL = 'https://example.com/';
+      const stateNames = {
+        'TS-00': '시작 전',
+        'TS-10': '최초 요청 처리 중 · pending',
+        'TS-20': '결과 불명 · timeout-unknown',
+        'TS-21': '첫 상태 확인 중',
+        'TS-30': '확인된 처리 중 · pending',
+        'TS-31': '두 번째 상태 확인 중',
+        'TS-40': '성공 확인 · succeeded',
+        'TS-90': '인증 복구 의존'
+      };
+
+      const defaults = () => ({
+        route: 'item',
+        taskState: 'TS-00',
+        taskView: 'V-OPEN',
+        draft: '',
+        jobKey: null,
+        receipt: null,
+        saveRequests: 0,
+        statusChecks: 0,
+        lastObservation: '요청 전',
+        lastTransition: 'NAV-01',
+        nextEventAt: null,
+        returnFocus: null,
+        context: { q: '작은 팀', tag: '운영', sort: 'newest', item: 'R-72' }
+      });
+
+      function loadState() {
+        try {
+          const parsed = JSON.parse(sessionStorage.getItem(STORAGE_KEY));
+          if (!parsed || !stateNames[parsed.taskState]) return defaults();
+          return { ...defaults(), ...parsed, context: { ...defaults().context, ...(parsed.context || {}) } };
+        } catch (_) {
+          return defaults();
+        }
+      }
+
+      let state = loadState();
+      let eventTimer = null;
+      const screen = document.querySelector('#screen');
+      const announcer = document.querySelector('#announcer');
+
+      function saveState() {
+        sessionStorage.setItem(STORAGE_KEY, JSON.stringify(state));
+      }
+
+      function announce(message) {
+        announcer.textContent = '';
+        announcer.hidden = false;
+        window.setTimeout(() => { announcer.textContent = message; }, 20);
+        window.setTimeout(() => { announcer.hidden = true; }, 2400);
+      }
+
+      function updateUrl() {
+        const url = new URL(window.location.href);
+        url.searchParams.set('screen', routeMeta()[0]);
+        if (state.route !== 'item') url.hash = '';
+        history.replaceState({ route: state.route }, '', url);
+      }
+
+      function routeMeta() {
+        if (state.route === 'library') return ['D-LIB', '/library'];
+        if (state.route === 'saved') return ['D-SAVED', '/saved'];
+        if (state.route === 'help') return ['D-HELP', '/help'];
+        return ['D-ITEM', '/items/R-72'];
+      }
+
+      function commit(patch, transition, message, options = {}) {
+        state = { ...state, ...patch, lastTransition: transition };
+        saveState();
+        render(options.focusSelector);
+        if (message) announce(message);
+      }
+
+      function scheduleEvent() {
+        window.clearTimeout(eventTimer);
+        eventTimer = null;
+        if (!state.nextEventAt) return;
+        const remaining = Math.max(0, state.nextEventAt - Date.now());
+        eventTimer = window.setTimeout(settleNetworkEvent, remaining);
+      }
+
+      function settleNetworkEvent() {
+        if (state.taskState === 'TS-10') {
+          commit({
+            taskState: 'TS-20',
+            lastObservation: 'timeout-unknown',
+            nextEventAt: null
+          }, state.taskView === 'V-CLOSED' ? 'TR-13' : 'TR-03', '응답 시간이 지났습니다. 성공이나 실패가 아니라 결과 불명입니다.');
+          return;
+        }
+        if (state.taskState === 'TS-21') {
+          commit({
+            taskState: 'TS-30',
+            lastObservation: 'pending',
+            nextEventAt: null
+          }, state.taskView === 'V-CLOSED' ? 'TR-14' : 'TR-05', '첫 상태 확인 결과는 pending입니다.');
+          return;
+        }
+        if (state.taskState === 'TS-31') {
+          commit({
+            taskState: 'TS-40',
+            receipt: 'S-72',
+            lastObservation: 'succeeded',
+            nextEventAt: null
+          }, state.taskView === 'V-CLOSED' ? 'TR-15' : 'TR-07', '저장이 확인되었습니다. 유일 receipt는 S-72입니다.');
+        }
+      }
+
+      function statusClass() {
+        if (state.taskState === 'TS-20' || state.taskState === 'TS-90') return 'status-unknown';
+        if (state.taskState === 'TS-40') return 'status-success';
+        if (['TS-10', 'TS-21', 'TS-30', 'TS-31'].includes(state.taskState)) return 'status-pending';
+        return '';
+      }
+
+      function statusCopy() {
+        const copies = {
+          'TS-00': '아직 저장 요청을 보내지 않았습니다. 메모를 작성한 뒤 한 번만 저장합니다.',
+          'TS-10': '모의 저장 요청 1건을 처리하고 있습니다. 같은 입력은 새 요청을 만들지 않습니다.',
+          'TS-20': '응답 시간이 지났지만 서버가 처리했는지는 모릅니다. 실패나 성공으로 단정하지 않고 같은 작업의 상태만 확인합니다.',
+          'TS-21': '새 저장이 아니라 기존 작업 K의 첫 상태를 확인하고 있습니다. 중복 확인은 무시합니다.',
+          'TS-30': '첫 확인 결과는 pending입니다. 같은 작업 K를 한 번 더 확인할 수 있습니다.',
+          'TS-31': '기존 작업 K의 두 번째 상태를 확인하고 있습니다. 중복 확인은 무시합니다.',
+          'TS-40': '서버가 succeeded와 유일 receipt S-72를 확인했습니다. 같은 저장을 다시 만들지 않습니다.',
+          'TS-90': '인증 복구가 필요합니다. 복구 후 같은 K를 재조회하는 API는 미결이며, 새 저장 요청을 보내지 않습니다.'
+        };
+        return copies[state.taskState];
+      }
+
+      function primaryAction() {
+        if (state.taskState === 'TS-00') return '<button class="primary" type="button" data-action="save">메모와 함께 저장</button>';
+        if (state.taskState === 'TS-20' || state.taskState === 'TS-30') return '<button class="primary" type="button" data-action="check">같은 작업 상태 확인</button>';
+        if (state.taskState === 'TS-40') return '<button class="primary" type="button" data-route="saved">내 보관함에서 확인</button>';
+        if (state.taskState === 'TS-90') return '<button type="button" data-action="recover-auth">인증 복구 완료 모의</button>';
+        return '<button type="button" disabled aria-describedby="busy-help">처리 중</button>';
+      }
+
+      function savePanel() {
+        if (state.taskView === 'V-CLOSED') {
+          return `
+            <aside class="save-region" aria-label="닫힌 저장 작업">
+              <div class="card closed-card">
+                <div class="state-heading">
+                  <h2>보관 작업 닫힘</h2>
+                  <span class="state-id">${state.taskState} / V-CLOSED</span>
+                </div>
+                <p class="status-copy">${stateNames[state.taskState]}. 초안과 작업 상태는 유지되며 진행 중인 모의 서버 작업은 취소되지 않습니다.</p>
+                <p class="meta">최근 전이 <code>${state.lastTransition}</code></p>
+                <div class="task-actions">
+                  <button class="primary" type="button" data-action="reopen">저장 작업 다시 열기</button>
+                  <button class="danger-quiet" type="button" data-action="reset">명시적으로 초기화</button>
+                </div>
+              </div>
+            </aside>`;
+        }
+
+        const editable = state.taskState === 'TS-00';
+        const canAuthFail = ['TS-20', 'TS-21', 'TS-30', 'TS-31'].includes(state.taskState);
+        return `
+          <aside class="save-region" aria-labelledby="save-title">
+            <div class="card">
+              <div class="state-heading">
+                <div>
+                  <p class="eyebrow">작업 T-SAVE</p>
+                  <h2 id="save-title">내 보관함에 저장</h2>
+                </div>
+                <span class="state-id">${state.taskState} / V-OPEN</span>
+              </div>
+              <div class="notice ${statusClass()}" role="status" aria-live="polite">
+                <strong>${stateNames[state.taskState]}</strong>
+                <p class="status-copy">${statusCopy()}</p>
+              </div>
+              <div>
+                <label for="note">내 메모</label>
+                <textarea id="note" ${editable ? '' : 'readonly'} aria-describedby="note-help">${escapeHtml(state.draft)}</textarea>
+                <span class="field-help" id="note-help">${editable ? '저장 전에는 수정할 수 있습니다.' : '저장 시작 뒤 편집 정책은 OD-04 미결이므로 읽기 전용입니다.'}</span>
+              </div>
+              <div class="task-actions">
+                ${primaryAction()}
+                <button type="button" data-action="close">닫기</button>
+              </div>
+              <span id="busy-help" class="field-help">처리 중에는 반복 저장·반복 확인 입력을 받지 않습니다.</span>
+              ${canAuthFail ? '<button type="button" data-action="require-auth">인증 필요 상황 모의 · TR-16</button>' : ''}
+              <details class="boundary">
+                <summary>모의 네트워크·저장 경계</summary>
+                <dl>
+                  <dt>저장 요청</dt><dd>${state.saveRequests}건 ${state.saveRequests ? '· 같은 K 유지' : '· K 없음'}</dd>
+                  <dt>상태 조회</dt><dd>${state.statusChecks}건</dd>
+                  <dt>최근 관찰</dt><dd>${state.lastObservation}</dd>
+                  <dt>receipt</dt><dd>${state.receipt || '없음'}</dd>
+                  <dt>임시 보존</dt><dd>이 탭의 sessionStorage만 사용</dd>
+                </dl>
+                <p class="field-help">실제 API·계정·영구 저장은 없습니다. 작업 이벤트는 지연 타이머로 모의하며 새로고침 뒤에도 이 탭의 상태를 이어갑니다.</p>
+              </details>
+              <button class="danger-quiet" type="button" data-action="reset">명시적으로 초기화</button>
+              <p class="meta">최근 전이 <code>${state.lastTransition}</code></p>
+            </div>
+          </aside>`;
+      }
+
+      function renderItem() {
+        return `
+          <article aria-labelledby="item-title">
+            <div class="page-head">
+              <div class="back-row">
+                <button type="button" data-action="back-list">← 검색 결과로 돌아가기</button>
+                <p class="route-label"><strong>D-ITEM</strong> · <code>/items/R-72</code></p>
+              </div>
+              <div>
+                <p class="eyebrow">자료 R-72</p>
+                <h1 id="item-title">작은 팀에서 실패 후 다시 시도하기</h1>
+                <p class="summary">작은 팀이 실패를 기록하고, 학습을 다음 시도에 연결하는 실무 방법을 정리한 자료입니다.</p>
+                <p class="meta">작성자: 김다은 · 원문 소유자와 내 메모 소유권은 같지 않음</p>
+                <ul class="tag-list" aria-label="자료 태그">
+                  <li><button class="tag" type="button" data-action="tag-filter">운영 필터 보기</button></li>
+                  <li><span class="tag">작은 팀</span></li>
+                </ul>
+              </div>
+              <div class="item-actions">
+                <a href="#article-body">본문으로 건너뛰기</a>
+                <a href="${SOURCE_URL}" target="_blank" rel="noopener noreferrer" data-source-link>출처로 이동 <span class="visually-hidden">(새 탭)</span></a>
+              </div>
+            </div>
+
+            <div class="detail-layout">
+              ${savePanel()}
+              <div class="article-body" id="article-body" tabindex="-1">
+                <section class="card article-placeholder" aria-labelledby="body-title">
+                  <p class="eyebrow">자료 본문 · 같은 D-ITEM 내부</p>
+                  <h2 id="body-title">실패를 다음 실험의 입력으로 바꾸기</h2>
+                  <p>실패 기록은 책임을 찾는 문서가 아니라 다음 시도에서 확인할 가정을 선명하게 만드는 도구다. 작은 팀은 사건, 관찰, 다음 행동을 짧게 분리해 기록할 때 다시 시작하기 쉽다.</p>
+                  <h3>팀이 함께 확인할 것</h3>
+                  <ul>
+                    <li>어떤 신호를 보고 중단하거나 계속할지</li>
+                    <li>다음 시도에서 한 번에 바꿀 변수는 무엇인지</li>
+                    <li>결과를 다시 확인할 시점과 책임자는 누구인지</li>
+                  </ul>
+                  <p>이 본문으로 이동해도 현재 자료, 메모 초안, T-SAVE 작업 상태는 바뀌지 않습니다.</p>
+                  <p><a href="${SOURCE_URL}" target="_blank" rel="noopener noreferrer" data-source-link>이 글의 원문 출처 열기 <span class="visually-hidden">(새 탭)</span></a></p>
+                </section>
+                <section class="card" aria-labelledby="policy-title">
+                  <h2 id="policy-title">결정 전 정책</h2>
+                  <ul class="policy-list">
+                    <li><strong>OD-01</strong> 만료 초대 자료의 읽기 권한</li>
+                    <li><strong>OD-02</strong> 인증 복구 뒤 같은 K 재조회 API</li>
+                    <li><strong>OD-03</strong> 직접 URL·추천·D-SAVED 진입 뒤 복귀 문맥</li>
+                    <li><strong>OD-04</strong> 저장 시작 뒤 메모 편집과 귀속</li>
+                  </ul>
+                </section>
+              </div>
+            </div>
+          </article>`;
+      }
+
+      function renderLibrary() {
+        return `
+          <section aria-labelledby="library-title">
+            <div class="back-row">
+              <div><p class="eyebrow">D-LIB · <code>/library</code></p><h1 id="library-title">자료 검색 결과</h1></div>
+              <button class="danger-quiet" type="button" data-action="reset">명시적으로 초기화</button>
+            </div>
+            <form class="card results-context" data-search-form>
+              <div class="search-grid">
+                <div><label for="query">검색어</label><input id="query" name="q" value="${escapeHtml(state.context.q)}"></div>
+                <div><label for="tag">태그</label><select id="tag" name="tag"><option selected>운영</option></select></div>
+                <div><label for="sort">정렬</label><select id="sort" name="sort"><option value="newest" selected>최신순</option></select></div>
+              </div>
+              <div class="tools"><button type="submit">검색 문맥 확인</button></div>
+              <p class="meta">복원 문맥: <code>q='작은 팀'</code> · <code>tag='운영'</code> · <code>newest</code> · 목록 위치 <code>item R-72</code></p>
+            </form>
+            <div class="items" aria-label="검색 결과 1건">
+              <article class="card result-card" id="result-R-72" aria-current="true">
+                <p class="eyebrow">자료 R-72 · 복원된 목록 위치</p>
+                <h2>작은 팀에서 실패 후 다시 시도하기</h2>
+                <p>작은 팀이 실패를 기록하고 다음 시도에 연결하는 방법.</p>
+                <p class="meta">김다은 · 태그 운영</p>
+                <button class="primary" type="button" data-action="open-item">이 자료 상세 다시 열기</button>
+              </article>
+            </div>
+          </section>`;
+      }
+
+      function renderSaved() {
+        const saved = state.taskState === 'TS-40' && state.receipt === 'S-72';
+        return `
+          <section aria-labelledby="saved-title">
+            <p class="eyebrow">D-SAVED · <code>/saved</code></p>
+            <h1 id="saved-title">내 보관함</h1>
+            ${saved ? `
+              <article class="card">
+                <p class="eyebrow">자료 R-72 · receipt S-72</p>
+                <h2>작은 팀에서 실패 후 다시 시도하기</h2>
+                <dl class="facts"><dt>내 메모</dt><dd>${escapeHtml(state.draft) || '메모 없음'}</dd><dt>확인 상태</dt><dd>succeeded</dd></dl>
+                <p class="notice">같은 자료 ID와 저장 관계를 표시합니다. S-72는 별도 목적지가 아닙니다.</p>
+                <button type="button" data-action="open-from-saved">자료 상세 열기</button>
+              </article>` : `
+              <div class="card empty"><h2>아직 확인된 저장 자료가 없습니다</h2><p>서버가 S-72를 확인한 뒤에만 R-72가 여기에 나타납니다.</p><button type="button" data-action="open-item">자료 상세 열기</button></div>`}
+            <p class="notice"><strong>OD-03 미결:</strong> D-SAVED에서 연 상세의 기본 복귀 목적지와 문맥은 이 시안에서 새로 정하지 않습니다.</p>
+          </section>`;
+      }
+
+      function renderHelp() {
+        return `
+          <section aria-labelledby="help-title">
+            <p class="eyebrow">D-HELP · <code>/help</code></p>
+            <h1 id="help-title">도움말</h1>
+            <div class="card"><p>기존 도움말 목적지만 유지합니다. 세부 분류와 정확한 탐색 위치는 입력에 없어 이 시안에서 추가하지 않았습니다.</p></div>
+          </section>`;
+      }
+
+      function render(focusSelector) {
+        updateUrl();
+        screen.innerHTML = state.route === 'library' ? renderLibrary() : state.route === 'saved' ? renderSaved() : state.route === 'help' ? renderHelp() : renderItem();
+        scheduleEvent();
+        if (focusSelector) window.requestAnimationFrame(() => document.querySelector(focusSelector)?.focus());
+      }
+
+      function escapeHtml(value) {
+        return String(value || '').replace(/[&<>'"]/g, char => ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', "'": '&#39;', '"': '&quot;' }[char]));
+      }
+
+      function navigate(route, transition, message) {
+        const patch = { route };
+        if (state.route === 'item' && route !== 'item') patch.taskView = 'V-CLOSED';
+        if (route === 'item') patch.taskView = 'V-OPEN';
+        commit(patch, transition, message, { focusSelector: '#main-content' });
+      }
+
+      document.addEventListener('input', event => {
+        if (event.target.matches('#note') && state.taskState === 'TS-00') {
+          state.draft = event.target.value;
+          state.lastTransition = 'TR-01';
+          saveState();
+        }
+      });
+
+      document.addEventListener('submit', event => {
+        if (!event.target.matches('[data-search-form]')) return;
+        event.preventDefault();
+        announce('검색어, 태그, 정렬, R-72 위치가 유지되어 있습니다.');
+        document.querySelector('#result-R-72')?.focus({ preventScroll: false });
+      });
+
+      document.addEventListener('click', event => {
+        const routeButton = event.target.closest('[data-route]');
+        if (routeButton) {
+          const route = routeButton.dataset.route;
+          const ids = { library: 'NAV-02', saved: state.taskState === 'TS-40' ? 'TR-18' : 'D-SAVED', help: 'D-HELP' };
+          navigate(route, ids[route], `${routeMeta()[0]}에서 ${route} 화면으로 이동했습니다.`);
+          return;
+        }
+
+        const control = event.target.closest('[data-action]');
+        if (!control) return;
+        const action = control.dataset.action;
+
+        if (action === 'save' && state.taskState === 'TS-00') {
+          commit({
+            taskState: 'TS-10', jobKey: 'K', saveRequests: 1,
+            lastObservation: 'pending', nextEventAt: Date.now() + 1800
+          }, 'TR-02', '저장 요청을 한 번 보냈습니다. 현재 pending입니다.');
+        } else if (action === 'check' && state.taskState === 'TS-20') {
+          commit({ taskState: 'TS-21', statusChecks: 1, nextEventAt: Date.now() + 1800 }, 'TR-04', '새 저장 없이 같은 작업의 첫 상태를 확인합니다.');
+        } else if (action === 'check' && state.taskState === 'TS-30') {
+          commit({ taskState: 'TS-31', statusChecks: 2, nextEventAt: Date.now() + 1800 }, 'TR-06', '같은 작업의 두 번째 상태를 확인합니다.');
+        } else if (action === 'close') {
+          commit({ taskView: 'V-CLOSED' }, 'TR-11', '보기를 닫았습니다. 작업과 초안은 유지됩니다.', { focusSelector: '[data-action="reopen"]' });
+        } else if (action === 'reopen') {
+          commit({ taskView: 'V-OPEN' }, 'TR-12', '최신 작업 상태와 초안을 다시 열었습니다.', { focusSelector: '#save-title' });
+        } else if (action === 'back-list') {
+          navigate('library', 'NAV-02', '검색 문맥과 R-72 위치를 복원했습니다.');
+        } else if (action === 'open-item') {
+          navigate('item', state.lastTransition === 'NAV-02' ? 'NAV-03 · TR-12' : 'NAV-01', 'R-72와 보존된 저장 작업을 열었습니다.');
+        } else if (action === 'open-from-saved') {
+          navigate('item', 'NAV-07 · OD-03', '같은 R-72 상세를 열었습니다. 복귀 문맥은 미결입니다.');
+        } else if (action === 'tag-filter') {
+          navigate('library', 'NAV-02', '태그는 새 목적지가 아니라 D-LIB의 운영 필터입니다.');
+        } else if (action === 'require-auth' && ['TS-20', 'TS-21', 'TS-30', 'TS-31'].includes(state.taskState)) {
+          window.clearTimeout(eventTimer);
+          commit({ taskState: 'TS-90', nextEventAt: null, lastObservation: '인증 복구 필요' }, 'TR-16', '인증 복구 의존 상태입니다. 저장을 재전송하지 않습니다.');
+        } else if (action === 'recover-auth' && state.taskState === 'TS-90') {
+          commit({ lastObservation: '인증 복구됨 · 후속 API 미결' }, 'TR-17 · OD-02', '인증은 복구됐지만 후속 상태는 미결입니다. 같은 K를 유지합니다.');
+        } else if (action === 'reset') {
+          window.clearTimeout(eventTimer);
+          sessionStorage.removeItem(STORAGE_KEY);
+          state = defaults();
+          saveState();
+          render('#item-title');
+          announce('명시적 초기화로만 초안과 모의 작업 상태를 지웠습니다.');
+        }
+      });
+
+      render();
+    })();
+  </script>
+</body>
+</html>

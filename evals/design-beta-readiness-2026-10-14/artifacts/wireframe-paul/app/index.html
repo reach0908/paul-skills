@@ -1,0 +1,164 @@
+<!doctype html>
+<html lang="ko">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>자료 상세 와이어프레임 — R-72</title>
+  <link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg'/%3E">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <a class="skip-link" href="#main-content" data-jump="main-content">본문으로 건너뛰기</a>
+
+  <header class="site-header">
+    <div class="header-row">
+      <a class="product-name" href="?view=library&amp;q=%EC%9E%91%EC%9D%80+%ED%8C%80&amp;tag=%EC%9A%B4%EC%98%81&amp;sort=newest" data-route="library">공유 자료함</a>
+      <nav aria-label="주요 메뉴">
+        <a href="?view=library&amp;q=%EC%9E%91%EC%9D%80+%ED%8C%80&amp;tag=%EC%9A%B4%EC%98%81&amp;sort=newest" data-route="library">자료함</a>
+        <a href="#saved-preview" data-jump="saved-preview">내 보관함</a>
+        <a href="#help-note" data-jump="help-note">도움말</a>
+      </nav>
+    </div>
+    <form class="quick-search" id="quick-search" role="search">
+      <label for="header-search">자료 검색</label>
+      <div class="search-row">
+        <input id="header-search" name="q" value="작은 팀" autocomplete="off">
+        <button type="submit">검색</button>
+      </div>
+    </form>
+  </header>
+
+  <main id="main-content" tabindex="-1"></main>
+
+  <footer>
+    <p id="help-note" tabindex="-1"><strong>도움말</strong> 이 화면의 네트워크 요청과 저장 결과는 모두 모의 동작입니다.</p>
+  </footer>
+
+  <template id="detail-template">
+    <div class="screen" data-screen="D-ITEM">
+      <div class="context-bar" aria-label="목록 문맥">
+        <a href="?view=library&amp;q=%EC%9E%91%EC%9D%80+%ED%8C%80&amp;tag=%EC%9A%B4%EC%98%81&amp;sort=newest" data-route="library">← 자료 목록으로</a>
+        <span>검색 ‘작은 팀’ · 태그 ‘운영’ · 최신순</span>
+      </div>
+
+      <article aria-labelledby="item-title">
+        <div class="eyebrow">자료 R-72</div>
+        <h1 id="item-title">작은 팀에서 실패 후 다시 시도하기</h1>
+        <p class="lede">작은 팀이 실패를 기록하고, 다음 시도의 범위를 줄이며, 책임을 나누는 방법을 정리한 실무 자료입니다.</p>
+        <dl class="metadata">
+          <div><dt>작성자</dt><dd>김하나</dd></div>
+          <div><dt>태그</dt><dd><span class="tag">운영</span> <span class="tag">회고</span></dd></div>
+        </dl>
+
+        <nav class="in-page-nav" aria-label="자료 안에서 이동">
+          <a href="#article-body" data-jump="article-body">본문으로 건너뛰기</a>
+          <a href="#source-region" data-jump="source-region">출처 구역으로 이동</a>
+        </nav>
+
+        <section id="article-body" class="card prose" tabindex="-1" aria-labelledby="body-title">
+          <h2 id="body-title">본문</h2>
+          <p>실패 직후에는 원인을 단정하는 대신 관찰한 사실과 추측을 나눠 적습니다. 다시 시도할 때는 한 번에 바꾸는 조건을 줄이고, 확인할 지표와 중단 기준을 먼저 합의합니다.</p>
+          <p>회고 기록은 책임을 묻기 위한 문서가 아니라 다음 결정을 돕는 자료입니다. 팀원이 나중에 돌아와도 당시의 가정과 결과를 이해할 수 있어야 합니다.</p>
+        </section>
+
+        <section class="save-card" aria-labelledby="save-title">
+          <div class="section-heading">
+            <div>
+              <p class="eyebrow">T-SAVE</p>
+              <h2 id="save-title">내 보관함에 저장</h2>
+            </div>
+            <span class="status-badge" id="save-badge">저장 전</span>
+          </div>
+          <label for="save-note">내 메모</label>
+          <textarea id="save-note" rows="5" placeholder="나중에 기억할 내용을 적으세요."></textarea>
+          <p class="field-hint" id="draft-hint">메모 초안은 이 브라우저에 유지됩니다.</p>
+
+          <div class="actions">
+            <button type="button" class="primary" id="save-button">메모와 함께 저장</button>
+            <button type="button" id="open-status-button" hidden>진행 상태 보기</button>
+          </div>
+          <p class="duplicate-note" id="duplicate-note" hidden>같은 요청의 중복 저장은 막혀 있습니다. 새 저장 대신 기존 요청의 상태를 확인하세요.</p>
+
+          <section class="status-panel" id="status-panel" aria-labelledby="status-title" hidden>
+            <div class="section-heading compact">
+              <h3 id="status-title" tabindex="-1">저장 요청 상태</h3>
+              <button type="button" class="text-button" id="close-status-button">닫기</button>
+            </div>
+            <div class="notice" id="status-message" role="status" aria-live="polite"></div>
+            <dl class="request-data">
+              <div><dt>자료</dt><dd>R-72</dd></div>
+              <div><dt>요청</dt><dd id="request-id">아직 없음</dd></div>
+              <div id="receipt-row" hidden><dt>영수증</dt><dd id="receipt-id">—</dd></div>
+            </dl>
+            <div class="actions">
+              <button type="button" class="primary" id="check-status-button" hidden>상태 확인</button>
+            </div>
+          </section>
+
+          <aside class="mock-note">
+            <strong>모의 동작</strong>
+            <p>실제 계정·서버에 접근하지 않습니다. 네트워크 응답과 영수증을 로컬에서 재현합니다.</p>
+          </aside>
+
+          <div class="scenario-control">
+            <button type="button" id="reset-button">시나리오 재설정</button>
+            <span>초안과 모의 저장 결과를 지웁니다.</span>
+          </div>
+        </section>
+
+        <section id="source-region" class="card source-card" tabindex="-1" aria-labelledby="source-title">
+          <h2 id="source-title">출처</h2>
+          <p>원문: <a href="https://example.org/articles/small-team-retry" target="_blank" rel="noreferrer">example.org의 원문 열기<span class="visually-hidden">(새 탭)</span></a></p>
+        </section>
+
+        <section id="saved-preview" class="card" tabindex="-1" aria-labelledby="saved-title">
+          <h2 id="saved-title">내 보관함 안내</h2>
+          <p>저장이 확인되면 이 자료와 내 메모가 내 보관함에 표시됩니다.</p>
+        </section>
+
+        <aside class="open-decisions" aria-labelledby="open-title">
+          <h2 id="open-title">아직 정하지 않은 정책</h2>
+          <ul>
+            <li>인증 복구 뒤 같은 키로 작업을 다시 조회하는 서버 API</li>
+            <li>초대가 만료된 팀 자료의 읽기 권한</li>
+          </ul>
+        </aside>
+      </article>
+    </div>
+  </template>
+
+  <template id="library-template">
+    <div class="screen" data-screen="D-LIB">
+      <div class="eyebrow">D-LIB</div>
+      <h1>자료함</h1>
+      <p>상세로 들어오기 전의 검색과 목록 위치를 유지했습니다.</p>
+
+      <form class="filters" id="library-filters">
+        <label>검색어 <input name="q" value="작은 팀"></label>
+        <label>태그
+          <select name="tag"><option selected>운영</option><option>회고</option></select>
+        </label>
+        <label>정렬
+          <select name="sort"><option value="newest" selected>최신순</option><option value="oldest">오래된순</option></select>
+        </label>
+        <button type="submit">목록 적용</button>
+      </form>
+
+      <p class="results-summary" role="status">‘작은 팀’ · ‘운영’ · 최신순 결과 3개</p>
+      <ol class="result-list">
+        <li class="card muted-item"><span class="eyebrow">R-58</span><h2>작은 팀의 운영 리듬 만들기</h2><p>주간 운영 주기를 설계한 자료</p></li>
+        <li class="card current-item" id="list-item-r72">
+          <span class="eyebrow">보던 자료 · R-72</span>
+          <h2><a id="r72-detail-link" href="?view=detail&amp;q=%EC%9E%91%EC%9D%80+%ED%8C%80&amp;tag=%EC%9A%B4%EC%98%81&amp;sort=newest" data-route="detail">작은 팀에서 실패 후 다시 시도하기</a></h2>
+          <p>실패를 기록하고 다음 시도의 범위를 줄이는 방법</p>
+          <span class="tag">운영</span>
+        </li>
+        <li class="card muted-item"><span class="eyebrow">R-81</span><h2>결정 기록을 가볍게 유지하기</h2><p>나중에 읽히는 의사결정 기록법</p></li>
+      </ol>
+      <p class="context-confirmation">목록 위치: R-72 · 기존 검색 문맥을 보존함</p>
+    </div>
+  </template>
+
+  <script src="app.js"></script>
+</body>
+</html>

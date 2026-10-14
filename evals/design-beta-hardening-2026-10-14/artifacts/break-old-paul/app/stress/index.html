@@ -1,0 +1,87 @@
+<!doctype html>
+<html lang="ko">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<link rel="icon" href="data:,">
+<title>검토 대기 자료 스트레스 보고서</title>
+<link rel="stylesheet" href="../style.css">
+<link rel="stylesheet" href="../stress.css">
+<header>검토 대기 자료 스트레스 보고서</header>
+<main>
+  <h1>renderQueueCard 시나리오</h1>
+  <p>제목 상한이 따로 없어 여러 문장은 약 90자, 끊기지 않는 문자열은 80자로 가정했습니다.</p>
+  <div id="scenarios"></div>
+</main>
+<script type="module">
+  import { renderQueueCard } from '../queue.js';
+
+  const typicalTitle = '작은 팀에서 실패 후 다시 시도하기';
+  const sentenceTitle = '담당자가 고객 요청을 검토한 뒤 관련 부서와 확인하고, 필요한 보완 자료를 정리하여 다음 회의 전에 최종 의견을 남겨야 하는 운영 검토 자료입니다.';
+  const unbreakableTitle = 'R-2026-10-14-ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ0123456789';
+  const makeItems = (count, title = typicalTitle) => Array.from({ length: count }, (_, index) => ({
+    id: `R-${index + 1}`,
+    title: count === 1 ? title : `${index + 1}. ${title}`,
+  }));
+
+  const scenarios = [
+    {
+      label: '제목 길이 · 빈 문자열',
+      finding: '관찰된 깨짐: 자료를 식별할 제목 없이 작은 빈 버튼만 보입니다.',
+      props: { items: makeItems(1, '') },
+    },
+    { label: '제목 길이 · 한 단어', props: { items: makeItems(1, '검토') } },
+    { label: '제목 길이 · 일반 제목', props: { items: makeItems(1) } },
+    {
+      label: '제목 길이 · 여러 문장(약 90자)',
+      finding: '관찰된 깨짐: 한 줄 버튼이 카드 오른쪽 경계를 넘어갑니다.',
+      props: { items: makeItems(1, sentenceTitle) },
+    },
+    { label: '제목 길이 · 끊기지 않는 문자열(80자)', props: { items: makeItems(1, unbreakableTitle) } },
+    { label: '목록 수량 · 0개', props: { items: [] } },
+    { label: '목록 수량 · 1개', props: { items: makeItems(1) } },
+    { label: '목록 수량 · 현실적 수량 5개', props: { items: makeItems(5) } },
+    { label: '목록 수량 · 현실적 수량의 10배 50개', props: { items: makeItems(50) } },
+    { label: '좁은 컨테이너 · 일반 제목 · 320px', width: '320px', props: { items: makeItems(1) } },
+    {
+      label: '좁은 컨테이너 · 여러 문장 · 320px',
+      finding: '관찰된 깨짐: 한 줄 버튼이 320px 카드 오른쪽 경계를 크게 넘어갑니다.',
+      width: '320px',
+      props: { items: makeItems(1, sentenceTitle) },
+    },
+    {
+      label: '좁은 컨테이너 · 끊기지 않는 문자열 · 320px',
+      finding: '관찰된 깨짐: 끊기지 않는 제목 버튼이 320px 카드 오른쪽 경계를 크게 넘어갑니다.',
+      width: '320px',
+      props: { items: makeItems(1, unbreakableTitle) },
+    },
+    { label: '상태 · 권한 없음', props: { canEdit: false, items: makeItems(1) } },
+    { label: '상태 · 로딩', props: { status: 'loading', items: makeItems(1) } },
+    { label: '상태 · 오류', props: { status: 'error', items: makeItems(1) } },
+    { label: '상태 · 잠금', props: { locked: true, items: makeItems(1) } },
+    { label: '상태 · 새로고침', props: { refreshing: true, items: makeItems(1) } },
+  ];
+
+  const host = document.querySelector('#scenarios');
+  for (const scenario of scenarios) {
+    const section = document.createElement('section');
+    section.dataset.scenario = scenario.label;
+    const label = document.createElement('h2');
+    label.textContent = scenario.label;
+    section.append(label);
+    if (scenario.finding) {
+      const note = document.createElement('p');
+      note.textContent = scenario.finding;
+      section.append(note);
+    }
+
+    const container = document.createElement('div');
+    if (scenario.width) {
+      container.style.width = scenario.width;
+      container.style.maxWidth = '100%';
+    }
+    container.append(renderQueueCard(scenario.props));
+    section.append(container);
+    host.append(section);
+  }
+</script>
+</html>
