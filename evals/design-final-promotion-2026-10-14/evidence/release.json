@@ -1,0 +1,99 @@
+{
+  "releaseVersion": "0.4.0",
+  "releaseTag": "paul-skills@0.4.0",
+  "releaseCommit": "b6e460adadc5ea438fc740f86fe07c2f2f43fe89",
+  "remoteTagRefs": [
+    "adc4c1cf414d662739203b19f5a4ee2b1bf6900b\trefs/tags/paul-skills@0.4.0",
+    "b6e460adadc5ea438fc740f86fe07c2f2f43fe89\trefs/tags/paul-skills@0.4.0^{}"
+  ],
+  "pullRequests": [
+    {
+      "headRefOid": "af2947f54bfe746c54eb51ccec36bf67b00ba693",
+      "mergeCommit": {
+        "oid": "5a851724e7771bb383897b861eae95cc27748540"
+      },
+      "mergedAt": "2026-10-14T06:09:37Z",
+      "number": 14,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-14T06:08:47Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38520471513/job/115708767323",
+          "name": "validate",
+          "startedAt": "2026-10-14T06:08:30Z",
+          "status": "COMPLETED",
+          "workflowName": "Validate skills"
+        }
+      ],
+      "url": "https://github.com/reach0908/paul-skills/pull/14"
+    },
+    {
+      "headRefOid": "890d5dde9fcb1116553cf4e82b8a84fed5c41ef9",
+      "mergeCommit": {
+        "oid": "b6e460adadc5ea438fc740f86fe07c2f2f43fe89"
+      },
+      "mergedAt": "2026-10-14T06:12:35Z",
+      "number": 15,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-14T06:11:58Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38520787069/job/115709747910",
+          "name": "validate",
+          "startedAt": "2026-10-14T06:11:45Z",
+          "status": "COMPLETED",
+          "workflowName": "Validate skills"
+        }
+      ],
+      "url": "https://github.com/reach0908/paul-skills/pull/15"
+    }
+  ],
+  "workflowRuns": [
+    {
+      "conclusion": "success",
+      "databaseId": 38520471513,
+      "headSha": "af2947f54bfe746c54eb51ccec36bf67b00ba693",
+      "name": "Validate skills",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38520471513"
+    },
+    {
+      "conclusion": "failure",
+      "databaseId": 38520584977,
+      "headSha": "5a851724e7771bb383897b861eae95cc27748540",
+      "name": "Release",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38520584977"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38520787069,
+      "headSha": "890d5dde9fcb1116553cf4e82b8a84fed5c41ef9",
+      "name": "Validate skills",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38520787069"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38520877582,
+      "headSha": "b6e460adadc5ea438fc740f86fe07c2f2f43fe89",
+      "name": "Release",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38520877582"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38520877647,
+      "headSha": "b6e460adadc5ea438fc740f86fe07c2f2f43fe89",
+      "name": "Validate skills",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38520877647"
+    }
+  ],
+  "versionPrFailure": "GitHub Actions is not permitted to create or approve pull requests.",
+  "recovery": "Opened the generated version branch as PR 15 with the authorized maintainer account; removed one generated blank-line whitespace warning. Token permissions unchanged."
+}

@@ -28,13 +28,29 @@ IA·user-flow·wireframe은 직접 작성한 원본이다. 나머지 5개는 Jak
 - 승인한 스킬 파일 30개와 원본 기록이 동일하다. 문서·라우터·명시 호출 정책도 확인한다.
 - 임시 `CODEX_HOME`에 실제 marketplace/plugin 설치를 수행했다. 44개 모두 활성 상태로 발견했고 정식 스킬 파일 173개가 원본과 일치했다. [시험 설치 기록](evidence/trial-installation.json).
 - 이전 모델 산출물 1개의 Markdown 줄바꿈·EOF 공백은 원본 해시 보존을 위해 해당 파일에만 공백 예외를 지정했다. 다른 스킬·코드 검사는 유지한다.
-- 설치 후 실제 자연어·명시 호출은 아래 릴리스 기록에서 별도로 확정한다.
+- 설치 후 실제 자연어·명시 호출은 아래 새 문맥 기록에서 별도로 확인한다.
 
 ## 릴리스와 설치
 
-**로컬 승격과 시험 설치는 완료했다. 공개 발행과 일상 전역 갱신은 아직 하지 않았다.** [Changeset 계획](evidence/version-plan.json)은 0.3.0에서 0.4.0 minor 발행을 제시한다. 실제 시험 설치 버전은 `0.4.0-trial.20261014`이며 원본 44개 경로와 파일 173개를 그대로 패키징했다. 일상 Codex와 Claude Code 캐시 manifest는 모두 0.3.0, 정식 스킬 36개로 확인했다.
+**Paul Skills 0.4.0 정식 발행과 Codex·Claude Code의 사용자 범위 전역 갱신을 완료했다.** [승격 PR #14](https://github.com/reach0908/paul-skills/pull/14), [버전 PR #15](https://github.com/reach0908/paul-skills/pull/15)는 모두 CI 통과 후 병합됐다.
 
-원격 push·PR 생성은 자동 승인 심사에서 차단됐다. 평가 산출물·스크린샷을 포함한 구체적인 공개 payload에 대한 승인이 확인되지 않았다는 이유다. 차단된 호출은 실행되지 않았고 우회 게시하지 않았다. [차단 기록](evidence/approval-block.json), [검토할 공개 범위](PUBLICATION.md). 이후 사용자가 구체적인 공개 범위 질문에 “공개 및 배포 승인”으로 답했다. 그 승인에 따라 승격 PR, 버전 PR, 태그, 전역 설치와 새 카탈로그 검증을 진행한다.
+- 태그: `paul-skills@0.4.0`
+- 태그 커밋: `b6e460adadc5ea438fc740f86fe07c2f2f43fe89`
+- 태그 객체: `adc4c1cf414d662739203b19f5a4ee2b1bf6900b`
+- 같은 커밋의 [Release](https://github.com/reach0908/paul-skills/actions/runs/38520877582)와 [Validate skills](https://github.com/reach0908/paul-skills/actions/runs/38520877647) 모두 성공. [원격 발행 영수증](evidence/release.json).
+
+| 설치 확인 | 결과 |
+| --- | --- |
+| Codex 사용자 범위 플러그인 | 0.4.0, 활성, 정식 스킬 44개 |
+| Claude Code 사용자 범위 플러그인 | 0.4.0, 활성, 정식 스킬 44개 |
+| 각 설치본과 릴리스 파일 대조 | 각각 스킬 파일 173개 및 manifest 모두 일치 |
+| 새 Codex app-server 카탈로그 | 44개 모두 0.4.0 경로에서 활성 상태로 발견 |
+
+[설치 영수증과 파일별 해시](evidence/installation.json), [재검증 코드](verify_installation.py). 원래 설치는 두 호스트 모두 0.3.0, 36개였고 자체 Git marketplace의 정상 갱신 명령으로 0.4.0을 설치했다. 초기 임시 패키지의 `0.4.0-trial.20261014`와 실제 발행 버전을 구분한다.
+
+자동 버전 PR 생성은 GitHub Actions의 PR 생성 권한 제한으로 한 번 실패했다. [실패 실행](https://github.com/reach0908/paul-skills/actions/runs/38520584977)의 원문은 `GitHub Actions is not permitted to create or approve pull requests.`다. 유지관리 지침대로 생성된 버전 브랜치를 현재 계정으로 PR #15에 올렸고, 생성된 릴리스 노트의 공백 경고 1건만 정리했다. 토큰 권한은 변경하지 않았다.
+
+초기 원격 게시도 자동 승인 심사에서 한 번 차단됐다. 평가 자료·캡처의 구체적인 공개 승인이 확인되지 않았다는 이유였다. 이후 사용자가 [공개 범위](PUBLICATION.md)에 대해 “공개 및 배포 승인”으로 답했고, 그 승인 후 게시·병합·발행·설치를 진행했다. [초기 차단과 해소 기록](evidence/approval-block.json)을 보존한다.
 
 ## 시험 설치의 새 문맥 검증
 
@@ -52,6 +68,26 @@ IA·user-flow·wireframe은 직접 작성한 원본이다. 나머지 5개는 Jak
 [9/9 설치·진입점 결과](evidence/smoke-summary.json)와 사례별 입력, 읽은 스킬, 본문 해시, 명령·출력 해시를 보존한다. 역할 설명과 준비만 요청했으므로 9개의 구현 품질 시험으로 세지 않는다. 원시 로그는 로컬 `.scratch/design-final-promotion-20261014/`에 있으며 공개 자료에 인증값은 포함하지 않는다.
 
 설명 품질의 한계도 관찰됐다. 모든 시험 폴더에 동일한 파일을 넣어 wireframe 준비 과제에도 승인 구현 명세의 “구조 유지” 제약이 노출됐고, 모델은 이를 화면 상태 확장은 가능하다는 뜻으로 재해석했다. 일부 이웃 역할 설명도 state-machine을 전이 설계까지 맡는 것처럼 넓게 요약했다. 실제 파일 변경이나 해당 스킬의 실행은 없었지만, 설치 통과가 모든 준비 설명의 정확성을 보증하지 않는 사례다. 기존 단계 전달과 동작 증거를 이 요약 응답으로 대체하지 않았다.
+
+## 정식 전역 설치의 새 문맥 검증
+
+실제 전역 설치본으로 새 문맥 9개를 추가 실행했고 **설치·호출 검사 9/9가 통과했다.** 이전 임시 패키지 실행과 다른 문맥이며 모두 `0.4.0` 본문을 사용했다. 모델과 추론 수준은 동일한 `gpt-5.6-sol` / `xhigh`다.
+
+| 검사 | 결과 |
+| --- | --- |
+| 스킬 이름 없는 4개 준비 요청 | IA·flow·wireframe·build 각각 해당 설치 본문만 자동 로딩 |
+| 사용자 전용 4개 명시 호출 | 각 대상의 설치 파일과 동일한 전체 본문 주입 |
+| 명시한 ask-matt | 네 단계, 승인 시점과 state-machine 경계를 안내 |
+| 자동 노출·호출 경계 | 새 자동 역할 4개 노출, 사용자 전용 디자인 5개 비노출, 자연어 과제의 사용자 전용 본문 읽기 0회 |
+| 파일·명령 | 입력 파일 변경 0개, 기록된 명령 실패 0건 |
+
+[전역 9/9 결과](evidence/global/smoke-summary.json), [실행 코드](run_global_smoke.py), [수집 코드](collect_global_smoke.py), [과제 입력](evidence/global-inputs/). 원시 호스트 로그는 `.scratch/design-final-release-20261014/`에 보관한다. 각 공개 입력 파일을 실행 전 해시와 다시 맞췄다.
+
+이번에는 과제별 관련 파일만 제공해 wireframe에 구현 전용 명세가 섞이지 않도록 했다. 따라서 앞선 임시 실행과 같은 조건의 품질 재비교로 해석하지 않는다. 정식 전역 환경의 다른 설치 기능과 메모리는 유지했으므로 완전 격리 시험도 아니다.
+
+역할 요약의 한계는 남는다. break·variant 설명에서 이웃 state-machine을 상태·전이 설계까지 맡는 것처럼 넓게 말했지만, state-machine 자체의 명시 실행과 router는 기존 컴포넌트의 도달 가능한 상태를 보여 주는 작업대로 정확히 구분했다. 이는 설명의 정밀도에 대한 후속 관찰 항목이며, 9/9는 실제 구현 품질이나 모든 문장의 정확성 점수가 아니다.
+
+새 Codex CLI 문맥의 발견은 검증했다. 이미 열린 데스크톱 대화의 목록 갱신이나 Claude Code 모델 실행은 별도로 검증하지 않았다. 기존 호스트 세션은 재시작해 새 플러그인을 적용한다.
 
 ## 판단의 한계
 
