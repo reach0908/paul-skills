@@ -1,0 +1,92 @@
+{
+  "case": "explicit-state-machine",
+  "target": "state-machine",
+  "threadId": "01a13900-0a86-73e0-80a1-524efae7da17",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0-trial.20261014",
+  "checks": {
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true
+  },
+  "loadedSkills": [
+    "state-machine"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "state-machine",
+      "sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-state-machine",
+    "exitCode": 0,
+    "seconds": 24.64,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-20261014/explicit-state-machine",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-promotion-20261014/explicit-state-machine.final.md",
+      "-"
+    ],
+    "before": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "after": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "promptSha256": "16e8edcff13c6dd20ce4bed0888f5c5e82472973fd15dda7cd8394539ba784cc"
+  },
+  "prompt": "$paul-skills:state-machine\n설치된 이 스킬의 역할과 입력, 완료 조건, 이웃 역할과의 차이만 설명해줘. 이번에는 실제 구현, 조사, 브라우저 조작이나 파일 변경은 하지 마.",
+  "final": "`paul-skills:state-machine`은 실제 컴포넌트가 가질 수 있는 모든 상태를 임시 페이지에서 하나씩 전환하며 살펴보는 작업대입니다. 리뷰나 디자인 변경 도구는 아닙니다.\n\n### 역할\n\n- 실제 프로젝트 컴포넌트를 수정하지 않고 임시 라우트에 렌더링합니다.\n- 코드에 이미 존재하는 상태만 재현합니다.\n- 현실적인 목 데이터와 `__state` 검색 파라미터 기반 전환기를 제공합니다.\n- 사용자가 각 상태의 시각적 표현을 독립적으로 작업할 수 있게 합니다.\n\n### 입력\n\n- 한 번에 컴포넌트 하나\n- 프로덕션에서 렌더링되는 위치와 데이터 출처\n- 컴포넌트와 데이터 훅에 실제로 존재하는 상태 분기\n- 각 상태에 필요한 현실적인 목 데이터\n- 데이터를 주입할 경계:\n  - 우선 props\n  - 그다음 seeded cache, mock provider, request mock 등 앱의 기존 데이터 경계\n- 필요하면 상태별 브라우저 확인 환경\n\n컴포넌트 수정 없이는 데이터를 넣을 수 없다면, 새 데이터 seam을 임의로 만들지 않고 사용자 승인을 받아야 합니다.\n\n### 완료 조건\n\n- 실제 컴포넌트가 임시 페이지에서 수정 없이 렌더링됨\n- 도달 가능한 상태 목록과 제외한 상태의 이유가 기록됨\n- 각 상태가 `__state` 링크와 키로 전환됨\n- 모든 상태가 실제 데이터나 빈 영역이 아닌 의도한 목 데이터를 표시함\n- URL, 상태 목록, 전환기 키를 사용자에게 전달함\n- 시각 디자인은 요청 없이 변경하지 않음\n- 임시 페이지는 즉시 삭제하지 않고, 사용자가 요청할 때 한 번에 제거 가능하게 유지함\n\n### 이웃 역할과의 차이\n\n| 역할 | 차이 |\n|---|---|\n| `state-machine` | 컴포넌트의 기존 상태를 하나씩 전환하며 작업하는 지속적인 작업대 |\n| `break` | 오류, 과밀, 극단적 데이터 같은 적대적 상황을 한 화면에 쌓아 견고성을 확인 |\n| `variant` | 같은 문제에 대한 여러 디자인 대안을 탐색하고 비교 |\n| `interface-review` | 이미 완성된 인터페이스의 품질과 문제점을 검토 |\n| `design-browser` | 상태 자체를 만드는 역할이 아니라, 브라우저에서 렌더링과 동작 증거를 수집하는 보조 역할 |\n\n이번 답변에서는 구현, 조사, 브라우저 조작 및 파일 변경을 하지 않았습니다.",
+  "commands": [],
+  "rawTraceSha256": "87fd4a270eb5c87f1299788170e0cc73794c11159a953d06beb36bdbe2fba99c"
+}

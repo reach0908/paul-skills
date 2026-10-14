@@ -1,0 +1,92 @@
+{
+  "case": "explicit-break",
+  "target": "break",
+  "threadId": "01a13900-59c7-7de1-b509-b9a2d980cfb0",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0-trial.20261014",
+  "checks": {
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true
+  },
+  "loadedSkills": [
+    "break"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "break",
+      "sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-break",
+    "exitCode": 0,
+    "seconds": 26.41,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-20261014/explicit-break",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-promotion-20261014/explicit-break.final.md",
+      "-"
+    ],
+    "before": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "after": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "promptSha256": "27a27728b68e7e5ef39afb1d400f2f9df6a89c2031124fff78afaff779cbf6c8"
+  },
+  "prompt": "$paul-skills:break\n설치된 이 스킬의 역할과 입력, 완료 조건, 이웃 역할과의 차이만 설명해줘. 이번에는 실제 구현, 조사, 브라우저 조작이나 파일 변경은 하지 마.",
+  "final": "### 역할\n\n`break`는 실제 컴포넌트 하나를 격리된 임시 페이지에 여러 현실적 시나리오로 렌더링해, 최악의 콘텐츠나 상태에서도 시각적으로 깨지지 않는지 스트레스 테스트하는 스킬입니다.\n\n판단이나 개선안을 내는 것이 아니라, 실제로 보인 파손만 기록합니다.\n\n### 입력\n\n- 테스트할 컴포넌트 하나\n- 컴포넌트의 props, slots, 상태와 렌더링 데이터\n- 필드 제약이나 기존 콘텐츠 등 현실적인 극단값을 정할 근거\n- 앱 안에서 실제 컴포넌트를 가져와 렌더링할 수 있는 환경\n\n여러 컴포넌트가 지정되면 후보를 나열하고 하나를 선택받아야 합니다. 적용할 시나리오는 컴포넌트가 실제 운영 환경에서 받을 수 있는 변화만 포함합니다.\n\n### 완료 조건\n\n다음을 충족하면 완료입니다.\n\n- 관련 있는 시나리오와 제외한 축의 이유가 정리됨\n- 실제 컴포넌트를 변경하지 않고 임시 페이지에 시나리오별로 렌더링함\n- 한 번의 브라우저 확인으로 모든 시나리오를 관찰함\n- 실제로 보인 파손만 페이지와 결과 표에 기록하고 담당 도메인 스킬을 지정함\n- 아무 문제도 없으면 “모든 시나리오를 통과했다”고 보고함\n- 임시 페이지는 사용자가 삭제를 요청할 때까지 유지함\n\n브라우저 확인이 불가능하면 URL과 시나리오 목록만 전달하며, 관찰하지 않은 문제를 추정해 보고하지 않습니다.\n\n### 이웃 역할과의 차이\n\n- `interface-review` / `better-interface`: 기준에 따라 코드나 인터페이스 전반을 평가합니다. `break`는 격리된 컴포넌트에서 눈에 보인 파손만 관찰합니다.\n- `variant`: 실제 페이지 맥락에서 디자인 대안을 탐색합니다. `break`는 의도적으로 맥락에서 분리해 컴포넌트 자체의 방어력을 검사합니다.\n- `state-machine`: 컴포넌트의 제품 상태와 전이를 하나씩 설계·검토합니다. `break`는 도달 가능한 상태들을 한 페이지에 병렬로 렌더링해 빠르게 비교합니다.\n- `better-typography`, `better-writing` 같은 도메인 스킬: 발견된 문제의 규칙을 진단하고 수정 방향을 소유합니다. `break`는 문제를 발견하고 담당자를 지정할 뿐, 자체 규칙으로 판정하거나 수정하지 않습니다.",
+  "commands": [],
+  "rawTraceSha256": "7a5a6b7d3823c65589c16e6181e049fd0ca05c5ccb4640806475fa4686fbe48f"
+}

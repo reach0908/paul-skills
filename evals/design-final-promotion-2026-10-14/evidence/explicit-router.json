@@ -1,0 +1,135 @@
+{
+  "case": "explicit-router",
+  "target": "ask-matt",
+  "threadId": "01a13900-bfff-7890-9cf0-a954d0ae5e98",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0-trial.20261014",
+  "checks": {
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true,
+    "fourStageRoutePresent": true,
+    "componentWorkbenchNamed": true
+  },
+  "loadedSkills": [
+    "ask-matt",
+    "build-design",
+    "information-architecture",
+    "state-machine",
+    "user-flow",
+    "wireframe"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "ask-matt",
+      "sha256": "42ff3c4bf91f9f64fd28a257ac65a771d77dadff4919899f3df801700506be1e",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-router",
+    "exitCode": 0,
+    "seconds": 46.49,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-20261014/explicit-router",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-promotion-20261014/explicit-router.final.md",
+      "-"
+    ],
+    "before": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "after": {
+      "index.html": "b0bfbb8036780cb73c09877ebcdd27a7415d7ed1881d14cdac5a8f0aae17049d",
+      "styles.css": "ab7374010c0065f042ee034e512e06ad73fe740c88080be873900c804eee1363",
+      "FLOW.md": "12de8b5e0bd6bce7e84ff2b62eb6da56cd2f0ebddcf203fd01e9156f18604a87",
+      "DESIGN.md": "4dcc516b7af8804b79ed7b8da94d93ec90cdc7a3d0fb43ce6d05398130cac373",
+      "BRIEF.md": "970ff729047f5627d64c74cac37b91aef2db649fdd3b091d3d79617ceb92ad80"
+    },
+    "promptSha256": "c1c15a8da6c94112c8d160956102df59a0d38bee13babda6d71b5800167cd245"
+  },
+  "prompt": "$paul-skills:ask-matt\n기획이 끝난 제품을 로컬 정보구조, 흐름, 화면, 승인 시안 구현까지 넘기는 스킬 순서와 기존 컴포넌트 상태 작업대와의 경계를 안내해줘. 지금은 추천만 하고 다른 작업을 실행하지 마.",
+  "final": "추천 순서는 다음입니다.\n\n1. `$paul-skills:information-architecture`\n   - 확정된 기획을 목적지, 라벨, 내비게이션 구조로 정리\n   - 안정적인 destination ID와 콘텐츠 배치를 정의\n\n2. `$paul-skills:user-flow`\n   - 각 작업의 행동, 전이, 성공·실패·취소·이탈·복귀를 명세\n   - IA의 destination ID를 이어받아 flow/state ID를 부여\n\n3. `$paul-skills:wireframe`\n   - 흐름을 로컬 저충실도 인터랙티브 화면과 Markdown 화면 명세로 변환\n   - 화면 계층, 액션 배치, 반응형 순서와 mock 경계를 결정\n\n4. 시안 승인 후 `$paul-skills:build-design`\n   - 승인된 프로토타입·화면 명세·Figma·이미지를 기존 토큰과 컴포넌트로 구현\n   - 원본과 렌더링 결과를 비교하고 차이·미연결 영역을 기록\n\n이미 확정된 단계는 반복하지 않고, 처음 미확정된 단계부터 진입하면 됩니다. 단계 사이에는 입력 문서의 revision, destination/state ID, 미결정을 그대로 넘기는 것이 핵심입니다.\n\n`state-machine`의 경계는 명확합니다.\n\n- `$paul-skills:state-machine <컴포넌트>`는 **기존 컴포넌트 하나의 코드상 도달 가능한 상태**를 작업하는 별도 작업대입니다.\n- 실제 컴포넌트를 임시 경로에 올리고, mock 데이터와 상태 전환기를 붙여 loading·empty·error·권한별 상태 등을 빠르게 오갑니다.\n- 제품 흐름을 설계하거나 새로운 상태를 발명하지 않으며, `user-flow`의 선행 조건도 아닙니다.\n- 화면 구조와 반응형 배치는 `wireframe`, 승인 시안의 제품 코드 구현은 `build-design`이 담당합니다.\n- 상태별 시각 조정이 필요할 때만 사용자가 명시적으로 호출하며, 작업대 제거도 사용자의 별도 지시가 있을 때 수행합니다.\n\n이번에는 추천과 경계 안내만 했으며, 어떤 설계·구현 작업도 실행하지 않았습니다.",
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/engineering/ask-matt/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "42ff3c4bf91f9f64fd28a257ac65a771d77dadff4919899f3df801700506be1e"
+    },
+    {
+      "command": "/bin/zsh -lc \"rg --files /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014 | rg '/(information-architecture|user-flow|wireframe|build-design|state-machine)/SKILL\\\\.md\"'$'\"'\"",
+      "exitCode": 0,
+      "outputSha256": "98daae89abc130eebd6d10879c5930fd604a9facc38c8ce52d1e550626f9c43c"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,400p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/design/information-architecture/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,400p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/design/build-design/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,400p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/design/wireframe/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,400p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/design/user-flow/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "a8b1a4df0fa20cf6b01ba49a969b8b33cc5620926e0d67ef7663e53a8f51d828"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,400p' /private/tmp/paul-design-final-20261014/trial-home/plugins/cache/paul-final-trial-20261014/paul-skills/0.4.0-trial.20261014/skills/design/state-machine/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0"
+    }
+  ],
+  "rawTraceSha256": "686c32c0cf10449e31a146307f6707a7e5e1344290b07a1fe8a2ec979c14f5b4"
+}
