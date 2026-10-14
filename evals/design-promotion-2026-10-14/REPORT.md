@@ -9,7 +9,7 @@
 | 사용자 직접 호출 | `interface-review` |
 | 자동 또는 직접 호출 | `better-interface`, `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`, `design-browser` |
 
-플러그인의 정식 스킬은 27개에서 36개로 늘어난다. 후보의 파일 61개는 [직전 검증](../design-routing-repair-2026-10-14/REPORT.md)과 바이트가 같다. 폴더만 `skills/in-progress/`에서 `skills/design/`으로 옮겼다. 직접 원본 8개는 Jakub의 고정된 소스에서 적응한 스킬이고 `design-browser`는 직접 작성한 실행 역할이다. 원본 revision과 출처별 digest를 승격 때문에 다시 찍거나 원본 검토 이력을 진전시키지 않았다.
+플러그인의 정식 스킬은 27개에서 36개로 늘어난다. 후보의 파일 61개를 `skills/in-progress/`에서 `skills/design/`으로 옮겼다. 60개는 [직전 검증](../design-routing-repair-2026-10-14/REPORT.md)과 바이트가 같다. 독립 규칙 검토에서 나온 Aside 조사 참조 파일 1개의 호출 표현만 보완했으며, [승인본 해시](approved-files.json)와 [검토 후 변경](reviewed-adjustments.json)을 별도로 보존했다. 직접 원본 8개는 Jakub의 고정된 소스에서 적응한 스킬이고 `design-browser`는 직접 작성한 실행 역할이다. 원본 revision과 출처별 digest를 승격 때문에 다시 찍거나 원본 검토 이력을 진전시키지 않았다.
 
 나머지 8개인 `information-architecture`, `user-flow`, `wireframe`, `state-machine`, `break`, `explain-interface`, `variant`, `build-design`은 베타로 남는다. 공개 저장소의 베타 소스와 정식 플러그인 포함 여부를 구분한다. 별도 PM 스킬 PR #10은 이번 작업의 대상이 아니다.
 
@@ -33,8 +33,20 @@
 - 저장소 검사: 56개 출처 기록, 36개 정식 경로, 38개 테스트 통과.
 - 두 manifest의 엄격한 검증 통과.
 - 전체 신규 파일을 포함한 공백 검사에서 고정 평가 자료 28개에 43개 경고가 나왔다. 패치의 문법상 공백과 기록된 파일 끝 개행을 보존하도록 해당 경로만 `.gitattributes`에 지정했다. 실제 스킬과 구현 파일의 검사는 유지했다.
-- 승격 전후의 파일 61개 해시 일치.
+- 승인본 파일 60개 해시 일치, 검토 후 수정 파일 1개는 이전·이후 해시로 검증.
 - 인증 정보 패턴 검사에서 발견된 실제 키나 토큰 없음. 모델 원시 로그와 임시 인증 연결은 공개 패키지에 포함하지 않는다.
+
+## 독립 검토
+
+### Standards
+
+문서화된 규칙 위반 1건: `design-browser/references/aside.md`가 `research` 의존성을 명시적인 Skill 도구 호출로 표현하지 않았다. 해당 도구가 있으면 호출하고, 없을 때만 설치된 파일을 읽고 절차를 따르도록 고쳤다. 도구 없는 호스트의 기존 경로는 유지된다. 단어 수준의 패키지 검토이며 실제 Aside 모델 실행을 새로 했다는 뜻은 아니다.
+
+선택적 개선 1건: 기존 `prototype`과 `design-browser`의 도구 정책에 일부 중복이 있다. 현재 동작이 일치하며 승인된 프로토타입 흐름을 이 승격에서 다시 바꾸지 않았다. 추후 통합 대상으로 남긴다.
+
+### Spec
+
+요구사항 누락, 요청 밖 변경, 잘못된 구현을 발견하지 못했다. 검토 당시 61개 후보 파일이 이전 최종 시험 패키지와 같았음을 별도로 대조했다. 그 뒤의 규칙 보완 1개는 위 조정 목록에 기록한다.
 
 ## 릴리스와 설치
 
