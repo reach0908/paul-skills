@@ -57,4 +57,6 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 
 - [Domain discovery and reference-reading repair](design-domain-entry-repair-v4-2026-10-14/REPORT.md) checks the actual shortened Codex catalog, preserves three failed candidates, verifies native reference reads and repeats the full cross-host routing/scope matrix.
 
-- [Final routing and reference proof](design-contrast-reference-proof-2026-10-14/REPORT.md) records the release recommendation, unchanged-dependency evidence, fresh color regressions, explicit source-reading proofs and retained diagnostic failures. Global installations remain unchanged.
+- [Final routing and reference proof](design-contrast-reference-proof-2026-10-14/REPORT.md) records the release recommendation, unchanged-dependency evidence, fresh color regressions, explicit source-reading proofs and retained diagnostic failures. That record describes the pre-release candidate; the subsequent 0.4.2 installation record below covers publication and global activation.
+
+- [Design routing patch 0.4.2 release](design-routing-0.4.2-release-2026-10-14/REPORT.md) records the immutable release tag, both actual user installations, complete installed-source equality, fresh host sessions, and retained execution limitations.

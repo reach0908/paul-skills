@@ -1,0 +1,19 @@
+{
+  "reason": "Two valid read-only Git queries were misclassified as failed document reads: exact untracked-file existence probe and exact no-match search in valid HEAD. Retain first grading; replay only those exact commands and require identical outputs plus independent HEAD/file evidence. Model runs, prompts, installed sources and semantic criteria are unchanged.",
+  "before": {
+    "collect_codex.py": "4ef9525f2716a26e3be35f68aa90c5d11f0b14fda8bd0faa2076ecb8fbd78ae3"
+  },
+  "after": {
+    "collect_codex.py": "77e461d8050b8a930f66e378754a6de5afd3d69572b14739ae869a917508dbf9",
+    "expected_git_results.py": "c7b3aba216814c1ccc4d17914dce0526c9d06023df6e4022ec038dbf16d09c52",
+    "test_expected_git_results.py": "3bc0b27ba8163551284510737f7ae631da4ae9cb7ae2ba2eb7321090b0b85289"
+  },
+  "controls": {
+    "existing": 26,
+    "new": 8,
+    "total": 34,
+    "result": "pass"
+  },
+  "first_grade": "initial-grader/working-divergent.json",
+  "first_grade_semantics": "Semantic review was pending; no_failed_commands was the actual grader false negative."
+}

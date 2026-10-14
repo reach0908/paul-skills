@@ -1,0 +1,86 @@
+{
+  "case_id": "explicit-owner",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13ab4-fe84-7960-bd8e-26bcbe39857a",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "daily_global_install": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "이번 응답은 준비 명세이며, 확인된 UI 결과나 발견 사항은 없습니다.\n\n- **범위:** `working`은 현재 `HEAD`를 기준으로 한 전체 작업 트리의 순변경입니다. 추적 파일의 staged+unstaged 변경과 untracked 파일을 포함하며, 기존 커밋은 제외합니다.\n- **필요 입력:** 현재 `HEAD` SHA, `git diff HEAD` 결과, untracked 파일 목록, 제외 대상(락파일·스냅샷·생성물 등), 변경 의도/요구사항. 렌더링 검증이 필요하면 별도 허용도 필요합니다.\n- **분류 방식:**\n  - `Introduced`: 이번 변경이 새 결함을 만듦\n  - `Regression`: `HEAD`에서는 올바르던 동작이 약화되었고 동등한 대체도 없음\n  - `Pre-existing`: `HEAD`부터 존재했고 이번 변경이 악화하지 않음 \u2014 최대 3건만 부가적으로 기록\n- **완료 조건:** 전체 diff의 추가·삭제 양쪽을 읽고, 영향받는 화면과 주요 소비자를 확장해 확인한 뒤, 접근성·레이아웃·문구·타이포그래피·색상·UI 영역별 커버리지와 모든 발견의 상태를 기록합니다. 브라우저 검증을 하지 않았다면 시각·런타임 주장은 `Not verified`로 남기고 최종 판정을 냅니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and foc",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-r",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading ",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and moti",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the proj",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, ",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered ",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification."
+  },
+  "loaded_skills": [
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+  },
+  "expected_exit_evidence": {},
+  "commands": [],
+  "usage": [
+    {
+      "input_tokens": 24471,
+      "cached_input_tokens": 11264,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 697,
+      "reasoning_output_tokens": 320
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "18d6201d8dcb99f77078026dd5720aa6f50f0df4a97896beb944b6846883ee51",
+  "cases_sha256": "bd6644f8eb98616b1addd79b7907e42a6c1ab1350aed1e9456815d25844d67e1",
+  "bundle_manifest_sha256": "7fdca87937dadec06c77e291d2d6f596a401deebcad7ac4d8fadf3702e5b07b5",
+  "stream_sha256": "dd43bced4abe92f188c2b3b0fbded7cc5f99939850330bd63ff0f54a860c2f7e",
+  "transcript_sha256": "68c2b3a085f5f950351c000302378608b69af66cc6866a5ba9270c85fbb63302",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 20.182
+}
