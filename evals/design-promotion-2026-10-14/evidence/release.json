@@ -1,0 +1,75 @@
+{
+  "pullRequests": [
+    {
+      "headRefOid": "3fdc4933df604c8eb32ba8dba5a7ecad12e16331",
+      "mergeCommit": {
+        "oid": "f3a959e8f5d38742a69eab1f89f2f336e9631086"
+      },
+      "mergedAt": "2026-10-14T02:30:32Z",
+      "number": 11,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-14T02:29:51Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38501298240/job/115648637972",
+          "name": "validate",
+          "startedAt": "2026-10-14T02:29:36Z",
+          "status": "COMPLETED",
+          "workflowName": "Validate skills"
+        }
+      ],
+      "url": "https://github.com/reach0908/paul-skills/pull/11"
+    },
+    {
+      "headRefOid": "8ebaefbf5494e6f9d3167ae27faec79d3118b4e7",
+      "mergeCommit": {
+        "oid": "0fd300cfa675dbaac149d416294fd6454df58474"
+      },
+      "mergedAt": "2026-10-14T02:32:31Z",
+      "number": 12,
+      "state": "MERGED",
+      "statusCheckRollup": [
+        {
+          "__typename": "CheckRun",
+          "completedAt": "2026-10-14T02:32:10Z",
+          "conclusion": "SUCCESS",
+          "detailsUrl": "https://github.com/reach0908/paul-skills/actions/runs/38501507688/job/115649292222",
+          "name": "validate",
+          "startedAt": "2026-10-14T02:31:52Z",
+          "status": "COMPLETED",
+          "workflowName": "Validate skills"
+        }
+      ],
+      "url": "https://github.com/reach0908/paul-skills/pull/12"
+    }
+  ],
+  "releaseRuns": [
+    {
+      "conclusion": "success",
+      "databaseId": 38501575475,
+      "headSha": "0fd300cfa675dbaac149d416294fd6454df58474",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38501575475",
+      "workflowName": "Release"
+    },
+    {
+      "conclusion": "success",
+      "databaseId": 38501575388,
+      "headSha": "0fd300cfa675dbaac149d416294fd6454df58474",
+      "status": "completed",
+      "url": "https://github.com/reach0908/paul-skills/actions/runs/38501575388",
+      "workflowName": "Validate skills"
+    }
+  ],
+  "tag": "paul-skills@0.3.0",
+  "tagObject": "3b6338382786b76c4c06388f2104ceefd914d10b",
+  "tagCommit": "0fd300cfa675dbaac149d416294fd6454df58474",
+  "versionPrFallback": {
+    "failedRun": "https://github.com/reach0908/paul-skills/actions/runs/38501395583",
+    "reason": "GitHub Actions is not permitted to create or approve pull requests.",
+    "generatedCommit": "8ebaefbf5494e6f9d3167ae27faec79d3118b4e7",
+    "resolution": "Maintainer account opened the unchanged generated branch as PR #12; token permissions unchanged."
+  }
+}

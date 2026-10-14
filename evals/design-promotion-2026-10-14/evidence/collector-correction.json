@@ -1,0 +1,15 @@
+{
+  "initialSmokeSummary": {
+    "cases": 3,
+    "passed": 2,
+    "distinctThreads": 3,
+    "model": "gpt-5.6-sol",
+    "effort": "xhigh",
+    "globalInstallation": true,
+    "qualityComparisonRepeated": false
+  },
+  "initialFalseCheck": "explicit-review.explicitRoleLoaded",
+  "cause": "The first collector only accepted skill headers from shell commands with exit code 0. A successful sed read was followed by an rg search with no matches, so the compound command exited 1. It also omitted the host-provided <skill> message.",
+  "correction": "Verify the full host-injected skill body against the installed file and include that evidence in loaded skills.",
+  "modelCasesRerun": false
+}

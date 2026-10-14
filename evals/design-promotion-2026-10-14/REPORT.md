@@ -50,4 +50,37 @@
 
 ## 릴리스와 설치
 
-릴리스와 전역 설치 갱신은 아직 진행 중이다. PR, 태그, 워크플로와 설치 캐시를 각각 확인한 뒤 완료 기록을 추가한다. 설치 방법은 [공식 OpenAI 플러그인 문서](https://developers.openai.com/plugins/build/plugins)와 실제 설치된 CLI 도움말로 확인했다. 기존 열린 대화의 자동 목록이 새 설치본으로 바뀌었다고 가정하지 않는다.
+**Paul Skills 0.3.0 정식 발행과 두 호스트의 전역 설치 갱신을 완료했다.** [승격 PR #11](https://github.com/reach0908/paul-skills/pull/11)과 [버전 PR #12](https://github.com/reach0908/paul-skills/pull/12)는 병합됐고 각각 저장소 CI를 통과했다.
+
+- 태그: `paul-skills@0.3.0`
+- 태그가 가리키는 커밋: `0fd300cfa675dbaac149d416294fd6454df58474`
+- 태그 객체: `3b6338382786b76c4c06388f2104ceefd914d10b`
+- 해당 커밋의 Release와 Validate skills 워크플로 모두 성공. [원격 실행 영수증](evidence/release.json).
+
+자동 버전 PR 생성은 GitHub Actions의 PR 생성 권한 제한으로 한 번 실패했다. [실패 실행](https://github.com/reach0908/paul-skills/actions/runs/38501395583)의 원문은 `GitHub Actions is not permitted to create or approve pull requests.`다. 유지관리 문서에 따라 자동 생성된 `8ebaefb` 브랜치를 그대로 현재 유지관리 계정으로 PR #12에 올렸다. 토큰 권한은 변경하지 않았다. 그 뒤 태그 발행은 [정상 완료](https://github.com/reach0908/paul-skills/actions/runs/38501575475)했다.
+
+| 확인 대상 | 결과 |
+| --- | --- |
+| Codex 사용자 범위 플러그인 | 0.3.0, 활성, 정식 스킬 36개 |
+| Claude Code 사용자 범위 플러그인 | 0.3.0, 활성, 정식 스킬 36개 |
+| 각 설치본 파일 대조 | 정식 스킬 파일 143개 모두 릴리스와 해시 일치 |
+| manifest 대조 | 두 설치본 모두 릴리스 manifest와 동일 |
+| 새 Codex app-server 카탈로그 | 36개 모두 설치·활성 상태로 발견 |
+
+[설치 영수증과 파일별 해시](evidence/installation.json). 설치 방법은 [공식 OpenAI 플러그인 문서](https://developers.openai.com/plugins/build/plugins)와 설치된 CLI 도움말로 확인했다. Codex에서는 marketplace upgrade 후 plugin add를 사용했고, Claude에서는 marketplace update 후 사용자 범위 plugin update를 사용했다.
+
+## 설치 후 새 세션 검증
+
+실제 전역 설치본을 사용해 대화 이력이 없는 Codex CLI 세션 3개를 실행했다. 모델은 앞선 검증과 같은 `gpt-5.6-sol`, 추론 설정은 `xhigh`다. 정상 전역 메모리와 다른 설치 기능은 유지했으므로 격리·맹검 품질 비교가 아니라 설치 후 호출 점검이다.
+
+| 사례 | 확인 결과 |
+| --- | --- |
+| 이름 없는 미커밋 변경 요청 | `interface-review working` 안내로 종료. 변경 diff와 화면 소스를 검토하거나 판정을 내리지 않음 |
+| 일반 화면 리뷰 | `better-interface`와 6개 도메인 로딩. 키보드·가로 넘침·중복 상세 내용·기본 글꼴 설정의 4개 유효 발견 유지 |
+| 명시한 `interface-review working` | 사용자 직접 호출이 실제 스킬 본문으로 주입됨. 정확한 작업 트리 범위를 검토하고 키보드 회귀와 기존 가로 넘침 문제를 분리 |
+
+세 세션의 자동 선택 목록에는 디자인 역할 8개가 있었고 사용자 전용 `interface-review`는 없었다. 명시 호출에서는 설치된 파일과 일치하는 전체 본문이 제공됐다. 세 입력 화면은 전후 해시가 같으며 브라우저를 실행하거나 수정하지 않았다. [3/3 요약](evidence/smoke-summary.json), [일반 변경 요청](evidence/implicit-diff-a.json), [화면 리뷰](evidence/implicit-review.json), [명시 변경 리뷰](evidence/explicit-review.json).
+
+첫 수집 결과는 2/3이었다. 수집기가 성공한 스킬 읽기 뒤의 검색 결과 없음(exit 1)을 명령 전체 실패로 취급했고, 호스트가 직접 주입한 스킬 본문도 누락했다. 전체 주입 본문을 실제 설치 파일과 대조하는 수집 보완 후, 같은 로그에서 3/3으로 재산정했다. 모델 재실행이나 실패 표본 제외는 없었다. [수집 보완 기록](evidence/collector-correction.json)과 [수집 코드](collect_smoke.py)를 남긴다. 원시 실행 로그는 로컬 `.scratch/design-promotion-20261014/`에 보존한다.
+
+이 검증은 새 브라우저 QA나 전체 원본 비교의 재실행이 아니다. Claude Code 모델 실행과 기존에 열려 있던 데스크톱 대화의 목록 갱신도 확인하지 않았다. 새 채팅에서 정식 스킬을 사용하고, 기존 대화가 이미 받은 목록과 새 설치본을 구분한다. 나머지 8개 디자인 후보는 정식 플러그인 밖의 베타로 유지한다.
