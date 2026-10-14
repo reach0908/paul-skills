@@ -60,3 +60,5 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [Final routing and reference proof](design-contrast-reference-proof-2026-10-14/REPORT.md) records the release recommendation, unchanged-dependency evidence, fresh color regressions, explicit source-reading proofs and retained diagnostic failures. That record describes the pre-release candidate; the subsequent 0.4.2 installation record below covers publication and global activation.
 
 - [Design routing patch 0.4.2 release](design-routing-0.4.2-release-2026-10-14/REPORT.md) records the immutable release tag, both actual user installations, complete installed-source equality, fresh host sessions, and retained execution limitations.
+
+- [Color evidence consistency](design-color-evidence-2026-10-14/REPORT.md) preserves the historical contradiction, records non-reproduction in fixed repeats, and compares a preventive reporting clarification in 24 fresh native sessions. The candidate passes 12/12; one ancillary baseline Claude overclaim remains recorded. Global installations stay at 0.4.2.

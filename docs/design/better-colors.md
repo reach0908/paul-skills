@@ -36,6 +36,10 @@ No. A consistent existing system is retained. New ramps and tokens need a role t
 
 No. Placeholder text in an active input and read-only text use the applicable WCAG text threshold. Disabled controls have a separate exemption. APCA readability targets are reported separately and do not replace WCAG requirements.
 
+**Can a declared color pair prove that the screen passes?**
+
+A calculation establishes contrast for its stated colors and compositing assumptions. It leaves actual UI application unverified. The report distinguishes calculated pairs, rendered checks and pending inputs, and keeps that distinction in its final summary. Unknown image or backdrop content stays pending; fully specified transparency can still be calculated.
+
 **Can it estimate contrast from a screenshot?**
 
 A reported ratio must be measured. Transparency, gradients and CSS precedence can change the pair, so the report must state what was measured and what remains uncertain.
@@ -43,6 +47,7 @@ A reported ratio must be measured. Transparency, gradients and CSS precedence ca
 ## It's working if
 
 - Contrast claims identify their colors, backgrounds and measurement method.
+- The final summary preserves pending checks instead of treating a calculation or plan as a completed screen review.
 - Token names describe roles and keep the same meaning across themes.
 - Unused ramp steps and unexplained palette expansion are avoided.
 
