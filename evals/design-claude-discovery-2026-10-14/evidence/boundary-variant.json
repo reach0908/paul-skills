@@ -1,0 +1,234 @@
+{
+  "schema_version": 1,
+  "case_id": "boundary-variant",
+  "mode": "boundary",
+  "protocol_version": 2,
+  "trial_directory_name": "case_034",
+  "expected": "better-ui",
+  "prompt": "기존 카드의 외곽 radius 16px와 안쪽 이미지 radius 16px가 어색해. 구조와 디자인 방향을 유지하면서 간격 4px에 맞는 작은 시각 보정의 기준만 설명해줘. 여러 디자인 대안이나 비교 작업대는 필요 없어.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "9793a287-ae64-423f-a459-ab1a3786cd6a",
+  "started_at": "2026-10-14T08:05:16.790742+00:00",
+  "host_init_session_id": "9793a287-ae64-423f-a459-ab1a3786cd6a",
+  "host_result_session_id": "9793a287-ae64-423f-a459-ab1a3786cd6a",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "44a241ab-6522-49bd-8c8b-4d1b4e57c0fe",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-ui",
+      "event_uuid": "cb07efd8-cbe1-4dd2-8d0e-2a415e3a11ca",
+      "file_sha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3",
+      "body_sha256": "19c846f1fd210f1539ab6daa488115ddb961e3fe2405af5c3ed9f3c941e8bba6",
+      "host_message_sha256": "95275ecf67f2ef898ada8b071045405d2c4ead8965b3ef4111c8c224460d4e76",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01HW12nT9yP5EPcriUhsZmyP",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cea45e8c4b6e93eec241bf313a39b0cbcf840d58c255a1eb3204b8ec76d823ba"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-ui",
+        "args": "기존 카드 외곽 radius 16px, 안쪽 이미지 radius 16px, 간격(inset) 4px. 구조·디자인 방향 유지, 동심 radius 보정 기준만 짧은 명세로. 파일 수정·브라우저 실행 금지. 대안 비교 불필요."
+      },
+      "tool_use_id": "toolu_01Wyhk9tfmdtE9peizqwTUQ1",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "4eae7c961905e1e1a8e170adb5288d4054dd6792f3122cdbfa5f86807595ddf8"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-ui/surfaces.md"
+      },
+      "tool_use_id": "toolu_01MJyg5cYiw44jqaniTPLSwS",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2a1b56c54a94c43c272735132f4ab326fc20fec00ec69d6086419fd0a88ae177"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 폴더가 비어 있어서 실제 카드 코드는 확인하지 못했어요. 아래 값은 전부 **확인 전(Not verified)** 기준이에요.\n\n## 보정 기준: 동심 radius\n\n```\n바깥 radius = 안쪽 radius + 간격 + 테두리 두께\n```\n\n**고정하는 값:** 카드 외곽 16px는 그대로 둡니다. 카드의 외형이고, 보통 다른 카드와 같은 토큰을 씁니다. 20px로 바꾸면 다른 카드들과 어긋나서 지금 디자인 방향이 바뀌어요.\n\n**안쪽 이미지 radius:**\n- 카드에 테두리가 없으면 **12px** (16 − 4)\n- 1px 테두리가 있으면 **11px** (16 − 4 − 1)\n  - `border: 1px solid transparent`처럼 보이지 않는 테두리도 공간을 차지하므로 1px로 칩니다.\n  - `box-shadow: 0 0 0 1px` 링은 공간을 차지하지 않으므로 빼지 않습니다.\n\n## 적용 조건\n\n- **꼭 맞춰야 하는 곳:** 이미지가 카드 가장자리와 4px 간격으로 붙어 있는 모서리만 이 공식이 필요해요. 이미지가 위쪽에 있고 아래에 텍스트가 오면 위쪽 두 모서리가 여기에 해당합니다.\n- **나머지 모서리:** 아래쪽 모서리는 공식이 필요 없지만, 값을 하나로 두는 게 단순하니 네 모서리 모두 같은 값을 줍니다.\n- **radius를 줄 요소:** 실제로 잘라내는 요소에 줘야 해요. 감싸는 요소에 `overflow: hidden`이 있으면 `<img>`가 아니라 그 요소에 radius를 줍니다. 그러지 않으면 보정이 화면에 반영되지 않아요.\n\n## 확정에 필요한 입력\n\n1. 카드 컴포넌트 파일 경로(또는 CSS나 클래스 코드)\n2. 카드 테두리가 있는지와 그 두께, 또는 테두리 대신 box-shadow 링을 쓰는지\n3. 4px 간격이 이미지 네 변에 똑같이 적용되는지\n4. 이미지 radius가 `<img>`에 있는지, 잘라내는 감싸는 요소에 있는지\n5. 16px가 카드 공용 토큰인지, 토큰에 12px나 11px 값이 있는지\n   - 16px가 이 카드에만 쓰이고 토큰에 12px나 11px가 없다면, 외곽 16px를 고정한다는 위 기준을 다시 정해야 해요.\n\n이 입력을 주시면 정확한 수정 위치와 값을 짚어드릴게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 71.099,
+  "duration_api_ms": 69577,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 19803,
+    "cache_read_input_tokens": 59087,
+    "output_tokens": 2858,
+    "output_tokens_details": {
+      "thinking_tokens": 1484
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17819,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1193,
+        "cache_read_input_tokens": 19403,
+        "cache_creation_input_tokens": 2148,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2148
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 24024,
+        "output_tokens": 1959,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1022,
+        "cache_read_input_tokens": 21551,
+        "cache_creation_input_tokens": 1984,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1984,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 2858,
+      "cacheReadInputTokens": 59087,
+      "cacheCreationInputTokens": 19803,
+      "webSearchRequests": 0,
+      "costUSD": 0.22148140000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1484,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 24024,
+      "outputTokens": 1959,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.33819,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5596714,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 5,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "58f385716b02dc3baa057d7eb8bb68a594e8bc2d24d02f638a7fe880ab8af2bc",
+  "transcript_sha256": "00c9ff473a724b3a410bcd2703c00b4f684c56677f0b5dc0d13e7d3ebdaac225",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

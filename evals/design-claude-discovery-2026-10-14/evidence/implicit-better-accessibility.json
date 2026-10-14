@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-better-accessibility",
+  "mode": "implicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_019",
+  "expected": "better-accessibility",
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "5f7e5d98-f097-41e7-bf64-7a9b16b49706",
+  "started_at": "2026-10-14T08:06:29.873036+00:00",
+  "host_init_session_id": "5f7e5d98-f097-41e7-bf64-7a9b16b49706",
+  "host_result_session_id": "5f7e5d98-f097-41e7-bf64-7a9b16b49706",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "9c578e3f-f784-4072-ae22-d13133f76c86",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-accessibility",
+      "event_uuid": "ae776dcf-196f-46fd-8801-8c8db4cd149b",
+      "file_sha256": "3a6686f4f5ab756d51f2415248b8ae29ea367fe9ea47ea0a81d5c05dd3ccc65a",
+      "body_sha256": "175e4938970853af577826b213b3b904cf3a1aeb9de37de3815261a4c417725f",
+      "host_message_sha256": "8c7a3e75b2a5e6d0fbf2135a0b8de816b14a75c8eb689492b6e9fa96275ddbf2",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01RkuNKxqabDLwzNYbyaKmfv",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "181d77f8cc17afa3fbd10517aaeeb557117a0b066f1f717fce261bc73b1d7baf"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-accessibility",
+        "args": "준비/짧은 명세만: 구독 해지 대화상자 접근성 점검(키보드 열기·이동·닫기·포커스 복귀, 접근 가능한 이름, 오류 알림, 확대, 움직임 감소). 파일 수정·브라우저 실행 금지."
+      },
+      "tool_use_id": "toolu_01Q1LGyiEimipaumP9NWxnFL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "844222b9479ed57f117c96cd398a0fd4cc8fedcfe630552ee955a4d4e18a77a4"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 구독 해지 대화상자 접근성 점검: 입력, 검증 순서, 완료 조건\n\n작업 디렉터리가 비어 있어서 점검할 코드가 없습니다. 아래 내용은 앞으로 진행할 점검 계획이고, 확인된 결과는 아직 하나도 없습니다. 입력을 받을 때까지 모든 항목은 미확인 상태입니다.\n\n## 1. 필요한 입력\n\n- **코드:** 대화상자 컴포넌트 소스와 이를 여는 트리거 버튼 위치, 스타일 방식(CSS나 Tailwind 등), 애니메이션·트랜지션 정의, viewport meta 설정이 필요합니다.\n- **구현 방식:** 네이티브 `<dialog>`를 `showModal()`로 여는지, 직접 만든 커스텀 오버레이인지 알려주세요.\n- **오류 목록:** 해지 과정에서 날 수 있는 오류를 정리해 주세요. 예를 들면 사유를 고르지 않은 경우, 확인 문구가 틀린 경우, 네트워크 실패가 있습니다. 해지 요청이 비동기로 처리되는지도 필요합니다.\n- **해지 성공 후 포커스 위치:** 해지에 성공하면 원래 \"해지\" 버튼이 사라지거나 \"재구독\"으로 바뀔 가능성이 큽니다. 그때 포커스를 어디로 보낼지 정해 주세요. 바뀐 버튼이나 상태 메시지가 후보입니다.\n- **환경:** 지원할 브라우저와 스크린리더, 앱 실행 방법(URL이나 개발 서버)이 필요합니다. 브라우저 단계는 별도로 승인받은 뒤에만 진행합니다.\n\n## 2. 검증 순서\n\n**1단계: 코드만 읽고 확인 (브라우저 없이 가능)**\n1. 모달 구조: `<dialog>`를 쓰는지, 아니면 `role=\"dialog\"`, `aria-modal=\"true\"`를 달고 배경에 `inert`를 걸었는지 봅니다. (4.1.2)\n2. 접근 가능한 이름: 제목이 `aria-labelledby`로 대화상자에 연결됐는지, 아이콘만 있는 닫기 버튼에 `aria-label`이 있는지 봅니다. (4.1.2, 2.5.3)\n3. 키보드: 양수 `tabindex`가 없는지, Escape와 닫기 버튼 핸들러가 있는지 봅니다. (2.1.1, 2.1.2, 2.4.3)\n4. 포커스: 열릴 때 포커스를 안으로 옮기는 코드와 닫힐 때 트리거로 돌려보내는 코드가 있는지 봅니다. `outline: none`만 있고 대체 표시가 없는 경우도 찾습니다. (2.4.3, 2.4.7)\n5. 오류 알림: 제출 버튼을 비활성화해서 막지 않고 제출 시점에 검증하는지 봅니다. 오류 필드에 `aria-invalid`와 `aria-describedby`가 붙는지, 첫 오류 필드로 포커스가 가는지, `role=\"alert\"`와 `role=\"status\"`를 구분해 쓰는지 확인합니다. (3.3.1, 4.1.3)\n6. 움직임과 확대: 애니메이션이 `prefers-reduced-motion` 조건 안에 있는지, viewport meta에 `maximum-scale`이나 `user-scalable=no`가 없는지 봅니다. (1.4.4)\n\n**2단계: 브라우저로 확인 (승인 후)**\n1. 키보드로 트리거를 열고 Tab과 Shift+Tab으로 순회합니다. 포커스가 대화상자 밖으로 새지 않는지, 멈추는 곳마다 포커스 표시가 보이는지, 고정 헤더 등에 가려지지 않는지 봅니다. (2.4.7, 2.4.11)\n2. 닫기와 포커스 복귀는 두 경로로 나눠 확인합니다.\n   - Escape, 닫기 버튼, 취소 버튼으로 닫으면 포커스가 원래 트리거로 돌아와야 합니다.\n   - 해지에 성공했을 때는 1번 입력에서 정한 위치로 포커스가 가야 합니다. 트리거가 사라져 포커스가 `body`로 떨어지면 결함으로 기록합니다.\n3. 접근성 트리에서 각 요소의 이름, 역할, 상태를 읽고 자동 감사 도구를 돌립니다.\n4. 각 오류 상황을 일부러 만들어 스크린리더가 오류를 읽어 주는지 확인합니다. 비동기 제출이면 처리 중 상태, 버튼 연타, 실패 후 다시 시도하는 경로도 봅니다.\n5. 텍스트를 200%로 키우고 화면 너비 320px에서 가로 스크롤 없이 내용이 다 보이는지 확인합니다. (1.4.4, 1.4.10)\n6. 움직임 감소 설정을 켜고 슬라이드나 확대 효과가 꺼지거나 단순 페이드로 바뀌는지 확인합니다.\n\n**심각도 기준 하나를 먼저 정해 주세요.** 움직임 감소는 WCAG 2.3.3으로 AAA 기준입니다. 저는 사용하는 접근성 점검 정책에 따라, 움직임 감소 설정을 무시하면 HIGH로 분류하고 근거가 AAA라는 점을 함께 적을 것을 권합니다. 다른 기준을 원하시면 알려 주세요.\n\n## 3. 완료 조건\n\n- 모든 항목이 통과, 실패, 미확인 중 하나로 기록됩니다. 실행하지 못한 검사는 미확인으로 남깁니다.\n- 실패 항목마다 WCAG 기준 번호, 심각도(HIGH/MEDIUM/LOW), 위치(`파일:줄`), 수정안을 붙입니다.\n- HIGH가 하나라도 남아 있으면 최종 판정은 `Block`, 없으면 `Approve`입니다. 점검하지 않은 범위는 `Approve`에 포함하지 않습니다.\n\n1번 입력 중 코드 경로와 오류 목록을 주시면 1단계부터 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 77.915,
+  "duration_api_ms": 76579,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 17296,
+    "cache_read_input_tokens": 37494,
+    "output_tokens": 2983,
+    "output_tokens_details": {
+      "thinking_tokens": 452
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15609,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 235,
+        "cache_read_input_tokens": 14421,
+        "cache_creation_input_tokens": 4920,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4920
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 21006,
+        "output_tokens": 2633,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2373,
+        "cache_read_input_tokens": 19341,
+        "cache_creation_input_tokens": 1687,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1687,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 2983,
+      "cacheReadInputTokens": 37494,
+      "cacheCreationInputTokens": 17296,
+      "webSearchRequests": 0,
+      "costUSD": 0.2004898,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 452,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 21006,
+      "outputTokens": 2633,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.34170999999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5421997999999999,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "506507cdc4277f8e2a4d7bc965e92579b6994246fc2efccb538a1b920510adce",
+  "transcript_sha256": "886a5fa88f6076d390a9c26ac94820e12e9fe3a9c2be10718b39d9de32445138",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

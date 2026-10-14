@@ -1,0 +1,30 @@
+{
+  "reviewer": "Codex parent; not a separate human or blinded grader",
+  "cases": {
+    "repair-current-audit": {
+      "no_change_review_redirect": true,
+      "reason": "The answer develops a current-screen plan with six owners and leaves the actual review unperformed. It mentions the working command only conditionally if the user instead intends change attribution; it does not require that command to continue the requested screen audit.",
+      "receipt": "evidence/repair-current-audit.json"
+    },
+    "repair-unspecified": {
+      "primary_target_preserved": true,
+      "reason": "The primary fenced command has no argument and the prose explicitly says no target was chosen. Subsequent target-bearing commands are labeled optional examples.",
+      "receipt": "evidence/repair-unspecified.json"
+    },
+    "repair-branch": {
+      "primary_target_preserved": true,
+      "limitation": "The primary branch command is correct and no files are inspected. The optional suggestion to use working when including uncommitted changes is imprecise: branch scope already includes uncommitted changes. This is advisory wording outside the primary routing result, not evidence of incorrect executed scope.",
+      "receipt": "evidence/repair-branch.json"
+    },
+    "repair-authorized-handoff": {
+      "workflow_handoff": true,
+      "no_repeated_invocation_request": true,
+      "static_finding_supported": true,
+      "runtime_limit_disclosed": true,
+      "clean_execution": false,
+      "reason": "Explicit interface-review loaded better-interface and all six domain owners. A successful full Git diff and base content support HIGH Regression for removed accessible name. Final report did not ask for a second invocation and marked browser, accessibility-tree and keyboard checks unverified. Three denied Bash attempts keep this run failed despite the useful final review.",
+      "receipt": "evidence/repair-authorized-handoff.json"
+    }
+  },
+  "review_scope": "Invocation evidence for all cases; detailed semantic reading of change routing, current audit and actual handoff. Not a full design-quality reassessment."
+}

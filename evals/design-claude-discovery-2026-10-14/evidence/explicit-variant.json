@@ -1,0 +1,216 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-variant",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_017",
+  "expected": "variant",
+  "prompt": "/paul-skills:variant 현재 가격 카드를 유지하며 다른 구성안을 옆에서 비교하는 로컬 작업대를 만들려고 해. 이번에는 구현하지 말고 필요한 입력과 비교 범위, 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "c6fde2c0-e7b9-4ec6-ad93-432f31d8c46f",
+  "started_at": "2026-10-14T08:02:40.952741+00:00",
+  "host_init_session_id": "c6fde2c0-e7b9-4ec6-ad93-432f31d8c46f",
+  "host_result_session_id": "c6fde2c0-e7b9-4ec6-ad93-432f31d8c46f",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "d97f955c-6242-4c06-ba00-25ba2788d316",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "variant",
+      "event_uuid": "c5358905-2ba9-487c-b30c-303fbc6add7e",
+      "file_sha256": "0eec1591a0e8e5dfa1e6f79dfab7ab6baeacb67f3c9a36429ea650b514e92867",
+      "body_sha256": "5a50e6de49576d992453ee771ae5e5c02b83f82cf4641b0e7eb1b50b42c15184",
+      "host_message_sha256": "ec6bf57e06ca9d62f1f7751d16ccee4bda44d1c2a74bb71e51916576d3d0da21",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_0182F7RNCtXsCRrdE4ixT2QE",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "85a5a64988fc3a846b447f1ef0d68170a980e92f5f72d664dbd1e31a143927d7"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "variant"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 폴더(`case_017`)가 비어 있습니다. 현재 가격 카드, 그 카드가 들어가는 페이지, 디자인 토큰을 아무것도 찾지 못했습니다. 그래서 아래 내용은 확인한 결과가 아니고, 작업 전에 받아야 할 입력과 계획입니다.\n\n## 1. 필요한 입력\n\n- **현재 가격 카드:** 컴포넌트 파일 위치와 그 카드를 실제로 보여주는 페이지 위치가 필요합니다. 비교안들은 이 페이지 안에서, 실제 주변 요소와 함께 띄웁니다. 현재 카드는 수정하지 않고 비교 선택기의 한 항목(`current`)으로 그대로 둡니다.\n- **스타일 시스템과 토큰:** 색, 간격, 모서리 둥글기, 글자 크기 단계가 필요합니다. 없으면 무채색 회색과 강조색 하나, 시스템 기본 폰트로 진행해도 되는지 확인 부탁드립니다.\n- **실제 데이터:** 플랜 개수와 이름, 가격과 통화, 월간/연간 전환 여부, '추천'·'할인' 같은 배지, 버튼 문구가 필요합니다. 플랜 수는 임시로 넣은 세 개가 아니라 페이지에 실제로 들어갈 수만큼이어야 합니다.\n- **기준 화면 폭:** 예를 들어 375px과 1440px입니다. 화면 아래쪽에 고정되는 요소가 있다면 320×450 크기에서도 따로 확인합니다.\n- **비교 기준 확인:** \"다른 구성안\"은 **구조**(묶는 방식, 순서, 열 수, 무엇을 접을지)를 바꾸는 비교로 이해했습니다. 이 기준이 맞는지 확인 부탁드립니다.\n\n## 2. 비교 범위\n\n- **대상은 가격 카드 하나만입니다.** 비교안은 세 개이고, 위의 기준 하나에서 각각 다른 위치를 잡습니다. 이름도 방향을 드러내게 짓습니다(A/B/C 대신, 예를 들어 `Stacked` · `Columns` · `Compact`). 다른 요소는 기준에 맞춰 따라가게만 하고, 따로 흔들지 않습니다.\n- **'옆에서 비교'는 확인이 필요합니다.** 이 방식은 한 번에 비교안 하나를 원래 크기로 보여주고 `?__variant=` 주소로 바꿔 가며 봅니다. 나란히 축소해서 놓으면 간격과 크기가 왜곡되는데, 고르려는 차이가 보통 바로 그 간격입니다. 그래서 하나씩 바꿔 보는 쪽을 권합니다. 꼭 나란히 봐야 하는 이유가 있으면 알려주세요.\n- **상태 유지:** 비교안을 바꿔도 선택한 플랜, 월간/연간 전환, 비활성 상태와 안내 문구가 그대로 남아야 합니다. 초기화가 필요하면 선택기와 별도로 이름이 붙은 버튼을 둡니다.\n- **접근성 최소 기준은 모든 비교안에 똑같이 적용합니다.** 비교 대상이 아니고, 어떤 비교안도 이 기준을 포기하지 않습니다.\n\n## 3. 완료 조건\n\n- 실제 페이지에서 `current`와 비교안 세 개를 주소 파라미터로 바꿔 가며 볼 수 있습니다. 비교용 코드는 이 페이지 한 곳에서만 불러옵니다.\n- 모든 비교안이 접근성 최소 기준을 통과합니다: 포커스 표시, 키보드로 모든 조작 가능, 320px 폭과 200% 확대에서 잘림 없음, 대비, 색만으로 의미를 전달하지 않음, 움직임 줄이기 설정 존중.\n- 브라우저에서 모든 비교안을 넘겨 보며 렌더링, 상호작용, 콘솔 오류 없음을 확인합니다. 이번에는 브라우저를 실행하지 않았으므로 구현 후의 일입니다.\n- 비교표(비교안 / 위치 / 적합한 경우 / 비용)를 드립니다. 추천은 표시하지 않습니다.\n- 하나를 고르면 그 안을 정식 코드로 옮깁니다. 나머지 비교안과 선택기, `__variant` 코드는 삭제하고, 남은 흔적이 없는지 검색으로 확인합니다.\n\n**다음 단계:** 카드 파일 위치, 실제 데이터, 비교 기준(구조가 맞는지), 나란히 볼지 여부를 알려주시면 비교안 이름과 각 위치부터 정하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 56.104,
+  "duration_api_ms": 54799,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14826,
+    "cache_read_input_tokens": 38234,
+    "output_tokens": 2246,
+    "output_tokens_details": {
+      "thinking_tokens": 435
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13707,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 91,
+        "cache_read_input_tokens": 17063,
+        "cache_creation_input_tokens": 376,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 376
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 18842,
+        "output_tokens": 1936,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1839,
+        "cache_read_input_tokens": 17439,
+        "cache_creation_input_tokens": 1119,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1119,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 2246,
+      "cacheReadInputTokens": 38234,
+      "cacheCreationInputTokens": 14826,
+      "webSearchRequests": 0,
+      "costUSD": 0.1678418,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 435,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 18842,
+      "outputTokens": 1936,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.28522000000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.45306180000000007,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "d965c31184e5b1929334b2306c1ee88b520646a9eb6b53921b6aa28f0dcab212",
+  "transcript_sha256": "8c104e8f5fe64a21ed4fca676a493fc86bffe4fe7685dae16b4de27ddb314306",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

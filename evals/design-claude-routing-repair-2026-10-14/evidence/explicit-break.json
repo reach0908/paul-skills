@@ -1,0 +1,193 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-break",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_028",
+  "expected": "break",
+  "prompt": "/paul-skills:break 기존 결제 카드가 긴 내용과 극단적인 데이터, 다양한 상태에서 견디는지 한 화면에 모아 확인하려고 해. 이번에는 구현하지 말고 필요한 입력, 작업 범위와 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "8215d54a-8b9f-4088-9f40-873a12a7a2c0",
+  "started_at": "2026-10-14T09:00:10.276440+00:00",
+  "host_init_session_id": "8215d54a-8b9f-4088-9f40-873a12a7a2c0",
+  "host_result_session_id": "8215d54a-8b9f-4088-9f40-873a12a7a2c0",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "4423ccef-cf46-4f7d-b5bd-4ff3cdce7818",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "break",
+      "event_uuid": "5eff2171-e0c3-488f-904e-ad0272086338",
+      "file_sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+      "body_sha256": "dbd97e9b761c9988ec640d90648538dc528f6a0a0df157b0ed1dab2886459dde",
+      "host_message_sha256": "18ad6dddc67b5d660ced69fb755cbd53422e918ff03a0aa53c140f4eefa4bc7c",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01Ja3EwjphpX7jHT6z6Kay1w",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "0ca7fb11ffe7a04843b4616f1aa647b8a2ab87758199a4d8a909ed52abb3618a"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/break/scenarios.md"
+      },
+      "tool_use_id": "toolu_01SyAYF4w4qLNyWzUUciCzZJ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "eaf523c8283c6ddcf4712abed5e3bb8cb223c578ce304857d0905c72a053589b"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "break"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_028`)가 비어 있어서 결제 카드 컴포넌트를 찾지 못했습니다. 그래서 아래 시나리오는 실제 props를 읽고 정한 게 아니라 임시 후보입니다. 확인되거나 관찰된 결과는 아직 없습니다. 이번 응답에서는 시나리오 기준 문서만 읽었고, 파일을 수정하거나 브라우저를 실행하지 않았습니다.\n\n## 필요한 입력\n\n1. **컴포넌트 하나 지정**: 파일 경로와 export 이름이 필요합니다. \"결제 카드\"가 저장된 카드 표시인지, 주문 요약 카드인지, 요금제 카드인지 하나로 정해 주세요.\n2. **props 또는 타입 정의**: 두 가지를 구분해야 합니다.\n   - 외부에서 들어오는 텍스트·데이터 필드: 소유자명, 카드 브랜드, 끝 4자리, 만료일, 금액, 통화, 상품명 등\n   - props로 받는 상태: loading, error, disabled, 만료됨, 선택됨 등\n3. **필드 상한값**: 최대 길이 제약이나 실제 데이터에서 가장 긴 값이 필요합니다. 없으면 제가 가정한 값을 쓰고 리포트에 가정이라고 적겠습니다.\n4. **앱 실행 정보**: 프레임워크(Next App Router라면 `\"use client\"`), dev 명령, 포트, 임시 라우트를 둘 위치와 그 위치에 만들어도 되는지가 필요합니다.\n5. **의존성**: 테마, i18n 같은 필요한 provider를 알려 주세요. Stripe Elements처럼 외부 SDK iframe을 감싸는 컴포넌트라면 실제 서비스가 필요하고 fixture로만 테스트할 수 없으니 미리 알려 주셔야 합니다.\n6. **지원 환경**: 다크 모드, RTL 로케일, 다중 통화를 지원하는지 알려 주세요.\n\n## 작업 범위 (다음 실행 시)\n\n**포함**\n- 임시 client 라우트 1개를 만듭니다. 실제 컴포넌트를 수정 없이 import하고, 시나리오마다 라벨을 붙여 한 열로 나열합니다.\n- 컨테이너 폭: 320px, 형제 요소에 밀려 좁아진 경우, 매우 넓은 경우\n- 내용 길이: 빈 값, 한 단어, 일반 값, 여러 문장, 끊을 곳 없는 긴 문자열(이름이나 이메일)\n  - 긴 값은 일반 폭과 가장 좁은 폭 모두에 넣습니다.\n- 극단적인 데이터(후보):\n  - 아주 큰 금액, 0원, 환불(음수)\n  - 소수점 0자리·3자리 통화(JPY, KWD)\n  - 선택 필드 누락\n  - 이모지, RTL, 발음 구별 기호\n  - 금액 숫자 폭 정렬\n- 상태: props로 실제로 존재하는 상태만 넣습니다.\n- 다크 모드, 확대, 모션 감소 같은 보기 환경은 페이지에서 흉내 내지 않습니다. 직접 전환해 보시도록 리포트에 이름만 적습니다.\n\n**제외**\n- 제품 파일 수정이나 수정 작업\n- 실제 데이터·결제 API 연결\n- 임의 테마나 스타일 추가\n- 뷰포트 크기 조정이나 시나리오별 브라우저 실행\n- 스타일 취향 평가\n\n## 완료 조건\n\n- 페이지를 만들기 전에 시나리오 목록(한 줄씩)과 제외한 축 및 이유(한 줄)를 먼저 공유합니다.\n- 모든 시나리오가 fixture 내용과 함께 렌더링되어야 합니다. 비어 보이는 칸이 있으면 컴포넌트가 아니라 하네스 문제로 봅니다.\n- `design-browser`로 한 번 로드해서 한 번 훑어봅니다. 눈에 보이게 깨진 부분은 해당 시나리오 라벨 아래에 한 줄로 표시하고, 표시는 한 번에 넣습니다.\n- 리포트는 시나리오 / 관찰 내용 / 담당 스킬 표로 정리하고 깨진 항목을 먼저 둡니다. 깨진 게 없으면 \"모두 통과\"라고 쓰고 시나리오 목록과 URL을 붙입니다.\n- 브라우저로 열지 못하면 URL과 시나리오 목록만 드리고, 발견 사항은 쓰지 않습니다.\n- 페이지는 계속 띄워 둡니다. 말씀하실 때만 삭제하고, 삭제 후 라우트나 fixture가 남지 않았는지 확인합니다.\n\n입력 1, 2번(컴포넌트 경로와 props)을 주시면 그걸 기준으로 시나리오를 확정하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 35.537,
+  "duration_api_ms": 34300,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15049,
+    "cache_read_input_tokens": 20459,
+    "output_tokens": 3198,
+    "output_tokens_details": {
+      "thinking_tokens": 1206
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15049,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2919,
+        "cache_read_input_tokens": 16727,
+        "cache_creation_input_tokens": 2054,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2054
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 3198,
+      "cacheReadInputTokens": 20459,
+      "cacheCreationInputTokens": 15049,
+      "webSearchRequests": 0,
+      "costUSD": 0.1884598,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1206,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1884598,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "eeae59155314286288317e95612104a70aef3170925dd041271a74004bb02f98",
+  "transcript_sha256": "f45d253265e06f004e1e0f3e674f27db537d2f68ec114bf4594024c11f03d4e9",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

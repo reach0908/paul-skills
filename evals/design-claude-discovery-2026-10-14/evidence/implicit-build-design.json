@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-build-design",
+  "mode": "implicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_029",
+  "expected": "build-design",
+  "prompt": "승인된 로컬 브라우저 시안과 Markdown 화면 명세를 기존 웹 프로젝트에 구현하려고 해. 원본 시안의 구조와 토큰·컴포넌트를 유지하고 화면과 동작의 일치 여부를 확인해야 해. Figma는 쓰지 않아. 구현 착수에 필요한 파일과 접근 경로, 비교할 증거와 완료 조건만 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "74530cce-d139-4701-82ae-273d6fd889b5",
+  "started_at": "2026-10-14T08:12:42.506635+00:00",
+  "host_init_session_id": "74530cce-d139-4701-82ae-273d6fd889b5",
+  "host_result_session_id": "74530cce-d139-4701-82ae-273d6fd889b5",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "f5a884c1-4897-4718-8562-de2275d0d376",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "build-design",
+      "event_uuid": "76ef9970-2534-4038-b69d-6d72dc959f15",
+      "file_sha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "body_sha256": "a33b394fb00a72f4c91e4d66c3c54f2392923f4c3bd4721d5fed4f361196992e",
+      "host_message_sha256": "dcfb7dfc4052adaf219b234d572dc2f3cf93cd7df4dfc9663b1ce8863e2f286a",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:build-design",
+        "args": "준비 단계만: 승인된 로컬 브라우저 시안 + Markdown 화면 명세를 기존 웹 프로젝트에 구현하기 위한 파일·접근 경로·비교 증거·완료 조건 정리. 제품 파일 수정, 브라우저·외부 서비스 실행 금지. Figma 미사용."
+      },
+      "tool_use_id": "toolu_01CPi3npUiCjNmw8K74AQD7F",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2cf8bdbfbd940565705513eff8f9940707972e97b08b91b6424203c66668bc15"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01Xq3Erp1dYC28Cn1Fw2AuCv",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7c6c97020f4ed0c0f0cf492f3b55a1a8eddc4ee5ee1e030eb881c35af42131d8"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/build-design/browser-and-spec.md"
+      },
+      "tool_use_id": "toolu_01CCmsHfsJZrRegzM3wxPboT",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "779cfdc78b96a66066c11b4537ce7c2e567c7fb4dcc00c911a89671e300b6070"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "Precondition 확인 결과 작업 디렉터리 `$TRIAL`가 비어 있어요. 브라우저 시안, Markdown 명세, 웹 프로젝트를 하나도 찾지 못했으니 아래 내용은 확인된 결과가 아니라 착수 전 체크리스트예요. 파일 수정과 브라우저 실행은 하지 않았어요.\n\n## 1. 필요한 입력 (모두 아직 받지 못함)\n\n| 입력 | 필요한 정보 |\n| --- | --- |\n| 승인된 브라우저 시안 | 로컬 HTML 경로나 dev route, 버전(커밋 해시나 파일 digest), 승인된 시안이 여러 개면 그중 어느 것인지 |\n| Markdown 화면 명세 | 파일 경로와 버전, 화면·상태 ID 목록 |\n| 기존 웹 프로젝트 | 루트 경로, 패키지 매니저, dev 실행 스크립트와 포트, 구현할 route |\n| 토큰 | 토큰이 정의된 파일 경로(CSS 변수, Tailwind config, theme 파일 등) |\n| 컴포넌트 | 컴포넌트 라이브러리 경로와 variant 정의 |\n| 결정 기록 | ADR이나 decisions 문서(시안과 명세가 다를 때 따를 기준) |\n| 범위 | 구현할 화면·상태, 화면 너비(명세에 없다면 정해 주세요) |\n| 데이터 | 이미 있는 API나 store, 백엔드가 없는 부분 |\n\n## 2. 비교할 증거 (구현 후 수집)\n\n- **캡처 쌍:** route·상태·너비 조합마다 시안 캡처와 구현 캡처를 하나씩 남겨요. 각 캡처에는 시안 버전, 코드 버전, route, 상태, 화면 크기, 입력 방식을 기록해요.\n- **요소별 수치 표:** 간격, 크기, radius, 색, 타입, 컴포넌트 variant를 \"명세 값 / 브라우저에서 측정한 값 / 추정 값\"으로 구분해서 적어요.\n- **토큰 매핑 표:** 시안의 값마다 대응하는 토큰을 적고, 가장 가까운 토큰으로 맞춘 값은 표시해 둬요.\n- **동작 기록:** 명세에 적힌 인터랙션, 상태 전환, 키보드·포커스 순서를 기록해요. 캡처만으로 확인할 수 없는 항목(타이밍, reduced motion 등)은 따로 적어요.\n- **기존 상태 확인:** 로딩, 에러, 빈 상태, 권한 처리가 그대로 동작하는지 확인해요.\n\n## 3. 완료 조건\n\n- 범위 안의 모든 화면·상태·너비에 원본 위치와 비교 기록이 있어야 해요.\n- 모든 차이는 셋 중 하나로 정리돼야 해요.\n  - 수정 완료\n  - 합의된 토큰 맞춤(2px 이하, 같은 색 단계)\n  - deviation이나 질문으로 기록\n- 임의 값(`w-[343px]` 같은 것), raw hex, 새 토큰, 새 컴포넌트 variant를 추가하지 않아야 해요.\n- 기존 로딩·에러·빈 상태·권한·키보드 동작이 그대로 남아 있어야 해요.\n- 변경 범위가 시안 범위를 넘지 않아야 해요(관련 없는 정리 금지).\n- 보고서에 다음이 들어가야 해요.\n  - 요소별 비교 표\n  - 아직 백엔드에 연결되지 않은 부분\n  - 시안에 없는 상태\n  - deviation과 그 승인 상태\n  - 빌드가 실행 중인 위치와 비교한 너비\n- 렌더링한 증거가 없는 항목은 \"미검증\"으로 표시해야 해요.\n\n**다음 단계:** 1번 표의 경로들, 특히 시안·명세·프로젝트 루트를 알려 주시면 그것부터 읽고 토큰·컴포넌트 매핑을 정리할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 34.864,
+  "duration_api_ms": 33586,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14598,
+    "cache_read_input_tokens": 35780,
+    "output_tokens": 3249,
+    "output_tokens_details": {
+      "thinking_tokens": 1400
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14598,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2712,
+        "cache_read_input_tokens": 17600,
+        "cache_creation_input_tokens": 730,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 730
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 3249,
+      "cacheReadInputTokens": 35780,
+      "cacheCreationInputTokens": 14598,
+      "webSearchRequests": 0,
+      "costUSD": 0.188944,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1400,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.188944,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 5,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "a82da6f12fdaaa2ace3735bdae565c36a256ae921461a977780df69a6f4605a2",
+  "transcript_sha256": "3112464b07a05b8ad46f46c6c790d9aae9b1907500a630014e89be2b2890f2b0",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

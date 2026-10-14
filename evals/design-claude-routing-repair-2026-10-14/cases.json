@@ -1,0 +1,414 @@
+{
+  "schema_version": 1,
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "boundary-interface-review",
+      "mode": "boundary",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "baseline-boundary-interface-review",
+      "mode": "boundary",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "baseline",
+      "fixture": "empty"
+    },
+    {
+      "id": "baseline-repair-working-git",
+      "mode": "boundary",
+      "arm": "baseline",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "working",
+      "entry": "implicit",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘."
+    },
+    {
+      "id": "baseline-repair-staged",
+      "mode": "boundary",
+      "arm": "baseline",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 접근성과 레이아웃 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-working-git",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "working",
+      "entry": "implicit",
+      "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘."
+    },
+    {
+      "id": "repair-staged",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "implicit",
+      "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 접근성과 레이아웃 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-branch",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "branch",
+      "entry": "implicit",
+      "prompt": "현재 브랜치가 기존 UI에 새로 만든 문제를 검토해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-pr",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "empty",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "pr 482",
+      "entry": "implicit",
+      "prompt": "PR 482에서 생긴 UI 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-range",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "empty",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "release/preview..feature/checkout",
+      "entry": "implicit",
+      "prompt": "release/preview..feature/checkout 범위의 UI 변경 때문에 생긴 문제를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-unspecified",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "empty",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "",
+      "entry": "implicit",
+      "prompt": "이번 UI 변경이 새로 만든 문제나 회귀를 리뷰해줘. 대상은 아직 지정하지 않았어.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-direct-router",
+      "mode": "boundary",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "forbidden": "interface-review",
+      "target": "staged",
+      "entry": "explicit",
+      "prompt": "/paul-skills:better-interface 스테이징된 UI 변경만 검토해서 이번 변경이 망가뜨린 부분을 찾아줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-current-audit",
+      "mode": "implicit",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "better-interface",
+      "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마."
+    },
+    {
+      "id": "repair-authorized-handoff",
+      "mode": "handoff",
+      "arm": "candidate",
+      "fixture": "git",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 로컬 src/Panel.html의 미커밋 변경이 UI에 새로 만든 문제를 실제로 리뷰해줘. Git의 이전 내용과 현재 내용을 비교하고 검토를 끝까지 진행해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+      "max_cost": 2.0
+    },
+    {
+      "id": "explicit-better-interface",
+      "mode": "explicit",
+      "expected": "better-interface",
+      "prompt": "/paul-skills:better-interface 현재 구독 관리 화면 전체의 UI를 종합 검토하려고 해. 키보드 접근성, 반응형 배치, 문구, 타이포그래피, 색상, 시각 디테일까지 빠짐없이 다루고 최종적으로 우선순위를 통합해야 해. 변경 diff 검토는 아니야. 우선 어떤 입력을 받고 어떤 순서와 증거로 검토할지 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-accessibility",
+      "mode": "explicit",
+      "expected": "better-accessibility",
+      "prompt": "/paul-skills:better-accessibility 구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-layout",
+      "mode": "explicit",
+      "expected": "better-layout",
+      "prompt": "/paul-skills:better-layout 현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-writing",
+      "mode": "explicit",
+      "expected": "better-writing",
+      "prompt": "/paul-skills:better-writing 구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-typography",
+      "mode": "explicit",
+      "expected": "better-typography",
+      "prompt": "/paul-skills:better-typography 한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-colors",
+      "mode": "explicit",
+      "expected": "better-colors",
+      "prompt": "/paul-skills:better-colors 브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-better-ui",
+      "mode": "explicit",
+      "expected": "better-ui",
+      "prompt": "/paul-skills:better-ui 지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-design-browser",
+      "mode": "explicit",
+      "expected": "design-browser",
+      "prompt": "/paul-skills:design-browser 로컬 반응형 웹을 브라우저에서 확인할 검증 절차를 준비해줘. 320px와 데스크톱의 가로 넘침, 키보드 조작, 성능 측정과 승인 화면 대비를 재현 가능한 기록으로 남겨야 해. 어떤 브라우저 도구와 증거 형식을 쓰고 무엇을 아직 미검증으로 남길지 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-information-architecture",
+      "mode": "explicit",
+      "expected": "information-architecture",
+      "prompt": "/paul-skills:information-architecture 기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-user-flow",
+      "mode": "explicit",
+      "expected": "user-flow",
+      "prompt": "/paul-skills:user-flow 기획이 끝난 읽기 서비스의 “글 저장 후 저장 목록에서 다시 열기” 작업 흐름을 정해줘. 비로그인, 저장 중 중복 클릭, 요청이 끝나지 않음, 실패 후 재시도, 중간 이탈과 복귀를 포함해야 해. 사용자 행동·화면 전이·복구 경로와 다음 단계에 넘길 미결 사항을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-wireframe",
+      "mode": "explicit",
+      "expected": "wireframe",
+      "prompt": "/paul-skills:wireframe 승인된 흐름은 글 목록에서 글 상세를 열고 저장한 뒤 저장 목록으로 이동하는 것이야. 상세에는 제목, 작성자, 본문, 저장 버튼이 있고 저장 전·저장 중·저장됨·실패 상태가 있어. 이제 저해상도 화면의 정보 계층, 컨트롤 배치와 좁은 화면의 순서를 정하려고 해. 브라우저에서 조작 가능한 화면과 Markdown 화면 명세를 만들기 전에 필요한 입력과 설계 범위를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-build-design",
+      "mode": "explicit",
+      "expected": "build-design",
+      "prompt": "/paul-skills:build-design 승인된 로컬 브라우저 시안과 Markdown 화면 명세를 기존 웹 프로젝트에 구현하려고 해. 원본 시안의 구조와 토큰·컴포넌트를 유지하고 화면과 동작의 일치 여부를 확인해야 해. Figma는 쓰지 않아. 구현 착수에 필요한 파일과 접근 경로, 비교할 증거와 완료 조건만 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-interface-review",
+      "mode": "explicit",
+      "expected": "interface-review",
+      "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-state-machine",
+      "mode": "explicit",
+      "expected": "state-machine",
+      "prompt": "/paul-skills:state-machine 기존 알림 카드의 도달 가능한 loading, empty, error 상태를 로컬 작업대에서 확인하려고 해. 이번에는 구현하지 말고 필요한 입력과 작업 범위, 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-break",
+      "mode": "explicit",
+      "expected": "break",
+      "prompt": "/paul-skills:break 기존 결제 카드가 긴 내용과 극단적인 데이터, 다양한 상태에서 견디는지 한 화면에 모아 확인하려고 해. 이번에는 구현하지 말고 필요한 입력, 작업 범위와 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-explain-interface",
+      "mode": "explicit",
+      "expected": "explain-interface",
+      "prompt": "/paul-skills:explain-interface 한 화면에서 제목과 액션의 시각적 관계가 어떤 CSS 및 컴포넌트 구조로 만들어지는지 이해하려고 해. 필요한 입력과 설명 산출물의 범위, 확인 방법을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "explicit-variant",
+      "mode": "explicit",
+      "expected": "variant",
+      "prompt": "/paul-skills:variant 현재 가격 카드를 유지하며 다른 구성안을 옆에서 비교하는 로컬 작업대를 만들려고 해. 이번에는 구현하지 말고 필요한 입력과 비교 범위, 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-interface",
+      "mode": "implicit",
+      "expected": "better-interface",
+      "prompt": "현재 구독 관리 화면 전체의 UI를 종합 검토하려고 해. 키보드 접근성, 반응형 배치, 문구, 타이포그래피, 색상, 시각 디테일까지 빠짐없이 다루고 최종적으로 우선순위를 통합해야 해. 변경 diff 검토는 아니야. 우선 어떤 입력을 받고 어떤 순서와 증거로 검토할지 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-accessibility",
+      "mode": "implicit",
+      "expected": "better-accessibility",
+      "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-layout",
+      "mode": "implicit",
+      "expected": "better-layout",
+      "prompt": "현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-writing",
+      "mode": "implicit",
+      "expected": "better-writing",
+      "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-typography",
+      "mode": "implicit",
+      "expected": "better-typography",
+      "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-colors",
+      "mode": "implicit",
+      "expected": "better-colors",
+      "prompt": "브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-better-ui",
+      "mode": "implicit",
+      "expected": "better-ui",
+      "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-design-browser",
+      "mode": "implicit",
+      "expected": "design-browser",
+      "prompt": "로컬 반응형 웹을 브라우저에서 확인할 검증 절차를 준비해줘. 320px와 데스크톱의 가로 넘침, 키보드 조작, 성능 측정과 승인 화면 대비를 재현 가능한 기록으로 남겨야 해. 어떤 브라우저 도구와 증거 형식을 쓰고 무엇을 아직 미검증으로 남길지 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-information-architecture",
+      "mode": "implicit",
+      "expected": "information-architecture",
+      "prompt": "기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-user-flow",
+      "mode": "implicit",
+      "expected": "user-flow",
+      "prompt": "기획이 끝난 읽기 서비스의 “글 저장 후 저장 목록에서 다시 열기” 작업 흐름을 정해줘. 비로그인, 저장 중 중복 클릭, 요청이 끝나지 않음, 실패 후 재시도, 중간 이탈과 복귀를 포함해야 해. 사용자 행동·화면 전이·복구 경로와 다음 단계에 넘길 미결 사항을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-wireframe",
+      "mode": "implicit",
+      "expected": "wireframe",
+      "prompt": "승인된 흐름은 글 목록에서 글 상세를 열고 저장한 뒤 저장 목록으로 이동하는 것이야. 상세에는 제목, 작성자, 본문, 저장 버튼이 있고 저장 전·저장 중·저장됨·실패 상태가 있어. 이제 저해상도 화면의 정보 계층, 컨트롤 배치와 좁은 화면의 순서를 정하려고 해. 브라우저에서 조작 가능한 화면과 Markdown 화면 명세를 만들기 전에 필요한 입력과 설계 범위를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "implicit-build-design",
+      "mode": "implicit",
+      "expected": "build-design",
+      "prompt": "승인된 로컬 브라우저 시안과 Markdown 화면 명세를 기존 웹 프로젝트에 구현하려고 해. 원본 시안의 구조와 토큰·컴포넌트를 유지하고 화면과 동작의 일치 여부를 확인해야 해. Figma는 쓰지 않아. 구현 착수에 필요한 파일과 접근 경로, 비교할 증거와 완료 조건만 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "boundary-state-machine",
+      "mode": "boundary",
+      "expected": "user-flow",
+      "forbidden": "state-machine",
+      "prompt": "글 저장 기능을 만들기 전에 사용자 행동과 화면 전이를 정리해줘. 로그인 필요, 요청 중 대기, 실패, 재시도, 화면을 닫았다가 돌아오는 경우가 있어. 기존 컴포넌트의 상태를 보여주는 테스트 페이지는 만들지 말아줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "boundary-break",
+      "mode": "boundary",
+      "expected": "better-layout",
+      "forbidden": "break",
+      "prompt": "320px에서 이 카드 제목이 두 줄을 넘으면 내용이 잘릴까 걱정이야. 현재 단일 카드의 좁은 폭 배치와 긴 텍스트 처리를 검토하기 위한 입력과 기준만 정리해줘. 여러 극한 사례를 전시하는 페이지는 만들지 말아줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "boundary-explain-interface",
+      "mode": "boundary",
+      "expected": null,
+      "forbidden": "explain-interface",
+      "prompt": "CSS에서 display:flex와 gap:8px를 같이 쓰면 두 버튼 사이 간격이 어떻게 생기는지 두 문장으로 설명해줘. 소스 분석이나 별도 시각화는 필요 없어.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "boundary-variant",
+      "mode": "boundary",
+      "expected": "better-ui",
+      "forbidden": "variant",
+      "prompt": "기존 카드의 외곽 radius 16px와 안쪽 이미지 radius 16px가 어색해. 구조와 디자인 방향을 유지하면서 간격 4px에 맞는 작은 시각 보정의 기준만 설명해줘. 여러 디자인 대안이나 비교 작업대는 필요 없어.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    }
+  ]
+}

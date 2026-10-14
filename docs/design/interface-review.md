@@ -26,7 +26,7 @@ A shared component can affect unchanged screens. The review follows relevant con
 
 **Why does it not appear in the automatic [skill](https://www.aihero.dev/ai-coding-dictionary/skill) list?**
 
-It is deliberately user-invoked. Type its name to start it; a generic request to review changes does not start this workflow.
+It is deliberately user-invoked. Type its name to start it. A generic request to review UI changes can automatically load `better-interface` to give you the correct command, but the change review begins only after you invoke `interface-review` yourself.
 
 **What happens when there is nothing to review?**
 

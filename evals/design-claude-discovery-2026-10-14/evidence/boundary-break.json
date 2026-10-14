@@ -1,0 +1,178 @@
+{
+  "schema_version": 1,
+  "case_id": "boundary-break",
+  "mode": "boundary",
+  "protocol_version": 2,
+  "trial_directory_name": "case_032",
+  "expected": "better-layout",
+  "prompt": "320px에서 이 카드 제목이 두 줄을 넘으면 내용이 잘릴까 걱정이야. 현재 단일 카드의 좁은 폭 배치와 긴 텍스트 처리를 검토하기 위한 입력과 기준만 정리해줘. 여러 극한 사례를 전시하는 페이지는 만들지 말아줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "9671990f-a8ba-4d94-8fa4-360c477a33d4",
+  "started_at": "2026-10-14T08:04:13.494251+00:00",
+  "host_init_session_id": "9671990f-a8ba-4d94-8fa4-360c477a33d4",
+  "host_result_session_id": "9671990f-a8ba-4d94-8fa4-360c477a33d4",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "fd599db7-2c44-4627-8aa0-e33cbeba20d0",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01VQ4cTreMDwcvCQf7f2KkF2",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ffaaa9fc7854a6922287c7599f423ac39a82f25233a31b42da29ba76760ef59b"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 폴더(`case_032`)가 비어 있어서 카드 코드, 스크린샷, 실제 제목 데이터를 하나도 보지 못했어요. 그래서 지금은 잘리는지 판정할 수 없고, 아래는 검토에 필요한 입력과 판정 기준만 정리한 거예요.\n\n## 1. 필요한 입력\n\n**꼭 필요한 것**\n1. **카드 마크업과 스타일**: 컴포넌트 파일이나 렌더된 HTML/CSS. 특히 제목 요소의 다음 값이 필요해요.\n   - `font-size`, `line-height`, `word-break`, `overflow-wrap`\n   - `overflow`, `height`, `max-height`, `-webkit-line-clamp`, `text-overflow`\n2. **320px에서 제목이 실제로 쓸 수 있는 폭**: 페이지 좌우 여백, 카드 패딩, 제목 옆 요소(아이콘, 배지)의 폭.\n3. **제목 정책**: 제목을 전부 보여주는 게 의도인지, N줄에서 자르는 게 의도인지. 자른다면 전체 제목은 어디서 볼 수 있는지(예: 상세 화면).\n4. **실제 제목 데이터**: 최장 길이나 상위 5% 길이, 언어 구성(한국어/영어/혼합), 띄어쓰기 없는 긴 문자열(URL, 모델명, 영문 복합어)이 있는지.\n\n**있으면 좋은 것**\n- 사용하는 웹폰트와 대체 폰트(폰트가 바뀌면 줄 수도 바뀔 수 있어요)\n- 카드 높이가 고정인지, 그리드에서 높이를 맞추는지\n- 제목 아래 요소(메타 정보, 버튼) 구성\n\n## 2. 넣어볼 제목 (카드 하나에 하나씩 바꿔 넣기)\n\n여러 카드를 모은 페이지는 만들지 않고, 같은 카드 하나에 아래 값을 차례로 넣어 확인하는 방식이에요.\n\n| # | 입력 | 확인하려는 것 |\n|---|---|---|\n| A | 실제 대표 제목 | 평소 상태 |\n| B | 2줄을 약간 넘는 제목 | 3번째 줄이 잘리는지 |\n| C | 실제 데이터의 최장 제목 | 최악의 경우 |\n| D | 띄어쓰기 없는 긴 문자열이 들어간 제목 | 가로로 넘치는지 |\n\n## 3. 판정 기준\n\n**계산 기준**\n- 2줄 높이 = 2 × `line-height`\n- `height`나 `max-height`가 이 값이면서 `overflow: hidden`이면 3번째 줄은 잘려요. 의도인지 확인이 필요해요.\n\n**통과 조건**\n1. **의도하지 않은 잘림이 없어요.** 줄이 반쯤 보이거나 글자 중간이 잘리면 실패예요.\n2. **N줄에서 자르는 게 의도라면**\n   - 정확히 N줄에서 줄 단위로 끊기고 말줄임표(…)가 보여요.\n   - 전체 제목을 다른 곳에서 볼 수 있어요.\n   - DOM에는 전체 텍스트가 남아 있어요. CSS로 자르면 스크린리더가 전체를 읽지만, JS로 문자열을 자르면 내용이 사라져서 실패예요.\n3. **가로로 넘치지 않아요.** 카드나 페이지에 가로 스크롤이 생기지 않고, 긴 문자열은 줄바꿈돼요(`overflow-wrap: anywhere` 또는 `break-word`). `word-break: keep-all`을 쓰면 폭보다 긴 한국어 어절이 넘치는지도 봐요.\n4. **다른 요소가 망가지지 않아요.** 제목이 길어져도 메타 정보나 버튼이 겹치거나, 가려지거나, 카드 밖으로 밀리지 않아요.\n5. **확대와 글자 간격을 바꿔도 버텨요.**\n   - 320px은 WCAG 1.4.10(리플로우)의 기준 폭이에요.\n   - WCAG 1.4.12 글자 간격을 적용해도 잘리지 않아야 해요: 줄 높이 1.5배, 자간 0.12em, 단어 간격 0.16em.\n   - 글자 크기를 200%로 키워도(WCAG 1.4.4) 잘리지 않아야 해요.\n   - 높이를 고정해 둔 카드는 보통 여기서 실패해요.\n\n## 4. 다음 단계\n\n위의 꼭 필요한 입력(1~4번)을 주시면 코드를 읽어 2~3장 기준대로 판정해 드릴게요. 실제 화면 확인이 필요하다면 그건 따로 승인받고 진행할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 53.922,
+  "duration_api_ms": 52694,
+  "usage": {
+    "input_tokens": 274,
+    "cache_creation_input_tokens": 10879,
+    "cache_read_input_tokens": 32756,
+    "output_tokens": 3827,
+    "output_tokens_details": {
+      "thinking_tokens": 2011
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10879,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 231,
+        "cache_read_input_tokens": 14413,
+        "cache_creation_input_tokens": 198,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 198
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 270,
+        "output_tokens": 3458,
+        "cache_read_input_tokens": 14611,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 274,
+      "outputTokens": 3827,
+      "cacheReadInputTokens": 32756,
+      "cacheCreationInputTokens": 10879,
+      "webSearchRequests": 0,
+      "costUSD": 0.17121920000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2011,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.17121920000000002,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "abcb4496c0542acf5cb9a99713e9bfd1f8e12e20d713ae22b14ea1d440210d0b",
+  "transcript_sha256": "51a6452e215d0c27cf2b3b8bbc6888a66da800166b3c30348d1984fe307e7b9c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

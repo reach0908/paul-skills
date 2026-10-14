@@ -6,7 +6,12 @@ A review preserves deliberate product choices. A different visual preference is 
 
 ## When to reach for it
 
-Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically when a whole-interface review fits. For a branch, pull request or uncommitted change, explicitly invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) instead.
+Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically for a UI review. It chooses the route from your request before inspecting files:
+
+| Request | Route |
+| --- | --- |
+| Review the current screen, flow or repository interface | Review across the six domains |
+| Review what uncommitted, staged, branch, PR or commit-range changes caused | Return the explicit [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) command with that target and a brief reason; scope resolution starts after you invoke it |
 
 ## One report, six owners
 
@@ -20,7 +25,7 @@ A review is read-only by default. It reports supported failures and respects the
 
 **Why did it return a command instead of reviewing my changes?**
 
-Change attribution belongs to the directly invoked `interface-review`. Its absence from the automatic skill list does not mean it is uninstalled. For all uncommitted changes in Codex, use `$paul-skills:interface-review working`.
+Change attribution belongs to the directly invoked `interface-review`. Its absence from the automatic skill list does not mean it is uninstalled. For all uncommitted changes, use `$paul-skills:interface-review working` in Codex or `/paul-skills:interface-review working` in Claude Code. This guidance also works before a repository is available. Invoking `better-interface` again does not authorize a change review.
 
 ## It's working if
 

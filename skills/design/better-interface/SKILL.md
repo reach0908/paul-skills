@@ -1,6 +1,6 @@
 ---
 name: better-interface
-description: Reviews screens and flows across accessibility, layout, writing, typography, color and UI polish. Routes change-review requests to an explicit interface-review invocation; consolidates its authorized handoff.
+description: Use automatically for UI reviews, including uncommitted, staged, branch, PR or commit-range regression reviews. Load before inspecting files to choose the screen-audit or change-review route. Coordinates accessibility, layout, writing, typography, color and UI polish.
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
@@ -11,9 +11,7 @@ This skill runs a cross-discipline review. It routes the interface to each `bett
 
 Orchestration is all it owns. Accessibility rules belong to `better-accessibility`, structure to `better-layout`, copy to `better-writing`, type to `better-typography`, color to `better-colors`, visual polish and motion to `better-ui`. Never duplicate or override their rules here.
 
-Change-scoped review of uncommitted work, branches and pull requests belongs to `interface-review`.
-
-For browser evidence, call the Skill tool with "design-browser" and pass the task purpose and expected observations. Without a Skill tool, read its installed SKILL.md. Follow its tool routing; if unavailable, use the caller's tool policy and installed help, and report verification limits.
+This skill is model-invoked: load it automatically to choose the review route. Only the change-review execution owned by `interface-review` requires the user's explicit invocation.
 
 ## Evidence, not taste
 
@@ -25,12 +23,14 @@ The bar for reporting is evidence. The bar for `Approve` is that you inspected w
 
 ### 1. Choose the review route before inspecting files
 
-For a request about what a branch, pull request, commit range, staged or uncommitted change introduced or worsened, first check the caller:
+Choose from the request alone, before repository discovery, file reads or browser work. For a request about what a branch, pull request, commit range, staged or uncommitted change introduced or worsened, first check the caller:
 
 - **The user explicitly invoked `interface-review`, which supplied its resolved scope and affected surfaces:** continue with that handoff. Keep its classification and report format. The cap and verdict cover `Introduced` and `Regression` findings only; pre-existing findings alone do not block the change.
-- **Otherwise:** finish with an instruction for the user to invoke `interface-review`. Use `$paul-skills:interface-review <target>` in Codex or `/paul-skills:interface-review <target>` in Claude Code. Preserve the requested target: `staged` for staged changes only, `working` for all uncommitted changes, `branch` for the current branch, `pr <number>` for a named pull request, or the exact ref/range they supplied. When no target is clear, omit it. This routing answer completes the task here: do not inspect the diff, run domain reviews or issue a review verdict.
+- **Otherwise:** finish with an instruction for the user to invoke `interface-review`. Use `$paul-skills:interface-review <target>` in Codex or `/paul-skills:interface-review <target>` in Claude Code. Preserve the requested target: `staged` for staged changes only, `working` for all uncommitted changes, `branch` for the current branch, `pr <number>` for a named pull request, or the exact ref/range they supplied. When no target is clear, omit it. Return only the command and one sentence explaining why the user must invoke it; preserve any caller constraints in that sentence. Scope interpretation and review preparation belong to the explicitly invoked owner. This routing answer completes the task here: do not inspect files, run domain reviews or issue a review verdict.
 
 `interface-review` is user-invoked and may be hidden from the automatic skill list even when installed. Its absence there is not evidence of a missing installation and is not a fallback trigger. Do not search for, read or call it to bypass the user's invocation. A generic request to review changes does not authorize this handoff.
+
+An explicit `better-interface` invocation still follows this route decision. Asking the user to invoke `better-interface` again cannot open change review; the command must name `interface-review`. This routing answer needs no repository access, including in an empty directory.
 
 A screen, flow, feature or repository audit proceeds below. A repository audit examines the current interface, not what a diff caused.
 
@@ -39,6 +39,8 @@ A screen, flow, feature or repository audit proceeds below. A repository audit e
 Infer the screen, flow, feature or repository scope from the request and current workspace. State the resolved scope in the output.
 
 For an authorized `interface-review` handoff, use its resolved scope and affected surfaces unchanged instead of resolving a second target.
+
+For browser evidence, call the Skill tool with "design-browser" and pass the task purpose and expected observations. Without a Skill tool, read its installed SKILL.md. Follow its tool routing; if unavailable, use the caller's tool policy and installed help, and report verification limits.
 
 Cover all of it in every domain, including the empty, loading, error and narrow-width states where they exist.
 

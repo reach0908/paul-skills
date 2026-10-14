@@ -1,0 +1,181 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-wireframe",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_024",
+  "expected": "wireframe",
+  "prompt": "/paul-skills:wireframe 승인된 흐름은 글 목록에서 글 상세를 열고 저장한 뒤 저장 목록으로 이동하는 것이야. 상세에는 제목, 작성자, 본문, 저장 버튼이 있고 저장 전·저장 중·저장됨·실패 상태가 있어. 이제 저해상도 화면의 정보 계층, 컨트롤 배치와 좁은 화면의 순서를 정하려고 해. 브라우저에서 조작 가능한 화면과 Markdown 화면 명세를 만들기 전에 필요한 입력과 설계 범위를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "bcc447f9-56f6-472d-a4bf-06306a9fc6a1",
+  "started_at": "2026-10-14T08:57:31.145264+00:00",
+  "host_init_session_id": "bcc447f9-56f6-472d-a4bf-06306a9fc6a1",
+  "host_result_session_id": "bcc447f9-56f6-472d-a4bf-06306a9fc6a1",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "e869a7dc-ee9d-4dd7-a349-0ca08c6de1d4",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "wireframe",
+      "event_uuid": "0678dce2-6574-47a0-b409-137f7786a1da",
+      "file_sha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a",
+      "body_sha256": "3ff9cd64ff717da95a2279c707b2f0012cc20b0e19cea1ec1eba09265e819e7d",
+      "host_message_sha256": "ab23a83b4b656028e4603ed120a3950fd7e342aba9da575e9c9a08fd2a19fbd2",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01A3zfrtgkTLr9fXhjsGwLiV",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "24533290358d1a2faa55c87aafc5871330798f637c8d74c609649cce875c6764"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 준비: 글 저장 흐름 와이어프레임\n\n## 입력 상태\n- 작업 디렉터리 `case_024`가 비어 있습니다. 브리프, IA, 흐름 문서가 없고 기존 화면·라우트·컴포넌트도 없습니다. 그래서 아래 내용은 모두 요청 본문만 근거로 했습니다.\n- 요청에서 확인된 내용:\n  - **흐름:** 글 목록 → 글 상세 → 저장 → 저장 목록\n  - **상세 구성:** 제목, 작성자, 본문, 저장 버튼\n  - **저장 상태:** 저장 전, 저장 중, 저장됨, 실패\n- 아직 만든 화면이 없습니다. 동작 확인과 사용자 승인도 모두 전입니다.\n\n## 화면·상태 매핑 초안\n흐름 문서에 ID가 있으면 그 ID로 바꿉니다.\n\n| ID | 화면/상태 | 표시 정보 | 주 행동 | 보조 행동 | 피드백 |\n|---|---|---|---|---|---|\n| S1 | 글 목록 | 제목, 작성자 | 글 열기 | 저장 목록으로 이동할지 미정 | \u2014 |\n| S2-idle | 상세: 저장 전 | 제목, 작성자, 본문 | 저장 | 글 목록으로 | \u2014 |\n| S2-saving | 상세: 저장 중 | 같음 | 버튼 비활성(중복 요청 방지) | 글 목록으로 | \"저장 중…\" |\n| S2-saved | 상세: 저장됨 | 같음 | 저장 목록으로 이동(**방식 미정**) | 글 목록으로 | \"저장됨\" |\n| S2-error | 상세: 실패 | 같음 | 다시 시도 | 글 목록으로 | 실패 문구 |\n| S3 | 저장 목록 | 저장한 글의 제목, 작성자 | 글 열기 | 글 목록으로 | 빈 상태 |\n\n## 화면 동작을 정하려면 답이 필요한 결정\n1. **저장 성공 후 이동 방식:** (a) 자동으로 이동 (b) 저장됨 상태에 머물면서 \"저장 목록 보기\" 링크 제공. 이 답에 따라 S2-saved의 동작이 정해집니다.\n   - 흐름 문서에 이미 정해져 있으면 그대로 따릅니다.\n   - 정해져 있지 않다면 (b)를 권합니다. 자동 이동은 \"저장됨\" 피드백을 확인하기 전에 화면을 바꿔 버리고, 키보드·스크린리더 사용자는 포커스 위치를 잃습니다.\n2. **실패 시 복구:** 같은 버튼을 \"다시 시도\"로 바꿀지, 실패 문구와 버튼을 따로 둘지 정해야 합니다. 또 원인(네트워크, 로그인 필요 등)을 나눠 보여줄지도 필요합니다. 로그인이 필요하면 별도 경로가 생깁니다.\n3. **저장됨 상태에서 다시 누르면 저장이 취소되는지:** 정해지기 전까지는 범위에서 빼겠습니다.\n4. **저장 중에 화면을 떠날 때 요청 결과 처리:** 정해지기 전까지는 떠나기만 허용하고 \"미정\"으로 표시하겠습니다.\n\n## 가정으로 진행할 수 있는 입력\n답이 없으면 가정이라고 명시하고 진행합니다.\n- **목록 항목 필드:** 제목과 작성자만 넣습니다. 날짜와 요약은 미정입니다.\n- **저장 목록 진입점:** 흐름 밖에서 들어오는 전역 링크가 있는지는 IA 결정이 필요합니다.\n- **샘플 콘텐츠:** 두 줄 넘는 긴 제목, 긴 본문, 긴 작성자 이름, 저장 목록 0개와 여러 개.\n- **화면 폭:** 지정이 없어 1280×800과 375×812를 제안합니다.\n- **기존 UI:** 없으므로 시맨틱 HTML과 해시 라우트(`#/posts`, `#/posts/:id`, `#/saved`)를 쓰겠습니다.\n- **산출물 위치:** 기존 위치가 없어 `case_024/wireframe/index.html`과 `case_024/wireframe/screens.md`를 제안합니다. 확인이 필요합니다.\n\n## 설계 범위\n- **포함:**\n  - 세 화면의 정보 계층, 저장 버튼과 상태 메시지 위치, 좁은 화면 순서\n  - 로컬 목업 저장: 지연, 성공·실패 시나리오 전환, 초기화. 저장 목록은 메모리에만 보관하고 모의 동작이라고 표시합니다.\n  - 키보드 순서, 눈에 보이는 포커스, 상태 변화 낭독(`aria-live`)\n- **제외:** 시각 스타일과 브랜드, 디자인 시스템, 실제 API·인증·영속화, 제품 코드, 저장 취소, 목록에서 바로 저장\n\n## 상세 화면 계층 초안 (검토용)\n넓은 화면과 좁은 화면 모두 아래 순서를 같은 마크업 순서로 씁니다.\n1. 글 목록으로\n2. 제목(`h1`)\n3. 작성자\n4. 저장 버튼과 바로 옆의 상태 메시지\n5. 본문\n\n- **넓은 화면:** 작성자를 왼쪽, 저장 버튼을 오른쪽에 두고 한 줄로 배치합니다.\n- **좁은 화면:** 같은 순서로 쌓고, 저장 버튼은 본문 위에 전체 폭으로 둡니다.\n- **이유:** 본문이 길어도 스크롤 없이 저장할 수 있고, 보이는 순서와 읽기 순서가 같아집니다.\n- **열린 선택지:** 본문을 끝까지 읽은 뒤 저장하는 경우를 위해 본문 끝에 버튼을 한 번 더 둘지, 하단 고정 바를 쓸지는 아직 열려 있습니다. 비교가 필요하면 `prototype`으로 따로 진행하겠습니다.\n\n## 다음 단계\n결정 1–4에 대한 답(또는 흐름 문서)과 산출물 위치를 주시면, HTML 와이어프레임과 `screens.md`를 만들고 `design-browser`로 두 폭에서 직접 조작하며 확인하겠습니다.\n\n이번 응답에서는 파일을 만들거나 고치지 않았고, 브라우저나 외부 서비스도 실행하지 않았습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 88.966,
+  "duration_api_ms": 87325,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12851,
+    "cache_read_input_tokens": 20052,
+    "output_tokens": 6867,
+    "output_tokens_details": {
+      "thinking_tokens": 4376
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12851,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6667,
+        "cache_read_input_tokens": 16320,
+        "cache_creation_input_tokens": 263,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 263
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 6867,
+      "cacheReadInputTokens": 20052,
+      "cacheCreationInputTokens": 12851,
+      "webSearchRequests": 0,
+      "costUSD": 0.2441744,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 4376,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.2441744,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "01a929770b6b5955de092d6e0cf13135390e4d6164abaf6bc59404a66efede07",
+  "transcript_sha256": "5705d73d28f743879b764a122f20a41747c70cb7e569243928d56286cbaf07c8",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

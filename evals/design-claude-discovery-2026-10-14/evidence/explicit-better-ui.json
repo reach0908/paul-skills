@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-better-ui",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_007",
+  "expected": "better-ui",
+  "prompt": "/paul-skills:better-ui 지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "9177a3dc-5da7-4052-bd4f-6b8a00738472",
+  "started_at": "2026-10-14T07:55:15.979863+00:00",
+  "host_init_session_id": "9177a3dc-5da7-4052-bd4f-6b8a00738472",
+  "host_result_session_id": "9177a3dc-5da7-4052-bd4f-6b8a00738472",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "b0ea0768-0481-4ef4-bd01-4e65bce9d53e",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-ui",
+      "event_uuid": "f9bdc003-7a7d-457e-98c0-e8f537cd5ced",
+      "file_sha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3",
+      "body_sha256": "19c846f1fd210f1539ab6daa488115ddb961e3fe2405af5c3ed9f3c941e8bba6",
+      "host_message_sha256": "e0cae5fcfb3f463934da3801d200314c253a4fc5cfe565db3608c016570f692b",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01VPVuAM9Y8bmgLzckEnj4yq",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "6c658be3735213f87bc32cbf64652eafe64253ba08380ba97ac485d9c57056e5"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_007`)가 비어 있어 아직 아무것도 점검하지 않았고, 발견 사항도 없습니다. 아래는 입력이 들어왔을 때 쓸 명세입니다.\n\n## 필요한 입력\n\n| 입력 | 쓰임 | 없을 때 |\n| --- | --- | --- |\n| 버튼·카드 컴포넌트 소스 경로 (변형 포함: 아이콘 버튼, 이미지 카드 등) | 모든 점검의 대상 | 점검 불가 |\n| radius·shadow·spacing·motion(duration/easing) 토큰 파일 | 중첩 radius 계산, 같은 값을 두 방식으로 쓰는 불일치 판단 | 하드코딩 값만으로 판단 |\n| 스타일링 방식과 버전 (Tailwind 3/4, CSS-in-JS 등), 모션 라이브러리 사용 여부 | hover 미디어 쿼리 필요 여부, 레시피 선택 | 둘 다 가정하지 않고 항목별로 표기 |\n| 아이콘 라이브러리와 SVG 원본 | 광학 정렬, `currentColor`, stroke 굵기 | 아이콘 항목은 `Not verified` |\n| 의도된 프로젝트 관례 (예: 그림자를 쓰지 않는 스타일) | 관례는 finding으로 보지 않음 | 코드에서 일관성으로 추정 |\n| (선택) 정적 스크린샷: 기본, hover, pressed, disabled, 다크 모드 | 광학 정렬처럼 눈으로 판단하는 항목 | 해당 항목은 `Not verified` |\n\n## 점검 순서\n\n**0. 상태 수집.** 컴포넌트가 정의하는 상태(hover, pressed, disabled, selected, loading)와 각 상태의 duration·easing을 코드에서 모읍니다. 이어서 빠른 스캔으로 다음을 찾습니다: `transition-all`, `active:scale-9x`, `bounce:`, `fill=\"#`/`stroke=\"#`, `:hover`/`hover:`, 토글 클래스에 걸린 `animation:`.\n\n**1. 중첩 radius.** 패딩이 고르게 들어간 카드 안의 내부 surface를 봅니다. 바깥 radius는 안쪽 radius + 패딩 + border 두께여야 합니다. 패딩이 `24px`를 넘거나 일부러 비대칭이면 별개 surface로 보고 각자의 토큰을 유지합니다.\n\n**2. 그림자와 보더.**\n- 깊이를 내려고만 쓴 border는 겹친 투명 `box-shadow`로 바꿀 후보입니다.\n- 구분선, 선택 상태, 입력 필드의 border는 그대로 둡니다.\n- shadow ring 옆에 `border: 1px solid transparent`가 있는지 봅니다. forced-colors 모드에서 그림자가 사라져도 테두리가 남게 하려는 것입니다.\n- 상태가 바뀔 때 border 두께가 달라져 레이아웃이 밀리는지 확인합니다.\n- 카드 이미지에는 `1px` outline을 `1px` 안쪽으로 넣습니다. 라이트 모드는 `oklch(0 0 0 / 0.1)`, 다크 모드는 `oklch(1 0 0 / 0.1)`입니다.\n\n**3. 아이콘 광학 정렬.**\n- 아이콘이 있는 쪽 패딩을 `2px` 줄이는 것에서 시작해 눈으로 조정합니다.\n- 재생 삼각형처럼 비대칭인 glyph는 SVG 자체에서 고칩니다.\n- stroke는 옆 텍스트 굵기에 맞춥니다. 400이면 `1.5px`, 700이면 `2.5px`입니다.\n- 아이콘은 `currentColor`를 쓰고, 한 surface에는 한 라이브러리만 씁니다.\n\n**4. hover/pressed.**\n- hover 스타일은 `@media (hover: hover)` 안에 둡니다. Tailwind 4의 `hover:`는 이미 그렇게 컴파일되고, Tailwind 3은 그렇지 않습니다.\n- pressed는 `scale: 0.96`, `150ms`, `ease-out`입니다.\n- disabled는 축소하지 않도록 `:not(:disabled):active` 또는 `enabled:active:`로 제외합니다.\n- 기존 variant API나 `static` prop으로 끌 수 있는 opt-out이 있는지 봅니다.\n- 직접 pressed 상태를 그리는 컨트롤에는 `-webkit-tap-highlight-color: transparent`를 줍니다.\n- 상태 전환은 keyframes가 아니라 transition으로 처리합니다.\n\n**5. easing·duration.**\n- `all` 대신 바뀌는 속성만 명시합니다.\n- 고빈도 상호작용은 `150ms` 이하로, `opacity`나 `background-color`만 씁니다.\n- 아이콘 교체 cross-fade 값:\n  - scale `0.25`→`1`, opacity `0`→`1`, blur `4px`→`0px`\n  - 모션 라이브러리를 쓰면 `{ type: \"spring\", duration: 0.3, bounce: 0 }`\n  - 쓰지 않으면 `300ms` `cubic-bezier(0.2, 0, 0, 1)`\n- `prefers-reduced-motion` 가드가 있는지 봅니다. 없으면 HIGH입니다.\n- 모션 말고도 색, 아이콘, 라벨 같은 정적 단서가 함께 바뀌는지 봅니다.\n\n**6. 보고.**\n- 형식은 `Severity | Location | Before | After | Why` 표입니다. 원인 하나당 한 행에 모든 위치를 적습니다.\n- HIGH가 남아 있으면 `Block`, 아니면 `Approve`로 마무리합니다.\n- 브라우저를 쓰지 않으므로 실제 렌더링과 10% 속도 재생은 모두 `Not verified`로 적습니다.\n\n**범위 제약.**\n- 구조와 문구를 유지하므로, DOM을 바꿔야 하는 수정(예: 라이브러리 없이 두 아이콘을 DOM에 함께 두는 cross-fade)은 제안으로만 표에 적습니다.\n- hit area, focus ring, 대비는 각각 `better-accessibility`와 `better-colors`로 넘깁니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 55.321,
+  "duration_api_ms": 53947,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15349,
+    "cache_read_input_tokens": 22625,
+    "output_tokens": 4183,
+    "output_tokens_details": {
+      "thinking_tokens": 1808
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15349,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4058,
+        "cache_read_input_tokens": 18893,
+        "cache_creation_input_tokens": 188,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 188
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 4183,
+      "cacheReadInputTokens": 22625,
+      "cacheCreationInputTokens": 15349,
+      "webSearchRequests": 0,
+      "costUSD": 0.21099299999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1808,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.21099299999999999,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "99e55e8b8c142e98d1aa1034ce861bb5d851db93249c9b8866aef91812d1e545",
+  "transcript_sha256": "9a3da36ec702e363ac41da7a90ed93f405d30920b1ce5264813983784e5fcd3d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

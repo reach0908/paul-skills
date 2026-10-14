@@ -1,0 +1,184 @@
+{
+  "arm": "baseline",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "baseline-boundary-interface-review",
+  "mode": "boundary",
+  "protocol_version": 1,
+  "trial_directory_name": "case_002",
+  "expected": "better-interface",
+  "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "ac43f695-83b7-44c8-927d-43ae2721c558",
+  "started_at": "2026-10-14T08:48:12.645047+00:00",
+  "host_init_session_id": "ac43f695-83b7-44c8-927d-43ae2721c558",
+  "host_result_session_id": "ac43f695-83b7-44c8-927d-43ae2721c558",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "48c98194-5b1d-4e44-8639-464c468e5ca4",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01WjLR4PTzSerEKcu9WrXTXu",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "3bc7f66025d2878f3ae43d944d17e34664abea6fc66689ffbae0ba6092b6f1a7"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/.*"
+      },
+      "tool_use_id": "toolu_01GAj7vnCjWjmMcgwQnZt9Jy",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "113ce81f06c0a7091b8b4a8255520da53cfa7333de4426c2577323da15fe4a0f"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "리뷰할 변경이 없어서 리뷰를 시작하지 못했어요. 그래서 지금은 회귀가 있다고도 없다고도 말할 수 없어요.\n\n## 확인한 내용\n- 작업 디렉터리 `$TRIAL`가 **비어 있어요.** 숨김 파일도 없어요.\n- 이 디렉터리는 **git 저장소가 아니에요.** 그래서 \"커밋하지 않은 변경\"을 정할 기준 커밋이 없어요.\n\n파일은 아무것도 수정하지 않았고, 브라우저나 외부 서비스도 실행하지 않았어요.\n\n## 필요한 입력\n1. **변경 대상** (아래 중 하나)\n   - 실제 저장소 경로 (예: `~/work/app`). 그 저장소의 `git diff HEAD`와 추적되지 않은 파일을 범위로 잡을게요.\n   - 또는 패치 파일 (`git diff HEAD > ui.patch`로 만든 파일)\n2. **비교 기준.** 기본값은 `HEAD`예요. 브랜치 기준(merge-base)으로 보고 싶다면 대상 브랜치를 알려주세요.\n3. **(선택) 의도한 동작.** 이슈, 명세, PR 설명이 있으면 주세요. \"의도한 변경\"과 \"회귀\"를 구분할 수 있어요. 없으면 변경 전 동작을 기준으로 삼을게요.\n4. **(선택) 영향받는 화면이나 컴포넌트.** 범위를 좁히고 싶을 때만 필요해요.\n\n## 입력이 오면 진행할 리뷰 (짧은 명세)\n- **범위:** 기준과 작업 트리의 diff, 추적되지 않은 UI 파일, 변경된 컴포넌트를 쓰는 곳\n- **회귀 점검 항목:**\n  - 상태와 동작: props나 이벤트 시그니처 변경, 조건부 렌더링, 로딩·빈 상태·오류 상태가 빠졌는지\n  - 키보드와 접근성: 포커스 순서, 포커스 표시, ARIA, 접근 가능한 이름, 폼 라벨과 오류 연결\n  - 레이아웃: 반응형 브레이크포인트, 긴 번역문이나 RTL에서 넘치는 부분, z-index와 겹침\n  - 스타일: 토큰을 하드코딩 값으로 바꾼 곳, 다크 모드와 테마, 대비\n  - 문구: 라벨과 오류 메시지가 바뀌었는지, 테스트·i18n 키와 맞는지\n  - 테스트: 깨지거나 삭제된 테스트, 스냅샷만 갱신한 경우\n- **결과 형식:** 문제마다 `파일:줄`, 근거, 심각도를 적을게요. 코드만 읽고 추정한 부분은 \"확인 안 됨\"이라고 따로 표시할게요.\n- **이번 범위에서 뺀 것:** 실제 화면에서 확인하는 작업(브라우저 QA)은 별도 요청과 허가가 있을 때만 해요.\n\n리뷰는 버그 위주의 변경 리뷰로 진행할게요. 접근성, 레이아웃, 문구 같은 디자인 관점의 인터페이스 리뷰도 원하면 `/better-interface`를 직접 호출해 주세요. 이 스킬은 변경 리뷰를 명시적으로 호출할 때만 실행돼요.\n\n저장소 경로나 패치 파일을 알려주시면 바로 시작할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": false,
+    "explicit_handoff": false,
+    "no_domain_calls": true,
+    "no_file_inspection": false
+  },
+  "pass": false,
+  "duration_seconds": 27.425,
+  "duration_api_ms": 25404,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 11187,
+    "cache_read_input_tokens": 18111,
+    "output_tokens": 2400,
+    "output_tokens_details": {
+      "thinking_tokens": 1010
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11187,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1977,
+        "cache_read_input_tokens": 14379,
+        "cache_creation_input_tokens": 540,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 540
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 2400,
+      "cacheReadInputTokens": 18111,
+      "cacheCreationInputTokens": 11187,
+      "webSearchRequests": 0,
+      "costUSD": 0.1411342,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1010,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1411342,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "2faf1ceb5ef78307097bcc6b60331079fc088bddc34d69db6072ff028c922ec4",
+  "transcript_sha256": "c5802f0a393e2d2149d31136833e838747156539a50ff4fb92836ec52e01f50b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

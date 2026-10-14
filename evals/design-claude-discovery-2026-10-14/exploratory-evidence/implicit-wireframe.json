@@ -1,0 +1,215 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-wireframe",
+  "mode": "implicit",
+  "expected": "wireframe",
+  "prompt": "승인된 흐름은 글 목록에서 글 상세를 열고 저장한 뒤 저장 목록으로 이동하는 것이야. 상세에는 제목, 작성자, 본문, 저장 버튼이 있고 저장 전·저장 중·저장됨·실패 상태가 있어. 이제 저해상도 화면의 정보 계층, 컨트롤 배치와 좁은 화면의 순서를 정하려고 해. 브라우저에서 조작 가능한 화면과 Markdown 화면 명세를 만들기 전에 필요한 입력과 설계 범위를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "bcb6e320-58d1-454d-972a-52c8aa960579",
+  "started_at": "2026-10-14T07:49:59.915073+00:00",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "edbd03a6-9f7e-4029-b203-9085953e24c2",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "wireframe",
+      "event_uuid": "0053d408-be7f-4761-9512-0469ea58b194",
+      "file_sha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a",
+      "body_sha256": "3ff9cd64ff717da95a2279c707b2f0012cc20b0e19cea1ec1eba09265e819e7d",
+      "host_message_sha256": "08cd564abdf0c20f222411216bd802dc998a2ad33a3ca48b8f9d3f7e1bcaeb46",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:wireframe",
+        "args": "준비 단계만: 승인된 흐름(글 목록 → 글 상세 → 저장 → 저장 목록), 상세 콘텐츠(제목, 작성자, 본문, 저장 버튼), 저장 상태(저장 전·저장 중·저장됨·실패). 필요한 입력과 설계 범위를 짧게 정리. 제품 파일 수정, 브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_01WDGMQrQ5qg1Rxf5BTyEG3d",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2ec3bdc3c37de5b325081eed2740530728e973fcabced35da24d0010769eeae8"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01MUqk1rm78LuiMTZSJWhj5p",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "a1bb14238d2b72216a3bbfa0772e9dbeca6b913c0d5a41e1e22d92a3265201f9"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아직 확인된 입력은 없어. 작업 디렉터리가 비어 있어서 브리프, IA, 흐름 문서, 컴포넌트, 토큰 중 어느 것도 찾지 못했어. 아래 내용은 요청 문장만 보고 정리한 초안이야. 화면을 렌더링하거나 브라우저에서 확인한 것은 하나도 없어.\n\n## 1. 화면 계약 초안\n\n| ID | 화면·상태 | 행동에 필요한 정보 | 주 동작 | 보조 동작 | 피드백 |\n|---|---|---|---|---|---|\n| S1 | 글 목록 | 글 항목(표시할 필드는 미정) | 글 상세 열기 | 미정 | \u2014 |\n| S2-a | 상세 · 저장 전 | 제목, 작성자, 본문 | 저장 | 글 목록으로 돌아가기 | \u2014 |\n| S2-b | 상세 · 저장 중 | 같음 | (진행 중) | 미정 | 진행 표시 |\n| S2-c | 상세 · 저장됨 | 같음 | 미정 (질문 1) | 미정 | 저장 완료 표시 |\n| S2-d | 상세 · 실패 | 같음 | 미정 (질문 2) | 미정 | 오류 메시지 |\n| S3 | 저장 목록 | 저장한 글 항목 | 미정 | 미정 | 빈 상태 필요 여부 미정 |\n\n## 2. 먼저 정해야 할 것 (화면 동작이 이 답에 달려 있음)\n\n1. **저장된 다음 이동 방식:** 저장 목록(S3)으로 자동 이동해? 아니면 S2-c에 \"저장 목록 보기\" 같은 링크를 둬서 사용자가 누르게 해?\n2. **실패했을 때:** 그 자리에서 다시 시도해? 버튼은 저장 전 상태로 돌아가? 오류 메시지는 버튼 옆에 둬, 아니면 다른 곳에 둬?\n3. **처음 들어왔을 때 상태:** 이미 저장한 글을 열면 저장됨(S2-c)으로 시작해? 글 목록에도 저장 표시가 있어? 저장을 해제할 수도 있어?\n4. **저장 중에 화면을 떠나면:** 승인된 흐름에 이 경우가 없다면 흐름 쪽의 빈칸이야. 와이어프레임에서 임의로 정하지 않고 흐름 담당 쪽에 다시 확인해야 해.\n\n## 3. 받으면 좋은 입력 (없으면 아래 기본값으로 진행)\n\n- **실제 길이의 콘텐츠:** 긴 제목, 작성자 표기, 본문 길이, 목록 항목에 보여줄 필드. 없으면 짧은 예시와 긴 예시를 함께 만들어 쓸게.\n- **화면 너비:** 제안값은 데스크톱 1280×800, 좁은 화면 375×812야. 실제로 쓴 크기는 명세에 적을게.\n- **산출물 위치:** `wireframe/index.html`와 `wireframe/screen-spec.md`를 제안해. 파일을 만들기 전에 위치를 확인받을게.\n- **재사용할 컴포넌트나 토큰:** 지금은 없어서 시맨틱 HTML과 중립 스타일로 만들 예정이야.\n\n## 4. 설계 범위\n\n- **포함:**\n  - S1~S3의 정보 계층과 컨트롤 배치\n  - 좁은 화면에서의 순서\n  - 키보드 조작, 포커스, 읽기 순서\n  - 로컬 모의 저장: 성공·실패 시나리오를 고르는 스위치와 초기화 기능 포함\n- **제외:** 시각 방향, 브랜드, 디자인 시스템, 실제 API와 저장 처리, 제품 코드, 최종 문구\n\n## 5. 좁은 화면 S2 순서 초안 (질문 1~3 답변과 브라우저 확인 전)\n\n글 목록으로 돌아가기 → 제목 → 작성자 → 저장 버튼과 상태 메시지 → 본문\n\n본문이 길면 아래쪽 버튼은 스크롤해야 닿을 수 있어. 그래서 저장 버튼을 본문 앞에 둬. 상태 메시지는 버튼 바로 옆에 두고, 화면 읽기 프로그램에도 상태 변화가 전달되게 할 생각이야. 데스크톱에서는 같은 순서를 유지하고 저장 버튼만 제목 줄 오른쪽으로 옮기는 안을 제안해.\n\n질문 1~3에 답하고 산출물 위치를 확인해주면, 다음 단계에서 조작 가능한 화면과 Markdown 명세를 만들게.",
+  "checks": {
+    "model_completed": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 91.061,
+  "duration_api_ms": 89646,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14978,
+    "cache_read_input_tokens": 34985,
+    "output_tokens": 3353,
+    "output_tokens_details": {
+      "thinking_tokens": 1349
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13014,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 915,
+        "cache_read_input_tokens": 14507,
+        "cache_creation_input_tokens": 2239,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2239
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 19033,
+        "output_tokens": 2639,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1958,
+        "cache_read_input_tokens": 16746,
+        "cache_creation_input_tokens": 1964,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1964,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 3353,
+      "cacheReadInputTokens": 34985,
+      "cacheCreationInputTokens": 14978,
+      "webSearchRequests": 0,
+      "costUSD": 0.18801299999999999,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1349,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 19033,
+      "outputTokens": 2639,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.32228,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.510293,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "protocol_sha256": "2cb7ca522aface83d1010a3ef5d9e3f331a21d7d062c80ead0f694ff82a6c1f7",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "0ea0af89e24fef61b930b7efbe40579c5655d98bfbf23981f5fbc3d61edfb075",
+  "transcript_sha256": "fdfc004da77ac069b236dab2b8e8dbd6ec6b89b75a7755c6b02ed7337ef75199",
+  "excluded_from_confirmatory_score": "Expected skill name appeared in the working-directory path."
+}

@@ -1,0 +1,214 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-wireframe",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_011",
+  "expected": "wireframe",
+  "prompt": "/paul-skills:wireframe 승인된 흐름은 글 목록에서 글 상세를 열고 저장한 뒤 저장 목록으로 이동하는 것이야. 상세에는 제목, 작성자, 본문, 저장 버튼이 있고 저장 전·저장 중·저장됨·실패 상태가 있어. 이제 저해상도 화면의 정보 계층, 컨트롤 배치와 좁은 화면의 순서를 정하려고 해. 브라우저에서 조작 가능한 화면과 Markdown 화면 명세를 만들기 전에 필요한 입력과 설계 범위를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "a6e72cca-09c6-406f-bbdd-ae837a74eb50",
+  "started_at": "2026-10-14T07:59:27.165183+00:00",
+  "host_init_session_id": "a6e72cca-09c6-406f-bbdd-ae837a74eb50",
+  "host_result_session_id": "a6e72cca-09c6-406f-bbdd-ae837a74eb50",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "62b555b7-85bf-4bc5-88bd-f7f033385470",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "wireframe",
+      "event_uuid": "5c794f07-1456-4678-99c9-1a9a9d0b7f1e",
+      "file_sha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a",
+      "body_sha256": "3ff9cd64ff717da95a2279c707b2f0012cc20b0e19cea1ec1eba09265e819e7d",
+      "host_message_sha256": "d312a0004e8380484b0e9e47913823468c8e410a2ba86eba76221fd3a9fd4dcc",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01XLm6MHX9PvD5XKAmxn7SzP",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "54fd0edc9852e3b6e41f90e977a7c06c8e9409ae297b6d830f1d31b78de6b330"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아무것도 실행하지 않고 요청문만으로 준비했어요. 작업 폴더 `case_011`에는 브리프, IA, 흐름 파일이 없어요(비어 있고 git 저장소도 아님). 그래서 아래 내용은 모두 요청문에서 뽑은 **초안**이고, 실제 제품과 대조해 확인하지 않았어요.\n\n## 1. 흐름과 화면·상태 대응 (초안)\n\n| 흐름 단계 | 도착 화면·상태 | 이 단계에서 할 일 |\n|---|---|---|\n| 글 목록 | `S1 글 목록` | 글 열기 |\n| 글 상세 열기 | `S2 글 상세` | 읽기, 저장 |\n| 저장 전 / 저장 중 / 저장됨 / 실패 | `S2` 화면 안에서 바뀌는 4가지 상태(저장 버튼과 피드백 영역) | 저장 / (대기) / 저장 목록으로 이동 / 재시도 |\n| 저장 목록으로 이동 | `S3 저장 목록` | 저장한 글 확인, 다시 열기 |\n\n- 4가지 저장 상태는 별도 화면을 만들지 않고 상세 화면 안에서 바꿔 보여주는 것으로 잡았어요.\n- 저장 요청은 가짜 동작으로 흉내 내요. 상태별 시나리오 전환 버튼과 초기화 버튼을 둘 예정이에요.\n\n## 2. 화면 동작을 정하려면 먼저 필요한 결정 4가지\n\n1. **저장됨 다음 동작:** 저장 목록으로 자동으로 넘어가나요, 아니면 \"저장 목록 보기\" 같은 링크를 눌러 이동하나요?\n2. **저장 중과 실패:**\n   - 저장 중에 버튼을 비활성화해서 중복 저장을 막나요?\n   - 실패하면 같은 버튼으로 다시 시도하나요, 아니면 메시지 옆에 별도 재시도 버튼을 두나요?\n3. **저장 해제:** 저장됨 상태에서 저장을 취소할 수 있나요(토글), 아니면 한 번 저장하면 끝인가요?\n4. **상세의 형태:** 상세가 별도 화면(주소가 바뀜)인가요, 목록 위에 뜨는 패널·시트인가요? 이에 따라 좁은 화면의 순서와 뒤로 가기 동작이 달라져요.\n\n## 3. 품질에 필요한 입력 (없으면 아래 가정값으로 진행)\n\n- **콘텐츠 길이:** 제목 최대 글자 수와 줄바꿈 허용 여부, 작성자 표기(이름만 / 이름+날짜), 본문 길이 범위. 없으면 짧은 경우와 긴 경우의 한국어 예시로 확인해요.\n- **목록 항목 필드:** 목록에 보일 정보, 저장 목록이 비었을 때 표시, 목록이 길 때 처리.\n- **확인할 화면 폭:** 지정이 없으면 데스크톱 폭과 콘텐츠에 맞는 좁은 폭으로 시작하고, 실제로 쓴 치수를 기록해요.\n- **기존 UI 부품, 주소, ID:** 없으면 기본 HTML에 중립적인 스타일을 써요.\n- **결과물 저장 위치:** 폴더가 비어 있어서 **정해 주셔야 해요.**\n\n## 4. 좁은 화면 순서 제안 (미확정)\n\n제목 → 작성자 → 저장 버튼과 상태 표시 → 본문 순서를 제안해요.\n\n저장 버튼을 상단에만 둘지, 하단에 고정할지는 아직 정하지 않았어요. 본문 길이 정보를 받은 뒤에 정할게요.\n\n## 5. 범위\n\n- **포함:** 정보 계층, 컨트롤 배치, 좁은 화면의 순서, 가짜 동작으로 상태 전환, 키보드 조작과 포커스 순서.\n- **제외:** 시각 방향, 디자인 시스템, 실제 저장 API, 실제 서비스 구현.\n- **결과 보고:** \"화면이 그려짐\", \"동작 확인됨\", \"사용자 승인됨\" 세 단계를 나눠서 적을게요. 이번 응답은 이 중 어느 단계에도 해당하지 않아요.\n\n2번의 결정 4가지와 저장 위치를 알려주시면 브라우저에서 조작할 수 있는 화면과 Markdown 명세 작업을 시작할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 72.204,
+  "duration_api_ms": 70755,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14344,
+    "cache_read_input_tokens": 36528,
+    "output_tokens": 1964,
+    "output_tokens_details": {
+      "thinking_tokens": 255
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12755,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 189,
+        "cache_read_input_tokens": 16309,
+        "cache_creation_input_tokens": 178,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 178
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 18186,
+        "output_tokens": 2610,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1657,
+        "cache_read_input_tokens": 16487,
+        "cache_creation_input_tokens": 1589,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1589,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 1964,
+      "cacheReadInputTokens": 36528,
+      "cacheCreationInputTokens": 14344,
+      "webSearchRequests": 0,
+      "costUSD": 0.1565946,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 255,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 18186,
+      "outputTokens": 2610,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.31236,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.4689546,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "d9a3a6684a4ce96ebc2fd00d3b575e2caee267d7b0090de5a4daaba883480e8f",
+  "transcript_sha256": "06e15b67e21ffd4f32e79242ebb4553b3b1b56165482c6abd1643a8483a16aa8",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

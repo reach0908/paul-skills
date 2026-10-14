@@ -56,6 +56,10 @@ Component workbenches remain explicit choices: [state-machine](https://github.co
 
 ## Common questions
 
+**Which review command handles UI changes?**
+
+For what a change introduced or regressed, invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) with the target. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) can automatically route an unnamed request to that command before inspecting files; its ordinary screen review remains automatic.
+
 **Isn't there just a list of the skills in the right order?**
 
 People keep asking for one in the README. This skill is that list. A static table would say `wayfinder → to-spec → to-tickets → implement → code-review → retro` and be wrong for most situations. The important parts are the branches: is there a codebase, does the build span sessions, can talking settle this question. The cost is that the router is maintained by hand, so it lags behind the repo. `/grilling` shipped long before the router named it.
