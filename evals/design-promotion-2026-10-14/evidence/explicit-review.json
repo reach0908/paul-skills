@@ -1,0 +1,160 @@
+{
+  "case": "explicit-review",
+  "threadId": "01a13842-835a-74a1-a094-922a680ee5bc",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "receipt": {
+    "case": "explicit-review",
+    "exitCode": 0,
+    "seconds": 164.78,
+    "workspace": "/private/tmp/paul-design-release-20261014/explicit-review",
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-release-20261014/explicit-review",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-promotion-20261014/explicit-review.final.md",
+      "-"
+    ],
+    "inputSha256": "3f3af13d66c048848f827d443c9f8e5ffea84cbab0fc48024fc82fdfe02030e5",
+    "outputSourceSha256": "3f3af13d66c048848f827d443c9f8e5ffea84cbab0fc48024fc82fdfe02030e5",
+    "promptSha256": "1a830431cd4a950638205d557924842207724a25f5f65b800481cd346a2fca98"
+  },
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "loadedSkills": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "interface-review"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "interface-review",
+      "path": "/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/interface-review/SKILL.md",
+      "sha256": "134842eb86cacea8ef747fd9c5b32cd42b8aa2837df8782c3a25deb1c5f6e155",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "checks": {
+    "completed": true,
+    "sourceUnchanged": true,
+    "eightDesignRolesAvailable": true,
+    "explicitOnlyRoleHidden": true,
+    "releasedBundleRead": true,
+    "sixDomainsLoaded": true,
+    "explicitRoleLoaded": true,
+    "classificationPresent": true
+  },
+  "final": "결론: 변경으로 생긴 `HIGH` 키보드 접근성 회귀가 있어 **Block**입니다. 기존 문제는 별도로 1건 확인했습니다.\n\n| Field | Value |\n| --- | --- |\n| Target | `working` |\n| Base ref | `HEAD` at `a19ac6c` (`Baseline fixture`) |\n| Head ref | 위 커밋 기반 현재 작업 트리 |\n| Commits | 0 committed, 1 file uncommitted |\n| Files in scope | 1: `index.html` |\n| Excluded | 없음 |\n| Surfaces expanded | 독립형 `저장한 자료` 화면; 추가 소비자 없음 |\n\n정적 HTML/CSS/JS 프로젝트이며 별도 디자인 규칙 문서는 없었습니다.\n\n### Coverage\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | 버튼의 변경 전후, 클릭 핸들러, 포커스 스타일 | `HIGH` 회귀 1건 |\n| Layout | 인라인 CSS와 320px 너비 계산 | 변경 문제 없음, 기존 문제 1건 |\n| Writing | 변경된 문자열 없음 | Not reviewed: 변경 범위에 근거 없음 |\n| Typography | 타이포그래피 변경 없음 | Not reviewed: 변경 범위에 근거 없음 |\n| Color | 색상 변경 없음 | Not reviewed: 변경 범위에 근거 없음 |\n| UI polish | 표면·아이콘·모션 변경 없음 | Not reviewed: 변경 범위에 근거 없음 |\n\n### 변경으로 생긴 문제\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Accessibility | Regression | [index.html:6](/private/tmp/paul-design-release-20261014/explicit-review/index.html:6) | 세 번째 네이티브 버튼에 `tabindex=\"-1\"`이 추가됨 | `tabindex=\"-1\"`을 제거해 기본 탭 순서 복원 | 이전에는 Tab으로 접근할 수 있었지만 이제 순차 키보드 탐색에서 제외됩니다. 포인터 클릭 경로만 남아 WCAG 2.1.1과 “포인터 경로에는 키보드 경로도 있어야 한다”는 기준을 위반합니다. |\n\n### 기존 문제\n\n이 변경의 책임은 아니며, 전체 저장소 감사가 아닌 제한적인 부가 확인입니다.\n\n| Severity | Domain | Location | Issue |\n| --- | --- | --- | --- |\n| HIGH | Layout | [index.html:2](/private/tmp/paul-design-release-20261014/explicit-review/index.html:2) | `.cards { min-width:350px }`가 `main`의 좌우 20px 패딩과 결합됩니다. 320px 화면에서는 사용 가능한 콘텐츠 폭이 280px이므로 가로 오버플로가 발생합니다. 이 줄은 기준 커밋부터 존재했습니다. |\n\n### Verification\n\n- `git diff --check HEAD -- index.html`: 통과\n- 전체 diff와 변경 전 파일을 모두 읽음\n- `git blame`: 6행은 `Not Committed Yet`, 2행은 기준 커밋 소유로 확인\n- 최종 상태: `index.html`만 기존과 동일하게 수정 상태이며, 파일은 변경하지 않음\n- 브라우저 렌더링, 실제 Tab 이동, 320px 시각 확인, 스크린 리더 및 계산된 스타일은 요청에 따라 **검증하지 않음**\n\n**Verdict: Block** — 변경으로 생긴 `HIGH` 접근성 회귀를 수정하기 전에는 승인할 수 없습니다. Writing, Typography, Color, UI polish는 변경 근거가 없어 검토 대상에서 제외했습니다.",
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/interface-review/SKILL.md && rg -n \\\"paul-design-release|interface-review|explicit-review|design release\\\" /Users/jinhokim/.codex/memories/MEMORY.md\"",
+      "exitCode": 1,
+      "outputSha256": "134842eb86cacea8ef747fd9c5b32cd42b8aa2837df8782c3a25deb1c5f6e155"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/interface-review/scope-resolution.md && sed -n '1,320p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/interface-review/removed-signals.md && sed -n '1,360p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-interface/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "adc16e914c2f1bbbc967f6e2bff1c5d78141c39f8f974c37a7b3e45129904f1c"
+    },
+    {
+      "command": "/bin/zsh -lc \"pwd\ngit rev-parse --show-toplevel\ngit status --short --branch\ngit status --porcelain=v2 --untracked-files=all\ngit rev-parse --verify HEAD\ngit branch --show-current\ngit log -1 --format='%H%n%h %s'\nfor marker in rebase-merge rebase-apply MERGE_HEAD CHERRY_PICK_HEAD; do marker_path=\"'$(git rev-parse --git-path \"$marker\"); if test -e \"$marker_path\"; then echo \"MID_OPERATION $marker $marker_path\"; fi; done\ngit diff --name-status --find-renames=40% HEAD\ngit diff --cached --name-status --find-renames=40% HEAD\ngit ls-files --others --exclude-standard\nrg --files -g '\"'AGENTS.md' -g 'CLAUDE.md' -g 'CONTRIBUTING.md' -g 'CODING_STANDARDS.md' -g '*design*' -g '*DESIGN*' -g '*adr*' -g '*ADR*' -g 'package.json' -g 'vite.config.*' -g 'next.config.*' -g 'tailwind.config.*' -g 'src/**' -g 'app/**' -g 'pages/**' | sed -n '1,240p'\"",
+      "exitCode": 0,
+      "outputSha256": "f9f97b680ec4c48c7fe9471cba67fea77c9dd98041f00df0d0c3c7e43ff1f8f1"
+    },
+    {
+      "command": "/bin/zsh -lc \"rg --files -uu | sed -n '1,300p'\ngit diff --stat HEAD -- index.html\ngit diff --no-ext-diff --find-renames=40% --minimal HEAD -- index.html\nnl -ba index.html | sed -n '1,320p'\ngit show HEAD:index.html | nl -ba | sed -n '1,320p'\"",
+      "exitCode": 0,
+      "outputSha256": "c48bd4f1115685c939aa3fedd407deef96b9a51093d3aae1935fd8f5a775d2a7"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-interface/review-format.md\nfor skill in better-accessibility better-layout better-writing better-typography better-colors better-ui; do echo \\\"===== \"'$skill/SKILL.md =====\"; sed -n '\"'1,420p' \\\"/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/\"'$skill/SKILL.md\"; done'",
+      "exitCode": 0,
+      "outputSha256": "2acc637691cf3982d5b26211d7b3c568c8544790d295bade27665b850781fc50"
+    },
+    {
+      "command": "/bin/zsh -lc \"for skill in better-accessibility better-layout better-writing better-typography better-colors better-ui; do printf '%s ' \\\"\"'$skill\"; wc -l < \"/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/$skill/SKILL.md\"; find \"/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/$skill\" -maxdepth 1 -type f -print | sort; done'",
+      "exitCode": 0,
+      "outputSha256": "ca2fefa78a4e1a24e2c84c17096a33d3616be1019ad5e2768d3dfdc7869debcd"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,220p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-layout/SKILL.md\nsed -n '1,260p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-layout/spacing-and-adaptivity.md\"",
+      "exitCode": 0,
+      "outputSha256": "63bbeacb50b28e17def037c9e5266e90babe4be62bd67ba830f54350b96ca430"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,220p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-accessibility/SKILL.md\nsed -n '1,260p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-accessibility/focus-and-keyboard.md\"",
+      "exitCode": 0,
+      "outputSha256": "8e29a4827abd758c3ed11f6e9a44aa5b4fbd3a656437c6aea4a75abd21bebddf"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-writing/SKILL.md\nsed -n '1,280p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-writing/korean-copy.md\"",
+      "exitCode": 0,
+      "outputSha256": "c494e9a7f4ae50e995c22ad193df9b0601bd6f0de7f556a17bd6154035ea83aa"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,220p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-layout/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-writing/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-typography/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,220p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-colors/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.3.0/skills/design/better-ui/SKILL.md\"",
+      "exitCode": 0,
+      "outputSha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3"
+    },
+    {
+      "command": "/bin/zsh -lc \"git diff --check HEAD -- index.html\ngit blame -L 2,2 HEAD -- index.html\ngit blame -L 6,6 -- index.html\ngit diff -U0 HEAD -- index.html | sed -n '1,120p'\nrg -n \\\"tabindex|data-id|addEventListener|\\\\.cards\\\\{|min-width|focus-visible|<dialog|<button\\\" index.html\ngit status --short\"",
+      "exitCode": 0,
+      "outputSha256": "c7737d9b5a679fd0c777fb1cc76d239d600964a72b28fe0ba3398211ef5bca86"
+    }
+  ],
+  "rawEventsSha256": "3148bdea5b8ef2c79b67ef3546cedc340936c402b814800399cda5034bea492e",
+  "limits": "Fresh global session, not an isolated or blinded quality trial. Normal global memory and other installed capabilities remain enabled. Source-only review; no browser QA."
+}
