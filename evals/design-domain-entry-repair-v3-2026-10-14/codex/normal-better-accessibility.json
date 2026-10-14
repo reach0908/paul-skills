@@ -1,0 +1,93 @@
+{
+  "case_id": "normal-better-accessibility",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a73-5101-76e2-ac0e-7ab05619d6d4",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재는 입력과 실행 증거가 없으므로 모든 항목이 `Not verified` 상태다.\n\n### 필요한 입력\n\n- 대상 화면 URL/경로와 실행 방법\n- 대화상자 실행 버튼 및 닫기 방식: 취소, `Esc`, 확인 완료\n- 최초 포커스 대상과 해지 후 복귀할 논리적 위치\n- 검증할 오류 재현 방법과 기대 오류 문구\n- 지원 브라우저·스크린 리더 조합\n- 대화상자의 확대·전환 애니메이션 기대 동작\n\n### 검증 순서\n\n1. 키보드로 실행 버튼까지 이동하고 `Enter`/`Space`로 연다.\n2. 포커스가 대화상자 내부의 합의된 요소로 이동하는지 확인한다.\n3. `Tab`/`Shift+Tab` 순서, 포커스 표시, 배경으로의 포커스 이탈 여부를 확인한다.\n4. `Esc`, 취소 버튼, 해지 완료 각각으로 닫고 포커스 복귀를 확인한다.\n5. 대화상자·제목·설명·버튼의 접근 가능한 이름, 역할, 상태를 접근성 트리와 스크린 리더로 확인한다.\n6. 오류를 발생시켜 오류 연결과 자동 알림, 재시도 가능 여부를 확인한다.\n7. 200% 확대와 320 CSS px 폭에서 내용 손실·가로 스크롤·가려진 조작 요소가 없는지 확인한다.\n8. `prefers-reduced-motion: reduce`에서 슬라이드·확대 등 불필요한 움직임이 제거되는지 확인한다.\n\n### 완료 조건\n\n- 마우스 없이 전체 해지 흐름을 완료하거나 취소할 수 있다.\n- 대화상자 안에서 포커스가 유지되고 모든 위치에 가시적 표시가 있다.\n- 닫힌 뒤 실행 버튼으로 복귀한다. 실행 버튼이 사라지면 합의된 다음 작업 대상으로 이동한다.\n- 모든 조작 요소에 정확한 이름·역할·상태가 있고, 오류가 인라인으로 연결되며 스크린 리더에 알림된다.\n- 200% 확대와 320 CSS px에서 정보 및 기능 손실이 없다.\n- 움직임 감소 설정을 존중한다.\n- 지정한 브라우저·스크린 리더 조합에서 위 항목을 실제 검증한 증거가 있어야 완료로 판정한다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Revi",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps yo",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. R",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps wi",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the s",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes an",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame o",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendere",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mappin",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implement",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Ma"
+  },
+  "loaded_skills": [
+    "better-accessibility"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-accessibility": {
+      "call_id": "call_8760eb97a6c941b2b14a7a827ac1abea",
+      "file_sha256": "e7ed2b54ae6eb5b3008fde819e59da856b43da422ee455c1e59472a5c8f5d904",
+      "output_sha256": "e7ed2b54ae6eb5b3008fde819e59da856b43da422ee455c1e59472a5c8f5d904",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-accessibility": "e7ed2b54ae6eb5b3008fde819e59da856b43da422ee455c1e59472a5c8f5d904"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "e7ed2b54ae6eb5b3008fde819e59da856b43da422ee455c1e59472a5c8f5d904"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 46481,
+      "cached_input_tokens": 32768,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 927,
+      "reasoning_output_tokens": 203
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "bc046689e61d4021c5c1ef46082eb4e758095feeb96ac627eeba49971a4fcb51",
+  "transcript_sha256": "5a8da2f911ef754247ff588686c79ecb7aa191954bc1349ef2e2d1b0d252b7b3",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 31.607
+}

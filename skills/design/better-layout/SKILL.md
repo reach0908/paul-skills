@@ -1,11 +1,15 @@
 ---
 name: better-layout
-description: Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored.
+description: "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Layout
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill sets grouping, alignment, spacing and responsive structure. It then stress-tests that structure by resizing it, translating it and mirroring it for RTL.
 

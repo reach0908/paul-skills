@@ -1,0 +1,99 @@
+{
+  "case_id": "normal-better-writing",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a74-222d-7f00-8ca5-48e9c48deadb",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "확정 전 짧은 문구 명세입니다. 실제 화면·동작을 확인하지 않아 모두 가정 기반입니다.\n\n| 위치 | 현재 | 제안 | 가정·이유 |\n|---|---|---|---|\n| 저장 버튼 | 진행 | **저장하고 계속** | 저장 후 다음 단계로 이동한다고 가정. 결과가 분명함 |\n| 저장 실패 | 문제가 발생했습니다 | **저장하지 못했습니다. 다시 시도해 주세요.** | 재시도가 가능하다고 가정. 실패 대상과 다음 행동을 명시 |\n| 빈 목록 | 없음 | **아직 구독한 서비스가 없습니다.**<br>**구독 서비스 찾기** | 최초 구독 목록이라고 가정. 상태와 시작 행동을 함께 안내 |\n\n짧은 대안:\n\n- 저장만 수행: **저장**\n- 저장 없이 다음 단계 이동: **다음**\n- 검색 결과가 비어 있음: **검색 결과가 없습니다. 검색어를 바꿔 보세요.**\n- 필터 결과가 비어 있음: **조건에 맞는 구독이 없습니다.** / **필터 초기화**\n\n확정에 필요한 입력은 버튼 클릭 후 실제 동작, 목록의 대상 명칭, 재시도 버튼 유무, 빈 상태가 최초·검색·필터 중 어느 경우인지입니다. 제품 파일과 외부 서비스는 실행하거나 수정하지 않았습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state w",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested ",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-s",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-writing"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-writing": {
+      "call_id": "call_77751d6c4c4c4bb598aad29146f7a030",
+      "file_sha256": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0",
+      "output_sha256": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-writing": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/korean-copy.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "a464cc12f0f399a0a98746a08a25e69138abd22d8b7efd01dd44e6e9c4c44a00"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 69508,
+      "cached_input_tokens": 56064,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1016,
+      "reasoning_output_tokens": 325
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "77fea6213b9d7ce75d637cc18fef6a54a40aef5c1aa9ff118663e24311ed9195",
+  "transcript_sha256": "09ec5e787687b4c0cd628f909bfe906c24a27c84dff6664e795e2212805bd517",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 27.336
+}

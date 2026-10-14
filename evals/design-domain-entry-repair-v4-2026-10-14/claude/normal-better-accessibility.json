@@ -1,0 +1,231 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "schema_version": 1,
+  "case_id": "normal-better-accessibility",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_008",
+  "expected": "better-accessibility",
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "5609055e-bcad-4abb-b05d-ede47e065c78",
+  "started_at": "2026-10-14T13:15:49.276300+00:00",
+  "host_init_session_id": "5609055e-bcad-4abb-b05d-ede47e065c78",
+  "host_result_session_id": "5609055e-bcad-4abb-b05d-ede47e065c78",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "aace4391-256d-41d8-994c-3a960c7b9e90",
+  "automatic_catalog_sha256": "de4298e7e53d9d231ee6aeda3d801ac072151b3ffa22f41c57c99fc4dc2838f8",
+  "full_body_loads": [
+    {
+      "name": "better-accessibility",
+      "event_uuid": "78dc7e93-696e-4354-a4ed-e6f346de084d",
+      "file_sha256": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2",
+      "body_sha256": "4588c33276fb57595852b994c751c6ac27fdd704d0a496901789c592ac69eab9",
+      "host_message_sha256": "96d2a89883a8ae6c729c21d66f5e7da8ab1f0aacda42dd227eb1efd7a86d217f",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-accessibility",
+        "args": "구독 해지 대화상자 현재 상태 점검 준비: 키보드 열기·이동·닫기·포커스 복귀, 접근 가능한 이름, 오류 알림, 확대(zoom/reflow), 움직임 감소. 이번 응답은 입력·검증 순서·완료 조건 명세만. 파일 수정·브라우저 실행 금지."
+      },
+      "tool_use_id": "toolu_01HQ276QAcjsufQ4FWfqkeZd",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "1769a1188c121e6fe4c09a3482bb196ad698250199d2f227df943388cdbe0ce5"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01SyEkQnYZtA5VcThGkn3x3j",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "de2bb02b418107ade67aba4a9c28adecda457a161efa1f1a05181ebbed0e0a33"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 폴더가 비어 있어서 아무것도 점검하지 못했습니다. 아래 항목은 입력이 오기 전까지 모두 `Not verified` 상태입니다.\n\n## 1. 필요한 입력\n\n- **대화상자 소스**: 컴포넌트 파일, 스타일 파일, 사용하는 프레임워크와 스타일 방식. 수정안을 프로젝트 방식에 맞추려면 필요합니다.\n- **여는 버튼**: \"구독 해지\" 버튼의 위치와 마크업\n- **실행 환경**: 대화상자가 뜨는 URL이나 경로, 그리고 구독이 활성 상태인 로그인 계정. 브라우저 점검을 허락해 주실 때 씁니다.\n- **오류 상황**: 확인을 눌렀을 때 실패하는 경우(네트워크 오류, 서버 거부, 필수 사유 미입력 등)와 각 경우를 재현하는 방법\n- **비동기 동작**: 확인 후 처리 중 상태가 있는지, 해지가 끝나면 원래 버튼이 사라지거나 바뀌는지\n- **애니메이션**: 열고 닫을 때 쓰는 transition이나 animation 정의\n- **대상 조합**: 지원하는 스크린리더와 브라우저 조합(예: VoiceOver+Safari, NVDA+Chrome)\n\n## 2. 검증 순서\n\n1. **코드 점검 (브라우저 없이)**\n   - `<dialog>`를 `showModal()`로 여는지, 아니면 `role=\"dialog\"`, `aria-modal=\"true\"`, 배경 `inert`를 쓰는지\n   - `aria-labelledby`가 제목을 가리키는지\n   - 열 때 포커스를 안으로 옮기고, 닫을 때 원래 버튼으로 돌려주는지\n   - Escape 처리, 레이블 연결, `aria-invalid`와 `aria-describedby`\n   - 알림 영역이 텍스트 없이 먼저 렌더링되는지\n   - `prefers-reduced-motion` 조건 처리\n   - `maximum-scale`나 `user-scalable=no`가 없는지, 텍스트 컨테이너에 고정 `height`가 없는지\n2. **키보드로만 점검**\n   - Tab으로 버튼에 가서 Enter나 Space로 열기, 열리면 포커스가 대화상자 안에 있는지\n   - Tab과 Shift+Tab이 대화상자 밖으로 새지 않는지, 모든 지점에서 포커스 링이 보이는지\n   - 닫는 방법을 하나씩 따로 시험: Esc, X 버튼, \"취소\" 버튼, 배경 클릭(지원한다면), 해지 성공\n   - 닫을 때마다 `document.activeElement`가 어디인지 기록\n3. **스크린리더 점검**\n   - 열 때 dialog 역할과 이름이 읽히는지, 모든 컨트롤의 이름·역할·상태\n   - \"닫기/취소\"와 \"구독 해지\" 버튼의 이름이 헷갈리지 않게 구분되는지\n   - 대화상자가 열린 동안 배경이 읽히지 않는지\n4. **오류와 처리 중 상태**\n   - 오류가 나면 첫 번째 잘못된 필드로 포커스가 가는지, 또는 `role=\"alert\"`로 알리는지\n   - Enter를 연달아 눌러도 두 번 제출되지 않는지, 처리 중 상태를 알리는지\n5. **확대**\n   - 텍스트 200% 확대, 너비 320px(1280px 화면을 400% 확대한 크기)에서 가로 스크롤이나 잘리는 내용이 없는지\n   - 대화상자 안쪽이 스크롤되는지, 버튼에 닿을 수 있는지, 포커스가 다른 요소에 가려지지 않는지\n6. **움직임 감소**\n   - OS 설정이나 개발자 도구 에뮬레이션에서 열고 닫는 효과가 페이드만 남거나 아예 없는지\n7. **axe 자동 검사**: 보조 확인으로만 씁니다. 위 점검을 대신하지 않습니다.\n\n## 3. 완료 조건\n\n- 모든 항목이 Pass, Fail(WCAG 기준 번호와 `file:line`), `Not verified` 중 하나로 기록되어 있습니다. 근거 없이 Pass로 표시한 항목은 없습니다.\n- 닫는 방법 **모두**에서 포커스가 원래 버튼으로 돌아갑니다. 해지에 성공해서 버튼이 사라지면, 다음에 포커스가 갈 곳이 정해져 있습니다. 키보드로 진행만 된다고 통과로 보지 않습니다.\n- 대화상자의 역할과 이름이 읽히고, 모든 컨트롤에 이름이 있으며, 오류를 알립니다.\n- 200% 확대와 320px 너비에서 내용이 잘리거나 가로 스크롤이 생기지 않습니다.\n- 움직임 감소 설정에서 이동·크기 변화 애니메이션이 없습니다.\n- 확인할 WCAG 기준: 2.1.1, 2.1.2, 2.4.3, 2.4.7, 2.4.11, 4.1.2, 1.3.1, 3.3.1, 4.1.3, 1.4.4, 1.4.10.\n- 움직임 감소는 원래 AAA 기준(2.3.3)입니다. 다만 이 점검 규칙에서는 무시하면 HIGH로 분류하므로, 보고서에 그 근거를 따로 적습니다.\n- 결과는 심각도, 위치, 수정 전, 수정 후, 이유 순서의 표로 정리합니다. HIGH가 하나라도 남아 있으면 `Block`입니다.\n\n입력을 보내주시면 1번 코드 점검부터 시작하겠습니다. 2번부터 6번까지는 브라우저를 써도 된다고 허락해 주셔야 진행할 수 있습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 90.85,
+  "duration_api_ms": 89289,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 18071,
+    "cache_read_input_tokens": 38948,
+    "output_tokens": 3191,
+    "output_tokens_details": {
+      "thinking_tokens": 758
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16444,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 231,
+        "cache_read_input_tokens": 15040,
+        "cache_creation_input_tokens": 5136,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 5136
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 21804,
+        "output_tokens": 3966,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2523,
+        "cache_read_input_tokens": 20176,
+        "cache_creation_input_tokens": 1627,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1627,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 3191,
+      "cacheReadInputTokens": 38948,
+      "cacheCreationInputTokens": 18071,
+      "webSearchRequests": 0,
+      "costUSD": 0.2113206,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 758,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 21804,
+      "outputTokens": 3966,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.41634000000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6276606,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "addf1c0e1b24265e4d3323100fbb328c69590ed0e6c1af1581bf77ae82719cff",
+  "transcript_sha256": "0dc6c90e32983101716bcec49fcd833d6da69922fed1ba19a1c82d38ba6ad5de",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

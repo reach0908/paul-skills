@@ -12,6 +12,10 @@ The same object and action retain their names across the flow. Errors offer a re
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
 **Can it improve Korean copy without changing our tone?**
 
 Yes. It inventories existing terms and register first. It reports ambiguity, misleading promises or inconsistent terminology rather than rewriting everything into a new voice.

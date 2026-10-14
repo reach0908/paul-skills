@@ -1,11 +1,15 @@
 ---
 name: better-accessibility
-description: Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2.
+description: "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Accessibility
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill reviews and fixes semantics, keyboard and focus behavior, accessible names, forms, announcements, motion and zoom. It reports each failure against the WCAG criterion it breaks and writes the fix in the project's styling system.
 

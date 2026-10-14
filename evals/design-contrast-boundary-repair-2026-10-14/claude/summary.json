@@ -1,0 +1,44 @@
+{
+  "planned": 4,
+  "completed": 4,
+  "by_arm": {
+    "candidate": {
+      "completed": 4,
+      "passed": 3
+    }
+  },
+  "by_mode_candidate": {
+    "explicit": {
+      "completed": 0,
+      "passed": 0
+    },
+    "implicit": {
+      "completed": 4,
+      "passed": 3
+    },
+    "boundary": {
+      "completed": 0,
+      "passed": 0
+    },
+    "handoff": {
+      "completed": 0,
+      "passed": 0
+    }
+  },
+  "failures": [
+    {
+      "case_id": "normal-better-colors-thresholds",
+      "failed_checks": [
+        "expected_skill_invoked_and_loaded"
+      ]
+    }
+  ],
+  "reported_cost_usd": 1.8709720000000003,
+  "actual_billed_usd": null,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "efforts": [
+    "xhigh"
+  ]
+}

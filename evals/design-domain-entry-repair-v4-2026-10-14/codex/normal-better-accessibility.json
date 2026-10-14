@@ -1,0 +1,88 @@
+{
+  "case_id": "normal-better-accessibility",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a87-2086-7be3-b93a-a41a065126f5",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "아직 제품·브라우저를 검사하지 않았으므로 아래는 점검 준비 명세이며, 확인된 결과는 아닙니다.\n\n### 필요한 입력\n\n- 대상 화면 URL 또는 컴포넌트 경로와 실행 방법\n- 대화상자를 여는 버튼, 닫기 방식, 해지 완료까지의 기대 흐름\n- 정상·오류 상태를 재현할 테스트 계정/데이터\n- 지원 대상 OS·브라우저·스크린 리더 조합\n- 오류 문구와 움직임 효과의 기대 동작\n\n### 검증 순서\n\n1. **키보드 열기**: 트리거까지 Tab 이동 → Enter/Space로 열림 → 포커스가 대화상자 내부의 적절한 요소로 이동.\n2. **내부 이동**: 모든 조작을 Tab/Shift+Tab/Enter/Space로 수행하고 포커스 표시·순서·대화상자 내부 순환 확인.\n3. **닫기와 복귀**: Escape, 취소 버튼, 완료 후 닫기를 각각 확인하고 원래 트리거 또는 다음 합리적 작업 위치로 포커스 복귀.\n4. **이름과 상태**: 대화상자의 이름·역할·모달 상태, 제목 연결, 모든 버튼과 입력 요소의 접근 가능한 이름 확인.\n5. **오류 알림**: 오류가 시각적으로만 표시되지 않고 스크린 리더에 전달되는지, 관련 필드 연결과 첫 오류 포커스, 재시도 가능 여부 확인.\n6. **확대·리플로우**: 200% 확대 및 320 CSS px 너비에서 내용이나 기능 손실, 가림, 불필요한 가로 스크롤이 없는지 확인.\n7. **움직임 감소**: `prefers-reduced-motion`에서 슬라이드·확대·자동 움직임이 제거되거나 최소화되는지 확인.\n\n### 완료 조건\n\n마우스 없이 전체 해지 흐름을 완료하거나 취소할 수 있고, 포커스가 항상 보이며 대화상자 밖으로 이탈하지 않고 닫힌 뒤 적절히 복귀해야 합니다. 이름·역할·상태와 오류가 보조기술에 전달되고, 200%/320px 및 움직임 감소 설정에서도 정보와 기능 손실이 없어야 합니다. 모든 대상 환경의 실행 증거가 있어야 완료로 판정하며, 입력이나 실행 증거가 없으면 `미검증`으로 남깁니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state wor",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state wor",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and reque",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-st",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-accessibility"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-accessibility": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45395,
+      "cached_input_tokens": 40960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 870,
+      "reasoning_output_tokens": 179
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "stream_sha256": "05d8997fdc16fbb621f46fc93be99b50e092706edb3e3b9272c40223407f1df8",
+  "transcript_sha256": "93cfd676705fd82b6d32d05796189a8ad288c555211c95b03ad2b6e670c66d87",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 26.918
+}

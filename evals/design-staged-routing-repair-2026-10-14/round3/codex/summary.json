@@ -1,0 +1,34 @@
+{
+  "planned": 21,
+  "completed": 21,
+  "by_arm": {
+    "baseline": {
+      "completed": 0,
+      "passed": 0
+    },
+    "candidate": {
+      "completed": 21,
+      "passed": 18
+    }
+  },
+  "failures": {
+    "staged-1": [
+      "correct_target_handoff",
+      "only_route_bodies",
+      "no_repository_inspection",
+      "semantic_review_pass"
+    ],
+    "explicit-owner": [
+      "semantic_review_pass"
+    ],
+    "authorized-handoff": [
+      "no_failed_commands"
+    ]
+  },
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "efforts": [
+    "medium"
+  ]
+}

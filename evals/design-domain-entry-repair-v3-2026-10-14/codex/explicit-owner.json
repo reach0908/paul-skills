@@ -1,0 +1,84 @@
+{
+  "case_id": "explicit-owner",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13a75-426c-7ee2-87e6-be4a569adc09",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "### 필요한 입력\n\n- 대상: `working`\n- 기준: 검사 시작 시점의 현재 `HEAD` SHA\n- 변경 범위: `git diff HEAD`의 staged+unstaged 순변경과 untracked 파일\n- 변경 의도: 관련 이슈·요구사항·디자인 명세\n- 선택 입력: 렌더링 검증 허용 여부와 확인할 핵심 화면\n\n현재는 실제 diff를 읽지 않았으므로 파일 수, 영향 화면, 결함 여부는 확인되지 않았습니다.\n\n### 분류 방식\n\n- `Introduced`: 이번 working 변경이 새로 만든 문제\n- `Regression`: 변경 전에는 올바르던 동작이나 표현을 이번 변경이 약화한 문제\n- `Pre-existing`: 변경 전부터 있었고 이번 변경이 악화하지 않은 문제\n\n삭제된 접근성·상태·스타일 신호가 다른 방식으로 대체됐는지 확인한 뒤 회귀로 판정합니다. 기존 결함은 최대 3개만 별도 참고로 기록하며 변경 책임에 포함하지 않습니다.\n\n### 완료 조건\n\n- `HEAD` 기준 범위, untracked 파일, 제외 파일이 명시됨\n- 변경 파일의 직접 영향 화면과 제한된 소비자 범위가 정리됨\n- 접근성·레이아웃·문구·타이포그래피·색상·UI별 검토 범위가 기록됨\n- 모든 발견에 `Introduced`, `Regression`, `Pre-existing` 상태와 전후 근거가 있음\n- 렌더링하지 않았다면 시각·런타임 항목을 `Not verified`로 표시함\n- 신규 문제나 회귀가 없으면 “No actionable interface findings in this change.”로 종료함",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state w",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested ",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-s",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+  },
+  "commands": [],
+  "usage": [
+    {
+      "input_tokens": 24246,
+      "cached_input_tokens": 19968,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 628,
+      "reasoning_output_tokens": 184
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "f12e910ba387ff4ebfad2c90468a7d585b8591929848e68639d84b50efc83721",
+  "transcript_sha256": "b11c63b33f12bc8cd43e9629a3a611a807399106245b794182e84b86e2232d04",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 18.607
+}

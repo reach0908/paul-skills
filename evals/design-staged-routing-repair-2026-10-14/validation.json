@@ -1,0 +1,21 @@
+{
+  "npm_run_check": {
+    "status": "pass",
+    "unit_tests": 38,
+    "skill_records": 56,
+    "promoted_paths": 44
+  },
+  "claude_plugin_validate_strict": "pass",
+  "route_and_source_grader_controls": {
+    "status": "pass",
+    "count": 13
+  },
+  "historical_release_receipt_verifier": "pass; outcomes preserved Claude 6/6, Codex 5/6",
+  "git_diff_check": "pass",
+  "frozen_candidate_files": 174,
+  "immutable_source_revisions": "unchanged",
+  "release_status": "unreleased candidate, held due to remaining Codex failures",
+  "receipt_integrity": "pass",
+  "unique_sessions": 92,
+  "daily_install_byte_equality": "174 files per host; unchanged 0.4.1"
+}

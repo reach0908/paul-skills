@@ -1,0 +1,635 @@
+{
+  "changed_bundle_files": [
+    "skills/design/better-colors/contrast.md"
+  ],
+  "unchanged_bundle_files": 174,
+  "all_entry_bodies_and_catalog_metadata_unchanged": true,
+  "reference_consumers": {
+    "codex": [
+      "normal-better-colors-2",
+      "normal-better-colors-3",
+      "normal-better-colors"
+    ],
+    "claude": [
+      "normal-better-colors-2",
+      "normal-better-colors-3",
+      "normal-better-colors"
+    ]
+  },
+  "carried_cases": {
+    "codex": [
+      "authorized-handoff",
+      "branch",
+      "current-audit",
+      "explicit-domain",
+      "explicit-owner-2",
+      "explicit-owner-3",
+      "explicit-owner",
+      "explicit-router",
+      "normal-better-accessibility",
+      "normal-better-layout",
+      "normal-better-typography",
+      "normal-better-ui",
+      "normal-better-writing",
+      "normal-ia",
+      "staged-1",
+      "staged-2",
+      "staged-3",
+      "staged-copy-motion",
+      "staged-divergent",
+      "staged-type-color-2",
+      "staged-type-color-3",
+      "staged-type-color",
+      "working-divergent",
+      "working"
+    ],
+    "claude": [
+      "authorized-handoff",
+      "branch",
+      "current-audit",
+      "explicit-domain",
+      "explicit-owner-2",
+      "explicit-owner-3",
+      "explicit-owner",
+      "explicit-router",
+      "normal-better-accessibility",
+      "normal-better-layout",
+      "normal-better-typography",
+      "normal-better-ui",
+      "normal-better-writing",
+      "normal-ia",
+      "staged-1",
+      "staged-2",
+      "staged-3",
+      "staged-copy-motion",
+      "staged-divergent",
+      "staged-type-color-2",
+      "staged-type-color-3",
+      "staged-type-color",
+      "working-divergent",
+      "working"
+    ]
+  },
+  "carried_pass_count": 48,
+  "rows": [
+    {
+      "host": "codex",
+      "case_id": "authorized-handoff",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/authorized-handoff.json",
+      "receipt_sha256": "34b68470be5ee50cd0ece548bb607f0d042a1e2b9a36cb1e847099f0afc5c5c3",
+      "session_id": "01a13a7f-1ea6-71c3-8300-1081ffdf80c4",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "branch",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/branch.json",
+      "receipt_sha256": "931b1a722a3749fd14211dbabbea781cde1b4d6f4480adbc98accfb6aa2ee37d",
+      "session_id": "01a13a86-daba-7013-9128-e66eec9b6280",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "current-audit",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/current-audit.json",
+      "receipt_sha256": "d9d64da67b2a2df13dc3ffc9c75777593c45fa4aad6b7af241cb695d5d6ae929",
+      "session_id": "01a13a89-1b15-7991-8979-f58ae57b2425",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "explicit-domain",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/explicit-domain.json",
+      "receipt_sha256": "7bd0944575579b4f1cb7d49ae9e164858287cbbe262ec981816d7fd6fd097d69",
+      "session_id": "01a13a8a-688d-7490-9805-89cfd47462ec",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "explicit-owner-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/explicit-owner-2.json",
+      "receipt_sha256": "1cf44868ace54fd1da33b71eed69492013b1586f8a1fa6bc7a2cf23d3c33c054",
+      "session_id": "01a13a8a-9afd-7c63-883e-e2f2c865a3bf",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "explicit-owner-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/explicit-owner-3.json",
+      "receipt_sha256": "00ba66e6afcadd7fb5c9ebdba8f38ab0a9790e84a7d46fc784613cf9f4b4e176",
+      "session_id": "01a13a8b-08e0-7be0-8ff3-50c395ac426c",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "explicit-owner",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/explicit-owner.json",
+      "receipt_sha256": "92c483f66d318f69498d0b3637c334070b141ea0cc450335f0bba679d51c2158",
+      "session_id": "01a13a89-1aee-76e3-b954-5d65f4e39e25",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "explicit-router",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/explicit-router.json",
+      "receipt_sha256": "0a37824aff94929e5a360591c4304fb068a72dd7c2b1f34ab59dde0fc12f4207",
+      "session_id": "01a13a8a-688d-7560-88df-c4cc54d6d2ff",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-accessibility",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-accessibility.json",
+      "receipt_sha256": "297b166f62e6fc011e1c576904c347fe40a33f848acc7cd70d4ffae375b4d428",
+      "session_id": "01a13a87-2086-7be3-b93a-a41a065126f5",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-colors-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-colors-2.json",
+      "receipt_sha256": "7fbec77cd4d037d7ccec440a8768677c33a00ed0d498f988b131db30b9161117",
+      "session_id": "01a13a8b-08e0-7973-8343-73c9d6770e23",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-command",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-colors-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-colors-3.json",
+      "receipt_sha256": "44d657922753046d9e2c33eee774fe69ca9dd6fc6ccd4f900a19359785b51c72",
+      "session_id": "01a13a8b-9c5e-7910-94f6-589804136216",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-command",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-colors",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-colors.json",
+      "receipt_sha256": "ce17bd3a5a9fb3f0b6f35519403383902a503e46c3796449cb00c4bc5c98612f",
+      "session_id": "01a13a88-54e0-7453-88f6-5856a955bebd",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-command",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-layout",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-layout.json",
+      "receipt_sha256": "e850043883a53a61c4accafcde5dab9dbe4e391c8328952cdc4ebe1c2d2947bf",
+      "session_id": "01a13a87-2087-70f1-94ab-d5136c8e5e0e",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-typography",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-typography.json",
+      "receipt_sha256": "cc5def053310073d9559335b8cb5702e4e2a0d817b725a9ad6cc2ff7aa2655e4",
+      "session_id": "01a13a87-bd8b-70d2-b656-d300e8b752ad",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-ui",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-ui.json",
+      "receipt_sha256": "9d1bfdc32e38bc4ae6db6da597fad83181a0be0bddd1456cff8ba745baf29530",
+      "session_id": "01a13a88-54e2-7453-9173-35748e9be741",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-better-writing",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-better-writing.json",
+      "receipt_sha256": "691eb7f3768b65a1ebdcd3a9ea8b54769a3cb6039877de28b1f03e82322c6014",
+      "session_id": "01a13a87-bd8b-7352-9496-6bb2e796253d",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "normal-ia",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/normal-ia.json",
+      "receipt_sha256": "36bf3e1d0c67a8df923dcbed5f4f1ac911378821241bc626ecad6459aa6f1276",
+      "session_id": "01a13a8a-9b00-7a40-9157-802988a57a3c",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-1",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-1.json",
+      "receipt_sha256": "0bc8d332f20b01a9a57b6532102774144c24a3faaa7d7df9945533569e19917c",
+      "session_id": "01a13a86-59ba-7432-96f8-6ca7f77c59dd",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-2.json",
+      "receipt_sha256": "92c1dfa515646bb46a2d380241fe76598c20c3bbd5478a0ab9605d4a54e706f2",
+      "session_id": "01a13a86-59ba-7fe3-81a1-f66e9162d346",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-3.json",
+      "receipt_sha256": "2af8b6236c3ac2f0241406e7d4ce108b20130cab28c060b4bc0e74c3dd72c460",
+      "session_id": "01a13a86-99e0-7123-9f11-3968ba3e3401",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-copy-motion",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-copy-motion.json",
+      "receipt_sha256": "63851821f084749ff9661f8af146acb62bf4d78dbbd8b81c0ef196945dd01e6c",
+      "session_id": "01a13a86-99e0-7963-81ac-0bf368501505",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-divergent",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-divergent.json",
+      "receipt_sha256": "b05698e12461c11e9e4bd0ed79dda14fbbf1749ba296bc62c90d2638d3b2fd5b",
+      "session_id": "01a13a81-349a-7383-8764-bdef390ad913",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-type-color-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-type-color-2.json",
+      "receipt_sha256": "403239de6563ae96c1a9e029fe2ccaebd71398d692aa211c337ec8e4bdadc03b",
+      "session_id": "01a13a80-d88f-7c11-870c-67e95f08a19b",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-type-color-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-type-color-3.json",
+      "receipt_sha256": "7c7a65936166589c33f9038c7c7f7c6801e1cca47987c505121270545396a1e4",
+      "session_id": "01a13a80-d890-7551-9e30-6545b0a27d61",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "staged-type-color",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/staged-type-color.json",
+      "receipt_sha256": "94d00507a956e3be2fb15f6d12238410907f0bb248489e6dd50bb98d922cee17",
+      "session_id": "01a13a7f-1e12-7e13-90c8-0ae6df0f08a0",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "working-divergent",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/working-divergent.json",
+      "receipt_sha256": "cf434024da0eb1690e1983fb5338170f5a5782c0cc3fa22a72adddb6caae34d5",
+      "session_id": "01a13a81-349d-78e0-a311-7443a50b9886",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "codex",
+      "case_id": "working",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/codex/working.json",
+      "receipt_sha256": "bb639aae6742287ca1afe41eea7337168331850986ddcfaf077d823eeebeadb9",
+      "session_id": "01a13a86-dabb-7fb1-9e65-e166f3766555",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "authorized-handoff",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/authorized-handoff.json",
+      "receipt_sha256": "50be532edf1ec85ef3e86cd9b28ec47e1ced3cb77bde2ccecf5cdc6177e8552d",
+      "session_id": "8f5342fb-f54f-49c5-a636-616fd6597073",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "branch",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/branch.json",
+      "receipt_sha256": "c55d8d72c30cedd0878af878db85d5e3554663edc93816c6f79e3ea36d769dfc",
+      "session_id": "3ff82efa-3e68-47a8-b232-d2dd5955a442",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "current-audit",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/current-audit.json",
+      "receipt_sha256": "ce4b0104e4c5c81dbeeb7f0ad3d514ce4fe615b45df5524e184e6be13b52f7a9",
+      "session_id": "b6add0b1-4f17-407a-944d-4db12482fcd5",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "explicit-domain",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/explicit-domain.json",
+      "receipt_sha256": "a7ecd636bf13ce2ac5f8f984121d74d5099e3affcd967f43fda84a1e6815928a",
+      "session_id": "fc0ce63f-1417-43a7-a7e1-5152c3ed0316",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "explicit-owner-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/explicit-owner-2.json",
+      "receipt_sha256": "0974600ff8418cb600522a0c11989a0cd82c27fde8dae63ee6b268f0e37de27e",
+      "session_id": "7b8174d0-23cf-4bcd-ae08-0d44b131912e",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "explicit-owner-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/explicit-owner-3.json",
+      "receipt_sha256": "ec78a29600ea0033873e5b13b2bec2482cf848555c70e37072c1733c5b4c6e62",
+      "session_id": "76b01464-b80a-4e90-8842-e5e710ca7882",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "explicit-owner",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/explicit-owner.json",
+      "receipt_sha256": "40432c95e6d63e45b13905b2437f0acb86553f42002e6045f323d55aff8533cb",
+      "session_id": "652f1eb7-90ab-473e-b858-16ba5660daeb",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "explicit-router",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/explicit-router.json",
+      "receipt_sha256": "54c4de00484cb5b1583be5422b3998a098303e9cb133491e92fb89f447b12fa9",
+      "session_id": "90aab16d-b2e5-4148-b5d2-eaa77e213df1",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-accessibility",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-accessibility.json",
+      "receipt_sha256": "6f20e97c60be43f46135ad706565d6008547b9cced511c0fdc96290679e47366",
+      "session_id": "5609055e-bcad-4abb-b05d-ede47e065c78",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-colors-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-colors-2.json",
+      "receipt_sha256": "2be76789b3b74562d3235b1e00be4ed1ec01659992222b52fbaac959b8574b3f",
+      "session_id": "2a3402a6-3242-4e46-a2b1-917960128af6",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-read",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-colors-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-colors-3.json",
+      "receipt_sha256": "8cbce2c63965adb8b2b29a67616e63dd921071f0c0dd7329dd6f8cbc27b00227",
+      "session_id": "2c4d8db2-bd1c-441e-871f-a476d50bf174",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-read",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-colors",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-colors.json",
+      "receipt_sha256": "8b9769e7ce6473c6f1b465a7f25b36712683a79ed54ac08b070771353d037a3c",
+      "session_id": "e823fff4-9baf-41db-9d58-665c26305e57",
+      "read_changed_reference": true,
+      "evidence_methods": [
+        "explicit-reference-read",
+        "reference-content-in-tool-result"
+      ],
+      "eligible_carried_pass": false
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-layout",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-layout.json",
+      "receipt_sha256": "8c7336a51d14842adbf24f62ab7f4416e630d2131ff4a3d748cc03337b01e104",
+      "session_id": "ac03a0f7-d643-4989-bfd0-1f034484a8c1",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-typography",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-typography.json",
+      "receipt_sha256": "2e4f88f77159c06191a424eeb92d69dffd473e24f96d185ec6b0ae98a6cde4db",
+      "session_id": "28fdad58-58cb-4037-bebb-c1cf6ca34745",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-ui",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-ui.json",
+      "receipt_sha256": "cd2e75f8fcecce560e8db504b0d9f71ea564f75ec2aa9e7efb140fdc5dccb84d",
+      "session_id": "268c3897-999d-4ce2-b75d-8aae63c47c46",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-better-writing",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-better-writing.json",
+      "receipt_sha256": "07609a2c6059b07ce00e5eec0012aeab54c3bbeb5c735b443f81ebaf0dca5f63",
+      "session_id": "a4824219-4675-47cb-b755-78de0c6a628b",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "normal-ia",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/normal-ia.json",
+      "receipt_sha256": "b38215aa38b1c545126f9913b9729c662c7ab423bd9d725089bd36c722e0699d",
+      "session_id": "8ee24175-60d6-4c19-add0-aa6a31afd5af",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-1",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-1.json",
+      "receipt_sha256": "c796e1dbb24fd3fd24862d2fb27bcad4b0c66ef99a9a2208b84105752a7979b4",
+      "session_id": "7955a819-b259-4525-a36e-562e4cdcd257",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-2.json",
+      "receipt_sha256": "f9530e3d7afb56ce5d9a87ff6d708ad9ffce0cb413196c8fbb3eb450e4cab16c",
+      "session_id": "d3856c31-fd39-449e-83c5-a881879455e2",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-3.json",
+      "receipt_sha256": "f28f8aa651891aab4765b3d87bc25a9593ff8bdfb2f2716ba4111749a6e027ce",
+      "session_id": "589fcf27-0c95-4955-94fe-ff0f40f6f233",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-copy-motion",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-copy-motion.json",
+      "receipt_sha256": "8b788c981154cd590da22680f0b5aaa95b9a2c2f28a8a8bf618eb8b1ac9c1b41",
+      "session_id": "40db66d8-6ac7-42ec-adee-94bb5bdd89b4",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-divergent",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-divergent.json",
+      "receipt_sha256": "8880fc9f1ed4d475e4cac865b4437b9adc98dc3f2cafe44db07ea4217dcd7cfd",
+      "session_id": "a7ea498c-bad4-43ba-b10c-0ecee6e6f236",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-type-color-2",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-type-color-2.json",
+      "receipt_sha256": "4a8537b84a66fdfdf3a8e47848f8effc2016b1eae3552ba0c98d14dcdf3a9981",
+      "session_id": "fc074c46-3cf9-4190-b97f-0a33939e67d1",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-type-color-3",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-type-color-3.json",
+      "receipt_sha256": "e31d5dbd43771118d3417060a99efb5edfdc5ce147c3f317705161b5ab6d7a72",
+      "session_id": "82f0cbfb-a1d2-406f-869a-b38e92ad106f",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "staged-type-color",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/staged-type-color.json",
+      "receipt_sha256": "461cac852bdcc6342a934d6e4a755dba28f63a8a9e64913d5658f90bcd90c069",
+      "session_id": "696310ec-ec85-41c4-aaef-9affdbd726d0",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "working-divergent",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/working-divergent.json",
+      "receipt_sha256": "73b7517a9fca6d37585309273f90d934e573cab1c72b61608f8fbcabd1c9765e",
+      "session_id": "72c805a0-4333-4fbc-83f3-9ea7747985f5",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    },
+    {
+      "host": "claude",
+      "case_id": "working",
+      "source_receipt": "design-domain-entry-repair-v4-2026-10-14/claude/working.json",
+      "receipt_sha256": "d1b5eb962ee50a6ff5dcea31b2139a21a37b6c3b5e52bd621dba1c0668a23d28",
+      "session_id": "62909c44-e77e-4130-b450-85a9708af2c5",
+      "read_changed_reference": false,
+      "evidence_methods": [],
+      "eligible_carried_pass": true
+    }
+  ],
+  "limitations": "Observed dependencies from preserved native tool calls and tool outputs; carried sessions are not re-executed on candidate 9."
+}

@@ -1,0 +1,309 @@
+{
+  "arm": "candidate",
+  "fixture": "git",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "schema_version": 1,
+  "case_id": "current-audit",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_014",
+  "expected": "better-interface",
+  "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "session_id": "b6add0b1-4f17-407a-944d-4db12482fcd5",
+  "started_at": "2026-10-14T13:20:42.656239+00:00",
+  "host_init_session_id": "b6add0b1-4f17-407a-944d-4db12482fcd5",
+  "host_result_session_id": "b6add0b1-4f17-407a-944d-4db12482fcd5",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "c541695d-fd58-4707-93a0-8b5b81a7922e",
+  "automatic_catalog_sha256": "de4298e7e53d9d231ee6aeda3d801ac072151b3ffa22f41c57c99fc4dc2838f8",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "59c9f1d6-67b0-4175-b844-059897c430d1",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "body_sha256": "6dad1e1c94ec8dbb860ce09094c883042716b0964050d6b9b5712c79d3b1a387",
+      "host_message_sha256": "b34bd2abd0f16a7fdbb5b25e712d8153a384205fe560417a691bfab110f4d0cc",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "현재 구독 화면 UI 종합 검토(current-screen audit): 키보드 접근성, 배치, 문구, 글꼴, 색상, 시각 디테일. 검토 절차와 필요한 증거만 짧게 준비. 제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지, 미확인 결과를 사실처럼 말하지 않기."
+      },
+      "tool_use_id": "toolu_01T4cYodCqWUsDhruyMhjfsu",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c6dee8c560a4a914dadbfcff05b5a84b04b52030af55f4e5b118a02933f5fa40"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/better-interface/audit-procedure.md"
+      },
+      "tool_use_id": "toolu_01T2iAQp5oh4gEzASiShNye3",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cd23b054ecc5658c8d63c2e1902e98ca0bacaaf3caa3b31835d424dcb9e2670a"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01CJ5D6cJqDoMsTXZreJK3ck",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cab113529c56bee540da1b4076df431af7f5d07104148b8fb7f511b50247965d"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$TRIAL/src/Panel.html"
+      },
+      "tool_use_id": "toolu_01BqT8SiGKNUkZHakhummCZY",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "23ed5ad97d70a50205ca145590d90e7323e813485b9e95db6fb42476d8142083"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/better-interface/review-format.md"
+      },
+      "tool_use_id": "toolu_01Dx3FZffVF2UsJit3u89g9V",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "1ef9314ee44ec909ab8045ee09c6eda9f19d51ff7c63014e1ada7d03f02ad33f"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 구독 화면을 검토하는 절차와 필요한 증거를 정리했습니다. 이번에는 파일을 읽기만 했고, 수정하거나 브라우저·외부 서비스를 실행하지 않았습니다. 아래 내용은 모두 검토 계획이고, 확정된 결과는 아직 없습니다.\n\n## 1. 검토 범위와 확인한 사실\n- **검토 대상:** 현재 작업 트리의 `src/Panel.html` 하나입니다. 저장소에 화면 파일은 이것뿐입니다. 이 파일은 스테이징된 내용과도 같습니다.\n- **구성:** 정적 HTML 파일 하나이고 스타일은 파일 안(3행)에 있습니다. 프레임워크, 디자인 토큰, 빌드·테스트·미리보기 명령은 없습니다.\n- **프로젝트 문서:** `CLAUDE.md`, `CONTRIBUTING.md`, 디자인 시스템 문서 모두 없습니다. 나중에 수정 제안을 할 때도 이 파일 안의 HTML·CSS 방식 그대로 씁니다.\n- **화면 상태:** 소스에는 \"Your subscription is active.\" 한 가지 상태만 있습니다. 빈 상태, 로딩, 오류 화면은 존재하지 않으므로 검토 범위에 넣었다고 말하지 않겠습니다.\n\n## 2. 검토 순서와 필요한 증거\n검토할 때 영역별 검토 기준을 하나씩 불러와 아래 순서대로 진행합니다. 증거는 두 종류로 나눴습니다. **소스 증거**는 지금 파일만 읽어서 확보할 수 있고, **화면 증거**는 브라우저로 직접 띄워 봐야 해서 이번에는 전부 **미확인**입니다.\n\n| 순서 | 영역 | 소스 증거 | 화면 증거 (미확인) |\n| --- | --- | --- | --- |\n| 1 | 키보드 접근성 | 4행 버튼의 접근 가능한 이름이 무엇으로 정해지는지, 3행의 `:focus-visible` 규칙, 44px 최소 크기 | Tab·Shift+Tab 이동, Enter·Space로 작동하는지, 초점 테두리가 실제로 보이는지, 화면 낭독기가 버튼을 어떻게 읽는지 |\n| 2 | 배치 | 요소 순서: `h1` → 버튼 → `p` | 320px 폭, 200% 확대, 번역으로 문구가 길어질 때 |\n| 3 | 문구 | `<title>Subscription settings</title>`와 `<h1>Subscription</h1>`이 서로 맞는지, 상태 문구 | 없음 |\n| 4 | 글꼴 | 3행 `font:1rem/1.5 system-ui`, 버튼의 `font:inherit` | 운영체제마다 실제로 쓰이는 글꼴, 줄바꿈 |\n| 5 | 색상 | 색 조합 `#111`/`#fff`, `#005fcc`/`#fff`. 소스 값으로 대비를 계산할 수 있지만 아직 계산하지 않았습니다 | 브라우저 기본 버튼 배경·테두리와 아이콘이 이루는 대비 |\n| 6 | 시각 디테일 | 16×16 SVG, 선 두께 지정 없음, 애니메이션 없음 | 44px 버튼 안에서 아이콘이 시각적으로 중앙에 보이는지, 기본 버튼 모양 |\n\n## 3. 미리 확인할 점 (아직 결론 아님)\n- **`src/Panel.html:4`:** 버튼 안에는 `aria-hidden` 처리된 아이콘만 있습니다. 텍스트, `aria-label`, `title`이 모두 없어서 소스상으로는 버튼 이름이 붙을 곳이 보이지 않습니다. 접근성 검토에서 이름이 없다고 확인되면 바로 **HIGH** 등급이고, 판정은 **Block**(출시 보류)이 됩니다.\n\n## 4. 결과 보고 형식\n최종 보고는 다음 네 부분으로 구성합니다.\n1. **범위와 영역별 검토 현황:** 검토한 증거를 영역마다 적습니다.\n2. **문제 목록 표:** 심각도 순으로 정렬하고 최대 15건입니다. 위치는 `파일:행`으로 적습니다.\n3. **확인 내역:** 통과한 항목과 **미확인** 항목을 나눠 적습니다.\n4. **판정:** Block(출시 보류) 또는 Approve(승인) 중 하나입니다. 검토하지 못한 영역이 있으면 판정에 그 이름을 함께 적습니다.\n\n이 검토는 현재 화면 기준이라, 문제를 특정 변경 탓으로 돌리지 않습니다. 스테이징된 변경이 무엇을 바꾸거나 악화시켰는지 보려면 `/paul-skills:interface-review staged`를 직접 실행하시면 됩니다.\n\n검토를 진행할지 정해 주세요. 그리고 화면 증거 단계(Playwright 기반 브라우저 확인)를 실행해도 되는지도 알려 주세요. 허락이 없으면 화면 증거 항목은 모두 **미확인**으로 보고합니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true,
+    "no_change_review_redirect": true
+  },
+  "pass": true,
+  "duration_seconds": 124.18,
+  "duration_api_ms": 122529,
+  "usage": {
+    "input_tokens": 14,
+    "cache_creation_input_tokens": 22577,
+    "cache_read_input_tokens": 120361,
+    "output_tokens": 4635,
+    "output_tokens_details": {
+      "thinking_tokens": 2133
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 20905,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2757,
+        "cache_read_input_tokens": 21775,
+        "cache_creation_input_tokens": 2862,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2862
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 14,
+      "outputTokens": 4635,
+      "cacheReadInputTokens": 120361,
+      "cacheCreationInputTokens": 22577,
+      "webSearchRequests": 0,
+      "costUSD": 0.2924282,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2133,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 23262,
+      "outputTokens": 4293,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.44727000000000006,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.7396982000000001,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "3ee8ba340f5beb10c3b3c7a838d9e16c6fe31a7b8fc2fcd4967b37dcba2d40c2",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "5dc594b8179cb72524fc9be94afe85fcf9e4d3af64f9cf4c3f59a8a6fbf63cb1",
+    ".git/logs/refs/heads/feature/checkout": "a484f5f1247f00a52fda73fcca0b138dfd648761763b4f27095d2b21cd18b7d8",
+    ".git/logs/refs/heads/main": "7255f7879e0ba69577c71f4b78efa44436f889442d44ff648754d4b4bc5e4eec",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/b0/6ca760cf627ff6a35d44b39bff3ac199528606": "43b2161bda04a3e330f73f6ee23a48484a84e2c513cfac864247c405d8707651",
+    ".git/objects/dd/32f655be49a1cbe8a6df3cec2e84411c03dd80": "dc326a061fffad270e14c840095a9bd4555242b3c33c57c672be4b776e473190",
+    ".git/refs/heads/feature/checkout": "7aa50e72295e999d848cd5a564b716ec630a0c68530caf8b554b2e8b94f88d2f",
+    ".git/refs/heads/main": "886cd7b6a7ad76d0ee0037afd8363222adbdf3abae64ae35d4d855fad519b71d",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "input_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "3ee8ba340f5beb10c3b3c7a838d9e16c6fe31a7b8fc2fcd4967b37dcba2d40c2",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "5dc594b8179cb72524fc9be94afe85fcf9e4d3af64f9cf4c3f59a8a6fbf63cb1",
+    ".git/logs/refs/heads/feature/checkout": "a484f5f1247f00a52fda73fcca0b138dfd648761763b4f27095d2b21cd18b7d8",
+    ".git/logs/refs/heads/main": "7255f7879e0ba69577c71f4b78efa44436f889442d44ff648754d4b4bc5e4eec",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/b0/6ca760cf627ff6a35d44b39bff3ac199528606": "43b2161bda04a3e330f73f6ee23a48484a84e2c513cfac864247c405d8707651",
+    ".git/objects/dd/32f655be49a1cbe8a6df3cec2e84411c03dd80": "dc326a061fffad270e14c840095a9bd4555242b3c33c57c672be4b776e473190",
+    ".git/refs/heads/feature/checkout": "7aa50e72295e999d848cd5a564b716ec630a0c68530caf8b554b2e8b94f88d2f",
+    ".git/refs/heads/main": "886cd7b6a7ad76d0ee0037afd8363222adbdf3abae64ae35d4d855fad519b71d",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 7,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "9b0d2f5a339989c6dd2e53cde37f2563e10b591efa7b702ed366147191b854e8",
+  "transcript_sha256": "bf5530a4c613df636bb675d499517c35e14959249d53b9334785860d49c1c7cd",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

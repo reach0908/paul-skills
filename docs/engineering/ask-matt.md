@@ -56,6 +56,10 @@ Component workbenches remain explicit choices: [state-machine](https://github.co
 
 ## Common questions
 
+**Which entry wins when a staged review names several UI domains?**
+
+[better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) routes the change-review request first. The named domain skills receive the authorized scope later; their ordinary screen audits and fixes remain directly available.
+
 **Which review command handles UI changes?**
 
 For what a change introduced or regressed, invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) with the target. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) can automatically route an unnamed request to that command before inspecting files; its ordinary screen review remains automatic.

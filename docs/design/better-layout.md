@@ -12,6 +12,10 @@ Breakpoints follow the content and task. Related controls stay grouped, primary 
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
 **Must the mobile page look like a smaller desktop page?**
 
 No. Reading order and task importance govern the narrow layout. The [skill](https://www.aihero.dev/ai-coding-dictionary/skill) preserves useful structure and changes it when the content no longer fits.

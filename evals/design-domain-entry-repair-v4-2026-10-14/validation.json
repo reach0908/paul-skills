@@ -1,0 +1,38 @@
+{
+  "package_check": {
+    "command": "npm run check",
+    "exit_code": 0,
+    "unit_tests_passed": 38,
+    "skill_records": 56,
+    "promoted_skills": 44,
+    "log_sha256": "e0aee5b4bf7cec44a4853a0017c12f712234c6791f3cbaa93d5da371628cdbf5"
+  },
+  "grader_controls": {
+    "command": "python3 -m unittest discover -s evals/design-domain-entry-repair-v4-2026-10-14 -p test_order_grader.py",
+    "exit_code": 0,
+    "tests_passed": 26
+  },
+  "plugin_validation": {
+    "command": "claude plugin validate . --strict",
+    "exit_code": 0
+  },
+  "whitespace_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "versions": {
+    "codex_cli": "0.146.0",
+    "claude_cli": "2.1.296",
+    "daily_plugin": "0.4.1"
+  },
+  "candidate_bundle_files": 175,
+  "global_before_files": {
+    "codex": 174,
+    "claude": 174
+  },
+  "limitations": [
+    "Native CLI models and scenarios specified in PROTOCOL.md only.",
+    "Maintainer semantic judgments; no independent blinded reviewer.",
+    "No candidate publication or global installation."
+  ]
+}

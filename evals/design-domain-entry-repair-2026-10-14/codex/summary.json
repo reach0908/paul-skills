@@ -1,0 +1,30 @@
+{
+  "planned": 27,
+  "completed": 6,
+  "by_arm": {
+    "baseline": {
+      "completed": 0,
+      "passed": 0
+    },
+    "candidate": {
+      "completed": 6,
+      "passed": 4
+    }
+  },
+  "failures": {
+    "staged-type-color": [
+      "only_route_bodies",
+      "no_repository_inspection"
+    ],
+    "staged-type-color-3": [
+      "only_route_bodies",
+      "no_repository_inspection"
+    ]
+  },
+  "models": [
+    "gpt-5.6-sol"
+  ],
+  "efforts": [
+    "medium"
+  ]
+}

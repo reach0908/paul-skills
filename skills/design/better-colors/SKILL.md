@@ -1,11 +1,15 @@
 ---
 name: better-colors
-description: Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast.
+description: "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Colors
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill builds and audits color systems. It generates ramps, maps their steps to roles and token names, converts notation and measures rendered contrast pairs.
 
@@ -14,6 +18,10 @@ Never report a contrast value you did not measure, and never estimate a color yo
 Whether a pair is required to pass belongs to `better-accessibility`. Surfaces, shadows and icon color belong to `better-ui`.
 
 For browser evidence, call the Skill tool with "design-browser" and pass the task purpose and expected observations. Without a Skill tool, read its installed SKILL.md. Follow its tool routing; if unavailable, use the caller's tool policy and installed help, and report verification limits.
+
+## Read supporting references
+
+Resolve linked files from this skill's installed directory. Use a native file-reading tool when available. With a shell tool, pass the resolved, shell-quoted absolute filename directly in its command, such as `cat '/absolute/path/to/contrast.md'`. Each command must contain its actual filename: a JavaScript loop variable does not populate shell positional parameters. Independent reads may run in parallel; check every result and read any truncated remainder before relying on it.
 
 ## Match the project's color system
 

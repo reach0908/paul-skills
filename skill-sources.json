@@ -39,7 +39,7 @@
           "path": "skills/engineering/ask-matt",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
           "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:71561453f80b0022ab84ddd56c05494c533608783c7b333ac4d2946e115ab11f",
+          "localDigest": "sha256:654c276d311f2661a81fef6a30977eb209a6ee0c69e3c5aa05dff7bc31761d2b",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -84,6 +84,15 @@
               "decision": "keep-local",
               "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged.",
               "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1090,7 +1099,7 @@
           "path": "skills/better-accessibility",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:7983b8c35ad2db97d10035cb12f7828d259aebefb637e43d541b130e7904eec8",
+          "localDigest": "sha256:1c156686762319f4a23e9371a418b9ca23d1522e6278894b126963cc0f305178",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1130,6 +1139,42 @@
               "decision": "keep-local",
               "reason": "Distinguish native Tab entry from assigned focus and require the claimed viewport/state keyboard matrix after the article field trial exposed incomplete coverage. Preserve the imported role and criteria.",
               "report": "evals/design-field-trial-2026-10-14/QA-REPAIR.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1146,7 +1191,7 @@
           "path": "skills/better-colors",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:ac35e5bc1729ed29d83a9db8de30f33a012869ebb12534b3277e679a146c1056",
+          "localDigest": "sha256:1423282e81b151805c8d6292581b5fd84a70a4c48e7f334c7a1e65d3dd936209",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1175,6 +1220,51 @@
               "decision": "keep-local",
               "reason": "Account for text, control and meaningful graphic contrast roles, including components already carrying another accessibility finding, after repeated non-text contrast omissions. Preserve owning accessibility thresholds.",
               "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "contrast.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep active-field placeholders and read-only text under WCAG text contrast; distinguish disabled-control exemptions from APCA readability targets after an observed cross-standard semantic failure. Preserve immutable upstream revisions.",
+              "report": "evals/design-contrast-reference-proof-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1191,7 +1281,7 @@
           "path": "skills/better-interface",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:5549b54725720fb5091f0c8a81134fc7cb96e9fb71f23b5397db6167714257eb",
+          "localDigest": "sha256:f912d131d1f973e7826f338609db13f4976065e55f96b7b399d71da32b9054b1",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1239,6 +1329,44 @@
               "decision": "keep-local",
               "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged. Limit terminal routing to the exact command and invocation reason after a trial added imprecise optional branch-scope advice.",
               "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved. Explicitly prohibit batching the router read with Git status or diff summaries after a typography/color variant exposed that remaining order failure.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "audit-procedure.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "audit-procedure.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1255,7 +1383,7 @@
           "path": "skills/better-layout",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:4dd342222c340e564d1adfa70707bb6442d97c83e8c17166b4ac78c66eddd840",
+          "localDigest": "sha256:debf396b3796d172433792a9d3b82c4c0fffdd9e42a89726e78abd7d581019af",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1275,6 +1403,42 @@
               "decision": "keep-local",
               "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
               "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1291,7 +1455,7 @@
           "path": "skills/better-typography",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:ccfcb6e7f40a3efa6d8846d5cdf5f8d4350001bca2eaacdca2f3cf41337feda6",
+          "localDigest": "sha256:0c206d16d81c9e209bef5965820052e230f8ce1b09d8d07391bece9ef236c3a1",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1322,6 +1486,42 @@
               "decision": "keep-local",
               "reason": "Make the punctuation reference follow the product language policy, consistent with the entrypoint.",
               "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1338,7 +1538,7 @@
           "path": "skills/better-ui",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:e7362449da19af531a06787d384d867fd6075e76b118313d1f613e0a9ca4c604",
+          "localDigest": "sha256:77905653f1207fdd2a85e6ac09b797ddc16b42b128d70918452adc72205d8315",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1367,6 +1567,42 @@
               "decision": "adapt",
               "reason": "Compare control and neighboring geometry when selection border thickness changes after an independent repeat found original reported a real 2px filter shift that Paul missed. Preserve intentional borders and exclude color-only or already reserved geometry. Re-evaluate the exposed and a new task plus composite dependencies.",
               "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1383,7 +1619,7 @@
           "path": "skills/better-writing",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:df8ece59f9c820b3b0aaef08057b5403e6cfd915f185b233ba5551be88be50e1",
+          "localDigest": "sha256:e6d06f7c720ab1dff956afdc842273e71aff06bcb7dfb5443da3f1a252b772a2",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1423,6 +1659,42 @@
               "decision": "adapt",
               "reason": "Distinguish filtered empty results from absent or inaccessible content after data/permission changes. Independent replay found the Paul output offering filter-clear recovery after permanent deletion, while the original output suppressed that obsolete advice. Require replay of nearby search/filter recovery in the resulting state.",
               "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
             }
           ]
         }
@@ -1567,7 +1839,7 @@
           "path": "skills/interface-review",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
           "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:d9d6820e6e61b6bd6a331d2eeb3d740f3bf1327f9e1cacb135fd2bbf3bd2f317",
+          "localDigest": "sha256:5f96df6e5fe338ad21ce1f8424e804628150ebcb2374f4559e1d79d2a558db9d",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1614,6 +1886,16 @@
               "decision": "keep-local",
               "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged.",
               "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "scope-resolution.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
             }
           ]
         }

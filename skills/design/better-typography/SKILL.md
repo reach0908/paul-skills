@@ -1,11 +1,15 @@
 ---
 name: better-typography
-description: Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation.
+description: "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Typography
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill sets and reviews how text renders, from the type scale and spacing to font loading, wrapping and punctuation. It writes every fix in the project's styling system, and the [cheat sheet](css-cheat-sheet.md) maps each declaration to its Tailwind utility.
 

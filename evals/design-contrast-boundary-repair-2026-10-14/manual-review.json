@@ -1,0 +1,47 @@
+{
+  "reviewer": "Maintainer agent; not an independent blinded judge",
+  "codex": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "d409c227e8aea929dd1910d76f4cd1f3c4cd7099562acf6dfd11351833ef077a",
+      "notes": "Direct color preparation with missing brand/context inputs, semantic light/dark tokens, conversion and measurement plan; no invented measurements or invalid placeholder exemption."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "0c3fac5da6978a03298b20db51878e75d8f48549e6d914aa147d59800203c5c5",
+      "notes": "Direct color preparation with missing brand/context inputs, semantic light/dark tokens, conversion and measurement plan; no invented measurements or invalid placeholder exemption."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "577d4e21aea105e5e5bab5c9717805c858dfec6afc47a8830b4bd82f1cd5e0d5",
+      "notes": "Direct color preparation with missing brand/context inputs, semantic light/dark tokens, conversion and measurement plan; no invented measurements or invalid placeholder exemption."
+    },
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "bfdf7c8d1f8d3b88aeb4c82249764e6f7787de2f7563c10413ef1b4543d09f27",
+      "notes": "Correctly rejects 2.8:1 for active placeholder and read-only text, exempts truly disabled control, separates APCA from WCAG and uses provided values without claiming a new measurement."
+    }
+  },
+  "cases": {
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "ef52164ca060986936781cf47cc0b2fa6088b74068864893752bd9fc0a942db2",
+      "notes": "Normal color entry preserved; plan identifies missing inputs, light/dark semantics and measurement limits; no invalid active-placeholder exemption. Full reference proof scored separately."
+    },
+    "normal-better-colors-2": {
+      "pass": true,
+      "response_sha256": "5c3341b36db8d47838f1736d9e0639906bb68eb3ad053b64bea9e63980421e83",
+      "notes": "Normal color entry preserved; plan identifies missing inputs, light/dark semantics and measurement limits; no invalid active-placeholder exemption. Full reference proof scored separately."
+    },
+    "normal-better-colors-3": {
+      "pass": true,
+      "response_sha256": "7861e060acda14c4b5cbb7f5b73df834ef502258cdc5c0c565b397eb3545d866",
+      "notes": "Normal color entry preserved; plan identifies missing inputs, light/dark semantics and measurement limits; no invalid active-placeholder exemption. Full reference proof scored separately."
+    },
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "5c0488949e067a740e0514c4d14eadf84c4fbb0e132dcf1dd612c35debd40e06",
+      "notes": "Correct supplied-value WCAG/APCA distinction, but no Skill body or corrected reference loaded. This cannot prove the reference repair and retains the failed expected-skill check."
+    }
+  }
+}

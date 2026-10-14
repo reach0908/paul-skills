@@ -16,6 +16,8 @@ WCAG 2 is the standard formal conformance claims are made against.
 
 Disabled or inactive controls and logos are exempt.
 
+Placeholder text in an active input is text, not an inactive control. It must meet the text threshold above. Read-only content is also readable content, not a disabled-control exemption. See [WCAG 2.2 SC 1.4.3](https://www.w3.org/WAI/WCAG22/Understanding/contrast-minimum.html).
+
 ## APCA thresholds
 
 Lc, Lightness Contrast, is APCA's measure of perceived contrast. These levels simplify APCA's full font-size and weight lookup table:
@@ -29,7 +31,7 @@ Lc, Lightness Contrast, is APCA's measure of perceived contrast. These levels si
 | Solid icons and UI components | Lc 30 |
 | Non-text that only has to be discernible, such as dividers | Lc 15 |
 
-Disabled and placeholder text are not covered by a requirement. Aim for Lc 30 so they stay legible.
+For disabled controls, Lc 30 is a readability target, not a WCAG requirement. Keep APCA guidance separate from WCAG conformance: an APCA target never exempts active-field placeholder text or replaces its required WCAG text ratio. Report the standard beside every threshold.
 
 Lc is signed. Positive means dark text on a light background, negative means light text on a dark background. Compare the absolute value against the threshold.
 

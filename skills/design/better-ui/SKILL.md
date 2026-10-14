@@ -1,11 +1,15 @@
 ---
 name: better-ui
-description: Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation.
+description: "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # UI polish
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill holds the visual polish for surfaces, icons and motion, with the exact value each detail takes. It applies once the underlying interaction is sound, and a polish finding never outranks a broken interaction.
 

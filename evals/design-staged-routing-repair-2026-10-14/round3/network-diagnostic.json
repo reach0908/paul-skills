@@ -1,0 +1,27 @@
+{
+  "attempts": [
+    {
+      "case_id": "staged-1",
+      "session_id": "01a139e2-d992-7143-b159-566dfe8c119a",
+      "exit_code": 1,
+      "reason": "sandbox network/DNS failure before model response",
+      "stream_sha256": "d298ad51b0fc2124f0d14c6d4b8ffe64b0f7c0e4efe6e4c3b8d493b98fa5162d",
+      "transcript_sha256": "6fe236d6c1142cdec061b778d227e9f757aee3b9c0d3eee34f2428450afccce9",
+      "model_responses": 0,
+      "inputs_unchanged": true,
+      "final_error": "stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)"
+    },
+    {
+      "case_id": "staged-2",
+      "session_id": "01a139e2-dd63-78f2-a080-340b0c33ba1e",
+      "exit_code": 1,
+      "reason": "sandbox network/DNS failure before model response",
+      "stream_sha256": "adf2920ffa34cdb366be41aad357502983806f2bdfe9ee1e04a996162b9b1520",
+      "transcript_sha256": "aaceabf233faf663c6ccd86b808c5d55623bc01c05d53b494ed0bc4a3b2f3b62",
+      "model_responses": 0,
+      "inputs_unchanged": true,
+      "final_error": "stream disconnected before completion: error sending request for url (https://chatgpt.com/backend-api/codex/responses)"
+    }
+  ],
+  "retry": "Same frozen candidate, prompt and model; rerun with network access. Keep these two infrastructure failures separate from behavior outcomes."
+}

@@ -51,3 +51,10 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [Claude review-routing repair and regression evidence](design-claude-routing-repair-2026-10-14/REPORT.md) distinguishes the released baseline, session-only candidates, all 17 normal entry points, target-preserving routing and an actual local Git review handoff. Failed attempts and grader corrections remain visible.
 
 - [Design routing patch 0.4.1 release](./design-routing-patch-release-2026-10-14/REPORT.md): both global installs verified; fresh Claude 6/6 and Codex 5/6, with one remaining staged-routing failure and two initial model compatibility failures preserved.
+- [Codex staged-routing repair and Claude regression checks](./design-staged-routing-repair-2026-10-14/REPORT.md): preserves three candidate attempts, exact source loads, routing-order failures and ordinary domain-entry checks. This is an unreleased local candidate, not a global-installation update or a new design-quality parity claim.
+
+- [Native review entry and local-scope repair](design-review-scope-repair-2026-10-14/REPORT.md) separates the routing entry from execution, verifies HEAD/index semantics in divergent fixtures, and keeps Codex native reads separate from Claude tools.
+
+- [Domain discovery and reference-reading repair](design-domain-entry-repair-v4-2026-10-14/REPORT.md) checks the actual shortened Codex catalog, preserves three failed candidates, verifies native reference reads and repeats the full cross-host routing/scope matrix.
+
+- [Final routing and reference proof](design-contrast-reference-proof-2026-10-14/REPORT.md) records the release recommendation, unchanged-dependency evidence, fresh color regressions, explicit source-reading proofs and retained diagnostic failures. Global installations remain unchanged.

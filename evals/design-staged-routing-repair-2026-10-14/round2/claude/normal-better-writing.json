@@ -1,0 +1,253 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "schema_version": 1,
+  "case_id": "normal-better-writing",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_010",
+  "expected": "better-writing",
+  "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "9347ebb4-121a-4d90-810e-3cddbf888f61",
+  "started_at": "2026-10-14T10:02:33.732285+00:00",
+  "host_init_session_id": "9347ebb4-121a-4d90-810e-3cddbf888f61",
+  "host_result_session_id": "9347ebb4-121a-4d90-810e-3cddbf888f61",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-staged-routing-20261014/round2/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "71383bfe-0c76-417e-b847-46b0d8415a26",
+  "automatic_catalog_sha256": "905df92699a284da95c88a12137dba3915e6d8026b67dbb44995c49d96455b42",
+  "full_body_loads": [
+    {
+      "name": "better-writing",
+      "event_uuid": "d865a20c-e109-4e64-951b-0589e174eee0",
+      "file_sha256": "d9b9d6edb6d6632a48432064bd3f1c61b144ca25c231b20142759b4d2d66ccfd",
+      "body_sha256": "7a65b6cd12299fb8865507c37f14193e3d438c06deb78010d5abf7ebc3cf2fef",
+      "host_message_sha256": "e2bc393b139e9d7604f190e1d2d1e7035310727f1bcbff748fc87b381433af88",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-writing",
+        "args": "구독 서비스 UI 문구 다듬기: 저장 버튼 \"진행\", 저장 실패 \"문제가 발생했습니다\", 빈 목록 \"없음\". 신뢰감 있고 담백한 한국어, 다음 행동 명확히. 맥락 부족 시 가정 표시, 대안 문구와 이유만 짧게. 제품 파일 수정·브라우저·외부 서비스 실행 금지, 짧은 명세까지만."
+      },
+      "tool_use_id": "toolu_01VGcwtANWYGRCvSrUvnmwxc",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7d17ec5c2f24866fb437baa1c2222c9b133e0331bd3725e9cb0fcee731f0cb45"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_0156ggfi51LKDhKnfWvrVCfu",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "af0e415b463b4bcfd7f915ba64e1259a78d81a9398e030756c542f444867098e"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-staged-routing-20261014/round2/candidate/marketplace/plugin/skills/design/better-writing/korean-copy.md"
+      },
+      "tool_use_id": "toolu_01U7kR87dJqfF4w7n4sYcjYu",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7a74ebd2bffb6f1eb23cf14640d3c2d70939d36f252112f0b5b740b4f4788666"
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "## Status copy",
+        "path": "/private/tmp/paul-design-staged-routing-20261014/round2/candidate/marketplace/plugin/skills/design/better-writing/patterns.md",
+        "output_mode": "content",
+        "-A": 30
+      },
+      "tool_use_id": "toolu_011i1SvG1a2e5RqrkupEnHBm",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "964b718830e12d39448947e1e11fbac530846cb3cef1325a7a4006b3a716b3fb"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "**확인 범위:** 작업 디렉터리에 제품 파일이 없어서 실제 화면, 로케일 파일, 용어 목록을 보지 못했습니다. 그래서 아래 내용은 검토 결과가 아니라 가정에 기반한 제안입니다. 기존 문구 중 \"발생했습니다\"를 근거로 합니다체를 쓰는 서비스라고 **추정**했습니다.\n\n## 1. 저장 버튼: \"진행\"\n\n\"진행\"은 누르면 무엇이 일어나는지 알려주지 않습니다. 맞는 문구는 버튼의 실제 동작에 따라 달라집니다.\n\n| [가정] 실제 동작 | 제안 | 이유 |\n| --- | --- | --- |\n| 설정이나 정보를 저장 | **저장** / 변경 사항 저장 | 누른 뒤 일어나는 일을 그대로 씁니다 |\n| 구독 신청 중 다음 단계로 이동 | **다음** | 저장이 아니라 이동입니다. 플로우 전체에서 같은 단어를 씁니다 |\n| 구독 확정 또는 결제 | **구독 시작** / {금액} 결제 | 돈이 나가는 동작은 결과를 분명히 밝혀야 신뢰가 생깁니다 |\n\n## 2. 저장 실패: \"문제가 발생했습니다\"\n\n지금 문구는 무엇이 실패했는지도, 이제 무엇을 하면 되는지도 알려주지 않습니다.\n\n| [가정] 상황 | 제안 | 이유 |\n| --- | --- | --- |\n| 다시 시도 버튼이 있음 | **변경 사항을 저장하지 못했습니다. 다시 시도해 주세요.** | 실패한 일과 할 일을 함께 알립니다 |\n| 원인이 네트워크로 확인됨 | 저장하지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요. | 사용자가 직접 해결할 수 있습니다 |\n| 기존 구독이 바뀌지 않는 것이 보장됨 | 문장 끝에 \"기존 구독 정보는 그대로입니다.\"를 덧붙임 | 결제나 구독과 관련된 불안을 줄입니다. 사실일 때만 씁니다 |\n\n- 다시 시도 버튼이 없으면 \"다시 시도\"라고 안내하지 말고, 실제로 할 수 있는 행동만 적습니다.\n- 진행, 성공, 실패 문구는 \"저장 중… / 저장했습니다 / 저장하지 못했습니다\"처럼 서로 짝을 맞춥니다.\n\n## 3. 빈 목록: \"없음\"\n\n지금 문구는 비어 있다는 사실만 말하고, 다음에 무엇을 하면 되는지 알려주지 않습니다. 〈구독〉은 아직 확인하지 못한 명사여서 자리 표시로 둡니다.\n\n| [가정] 상황 | 제안 | 이유 |\n| --- | --- | --- |\n| 아직 〈구독〉이 하나도 없음 | 제목 **구독 중인 서비스가 없습니다** · 설명 \"요금제를 선택하면 여기에서 구독을 관리할 수 있습니다.\" · 버튼 **요금제 보기** | 이곳이 무엇을 하는 곳인지와 할 수 있는 행동 하나를 알려줍니다 |\n| 검색이나 필터 결과가 없음 | **'{검색어}' 검색 결과가 없습니다** · 버튼 **필터 해제** | 검색어를 보여주고 빠져나갈 길을 줍니다. 받침에 따라 바뀌는 조사를 피했습니다 |\n| 목록이 아니라 항목 값(예: 할인: 없음) | **없음** 유지 | 값으로 쓰일 때는 정확한 표현입니다 |\n\n## 확정에 필요한 입력\n\n1. 세 문구가 나오는 화면 캡처나 로케일 파일\n2. \"진행\" 버튼의 실제 동작(저장, 다음 단계, 결제 중 무엇인지)\n3. 저장 실패 시 제공되는 복구 방법(다시 시도 버튼 여부, 구분할 수 있는 원인)과 기존 구독이 그대로 유지되는지\n4. 비어 있는 목록의 종류(구독, 결제 내역, 결제 수단 등)와 검색·필터 기능이 있는지\n5. 기존 말투 가이드와 용어 목록(구독, 요금제, 플랜 / 결제, 청구 중 무엇을 쓰는지)",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 90.585,
+  "duration_api_ms": 89016,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 18204,
+    "cache_read_input_tokens": 58308,
+    "output_tokens": 3414,
+    "output_tokens_details": {
+      "thinking_tokens": 1199
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16874,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 144,
+        "cache_read_input_tokens": 19220,
+        "cache_creation_input_tokens": 1386,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1386
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 22084,
+        "output_tokens": 3415,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2490,
+        "cache_read_input_tokens": 20606,
+        "cache_creation_input_tokens": 1330,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1330,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 3414,
+      "cacheReadInputTokens": 58308,
+      "cacheCreationInputTokens": 18204,
+      "webSearchRequests": 0,
+      "costUSD": 0.2216156,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1199,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 22084,
+      "outputTokens": 3415,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.39159,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6132056,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 6,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "stream_sha256": "30795fd0117de7793903691c398483ef315e36537de15953820d004d1e77febb",
+  "transcript_sha256": "71b21b6242413bc9de4924952b23b98bd36758764584278e388fb0c34a738297",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

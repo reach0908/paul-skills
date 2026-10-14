@@ -1,0 +1,7 @@
+# Explicit reference proof on unchanged candidate 9
+
+Freeze two explicit cases per host before execution. Use the exact candidate 9 bundle. The prior automatic standards probe did not load a skill in Claude, and two Codex preparations did not read the corrected reference. Preserve those observations; they cannot prove the reference correction. This supplement asks for the installed contrast reference explicitly, without teaching its expected answer.
+
+Run one provided-value standards probe and one unchanged broad palette preparation after an explicit better-colors invocation and full contrast-reference read. Four fresh sessions, no answer retries. Reuse native runner tools, models, source equality, read-only checks and existing cost limits. Require exact full SKILL and contrast.md loads, successful native commands, correct WCAG/APCA distinction, and no invented measurements. The standards probe must fail active placeholder and read-only text at 2.8:1/16px, exempt the truly disabled control and leave APCA separate. A broad preparation may omit a subject, but must not state an invalid exemption.
+
+Final release evidence combines these four new sessions, the six successful normal color entries in candidate 9 and 48 unaffected passing sessions from candidate 8. This is dependency-scoped verification, not a new full matrix or independent blinded comparison. Preserve the earlier automatic-probe and reference-coverage failures separately; do not retroactively award reference use. Daily installs stay 0.4.1.

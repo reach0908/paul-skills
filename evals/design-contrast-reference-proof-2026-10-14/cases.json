@@ -1,0 +1,28 @@
+{
+  "user_only": [
+    "interface-review",
+    "state-machine",
+    "break",
+    "explain-interface",
+    "variant"
+  ],
+  "cases": [
+    {
+      "id": "normal-better-colors-thresholds",
+      "mode": "explicit",
+      "expected": "better-colors",
+      "prompt": "/paul-skills:better-colors 설치된 스킬의 contrast.md 참조 문서 전체를 먼저 읽고 다음 요청에 답해줘.\n구독 폼 색상 검토 명세를 준비해줘. 제공된 값은 일반 크기 16px 글자의 전경·배경 대비 2.8:1이야. 활성 이메일 입력란의 placeholder, 실제로 비활성인 제출 버튼의 문구, 읽기 전용 계정 정보 문구를 각각 WCAG 2.2 AA에서 어떻게 판정할지 설명해줘. APCA Lc 30이라는 별도 목표가 WCAG 판정을 바꾸는지도 구분해줘. 새 측정이나 파일 수정, 브라우저·외부 서비스 실행은 하지 말고, 주어진 값에 대한 기준 설명만 해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    },
+    {
+      "id": "normal-better-colors-preparation",
+      "mode": "explicit",
+      "expected": "better-colors",
+      "prompt": "/paul-skills:better-colors 설치된 스킬의 contrast.md 참조 문서 전체를 먼저 읽고 다음 요청에 답해줘.\n브랜드 파랑에서 구독 서비스의 의미 기반 색상 토큰을 만들려고 해. 밝은 테마와 어두운 테마의 배경·텍스트·액션·성공·오류 팔레트, 색상 형식 변환과 실제 전경·배경 대비 검증을 다뤄줘. 지금은 필요한 입력과 생성·측정 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+      "arm": "candidate",
+      "fixture": "empty"
+    }
+  ],
+  "codex_baseline_repeats": 0
+}
