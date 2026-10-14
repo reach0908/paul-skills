@@ -61,4 +61,6 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 
 - [Design routing patch 0.4.2 release](design-routing-0.4.2-release-2026-10-14/REPORT.md) records the immutable release tag, both actual user installations, complete installed-source equality, fresh host sessions, and retained execution limitations.
 
-- [Color evidence consistency](design-color-evidence-2026-10-14/REPORT.md) preserves the historical contradiction, records non-reproduction in fixed repeats, and compares a preventive reporting clarification in 24 fresh native sessions. The candidate passes 12/12; one ancillary baseline Claude overclaim remains recorded. Global installations stay at 0.4.2.
+- [Color evidence consistency](design-color-evidence-2026-10-14/REPORT.md) preserves the historical contradiction, records non-reproduction in fixed repeats, and compares a preventive reporting clarification in 24 fresh native sessions. The candidate passes 12/12; one ancillary baseline Claude overclaim remains recorded. Global installations were still at 0.4.2 during that pre-release trial.
+
+- [Color evidence patch 0.4.3 release](design-color-0.4.3-release-2026-10-14/REPORT.md) records the immutable patch tag, both updated global installations and 12 fresh native sessions. Answer consistency passes 12/12, while source application passes 10/12: one Codex reference read and one Claude automatic invocation remain missing. Failed receipts and the evidence-verifier amendment are preserved.

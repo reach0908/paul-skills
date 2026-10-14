@@ -1,0 +1,26 @@
+{
+  "recorded_at": "2026-10-14T15:01:01.360063+00:00",
+  "modified_file": "evals/design-color-0.4.3-release-2026-10-14/verify_evidence.py",
+  "before_sha256": "891fd1370426909931460f7087038c829276a4da10f2993949779b911160c034",
+  "after_sha256": "a4b98ace3d3bd36b23f3e21b4a85956436d9b55a2ccf4531472d49c4b431d751",
+  "reason": "The initial artifact verifier required successful source/reference loads even for retained failed runs. It now validates failure evidence without converting failed checks into passes.",
+  "unchanged": [
+    "cases",
+    "protocol",
+    "runner",
+    "native receipts",
+    "collector",
+    "semantic rubric"
+  ],
+  "retained_failures": [
+    "claude/installed-unknown: expected skill not invoked",
+    "codex/installed-resolved: required contrast reference not read"
+  ],
+  "retries": 0,
+  "formatting_only": {
+    "file": "evals/design-color-0.4.3-release-2026-10-14/test_review_gate.py",
+    "before_sha256": "d46e6b8a22ae95be8f6f9648cb6173541636e96e2ea2b33de7a838a0c01d318c",
+    "after_sha256": "681c9d451d1aae5cdc9e2e0ebe341d04671f56cb7cb832b867a7bf68ced1b129",
+    "change": "Removed one trailing empty line to satisfy git diff --check; test logic unchanged."
+  }
+}
