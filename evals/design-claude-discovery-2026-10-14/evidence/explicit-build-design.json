@@ -1,0 +1,199 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-build-design",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_012",
+  "expected": "build-design",
+  "prompt": "/paul-skills:build-design 승인된 로컬 브라우저 시안과 Markdown 화면 명세를 기존 웹 프로젝트에 구현하려고 해. 원본 시안의 구조와 토큰·컴포넌트를 유지하고 화면과 동작의 일치 여부를 확인해야 해. Figma는 쓰지 않아. 구현 착수에 필요한 파일과 접근 경로, 비교할 증거와 완료 조건만 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "db7dba6e-d459-49f8-b6b3-6719a7fafbbe",
+  "started_at": "2026-10-14T07:59:27.165241+00:00",
+  "host_init_session_id": "db7dba6e-d459-49f8-b6b3-6719a7fafbbe",
+  "host_result_session_id": "db7dba6e-d459-49f8-b6b3-6719a7fafbbe",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "e14072ba-1f1f-4530-b3bd-0f645385324e",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "build-design",
+      "event_uuid": "2900c479-780e-4216-852c-18d6a9b1f62b",
+      "file_sha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+      "body_sha256": "a33b394fb00a72f4c91e4d66c3c54f2392923f4c3bd4721d5fed4f361196992e",
+      "host_message_sha256": "7b5f40e961ec5e891d593b37e264dfdb3f1566b543a2a82869e4e238bef2bd0e",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/build-design/browser-and-spec.md"
+      },
+      "tool_use_id": "toolu_01VZgkkRLdEEGF7UnyyGkaSr",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b555ad1baa55e718201131991135bc7427bfaefb3a4c7a413503ad7f9c062ccc"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01FfKmjm4jUm7rqP8XYChpmT",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cae196a78fd0c4f98490e9b14ce165cab71c77ad78c1b518e4bea429e2cd9f6c"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": ".*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01S4BJtfMgu4TesR6JAdDdKZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "1f08adfc33d8d0d9dbb12496325ad67461252ca16d93fe9b40c750ecab5efca0"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 디렉터리 `$TRIAL`가 비어 있어서 시안, 명세, 프로젝트 코드 중 아무것도 읽지 못했습니다. 그래서 아래 내용은 확인 결과가 아니라 입력을 받기 전에 정리한 착수 명세입니다. 제품 파일 수정, 브라우저 실행, 외부 서비스 호출은 하지 않았습니다.\n\n## 1. 착수에 필요한 입력과 접근 경로\n\n| # | 입력 | 필요한 정보 |\n|---|---|---|\n| 1 | 승인된 브라우저 시안 | 로컬 HTML 경로 또는 실행 명령과 라우트, 리비전(커밋, 파일 해시 또는 날짜), 시안이 여러 개라면 승인된 방향 |\n| 2 | Markdown 화면 명세 | 파일 경로, 대상 화면과 상태 ID, 지원할 화면 폭(breakpoint) |\n| 3 | 시안의 소스와 토큰 | 시안의 CSS 또는 토큰 파일. 화면에 렌더링된 값과 명세에 적힌 값을 구분하는 데 필요 |\n| 4 | 기존 웹 프로젝트 | 저장소 루트, 개발 서버 실행 명령, 로컬 URL, 구현할 라우트 |\n| 5 | 프로젝트 토큰 | 정의된 위치(예: Tailwind config, CSS 변수, `tokens.json`) |\n| 6 | 프로젝트 컴포넌트 | 컴포넌트 라이브러리 디렉터리와 사용 가능한 variant 목록 |\n| 7 | 결정 기록 | 승인 기록, ADR, 이미 합의된 편차. 시안과 명세가 충돌할 때 이것부터 확인 |\n| 8 | 데이터 | 화면에 필요한 API가 있는지, 아직 없다면 props로 화면만 만들어 둘 범위 |\n\n## 2. 비교할 증거\n\n각 화면 × 상태 × 폭마다 같은 조건에서 시안과 구현을 짝지어 비교합니다.\n\n- **기록할 조건:** 시안 리비전, 코드 리비전 또는 작업 트리 digest, 라우트, 상태, 뷰포트, 입력 방식\n- **시각 비교:** 시안 캡처와 구현 캡처를 나란히 놓고, 계산된 간격·크기·radius·색·타이포 값을 숫자로 비교합니다. \"gap 12px, 시안 16px\"처럼 수치로 기록합니다.\n- **명세 비교:** Markdown에만 있는 항목은 명세 조항과 렌더링된 값·문구·동작을 대조합니다. 명세에 없는 값은 \"프로젝트 기본값\" 또는 \"미확정 가정\"으로 따로 표시합니다.\n- **매핑표:** 시안의 값과 컴포넌트를 기존 토큰과 컴포넌트에 연결합니다. 결과는 일치, 토큰 반올림, 편차 중 하나로 분류합니다.\n- **동작:** 시안에 없더라도 키보드와 포커스 동작, 로딩·오류·빈 상태·권한 분기를 관찰해 기록합니다. 정적 캡처로는 키보드, 타이밍, reduced motion을 확인할 수 없으므로 별도로 확인하고, 확인하지 못한 항목은 이름을 밝혀 둡니다.\n\n## 3. 완료 조건\n\n- 범위 안의 모든 화면과 상태에 시안 위치가 있고, 값마다 출처가 명세인지, 브라우저 계산값인지, 미확인인지 표시되어 있다.\n- 임의 값(`w-[343px]`, raw hex)이나 새 토큰, 새 variant를 추가하지 않았다. 반올림 폭이 2px를 넘거나 색이 다른 단계로 바뀌면 진행 전에 질문한다.\n- 시안에 없는 기존 상태와 접근성 동작은 그대로 유지하고, 시각 처리가 정해지지 않은 부분은 미결로 기록한다.\n- diff가 합의된 범위를 넘지 않는다. 주변 문구, 아이콘, \"하는 김에\" 정리는 하지 않는다.\n- 모든 차이가 수정, 합의된 반올림, 또는 승인 상태가 적힌 편차·질문 중 하나로 정리되어 있다.\n- 최종 보고에 다음이 들어 있다. 요소별 비교표(시안, 구현, 상태), Unwired, Missing states, Domain conflicts, Deviations(해당 항목이 있을 때만), 실행 URL, 비교한 폭.\n- 렌더링 증거가 없는 비교는 \"미검증\"으로 표시한다.\n\n위 1~8번 중 최소 1, 2, 4번(시안 경로, 명세 경로, 프로젝트 경로)을 알려주시면 시안과 명세를 읽는 첫 단계부터 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 34.745,
+  "duration_api_ms": 33377,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14615,
+    "cache_read_input_tokens": 39068,
+    "output_tokens": 3117,
+    "output_tokens_details": {
+      "thinking_tokens": 1012
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14615,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2708,
+        "cache_read_input_tokens": 18120,
+        "cache_creation_input_tokens": 227,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 227
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 3117,
+      "cacheReadInputTokens": 39068,
+      "cacheCreationInputTokens": 14615,
+      "webSearchRequests": 0,
+      "costUSD": 0.18709759999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1012,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.18709759999999998,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "ec87d4b1d5a06aacf94dd5dd41ddec340aac63cf206f053aa687b8f3ca9e05cd",
+  "transcript_sha256": "4f113d7a35c3c077ae558196c0b219cf6ca901a3c4097d90b8daaefb5c051d2a",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

@@ -1,0 +1,69 @@
+{
+  "reviewer": "same executing agent; not independent or blinded",
+  "cases": {
+    "boundary-interface-review": {
+      "pass": true,
+      "note": "Returns the working target and preserves read-only constraints; only better-interface loaded.",
+      "response_sha256": "741669ff5ac26a92586a0b2ed69baee201c8f91156ca77053c2480d0ac00e1fe"
+    },
+    "repair-staged": {
+      "pass": true,
+      "note": "Returns the staged target before reading files; no domain or hidden owner access.",
+      "response_sha256": "1977088897f92d58afcee19a9049f1ab0e6d66f42c6ef69719df476192a4c1ff"
+    },
+    "repair-direct-router": {
+      "pass": true,
+      "note": "Explicit better-interface still returns the correct staged interface-review command; does not open the change workflow.",
+      "response_sha256": "0b25dc747e7aeb9caeed7080fb5ccaa8566e2140f2886775011fc213939b6483"
+    },
+    "repair-current-audit": {
+      "pass": true,
+      "note": "Continues current-screen audit preparation. Conditional guidance for a different staged-change review does not redirect this task. Static candidate and rendered verification limits are distinguished; this is not a completed six-domain audit.",
+      "response_sha256": "bf18c7cd937a55cf3e363793309995a6463af85e5022692d43e8e644bef27366",
+      "no_change_review_redirect": true
+    },
+    "explicit-interface-review": {
+      "pass": true,
+      "note": "Exact explicit body is injected and its own scope reference is read. Response covers inputs, change classification and completion conditions without resolving a real diff or repeating invocation as a gate to this preparation.",
+      "response_sha256": "19193521965f38d56954f996e26548fbd37df0e117953bbc5ae27a1fbded051e"
+    },
+    "implicit-information-architecture": {
+      "pass": true,
+      "note": "Loads the IA owner and produces five destinations, names and relationships, with draft assumptions and unresolved inputs visible; no visual design or writes.",
+      "response_sha256": "c7c30d92abb8b75ddb8513d2085bb75517a03f32fe39e19614881029276f7a0a"
+    }
+  },
+  "codex": {
+    "boundary-interface-review": {
+      "pass": true,
+      "note": "Correct working command; installed router body only, no repository inspection.",
+      "response_sha256": "cfaa73e02a8250a18cf0ad6a58941e456ddf111a95886748eaae7c9d841f3f18"
+    },
+    "repair-staged": {
+      "pass": false,
+      "note": "FAIL: final staged command is correct, but git status and diff --cached --stat ran before the router body; better-layout and better-accessibility also loaded. Correct output does not erase the invocation-order violation.",
+      "response_sha256": "f327713bea97e645defeb49ebc53f510c5dc6b1dfd7d3e3a457327e9c58271d4"
+    },
+    "repair-direct-router": {
+      "pass": true,
+      "note": "Explicit router body injected; correct staged command with constraints, no inspection.",
+      "response_sha256": "fc1d2eb609ce41e82bf9cad0b46ebea59485f78c6c1e8d2b1d1305256ef0d132"
+    },
+    "repair-current-audit": {
+      "pass": true,
+      "note": "Loads the six domain owners for ordinary screen-audit preparation and states UI results are unverified. It does not redirect this request to change review.",
+      "response_sha256": "b95821f142a5548295e5d24e77f00150356dcb275d0b9b8f3133b2744f99c331",
+      "no_change_review_redirect": true
+    },
+    "explicit-interface-review": {
+      "pass": true,
+      "note": "Explicit owner body injected, own scope reference and authorized model-invoked router read. Describes working scope and causal classification without reading a real diff.",
+      "response_sha256": "b5c7cdd13dbb484093abf31901a98fc1d389cee1484dad4127c7490a798d750a"
+    },
+    "implicit-information-architecture": {
+      "pass": true,
+      "note": "IA body loaded; outputs the five requested destinations with stable IDs, hierarchy and draft limitations. No layout work or writes.",
+      "response_sha256": "a173b872eac7185a919447c1c8fd88d952f0e7242f67f85cc22e891800146323"
+    }
+  }
+}

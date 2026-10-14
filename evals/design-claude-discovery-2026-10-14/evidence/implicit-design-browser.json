@@ -1,0 +1,235 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-design-browser",
+  "mode": "implicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_025",
+  "expected": "design-browser",
+  "prompt": "로컬 반응형 웹을 브라우저에서 확인할 검증 절차를 준비해줘. 320px와 데스크톱의 가로 넘침, 키보드 조작, 성능 측정과 승인 화면 대비를 재현 가능한 기록으로 남겨야 해. 어떤 브라우저 도구와 증거 형식을 쓰고 무엇을 아직 미검증으로 남길지 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "4c7ffc36-25fa-4399-bad7-d18a46e5170c",
+  "started_at": "2026-10-14T08:10:12.002181+00:00",
+  "host_init_session_id": "4c7ffc36-25fa-4399-bad7-d18a46e5170c",
+  "host_result_session_id": "4c7ffc36-25fa-4399-bad7-d18a46e5170c",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "2c1cf086-d8df-45bc-b8f8-6576234eef4a",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "design-browser",
+      "event_uuid": "499c022a-6577-408f-9790-a692e02b7974",
+      "file_sha256": "8fc091b3eded9e50f0623a025f54877fe2af7bcf1d818883e5a050bf7a847962",
+      "body_sha256": "31bbaad7e46047516872271649d774da10ece623a30b1dddb69e5d54d53e7063",
+      "host_message_sha256": "0e35aef26b2433198ad30910c8c4efb37ef0401a79f2b0270c1c9064242816d3",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:design-browser",
+        "args": "준비 전용: 로컬 반응형 웹의 320px/데스크톱 가로 넘침, 키보드 조작, 성능 측정, 승인 화면 대비를 재현 가능한 증거로 남길 검증 절차 명세. 브라우저·외부 서비스 실행 금지, 제품 파일 수정 금지."
+      },
+      "tool_use_id": "toolu_016r2KzNs7JeSwfWZP3nnkxn",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "72187db9e89cd6321f855a5c44484c92feba3a843271c3859f42d32afa5508f6"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01Ja233uDTVHD8ynMERSg9jb",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2432258a53aa575e33701373c8fcb331fc294fc569f40b1d2934cff3305aae0e"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/design-browser/references/qa-evidence.md"
+      },
+      "tool_use_id": "toolu_016t9PFNH4Fp6SbkZ1yMcKTF",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "85cd767c24b515a0598dcf7884fe4193cdd33c5e927b718115db720c95ba61b9"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아직 브라우저를 실행하지 않았고 확인된 결과도 없습니다. 작업 디렉터리(`case_025`)가 비어 있어 대상 URL, 라우트, 승인 시안이 없으므로 아래는 실행 전 명세입니다.\n\n## 도구와 증거 형식\n- **도구:** Playwright CLI를 쓰고, 이 작업 전용 세션(`-s=responsive-qa`)에서 Chrome으로 실행합니다. 네 항목 모두 실행 중인 화면을 직접 봐야 하는 검증이라 Aside(자료 조사용 브라우저 도구)는 쓰지 않습니다. 프로젝트에 테스트 러너가 있으면 저장해 둘 회귀 테스트는 그 러너로 만듭니다.\n- **케이스 매트릭스:** 라우트 × 리비전 × 뷰포트 × 상태 × 기대 항목 수 × 액션으로 칸을 나눕니다. 실행하지 못한 칸은 빼지 않고 칸마다 `skipped: 사유`로 남깁니다.\n- **케이스별 기록 필드:** 목적, URL, 관측 시각, CLI·브라우저 버전, 세션, 뷰포트, 상태, 액션, 아티팩트 경로, 결과를 남깁니다. 관측한 것, 추론한 것, 실시하지 않은 것은 따로 구분합니다.\n- **아티팩트:**\n  - 스냅샷: 페이지 구조와 조작 가능한 컨트롤\n  - 스크린샷(PNG): 레이아웃\n  - `run-code`가 `return`으로 돌려주는 JSON: 측정값\n  - 실패 시: 그때까지의 부분 관측과 CLI 종료 코드\n- **판정:** 통과 여부는 QA 담당이, 시안 승인은 사람이 결정합니다.\n\n## 항목별 절차\n1. **가로 넘침 (320px, 데스크톱)**\n   - `resize`로 폭을 맞춘 뒤 끝까지 스크롤해서 늦게 로드되는 콘텐츠까지 불러옵니다.\n   - `scrollWidth ≤ clientWidth + 허용오차`가 아니면 실패로 처리합니다. 허용오차 값도 기록합니다.\n   - 검사 대상 컴포넌트의 경계도 따로 확인합니다. 문서 전체는 폭에 맞아도 컴포넌트가 잘릴 수 있기 때문입니다.\n   - `resize`는 화면 폭만 바꿉니다. 터치 기기 에뮬레이션이나 브라우저 확대가 아니라는 점을 기록에 적습니다.\n2. **키보드**\n   - 뷰포트마다 새로 페이지를 엽니다(해시 없음, 이전 포커스 없음). 시작 시점의 포커스 요소를 기록합니다.\n   - 실제 Tab 키로 이동합니다. 정해진 N회 안에 대상에 닿지 못하면 실패로 처리하고, 거쳐 간 포커스 경로를 남깁니다.\n   - 각 컨트롤에서 Tab/Shift+Tab 순서, 포커스 표시(스크린샷), Enter를 눌렀을 때의 결과를 확인합니다.\n   - 키보드 검사는 뷰포트 반복 **안에서** 실행합니다. 반복이 끝난 뒤 한 번만 돌리면 마지막 뷰포트만 확인한 셈이 됩니다.\n3. **성능**\n   - 다음을 미리 정해 둡니다: 지표(LCP, CLS, INP 등), 작업 시나리오(첫 로드인지 재로드인지, 어떤 인터랙션인지), 측정 방법(`run-code`의 PerformanceObserver), CPU·네트워크 제한 조건, 반복 횟수와 중앙값, 예산.\n   - 개발 빌드인지 프로덕션 빌드인지 기록합니다.\n   - 자동화가 걸린 시간은 성능 측정값으로 쓰지 않습니다.\n4. **승인 화면 대비**\n   - 캡처 전에 시안 리비전, 콘텐츠, 상태, 뷰포트, 폰트 로드 여부, 모션 단계를 시안과 맞춥니다.\n   - 화면 차이와 함께 조건 차이(대체 폰트, 데이터 차이 등)도 보고합니다.\n   - ⚠️ \"대비\"는 승인된 시안과의 **비교**로 해석했습니다. 화면의 **색 명암비**를 뜻했다면 텍스트·배경 쌍마다 명암비를 재서 WCAG 기준(4.5:1, 3:1)과 맞춰 보는 방식으로 바꿔야 합니다.\n\n**검사기 자체 검증 (계획, 미실행):** 임시 로컬 페이지에 결함(강제 가로 넘침, Tab 순서에서 빠진 컨트롤, 누락된 항목)을 일부러 넣고 검사기가 실패를 내는지 확인합니다. 정상 실행과 실패 실행 기록을 둘 다 남겨 재현할 수 있게 합니다.\n\n## 필요한 입력\n- 로컬 서버 실행 명령과 URL, 대상 라우트(전체 페이지인지 특정 컴포넌트인지)\n- 데스크톱 폭(예: 1280 또는 1440)과 각 뷰포트의 높이\n- 확인할 상태: 로그인 여부, 데이터, 빈 상태와 오류 상태\n- 기대 항목 수와 키보드로 닿아야 할 컨트롤 목록(실제 화면이 아니라 사양이나 테스트 데이터에서 가져온 값)\n- 승인 시안 출처(Figma 프레임 또는 PNG)와 리비전\n- 성능 지표, 예산, CPU·네트워크 제한 조건\n- Playwright CLI 설치 여부와 버전, 프로젝트 테스트 러너 유무\n- 아티팩트 저장 위치\n\n## 미검증으로 남는 것\n- 네 항목 전부와 검사기 자체 검증\n- Playwright CLI 설치 여부, 로컬 사이트가 실제로 떠 있는지\n- \"대비\"를 비교로 읽은 해석이 맞는지\n- 이번 범위 밖이라 별도 요청이 없으면 미검증으로 둘 것: 실제 터치 기기, 브라우저 200%/400% 확대 시 재배치, 스크린리더 낭독, Safari·Firefox",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 106.755,
+  "duration_api_ms": 105333,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 16081,
+    "cache_read_input_tokens": 53306,
+    "output_tokens": 5517,
+    "output_tokens_details": {
+      "thinking_tokens": 2814
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14330,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 452,
+        "cache_read_input_tokens": 17072,
+        "cache_creation_input_tokens": 990,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 990
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 19907,
+        "output_tokens": 3061,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 4523,
+        "cache_read_input_tokens": 18062,
+        "cache_creation_input_tokens": 1751,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1751,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 5517,
+      "cacheReadInputTokens": 53306,
+      "cacheCreationInputTokens": 16081,
+      "webSearchRequests": 0,
+      "costUSD": 0.24442819999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2814,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 19907,
+      "outputTokens": 3061,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.35212,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5965482,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 5,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "ffddf7450f54272955c7f03ba8206f6366998be0e76bde17a1e7432da859e79f",
+  "transcript_sha256": "42e04e34163bf44895b9800bc513e5a359f109c206a254cb467b6c6afef561e7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

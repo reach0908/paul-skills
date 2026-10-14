@@ -98,7 +98,7 @@ Use this route once the product intent is known. Enter at the first unsettled st
 | Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |
 | Choose among visual directions for one component | Ask the user to invoke **`/variant`** for a comparison in its real page |
 | Review a screen or flow across disciplines | **`/better-interface`**, which loads all six domain owners and consolidates one report |
-| Review what a branch, PR, staged or uncommitted change caused | Ask the user to invoke **`/interface-review`** with their target; it owns scope and classification, then composes `better-interface` |
+| Review what a branch, PR, staged or uncommitted change caused | **`better-interface`** is the automatic routing entry; ask the user to invoke **`/interface-review`** with their target before inspecting files. That explicit invocation owns scope and classification, then composes `better-interface` |
 | Keyboard, focus, semantics, names or announcements | **`/better-accessibility`** |
 | Grouping, spacing, reading order, responsive structure or RTL | **`/better-layout`** |
 | Labels, errors, empty states, confirmations or product vocabulary | **`/better-writing`** |

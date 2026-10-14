@@ -1,0 +1,228 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-design-browser",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_021",
+  "expected": "design-browser",
+  "prompt": "/paul-skills:design-browser 로컬 반응형 웹을 브라우저에서 확인할 검증 절차를 준비해줘. 320px와 데스크톱의 가로 넘침, 키보드 조작, 성능 측정과 승인 화면 대비를 재현 가능한 기록으로 남겨야 해. 어떤 브라우저 도구와 증거 형식을 쓰고 무엇을 아직 미검증으로 남길지 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "b0fdb305-f8d5-4d7f-9027-0169befdffbd",
+  "started_at": "2026-10-14T08:56:09.958251+00:00",
+  "host_init_session_id": "b0fdb305-f8d5-4d7f-9027-0169befdffbd",
+  "host_result_session_id": "b0fdb305-f8d5-4d7f-9027-0169befdffbd",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "4d60a97c-594b-4a04-ac75-668abe4bb352",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "design-browser",
+      "event_uuid": "b3856ab7-dc41-4b7c-b352-e318279ae575",
+      "file_sha256": "8fc091b3eded9e50f0623a025f54877fe2af7bcf1d818883e5a050bf7a847962",
+      "body_sha256": "31bbaad7e46047516872271649d774da10ece623a30b1dddb69e5d54d53e7063",
+      "host_message_sha256": "84db365d99bcd39169590250e547977a02bb10b16811d76173154a66fbb85e22",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01VhCAvQ3mRAfn8urfgkA7Ld",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ea816e42e6b11685967d2a731a9bbc085bf1e1427954309d3d9f334262fb33fc"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/design-browser/references/qa-evidence.md"
+      },
+      "tool_use_id": "toolu_016XZzJNtftAGLh4q1pushKE",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "5f44d78b3530128aa8a5a56c870f2ac3081524a4ceada3a8c6c95e9ad286a7b5"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아직 아무것도 실행하거나 검증하지 않았습니다. 작업 폴더(`case_021`)가 비어 있어서 URL, 라우트, 승인된 디자인, 증거를 저장할 위치를 찾지 못했습니다. 셸도 실행하지 않았기 때문에 `playwright-cli`가 설치되어 있는지, 버전이 무엇인지도 모릅니다. 아래는 실행 전에 쓸 명세입니다.\n\n## 1. 도구와 세션\n- **도구:** Playwright CLI 하나로 네 가지 확인(가로 넘침, 키보드 조작, 성능, 승인 화면 대비)을 모두 합니다. 참고 자료 조사는 요청에 없어서 Aside는 쓰지 않습니다. 프로젝트에 테스트 러너가 있으면 저장해 둘 회귀 테스트는 그 러너에 둡니다.\n- **세션:** `-s=<작업명>`으로 이 작업 전용 세션을 새로 엽니다. 사용자 브라우저 프로필은 연결하지 않습니다.\n- **명령:** `open --browser=chrome`, `snapshot`, `resize W H`, `screenshot --filename`, `run-code`를 씁니다. `set-reduced-motion`, 기기 에뮬레이션, 트레이스 명령은 `--help`로 지원 여부를 확인한 뒤에만 씁니다.\n\n## 2. 확인 조합\n- 라우트 × 리비전 × 뷰포트 × 상태 조합마다 하나씩 기록합니다.\n- **뷰포트:** 320×(높이 미정)와 데스크톱(크기 미정)입니다.\n- `resize 320`은 CSS 뷰포트 너비만 바꿉니다. 터치 기기나 브라우저 확대를 흉내 내는 것이 아니므로 기록에 그렇게 적습니다.\n- 가로 넘침과 키보드 확인은 뷰포트마다 다시 합니다. 매번 `#` 없는 주소로 새로 열어서 시작합니다. 키보드 조작을 뷰포트를 바꾼 뒤 한 번만 하면 마지막 뷰포트만 확인한 셈이 됩니다.\n\n## 3. 확인 방법\n- **가로 넘침:** 지연 로딩되는 내용까지 다 불러온 뒤 `run-code`로 문서 전체의 `scrollWidth`/`clientWidth`와 대상 컴포넌트의 영역을 JSON으로 받습니다. 허용 오차를 미리 정하고, 넘으면 실패로 처리합니다. 값을 출력만 하는 것으로는 확인이 아닙니다.\n- **키보드:** 시작할 때 포커스가 있는 요소를 기록합니다. 실제 Tab/Shift+Tab을 정해진 횟수 안에서만 누르고, 그 안에 목표 요소에 닿지 못하면 실패입니다. 포커스가 거쳐 간 경로, 포커스 표시가 보이는 스크린샷, Enter를 눌렀을 때의 결과를 남깁니다.\n- **성능:** 지표(LCP, CLS, INP 등), 작업 시나리오, 반복 횟수, 캐시 없는/있는 상태, 브라우저 버전을 명시합니다. 자동화 스크립트가 걸린 시간은 앱 성능 측정값이 아닙니다.\n- **승인 화면 대비:** 캡처 전에 리비전, 콘텐츠, 상태, 뷰포트, 폰트, 애니메이션 시점을 승인 화면과 맞춥니다. 끝내 맞추지 못한 조건은 화면 차이와 함께 따로 적습니다.\n\n## 4. 증거 형식(조합마다 하나씩)\n- 도구와 목적, URL, 시각, CLI·브라우저 버전, 세션, 뷰포트, 상태, 수행한 조작\n- 파일 경로: 스냅샷, 스크린샷, `run-code` JSON\n- **관찰 / 추론 / 확인하지 못한 항목**을 나눠 적습니다.\n- 심각도와 QA 판정은 QA 에이전트가, 디자인 승인은 사람이 정합니다.\n\n## 5. 필요한 입력\n1. 로컬 URL·포트와 확인할 라우트(서버를 띄우는 방법 포함)\n2. 라우트별 예상 항목 수(DOM이 아니라 요구사항이나 테스트 데이터 기준)\n3. 데스크톱 뷰포트 크기(1280인지 1440인지)와 320px일 때 높이\n4. 키보드로 확인할 컨트롤과 기대하는 Tab 순서·Enter 결과\n5. 성능 지표, 작업 시나리오, 기준값\n6. 승인 화면 파일, 그 리비전, 기준 뷰포트와 상태\n7. 증거를 저장할 위치와 프로젝트 테스트 러너가 있는지 여부\n8. 가로 넘침 허용 오차\n\n## 6. 아직 확인하지 않은 것\n- 위 1~5의 모든 측정값과 결과\n- `playwright-cli` 설치 여부와 버전, 로컬 서버가 떠 있는지\n- 위 확인이 실제로 결함을 잡아내는지에 대한 점검(일부러 넘침을 만들거나 Tab 순서에서 빠진 컨트롤을 넣은 임시 페이지로 실패하는지 보기): 이번에는 파일을 만들거나 바꾸지 않기로 해서 계획만 세워 두었습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 74.054,
+  "duration_api_ms": 71400,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 15513,
+    "cache_read_input_tokens": 38310,
+    "output_tokens": 2491,
+    "output_tokens_details": {
+      "thinking_tokens": 287
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14142,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 168,
+        "cache_read_input_tokens": 16704,
+        "cache_creation_input_tokens": 1170,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1170
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 19523,
+        "output_tokens": 3009,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2053,
+        "cache_read_input_tokens": 17874,
+        "cache_creation_input_tokens": 1371,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1371,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 2491,
+      "cacheReadInputTokens": 38310,
+      "cacheCreationInputTokens": 15513,
+      "webSearchRequests": 0,
+      "costUSD": 0.17749700000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 287,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 19523,
+      "outputTokens": 3009,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.34568,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.523177,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "036c9a8962c6674d62191fb20b79948cd2ef204e0e8072bf405a20264836b558",
+  "transcript_sha256": "b2932051bc5f15241692d888de8262535ca0a37f584aff7e3b08188f6848e6d6",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

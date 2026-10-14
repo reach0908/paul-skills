@@ -1,0 +1,220 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-variant",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_030",
+  "expected": "variant",
+  "prompt": "/paul-skills:variant 현재 가격 카드를 유지하며 다른 구성안을 옆에서 비교하는 로컬 작업대를 만들려고 해. 이번에는 구현하지 말고 필요한 입력과 비교 범위, 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "52a9e234-5ce6-4e01-b982-4f8785da257d",
+  "started_at": "2026-10-14T09:00:45.833668+00:00",
+  "host_init_session_id": "52a9e234-5ce6-4e01-b982-4f8785da257d",
+  "host_result_session_id": "52a9e234-5ce6-4e01-b982-4f8785da257d",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "a6f6ba42-e7ce-4871-bd59-f5eff1750d34",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "variant",
+      "event_uuid": "187b21fc-b730-46f2-8341-00be26851b1a",
+      "file_sha256": "0eec1591a0e8e5dfa1e6f79dfab7ab6baeacb67f3c9a36429ea650b514e92867",
+      "body_sha256": "5a50e6de49576d992453ee771ae5e5c02b83f82cf4641b0e7eb1b50b42c15184",
+      "host_message_sha256": "79197e3e5da03ad85dc10adab94f8cb7d6584933f94b46c04cd87b77a38678c5",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01XbA8JZbsGP1ofWc7VP59ZK",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "f18fc51c72320a6099f4d10726a799ea49f999c9ea64152da4556923455169cd"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "variant"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "## 가격 카드 변형 작업대 명세 (초안, 구현 전)\n\n### 0. 지금 확인한 것\n- 작업 디렉터리 `case_030/`에는 **파일이 하나도 없습니다.** 그래서 현재 가격 카드의 코드, 카드가 놓인 페이지, 토큰, 데이터, 실행 방법은 모두 아직 보지 못했습니다.\n- 아래 내용은 전부 입력을 받은 뒤에야 성립하는 조건부 명세입니다. 파일 수정, 브라우저 실행, 외부 서비스 호출은 하지 않았습니다.\n\n### 1. 필요한 입력\n1. **현재 가격 카드의 컴포넌트 경로**와, 그 카드를 띄우는 **실제 페이지 경로**\n2. **스타일 체계와 토큰**: 색, 간격, radius, 타입 스케일. 토큰이 없다면 회색 계열과 강조색 하나, 시스템 폰트로 대체하고 그렇게 했다고 명시합니다.\n3. **실제 요금제 데이터**: 플랜 이름, 가격, 통화, 결제 주기, 할인 표기, 기능 목록 길이, \"인기\" 같은 배지, 한 줄에 놓이는 카드 수\n4. **변형을 바꿔도 남아 있어야 할 상태**: 월간/연간 토글, 선택된 플랜 등이 있는지\n5. **주축 하나**: 구조, 밀도, 강조, 타입, 문구 중에서 고릅니다. \"구성안\"이라는 표현으로 보면 **구조(묶음·순서·접힘)**에 가깝지만, 정하는 건 맡기겠습니다.\n6. **로컬 실행 방법**: dev 명령과 포트\n7. **판단할 화면 폭**: 예를 들어 375px와 1440px\n\n### 2. 비교 범위\n- **대상은 카드 하나**입니다. 가격표 전체나 페이지 전체는 다루지 않습니다.\n- **기준안**은 지금 카드를 그대로 둔 `current`이고, 기본으로 보이는 안입니다. 여기에 **변형 3개**를 더하며, 이 셋은 주축 위에서 서로 다른 위치를 잡습니다. 나머지 속성은 주축을 따라 정해집니다.\n- 변형은 `?__variant=<이름>`으로 고르고, 디자인 시스템 밖에 있는 것이 눈에 보이는 떠 있는 선택기로 바꿉니다.\n- **\"옆에서 비교\"의 뜻을 확인해야 합니다.** 이 방식은 실제 페이지 안에서 한 번에 한 안만 원래 크기로 보여줍니다. 축소해서 나란히 놓으면 간격과 크기가 왜곡되기 때문입니다.\n  - (a) 현재 카드를 남겨두고 선택기로 오가는 방식: 이 방식에 맞습니다.\n  - (b) 여러 안을 한 화면에 동시에 나란히 띄우는 방식: 위 원칙에서 벗어나므로 따로 동의를 받아야 합니다.\n- **범위 밖**: 가격 정책이나 플랜 구성 변경, 결제 로직, 실사용자 A/B 테스트(`experiment-design` 영역), 페이지 레이아웃 전체, 추천안 고르기\n\n### 3. 완료 조건\n- 모든 안이 URL 파라미터만으로 열립니다.\n- `current`는 기본 렌더이고, 변경 전과 똑같습니다.\n- 모든 변형이 같은 접근성 기준을 통과합니다.\n  - 컨트롤마다 접근 가능한 이름이 있습니다.\n  - 포커스가 눈에 보이고, 키보드로 모든 곳에 닿습니다.\n  - 320px 폭과 200% 확대에서 잘리거나 겹치는 곳이 없습니다.\n  - 대비가 충분하고, 색만으로 의미를 전달하지 않습니다.\n  - 말줄임으로 잘린 값도 전체를 볼 방법이 있습니다.\n  - 이 기준을 통과하지 못하는 방향은 버립니다.\n- 변형을 바꿔도 토글과 선택 상태가 그대로 남습니다. 초기화가 필요하면 별도 라벨을 단 버튼으로 둡니다.\n- 변형 파일은 호스트 페이지만 import하고, 작업대 파일을 import하는 곳은 없습니다.\n- 마지막에 변형마다 \"주축 위치 / 맞는 상황 / 비용\"을 적은 표를 넘깁니다. 추천안은 표시하지 않습니다.\n- **브라우저 검증은 이번 응답에서 하지 않았고, 구현 단계에서 할 일입니다.**\n  - 각 안이 렌더되는지, 상호작용이 반응하는지, 콘솔이 깨끗한지\n  - 320×450 화면에서 Tab으로 돌며 선택기가 포커스를 가리지 않는지\n\n입력 1–7을 주시고 \"옆에서\"가 (a)와 (b) 중 무엇인지 정해주시면, 변형 이름과 각 안의 주축 위치부터 정리하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 72.01,
+  "duration_api_ms": 70612,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 15497,
+    "cache_read_input_tokens": 38185,
+    "output_tokens": 2868,
+    "output_tokens_details": {
+      "thinking_tokens": 877
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13647,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 745,
+        "cache_read_input_tokens": 17074,
+        "cache_creation_input_tokens": 305,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 305
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 19549,
+        "output_tokens": 2410,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1878,
+        "cache_read_input_tokens": 17379,
+        "cache_creation_input_tokens": 1850,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1850,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 2868,
+      "cacheReadInputTokens": 38185,
+      "cacheCreationInputTokens": 15497,
+      "webSearchRequests": 0,
+      "costUSD": 0.18344700000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 877,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 19549,
+      "outputTokens": 2410,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.31599,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.499437,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "30fb16970b95f210ebfac6033611812a3641a2630e0b8a216bd94abad4c990be",
+  "transcript_sha256": "615ed98cf97ba2d6f7c8990a466780ea0bf30a2abdb2419e122d0ecf51da1064",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

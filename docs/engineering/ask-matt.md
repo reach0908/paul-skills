@@ -64,10 +64,13 @@ A usability experiment asks whether people can complete a product task and defin
 
 ## Common questions
 
+**Which review command handles UI changes?**
+
+For what a change introduced or regressed, invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) with the target. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) can automatically route an unnamed request to that command before inspecting files; its ordinary screen review remains automatic.
+
 **Does using the PM beta force every task through all three stages?**
 
 No. Reuse the supplied context and start where a question remains open. A scoped design change preserves unaffected product decisions; its existence does not authorize a new product direction. A trial pass does not promote a candidate or establish user acceptance.
-
 
 **Isn't there just a list of the skills in the right order?**
 

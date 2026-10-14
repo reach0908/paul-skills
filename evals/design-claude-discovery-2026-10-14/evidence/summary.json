@@ -1,0 +1,261 @@
+{
+  "planned": 34,
+  "completed": 34,
+  "passed": 33,
+  "by_mode": {
+    "explicit": {
+      "completed": 17,
+      "passed": 17
+    },
+    "implicit": {
+      "completed": 12,
+      "passed": 12
+    },
+    "boundary": {
+      "completed": 5,
+      "passed": 4
+    }
+  },
+  "failures": [
+    {
+      "case_id": "boundary-interface-review",
+      "failed_checks": [
+        "expected_owner",
+        "explicit_handoff",
+        "no_file_inspection"
+      ]
+    }
+  ],
+  "reported_matrix_cost_usd": 11.983469200000002,
+  "summed_duration_seconds": 2138.671,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "installation": {
+    "version": "0.4.0",
+    "release_commit": "b6e460adadc5ea438fc740f86fe07c2f2f43fe89",
+    "files": [
+      {
+        "path": "skills/design/better-accessibility/SKILL.md",
+        "installed_sha256": "3a6686f4f5ab756d51f2415248b8ae29ea367fe9ea47ea0a81d5c05dd3ccc65a",
+        "release_sha256": "3a6686f4f5ab756d51f2415248b8ae29ea367fe9ea47ea0a81d5c05dd3ccc65a",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-accessibility/agents/openai.yaml",
+        "installed_sha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+        "release_sha256": "98699206d4fb00b72bcaf69bb446f541644cc0cc3d23967e266731e100a55563",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-colors/SKILL.md",
+        "installed_sha256": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33",
+        "release_sha256": "2d636604be7ebca768ced087138e765f029a232c1bc1ea4fc62b9d0e03777b33",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-colors/agents/openai.yaml",
+        "installed_sha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+        "release_sha256": "9568572146c8d7d1dc2e12536c2b8ea63480f83f2f2ebfcf2f9a500a56830d4a",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-interface/SKILL.md",
+        "installed_sha256": "d923946fa3d2a95aedf610516be964d2909c94164bdba3d2997258e928bdf072",
+        "release_sha256": "d923946fa3d2a95aedf610516be964d2909c94164bdba3d2997258e928bdf072",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-interface/agents/openai.yaml",
+        "installed_sha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+        "release_sha256": "541c5d823f474543d4f3a314a9292215f8c90c152249e72411ff3e3632cf55bc",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-layout/SKILL.md",
+        "installed_sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+        "release_sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-layout/agents/openai.yaml",
+        "installed_sha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+        "release_sha256": "d51a2ca663c9331f8f23b7a550e5f848f83e81361e21f2280cc384e99cc0ae15",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-typography/SKILL.md",
+        "installed_sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+        "release_sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-typography/agents/openai.yaml",
+        "installed_sha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+        "release_sha256": "01d8b8f835112e97ba0e4d97a07775e919407ebb5aab0cce9b4fa280e66b19b8",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-ui/SKILL.md",
+        "installed_sha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3",
+        "release_sha256": "50028cfcaa23c9e51cfbadc8c48ce2e28976f4ff27287347361251801d31c2c3",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-ui/agents/openai.yaml",
+        "installed_sha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+        "release_sha256": "799e0b58bded32edf5c217f97e08c364660ec24234978b2e3f7dee1868bea871",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-writing/SKILL.md",
+        "installed_sha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af",
+        "release_sha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af",
+        "equal": true
+      },
+      {
+        "path": "skills/design/better-writing/agents/openai.yaml",
+        "installed_sha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+        "release_sha256": "a5aec7e0cbc87930962f139eff4341dcf87e83fd19b9447e3f614db2bc71de67",
+        "equal": true
+      },
+      {
+        "path": "skills/design/break/SKILL.md",
+        "installed_sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+        "release_sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+        "equal": true
+      },
+      {
+        "path": "skills/design/break/agents/openai.yaml",
+        "installed_sha256": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+        "release_sha256": "e3e6b1a83f90763fa8cb166b4ec483ebc78fc84311fb0594d29f03d8ef76eddc",
+        "equal": true
+      },
+      {
+        "path": "skills/design/build-design/SKILL.md",
+        "installed_sha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+        "release_sha256": "e9a1da2e6e7bed7af440dbfb005daa8a7bc763b8818ea8155351ed793ad27f3e",
+        "equal": true
+      },
+      {
+        "path": "skills/design/build-design/agents/openai.yaml",
+        "installed_sha256": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+        "release_sha256": "849915f296f11137388bde1a2dd1bfca640505c23d2bf54bfe673378528cdff0",
+        "equal": true
+      },
+      {
+        "path": "skills/design/design-browser/SKILL.md",
+        "installed_sha256": "8fc091b3eded9e50f0623a025f54877fe2af7bcf1d818883e5a050bf7a847962",
+        "release_sha256": "8fc091b3eded9e50f0623a025f54877fe2af7bcf1d818883e5a050bf7a847962",
+        "equal": true
+      },
+      {
+        "path": "skills/design/design-browser/agents/openai.yaml",
+        "installed_sha256": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+        "release_sha256": "ed71cd168e1b6c07617ac30265a554fb536a0306447fd11d5a778a6296b208c7",
+        "equal": true
+      },
+      {
+        "path": "skills/design/explain-interface/SKILL.md",
+        "installed_sha256": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+        "release_sha256": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+        "equal": true
+      },
+      {
+        "path": "skills/design/explain-interface/agents/openai.yaml",
+        "installed_sha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+        "release_sha256": "3858853344ece1dd145523bd9d61c8905c4b2cb6c7307f023cc8666b8f4dc0bc",
+        "equal": true
+      },
+      {
+        "path": "skills/design/information-architecture/SKILL.md",
+        "installed_sha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20",
+        "release_sha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20",
+        "equal": true
+      },
+      {
+        "path": "skills/design/information-architecture/agents/openai.yaml",
+        "installed_sha256": "1e9346a23d718dcc493d429989eed9c4439aa5b05c11429c52e9d352614ae387",
+        "release_sha256": "1e9346a23d718dcc493d429989eed9c4439aa5b05c11429c52e9d352614ae387",
+        "equal": true
+      },
+      {
+        "path": "skills/design/interface-review/SKILL.md",
+        "installed_sha256": "134842eb86cacea8ef747fd9c5b32cd42b8aa2837df8782c3a25deb1c5f6e155",
+        "release_sha256": "134842eb86cacea8ef747fd9c5b32cd42b8aa2837df8782c3a25deb1c5f6e155",
+        "equal": true
+      },
+      {
+        "path": "skills/design/interface-review/agents/openai.yaml",
+        "installed_sha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+        "release_sha256": "c8bb068bbd40629f03d7d4c0284924f8df1dfdf7f1a7b0fabb88b265202fa23f",
+        "equal": true
+      },
+      {
+        "path": "skills/design/state-machine/SKILL.md",
+        "installed_sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+        "release_sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+        "equal": true
+      },
+      {
+        "path": "skills/design/state-machine/agents/openai.yaml",
+        "installed_sha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+        "release_sha256": "46f496a379f86d7ecd91912505b7545abd462fcaaec6529d7fe39e88ae7535ff",
+        "equal": true
+      },
+      {
+        "path": "skills/design/user-flow/SKILL.md",
+        "installed_sha256": "a8b1a4df0fa20cf6b01ba49a969b8b33cc5620926e0d67ef7663e53a8f51d828",
+        "release_sha256": "a8b1a4df0fa20cf6b01ba49a969b8b33cc5620926e0d67ef7663e53a8f51d828",
+        "equal": true
+      },
+      {
+        "path": "skills/design/user-flow/agents/openai.yaml",
+        "installed_sha256": "f730ebf5fb0c3b30f67bfd9a73bc2fd930f96659c1521e9b5135825e806ff16a",
+        "release_sha256": "f730ebf5fb0c3b30f67bfd9a73bc2fd930f96659c1521e9b5135825e806ff16a",
+        "equal": true
+      },
+      {
+        "path": "skills/design/variant/SKILL.md",
+        "installed_sha256": "0eec1591a0e8e5dfa1e6f79dfab7ab6baeacb67f3c9a36429ea650b514e92867",
+        "release_sha256": "0eec1591a0e8e5dfa1e6f79dfab7ab6baeacb67f3c9a36429ea650b514e92867",
+        "equal": true
+      },
+      {
+        "path": "skills/design/variant/agents/openai.yaml",
+        "installed_sha256": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+        "release_sha256": "24e006ea99aed264541692cfd778aa758ff111fa242ec81126fd51fdf1b29ff0",
+        "equal": true
+      },
+      {
+        "path": "skills/design/wireframe/SKILL.md",
+        "installed_sha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a",
+        "release_sha256": "d471d0987df39aa32b122ca9a60823caea81e6fc00597e3659a21cde2438d10a",
+        "equal": true
+      },
+      {
+        "path": "skills/design/wireframe/agents/openai.yaml",
+        "installed_sha256": "ffe5ce5bfec220ff9199f173247f5b79fef1b53b39992432b69b3a0fea3ae31a",
+        "release_sha256": "ffe5ce5bfec220ff9199f173247f5b79fef1b53b39992432b69b3a0fea3ae31a",
+        "equal": true
+      }
+    ],
+    "all_equal": true
+  },
+  "all_phases": {
+    "calibration_runs": 1,
+    "excluded_exploratory_runs": 12,
+    "confirmatory_runs": 34,
+    "total_model_runs": 47,
+    "calibration_cost_usd": 0.132472,
+    "excluded_exploratory_cost_usd": 4.9856406,
+    "confirmatory_cost_usd": 11.983469200000002,
+    "total_reported_cost_usd": 17.1015818,
+    "actual_billed_usd": null,
+    "reason_for_repeated_natural_requests": "Method correction: remove expected skill names from cwd.",
+    "answer_based_rerolls": 0
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "case_id": "boundary-interface-review",
+  "session_id": "01a139c0-1752-7fc3-aa86-47782660c282",
+  "host_version": "codex-cli 0.146.0",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "installed_version": "0.4.1",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "neutral_working_directory": true,
+    "installed_target_path_read": true,
+    "no_unauthorized_hidden_loads": true,
+    "correct_target_handoff": true,
+    "no_domain_loads": true,
+    "no_product_file_inspection": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "현재 작업 트리의 커밋하지 않은 UI 변경 전체를 리뷰해줘. 이번 요청에는 스킬 이름을 직접 지정하지 않을게. 변경 때문에 생긴 회귀를 찾는 것이 목적이야.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "`$paul-skills:interface-review working`\n\n커밋하지 않은 UI 변경 전체의 회귀 리뷰는 위 명령으로 명시적으로 시작해야 하며, 제품 파일 수정·브라우저 실행·외부 서비스 호출 없이 소스 증거 범위에서만 진행하도록 요청하세요.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-interface"
+  ],
+  "injected_skills": [],
+  "loaded_file_hashes": {
+    "better-interface": "e4ab6510803d4beb6a2a3ac9a818214d585e7e420e9568648cce85ad559f9e13"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "e4ab6510803d4beb6a2a3ac9a818214d585e7e420e9568648cce85ad559f9e13"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 43997,
+      "cached_input_tokens": 31744,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 409,
+      "reasoning_output_tokens": 148
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "422a9cb7ae7cb4824281d55127502d313ed37bf6d1e2343d991d33c0d7f4e33d",
+  "cases_sha256": "7f02f3659a9631833ebedacd250592c833c4dfda91e8df8bffc68b400eae8102",
+  "stream_sha256": "e5af50914a23ea713b710742de840be36802d3fcbbda5078b722e1d759ed4e53",
+  "transcript_sha256": "39e4b0e36d513d4428f746c07a8fc49903891793e6c444d1e925dd118542eba5",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 16.172
+}

@@ -1,0 +1,237 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-better-writing",
+  "mode": "implicit",
+  "expected": "better-writing",
+  "prompt": "구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "ce37c1af-c30b-4b09-a7eb-73ef1bc39ced",
+  "started_at": "2026-10-14T07:42:58.074945+00:00",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "67e8a7ca-c54e-41af-a4ec-c0dd403f797b",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-writing",
+      "event_uuid": "985cf2ae-8c22-4fe7-96b3-ce4c25827240",
+      "file_sha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af",
+      "body_sha256": "00d4f6bd7109282a432818975e567c70670f9ae498da8be5327be895a91324ef",
+      "host_message_sha256": "4782d913fd77335f13cd822ae6ff482d555b85397b3b1c00319385c22a0da9ad",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-writing",
+        "args": "구독 서비스 인터페이스 문구 다듬기: 저장 버튼 \"진행\", 저장 실패 \"문제가 발생했습니다\", 빈 목록 \"없음\". 신뢰감 있고 담백한 한국어, 다음 행동 명확히. 맥락 부족 시 가정 표시, 대안 문구와 이유만 짧게. 준비/짧은 명세까지만, 제품 파일 수정·브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_016P551YWCM69KUQq1yBXvC4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "66f59aa941097b6f8748258182173c46bfb73e1d3e9a3df59f04e8786adaef5e"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01RAVPBHU6kwkUunJs5rAtVU",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e558eabe36d68d131acf98a9b8dc89a1d2d9ed8045b1dfc40c82319e05ecbc03"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-writing/korean-copy.md"
+      },
+      "tool_use_id": "toolu_01R5BtZfAAGa5qCoHY79APy4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "100385c302ab24f996b252f9e634cda5f8f4fcad1218dbe0d2925923811fdad4"
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "^#|저장|Saving|Saved|failed",
+        "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-writing/patterns.md",
+        "output_mode": "content"
+      },
+      "tool_use_id": "toolu_01Vd3nY8r8nzLfLLq6qpk54c",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c82f25aab3c762e3a603d835b0593baf597ae20024021185ad34ca0fbca136c8"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아래는 **제품과 대조하지 않은 제안**입니다. 작업 디렉터리에 파일이 없어 기존 문구, 로케일 파일, 화면을 하나도 보지 못했습니다. 파일은 수정하지 않았고 브라우저나 외부 서비스도 쓰지 않았습니다.\n\n**공통 가정:** 결제가 걸린 서비스라 신뢰감을 주는 합니다체로 썼습니다. 기존 제품이 해요체를 쓰면 그 말투를 따릅니다. 세 문구는 같은 말투와 같은 명사를 씁니다.\n\n---\n\n### 1. 저장 버튼 \"진행\"\n**문제:** 버튼을 눌렀을 때 무슨 일이 생기는지 알 수 없습니다.\n\n| 버튼이 하는 일 (가정) | 제안 | 이유 |\n| --- | --- | --- |\n| 저장만 함 | `저장` (설정 화면이면 `변경사항 저장`) | 버튼 이름이 동작을 직접 말합니다 |\n| 다음 단계로 넘어감 | `다음` | 흐름 전체에서 `다음`과 `계속` 중 하나로 통일합니다 |\n| 구독 확정·결제 | `구독 시작` 또는 `결제하기` | 돈이 나가는 동작은 버튼에서 미리 드러나야 합니다 |\n\n### 2. 저장 실패 \"문제가 발생했습니다\"\n**문제:** 무엇이 실패했는지도, 이제 뭘 해야 하는지도 없습니다. 복구 방법이 없는 오류라 **가장 먼저 고칠 항목**입니다.\n\n- **제안:** `저장하지 못했습니다. 다시 시도해 주세요.` + [다시 시도] 버튼\n  - 가정: 다시 시도 버튼이 있고, 입력한 내용이 남아 있습니다.\n- **대안:**\n  - 네트워크 오류를 따로 알아낼 수 있으면 `저장하지 못했습니다. 인터넷 연결을 확인한 뒤 다시 시도해 주세요.`\n  - 입력이 남아 있다고 보장할 수 있으면 `입력한 내용은 그대로 있습니다.`를 덧붙입니다. 다시 입력해야 하나 하는 불안을 줄여 줍니다. 보장할 수 없으면 쓰지 않습니다.\n  - 해요체: `저장하지 못했어요. 다시 시도해 주세요.`\n- **이유:** 실패한 동작(저장)을 밝히고, 화면에서 실제로 할 수 있는 복구만 안내합니다.\n- **상태 문구 짝:** `저장 중…` → `저장했습니다` / `저장하지 못했습니다`\n\n### 3. 빈 목록 \"없음\"\n**문제:** 이곳이 어떤 곳이고 어떻게 채우는지 알려 주지 않습니다. 어떤 목록인지 몰라서 경우마다 예시를 들었습니다.\n\n| 목록 (가정) | 제목 | 설명 | 버튼 |\n| --- | --- | --- | --- |\n| 구독 목록 | 구독 중인 서비스가 없습니다 | 구독을 시작하면 여기에 표시됩니다. | `구독 시작` |\n| 결제 내역처럼 저절로 쌓이는 목록 | 결제 내역이 없습니다 | 첫 결제 후 여기에 표시됩니다. | 없음 (사용자가 채울 수 없음) |\n| 검색·필터 결과 | '{검색어}'에 맞는 결과가 없습니다 | \u2014 | `필터 지우기` |\n\n**이유:** 빈 화면에서도 다음에 할 일이 하나 보여야 합니다. `필터 지우기`는 필터 때문에 결과가 안 보일 때만 맞습니다. 삭제된 항목이나 권한이 없는 항목을 다시 보여 주지는 못합니다.\n\n---\n\n### 확정하려면 필요한 입력\n1. 기존 문구 원본(로케일 파일 경로나 주변 문구 붙여넣기). 말투와 명사를 맞추는 데 씁니다.\n2. \"진행\" 버튼을 누르면 실제로 무슨 일이 생기는지, 어느 화면에 있는지\n3. 저장 실패 시 다시 시도할 수 있는지, 입력이 남아 있는지, 실패 원인을 구분할 수 있는지\n4. \"없음\"이 뜨는 목록이 무엇인지, 검색이나 필터가 있는지\n5. 제품이 쓰는 말투(합니다체 또는 해요체)\n\n이 입력이 오면 실제 파일을 기준으로 다시 검토하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 102.26,
+  "duration_api_ms": 100388,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 17283,
+    "cache_read_input_tokens": 56591,
+    "output_tokens": 4447,
+    "output_tokens_details": {
+      "thinking_tokens": 2196
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15971,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 243,
+        "cache_read_input_tokens": 18713,
+        "cache_creation_input_tokens": 990,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 990
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 21351,
+        "output_tokens": 3401,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 3492,
+        "cache_read_input_tokens": 19703,
+        "cache_creation_input_tokens": 1312,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1312,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 4447,
+      "cacheReadInputTokens": 56591,
+      "cacheCreationInputTokens": 17283,
+      "webSearchRequests": 0,
+      "costUSD": 0.2346182,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2196,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 21351,
+      "outputTokens": 3401,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.38356,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6181782,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "protocol_sha256": "2cb7ca522aface83d1010a3ef5d9e3f331a21d7d062c80ead0f694ff82a6c1f7",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "ac46b210c525247e6b56c98cd125a1aea67cab6745e355cc24ea5a09df924b58",
+  "transcript_sha256": "ccf581d9738d75eaef7c444193abf38c83baa190928036b8ba871b1876a5a0d7",
+  "excluded_from_confirmatory_score": "Expected skill name appeared in the working-directory path."
+}

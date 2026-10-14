@@ -1,0 +1,41 @@
+{
+  "planned": 13,
+  "completed": 13,
+  "by_arm": {
+    "candidate": {
+      "completed": 13,
+      "passed": 13
+    },
+    "baseline": {
+      "completed": 0,
+      "passed": 0
+    }
+  },
+  "by_mode_candidate": {
+    "explicit": {
+      "completed": 2,
+      "passed": 2
+    },
+    "implicit": {
+      "completed": 2,
+      "passed": 2
+    },
+    "boundary": {
+      "completed": 8,
+      "passed": 8
+    },
+    "handoff": {
+      "completed": 1,
+      "passed": 1
+    }
+  },
+  "failures": [],
+  "reported_cost_usd": 4.2603854,
+  "actual_billed_usd": null,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "efforts": [
+    "xhigh"
+  ]
+}
