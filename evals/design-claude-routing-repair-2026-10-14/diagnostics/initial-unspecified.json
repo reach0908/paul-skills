@@ -1,0 +1,185 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "repair-unspecified",
+  "mode": "boundary",
+  "protocol_version": 2,
+  "trial_directory_name": "case_010",
+  "expected": "better-interface",
+  "prompt": "이번 UI 변경이 새로 만든 문제나 회귀를 리뷰해줘. 대상은 아직 지정하지 않았어.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "session_id": "5e22a38a-bbcf-4160-90a8-94bd3650eedb",
+  "started_at": "2026-10-14T08:49:29.250822+00:00",
+  "host_init_session_id": "5e22a38a-bbcf-4160-90a8-94bd3650eedb",
+  "host_result_session_id": "5e22a38a-bbcf-4160-90a8-94bd3650eedb",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "aa2074f7-16f3-4022-b15c-f652681879c5",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "e4988a3a-5ab7-483e-a869-43dda1f2f0cf",
+      "file_sha256": "7cb00ecd6dc8f6d901fc3ea6e381e03ce44ba0c4bad6f15cd54783357b499125",
+      "body_sha256": "fd2f7d1eb84cfc1b81a25271e5cf5caf854e3fbc81384f06cfcae35094fc585c",
+      "host_message_sha256": "296b01feab6b3f390cfa5f7c67f31a3dc572d2758c9d0398fb274c6ea314b81c",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "이번 UI 변경이 새로 만든 문제나 회귀 리뷰. 대상 미지정. 제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_01BMYENnDpCqniq6wBoDGAS4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b0e2571d2f414104135266ef855759cf69c28f8f28acb1b80eaa82de78b7eb9b"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "변경 사항 리뷰는 `interface-review`가 맡는데, 이 스킬은 사용자가 직접 실행해야 해요. 그래서 이번 응답에서는 diff를 보지 않았고 리뷰 결론도 내지 않았어요. 아래 명령을 실행해 주세요.\n\n```\n/paul-skills:interface-review\n```\n\n대상을 정하지 않으셨으니 위 명령에도 대상을 붙이지 않았어요. 범위를 좁히고 싶으면 뒤에 대상을 붙이면 돼요.\n\n| 대상 | 명령 |\n| --- | --- |\n| 스테이징된 변경만 | `/paul-skills:interface-review staged` |\n| 커밋하지 않은 변경 전체 | `/paul-skills:interface-review working` |\n| 현재 브랜치 | `/paul-skills:interface-review branch` |\n| 특정 PR | `/paul-skills:interface-review pr <번호>` |\n| 특정 ref나 범위 | `/paul-skills:interface-review <ref 또는 범위>` |\n\n`staged`, `working`, `branch`, PR 대상은 git 저장소가 있어야 동작할 텐데, 현재 작업 디렉터리(`case_010`)는 git 저장소가 아니에요. 비교 기준이 될 커밋이나 ref가 따로 있다면 마지막 형식으로 그 값을 직접 넘겨 주세요.\n\n이번 응답에서는 파일을 읽거나 고치지 않았고, 브라우저나 외부 서비스도 실행하지 않았어요. 아직 아무것도 확인하지 않았으니 회귀가 있는지 없는지도 판단하지 않았어요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": true,
+    "explicit_handoff": true,
+    "no_invented_target": false,
+    "no_domain_calls": true,
+    "no_file_inspection": true
+  },
+  "pass": false,
+  "duration_seconds": 15.067,
+  "duration_api_ms": 13538,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 14711,
+    "cache_read_input_tokens": 18057,
+    "output_tokens": 1104,
+    "output_tokens_details": {
+      "thinking_tokens": 361
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14711,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 853,
+        "cache_read_input_tokens": 14325,
+        "cache_creation_input_tokens": 4118,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4118
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1104,
+      "cacheReadInputTokens": 18057,
+      "cacheCreationInputTokens": 14711,
+      "webSearchRequests": 0,
+      "costUSD": 0.1433954,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 361,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1433954,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "9b5f302ae114e1c4d274e4788f402b80f56ab2811c0514d3eb718b7d1f3abaa5",
+  "transcript_sha256": "f9b5367db08e90f9812858d240c00421c25f5d4fd5b9b4a813e833b1b4fd4ba7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

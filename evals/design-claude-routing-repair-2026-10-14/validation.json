@@ -1,0 +1,62 @@
+[
+  {
+    "name": "repository",
+    "command": [
+      "npm",
+      "run",
+      "check"
+    ],
+    "exit_code": 0,
+    "output_sha256": "e19ee751a3e330abae79ea81b82049e25b346983cd56dabf4059bbf83a04ca91",
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 38 tests in 9.526s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "name": "plugin",
+    "command": [
+      "claude",
+      "plugin",
+      "validate",
+      ".",
+      "--strict"
+    ],
+    "exit_code": 0,
+    "output_sha256": "954bfd13a7e33f31a087f744809ab7c13440b8246bcf4fa9d3c5dc34004de96b",
+    "tail": [
+      "Validating marketplace manifest: $REPO/.claude-plugin/marketplace.json",
+      "",
+      "✔ Validation passed"
+    ]
+  },
+  {
+    "name": "collector",
+    "command": [
+      "python3",
+      "-m",
+      "unittest",
+      "discover",
+      "-s",
+      "evals/design-claude-routing-repair-2026-10-14",
+      "-p",
+      "test_collector.py",
+      "-v"
+    ],
+    "exit_code": 0,
+    "output_sha256": "1e857fe409d5c9483af12f3c35074f5bcf0aecadc9d2e4b6341f078424f50c25",
+    "tail": [
+      "----------------------------------------------------------------------",
+      "Ran 20 tests in 0.067s",
+      "",
+      "OK"
+    ]
+  },
+  {
+    "name": "artifact-assembly-order",
+    "initial_result": "link check ran before MANIFEST.json generation; missing-file error",
+    "repair": "Generate manifest before checking its report link; no model run or source changed."
+  }
+]

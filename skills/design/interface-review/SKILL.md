@@ -20,7 +20,7 @@ For browser evidence, call the Skill tool with "design-browser" and pass the tas
 
 Start only when the user explicitly invokes `interface-review` by name. A generic change-review request or another skill's referral is not an invocation. If reached that way, return the user-facing invocation with their target and stop before resolving scope. In Codex use `$paul-skills:interface-review`; in Claude Code use `/paul-skills:interface-review`.
 
-Being hidden from the automatic skill list is expected for this user-invoked skill. Its explicit invocation opens the change-review workflow below and authorizes the model-invoked `better-interface` handoff.
+Being hidden from the automatic skill list is expected for this user-invoked skill. `better-interface` can be loaded automatically to recommend this command, but that recommendation alone leaves this workflow unopened. The user's explicit `interface-review` invocation opens the change-review workflow below and authorizes the model-invoked `better-interface` handoff without a second invocation.
 
 ## The change, not the codebase
 

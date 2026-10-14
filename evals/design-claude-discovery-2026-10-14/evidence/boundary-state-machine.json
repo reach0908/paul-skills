@@ -1,0 +1,225 @@
+{
+  "schema_version": 1,
+  "case_id": "boundary-state-machine",
+  "mode": "boundary",
+  "protocol_version": 2,
+  "trial_directory_name": "case_031",
+  "expected": "user-flow",
+  "prompt": "글 저장 기능을 만들기 전에 사용자 행동과 화면 전이를 정리해줘. 로그인 필요, 요청 중 대기, 실패, 재시도, 화면을 닫았다가 돌아오는 경우가 있어. 기존 컴포넌트의 상태를 보여주는 테스트 페이지는 만들지 말아줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "0a1943d1-b9b5-435d-a550-5247030c8f4b",
+  "started_at": "2026-10-14T08:03:37.175968+00:00",
+  "host_init_session_id": "0a1943d1-b9b5-435d-a550-5247030c8f4b",
+  "host_result_session_id": "0a1943d1-b9b5-435d-a550-5247030c8f4b",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "01c0e1e1-863d-4485-bc45-9e9a0a7066d0",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "user-flow",
+      "event_uuid": "9b0bca9a-0181-4237-9a12-25055b1a7602",
+      "file_sha256": "a8b1a4df0fa20cf6b01ba49a969b8b33cc5620926e0d67ef7663e53a8f51d828",
+      "body_sha256": "16865cf1ed0850681b7b93aad0aef2ccc2dbaab94fa00d66d04588a4a33cb2ff",
+      "host_message_sha256": "af7a2525001f646fe89d99396184ae320df08a4566c2cc9768dddf4948af9759",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:user-flow",
+        "args": "글 저장 기능: 로그인 필요, 요청 중 대기, 실패, 재시도, 화면 닫았다가 돌아오기. 짧은 명세까지만, 제품 파일 수정/브라우저 실행 금지, 컴포넌트 상태 테스트 페이지 만들지 않음."
+      },
+      "tool_use_id": "toolu_01DUdm4PPF6RmLGUNvyCoBJd",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "d2ad75ad871e9eeaae0df1622838e08826b8bda1ae561329d5a32ff60982a6ca"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_0179Lp73GaVAoQMrsc7fDSfn",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "3e9f7d372026365ef8b86be445d7b6b0cbfd3071408f16c3d6b57b34169e44b4"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아직 정해진 결정이 없어서, 아래 내용은 모두 확인된 결과가 아니라 제안입니다. 작업 폴더(`case_031`)가 비어 있어 기획 결정, 정보 구조(IA), 기존 코드를 하나도 찾지 못했습니다. 파일은 만들거나 고치지 않았고 브라우저도 실행하지 않았습니다. 컴포넌트 상태 테스트 페이지도 만들지 않았습니다.\n\n## 먼저 정해야 할 것\n\n아래 항목은 답에 따라 전이가 달라지는 것들입니다. 표에서는 임시로 가정해 두고 **[미결]**로 표시했습니다.\n\n1. **저장의 뜻**: 새 글 생성인지 수정인지, 임시저장인지 발행인지\n2. **로그인 시점**: 저장을 누를 때 요구하는지, 작성 화면에 들어올 때 요구하는지. 로그인 후 쓰던 글로 돌아오는지\n3. **중복 저장 방지**: 재시도할 때 같은 요청 키를 다시 보내는지. 서버가 그 키로 결과를 조회해 줄 수 있는지\n4. **화면을 닫을 때 초안 보존**: 기기에 보관하는지, 얼마나 오래 보관하는지, 닫기 전에 확인을 받는지\n5. **응답 대기 한도**: 몇 초까지 기다리는지. 실패를 종류별(네트워크, 서버, 세션 만료)로 나눠 보여줄지\n6. **저장 후 이동**: 그 자리에 남는지, 상세나 목록으로 가는지\n\n## 상태\n\n작업 상태와 화면이 열려 있는지 여부(열림/닫힘)는 따로 다룹니다.\n\n| ID | 상태 | 의미 |\n|---|---|---|\n| S0 | 변경 없음 | 저장할 변경이 없음 |\n| S1 | 저장 안 된 변경 있음 | 변경은 있지만 아직 요청을 보내지 않음. 요청 키 없음 |\n| S2 | 로그인 필요 | 로그인 때문에 저장 시도가 멈춰 있음 |\n| S3 | 저장 중 | 요청을 보냈고 응답을 기다리는 중 |\n| S4 | 저장됨 | 서버가 저장을 확인함 |\n| S5 | 저장 실패 | 저장되지 않았음이 분명하고 재시도할 수 있음 |\n| S6 | 결과 확인 중 | 저장됐는지 알 수 없어서 서버에 확인하는 중 |\n\n## 전이\n\n저장 버튼을 누르는 것(S3)과 서버가 확인하는 것(S4)은 서로 다른 단계로 다룹니다.\n\n| ID | 출발 | 행동 또는 이벤트 | 조건 | 피드백 | 도착 | 남는 것 / 바뀌는 것 |\n|---|---|---|---|---|---|---|\n| T1 | S0, S4 | 본문 수정 | \u2014 | \"저장 안 됨\" 표시 | S1 | 초안 |\n| T2 | S1 | 저장 누름 | 로그인됨 | 저장 버튼 비활성, 진행 표시 | S3 | 요청 키를 만듦(가정), 초안 스냅샷 |\n| T3 | S1 | 저장 누름 | 로그인 안 됨 | 로그인 안내 | S2 | 초안 보존 **[미결 2, 4]** |\n| T4 | S2 | 로그인 성공 | \u2014 | 작성 화면으로 돌아옴 | S1 | 초안 복원. 자동으로 저장할지 사용자가 다시 누를지 **[미결]**(제안: 다시 누르게 함) |\n| T5 | S2 | 로그인 취소 또는 닫기 | \u2014 | 작성 화면으로 돌아옴 | S1 | 초안 그대로 |\n| T6 | S3 | 서버 성공 응답 | \u2014 | \"저장됨, 시각\" 표시 | S4. 스냅샷 이후 수정이 있었다면 S1 | 글 ID와 저장 버전 |\n| T7 | S3 | 실패 응답(네트워크, 서버) | \u2014 | 실패 이유와 재시도 버튼 | S5 | 초안과 요청 키 유지 |\n| T8 | S3 | 세션 만료(401) | \u2014 | 다시 로그인하라는 안내 | S2 | 초안 유지 |\n| T9 | S3 | 대기 한도 초과 | 한도 **[미결 5]** | \"확인 중\" 표시 | S6 | 요청 키 |\n| T10 | S3 | 저장을 다시 누름 | \u2014 | 버튼 비활성이라 반응 없음 | S3 | 바뀌는 것 없음 |\n| T11 | S3 | 본문 수정 | 저장 중 수정 허용 **[미결]** | 계속 \"저장 중\" 표시 | S3 | 스냅샷 이후 변경 있음으로 기록 |\n| T12 | S5 | 재시도 | \u2014 | 진행 표시 | S3 | 같은 요청 키 재사용 **[미결 3]** |\n| T13 | S5 | 본문 수정 | \u2014 | 실패 안내는 남겨 둠 | S1 | 초안 |\n| T14 | S6 | 확인 결과 받음 | 서버가 키로 조회 가능 **[미결 3]** | 저장됨, 또는 실패와 재시도 버튼 | S4 또는 S5 | \u2014 |\n\n### 닫았다가 돌아오는 경우\n\n| ID | 닫을 때 상태 | 닫을 때 | 돌아왔을 때 | 남는 것 |\n|---|---|---|---|---|\n| C1 | S0, S4 | 확인 없이 닫음 | 서버 내용을 불러와 S0 | S4였다면 글 ID |\n| C2 | S1, S5 | 닫기 확인을 받거나 초안을 자동 보존 **[미결 4]** | \"초안 복원\" 제안, 수락하면 S1 | 초안. 요청 키는 S5일 때만 |\n| C3 | S3 | 요청은 계속된다고 가정(웹에서는 페이지를 나가면 요청이 끊길 수 있음) | S6을 거쳐 T14로 | 요청 키와 초안 |\n| C4 | S2 | T5와 같음 | S1 | 초안 |\n\n## 경로 점검\n\n혼자서 표가 앞뒤가 맞는지만 따져 본 것이고, 실제 실행이나 사용자 검증은 하지 않았습니다.\n\n- **성공**: S0 → T1 → T2 → T6 → S4. 끊기는 곳이 없습니다.\n- **로그인 필요**: S1 → T3 → S2 → T4 → S1 → T2 → T6. 로그인 화면을 다녀오는 동안 초안이 남아 있어야 성립합니다(미결 2, 4).\n- **실패 후 재시도**: S3 → T7 → S5 → T12 → S3. 앞의 실패가 사실은 저장된 경우라면 중복 저장 위험이 있어서 미결 3에 달려 있습니다.\n- **저장 중 세션 만료**: S3 → T8 → S2 → T4 → S1 → 다시 저장. 401은 저장되지 않았다는 뜻이므로 새 요청을 보내도 안전합니다.\n- **저장 중 닫고 돌아옴**: S3 → C3 → S6 → T14. **빈 곳이 하나 있습니다.** 서버가 요청 키로 결과를 조회해 주지 못하면 S6에서 나갈 길이 없습니다. 이때는 \"결과를 확인할 수 없음, 글 목록에서 확인\" 같은 출구를 따로 정해야 합니다.\n- **시작 전이나 저장 후 닫고 돌아옴**: C1. 끊기는 곳이 없습니다.\n\n## 화면에 보여야 할 정보와 행동\n\n배치는 정하지 않았습니다.\n\n- 지금 상태(저장 안 됨, 저장 중, 저장됨과 시각, 실패와 이유, 확인 중)\n- 저장 버튼과 그 활성 여부, 재시도 버튼, 로그인 안내\n- 돌아왔을 때 보이는 초안 복원 제안\n\n위 6가지 결정과 IA·목적지 ID를 주시면 **[미결]** 표시를 실제 정책으로 바꿔 넣겠습니다. 명세는 이 답변에만 있고 파일로 저장하지 않았습니다. 디자인 문서를 둘 위치를 알려주시면 그곳에 Markdown으로 저장하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": true
+  },
+  "pass": true,
+  "duration_seconds": 109.541,
+  "duration_api_ms": 108089,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 14593,
+    "cache_read_input_tokens": 50965,
+    "output_tokens": 5995,
+    "output_tokens_details": {
+      "thinking_tokens": 2671
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12751,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 396,
+        "cache_read_input_tokens": 16338,
+        "cache_creation_input_tokens": 145,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 145
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 18358,
+        "output_tokens": 2420,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 5242,
+        "cache_read_input_tokens": 16483,
+        "cache_creation_input_tokens": 1842,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1842,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 5995,
+      "cacheReadInputTokens": 50965,
+      "cacheCreationInputTokens": 14593,
+      "webSearchRequests": 0,
+      "costUSD": 0.241343,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2671,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 18358,
+      "outputTokens": 2420,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.30457999999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5459229999999999,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "55788a74e96567c57ade6198906be6d9905044f866ffe7d997da0e5f5ac96301",
+  "transcript_sha256": "8b6f9954110426b175cf90a5ae70e8b6bb2dfa22baf70f8b96517502c5173ae7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

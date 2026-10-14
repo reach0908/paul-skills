@@ -1,0 +1,231 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-interface-review",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_013",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "435cc707-8f19-4a17-ab15-6f99ef60f970",
+  "started_at": "2026-10-14T08:00:39.391054+00:00",
+  "host_init_session_id": "435cc707-8f19-4a17-ab15-6f99ef60f970",
+  "host_result_session_id": "435cc707-8f19-4a17-ab15-6f99ef60f970",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "1364cc39-d31c-4477-b615-c8264e468ec0",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "e81695bd-1756-48ba-82da-bdf5711fec8d",
+      "file_sha256": "134842eb86cacea8ef747fd9c5b32cd42b8aa2837df8782c3a25deb1c5f6e155",
+      "body_sha256": "f1bfb230021b8f21ea9b668c736d5a6f306a0c8c8c8f754b591fbc342e8888ee",
+      "host_message_sha256": "95e901ffa64183418028cd7b647ae8af227a878040db1a2cbb319ef1ba478b3b",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "working|Excluded paths|Nothing to review",
+        "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/interface-review/scope-resolution.md",
+        "output_mode": "content",
+        "-A": 4
+      },
+      "tool_use_id": "toolu_01U7ke7eXKxVrRnwG6DoaVtz",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8d1d28f79dac0f6ec4dfab72634e6487b734c84e328f73fd5baab61155c09ff4"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/interface-review/scope-resolution.md",
+        "offset": 16,
+        "limit": 8
+      },
+      "tool_use_id": "toolu_015N481hSwfgHZVV5NiFDYJe",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "08e33dc55f1c551344b42d9319ad7dadcb530de383320fdee08fc329b41f15b0"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리는 git 저장소가 아니라서 `working` 범위를 정할 수 없습니다. 이건 세션 환경 정보에 나온 내용이고, 제가 git을 직접 실행해 확인한 건 아닙니다. 그래서 아래는 실제 검토 결과가 아니라 검토를 어떻게 진행할지에 대한 명세입니다. diff는 읽지 않았고, 다른 스킬이나 브라우저도 실행하지 않았습니다.\n\n## 1. 필요한 입력\n\n| # | 입력 | 없을 때 |\n|---|---|---|\n| 1 | **저장소 루트 경로**: 그 경로에서 실행하거나 경로를 알려주세요 | 범위를 정할 수 없으니 여기서 멈춥니다 |\n| 2 | **이번 변경이 하려는 일 한 줄**: `working`에는 PR 본문도 커밋 메시지도 없습니다 | 변경 의도와 대조하는 검사(빠진 hover·focus·disabled·loading 상태, 번역 누락, 형제 화면 누락)를 \"평가 안 함\"으로 보고합니다 |\n| 3 | 렌더링 확인 여부: 이번엔 꺼짐 | 화면·동작에 관한 판단은 모두 **Not verified**로 표시합니다 |\n\n입력을 받으면 제가 직접 정하거나 확인하는 항목:\n- **진행 중인 작업 확인**: rebase나 merge 도중이면 멈춥니다(`git rev-parse --git-path`로 확인).\n- **비교 기준(`$BASE`)**: 마지막 커밋(`HEAD`)과 그 SHA입니다. 검토 대상은 아직 커밋하지 않은 변경 전체입니다. 수정한 파일은 `git diff HEAD`, 새로 만든 파일은 `git ls-files --others --exclude-standard`로 모읍니다. 이미 커밋한 내용까지 보려면 `working`이 아니라 `branch` 대상이 필요합니다.\n- **제외할 파일**: lockfile, snapshot, 자동 생성 파일, vendored 코드, 바이너리를 빼고, 뺀 목록을 보고서에 적습니다.\n- **영향 화면 확장**: 바뀐 파일을 직접 가져다 쓰는 곳까지 봅니다. 디자인 토큰·테마·공용 컴포넌트가 바뀌었으면 한 단계 더 봅니다. 최대 5곳까지 보고, 못 본 곳의 개수도 적습니다.\n\n## 2. 기존 결함과 새 회귀를 나누는 방식\n\n모든 결함에 세 가지 상태 중 하나를 붙입니다. 기준은 결함이 어디에 있느냐가 아니라 무엇이 원인이냐입니다.\n\n- **`Introduced`**: 이번 변경이 새로 만든 결함입니다.\n- **`Regression`**: 원래 맞던 것을 이번 변경이 약하게 만든 경우입니다.\n  - 삭제된 줄(diff의 `-` 쪽)은 단서일 뿐입니다. 예를 들어 `aria-label`, `outline`, `prefers-reduced-motion`이 지워진 경우입니다.\n  - 먼저 diff 안에 같은 역할을 하는 대체물이 있는지 봅니다.\n  - 대체물이 없으면 해당 영역을 맡은 `better-*` 스킬이 판단하고, 그 스킬이 확인한 것만 `Regression`이 됩니다.\n- **`Pre-existing`**: 변경 전부터 있었고 이번 변경으로 더 나빠지지 않은 결함입니다.\n  - 바뀐 줄 바로 옆에 있어도 원인이 아니면 여기에 넣습니다.\n  - 보고서에는 최대 3건만, 심각한 순서로, \"이번 변경 책임 아님\"이라고 적습니다.\n\n헷갈리는 줄은 범위 없이 `git blame`을 돌려 봅니다.\n- `Not Committed Yet`이면 이번 변경에 속합니다.\n- 기준 커밋 이전 커밋이 나오면 원래 있던 줄입니다.\n\n하나 주의할 점이 있습니다. 바뀐 토큰 때문에 손대지 않은 화면에서 문제가 생기면, 그 화면 코드는 그대로여도 원인은 이번 변경입니다. 이런 결함은 `Pre-existing`이 아니라 `Introduced`나 `Regression`입니다.\n\n## 3. 완료 조건\n\n- **범위 표**가 모두 채워져 있습니다: 대상, 기준 SHA, 비교 대상(작업 트리), 커밋 안 한 파일 수, 제외 후 파일 수, 제외 목록, 확장한 화면과 확장하지 않은 수.\n- **영역별 검토 범위 표**가 있습니다. `better-interface` 형식을 따르고, 변경에 근거가 없는 영역은 `Not reviewed: no evidence in the change scope`로 적습니다.\n- **결함 표**에 Status 열과 변경 전·후가 있습니다. 해당 결함이 없으면 \"No actionable interface findings in this change.\" 한 줄만 적습니다.\n- **Verification 섹션**에 브라우저를 쓰지 않아 확인하지 못한 항목을 적습니다.\n- **판정(verdict)**은 `better-interface`에 넘긴 뒤 그쪽 형식으로만 냅니다. 검토할 내용이 비어 있으면 `Approve`를 내지 않습니다.\n- 처음부터 끝까지 **작업 트리를 건드리지 않습니다**. `checkout`, `switch`, `stash`를 쓰지 않습니다.\n\n저장소 경로와 변경 의도 한 줄을 주시면 이 명세대로 실제 검토를 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 81.633,
+  "duration_api_ms": 80175,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 19118,
+    "cache_read_input_tokens": 64307,
+    "output_tokens": 3463,
+    "output_tokens_details": {
+      "thinking_tokens": 1006
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17538,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 341,
+        "cache_read_input_tokens": 20689,
+        "cache_creation_input_tokens": 581,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 581
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 22534,
+        "output_tokens": 2515,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2155,
+        "cache_read_input_tokens": 21270,
+        "cache_creation_input_tokens": 1580,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1580,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 3463,
+      "cacheReadInputTokens": 64307,
+      "cacheCreationInputTokens": 19118,
+      "webSearchRequests": 0,
+      "costUSD": 0.2303574,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1006,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 22534,
+      "outputTokens": 2515,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.35109,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5814474000000001,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "f2351775c8543328c9e4c05338e85e79a358b86178fcf9d3a55234deeea0685c",
+  "transcript_sha256": "99e123722710b9db9d296ed18688345da83a241ce8e723d63fb371331b72595c",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

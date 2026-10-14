@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "case_id": "implicit-better-typography",
+  "mode": "implicit",
+  "expected": "better-typography",
+  "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "0b459fcf-3be2-4670-9183-1bcb2f436a9d",
+  "started_at": "2026-10-14T07:44:40.345751+00:00",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "a7804a99-946f-49b1-9b24-8ef5f8d4e2fe",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-typography",
+      "event_uuid": "76a9297d-4f3e-4315-bfe0-5a709fbbd2ce",
+      "file_sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "body_sha256": "1d782dba4e858a1f8c254eab6a8f86d5967b2bf1bdeefddab2869b192d48ce0a",
+      "host_message_sha256": "c59af41c574770ab1947a7a2c87d329f060b438e3e612ba5fe9b1322f66d83cb",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-typography",
+        "args": "한국어 긴 글 페이지 타이포그래피 점검 준비: 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬, 말줄임 시 전체 내용 접근. 레이아웃 재설계 없음. 준비/짧은 명세까지만, 파일 수정·브라우저 실행 금지."
+      },
+      "tool_use_id": "toolu_01DotmZhLkx3c1whbjS4p5u9",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "57dc9bac2936e75319378c774f08cded120d7332d251432f70e84c009fe969ad"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_012xDZ7PKa5ri38JCSVFe2p4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "4493c00a2b3e4503163e28672e84e323d92c6834db42688405f549964707d531"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-typography/korean-text.md"
+      },
+      "tool_use_id": "toolu_013XX2JgFcVd5CqTNdQaSwBi",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7219594fc1edb957297cc3c05648932e5e90e8017aa454fa2641ae9f8395e061"
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "^#+ ",
+        "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-typography/wrapping-and-punctuation.md",
+        "output_mode": "content"
+      },
+      "tool_use_id": "toolu_014MUc48nZAo6PzWUaUxFFNZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b0549baac656014f3b2304d3da0764d9b88b8c0ea19879da32f1ceaba560de43"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/better-typography/wrapping-and-punctuation.md"
+      },
+      "tool_use_id": "toolu_01BWHiayTdYJHaew63YLBAo9",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e4193d0772f0adb9c119dc6e5b182201c5f2690c53ee262aae1bb0841ef90032"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 폴더가 비어 있어서 아직 아무것도 점검하지 않았습니다. 아래는 결과가 아니라, 필요한 입력과 점검 기준입니다.\n\n## 1. 필요한 입력\n\n**필수**\n1. **스타일 파일**: 본문·제목·표·카드 스타일을 정의한 CSS, Tailwind 설정, 컴포넌트 파일의 경로. 디자인 토큰 파일도 포함해 주세요.\n2. **서체**: 한글 서체 이름, `@font-face`로 실제 불러오는 굵기, 대체 서체 목록.\n3. **실제 문자열 예시**:\n   - 가장 긴 제목\n   - 한글과 영문 제품명이 섞인 제목\n   - 긴 URL이나 식별자\n   - 숫자가 들어간 표나 목록\n   - 말줄임되는 곳마다 가장 긴 문자열\n4. **말줄임 위치 목록**: 위치마다 지금 전체 내용을 보는 방법(상세 링크, 펼치기, 툴팁 등)을 적어 주세요. 방법이 없으면 \"없음\"으로 적어 주세요.\n5. **지원 범위**: 가장 좁은 화면 폭(예: 320px), 주요 화면 폭 구간, 200% 확대 지원 여부.\n\n**있으면 좋은 것**\n6. 팀이 정한 본문 한 줄 글자 수와 본문 글자 크기.\n7. 직접 찍은 스크린샷이나 브라우저가 실제 적용한 스타일 값. 없으면 화면을 봐야 하는 항목은 \"미검증\"으로 남깁니다.\n\n## 2. 점검 기준\n\n| 항목 | 기준 | 브라우저 없이 확인 가능한 범위 |\n| --- | --- | --- |\n| 본문 줄 길이 | 본문 영역에 최대 폭이 있어 화면을 넓혀도 줄이 끝없이 늘어나지 않아야 합니다. 영문 기준(한 줄 60–75자)을 한글에 그대로 쓰지 않고, 실제 서체와 문장으로 한 줄 글자 수를 잽니다. 목표 숫자는 입력 6을 따릅니다. | 최대 폭 설정까지. 실제 글자 수는 미검증 |\n| 행간 | 단위 없는 값을 씁니다(px·rem은 지적 대상). 출발점은 본문 1.5–1.6, 제목 1.2–1.3이고, 3줄 이상 넘어가는 글은 1.4 이상입니다. 대체 서체로 바뀌어도 행간이 달라지지 않아야 합니다. | 설정값까지. 대체 서체에서의 차이는 미검증 |\n| 글자 크기 계층 | 본문은 1rem(16px)에서 출발하고 크기는 rem으로 정합니다. h1, h2, h3 순으로 작아지고, 제목이 본문보다 작으면 안 됩니다. 18px 미만 글자는 굵기 400 이상입니다. 쓰는 굵기는 모두 실제로 불러와야 합니다(브라우저가 흉내 낸 굵기 금지). 프로젝트 크기 체계에 없는 크기는 쓰지 않습니다. | 전부 가능 |\n| 제목 줄바꿈 | 제목에는 `text-wrap: balance`, 본문에는 `pretty`를 씁니다(본문에 balance 금지). `word-break: keep-all`을 쓴다면 긴 URL과 영문에는 `overflow-wrap`으로 대비합니다. 특정 화면 폭에 맞춘 수동 `<br>`이 없어야 하고, 가장 좁은 폭과 200% 확대에서도 글자가 잘리지 않아야 합니다. | 설정값까지. 실제 줄바꿈은 미검증 |\n| 숫자 정렬 | 표의 숫자 열, 가격, 카운터, 바뀌는 값에는 `font-variant-numeric: tabular-nums`를 씁니다(`\"tnum\"` 직접 지정 대신). 본문 속 숫자는 그대로 둡니다. 숫자와 단위가 줄바꿈으로 갈라지지 않아야 합니다. | 전부 가능 |\n| 말줄임과 전체 내용 | 한 줄 말줄임은 overflow, ellipsis, nowrap 세 속성을 함께 씁니다. 여러 줄 `line-clamp`에는 `display: -webkit-box`와 `-webkit-box-orient: vertical`이 있어야 합니다. 잘리는 곳마다 키보드와 터치로 전체 내용에 닿을 수 있어야 하며, `title` 속성만으로는 부족합니다. 가장 긴 문자열로 확인합니다. | 설정과 전체 보기 방법의 존재까지. 실제로 잘리는 위치는 미검증 |\n\n## 3. 판정과 결과 형식\n\n- **HIGH**: 읽을 수 없는 글, 전체 내용을 볼 방법이 없는 말줄임, 320px 폭이나 200% 확대에서 잘리는 글. 하나라도 남으면 **Block**입니다.\n- **MEDIUM**: 크기 체계나 제목 계층이 깨진 경우. **LOW**: 개별적인 다듬기.\n- 한글 관련 지적에는 실제 문자열, 화면 폭, 불러온 서체, 관찰한 줄바꿈을 함께 적습니다. 영문 기준과 다르다는 것만으로는 문제가 아닙니다.\n- 결과 표 열: `심각도 | 위치(파일:줄) | 현재 | 수정안 | 이유`. 확인하지 못한 항목은 \"미검증\"으로 적고, 보지 않은 범위는 통과로 처리하지 않습니다.\n\n**범위 밖**: 서체 교체, 레이아웃 재구성, 문구 수정, 제목의 의미 구조(접근성). 전체 보기 방법이 없으면 HIGH로 표시하고, 그 화면 설계는 레이아웃 작업으로 넘깁니다.\n\n입력 1–5를 주시면 설정값 점검부터 하겠습니다. 화면을 봐야 하는 항목은 \"미검증\"으로 표시합니다.",
+  "checks": {
+    "model_completed": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 79.906,
+  "duration_api_ms": 78562,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 17752,
+    "cache_read_input_tokens": 58362,
+    "output_tokens": 7641,
+    "output_tokens_details": {
+      "thinking_tokens": 4787
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 17752,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 6899,
+        "cache_read_input_tokens": 20549,
+        "cache_creation_input_tokens": 935,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 935
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 7641,
+      "cacheReadInputTokens": 58362,
+      "cacheCreationInputTokens": 17752,
+      "webSearchRequests": 0,
+      "costUSD": 0.30654039999999994,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 4787,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.30654039999999994,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "protocol_sha256": "2cb7ca522aface83d1010a3ef5d9e3f331a21d7d062c80ead0f694ff82a6c1f7",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "6dbaa721be6290ae2623708147f67e4716021e55dee387229c97c1290cd0b7ac",
+  "transcript_sha256": "d9e2146c300d3c35d77e36e46761d63c42b21e5a91e2244c7980f2a1b50a551c",
+  "excluded_from_confirmatory_score": "Expected skill name appeared in the working-directory path."
+}

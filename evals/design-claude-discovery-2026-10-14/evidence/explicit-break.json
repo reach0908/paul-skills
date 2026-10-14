@@ -1,0 +1,189 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-break",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_015",
+  "expected": "break",
+  "prompt": "/paul-skills:break 기존 결제 카드가 긴 내용과 극단적인 데이터, 다양한 상태에서 견디는지 한 화면에 모아 확인하려고 해. 이번에는 구현하지 말고 필요한 입력, 작업 범위와 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "747de608-7011-4713-9c8a-19012e4f5421",
+  "started_at": "2026-10-14T08:02:01.044521+00:00",
+  "host_init_session_id": "747de608-7011-4713-9c8a-19012e4f5421",
+  "host_result_session_id": "747de608-7011-4713-9c8a-19012e4f5421",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "25dec5b1-eab2-4554-8fdd-6d1d7e8dbc19",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "break",
+      "event_uuid": "55628be3-d387-4bd9-9cfa-3feb900ee1a7",
+      "file_sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+      "body_sha256": "dbd97e9b761c9988ec640d90648538dc528f6a0a0df157b0ed1dab2886459dde",
+      "host_message_sha256": "f2f626277d0b8d6cd69fe7966e0fbf64dcef69ad4bc3cb91e09ea690d850b773",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_015qxJchV2bGqk6zh6hFcPeJ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "01791962266a5d2e70267c07b2d3ee537d8e8d79c3847a04e2770ff1e616925d"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0/skills/design/break/scenarios.md"
+      },
+      "tool_use_id": "toolu_0183hHNUQi1o6DH8YaQ4wd2M",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "80c90bd0170e0b249b4a06ccefe86b6bd95868a1d8b957653584e9c9b29f518c"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "break"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_015`)가 비어 있어서 결제 카드 컴포넌트를 찾지 못했습니다. 그래서 아래는 컴포넌트를 읽기 전에 쓴 잠정 명세입니다. 파일 수정이나 브라우저 실행은 하지 않았고, 확인된 결과도 아직 없습니다.\n\n## 필요한 입력\n\n1. **컴포넌트 위치**: 프로젝트 루트, 파일 경로, export 이름(예: `src/components/PaymentCard.tsx`의 `PaymentCard`)이 필요합니다. \"결제 카드\"가 카드 목록, 카드 선택기, 결제 요약처럼 여러 개를 가리킨다면 이번에 볼 하나를 골라 주세요.\n2. **props/타입 정의**: 카드가 렌더하는 데이터(카드 별칭, 소유자명, 브랜드, 끝 4자리, 만료일, 금액, 가맹점명 등)와 props로 들어오는 상태(로딩, 오류, 비활성, 만료, 승인 거절, 선택됨 등)를 확인해야 합니다.\n3. **길이와 값의 상한**: 필드별 최대 길이, 금액 범위, 지원 통화, 지원 로케일이 필요합니다. 없으면 상한을 가정하고 그 가정을 명시합니다.\n4. **실행 방법**: 프레임워크, dev 서버 명령, 포트를 알려 주세요. 임시 경로(scratch route) 하나를 만들어도 된다는 허락도 필요합니다. 제품 코드는 건드리지 않습니다.\n5. **지원 환경 모드**: 다크 모드, RTL 로케일 지원 여부입니다.\n6. **실제 데이터 1건**: 기준(baseline)으로 쓸 실제와 비슷한 카드 데이터 하나입니다.\n\n## 작업 범위\n\n- **대상**: 컴포넌트 하나. 실제 컴포넌트를 import해서 쓰고, 컴포넌트 자체는 수정하지 않습니다.\n- **잠정 시나리오 축**: props를 읽은 뒤 확정합니다.\n  - **내용 길이**: 빈 값, 한 단어, 보통 길이, 여러 문장, 줄바꿈 지점이 없는 긴 문자열. 별칭, 소유자명, 가맹점명이 대상이고, 긴 값은 320px 컨테이너에도 함께 넣습니다.\n  - **극단적인 데이터**: 금액 prop이 있을 때만 0, 최대 금액(예: 999,999,999.99), 환불(음수), 소수점이 0자리인 통화(JPY)와 3자리인 통화(KWD)를 넣습니다.\n  - **내용 형태**: 사용자가 입력하거나 여러 로케일에서 오는 텍스트라면 이모지, RTL, 혼합 방향, 발음 구별 기호(diacritics), 숫자 자릿수 정렬을 봅니다.\n  - **컨테이너**: 320px, 옆 요소에 눌린 경우, 매우 넓은 경우. 이 축은 항상 포함합니다.\n  - **상태**: props로 존재하는 상태만 넣습니다.\n  - **환경**: 다크 모드, 확대, 모션 감소는 페이지에 만들지 않고, 보고서에 적어 직접 전환해 보시도록 안내합니다.\n  - **수량**: 카드가 항목을 반복 렌더하지 않는 한 뺍니다.\n- **하네스**: 임시 경로 하나에 한 열로 배치하고 시나리오마다 라벨을 붙입니다. 데이터는 fixture props로만 넣고, 자체 스타일이나 테마는 추가하지 않습니다. Next.js라면 `\"use client\"`로 만듭니다.\n- **범위 밖**: 수정, 디자인 대안 제시, 코드 리뷰, 실제 결제 API나 실데이터 연결, 포커스/호버 흉내 내기.\n\n## 완료 조건\n\n1. 빌드 전에 시나리오 목록을 한 줄씩 적고, 뺀 축과 이유도 한 줄로 적습니다.\n2. 모든 시나리오가 각자의 fixture 내용으로 렌더됩니다. 빈 인스턴스가 나오면 컴포넌트가 아니라 하네스 결함입니다.\n3. `design-browser`로 페이지를 한 번만 로드해서 훑어봅니다. 눈에 보이게 깨진 것만 각 라벨 아래에 한 번의 수정으로 적습니다.\n4. 보고는 `Scenario | Observed | Owner` 표로 하고, 깨진 시나리오를 먼저 둡니다. 깨진 게 없으면 \"모두 견딤\"과 함께 시나리오 목록과 URL을 드립니다.\n5. 브라우저로 열 수 없으면 URL과 시나리오 목록만 드리고, 발견 사항은 쓰지 않습니다.\n6. 페이지는 띄워 둔 채로 두고, 그만 보겠다고 하시면 그때 삭제합니다. 삭제 후에는 경로와 fixture 이름을 검색해 하네스 흔적이 남지 않았는지 확인합니다.\n\n1번과 2번 입력을 주시면 props를 읽어 시나리오 목록부터 확정하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 36.645,
+  "duration_api_ms": 35353,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 14999,
+    "cache_read_input_tokens": 20448,
+    "output_tokens": 3304,
+    "output_tokens_details": {
+      "thinking_tokens": 1236
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14999,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3067,
+        "cache_read_input_tokens": 16716,
+        "cache_creation_input_tokens": 2015,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2015
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 3304,
+      "cacheReadInputTokens": 20448,
+      "cacheCreationInputTokens": 14999,
+      "webSearchRequests": 0,
+      "costUSD": 0.1901776,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1236,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1901776,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "c1e0c4b83529cd8e4e83d4020d6bc635f9cea1f3be0307a705cde2efb9aa8595",
+  "transcript_sha256": "5d0076b91b71b2175519f28f2e988c1184e0629166b91d811bbd73b96bf0dd45",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

@@ -1,0 +1,201 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-better-writing",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_017",
+  "expected": "better-writing",
+  "prompt": "/paul-skills:better-writing 구독 서비스 인터페이스 문구를 다듬어줘. 저장 버튼은 “진행”, 저장 실패는 “문제가 발생했습니다”, 빈 목록은 “없음”이야. 신뢰감 있고 담백한 한국어로 다음 행동을 분명히 해줘. 맥락이 부족한 부분은 가정으로 표시하고 대안 문구와 이유만 짧게 제시해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "ce360ca3-dd42-48be-a129-d8ebd33f222c",
+  "started_at": "2026-10-14T08:53:23.707221+00:00",
+  "host_init_session_id": "ce360ca3-dd42-48be-a129-d8ebd33f222c",
+  "host_result_session_id": "ce360ca3-dd42-48be-a129-d8ebd33f222c",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "697eb71f-deb6-44c2-8d80-98edd72c05e0",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "better-writing",
+      "event_uuid": "86e1e56a-8387-4e96-b380-cae28e4f1ed7",
+      "file_sha256": "4ecd9c01ebd6f10a8ebff806734fca7394d60a1e3c794401380e30248261b1af",
+      "body_sha256": "00d4f6bd7109282a432818975e567c70670f9ae498da8be5327be895a91324ef",
+      "host_message_sha256": "25edb70174b59d46b3d1f986656d3fe1d4bdc83b08943c58b79a732d14e54baa",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/better-writing/korean-copy.md"
+      },
+      "tool_use_id": "toolu_01ULtsSrVSNxAJcmjKSwL6nL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b41cb31b0a22c64cc5dd58312e992afdc068d90cce5e47144c8b73987e42b293"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/better-writing/patterns.md"
+      },
+      "tool_use_id": "toolu_01TQjpnPYgj2kHCbmwr6SLHd",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "a98fed385c1fd07029a52bcc395a173841bc3c94b27e820f88d19acc26430c24"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_01X3UrgTFaDcYQbocdMWzm43",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "0a373c28e8c6d4f044089b9d19c15108f5a69d3db0614293854c89617268fff3"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "## 구독 서비스 문구 개선안: 저장 버튼, 저장 실패, 빈 목록\n\n**확인 범위:** 작업 폴더(`case_017`)가 비어 있어서 로케일 파일, 컴포넌트, 스타일 가이드를 볼 수 없었습니다. 아래 제안은 요청에 적힌 세 문구만 보고 썼고, 위치는 모두 확인하지 못했습니다(`Not verified`). 파일은 수정하지 않았고 브라우저도 열지 않았습니다.\n\n**가정**\n- **A1. 말투:** 기존 문구 \"문제가 발생했습니다\"에 맞춰 합니다체로 씁니다.\n- **A2. 명사:** \"구독\"을 씁니다. 제품이 멤버십, 플랜, 요금제 중 하나를 쓰고 있다면 그 말로 통일합니다.\n- **A3. 저장 버튼:** 설정 변경만 저장합니다. 결제가 일어나거나 다음 단계로 넘어가지 않습니다.\n- **A4. 빈 목록:** \"내 구독\" 목록이고, 필터가 걸리지 않은 처음 상태입니다.\n- **A5. 저장 실패 원인:** 주로 네트워크 오류입니다.\n\n### 제안\n\n| 심각도 | 위치 | 기존 | 제안 | 이유 |\n| --- | --- | --- | --- | --- |\n| HIGH | 저장 버튼 (Not verified) | 진행 | **저장** | 버튼은 누르면 일어나는 일을 말해야 합니다. 구독 서비스에서 \"진행\"은 결제나 가입으로 읽힐 수 있어 누르기를 망설이게 합니다. |\n| HIGH | 저장 실패 메시지 (Not verified) | 문제가 발생했습니다 | **저장하지 못했습니다. 연결 상태를 확인하고 다시 시도해 주세요.** + `다시 시도` 버튼 | 무엇이 실패했는지, 무엇을 하면 되는지가 없습니다. \"저장\"이라는 말도 버튼과 같아집니다. \"연결 상태 확인\"은 A5가 맞을 때만 씁니다. |\n| HIGH (필터가 걸린 경우) / LOW (처음 비어 있는 경우) | 빈 목록 (Not verified) | 없음 | 제목: **구독 중인 서비스가 없습니다**<br>버튼: **구독 상품 보기** | 빈 화면은 여기가 무엇을 보여주는 곳인지, 어떻게 채우는지 알려야 합니다. 필터 때문에 비었는데 \"없음\"만 보이면 사용자는 구독이 없다고 생각하고 같은 상품에 또 가입할 수 있습니다. |\n\n### 가정이 다를 때 쓸 문구\n\n**저장 버튼**\n- **여러 항목을 한 번에 저장하는 화면:** `변경사항 저장`. 무엇을 저장하는지 분명해집니다.\n- **저장하면 요금이 바뀌는 경우:** `플랜 변경`으로 쓰고, 버튼 옆에 \"{date}부터 매월 {price}씩 결제됩니다.\"를 둡니다. 돈이 나가는 동작은 결과를 미리 보여줘야 믿고 누를 수 있습니다. \"씩\"은 받침에 따라 바뀌지 않아 조사 문제도 없습니다.\n- **단계가 이어지는 흐름:** 중간 단계는 `다음`, 마지막 단계는 `완료`로 씁니다. 실제로 하는 일이 저장이 아니라 다음 단계로 넘어가는 것이기 때문입니다.\n\n**저장 실패**\n- **원인을 모를 때(서버 오류):** \"저장하지 못했습니다. 잠시 후 다시 시도해 주세요.\" 사용자가 확인할 수 없는 연결 문제를 원인처럼 말하지 않습니다.\n- **입력값이 잘못됐을 때:** 해당 입력란 바로 옆에 고치는 방법을 씁니다. 예: \"유효기간을 MM/YY 형식으로 입력해 주세요.\"\n- **같은 오류가 반복될 때:** 문장 끝에 \"문제가 계속되면 고객센터에 문의해 주세요.\"를 붙입니다. 화면에 고객센터 링크가 있을 때만 씁니다.\n\n**빈 목록**\n- **필터나 검색 결과가 없을 때:** \"'{query}'에 해당하는 구독이 없습니다.\" + `필터 지우기`. 검색어를 보여주고 필터를 풀 방법을 줍니다.\n- **해지하거나 만료돼서 비었을 때:** \"이용 중인 구독이 없습니다.\" + `지난 구독 보기`. 필터를 풀어도 해지한 구독은 다시 나타나지 않으므로, 실제로 할 수 있는 행동을 안내합니다. 지난 구독 화면이 있을 때만 씁니다.\n- **결제 내역처럼 기록을 보여주는 목록:** \"결제 내역이 없습니다. 첫 결제 후 이곳에 표시됩니다.\" 사용자가 할 일이 없으니 언제 채워지는지만 알려줍니다.\n\n**해요체를 쓰는 제품이라면:** \"저장하지 못했어요. 연결 상태를 확인하고 다시 시도해 주세요.\" / \"구독 중인 서비스가 없어요.\"\n\n**함께 맞추면 좋은 상태 문구:** 저장하는 동안에는 \"저장 중…\", 끝나면 \"변경사항을 저장했습니다.\"로 씁니다. 두 문구의 짝을 맞추고 \"성공적으로\"는 넣지 않습니다.\n\n### 문구를 확정하려면 필요한 정보\n1. 저장 버튼을 누르면 실제로 일어나는 일(설정만 저장, 결제나 플랜 변경, 다음 단계로 이동 중 무엇인지)과 버튼이 있는 화면\n2. 저장이 실패하는 원인(네트워크, 서버, 입력값, 결제)과 화면에 있는 복구 수단(다시 시도 버튼, 고객센터 링크)\n3. 빈 목록이 무엇의 목록인지, 필터나 검색이 있는지, 갈 수 있는 화면이 있는지(구독 상품, 지난 구독)\n4. 기존 말투와 쓰고 있는 용어. 로케일 파일(`locales/**/*.json` 등)이나 스타일 가이드가 있으면 됩니다. 문구가 서버나 CMS에서 내려온다면 그 원문도 필요합니다.\n\n### 판정\n**Block:** 지금 문구에 HIGH가 두 건(저장 버튼, 저장 실패) 있습니다. 빈 목록에 필터가 걸린 경우라면 세 건입니다. 위 제안은 가정을 바탕으로 한 것이라 확정된 문구가 아닙니다. 위 정보를 받으면 확정합니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 88.139,
+  "duration_api_ms": 86747,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 16707,
+    "cache_read_input_tokens": 22034,
+    "output_tokens": 9043,
+    "output_tokens_details": {
+      "thinking_tokens": 6280
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16707,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 8703,
+        "cache_read_input_tokens": 18302,
+        "cache_creation_input_tokens": 2137,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2137
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 9043,
+      "cacheReadInputTokens": 22034,
+      "cacheCreationInputTokens": 16707,
+      "webSearchRequests": 0,
+      "costUSD": 0.3189388,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 6280,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.3189388,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "e522def7b98aedcadb86249f9e4e557e5ab4d02831f50f2e554c8fa2e7371b07",
+  "transcript_sha256": "dc88ffb1ae9602c4f1e7e01d96530a4a2f596cb1a03a62ffdc562c775277f6a4",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

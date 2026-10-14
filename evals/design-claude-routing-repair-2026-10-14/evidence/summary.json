@@ -1,0 +1,63 @@
+{
+  "planned": 46,
+  "completed": 46,
+  "by_arm": {
+    "candidate": {
+      "completed": 43,
+      "passed": 42
+    },
+    "baseline": {
+      "completed": 3,
+      "passed": 1
+    }
+  },
+  "by_mode_candidate": {
+    "explicit": {
+      "completed": 17,
+      "passed": 17
+    },
+    "implicit": {
+      "completed": 13,
+      "passed": 13
+    },
+    "boundary": {
+      "completed": 12,
+      "passed": 12
+    },
+    "handoff": {
+      "completed": 1,
+      "passed": 0
+    }
+  },
+  "failures": [
+    {
+      "case_id": "baseline-boundary-interface-review",
+      "failed_checks": [
+        "expected_owner",
+        "explicit_handoff",
+        "no_file_inspection"
+      ]
+    },
+    {
+      "case_id": "baseline-repair-working-git",
+      "failed_checks": [
+        "no_file_inspection"
+      ]
+    },
+    {
+      "case_id": "repair-authorized-handoff",
+      "failed_checks": [
+        "no_permission_denials",
+        "no_failed_tools"
+      ]
+    }
+  ],
+  "reported_cost_usd": 14.3614206,
+  "actual_billed_usd": null,
+  "models": [
+    "claude-opus-5-5"
+  ],
+  "efforts": [
+    "xhigh"
+  ]
+}

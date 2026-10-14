@@ -1,0 +1,239 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "boundary-break",
+  "mode": "boundary",
+  "protocol_version": 1,
+  "trial_directory_name": "case_044",
+  "expected": "better-layout",
+  "prompt": "320px에서 이 카드 제목이 두 줄을 넘으면 내용이 잘릴까 걱정이야. 현재 단일 카드의 좁은 폭 배치와 긴 텍스트 처리를 검토하기 위한 입력과 기준만 정리해줘. 여러 극한 사례를 전시하는 페이지는 만들지 말아줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "6d78a6c1-5835-4d00-bf38-8af333e4e3fc",
+  "started_at": "2026-10-14T09:08:04.885279+00:00",
+  "host_init_session_id": "6d78a6c1-5835-4d00-bf38-8af333e4e3fc",
+  "host_result_session_id": "6d78a6c1-5835-4d00-bf38-8af333e4e3fc",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "c2f375ab-4a84-4d94-a670-053dfe89ddde",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "6bc6e8af-094c-492c-9227-10d854f3ede3",
+      "file_sha256": "7cb00ecd6dc8f6d901fc3ea6e381e03ce44ba0c4bad6f15cd54783357b499125",
+      "body_sha256": "fd2f7d1eb84cfc1b81a25271e5cf5caf854e3fbc81384f06cfcae35094fc585c",
+      "host_message_sha256": "ca7b0dd5427464abbe7a27aa371f8a7f524adec9f779b1a8a453074fd3254ea2",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-layout",
+      "event_uuid": "3617d22d-13fe-4d98-b25f-09511675f0c9",
+      "file_sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "body_sha256": "80b4dfd130397c52a91013235e4828eb686ce25401d43afef505ba6fb0e23587",
+      "host_message_sha256": "62e2d7403e45a55b89c6a7d9f5c8525b3bde9eaede956223b0b3ccbd55de85af",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-typography",
+      "event_uuid": "786200ba-7394-4c2b-abe4-fc70b80efe87",
+      "file_sha256": "bdd13a980178f5fa3b0815176299a7d1f215e30d357cb64ad97540f4ed4a7cb5",
+      "body_sha256": "1d782dba4e858a1f8c254eab6a8f86d5967b2bf1bdeefddab2869b192d48ce0a",
+      "host_message_sha256": "88191b20c9643411fcde5adcaa34070ed262c137e142e694957940279a702cc7",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "단일 카드 320px 좁은 폭 배치와 긴 제목(2줄 초과) 처리 검토 준비 \u2014 입력과 기준만 정리. 파일 수정·브라우저 실행·극한 사례 전시 페이지 제작 금지."
+      },
+      "tool_use_id": "toolu_01S5MQENcGZthtPs4avjfLSL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8709f7cf6ff61d4b3b764daab42e4c60898f8b92617a1c4d2d6c6575f17d3fd6"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_019stTwWgcUtssXTPjfAGf7w",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "d33d623faa3cc17ce3454f1e8219b2c7e3d0161b05362d832e5099f339a6bc0a"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-layout",
+        "args": "준비 전용: 단일 카드 320px 폭에서 긴 제목(2줄 초과) 시 잘림·겹침 검토 기준 추출. 파일 수정·브라우저 실행 금지. 작업 디렉터리는 비어 있음."
+      },
+      "tool_use_id": "toolu_011zGeDb5vmNxZBjYU3RoXBJ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b6672725631295045e5de2079d121a96b6197fd8100ec6f2b7d920a836c72745"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-typography",
+        "args": "준비 전용: 단일 카드 제목의 줄바꿈·line-clamp·말줄임 처리 검토 기준 추출(320px, 2줄 초과). 파일 수정·브라우저 실행 금지. 작업 디렉터리는 비어 있음."
+      },
+      "tool_use_id": "toolu_01TAjzQnKCJ2Y1CzbHUQ63W9",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2283032145927ddc75681d836314cedecce8218aa81a1247947e0180eb920c5b"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/better-typography/korean-text.md",
+        "limit": 80
+      },
+      "tool_use_id": "toolu_015unEGPX4tAoBRKyvji2Bz4",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cfbc10c9bd976e03d86c5a3c236ce030f85c2bd373d05e47a99984341cf7f017"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 디렉터리(`case_044`)가 비어 있어서 카드 소스도 렌더링 결과도 확인하지 못했어요. 그래서 아직 잘림이 있다/없다를 말할 수 없어요. 아래는 검토에 필요한 입력과 판정 기준이에요. 기준은 `better-layout`과 `better-typography`의 규칙에서 가져왔어요.\n\n## 범위\n- 대상은 실제 카드 컴포넌트 **하나**예요. 320px 폭, 200% 확대, 제목이 2줄을 넘는 상태를 봐요.\n- 별도 전시 페이지는 만들지 않아요. 같은 카드에 실제 제목 데이터를 하나씩 넣어 보는 방식으로 검토해요.\n\n## 필요한 입력\n| # | 입력 | 필요한 이유 |\n|---|---|---|\n| 1 | 카드 컴포넌트 소스 경로(마크업과 스타일), 스타일링 방식(Tailwind, CSS Modules 등), 디자인 토큰 | 수정안을 프로젝트 방식대로 써야 해요 |\n| 2 | 부모 레이아웃(페이지 여백, grid/flex 트랙 정의) | 320px에서 카드의 실제 폭을 구해야 해요. 예: 좌우 여백이 16px씩이면 288px |\n| 3 | **2줄을 넘을 때 의도한 동작**: 전부 표시할지, N줄에서 말줄임할지 | 말줄임이라면 전체 제목을 볼 수 있는 경로(상세 화면, 펼치기, 키보드로도 열리는 툴팁)도 필요해요 |\n| 4 | 실제 제목 데이터: 가장 긴 값, 길이 분포, 제품명·숫자·URL·긴 식별자가 섞여 있는지, 지원 로케일 | 지어낸 문자열이 아니라 실제 데이터로 판단해야 해요 |\n| 5 | 실제 한글 폰트와 fallback 스택, 제목의 font-size·line-height·weight | Latin 기준 측정값은 한글에 그대로 맞지 않아요 |\n| 6 | 제목 옆이나 아래에 있는 요소(배지, 아이콘, 메타, 액션 버튼) | 제목이 길어질 때 밀리거나 겹칠 수 있는 대상이에요 |\n| 7 | 카드 높이를 고정해야 하는지(그리드에서 카드 높이를 맞추는 요구) | 고정 높이가 3줄째가 잘리는 가장 흔한 원인이에요 |\n| 8 | 지원 뷰포트 목록, 미리보기 명령(Storybook 등) | 나중에 렌더링을 검증할 때 써요 |\n\n## 판정 기준\n**HIGH (하나라도 해당하면 Block)**\n- 320px 폭이나 200% 확대에서 제목 글자가 잘리거나 다른 요소와 겹쳐요. 3줄째가 줄 중간에서 잘리는 경우도 포함해요.\n- 말줄임했는데 전체 제목에 닿을 방법이 없어요.\n- 제목이 길어져서 액션 버튼이 잘리거나 가려져요.\n\n**소스에서 확인할 패턴**\n- 텍스트를 담은 상자에 고정 `height`가 있고 `overflow: hidden`이에요. `min-height`로 바꾸거나 고정 높이를 지워야 해요.\n- flex 자식에 `min-width: 0`이 없거나, grid 트랙이 `minmax(0, 1fr)`가 아니에요. 그러면 긴 값이 트랙을 밀어서 가로 스크롤이 생겨요.\n- `-webkit-line-clamp`를 쓰는데 `display: -webkit-box`, `-webkit-box-orient: vertical`, `overflow: hidden`이 함께 있지 않아요.\n- `line-height`에 단위가 붙어 있어요. 단위 없는 값이어야 해요. 제목은 1.2–1.3이지만, 3줄 이상 허용한다면 1.4 이상이 필요해요.\n- `word-break: keep-all`을 쓰면서 긴 URL·ID에 대한 `overflow-wrap` 처리가 없어요. 수동 `<br>`로 줄을 나눈 경우도 확인해요.\n- font-size가 `rem`이 아니라서 텍스트 확대가 반영되지 않아요.\n- 화면에 보이는 순서와 DOM 순서가 달라요(`order`, `row-reverse`). 제목이 앞에 오고 메타와 액션이 뒤에 와야 해요.\n\n**렌더링해야만 확인되는 항목(지금은 모두 Not verified)**\n- 실제 폰트가 로드된 뒤 320px에서 몇 줄로 끊기는지\n- fallback 폰트일 때 줄 높이가 달라지는지\n- 200% 확대에서 잘림이 생기는지\n- 한글 어절이 중간에서 끊기는지\n\n## 결정이 필요한 질문\n2줄을 넘을 때 **전부 표시**할지 **말줄임**할지만 정해 주시면 돼요. 저는 카드 높이를 맞춰야 하는 요구가 없다면 전부 표시를 권해요. 이 방식은 고정 높이를 지우기만 하면 되고, 전체 제목을 보는 경로를 따로 만들 필요도 없어요.\n\n1·3·4번 입력(소스 경로, 의도한 동작, 실제 제목 데이터)만 있어도 소스 기준 검토는 시작할 수 있어요. 렌더링 검증은 따로 허락해 주실 때 진행할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 63.35,
+  "duration_api_ms": 62079,
+  "usage": {
+    "input_tokens": 10,
+    "cache_creation_input_tokens": 24872,
+    "cache_read_input_tokens": 83683,
+    "output_tokens": 5797,
+    "output_tokens_details": {
+      "thinking_tokens": 3109
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 24872,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4116,
+        "cache_read_input_tokens": 27730,
+        "cache_creation_input_tokens": 874,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 874
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 10,
+      "outputTokens": 5797,
+      "cacheReadInputTokens": 83683,
+      "cacheCreationInputTokens": 24872,
+      "webSearchRequests": 0,
+      "costUSD": 0.3316926,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 3109,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.3316926,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 9,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "81ee22036079e3302d3ee2cf1fbab9c956c9fec7b4f7e5d9f2720fd998f25280",
+  "transcript_sha256": "04ef027f090e05f20ffbf0a5d254027aeabf3250bf3609acd2481c6a60132b66",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

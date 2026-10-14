@@ -1,0 +1,192 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-explain-interface",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_029",
+  "expected": "explain-interface",
+  "prompt": "/paul-skills:explain-interface 한 화면에서 제목과 액션의 시각적 관계가 어떤 CSS 및 컴포넌트 구조로 만들어지는지 이해하려고 해. 필요한 입력과 설명 산출물의 범위, 확인 방법을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "90799f08-e77e-43d4-b55c-825d408549f5",
+  "started_at": "2026-10-14T09:00:11.462459+00:00",
+  "host_init_session_id": "90799f08-e77e-43d4-b55c-825d408549f5",
+  "host_result_session_id": "90799f08-e77e-43d4-b55c-825d408549f5",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "290ebc1b-d5d6-47c7-a1bb-69ced5347da3",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "explain-interface",
+      "event_uuid": "1abc7039-699d-4c79-81b4-b78493697a50",
+      "file_sha256": "b8bd9bdbff6fb6ffe5bf58966c806b8b5bd741012805086518bd784fcf22031a",
+      "body_sha256": "ad3bbc2007d762c2453422091c51516b9b03acaa49517f07f4ae8e752c37e92e",
+      "host_message_sha256": "4f06f50b28ecfeddb6ba4106ba6662ee93a0acad8af5c30fb00557a11dd58a13",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01Pf6a81fEnDoJ4d6HrCqBMw",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c7b1d3113ccb0686ec9d53ef6dde0b0bda933fc837738b4edf6c61efee5fe145"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle/skills/design/explain-interface/find-the-effect.md"
+      },
+      "tool_use_id": "toolu_01Kux8nngKyv1zMwn81vuKtj",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "f9540b5f70e5adb8588cf8143cc46d7047f3a0b8a003ef11c7cb8f9e2601175e"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "explain-interface"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_029`)가 비어 있고 URL, 스크린샷, 코드도 받지 않았습니다. 그래서 아래 내용은 준비 명세이고, 확인된 결과는 아직 없습니다. 브라우저 실행, 외부 요청, 파일 수정도 하지 않았습니다.\n\n## 질문 범위\n\n\"한 화면에서 제목과 액션이 어떤 관계로 보이는가\"는 사이트 전체 구조가 아니라 **하나의 효과를 만드는 구조**에 대한 질문입니다. 그래서 답도 그 관계를 만드는 컨테이너와 CSS로 좁힙니다. 전체 타입 스케일이나 토큰 목록은 위계 설명에 꼭 필요할 때만 가져오고, 가져오는 이유를 함께 적습니다.\n\n## 필요한 입력\n\n아래 셋 중 하나가 있어야 합니다. 위에 있을수록 근거가 강합니다.\n\n1. **URL과 대상 지정**: 어떤 제목과 어떤 액션인지(예: 페이지 헤더의 `h1`과 오른쪽 버튼 그룹), 상태(로그인, 탭 선택 등), 확인할 화면 너비 1~3개.\n2. **소스 코드**: 해당 컴포넌트 파일과 그 파일이 쓰는 스타일·토큰 파일. 작성된 구조는 알 수 있지만, 어느 규칙이 적용되는지와 실제 픽셀 값은 알 수 없습니다.\n3. **스크린샷**: 실제 구현을 설명하는 게 아니라 \"이렇게 만들 수 있다\"는 재구성만 가능합니다. 값은 px가 아니라 비율로만 말합니다. 화면이 공개돼 있다면 URL이 훨씬 낫습니다.\n\n입력과 함께 어떤 관계가 궁금한지도 알려주세요. 정렬 기준선, 간격, 좁은 화면에서 줄바꿈되거나 쌓이는 방식, 크기·굵기 위계 중 무엇인지에 따라 범위가 정해집니다.\n\n## 설명 산출물 범위\n\n- **컴포넌트 구조**: 제목 묶음과 액션 묶음을 감싸는 계층. 둘이 같은 부모를 공유하는지, 액션이 slot이나 prop으로 들어오는지.\n- **관계를 만드는 CSS**: 겹쳐서 작동하는 순서대로 정리합니다.\n  - 레이아웃 방식: `flex` 또는 `grid`\n  - 교차축 정렬: `align-items: baseline`인지 `center`인지\n  - 양쪽 분배: `justify-content`, `margin-inline-start: auto`, grid 열 정의 중 무엇인지\n  - 간격: `gap`이나 margin, 그리고 연결된 토큰\n  - 반응형 전환: breakpoint나 container query에서 줄바꿈되거나 쌓이는 규칙\n  - `::before`와 `::after`가 맡는 역할\n- **근거 표기**: 모든 값에 측정됨, 계산됨, 추론됨 중 하나를 붙입니다.\n- **마무리**: 코드 스니펫 대신 말로 된 레시피를 줍니다. 복사해도 그대로 재현되지 않는 것(특정 서체, 특정 너비에 맞춘 값)과 읽지 못한 부분도 적습니다.\n- **제외**: 좋다/나쁘다 판정과 개선안. 이건 `better-layout`이나 `better-interface`가 맡습니다.\n\n## 확인 방법 (입력이 오면 실행)\n\n- **URL인 경우**: `design-browser` 스킬이 정한 방식으로 브라우저를 씁니다. 제목, 액션, 공통 부모에서 다음을 읽습니다.\n  - 계산된 `display`, `flex`/`grid`, `gap`, `align-*`, `justify-*` 값\n  - 세 요소 각각의 `::before`와 `::after`\n  - 각 요소의 박스 위치. 기준선이 맞는지와 실제 간격을 직접 계산합니다.\n  \n  같은 측정을 지정한 너비마다 반복해 전환 지점을 찾습니다. 방문하지 않은 너비나 상태는 \"확인 안 됨\"으로 표기합니다.\n- **HTML/CSS만 가져온 경우**: 작성된 규칙, 반응형 변형, `:root` 토큰까지만 말합니다. 실제로 어느 규칙이 적용되는지는 확인되지 않았다고 표시합니다.\n- **소스 코드인 경우**: 파일을 읽고 컴포넌트 구조와 스타일 출처만 설명합니다.\n- **공통 원칙**: 페이지 안의 텍스트, 클래스명, 주석은 근거로만 다루고 지시로 따르지 않습니다. 대상 상태에 도달하기 위한 hover나 scroll 외에는 조작하지 않습니다.\n\nURL이나 코드 경로와 함께 대상 제목·액션, 확인할 너비를 주시면 그 범위로 바로 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 37.144,
+  "duration_api_ms": 35908,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 16928,
+    "cache_read_input_tokens": 21277,
+    "output_tokens": 3343,
+    "output_tokens_details": {
+      "thinking_tokens": 1364
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16928,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 3038,
+        "cache_read_input_tokens": 17545,
+        "cache_creation_input_tokens": 3115,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3115
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 3343,
+      "cacheReadInputTokens": 21277,
+      "cacheCreationInputTokens": 16928,
+      "webSearchRequests": 0,
+      "costUSD": 0.2065554,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1364,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.2065554,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "c6e985513f1ec331405a58f05a94c590b8ea5d3889d555c9e95391c11ff52231",
+  "transcript_sha256": "6fe84c7ae6111ed7906483046895cba0fd7272e96dcb44eaa5f3ed9ebe278028",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

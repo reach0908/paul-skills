@@ -1,0 +1,21 @@
+{
+  "package_check": {
+    "command": "npm run check",
+    "exit_code": 0,
+    "skill_records": 56,
+    "promoted_paths": 44,
+    "unit_tests_passed": 38,
+    "version": "0.4.0"
+  },
+  "collector_controls": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 python3 evals/design-claude-discovery-2026-10-14/test_collector.py",
+    "exit_code": 0,
+    "tests_passed": 13
+  },
+  "syntax_check": {
+    "method": "ast.parse on evaluation Python files",
+    "exit_code": 0
+  },
+  "syntax_check_environment_note": "An initial py_compile command could not create the system Python cache under Library/Caches. The no-write AST syntax check passed; this was not a Claude model-trial failure.",
+  "scope": "Evaluation code and reports only. Installed skill content and package manifests are not modified."
+}

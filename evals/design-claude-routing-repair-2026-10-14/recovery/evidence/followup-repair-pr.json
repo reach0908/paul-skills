@@ -1,0 +1,184 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "a80965bd7a3ef0157026728e0fbc85870fcc328ec135b936368db006327deaae",
+  "schema_version": 1,
+  "case_id": "followup-repair-pr",
+  "mode": "boundary",
+  "protocol_version": 1,
+  "trial_directory_name": "case_005",
+  "expected": "better-interface",
+  "prompt": "PR 482에서 생긴 UI 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "session_id": "828cc5b8-9d9f-468e-9b02-a9f34373d223",
+  "started_at": "2026-10-14T09:10:42.676175+00:00",
+  "host_init_session_id": "828cc5b8-9d9f-468e-9b02-a9f34373d223",
+  "host_result_session_id": "828cc5b8-9d9f-468e-9b02-a9f34373d223",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle-final",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "293bd630-0210-4c53-b5e6-4a3d96724c12",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "1a6138ae-3f86-4863-bf23-c4c39bf60017",
+      "file_sha256": "e4ab6510803d4beb6a2a3ac9a818214d585e7e420e9568648cce85ad559f9e13",
+      "body_sha256": "76dfa563d1fa160b3632d5bed42d8e2eacac1629366b49d3b95967d14a8a91a1",
+      "host_message_sha256": "a049f2f14c4d7fe815517394911c9ff83e0e612c8b48f2eb0dc7c941feaa6721",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "PR 482 UI 회귀 리뷰 (change-review). 제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지, 미확인 결과를 사실로 말하지 말 것."
+      },
+      "tool_use_id": "toolu_019YeLA7jQRp1MyDDUpH7KWQ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e30937692663ba3b8480b6d0f7991fbbd5ebd4b94c68b3b4c95e5ad4b2b18395"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "PR 변경 리뷰는 직접 실행해야 하는 `interface-review`가 맡아요. 아래 명령을 입력해 주세요.\n\n```\n/paul-skills:interface-review pr 482\n```\n\n이 리뷰는 직접 실행해야 시작할 수 있어서, 여기서는 파일을 읽지 않았고 판정도 내리지 않았어요. 실행할 때 \"제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지, 확인하지 않은 결과를 사실처럼 말하지 않기\" 조건도 함께 적어 주세요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": true,
+    "explicit_handoff": true,
+    "no_domain_calls": true,
+    "no_file_inspection": true
+  },
+  "pass": true,
+  "duration_seconds": 8.265,
+  "duration_api_ms": 6890,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 14745,
+    "cache_read_input_tokens": 18042,
+    "output_tokens": 546,
+    "output_tokens_details": {
+      "thinking_tokens": 181
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14745,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 317,
+        "cache_read_input_tokens": 14310,
+        "cache_creation_input_tokens": 4167,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4167
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 546,
+      "cacheReadInputTokens": 18042,
+      "cacheCreationInputTokens": 14745,
+      "webSearchRequests": 0,
+      "costUSD": 0.13250440000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 181,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.13250440000000002,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "43c95163c1cbe1b7538333da0b9a881e94911e5842e11d3fa5549036fe81fa0b",
+  "cases_sha256": "69299b26937f3920cbbe2ea59226a470ccffa8b5bac51bad2cb553e4a7600714",
+  "stream_sha256": "c779c2ae23577fdb713935f447099e89cdd4a9ec73fe82a4eacd0f76cbd4eb2d",
+  "transcript_sha256": "b74b28178c949617e29bc63ba308c32cddb47f2015d33a0d170f6a7c62a2f2dd",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

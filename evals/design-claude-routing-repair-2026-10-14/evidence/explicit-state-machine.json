@@ -1,0 +1,182 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-state-machine",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_027",
+  "expected": "state-machine",
+  "prompt": "/paul-skills:state-machine 기존 알림 카드의 도달 가능한 loading, empty, error 상태를 로컬 작업대에서 확인하려고 해. 이번에는 구현하지 말고 필요한 입력과 작업 범위, 완료 조건을 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "83d24ffd-2e91-4bbf-83a6-5d167628baab",
+  "started_at": "2026-10-14T08:59:40.031614+00:00",
+  "host_init_session_id": "83d24ffd-2e91-4bbf-83a6-5d167628baab",
+  "host_result_session_id": "83d24ffd-2e91-4bbf-83a6-5d167628baab",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "1ccee313-c997-404a-8421-548334bcff93",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "state-machine",
+      "event_uuid": "204e568c-d52f-492e-8525-f401cf3be6a0",
+      "file_sha256": "929a009c8d22c14cbe2173bbc097b2febaf775075082e0774a7fc5badefd20c0",
+      "body_sha256": "f8a244451844e306acd759a201765ad7c89a540ad34a0c42f293ef64ec64a14f",
+      "host_message_sha256": "40c9b2388adeb34135c71a51bebb849aff2b57dac8c6a87e87fc89857d5157da",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01N6EKL5wxNuw3Fcg9WNoK2d",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "d00af7c8f0de6d08cd674a6ca4a6687fc87587a2e0194f94dda1d0a3ba0711a7"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "state-machine"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_027`)가 비어 있어서 알림 카드 코드를 찾지 못했어요. 그래서 loading, empty, error 중 실제로 도달 가능한 상태가 무엇인지는 아직 모릅니다. 아래 내용은 요청을 바탕으로 한 명세이고, 확인된 결과가 아닙니다. 파일 수정이나 브라우저 실행은 하지 않았어요.\n\n## 필요한 입력\n\n1. **컴포넌트 위치:** 알림 카드의 파일 경로, 그리고 프로덕션에서 렌더되는 화면과 폭.\n2. **데이터 경로:** 데이터를 props로 받는지, 데이터 훅(React Query, SWR 등)으로 가져오는지 알려주세요. 앱에 이미 있는 mock 수단(MSW, mock provider, 미리 채운 쿼리 캐시)이 있는지도 필요해요.\n3. **실행 환경:** 프레임워크와 라우터(예: Next app router면 `\"use client\"`가 필요함), 로컬 dev 서버 실행 명령과 포트.\n4. **실제와 비슷한 샘플 데이터:** 알림 제목, 발신자, 시각 형식, 사용자가 실제로 받는 알림 개수, 에러 응답의 형태.\n5. **(선택) 디자인상의 상태 목록:** 코드에 없는 상태를 missing으로 따로 정리할 때 씁니다.\n\n최소한 1~3번이 있어야 상태 목록을 확정할 수 있어요.\n\n## 작업 범위\n\n- **대상:** 알림 카드 하나. 상태는 loading, empty, error 중 코드가 실제로 분기하는 것만 다룹니다.\n- **코드에 없는 상태:** 분기를 추가하지 않고 missing으로 보고합니다.\n- **다른 상태:** 코드에서 다른 분기(목록이 긴 경우, 권한 등)가 보이면 한 줄로 알려드리고, 추가할지 여쭤볼게요.\n- **작업 페이지:** `/states/notification-card` 같은 폴더 하나에 임시 라우트, mock 데이터, 스위처를 모두 둡니다.\n  - 실제 컴포넌트를 그대로 import하고 수정하지 않습니다.\n  - 컨테이너는 프로덕션과 같은 폭으로 둡니다.\n- **데이터 주입:** props를 우선 쓰고, 안 되면 앱의 기존 mock 수단을 씁니다. 컴포넌트를 고쳐야만 주입할 수 있다면, 주입 지점을 추가하기 전에 먼저 여쭤볼게요.\n- **스위처:** `__state` 파라미터를 바꾸는 방식이고, 디자인 시스템과 구분되는 스타일로 만듭니다. loading은 타임아웃으로 끝나지 않고 스위처를 바꿀 때까지 유지됩니다.\n- **범위 밖:** 시각적 수정, 커밋, 다른 컴포넌트 작업. 페이지 삭제는 말씀하실 때만 합니다.\n\n## 완료 조건\n\n- 도달 가능한 상태마다 `?__state=loading|empty|error` 링크로 열립니다.\n- 각 상태에서 mock 데이터가 보입니다. 실제 데이터나 빈 영역이 보이면 연결이 깨진 것이므로 고친 뒤에 넘깁니다.\n- loading이 스위처를 바꾸기 전까지 그대로 유지됩니다.\n- 컴포넌트 파일은 바뀌지 않고, 추가된 파일은 모두 그 폴더 하나에 있습니다.\n- 모든 상태를 브라우저에서 한 번씩 확인합니다. 확인할 수 없으면 그렇다고 밝히고 URL만 넘깁니다.\n- 넘겨드리는 것: URL, 상태 목록(missing 포함), 스위처 키.\n\n1~3번 입력을 주시면 코드를 읽고 상태 목록을 확정하는 것부터 시작할게요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 31.414,
+  "duration_api_ms": 30152,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 12977,
+    "cache_read_input_tokens": 20253,
+    "output_tokens": 2757,
+    "output_tokens_details": {
+      "thinking_tokens": 1254
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12977,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2629,
+        "cache_read_input_tokens": 16521,
+        "cache_creation_input_tokens": 188,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 188
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 2757,
+      "cacheReadInputTokens": 20253,
+      "cacheCreationInputTokens": 12977,
+      "webSearchRequests": 0,
+      "costUSD": 0.1630226,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1254,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1630226,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "7d3e3440580f866ffad308e626072c5eac77854151e2d9c581f1d0a8c17a31d4",
+  "transcript_sha256": "e319e4f6ba270ee2a375e681bf95a48aedbcab77d619f97ebda69bf45c27ee35",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

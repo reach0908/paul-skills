@@ -1,0 +1,156 @@
+{
+  "schema_version": 1,
+  "case_id": "boundary-explain-interface",
+  "mode": "boundary",
+  "protocol_version": 2,
+  "trial_directory_name": "case_033",
+  "expected": null,
+  "prompt": "CSS에서 display:flex와 gap:8px를 같이 쓰면 두 버튼 사이 간격이 어떻게 생기는지 두 문장으로 설명해줘. 소스 분석이나 별도 시각화는 필요 없어.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "5a623f25-5882-4b5e-8de5-627e2a6b259d",
+  "started_at": "2026-10-14T08:05:07.436985+00:00",
+  "host_init_session_id": "5a623f25-5882-4b5e-8de5-627e2a6b259d",
+  "host_result_session_id": "5a623f25-5882-4b5e-8de5-627e2a6b259d",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "28e4d0f2-08f1-45ec-b9b4-bd177e4bd4a1",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [],
+  "tool_calls": [],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "display:flex와 gap:8px는 두 버튼의 부모 요소에 지정해야 하고, 그러면 두 버튼 사이에만 8px 간격이 생기며 첫 버튼 앞과 마지막 버튼 뒤에는 생기지 않습니다. 기본 방향(`flex-direction: row`)에서는 가로 간격이 되고, 버튼에 margin이 있으면 그 값이 8px에 더해지며, `justify-content: space-between`처럼 남는 공간을 나눌 때도 버튼 사이는 최소 8px로 유지됩니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 9.331,
+  "duration_api_ms": 7933,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10640,
+    "cache_read_input_tokens": 3732,
+    "output_tokens": 736,
+    "output_tokens_details": {
+      "thinking_tokens": 529
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10640,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 736,
+        "cache_read_input_tokens": 3732,
+        "cache_creation_input_tokens": 10640,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10640
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 736,
+      "cacheReadInputTokens": 3732,
+      "cacheCreationInputTokens": 10640,
+      "webSearchRequests": 0,
+      "costUSD": 0.1005944,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 529,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1005944,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "dc258cf0ab6539832a6bb1c8eea40d71f898334de30c8d729b588d82f73eb0ca",
+  "transcript_sha256": "815b6d3dac331870e34f339fac123f75961d986a17bd6d5dc4c7308e65398de7",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

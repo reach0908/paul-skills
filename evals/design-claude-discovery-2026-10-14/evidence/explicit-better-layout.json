@@ -1,0 +1,177 @@
+{
+  "schema_version": 1,
+  "case_id": "explicit-better-layout",
+  "mode": "explicit",
+  "protocol_version": 2,
+  "trial_directory_name": "case_003",
+  "expected": "better-layout",
+  "prompt": "/paul-skills:better-layout 현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "786ba55e-9023-4ac9-9201-2ad4936627f8",
+  "started_at": "2026-10-14T07:52:28.596559+00:00",
+  "host_init_session_id": "786ba55e-9023-4ac9-9201-2ad4936627f8",
+  "host_result_session_id": "786ba55e-9023-4ac9-9201-2ad4936627f8",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "$HOME/.claude/plugins/cache/paul-skills/paul-skills/0.4.0",
+      "source": "paul-skills@paul-skills",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "46815c0d-b312-4aca-ade3-d6bfb62eb9fe",
+  "automatic_catalog_sha256": "248d1cb022774424a190b3862209e019b4ccd34e2d16e9db891f33fad774aad7",
+  "full_body_loads": [
+    {
+      "name": "better-layout",
+      "event_uuid": "6a295158-b796-4348-ab73-e34ae1e7ed9d",
+      "file_sha256": "b771d451a9a498e8907c20a884314ac5b1ebffb4d0ff9986e823001df57f2f55",
+      "body_sha256": "80b4dfd130397c52a91013235e4828eb686ce25401d43afef505ba6fb0e23587",
+      "host_message_sha256": "c81ed4b33dd945968df219951c7b2068e83456d9674b4bf2931f312a5cc14dbf",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_018j5GyMpPHVTstdephN3eMY",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b1b113fca79245ba30bce6da8915b9c5904b0c30fdac4f8e0095d45bedb3c0f2"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "현재 작업 디렉터리(`case_003`)가 비어 있어서 대시보드 코드를 하나도 읽지 못했습니다. 그래서 아래는 검토 결과가 아니라 준비 명세입니다. 판정(Block/Approve)도 아직 내릴 수 없습니다.\n\n## 필요한 입력\n\n| # | 입력 | 용도 |\n| --- | --- | --- |\n| 1 | 대시보드 페이지와 카드 컴포넌트 소스, 스타일 파일(3열 그리드 정의 포함) | DOM 순서, 그리드, 고정 크기, 물리 속성 확인 |\n| 2 | 프로젝트 스페이싱 스케일·토큰, 브레이크포인트, 컨테이너 쿼리 사용 여부 | 수정안을 프로젝트 방식으로 쓰기 위함 |\n| 3 | **320px에서의 콘텐츠 중요도 순위**(3열 각 영역 중 무엇이 먼저인지)와 화면별 주요 액션 1개 | 읽는 순서 판단 기준(코드만으로는 알 수 없음) |\n| 4 | 지원 뷰포트 목록(최소·최대), 200% 확대 지원 여부, RTL 지원 여부 | 검증 범위 확정 |\n| 5 | 실제 `de` 로케일 문자열 또는 가장 긴 라벨 목록. 특히 한 단어짜리 버튼·탭·표 헤더 | 독일어 확장 스트레스 테스트 |\n| 6 | 긴 값과 넓은 표, 빈 상태가 담긴 샘플 데이터 | 넘침·잘림 재현 |\n| 7 | (선택) 데스크톱과 320px 스크린샷 | 이번 응답에서는 브라우저를 쓰지 않으므로 렌더링 증거를 대신함 |\n\n## 배치 검토 순서\n\n1. **읽는 순서와 DOM 순서**: 3번의 순위가 소스 순서와 같은지 봅니다. 320px 단일 열은 DOM 순서대로 쌓이므로, `order`, `row-reverse`, grid 배치로 순서를 바꾼 부분이 있으면 지적합니다. 데스크톱 3열도 같은 순서로 시작 쪽에서 끝 쪽으로 읽혀야 합니다.\n2. **그룹**: 그룹 사이 간격이 그룹 안 간격의 2배 이상인지 봅니다. 구분선은 간격만으로 구조가 안 보일 때만 씁니다. 컨트롤이 주변 텍스트와 구별되는지도 봅니다.\n3. **정렬**: 공유 정렬 기준선이 몇 개인지, 중첩 한 단계마다 스페이싱 한 단계를 쓰는지 봅니다. `margin-left` 같은 물리 속성 대신 논리 속성을 쓰는지도 봅니다(RTL 대비).\n4. **반응형 구조**: 브레이크포인트가 기기 프리셋이 아니라 콘텐츠 기준인지 봅니다. 카드 단위 적응에는 `@container`를 쓰는지 확인합니다. 그 외 점검 항목은 다음과 같습니다.\n   - 트랙에 `1fr` 대신 `minmax(0, 1fr)`, 플렉스 자식에 `min-width: 0`\n   - `100vw`나 `100vh` 사용\n   - 텍스트 상자에 고정 `width`·`height`\n5. **독일어 확장**: 라벨 상자를 `max-width`와 `min-height`로 잡고 줄바꿈을 허용하는지 봅니다. 한 단어 버튼은 가장 위험하므로 따로 확인합니다. 잘린 값에는 전체 값으로 가는 길이 있어야 합니다. 잘림 처리 방식 자체는 `better-typography` 범위입니다.\n6. **숨은 콘텐츠와 고정 영역**: 가로 스크롤이나 접힌 영역에 보이는 단서가 있는지 봅니다. 고정 헤더에 `scroll-padding-block-start`가 있는지, 중요한 액션이 크기 조절이나 확대 때 잘리지 않는지도 확인합니다.\n7. **검증(다음 단계)**: 320px, 지원하는 모든 폭, 최대 폭, 200% 확대, RTL 미러를 확인합니다. 이 단계는 `design-browser`로 할 예정이고, 이번에는 실행하지 않습니다.\n\n## 범위와 보고 형식\n\n- 색과 폰트 교체는 다루지 않습니다. 히트 영역과 포커스는 `better-accessibility`, 문구 자체는 `better-writing` 범위로 넘깁니다.\n- 결과는 `심각도 | 위치(file:line) | Before | After | Why` 표로, 원칙별로 정리합니다. 320px나 200% 확대에서 생기는 잘림·겹침은 항상 `HIGH`입니다. 확인하지 못한 항목은 `Not verified`로 적습니다.\n\n1, 3, 4, 5번을 주시면 정적 검토(1~6단계)부터 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "plugin_0_4_0": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 37.598,
+  "duration_api_ms": 36235,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 14201,
+    "cache_read_input_tokens": 21496,
+    "output_tokens": 2891,
+    "output_tokens_details": {
+      "thinking_tokens": 999
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 14201,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2782,
+        "cache_read_input_tokens": 17764,
+        "cache_creation_input_tokens": 169,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 169
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 2891,
+      "cacheReadInputTokens": 21496,
+      "cacheCreationInputTokens": 14201,
+      "webSearchRequests": 0,
+      "costUSD": 0.1757432,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 999,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.1757432,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "2029b248427a86fa94efba49f8242bd528c2d381d9e2ed070c07fc2609b23777",
+  "cases_sha256": "4170af41192dc00eb821fda0fe0ed0064ed0792690b352408a293f62929e5e8f",
+  "stream_sha256": "81e85cbda9afd2f8a2cbe55061a4aedbbae83ccd8051dad35221a33aedf89baa",
+  "transcript_sha256": "6a6d00aa1321e6f2fd43073bc9d13b874f39b26eecbc29f238f282f92e92009b",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

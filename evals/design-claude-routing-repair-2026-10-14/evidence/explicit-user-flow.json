@@ -1,0 +1,217 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3102e85ff8a9f5badd5b9af6db0e2e35db2199a8b0cb6358ff780784cdb51e5c",
+  "schema_version": 1,
+  "case_id": "explicit-user-flow",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_023",
+  "expected": "user-flow",
+  "prompt": "/paul-skills:user-flow 기획이 끝난 읽기 서비스의 “글 저장 후 저장 목록에서 다시 열기” 작업 흐름을 정해줘. 비로그인, 저장 중 중복 클릭, 요청이 끝나지 않음, 실패 후 재시도, 중간 이탈과 복귀를 포함해야 해. 사용자 행동·화면 전이·복구 경로와 다음 단계에 넘길 미결 사항을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "19549a85-11ab-4c1b-8039-f5427d77b6bf",
+  "started_at": "2026-10-14T08:57:24.038876+00:00",
+  "host_init_session_id": "19549a85-11ab-4c1b-8039-f5427d77b6bf",
+  "host_result_session_id": "19549a85-11ab-4c1b-8039-f5427d77b6bf",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-claude-routing-repair-20261014/bundle",
+      "source": "paul-skills@inline",
+      "version": "0.4.0"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "650e06b9-706c-4f44-b3be-70636357b874",
+  "automatic_catalog_sha256": "ce8e2c97208e442f5f7922c6a93a9ec8307c6ee44303a5357225fa208f724b75",
+  "full_body_loads": [
+    {
+      "name": "user-flow",
+      "event_uuid": "b812e91d-5024-4cfb-b78c-3a3a6a1474b4",
+      "file_sha256": "a8b1a4df0fa20cf6b01ba49a969b8b33cc5620926e0d67ef7663e53a8f51d828",
+      "body_sha256": "16865cf1ed0850681b7b93aad0aef2ccc2dbaab94fa00d66d04588a4a33cb2ff",
+      "host_message_sha256": "aed16aec77002965eed337573b09a73e6f572ae2291c206b9236b522b3e03ffe",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_0175dS6TwLnWKJriTKvyU4LS",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "4b2d771cd68b1f62e42177cb88ecf3fe3d0f3203da1f453091f9be0264bc8871"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 글 저장 후 저장 목록에서 다시 열기: 작업 흐름 초안\n\n이 흐름은 근거 문서 없이 쓴 제안입니다. 작업 폴더가 비어 있어서 기획 결정, 화면 구조(IA), 기존 동작을 하나도 읽지 못했습니다. 아래 내용에서 `A#`로 표시한 것은 모두 제 가정이고, 확인된 사실이 아닙니다. 파일 저장, 제품 수정, 브라우저 실행은 하지 않았습니다.\n\n## 0. 받아야 할 입력 (각각 흐름을 바꿉니다)\n\n| ID | 필요한 입력 | 지금 둔 가정 |\n|---|---|---|\n| A1 | 글 보기 / 저장 목록 / 로그인 화면의 ID | 임시 이름을 씀 |\n| A2 | 비로그인 상태에서 저장을 누를 때의 정책 | 로그인 후 원래 글로 돌아와 저장을 자동으로 이어감. 다른 선택지: 저장만 막기, 기기에 먼저 저장하고 로그인 후 합치기 |\n| A3 | 같은 글을 다시 저장할 때의 규칙, 저장 버튼이 토글인지 여부 | 다시 눌러도 결과가 같고, 토글이 아님. 서버에서 같은 요청을 한 번만 처리하는 것은 구현 쪽에 넘기는 조건 |\n| A4 | 실패 원인을 나눠서 받을 수 있는지 (네트워크·서버 / 세션 만료 / 이미 저장됨) | 세 가지를 나눠서 받을 수 있음 |\n| A5 | \"응답 없음\"으로 보는 기준 시간 T | 값은 미정. T가 지나도 자동으로 실패 처리하지 않음 |\n| A6 | 화면을 떠난 뒤에도 저장 요청이 계속되는지, 돌아왔을 때 서버 상태를 조회할 수 있는지 | 요청은 계속되고, 돌아오면 서버 상태로 화면을 맞춤 |\n| A7 | 저장 목록에 \"저장 중\"인 글도 보이는지 | 저장이 확정된 글만 보임 |\n\n## 1. 작업 범위\n- **사용자:** 글을 읽는 사람\n- **시작점:** 글 보기 화면\n- **성공 조건 (둘 다 눈으로 확인 가능해야 함):**\n  1. 저장 목록에 그 글이 보인다.\n  2. 목록에서 그 글을 누르면 같은 글이 열린다.\n- **범위 밖:** 저장 취소, 삭제되었거나 볼 수 없게 된 글, 읽던 위치 복원, 오프라인 읽기\n\n## 2. 상태 (흐름 ID: `F-SAVE-REOPEN`)\n`S0` 미저장 · `S1` 로그인 요구 · `S2` 저장 요청 중 (기준 시간이 지나면 `S2'` 지연) · `S3` 저장 확인됨 · `S4` 저장 실패 · `S5` 저장 목록 · `S6` 목록에서 다시 연 글\n\n`S0`부터 `S4`까지, 그리고 `S6`은 모두 같은 글 보기 화면에서 상태만 다릅니다. 저장을 \"요청한 것\"(`S2`)과 \"저장이 확인된 것\"(`S3`)은 반드시 따로 둡니다.\n\n## 3. 상태 전이\n\n| ID | 출발 → 행동·이벤트 [조건] | 사용자에게 보이는 반응 | 도착 | 유지·변경되는 데이터 | 근거 |\n|---|---|---|---|---|---|\n| T01 | S0 → 저장 클릭 [로그인 상태] | \"저장 중\" 표시 | S2 | 글 ID, 요청 키 생성 | 요청 |\n| T02 | S0 → 저장 클릭 [비로그인] | 로그인이 필요한 이유를 안내 | S1 | 글 ID와 \"저장하려 했음\"을 보관 | 요청, A2 |\n| T03 | S1 → 로그인 성공 | 원래 글로 돌아와 저장을 이어감 | S2 | 보관한 저장 의도를 사용 | A2 |\n| T04 | S1 → 로그인 취소 | 원래 글로 돌아옴, 저장 안 됨 | S0 | 저장 의도를 버림 | A2 |\n| T05 | S2/S2' → 저장 다시 클릭 | 변화 없음 (\"저장 중\" 유지) | 그대로 | 추가 요청 없음 | 요청, A3 |\n| T06 | S2/S2' → 성공 응답 | \"저장됨\" + 저장 목록으로 가는 수단 | S3 | 저장 항목 생성 | 요청 |\n| T07 | S2 → \"이미 저장됨\" 응답 | 성공(T06)과 같게 보임. 오류로 보이지 않음 | S3 | 변경 없음 | A3, A4 |\n| T08 | S2 → 네트워크·서버 실패 | 실패 사유 + 다시 시도 | S4 | 글 ID 유지 | 요청, A4 |\n| T09 | S2 → 세션 만료 응답 | 다시 로그인하라는 안내 | S1 | 저장 의도 보관 | A4 |\n| T10 | S2 → 기준 시간 T 경과 | \"아직 저장 중\" + [다시 시도] [나중에] | S2' | 기존 요청 유지 | 요청, A5 |\n| T11 | S2' → 다시 시도 | 같은 요청 키로 다시 보냄 | S2 | 요청 키 유지 | A3, A5 |\n| T12 | S2' → 나중에 | 안내를 닫고 계속 읽음 | S2 | 요청 유지 | A5 |\n| T13 | S4 → 다시 시도 | \"저장 중\" 표시 | S2 | 글 ID 유지 | 요청 |\n| T14 | S4 → 안내 닫기 | 저장 안 된 상태로 돌아감 | S0 | 실패 안내 제거 | 제안 |\n| T15 | S3 → 저장 목록 열기 | 저장 목록 화면 | S5 | \u2014 | 요청 |\n| T16 | S5 → 항목 선택 | 같은 글이 저장된 상태로 열림 | S6 | 글 ID | 요청 |\n| T17 | S6 → 뒤로 가기 | 목록으로 돌아감 | S5 | 목록 위치 (제안) | 제안 |\n\n**중간 이탈과 복귀.** 떠난 시점의 상태마다 남아 있는 데이터가 다르므로 나눠서 정의합니다. 돌아오는 경로(뒤로 가기, 저장 목록을 거쳐 오기, 앱 재진입)와 상관없이 마지막 화면 상태가 아니라 서버 상태를 기준으로 맞춥니다.\n\n| ID | 떠난 시점 | 다시 돌아왔을 때 |\n|---|---|---|\n| L1 | 저장 전 (S0, S1) | S0. 복원할 요청이 없음. 로그인 중에 떠났다면 저장 의도를 얼마나 오래 보관할지는 A2에 따름 |\n| L2 | 요청 중 (S2, S2') | 서버를 조회해서 저장됐으면 S3, 아니면 S0과 함께 \"저장되지 않았다\"는 안내. 떠난 뒤 늦게 성공했다면 목록에도 반영 (A6, A7) |\n| L3 | 확인 후 (S3) | S3. 저장 목록에도 보임 |\n| L4 | 실패 후 (S4) | S0. 실패 안내는 유지하지 않음 (제안) |\n\n## 4. 경로 점검 (제가 표를 따라 걸어 본 것이고, 실제 사용자 검증은 아닙니다)\n\n| 경로 | 결과 |\n|---|---|\n| 성공: T01→T06→T15→T16 | 표 안에서 서로 맞음 |\n| 비로그인: T02→T03 또는 T04 | 전이는 이어지지만 정책 A2가 정해지지 않아 확정 못 함 |\n| 중복 클릭: T05 | 화면 쪽은 맞음. 서버에서 중복 저장을 막는 것은 A3 확인 전까지 점검 못 함 |\n| 응답 없음: T10→T11 또는 T12, 또는 이탈(L2) | T(A5)와 늦은 응답 처리(A6)가 정해지지 않아 일부만 점검 |\n| 실패 후 재시도: T08→T13→T06, 세션 만료 시 T09 | 표 안에서 맞음. 실패를 나눌 수 있는지는 A4에 달림 |\n| 이탈·복귀: L1~L4 | L1, L3, L4는 맞음. L2는 A6이 정해지지 않아 점검 못 함 |\n\n전이가 없는 상태는 찾지 못했습니다. 상태끼리 조건이 충돌하는 곳도 없었습니다.\n\n## 5. 다음 단계(와이어프레임)로 넘길 것\n- **글 보기 화면:** 미저장 / 저장 중 / 저장 중(지연) / 저장됨 / 실패를 구분해서 보여야 함. 다시 시도와 저장 목록으로 가는 수단이 있어야 함.\n- **로그인 화면:** 왜 로그인이 필요한지 알려야 함. 끝나면 원래 글로 돌아와야 함.\n- **저장 목록:** 저장이 확정된 글만 보임(A7). 항목을 누르면 그 글이 열림.\n- **미결 사항:** A2~A7 정책 결정, 서버 중복 처리(구현 쪽 조건), 범위 밖으로 둔 분기(저장 취소, 삭제된 글, 읽던 위치 복원)를 이 흐름에 넣을지 여부.\n\n기획 문서나 IA를 주시면 A1~A7을 그 내용으로 바꾸겠습니다. 이 명세를 둘 디자인 산출물 위치를 알려주시면 그곳에 Markdown으로 저장하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 122.57,
+  "duration_api_ms": 120758,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 14543,
+    "cache_read_input_tokens": 36326,
+    "output_tokens": 6705,
+    "output_tokens_details": {
+      "thinking_tokens": 3002
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12665,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 297,
+        "cache_read_input_tokens": 16197,
+        "cache_creation_input_tokens": 200,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 200
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 18188,
+        "output_tokens": 3524,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 6274,
+        "cache_read_input_tokens": 16397,
+        "cache_creation_input_tokens": 1878,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1878,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 6705,
+      "cacheReadInputTokens": 36326,
+      "cacheCreationInputTokens": 14543,
+      "webSearchRequests": 0,
+      "costUSD": 0.25209919999999997,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 3002,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 18188,
+      "outputTokens": 3524,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.35807999999999995,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6101791999999999,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "9faa91eed480b4592457ef1092b483635a604a67700fc6205227c2cf48347ae0",
+  "cases_sha256": "3994986b435bdef8e04ab95d4b049e0171b2c5441cf9542b547cd481675017f1",
+  "stream_sha256": "298f98dfc76b262703556f2cd676530ebc63541591c3215d1d269aacbe3f77aa",
+  "transcript_sha256": "ed42699f90617ddfe5adf45707da6b1f39d50aeffdd34dfcc606eeb6ad419d50",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}
