@@ -1,0 +1,81 @@
+{
+  "case": "explicit-break",
+  "target": "break",
+  "threadId": "01a1390c-ff30-7272-96a1-90a069e5dd91",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "installedVersion": "0.4.0",
+  "checks": {
+    "publishedInputsMatch": true,
+    "completed": true,
+    "inputsUnchanged": true,
+    "targetBodyLoaded": true,
+    "fourAutomaticRolesAvailable": true,
+    "fiveUserOnlyRolesHidden": true,
+    "exactTargetBodyInjected": true
+  },
+  "loadedSkills": [
+    "break"
+  ],
+  "hostInjectedSkills": [
+    {
+      "name": "break",
+      "sha256": "6651d7ca5ca17357590512d33851f887e55f25e08b83019a3ad7a0bcc6fe07fa",
+      "contentMatchesInstalledFile": true
+    }
+  ],
+  "automaticallyAvailablePaulSkills": [
+    "paul-skills:better-accessibility",
+    "paul-skills:better-colors",
+    "paul-skills:better-interface",
+    "paul-skills:better-layout",
+    "paul-skills:better-typography",
+    "paul-skills:better-ui",
+    "paul-skills:better-writing",
+    "paul-skills:build-design",
+    "paul-skills:code-review",
+    "paul-skills:codebase-design",
+    "paul-skills:design-browser",
+    "paul-skills:diagnosing-bugs",
+    "paul-skills:domain-modeling",
+    "paul-skills:grilling",
+    "paul-skills:information-architecture",
+    "paul-skills:pr",
+    "paul-skills:prototype",
+    "paul-skills:research",
+    "paul-skills:tdd",
+    "paul-skills:user-flow",
+    "paul-skills:wireframe",
+    "paul-skills:wizard",
+    "paul-skills:writing-for-agents"
+  ],
+  "receipt": {
+    "case": "explicit-break",
+    "exitCode": 0,
+    "seconds": 51.38,
+    "command": [
+      "codex",
+      "exec",
+      "-m",
+      "gpt-5.6-sol",
+      "-c",
+      "model_reasoning_effort=\"xhigh\"",
+      "--sandbox",
+      "read-only",
+      "--skip-git-repo-check",
+      "--json",
+      "-C",
+      "/private/tmp/paul-design-final-release-20261014/explicit-break",
+      "-o",
+      "/Users/jinhokim/dev/paul-skills/.scratch/design-final-release-20261014/explicit-break.final.md",
+      "-"
+    ],
+    "before": {},
+    "after": {},
+    "promptSha256": "27a27728b68e7e5ef39afb1d400f2f9df6a89c2031124fff78afaff779cbf6c8"
+  },
+  "prompt": "$paul-skills:break\n설치된 이 스킬의 역할과 입력, 완료 조건, 이웃 역할과의 차이만 설명해줘. 이번에는 실제 구현, 조사, 브라우저 조작이나 파일 변경은 하지 마.",
+  "final": "`paul-skills:break`는 실제 컴포넌트를 임시 페이지에 격리하고, 도달 가능한 최악 조건들을 한 화면에 렌더링해 눈에 보이는 파손만 기록하는 스트레스 테스트 역할입니다. 평가하거나 수정안을 제시하는 스킬은 아닙니다.\n\n| 구분 | 내용 |\n| --- | --- |\n| 역할 | 컴포넌트가 긴 텍스트, 좁은 컨테이너, 빈 상태 등 실제 입력 가능한 조건에서 스스로 형태를 유지하는지 관찰 |\n| 입력 | 한 번에 컴포넌트 하나, 해당 컴포넌트의 props·slots·상태·데이터·콘텐츠 제약, 사용될 앱 환경 |\n| 시나리오 결정 | 컴포넌트가 실제로 받을 수 있는 변화만 코드에서 추론하며, 적용한 축과 제외한 축을 기록 |\n| 완료 조건 | 실컴포넌트를 수정 없이 가져온 임시 페이지, 모든 관련 시나리오, 한 번의 시각 확인, 페이지에 표시된 파손 메모, `Scenario / Observed / Owner` 결과표 |\n| 이상 없음 | 시나리오와 실행 위치를 밝히고 “모두 견뎠다”고 보고하면 완료 |\n| 브라우저 확인 불가 | URL과 시나리오 목록만 전달하고, 관찰하지 않은 결과나 findings 표를 만들지 않음 |\n| 종료 후 상태 | 임시 페이지는 보고서의 일부이므로 유지하고, 사용자가 끝났다고 요청할 때만 삭제 |\n\n이웃 역할과의 차이는 다음과 같습니다.\n\n- `interface-review` / `better-interface`: 기준과 명세에 따라 인터페이스를 검토하고 판단합니다. `break`는 눈에 보이는 파손만 관찰합니다.\n- `variant`: 실제 페이지 맥락에서 디자인 대안을 탐색합니다. `break`는 의도적으로 격리하며 대안을 만들지 않습니다.\n- `state-machine`: 컴포넌트의 제품 상태를 하나씩 설계하거나 검토합니다. `break`는 도달 가능한 스트레스 조건을 한 페이지에 모아 한 번에 확인합니다.\n- `better-typography`, `better-writing` 등의 도메인 스킬: 발견된 문제를 진단하고 수정할 책임이 있습니다. `break`는 각 파손의 담당 스킬만 지정합니다.\n- `design-browser`: 시각적 증거를 확인하기 위한 실행 수단입니다. 별도의 판단 역할은 아닙니다.\n\n핵심 경계는 “실제 컴포넌트를 한 번 렌더링하고, 한 번 보고, 보인 것만 보고한 뒤 멈춘다”입니다.",
+  "commands": [],
+  "rawTraceSha256": "6087846549e10f7be82c0f5b4fced45d07ee1e4087abd6cdc4d3c13609912d83"
+}

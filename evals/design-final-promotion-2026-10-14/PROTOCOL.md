@@ -7,3 +7,9 @@ This checks installed discovery, exact body loading and invocation boundaries, n
 Pass requires process completion, the target installed body actually read or injected, the four automatic new roles in the supplied catalog, all five design user-only roles excluded from automatic selection, and unchanged task inputs. Natural prompts must not read any user-only design body. Explicit prompts must receive the exact installed target body. Router output must cover the four-stage sequence and distinguish the component workbench from task planning.
 
 Budget: nine primary contexts. Preserve every failure. Up to two additional contexts may clarify a host or collection problem; never replace or hide an original failure. Raw host traces stay local; publish only bounded prompts, hashes, command evidence and summaries after approval.
+
+## Released global installation follow-up
+
+After explicit publication approval, repeat the same nine entry-point checks against the released user-scope plugin in a separate raw-output directory. Use fresh contexts and the same model/effort. The daily global memory and other installed capabilities remain enabled; this is installation verification, not an isolated quality comparison.
+
+Give each preparation task only relevant fixture files. In particular, omit the approved implementation-only DESIGN.md from the wireframe task, because the first trial's shared fixture folder introduced an unrelated constraint. Retain the first trial and its observed reinterpretation in the report. This follow-up changes task packaging, not skill contents, and is not a causal before/after quality claim.
