@@ -2,6 +2,12 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.1
+
+### Patch Changes
+
+- [#17](https://github.com/reach0908/paul-skills/pull/17) [`bd62c4c`](https://github.com/reach0908/paul-skills/commit/bd62c4c99c59ee8f6c01610be4e01bd833c9e59f) Thanks [@reach0908](https://github.com/reach0908)! - Clarify automatic UI review routing through better-interface before file inspection. Preserve interface-review as an explicit command, carry the requested change target into that command, and continue its authorized handoff without asking for a second invocation.
+
 ## 0.4.0
 
 ### Minor Changes
