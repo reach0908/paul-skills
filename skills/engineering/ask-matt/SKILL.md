@@ -47,9 +47,11 @@ These candidates are in `in-progress/`, outside the promoted plugin. Recommend o
 
 | Open work | Entry | Result and next role |
 | --- | --- | --- |
+| Explore an idea together, challenge its framing or find the exciting version | `/office-hours` | Startup or builder dialogue, explicit premise/approach choices and a canonical decision record |
 | User situation, current alternative or first problem scope is unclear | `/problem-discovery` | Short Problem Brief; skip the interview when context is already sufficient |
 | Existing decisions or prototype feedback need to become reusable product input | `/product-brief` | Current decision brief, scoped before/after record and short product handoff |
 | A consequential assumption needs evidence before a product commitment, or its results need interpretation | `/experiment-design` | Bounded hypothesis, criteria, stop budget and result-dependent next decision |
+| Have fresh agents use the prototype, interview them and compare actual behavior with intent | `/prototype-user-test` | Neutral task attempts before author-intent comparison; AI evidence, not human validation |
 | Navigation, task transitions, screen hierarchy or interface quality is the open question | Available design role: information-architecture, user-flow, wireframe or interface-review/better-interface respectively | Preserve the brief's scope and product rules; return design artifacts and actual observations |
 | Agreed behavior needs technical synthesis or implementation slices | `/to-spec`, then `/to-tickets` when needed | Preserve the canonical product contract and latest design inputs; their existing prerequisites still apply |
 
@@ -57,9 +59,9 @@ The stages preserve intent through **product context → design decisions → en
 
 The product-brief handoff links the purpose, latest decisions and reasons, observed/reported/intended state, remaining gaps, exact canonical inputs and one next action. Mark superseded inputs as historical. Design owns IA, flows, screens and interface review. Engineering owns technical specs, tickets, code and checks. A policy or feasibility gap returns to its decision owner without reopening unaffected choices. AI suggestions, user decisions, mock behavior and observed implementation keep their status across every stage.
 
-Design-beta names describe the read-only role comparison, not skills shipped by this PM change. Verify each installed SKILL.md and invocation policy before recommending execution. prototype remains the runnable exploration role; variant, state-machine and break remain user-invoked choices for component alternatives, coded-state workbenches and boundary scenarios. design-browser collects observations, not the product verdict.
+The design roles are promoted separately; these beta additions do not promote them again. Verify each installed SKILL.md and invocation policy before recommending execution. prototype remains the runnable exploration role; variant, state-machine and break remain user-invoked choices for component alternatives, coded-state workbenches and boundary scenarios. design-browser collects observations, not the product verdict.
 
-All three PM candidates are model-invoked, but this router recommends and stops. User-invoked engineering or design roles are choices for the human; other skills cannot call them. Model-invoked dependencies use a separate Skill tool call for each included task.
+The five optional candidates are model-invoked, but this router recommends and stops. office-hours is the idea-development conversation; problem-discovery is quick context recovery; grilling stress-tests an existing plan. Do not chain their interviews by default. prototype-user-test serves design evaluation and separates its private author packet from fresh participant prompts. product-brief carries accepted decisions and the tested/simulated limits into the next role. An exploratory prototype can feed back into product decisions before formal design without restarting settled choices. User-invoked engineering or design roles are choices for the human; other skills cannot call them. Model-invoked dependencies use a separate Skill tool call for each included task.
 
 ## On-ramps
 

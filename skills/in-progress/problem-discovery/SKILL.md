@@ -17,6 +17,8 @@ Infer the working purpose from that context: business validation, an internal/pe
 
 Ask one consequential gap at a time, only when a human answer changes the next decision. Look up recoverable facts yourself. Skip answered questions, including answers in earlier documents. Explain why the remaining gap matters and wait for that answer; no fixed question count. When the user asks to proceed, carry unresolved items as assumptions and give the settled input to the next task.
 
+When several stated problems all apply, follow a recent concrete occasion to understand what happened first and what consequence mattered. Keep this recovery task short. If the user wants to develop or rethink the idea through a conversation, call the Skill tool with "office-hours", passing answered context and fixed choices. With no Skill tool, read its installed instructions; if unavailable, name the optional beta and continue only the recoverable task. Do not replace an explicitly requested brainstorm with a completed Problem Brief.
+
 Done when the next scoped task can identify its user, situation, intended change and first boundary, or its exact blocking decision. A sufficiently defined problem proceeds directly to the brief without another interview.
 
 ## Write the Problem Brief

@@ -49,7 +49,7 @@
           "path": "skills/engineering/ask-matt",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
           "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:45ab0e667eee9c2bf4162acbe69a971d59b4f4ea12d88c2a56e9ba3ef39a0ff0",
+          "localDigest": "sha256:6c7fa5ea0bc7a3d03405430f5a4db7af3dc9355301e350c109c6ebe82dd88059",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -94,6 +94,15 @@
               "decision": "keep-local",
               "reason": "Add conditional PM beta routing and the product/design/engineering contract without promoting or automatically installing candidates. No upstream reconciliation was performed.",
               "report": "evals/product-management-beta/ROLE-BOUNDARIES.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         }
@@ -1780,7 +1789,7 @@
           "path": "office-hours",
           "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
           "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
-          "localDigest": "sha256:21ecb4f9c6eeb9df2d969b502052b003b89281430e6c7ee51fabd8488b842792",
+          "localDigest": "sha256:3c3c200934e3f475020fb198174cf770527530fb543c964856697a3d10ede6e9",
           "files": {
             "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
             "office-hours/sections/phase-2b-builder-brainstorm.md": "sha256:05251d190b32f1da63165e8339211404963556ef5b9cf4c3e46361cbc51027e2"
@@ -1796,6 +1805,15 @@
               "decision": "adapt",
               "reason": "Retain startup/builder purpose routing, specificity, status quo, smallest scope and smart-skip; replace forced pressure and mandatory later phases with decision-changing gaps and sufficient-input completion.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         }
@@ -1812,7 +1830,7 @@
           "path": "pm-execution/skills/create-prd",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-execution/skills/create-prd/SKILL.md": "sha256:e3aa10a437ed7f748a957bd5d1eb06d8fa3f56dc728dcb93ce484387ecc3fa13"
           },
@@ -1826,6 +1844,15 @@
               "decision": "adapt",
               "reason": "Use lean decision-ready scope and honest assumptions; replace mandatory eight sections, fixed size and blanket missing-input gate with relevant fields, scoped updates and product behavior.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1834,7 +1861,7 @@
           "path": "pm-product-strategy/skills/value-proposition",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-product-strategy/skills/value-proposition/SKILL.md": "sha256:b07cc0399582fc178be31b513b313d2420c7941dd568b52a0bf6cfb0ab6c4ec7"
           },
@@ -1848,6 +1875,15 @@
               "decision": "adapt",
               "reason": "Select situation/current alternative/desired outcome questions; preserve Huryn and Abdul Rauf credit, omit mandatory marketing positioning and unsupported framework superiority claims.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1856,7 +1892,7 @@
           "path": "pm-execution/skills/job-stories",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-execution/skills/job-stories/SKILL.md": "sha256:69f75264b311418a1ebaf06c9872ed1271203cfc6316466fcb99cc948ade800b"
           },
@@ -1870,6 +1906,15 @@
               "decision": "adapt",
               "reason": "Select situation, motivation, outcome and observable completion; omit fixed story counts and backlog deliverables.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1878,7 +1923,7 @@
           "path": "office-hours",
           "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
           "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
-          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
           },
@@ -1892,6 +1937,46 @@
               "decision": "adapt",
               "reason": "Use decision-plus-reason concision, rejected-alternative brevity and Supersedes lineage; add explicit authority and observed/reported/intended handoff, omit gstack runtime, telemetry and profile.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-market-research/skills/competitor-analysis",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "pm-market-research/skills/competitor-analysis/SKILL.md": "sha256:8e627fc7fba96f223ad9f8fd23c6033a429cc28f9e9ce2d672854c6851810c2b"
+          },
+          "reviewScope": "The listed competitor-analysis source and the local benchmark procedure only.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-market-research/skills/competitor-analysis/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Adapt direct/indirect/status-quo comparison into evidence-to-experience-to-decision synthesis; omit fixed counts and unsupported market/performance claims.",
+              "report": "evals/pm-conversation-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         }
@@ -1908,7 +1993,7 @@
           "path": "pm-product-discovery/skills/identify-assumptions-existing",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md": "sha256:59d788213014552ac64f589c71ce82b135f9ef4b84fec457446ad90795fd439f"
           },
@@ -1922,6 +2007,15 @@
               "decision": "adapt",
               "reason": "Use existing-product perspective checks and current evidence; bound the selected uncertainty rather than require every risk category.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1930,7 +2024,7 @@
           "path": "pm-product-discovery/skills/identify-assumptions-new",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/identify-assumptions-new/SKILL.md": "sha256:962b1e0c01e45ceb930e4d806c0ffb05e36cf25dcfef5497e7828d89d6ae474b"
           },
@@ -1944,6 +2038,15 @@
               "decision": "adapt",
               "reason": "Use new-product assumption review; retain upstream conceptual attribution, omit automatic eight-category inventory.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1952,7 +2055,7 @@
           "path": "pm-product-discovery/skills/prioritize-assumptions",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/prioritize-assumptions/SKILL.md": "sha256:18160a0138c788790c9dd22995ffdcfac485c1f0599c170d8668678e59766073"
           },
@@ -1966,6 +2069,15 @@
               "decision": "adapt",
               "reason": "Retain consequential-impact and uncertainty comparison; omit mismatched confidence formula, unsupported ICE/RICE scores and quadrant-based automatic build/reject.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -1974,7 +2086,7 @@
           "path": "pm-product-discovery/skills/brainstorm-experiments-new",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md": "sha256:fe66d9ba76cf6b0e156298c88f752d8e1e62549fe77a7c01c0a74d8679da9334"
           },
@@ -1997,6 +2109,15 @@
               "decision": "adapt",
               "reason": "After the paired smoke trial, distinguish proposed test operating constraints from approved product requirements in downstream handoff; same-input fresh recheck recorded. Upstream pins and hashes remain unchanged.",
               "report": "evals/product-management-beta/RESULTS.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         },
@@ -2005,7 +2126,7 @@
           "path": "pm-execution/skills/pre-mortem",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
           "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-execution/skills/pre-mortem/SKILL.md": "sha256:4e5cf10a46ac1d1cdde6aa009ba2b860c532f55c0c3d9ec53a82082cad073052"
           },
@@ -2019,10 +2140,62 @@
               "decision": "adapt",
               "reason": "Use failure-backward questions only for existing-plan review; omit fixed launch dates, defaults and compulsory risk labels.",
               "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
             }
           ]
         }
       ],
+      "influences": []
+    },
+    {
+      "id": "office-hours",
+      "path": "skills/in-progress/office-hours",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:5385db836f69425e32a903d412e5c81af0b7e320f105377855d19ffe3c197708",
+          "files": {
+            "office-hours/SKILL.md.tmpl": "sha256:e0eee0cf83c00897860149d9d423fd6a3c81486e8fa48494a25171e5a4569676",
+            "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
+            "office-hours/sections/phase-2b-builder-brainstorm.md": "sha256:05251d190b32f1da63165e8339211404963556ef5b9cf4c3e46361cbc51027e2",
+            "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
+          },
+          "reviewScope": "Full listed conversational source files; generated host preambles and runtime helpers are not imported or reconciled.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/SKILL.md.tmpl",
+                "office-hours/sections/phase-2a-startup-diagnostic.md",
+                "office-hours/sections/phase-2b-builder-brainstorm.md",
+                "office-hours/sections/design-and-handoff.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve mode/posture, adaptive questioning, reuse/landscape, premise revision, alternatives choice, decision record, bounded review and closing. Replace runtime adapters, honor direct skip requests, use one canonical product brief and evidence-bounded coaching; keep visual work in design roles.",
+              "report": "evals/pm-conversation-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "prototype-user-test",
+      "path": "skills/in-progress/prototype-user-test",
+      "kind": "original",
+      "origins": [],
       "influences": []
     }
   ],

@@ -56,11 +56,11 @@ Component workbenches remain explicit choices: [state-machine](https://github.co
 
 ## Product, design and engineering
 
-For product work, the router preserves a path from product context to design decisions to engineering inputs. The optional [PM beta candidates](https://github.com/reach0908/paul-skills/blob/main/skills/in-progress/README.md) clarify problems, preserve a brief or design a decision test. They are outside the promoted plugin and are recommended for execution only when separately available.
+For product work, the router preserves a path from product context to design decisions to engineering inputs. The optional [PM beta candidates](https://github.com/reach0908/paul-skills/blob/main/skills/in-progress/README.md) develop an idea in office-hours, recover a problem, preserve a brief, design a decision test or observe fresh AI prototype attempts. They are outside the promoted plugin and are recommended for execution only when separately available.
 
 Design takes the agreed scope, product rules and current evidence into navigation, flows, screens and interface review. Engineering takes the canonical product contract and latest design inputs into technical synthesis, implementation slices and verification. A small settled task can start at the appropriate stage without another interview or a new bundle of documents.
 
-A usability experiment asks whether people can complete a product task and defines what the result changes. A clipping or keyboard check belongs to interface QA. Product handoff stays in product-brief and links current decisions, evidence state, superseded inputs and one next action.
+A usability experiment asks whether people can complete a product task and defines what the result changes. A clipping or keyboard check belongs to interface QA. Fresh AI prototype task attempts and post-task interviews belong to prototype-user-test; the author's intent stays out of the participant packet until observation is frozen. They are not human-user evidence. Product handoff stays in product-brief and checks current decisions, evidence state, contradictions, superseded inputs and one next action.
 
 ## Common questions
 

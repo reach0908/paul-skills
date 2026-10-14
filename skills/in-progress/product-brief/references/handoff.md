@@ -1,18 +1,28 @@
 # Product handoff
 
-Read this when preparing the next role or session. Use a short section of the current brief or the requested handoff location; a standalone document is optional.
+Read when the user ends exploration, prepares design/engineering, or asks whether the next role can start. A handoff compiles agreed intent and evidence; it does not invent a new source of requirements. Use the current brief or requested location; a separate document is optional.
 
-Carry the purpose, latest decisions and reasons through references to the canonical brief. State the current state as observed, reported or intended, with evidence locators and revisions. Name the remaining gap between that state and the intended behavior.
+## Resolve current inputs
 
-Give the exact files or artifact locators the next role should read, their authority/status and relevant section. Identify superseded documents explicitly, including which current decision replaces them. Select one immediate next action and name its role, input, unresolved dependency and completion signal. Further alternatives stay options for the user.
+Name the canonical product document and revision/digest, latest selected prototype/design and relevant observations. Preserve purpose, fixed decisions and their reasons. Mark superseded inputs and the current decision that replaces them. Separate intended, observed and reported behavior, with exact artifact locators. Prototype constants, mock services and author-only QA remain labelled as such.
+
+## Check before calling the handoff complete
+
+Walk the core task against the available brief, flow, domain, AI/experiment and development artifacts. Check product object/actor meaning, entry, changes, interruption, exit/return, completion and later retrieval where relevant. Compare directly dependent descriptions for contradictions, including permissions, posting, time/date, persistence and repeated actions. Use existing stable IDs; equivalent input in a PRD is sufficient without a separately named Problem Brief.
+
+For each gap, distinguish a document inconsistency that can be reconciled from existing decisions, a proposal awaiting choice, and a genuinely missing policy/feasibility decision. Do not silently pick the latter. Check that a planned test's prerequisites actually precede it; an integration test cannot prove its own unimplemented prerequisite.
+
+State readiness for the **next scoped role**, not a global product-ready verdict. Common IA can start while a policy-dependent screen is conditional. Missing artifacts owned by that next role are its output, not reasons to fail the current stage. Keep chosen prototype decisions and strengthen the missing structure; do not restart visual exploration automatically.
+
+## Give one next action
 
 | Next stage | Product input to preserve | Stage-owned output |
 | --- | --- | --- |
-| Design | User situation, scope, behavior, permissions, persistence, completion and fixed decisions | Information architecture, task transitions, screen hierarchy, interface decisions and scoped observations |
-| Engineering | Canonical product contract plus latest design artifacts, stable IDs and unresolved gaps | Technical specification, implementation slices, code and verification |
+| Design | Situation, scope, product meaning, rules, selected prototype, evidence and open decisions | Destinations, task transitions, screen hierarchy, interface choices and scoped observations |
+| Engineering | Canonical product contract plus latest design artifacts, stable IDs, acceptance behavior and exact unresolved dependencies | Technical specification, implementation slices, code and verification |
 
-Design may expose a product-policy gap; route that gap back to a decision rather than silently resolving it through layout. Engineering may expose a feasibility gap; keep its proposed adjustment separate until decided. Preserve unaffected choices across either loop.
+Give exact files and relevant sections, current authority, the remaining state-to-intent gap and one immediate next action with role, input, dependency and observable completion signal. Further options stay optional. A product-policy question returns to its decision owner; a feasibility adjustment stays a proposal until decided. Preserve unaffected choices.
 
-Suggest installed design roles for the requested IA, flow, screen or review task. Verify their availability and invocation policy before execution. Call the Skill tool one model-invoked skill at a time only when its work is included in the request. A user-invoked role is a named next choice for the human. For technical synthesis, tell the user to run to-spec with these inputs; for implementation decomposition, to-tickets. Their tracker/setup prerequisites remain theirs.
+Suggest installed design roles for requested IA, flow, screen or observation work. For fresh AI task attempts, prototype-user-test keeps author intent apart from participant packets and returns behavior evidence. Human study and other consequential assumption plans belong to experiment-design. Verify availability and invocation policy. Call model-invoked roles one Skill call at a time only for work included in the request; without that tool, read installed instructions and report missing capabilities. For technical synthesis, tell the human to invoke to-spec, then to-tickets when needed, with these inputs and their existing setup prerequisites.
 
-Done when the next role can find the current authority, distinguish intent from evidence, and start that one action without repeating the product interview. A handoff does not itself approve publication, installation, release or execution of an external experiment.
+Done when the next role can start the stated portion without repeating the product interview, and every remaining blocker names its affected scope and decision. This check establishes document readiness only; implementation, human acceptance and release need their own evidence.

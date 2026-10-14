@@ -21,7 +21,7 @@ Write in the user's language, using the existing product document convention. A 
 
 - Problem, use scene and purpose, connected to current alternatives and expected benefit.
 - First scope, later scope and non-goals.
-- Product behavior: triggering actions, meaningful results, access/permission rules, persistence and completion conditions. Distinguish opening, selecting, saving and completing when they mean different things.
+- Product behavior: meaningful objects and actors, triggering actions, access/permission rules, persistence and completion conditions. Distinguish opening, selecting, saving, sharing and completing. For the core task, check what remains fixed when it is changed, interrupted, resumed, ended early or found again. Product meaning and invariants belong here; detailed transitions belong to user-flow.
 - Observations needed to judge success, with the source and baseline status. Missing numbers remain unknown or labelled proposals.
 - Open assumptions, blocking decisions and the next action.
 
@@ -31,6 +31,10 @@ Keep **intended behavior** separate from **observed product state** and **report
 
 UI and technology appear only as existing artifact links, fixed constraints and inputs needed by the next role. Leave navigation, screen composition, implementation seams and ticket decomposition to those roles.
 
+## Turn references into decisions
+
+For a product benchmark or competitor-based change, read [benchmark.md](references/benchmark.md). Existing research supplies facts; connect relevant facts to the product experience and the decision they affect. An attractive reference is not itself an approved requirement.
+
 ## Update without erasing choices
 
 For a revision or scoped feedback request, read [updates.md](references/updates.md). Preserve unaffected decisions and product rules. Record the changed portion's before, after and reason, including who decided it. Update dependent wording and links only where that change requires it.
@@ -39,8 +43,8 @@ For a revision or scoped feedback request, read [updates.md](references/updates.
 
 For a role or session handoff, read [handoff.md](references/handoff.md). Link the canonical brief rather than duplicating it. Product handoff is this procedure, not a separate skill.
 
-If a scoped question needs source work within the request, call the Skill tool with "research". For an authorized runnable exploration, call it with "prototype". An authorized assumption-test design uses "experiment-design". Each is a separate one-skill call. Without the tool or skill, give the prepared input and report that limit. User-invoked to-spec and to-tickets are choices for the human, never calls made by this skill.
+If a scoped question needs source work within the request, call the Skill tool with "research". For an authorized runnable exploration, call it with "prototype". An authorized assumption-test design uses "experiment-design". Each is a separate one-skill call. For a requested fresh-agent prototype task walkthrough, call the Skill tool with "prototype-user-test"; keep its observations separate from human validation. Without a Skill tool, read the installed model-invoked role and report unavailable capabilities. User-invoked to-spec and to-tickets are choices for the human, never calls made by this skill.
 
 ## Attribution
 
-Selectively combines PM Skills create-prd, value-proposition and job-stories with gstack decision-record concision and document lineage. The value framing in the source credits Paweł Huryn and Aatir Abdul Rauf; retain that credit for the adapted situation/alternative/outcome questions. Source revisions and file hashes are in the provenance inventory. See [PM Skills MIT notice](LICENSE.pm-skills) and [gstack MIT notice](LICENSE.gstack).
+Selectively combines PM Skills create-prd, value-proposition, job-stories and competitor-analysis with gstack decision-record concision and document lineage. The value framing in the source credits Paweł Huryn and Aatir Abdul Rauf; retain that credit for the adapted situation/alternative/outcome questions. Source revisions and file hashes are in the provenance inventory. See [PM Skills MIT notice](LICENSE.pm-skills) and [gstack MIT notice](LICENSE.gstack).

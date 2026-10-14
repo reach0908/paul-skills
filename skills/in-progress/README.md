@@ -21,3 +21,6 @@ npx skills@latest add reach0908/paul-skills --skill=<name>
 - **[problem-discovery](./problem-discovery/SKILL.md)**: Recover the product problem and first scope without repeating answered questions. Model-invoked PM beta.
 - **[product-brief](./product-brief/SKILL.md)**: Create or update product decisions and hand the current truth to design or engineering. Model-invoked PM beta.
 - **[experiment-design](./experiment-design/SKILL.md)**: Test a consequential product assumption with bounded evidence and result-dependent decisions. Model-invoked PM beta; ordinary UI QA stays with design.
+
+- **[office-hours](./office-hours/SKILL.md)**: Develop an idea through startup diagnosis or builder brainstorming, premise revision and an explicit approach choice. Model-invoked PM beta.
+- **[prototype-user-test](./prototype-user-test/SKILL.md)**: Observe fresh AI task attempts, interview participants and compare behavior with author intent. Model-invoked design-evaluation beta; not human-user validation.

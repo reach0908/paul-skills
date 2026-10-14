@@ -49,3 +49,5 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [Remaining eight design skills: promotion and installation](design-final-promotion-2026-10-14/REPORT.md) records user approval, unchanged candidate files, packaging and fresh discovery.
 
 The [PM beta trials](product-management-beta/README.md) compare three product-context candidates with no-skill controls on synthetic tasks, including the boundary between product experiments and design QA. They preserve task/skill hashes, raw artifacts, verdict grounds and limits; they do not promote the candidates.
+
+The [PM conversation and prototype walkthrough beta](pm-conversation-beta/RESULTS.md) records the office-hours behavioral fork, fresh AI task/interview protocol, existing-PM updates and bounded tests. It keeps original observations, host limits and user acceptance separate.
