@@ -1,0 +1,75 @@
+{
+  "host": "codex-cli 0.146.0",
+  "model_list": [
+    {
+      "model": "gpt-5.6-sol",
+      "isDefault": true,
+      "defaultReasoningEffort": "low"
+    },
+    {
+      "model": "gpt-5.6-terra",
+      "isDefault": false,
+      "defaultReasoningEffort": "medium"
+    },
+    {
+      "model": "gpt-5.6-luna",
+      "isDefault": false,
+      "defaultReasoningEffort": "medium"
+    }
+  ],
+  "failed_launches": [
+    {
+      "case_id": "boundary-interface-review",
+      "session_id": "01a139be-a2ee-7602-9eb3-11ce98206830",
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 5.45,
+      "errors": [
+        {
+          "type": "error",
+          "message": "exceeded retry limit, last status: 429 Too Many Requests"
+        },
+        {
+          "type": "turn.failed",
+          "error": {
+            "message": "exceeded retry limit, last status: 429 Too Many Requests"
+          }
+        }
+      ],
+      "model": "gpt-6.1-sol",
+      "startup_error": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.",
+      "stream_sha256": "39c28003f93c3710816fc6a092b0b27b06d3de0371643728dd885bf817e71c1d",
+      "stderr_sha256": "4b9784c3de66e4fd8be1717d45f16cd5dc13708918908154a04937e1bf18bd60",
+      "inputs_unchanged": true,
+      "protocol_sha256": "7e7c4a4840f865efd9a9eb5be865240489bbe3a69f44f591e402596173b0ab4e",
+      "cases_sha256": "7f02f3659a9631833ebedacd250592c833c4dfda91e8df8bffc68b400eae8102"
+    },
+    {
+      "case_id": "repair-staged",
+      "session_id": "01a139be-a524-7a00-88f4-739776621c16",
+      "exit_code": 1,
+      "timed_out": false,
+      "duration_seconds": 6.022,
+      "errors": [
+        {
+          "type": "error",
+          "message": "exceeded retry limit, last status: 429 Too Many Requests"
+        },
+        {
+          "type": "turn.failed",
+          "error": {
+            "message": "exceeded retry limit, last status: 429 Too Many Requests"
+          }
+        }
+      ],
+      "model": "gpt-6.1-sol",
+      "startup_error": "The 'gpt-6.1-sol' model is not supported when using Codex with a ChatGPT account.",
+      "stream_sha256": "caa0a1b4eab6e515eeac25e6fac7659c63dd69fbb841d54c769be2e1e0b26ea4",
+      "stderr_sha256": "a947424c9e78e690383423ef7289c6e6d3474a02bc3bb9ed07bfbcd68ed2505d",
+      "inputs_unchanged": true,
+      "protocol_sha256": "7e7c4a4840f865efd9a9eb5be865240489bbe3a69f44f591e402596173b0ab4e",
+      "cases_sha256": "7f02f3659a9631833ebedacd250592c833c4dfda91e8df8bffc68b400eae8102"
+    }
+  ],
+  "skill_outcome": "not measured"
+}
