@@ -97,7 +97,13 @@ The space is a look, not a correctness setting. Default to `in oklab`, and reach
 
 Three symptoms are `HIGH` on sight whatever the surface, matching `better-interface`'s escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
 
-**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: measure each required text, control and graphic pair against its actual painted background, including opacity and any image beneath it, in the supported appearances. Account for the scoped roles with measurements, justified exemptions or named verification limits.
+**Verification.** Check token values, gamut and both theme blocks. Give each contrast conclusion its evidence and scope:
+
+- **Calculated pair:** compute from resolved foreground and background values. For transparency or blending, state the known layers and compositing assumptions first. This establishes the supplied pair's contrast; actual UI application remains pending.
+- **Rendered check:** measure each required text, control and graphic pair against its actual painted background, including opacity, image regions, states and supported appearances. Record the inspected scope and justify exemptions by actual use.
+- **Pending:** name the missing inputs or observations. Unresolved image, gradient or backdrop content leaves the affected rendered check pending.
+
+Carry the same evidence status into the final summary. A plan lists the measurements still needed; completed claims identify the calculation or observation that supports them.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

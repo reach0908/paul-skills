@@ -1,0 +1,56 @@
+{
+  "reason": "The reused release collector requires daily global installation. This trial uses isolated installations for both arms. Replace only that irrelevant provenance check, matching the already frozen protocol. No semantic criterion changed.",
+  "initial_collect_sha256": "bb8790c5b2b2608d68241a2c5984c260dbd656741fd975fe6df84c03c36e610f",
+  "updated_collect_sha256": "f930bf9205bb165e682e91067cf3f39046b72cd6221b1253ddbe0888cb7851d2",
+  "initial_results": {
+    "codex": {
+      "planned": 12,
+      "completed": 3,
+      "by_arm": {
+        "baseline": {
+          "completed": 3,
+          "passed": 0
+        },
+        "candidate": {
+          "completed": 0,
+          "passed": 0
+        }
+      },
+      "failures": {
+        "baseline-original-1": [
+          "daily_global_install",
+          "semantic_review_pass"
+        ],
+        "baseline-original-2": [
+          "daily_global_install",
+          "semantic_review_pass"
+        ],
+        "baseline-unknown": [
+          "daily_global_install",
+          "semantic_review_pass"
+        ]
+      },
+      "cost_usd": null
+    },
+    "claude": {
+      "planned": 12,
+      "completed": 1,
+      "by_arm": {
+        "baseline": {
+          "completed": 1,
+          "passed": 0
+        },
+        "candidate": {
+          "completed": 0,
+          "passed": 0
+        }
+      },
+      "failures": {
+        "baseline-original-2": [
+          "semantic_review_pass"
+        ]
+      },
+      "cost_usd": 0.7762616
+    }
+  }
+}

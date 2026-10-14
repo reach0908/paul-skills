@@ -1,0 +1,103 @@
+{
+  "case_id": "baseline-resolved",
+  "arm": "baseline",
+  "mode": "explicit",
+  "session_id": "01a13acf-f8fd-77e3-b315-65564c6a7290",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true,
+    "isolated_plugin_install": true,
+    "contrast_reference_fully_read": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:better-colors 현재 폼 색상 검토를 준비해줘. 불투명 검정 글자와 흰 배경, 흰색 위의 반투명 검정 막 위에 흰 글자가 있는 두 가지 조합이야. 두 번째는 sRGB source-over, opacity 0.5, 추가 레이어 없음으로 합성 조건이 모두 주어졌어. 실제 UI는 아직 실행하지 않았어. 계산 가능한 항목과 화면에서 확인할 항목을 나누고, 활성 placeholder·readonly 입력·disabled 버튼에 적용할 WCAG AA 대비 기준과 APCA의 역할도 짧게 설명해줘. 이번에는 수치를 계산하지 말고 방법과 판정 범위만 제시해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 아직 수행하지 않은 측정은 결과처럼 말하지 마.",
+  "final_response": "두 조합 모두 주어진 합성 모델상 정적 계산이 가능합니다. 다만 실제 UI가 그 모델대로 렌더링되는지는 아직 검증되지 않았으므로 판정은 보류합니다.\n\n### 계산 가능한 항목\n\n1. **불투명 검정 글자 / 흰 배경**\n   - 실제 전경색과 배경색을 각각 sRGB에서 선형화합니다.\n   - WCAG 상대휘도를 구해 대비율을 계산합니다.\n   - 같은 색 쌍으로 APCA `Lc`도 별도 계산합니다.\n\n2. **불투명 흰 글자 / 50% 검정 막 / 흰 배경**\n   - 먼저 검정 막과 흰 배경을 sRGB source-over로 합성합니다.\n   - 채널별 방법은 `합성색 = 검정 × 0.5 + 흰색 × (1 − 0.5)`입니다.\n   - 이렇게 얻은 실제 막 색과 불투명 흰 글자를 WCAG 및 APCA로 측정합니다.\n   - 이는 `0.5`가 검정 막에만 적용되고 글자는 불투명하다는 조건입니다.\n\n이번 단계에서는 합성색, WCAG 대비율, APCA `Lc` 결과를 산출하지 않습니다.\n\n### WCAG AA 판정 범위\n\n| 대상 | AA 기준 |\n|---|---:|\n| 활성 입력의 placeholder | 일반 텍스트 `4.5:1` 이상 |\n| 큰 placeholder | `3:1` 이상 |\n| readonly 입력의 읽을 수 있는 텍스트 | 일반 텍스트 `4.5:1` 이상 |\n| 큰 readonly 텍스트 | `3:1` 이상 |\n| 입력 경계·상태 표시 등 필수 UI 시각 정보 | 인접 색과 `3:1` 이상 |\n| 실제 disabled 버튼 | WCAG 텍스트·비텍스트 대비 최소치 면제 |\n\n큰 텍스트는 최소 `24px` 일반 글꼴 또는 `18.67px` 굵은 글꼴입니다. Placeholder는 흐리게 보이더라도 활성 필드의 텍스트이므로 면제되지 않습니다. `readonly` 역시 사용자가 읽어야 하는 내용이므로 disabled 예외를 적용하면 안 됩니다.\n\n### APCA의 역할\n\nAPCA는 WCAG 적합성을 대체하지 않고, 글자 크기·굵기·명암 방향을 반영해 체감 가독성을 보완 점검하는 지표입니다.\n\n- 본문: `|Lc| 75` 이상, 권장 `90`\n- 라벨·제목 등 비본문 텍스트: `|Lc| 60` 이상\n- 큰 텍스트: `|Lc| 45` 이상\n- 단색 아이콘·UI 구성요소: `|Lc| 30` 이상\n- disabled 버튼: `|Lc| 30`을 법적 WCAG 기준이 아닌 가독성 목표로 사용\n\n`Lc`는 극성이 있으므로 어두운 글자/밝은 배경은 양수, 밝은 글자/어두운 배경은 음수이며 판정에는 절댓값을 사용합니다.\n\n### 실제 화면에서 확인할 항목\n\n- `opacity: 0.5`가 검정 배경에만 적용되는지, 부모 요소 전체에 적용되어 흰 글자까지 투명해지는지\n- placeholder에 브라우저 기본 opacity나 별도 색상이 추가되는지\n- 각 상태의 실제 computed color, 배경색, 글자 크기와 굵기\n- readonly가 disabled 스타일을 재사용하면서 텍스트를 지나치게 흐리게 만들지 않는지\n- 버튼이 실제로 disabled인지, 단지 비활성처럼 보이는 활성 버튼인지\n- 그림자, 필터, 이미지, gradient, 겹치는 레이어 등 제공된 합성 조건과 다른 요소가 없는지\n- 입력 경계, 포커스 표시와 상태 정보가 실제 배경에 대해 필요한 `3:1`을 충족하는지\n\n현재는 브라우저를 실행하지 않았으므로 위 항목은 모두 미확인 상태이며, 두 조합의 통과·실패 판정도 아직 내릴 수 없습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state wor",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requeste",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state work an",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixes, o",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-state ",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separate c",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-colors"
+  ],
+  "injected_skills": [
+    {
+      "name": "better-colors",
+      "file_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-colors": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"cat '$EXPERIMENT/baseline/codex-home/plugins/cache/paul-color-trial/paul-skills/0.4.2/skills/design/better-colors/contrast.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 48340,
+      "cached_input_tokens": 34560,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 2875,
+      "reasoning_output_tokens": 1766
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "25bcf9b0e9f513e7fc1a3633e2051ef20f447bd007bb5093adcf9e25286f95a3",
+  "cases_sha256": "f10fa6af24d72a4a6dc73bc239c672fabbb8565177078fb6286515a690fa20af",
+  "bundle_manifest_sha256": "da622e5800cb222a970e627d77a55d2cc2d5c2771ec042ba53313542c9a1e867",
+  "stream_sha256": "bb2637c76bc868e1eab20a60d1f540d1f11c0b8ebc285f1ef8c7015b063c7d4f",
+  "transcript_sha256": "04a8ee250ae4012a8da984d25b67ed7b0dc2eba72cf73a645f6945c223b42e71",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 63.918,
+  "response_sha256": "7f9cb6e617b8d17ba852b24b943073f270d436ddc6458200162f2cc4475e8001",
+  "contrast_reference": {
+    "call_id": "call_97aa6f0097b945d3ae583c77aca76af3",
+    "file_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+    "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+    "full_body_equal": true,
+    "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+  }
+}
