@@ -2,6 +2,16 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.4
+
+### Patch Changes
+
+- [#26](https://github.com/reach0908/paul-skills/pull/26) [`eb19775`](https://github.com/reach0908/paul-skills/commit/eb1977505c0a385a7608f19861962b660f575dfc) Thanks [@reach0908](https://github.com/reach0908)! - Connect screen intent, evidence-labeled first-impression checks and task-aware simplification across wireframe, layout and interface review. Preserve required content, frequent actions and review authorization; distinguish AI predictions from timed human observations.
+  
+  Load all six interface-review owners before artifact inspection and separate load failures from product findings. Respect partial prototype contracts and approved brand composition when judging first impressions; retain unconfirmed risks as verification limits.
+  
+  Route requested wireframe first-impression validation through the owning layout skill.
+
 ## 0.4.3
 
 ### Patch Changes
