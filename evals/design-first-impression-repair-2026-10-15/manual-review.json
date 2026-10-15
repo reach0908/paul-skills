@@ -1,0 +1,242 @@
+{
+  "repair-baseline-brand-repeat": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "e568f14af01ef78013e247065423eabce0f08c8c223d0853e62ae68649ecf5a2",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "brand_restraint": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-brand-repeat.md",
+        "assessment": "각 블록을 해당 작품으로 가는 <a>로 감싸고 작품명 캡션을 붙이라는 MEDIUM. 약속되지 않은 작품 자체 클릭을 필수 개선으로 추가."
+      }
+    ]
+  },
+  "repair-baseline-brand-required-nav": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "c67d3283265b688caf225cb9ff324efd6f44182fd333e40a0559e6e2acbdc86f",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "required_path_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-brand-required-nav.md",
+        "assessment": "HIGH: 납품 범위에 든 두 탐색 경로의 대상 id 없음. 원래 정체성 유지, 추가 시각 제안도 있음."
+      }
+    ]
+  },
+  "repair-baseline-brand": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "d01dd6a2d0c62c03b4a7b7f18734dc05bc3659bfe6128128593d6bd9aecad1dd",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "brand_restraint": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-brand.md",
+        "assessment": "MEDIUM: 각 블록을 해당 작품으로 가는 링크로 만들고 아래에 세리프 작품명을 붙임. 제목/대상은 unknown인데 필수 개선으로 제시. 현재 상태에 없는 표의 text-align도 LOW로 등재."
+      }
+    ]
+  },
+  "repair-baseline-landing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "d0ca4dbf81b83ff5dafea1c36e0021ffa2647fe26bf0b64845e53d4a50e40a32",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-landing.md",
+        "assessment": "레이아웃 관점과 첫인상 절차만 적용했습니다. 실제 성공한 owner는 better-layout 1개."
+      }
+    ]
+  },
+  "repair-baseline-missing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "9ffad1ae7475c275917a1e402ab368da433426df4cf137d5ac483cc5b1467b1a",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-missing.md",
+        "assessment": "영역별 검토 하나도 하지 않았습니다. owner 호출 0. unknown/not_run과 현재 화면 부재는 정확히 기록."
+      }
+    ]
+  },
+  "repair-baseline-reading": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "a138b6e97b9e5eaf555b1e948f1837ba160f2b51afc34d4c4dfb21656350bab5",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-reading.md",
+        "assessment": "다음 행동은 필요 없음. 단독 layout 리뷰로 유지. LOW 두 건, 사람/새 AI not_run."
+      }
+    ]
+  },
+  "repair-baseline-staged": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "e24adef4ac0986bff1027371c74ca2ced8cb4157a3e7c08bfda94e2638fb38f4",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-staged.md",
+        "assessment": "interface-review staged 명령 안내로 종료. tool calls 0."
+      }
+    ]
+  },
+  "repair-baseline-warning": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "5c13269061ea02a2901850ee0afff4aa1eacbf5215ff4319b42c23f6f97309af",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-baseline-warning.md",
+        "assessment": "첫인상 기준 문서만 읽었습니다. owner 호출 0. 내 기록 보존, 상대 기록 접근 종료, 경고와 두 버튼 보존."
+      }
+    ]
+  },
+  "repair-candidate-brand-repeat": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "26e92fa046aef08e84aad695e07483c571c16c127a0681fa2b390978ece2981a",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "brand_restraint": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-brand-repeat.md",
+        "assessment": "근거로 보여줄 수 있는 문제가 없어서 개선안은 제안하지 않습니다. 여백·비대칭 유지; 링크 대상과 썸네일 의미는 범위/unknown으로 분리."
+      }
+    ]
+  },
+  "repair-candidate-brand-required-nav": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "6f7dcd9e297930b6b5bdf55d3b144f06a3888a4639bf1e932b726039833b662b",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "required_path_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-brand-required-nav.md",
+        "assessment": "HIGH 판정은 클릭 결과가 아니라 소스에 대상이 없다는 사실에 근거합니다. 요구된 두 목적지는 결함으로 유지."
+      }
+    ]
+  },
+  "repair-candidate-brand": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "42334430e53adf537e6117e2ec222a0c9a12ff37495c4a4cc3cf2009ca64f671",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "brand_restraint": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-brand.md",
+        "assessment": "지금 고쳐야 할 레이아웃 문제는 없습니다. 승인된 비대칭을 유지하고 미구현 도착지는 남은 범위로 분리."
+      }
+    ]
+  },
+  "repair-candidate-landing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "d3a7a2b3a14d96646f5887c6b0965de9725f6b9d6816f68daf609b3c29899b87",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-landing.md",
+        "assessment": "6개 도메인 스킬은 모두 정상적으로 불러왔습니다. 호출 증거 6개; 가격/동의/CTA 유지. 그러나 초기 절차 read와 함께 artifact를 먼저 읽음."
+      }
+    ]
+  },
+  "repair-candidate-missing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "3bc618850e54fdc4b9cf626125616ae4337ddbccc71e712c10be24b11ee19c36",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-missing.md",
+        "assessment": "6개 영역의 점검 기준은 모두 정상적으로 불러왔습니다. 실제 화면은 하나도 검토하지 않았음을 분리. 그러나 BRIEF를 owner보다 먼저 읽음."
+      }
+    ]
+  },
+  "repair-candidate-reading": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "25ac95e2e75500569ecb7baa46f8443b541f4b43420554a02d8f9b94a4e0d900",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-reading.md",
+        "assessment": "고칠 레이아웃 문제는 없습니다. CTA 추가 없음. 단독 layout 리뷰로 유지; 사람/새 AI not_run."
+      }
+    ]
+  },
+  "repair-candidate-staged": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "cf001632bc2f358cce8678b817278f7e2335685758663ea8bf0afe5571f1d6d1",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-staged.md",
+        "assessment": "interface-review staged 명령 안내로 종료. tool calls 0."
+      }
+    ]
+  },
+  "repair-candidate-warning": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "11a3522b425605fb1b1f3b03d97c89319298648edca804cee97de456e9e94eeb",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/repair-candidate-warning.md",
+        "assessment": "owner 호출 6개와 정책/경고/두 버튼 유지. 절차와 artifact를 먼저 함께 읽어 순서 기준 실패. 경고 문구의 심각도는 baseline HIGH와 달리 MEDIUM이며 별도 정확도 검증은 하지 않음."
+      }
+    ]
+  }
+}

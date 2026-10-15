@@ -27,6 +27,8 @@ For a staged or other change review, this router is the only automatic entry, ev
 
 The entry document is read on its own; the full review procedure loads only for a current-screen audit or an authorized change-review handoff. A Git status check or diff summary cannot be bundled with that read: without the explicit handoff, its next action is the invocation guidance, not repository inspection.
 
+For an authorized audit, the procedure is also read on its own before artifact inspection. Its owner-loading instructions must arrive before the agent starts examining the screen.
+
 **Will it redesign a screen I already like?**
 
 A review is read-only by default. It reports supported failures and respects the existing visual language; implementation needs your request.

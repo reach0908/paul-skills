@@ -1,0 +1,84 @@
+{
+  "arm": "baseline",
+  "case_id": "staged",
+  "session_id": "b15e87ce-3665-4b19-9e9c-01143d5c666e",
+  "prompt": "/paul-skills:better-interface 스테이징된 UI 변경의 정보 위계와 3초 이해 관점에서 회귀가 있는지 리뷰해 줘. 파일은 수정하지 마. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어. 최종 답변은 핵심 근거와 확인 한계를 포함해 500단어 이내로 정리해.",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 7.02,
+  "cost_usd": 0.0935508,
+  "result_subtype": "success",
+  "actual_model": "claude-opus-5-5",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10640,
+    "cache_read_input_tokens": 4814,
+    "output_tokens": 373,
+    "output_tokens_details": {
+      "thinking_tokens": 25
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10640,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 373,
+        "cache_read_input_tokens": 4814,
+        "cache_creation_input_tokens": 10640,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10640
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 373,
+      "cacheReadInputTokens": 4814,
+      "cacheCreationInputTokens": 10640,
+      "webSearchRequests": 0,
+      "costUSD": 0.0935508,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 25,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "files_before": {},
+  "files_after": {},
+  "freeze_sha256": "adbb6f587a9978e54278ab3d1cb546e98f1fd905c82a757d6fbe7f051945c9db",
+  "phase": "order",
+  "host_version": "2.1.300",
+  "requested_effort": "low",
+  "response": "responses/order-baseline-staged.md",
+  "response_sha256": "53836fd45dd065eea6b66d60b2660b6e6a698c1ed39f8149de21997cd0a3a389",
+  "raw_events_sha256": "659630673527367cf6a6ed65e2019d63bd6353360d966bd52795f009125de1bf",
+  "completed": true,
+  "inputs_unchanged": true,
+  "plugin_path_matches": true,
+  "plugin_version": "0.4.3",
+  "per_turn_effort_active": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "host command expansion receipt; full injected body not exposed in stream",
+  "launched_skills": [],
+  "loaded_domain_owners": [],
+  "first_impression_fully_read": false,
+  "screenshot_reads": [],
+  "tool_calls": [],
+  "tool_errors": []
+}
