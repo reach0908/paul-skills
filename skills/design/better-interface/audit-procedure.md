@@ -2,6 +2,12 @@
 
 Read this procedure after the entry decision in [SKILL.md](SKILL.md): a current-screen audit or an explicitly invoked `interface-review` with a resolved handoff. Keep that handoff's scope, classification and report format.
 
+## Load the owners before inspecting the surface
+
+Your next tool actions load these six installed owners in order: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`. Call the Skill tool once for each, using the installed namespace. Pass the same scoped audit task and permitted checks; their standalone output formats are replaced by this procedure. When the host has no Skill tool, read all six installed SKILL.md files in full instead. Finish these loads before inspecting the artifact, opening the optional first-impression reference or drafting findings.
+
+Track each successful load from its tool result, not a planned call or the owner's catalog description. If a call fails, record the failure and try the remaining owners. Missing screenshots, a narrow task, an early finding or a short final answer do not waive these loads. Spend the available review effort on the required owners before optional detail. If execution is interrupted or an owner cannot be loaded, report the audit as incomplete with the unloaded owners and reason; do not issue an approval or call the six-domain audit complete. Evidence availability is assessed after loading and can still leave a loaded domain unverified.
+
 ## Evidence, not taste
 
 Press hard on the escalation triggers and leave deliberate project choices alone. A trigger is a failure whatever the style guide says. A density, radius or voice you merely disagree with is not a finding.
@@ -32,7 +38,7 @@ A documented convention settles matters of taste but never excuses a trigger or 
 
 ### 4. Use domain skills as the sources of truth
 
-Call the Skill tool once for each owning skill below and complete each domain review before consolidation. If the host exposes no Skill tool, read each installed SKILL.md and its applicable references. Review in this order so foundational failures are not hidden by polish:
+Use the owners loaded at the start; do not invoke them a second time. Read their applicable references and complete each domain review before consolidation, in this order so foundational failures are not hidden by polish:
 
 1. `better-accessibility`
 2. `better-layout`
@@ -57,7 +63,7 @@ For a requested first-impression/three-second check, screen simplification or ob
 
 ### 5. Require evidence
 
-Every finding cites `path/to/file:line` and shows the current implementation. When runtime behavior determines the result, source alone cannot support a visual finding and a screenshot alone cannot support a code finding.
+Every finding cites `path/to/file:line` and shows the current implementation. When runtime behavior determines the result, source alone cannot support a visual finding and a screenshot alone cannot support a code finding. Establish which states and paths the artifact promises to implement. A declared partial prototype's unimplemented destination is a scope limit unless that path is required in the reviewed contract. Source can establish a missing required implementation, but never describe it as a click you observed. Keep unconfirmed risks and out-of-scope work in verification notes, outside the severity-ranked findings and blocking verdict.
 
 ### 6. Rank by user impact
 

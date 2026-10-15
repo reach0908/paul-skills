@@ -17,7 +17,7 @@ Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictio
 
 ## One report, six owners
 
-All six domain owners are loaded before coverage is judged, including for a one-attribute change. Each domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
+All six domain owners are loaded before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
 
 ## Common questions
 
@@ -30,6 +30,8 @@ The entry document is read on its own; the full review procedure loads only for 
 **Will it redesign a screen I already like?**
 
 A review is read-only by default. It reports supported failures and respects the existing visual language; implementation needs your request.
+
+Declared prototype boundaries are part of the review scope. Unimplemented destinations outside that contract and unconfirmed visual risks stay in verification notes; missing required implementations remain findings. Source facts are not reported as observed clicks.
 
 **Why did it return a command instead of reviewing my changes?**
 

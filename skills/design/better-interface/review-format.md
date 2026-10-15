@@ -10,7 +10,7 @@ State the exact scope, stack and styling conventions, the project convention doc
 | --- | --- | --- |
 | Accessibility | Files, components, states or checks | Findings count or `Clear` |
 
-Include every domain listed under **Use domain skills as the sources of truth**. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why.
+Include every domain listed under **Use domain skills as the sources of truth**. In each evidence cell, identify the successful owner load and the artifact checks separately. A skill load establishes which rules were used; it does not establish that the screen passed them. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why. A claimed load must have a successful tool result.
 
 ## Findings
 
@@ -42,7 +42,9 @@ Distinguish an author/AI precheck, fresh untimed AI observation and a measured h
 
 ## Verdict
 
-End with one of two:
+If any required owner failed to load, end with `Incomplete` and name the missing owners and reason. Retain any supported findings, including blockers, but do not turn this execution gap into a product defect or an approval. For an explicit change-review handoff, preserve its classifications and output format and state this execution limit alongside its verdict.
+
+Otherwise, end with one of two:
 
 - `Block`: one or more `HIGH` findings remain. Do not ship until they are fixed.
 - `Approve`: no `HIGH` findings remain. Any `MEDIUM` and `LOW` findings stay in the table as work to do.

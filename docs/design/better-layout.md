@@ -30,6 +30,10 @@ It uses the project scale and density. Its example numbers are defaults for proj
 
 It can provide an untimed precheck or a fresh AI observation. A human three-second result needs an actual timed exposure and recorded response. Missing or stale screenshots leave visual conclusions unverified.
 
+**Will unfinished prototype links or deliberate empty space block a review?**
+
+The review checks what the artifact promises to implement. A destination outside a partial prototype's scope remains pending; a missing required implementation is still actionable. It distinguishes source inspection from an observed interaction. Approved composition stays intact unless specific evidence connects it to a task or communication problem. Unconfirmed risks remain verification notes.
+
 ## It's working if
 
 - Requested widths and content states are named in the evidence.

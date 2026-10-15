@@ -10,6 +10,8 @@ Match the question to the surface: a landing page may communicate value and an a
 
 Bind every observation to the artifact revision or digest, route, state and viewport. For a live URL with no revision, use observation time. Missing or stale screenshots leave current visual conclusions unverified; source inspection alone cannot establish what a viewer saw.
 
+Establish the artifact's implementation contract as well as its visual intent. In a partial prototype, a destination outside the supplied state can be pending work. A missing target in source is a source fact, not an observed failed click or, by itself, a reason to block that prototype. Check whether the requested path was promised as implemented and required in this review. If so, a source-proven missing implementation is actionable even without a browser; name that evidence precisely. If the contract is unclear, record the question and verification limit instead of inventing a functional failure. A prototype label does not excuse defects in its required, implemented scope.
+
 ## Choose and label the observation
 
 | Method | Evidence to retain | Permitted conclusion |
@@ -27,6 +29,7 @@ A squint or reduced-detail view can reveal competing visual emphasis. It does no
 ## Compare, then simplify
 
 1. Compare intended meaning with the recorded observation. Quote the relevant response when one exists. Distinguish an observed mismatch from an analyst's prediction; an already clear screen can need no change.
+   Approved asymmetry, empty space, collage or an unusual visual language needs no normalization. Propose a change only when specific evidence connects it to a task or communication problem. A feeling that the composition is unfinished is not that evidence. Keep plausible but unconfirmed risks in verification notes, outside the severity-ranked findings and blocking verdict; do not add labels, interactions or decoration to fill a gap in the reviewer's taste.
 2. Locate the cause and its owner. Use the six laws below as questions, not numerical pass thresholds. Keep one finding per root cause.
 3. Prefer a bounded adjustment to grouping, emphasis, order or wording. Before proposing deletion or disclosure, account for required facts, prices and conditions, warnings, recovery, frequent actions, accessible names, keyboard/focus behavior and the approved visual identity. Keep preserved items reachable and understandable in their required state. If a proposed change alters policy, task scope or an approved design, return that decision to its owner.
 4. For an authorized implementation, repeat the relevant observation on the changed revision and recheck the affected task, narrow viewport and accessibility behavior. Use a fresh participant for a fresh-impression claim. If only a proposal exists or a recheck is unavailable, report it as pending; never infer improvement from fewer elements.
