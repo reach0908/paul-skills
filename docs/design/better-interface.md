@@ -4,6 +4,8 @@ Reviews a screen or flow across accessibility, layout, writing, typography, colo
 
 A review preserves deliberate product choices. A different visual preference is not a defect, and keeping the original interface can be the right result.
 
+When first impression or simplification is in scope, it connects intended meaning, the observation method, supported mismatches and preservation checks to the same six-domain report.
+
 ## When to reach for it
 
 Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically for a UI review. It chooses the route from your request before inspecting files:
@@ -33,11 +35,17 @@ A review is read-only by default. It reports supported failures and respects the
 
 Change attribution belongs to the directly invoked `interface-review`. Its absence from the automatic skill list does not mean it is uninstalled. Here, staged means the Git index, not a staging deployment. For all uncommitted changes, use `$paul-skills:interface-review working` in Codex or `/paul-skills:interface-review working` in Claude Code. This guidance also works before a repository is available. Invoking `better-interface` again does not authorize a change review.
 
+**Is a first-impression check another review domain?**
+
+No. Layout supplies its protocol and the cause keeps its existing owner. AI predictions, fresh AI observations and measured human responses remain separate; the final verdict does not certify human comprehension.
+
 ## It's working if
 
 - All six domains have evidence or a clear limit in the report.
 - The report distinguishes confirmed defects from taste and untested behavior.
 - An unnamed change request ends with the correct invocation instead of a guessed diff review.
+
+- First-impression evidence and pending human checks remain explicit in the final summary.
 
 ## Where it fits
 

@@ -15,6 +15,8 @@ Read the supplied brief, IA, flow and existing product context. Reuse their IDs,
 
 Map flow states to screens or in-place states. Record the information needed to act, the main action, secondary actions and feedback in each. Carry unresolved upstream choices forward. Ask only for a decision that blocks a screen's behavior, and draft the unaffected parts.
 
+For each screen/state, record its purpose, the first message a viewer should understand, the next action when the task calls for one, and information or controls that must remain available. Derive these from the existing brief and flow; mark missing intent as unresolved instead of inventing a conversion goal. A reading or gallery surface may have no primary action. These fields describe intended communication, not an observed test result.
+
 Done when each scoped flow state has a screen/state destination or an explicit exclusion.
 
 ## 2. Build one coherent wireframe
@@ -43,6 +45,8 @@ Done when each scoped path has observed evidence or a stated verification limit.
 
 ## 4. Deliver screen and state references
 
-Provide the runnable URL or file and Markdown in the existing project location. Include the input revisions, screen/state IDs, flow mapping, content hierarchy, action behavior, responsive changes, mock boundaries, observations and unresolved decisions. Record the artifact revision or digest used for the walkthrough.
+Provide the runnable URL or file and Markdown in the existing project location. Include the input revisions, screen/state IDs, flow mapping, content hierarchy, intended first message, next action or its absence, information and controls to preserve, action behavior, responsive changes, mock boundaries, observations and unresolved decisions. Record the artifact revision or digest used for the walkthrough.
+
+When first-impression or three-second validation is requested, read `first-impression.md` from the installed `better-layout` directory and use its observation and evidence contract. If unavailable, leave that check pending with the missing reference named. Otherwise pass the intent fields forward without adding an unsolicited test gate.
 
 Distinguish three outcomes: rendered, behavior checked, and user accepted. A working browser demo does not establish user acceptance or production readiness. The downstream designer or builder must be able to identify exactly which screens and states are settled and which still need a decision.

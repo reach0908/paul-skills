@@ -2,6 +2,8 @@
 
 Reviews grouping, alignment, reading order, spacing and responsive structure. It tests whether the layout still works when resized, translated or mirrored. An existing spacing scale or usable density is respected; a different preferred gap is not a finding.
 
+For competing emphasis and simplification, it compares intended communication with a labeled observation and preserves required information, frequent actions and the approved visual identity. Action visibility follows the task rather than a fixed count.
+
 ## When to reach for it
 
 Type `/better-layout`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically for clipping, ordering, grouping or responsive structure. Use [better-typography](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-typography.md) for wrapping and truncation within text.
@@ -24,11 +26,17 @@ No. Reading order and task importance govern the narrow layout. The [skill](http
 
 It uses the project scale and density. Its example numbers are defaults for projects without a system.
 
+**Can an AI review pass the three-second test?**
+
+It can provide an untimed precheck or a fresh AI observation. A human three-second result needs an actual timed exposure and recorded response. Missing or stale screenshots leave visual conclusions unverified.
+
 ## It's working if
 
 - Requested widths and content states are named in the evidence.
 - A proposed change fixes a demonstrated grouping or space problem.
 - Translated text and reading order remain usable where they were in scope.
+
+- First-impression claims identify the method, exact screen and evidence limits; a clear screen can stay unchanged.
 
 ## Where it fits
 

@@ -1,0 +1,137 @@
+{
+  "arm": "baseline",
+  "case_id": "dashboard",
+  "session_id": "e08be757-357d-44eb-a571-9eb981d5b0f9",
+  "prompt": "/paul-skills:better-layout 현재 출고 작업대가 복잡해 보여. 첫인상을 검토하고 실제 작업에 맞는 단순화안을 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+  "exit_code": 143,
+  "timed_out": true,
+  "duration_seconds": 240.469,
+  "cost_usd": null,
+  "result_subtype": null,
+  "actual_model": "claude-opus-5-5",
+  "usage": null,
+  "model_usage": null,
+  "files_before": {
+    "BRIEF.md": "9d0495ed9180b00e1e442aee8d7a923d28574e22feeb229070d6ba509524d120",
+    "capture.json": "276f5418792df695b5a918bdd6a3ea9cf826950d25dbd25cc4baec7e7eea5b5d",
+    "index.html": "ad49773464dcc730f0b181357d84fe762e403bcdaf083c81fd71abdb4c0a3c47",
+    "screen.png": "920a8fd7e0af02baa3a7d7e26a0478e7643d537e986fbf6db858353ed3432b05"
+  },
+  "files_after": {
+    "BRIEF.md": "9d0495ed9180b00e1e442aee8d7a923d28574e22feeb229070d6ba509524d120",
+    "capture.json": "276f5418792df695b5a918bdd6a3ea9cf826950d25dbd25cc4baec7e7eea5b5d",
+    "index.html": "ad49773464dcc730f0b181357d84fe762e403bcdaf083c81fd71abdb4c0a3c47",
+    "screen.png": "920a8fd7e0af02baa3a7d7e26a0478e7643d537e986fbf6db858353ed3432b05"
+  },
+  "freeze_sha256": "643e3f28d49ecace6065f255f68a623194048eb812a7dc3a60352a8a381bc2af",
+  "phase": "initial",
+  "host_version": "2.1.300",
+  "requested_effort": "inherited_unreported",
+  "response": "responses/baseline-dashboard.md",
+  "response_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+  "raw_events_sha256": "6ea665a1f5dcb987e7f193bae9d7638103d2f36d64c2b1ceac228c98872b9589",
+  "completed": false,
+  "inputs_unchanged": true,
+  "plugin_path_matches": true,
+  "plugin_version": "0.4.3",
+  "per_turn_effort_active": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "host command expansion receipt; full injected body not exposed in stream",
+  "launched_skills": [],
+  "loaded_domain_owners": [],
+  "first_impression_fully_read": null,
+  "screenshot_reads": [
+    "FIXTURE/screen.png"
+  ],
+  "tool_calls": [
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "FIXTURE"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "1d73b2534fecf2a3b1b671996932fd0aeb82baa06d4b2d8dfb04bfec85e67cec"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "*",
+        "path": "BUNDLE/skills/design/better-layout"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "cbe2beb02af50022858a227bc457e72f8e2bd1516170c2d17048d4fabeb7b364"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/BRIEF.md"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "eda09a4e2777a7953dc5dad281eb83a0107f5c5313cbfd48b497e2cf1f34465e",
+      "line_numbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/index.html"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "57600701fb18222bdd68254af5d30417f90abd511be4f38af7f381a63aab5f22",
+      "line_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/capture.json"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "8dd6dcfcd8197f8fc137c84a1e6138126cf1c14afe7e01427270f292a7e766a9",
+      "line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/screen.png"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "e2728e0b8103b649dec08783fd86ec9bb14214841592dba89be36a1f0e3787fc",
+      "line_numbers": []
+    },
+    {
+      "name": "Grep",
+      "input": {
+        "pattern": "(?i)table|numer|toolbar|dense|density|expert|menu",
+        "path": "BUNDLE/skills/design/better-layout",
+        "glob": "*.md",
+        "output_mode": "content"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "80a5c59cc3886519e9e081c576ade522a46948b13a650d4d506e511b8df4d94b"
+    }
+  ],
+  "tool_errors": []
+}

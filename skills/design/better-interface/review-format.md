@@ -34,6 +34,12 @@ List each check or interaction, the exact command or steps and the observed resu
 
 Record the design/source revision when available, route, state, viewport and input method. For a live URL with no source revision, record observation time and limit conclusions to that snapshot. Source analysis, screenshots, keyboard checks and assistive-technology checks are distinct evidence.
 
+### First impression, when in scope
+
+Use the observation contract in the loaded `better-layout/first-impression.md`. Add a compact record of target revision/route/state/viewport, intended message and next action (or `unknown`/`not_applicable` with reason), method, original response or labeled prediction, mismatch, owning domain and preservation/recheck status. Link supported mismatches into the existing findings table instead of adding duplicate findings.
+
+Distinguish an author/AI precheck, fresh untimed AI observation and a measured human three-second observation. Record unperformed methods as `not_run`; keep actual responses separate from the reviewer's interpretation. Missing or stale visual evidence leaves current visual conclusions unverified. The final summary must preserve these limits and must not turn an AI prediction into a human three-second pass.
+
 ## Verdict
 
 End with one of two:

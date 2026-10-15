@@ -53,6 +53,8 @@ When two skills appear to cover one issue, assign it to the owner of the underly
 
 Complete each owner's check before merging. Sharing an element or a proposed fix does not make two causes identical; preserve independent failures and their measurements even when one change resolves both.
 
+For a requested first-impression/three-second check, screen simplification or observed competition in the hierarchy, read `first-impression.md` from the loaded `better-layout` directory in full before judgment. Reuse its intent, observation and preservation contract, then assign each supported mismatch to its underlying domain. If that reference or current visual evidence is unavailable, name the limit. This is part of the applicable domain review, not a seventh domain or a substitute for completing all six owners. Keep change-review entry and handoff authorization unchanged.
+
 ### 5. Require evidence
 
 Every finding cites `path/to/file:line` and shows the current implementation. When runtime behavior determines the result, source alone cannot support a visual finding and a screenshot alone cannot support a code finding.
@@ -98,6 +100,8 @@ Severity says how bad a finding is; this says which fix to propose. When more th
 5. **Add.** A new token, a wrapper, a media query, an ARIA attribute the platform cannot supply.
 
 When the code under review adds what **Delete** would fix, that is a finding, and its **After** is the deletion.
+
+Apply this order only among fixes that preserve required information, controls, recovery and the approved design contract. Fewer visible elements alone does not establish a cheaper or better task outcome.
 
 ### 8. Consolidate systemic findings
 

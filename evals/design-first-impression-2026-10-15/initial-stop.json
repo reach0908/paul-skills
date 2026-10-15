@@ -1,0 +1,25 @@
+{
+  "reason": "execution_failure_stop",
+  "attempted_cases": [
+    "landing",
+    "clear",
+    "dashboard"
+  ],
+  "unstarted_cases": [
+    "warning",
+    "reading",
+    "brand",
+    "missing",
+    "wireframe",
+    "staged",
+    "dashboard-repeat"
+  ],
+  "completed": 3,
+  "attempts": 6,
+  "failures": [
+    "baseline-landing: timeout 240s",
+    "baseline-dashboard: timeout 240s",
+    "candidate-dashboard: error_max_budget_usd"
+  ],
+  "follow_up": "CONTROLLED-PROTOCOL.md"
+}
