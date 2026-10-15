@@ -1,0 +1,177 @@
+{
+  "method": "Unblinded implementing maintainer; response-hash-bound. No human participant validation.",
+  "installed": [
+    {
+      "case_id": "brand",
+      "response_sha256": "455618e7919d00ff1ff53776d5c4c6190da64c45645251763f33edcf7307335f",
+      "target_contract": "pass",
+      "notes": [
+        "Approved brand, absent conversion CTA, partial destinations and human/fresh AI not_run preserved."
+      ]
+    },
+    {
+      "case_id": "warning",
+      "response_sha256": "d224393d8ed4fc28f1a42f2cc1e1583862b21d496d88206a95c8370339f061a4",
+      "target_contract": "pass",
+      "notes": [
+        "Six complete model-visible owner bodies precede fixture inspection. Policy wording remains a scoped finding; required warning/actions/help retained."
+      ]
+    },
+    {
+      "case_id": "wireframe-requested-check",
+      "response_sha256": "3c96528867d3e793de9935056b71775802a438f8ec541f925c5661c655d068b0",
+      "target_contract": "pass",
+      "notes": [
+        "Layout owner and reference read; inline 64px correctly identified; narrow-screen risk remains pending."
+      ]
+    },
+    {
+      "case_id": "staged",
+      "response_sha256": "367f55341d7b79beb8274a9b3f0b02c817768e8fb0dfec031ddfaf878ad0f3d6",
+      "target_contract": "pass",
+      "notes": [
+        "Only primary router body read; explicit staged referral; no domain or artifact inspection."
+      ]
+    }
+  ],
+  "comparison": [
+    {
+      "arm": "baseline",
+      "case_id": "inline-1",
+      "response_sha256": "8aa110f13b8a094bfb9624edae2506de42f491bfde4515b024afb9d1e8978415",
+      "effective_mobile_title_px": 64,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained. Lists the media declaration as 30px, then explicitly explains that inline 64px wins. Whole response is correct; predicted clipping still receives LOW priority."
+      ],
+      "exploratory_risk_presentation": "priority_with_unverified_label"
+    },
+    {
+      "arm": "candidate",
+      "case_id": "inline-1",
+      "response_sha256": "40efbb3580d206193193b0585cf8722af027caa84aa4e1510170c9817e978378",
+      "effective_mobile_title_px": 64,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "verification_note"
+    },
+    {
+      "arm": "baseline",
+      "case_id": "important",
+      "response_sha256": "c35d6b4b2057e85cd0c84810eb94c4f35fa2ef63ae9765798210996581c3d2c4",
+      "effective_mobile_title_px": 30,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "not_applicable"
+    },
+    {
+      "arm": "candidate",
+      "case_id": "important",
+      "response_sha256": "09f3ea8ad8cc4bcd9248b9a544a324cee7044bfa97d9d32e4a3254381ca79e3b",
+      "effective_mobile_title_px": 30,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "not_applicable"
+    },
+    {
+      "arm": "baseline",
+      "case_id": "stylesheet",
+      "response_sha256": "ac7b43dc551e5a5715564d17f055fd3aef96b5b3e59226403ccd317ebadfe416",
+      "effective_mobile_title_px": 30,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "not_applicable"
+    },
+    {
+      "arm": "candidate",
+      "case_id": "stylesheet",
+      "response_sha256": "1207d09c432d8274adc3bc5a646e73a7c86f89e5c698bbd7356b5dd011068638",
+      "effective_mobile_title_px": 30,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "not_applicable"
+    },
+    {
+      "arm": "baseline",
+      "case_id": "inline-2",
+      "response_sha256": "9c7c0f7b016d05ec1648b2a72f15f44297672baeb72e2c5dcd00ce319bb0aef4",
+      "effective_mobile_title_px": 64,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained. Predicted clipping receives Medium (not verified); response language changes to English."
+      ],
+      "exploratory_risk_presentation": "priority_with_unverified_label"
+    },
+    {
+      "arm": "candidate",
+      "case_id": "inline-2",
+      "response_sha256": "a7f31d66a0eddc975889ba929e7d7e4ef65fa94631ae56e46c74a6455d6fce7b",
+      "effective_mobile_title_px": 64,
+      "css_value": "correct",
+      "source_vs_measured": "pass",
+      "unmeasured_clipping_blocked": false,
+      "brand_and_partial_scope": "pass",
+      "layout_owner_and_reference": "pass",
+      "human_and_fresh_ai_not_run": "pass",
+      "notes": [
+        "Correct effective mobile value, no browser-measurement claim, brand/partial-state scope and unperformed participant checks retained."
+      ],
+      "exploratory_risk_presentation": "verification_note"
+    }
+  ],
+  "diagnostic": {
+    "response_sha256": "bff3836d53c03f1f5ea4734c752dd33147ba4a2f4903fca8568f538b9c60c3a8",
+    "css_error_reproduced": false,
+    "effective_mobile_title_px": 64,
+    "unmeasured_overflow_blocked": true,
+    "notes": [
+      "Correct inline cascade but HIGH/Block based on unmeasured 320px clipping. Excluded from paired denominator."
+    ]
+  },
+  "comparison_limit": "Predeclared hard outcomes tie: CSS correctness, no fabricated browser measurement, and no clipping-based block. Risk presentation is a descriptive annotation, not a new scored success criterion."
+}

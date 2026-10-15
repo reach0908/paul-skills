@@ -1,0 +1,55 @@
+{
+  "active_executable": "$HOME/.local/bin/codex",
+  "installation_prefix": "$HOME/.local",
+  "before_version": "0.146.0",
+  "after_version": "0.162.1",
+  "package": "@openai/codex@0.162.1",
+  "upgrade_command": "npm install --global --prefix \"$HOME/.local\" @openai/codex@0.162.1",
+  "official_reference": "https://learn.chatgpt.com/docs/codex/cli",
+  "other_npm_packages_unchanged": true,
+  "settings": {
+    "codex": {
+      "byte_equal": true,
+      "sha256": "3943aed44a01b487eb7cab7bde7d164e4a485455622348b8701bafba4c498726"
+    },
+    "claude": {
+      "byte_equal": true,
+      "sha256": "f47599d7e771889e02f240c71ae1ed3fc4a163f080a47347524a3e841e98ec2a"
+    }
+  },
+  "probes": {
+    "before": {
+      "label": "before",
+      "version": "codex-cli 0.146.0",
+      "exit_code": 1,
+      "timed_out": false,
+      "passed": false,
+      "duration_seconds": 6.788,
+      "failure": {
+        "message": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}"
+      },
+      "events_sha256": "3fc4f773e8e208551ed342b2ceace2e018965f86385fdc6d7377914a9f1301d5",
+      "global_model_overridden": false,
+      "native_cli_version": "0.146.0",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "transcript_sha256": "7bf2295a970d7f766d3d6c88724b0fc263ee2256d4f15dcf29da05e75b3cc375"
+    },
+    "after": {
+      "label": "after",
+      "version": "codex-cli 0.162.1",
+      "exit_code": 0,
+      "timed_out": false,
+      "passed": true,
+      "duration_seconds": 13.795,
+      "failure": null,
+      "events_sha256": "aabc4c973280486492f9205555f2d67b6ab50c5767123b3cc8c1322e50d69db7",
+      "global_model_overridden": false,
+      "native_cli_version": "0.162.1",
+      "actual_model": "gpt-6-astra",
+      "actual_effort": "low",
+      "transcript_sha256": "6a71a5ff914a587dd2f153bd8e20bb93428eba88faeb16992569abf3c42a4950"
+    }
+  },
+  "other_cli_installations": "Untouched; alternate bun/Homebrew version probes exited 137, app bundle reports 0.162.0-alpha.17.2. PATH order was not changed."
+}

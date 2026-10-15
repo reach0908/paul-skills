@@ -1,0 +1,3 @@
+# CSS diagnostic reproduction
+
+One new Claude attempt of the exact released wireframe-requested-check prompt and original brand fixture, using global 0.4.4, inherited model and low effort. No browser or participants, 240 seconds and native USD 1 cap. Preserve output even if it repeats the prior source error. This diagnostic precedes candidate writing and is excluded from the subsequent paired comparison. Judge whether the response asserts the media declaration as the effective mobile title size despite the inline value. Missing exact values are separate from an explicit false value. Browser ground truth is collected independently by the maintainer and not shown to the agent.
