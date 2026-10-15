@@ -68,3 +68,5 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [First-impression workflow comparison](design-first-impression-2026-10-15/REPORT.md) records the five-file implementation, unchanged baseline/candidate snapshots, preserved execution-limit failures and eight completed pairs in a separate budget-constrained profile. Explicit reference reading, partial audit coverage and human validation remain distinct.
 
 - [First-impression scope and owner repair](design-first-impression-repair-2026-10-15/REPORT.md) compares eight fresh pairs, preserves the original failed evidence, and distinguishes successful six-owner invocation from three failed ordering checks. Its [entry-order follow-up](design-first-impression-order-2026-10-15/REPORT.md) tests the isolated procedure read with a separate frozen candidate and four pairs.
+
+- [PR #26 final review](design-first-impression-final-review-2026-10-15/REPORT.md) records separate Standards and Spec reviews, the wireframe dependency repair, and a fresh matched pair for requested first-impression validation. Historical trial evidence remains pinned to its original source.

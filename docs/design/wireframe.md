@@ -16,6 +16,10 @@ A writable local project or prototype workspace. Existing-component work needs t
 
 ## Common questions
 
+**Who handles a requested first-impression check?**
+
+Wireframe passes the screen intent and artifact to [better-layout](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-layout.md), which owns the observation procedure. An unavailable owner or reference leaves the check pending. Ordinary screen specifications still carry intent forward without adding a test gate.
+
 **Do we need Figma or a complete backend?**
 
 No. The default deliverables are local browser screens and Markdown. Network, permission and persistence effects can be mocked, but the report must identify those boundaries and any unwired paths.
