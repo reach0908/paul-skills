@@ -1,0 +1,87 @@
+{
+  "decision": "reviewable_patch_with_limitations",
+  "behavioral_files_changed": 5,
+  "phases": {
+    "initial": {
+      "baseline": {
+        "attempts": 3,
+        "completed": 1,
+        "median_duration_seconds": 240.469,
+        "reported_cost_usd": 0.7430981999999999,
+        "cost_unknown_attempts": 2,
+        "reference_full_reads": 0,
+        "hierarchy_attempts": 3,
+        "full_audit_owner_loads": 1,
+        "full_audit_attempts": 1
+      },
+      "candidate": {
+        "attempts": 3,
+        "completed": 2,
+        "median_duration_seconds": 191.487,
+        "reported_cost_usd": 2.5202594,
+        "cost_unknown_attempts": 0,
+        "reference_full_reads": 3,
+        "hierarchy_attempts": 3,
+        "full_audit_owner_loads": 1,
+        "full_audit_attempts": 1
+      }
+    },
+    "controlled": {
+      "baseline": {
+        "attempts": 2,
+        "completed": 0,
+        "median_duration_seconds": 120.448,
+        "reported_cost_usd": 1.9057922,
+        "cost_unknown_attempts": 0,
+        "reference_full_reads": 0,
+        "hierarchy_attempts": 2,
+        "full_audit_owner_loads": 1,
+        "full_audit_attempts": 1
+      },
+      "candidate": {
+        "attempts": 2,
+        "completed": 2,
+        "median_duration_seconds": 41.061,
+        "reported_cost_usd": 0.6744748,
+        "cost_unknown_attempts": 0,
+        "reference_full_reads": 2,
+        "hierarchy_attempts": 2,
+        "full_audit_owner_loads": 1,
+        "full_audit_attempts": 1
+      }
+    },
+    "bounded": {
+      "baseline": {
+        "attempts": 8,
+        "completed": 8,
+        "median_duration_seconds": 27.496000000000002,
+        "reported_cost_usd": 1.4451416,
+        "cost_unknown_attempts": 0,
+        "reference_full_reads": 0,
+        "hierarchy_attempts": 7,
+        "full_audit_owner_loads": 0,
+        "full_audit_attempts": 3
+      },
+      "candidate": {
+        "attempts": 8,
+        "completed": 8,
+        "median_duration_seconds": 30.500999999999998,
+        "reported_cost_usd": 1.5825144,
+        "cost_unknown_attempts": 0,
+        "reference_full_reads": 7,
+        "hierarchy_attempts": 7,
+        "full_audit_owner_loads": 0,
+        "full_audit_attempts": 3
+      }
+    }
+  },
+  "not_run": [
+    "human_three_second_observation",
+    "fresh_blind_AI_observation",
+    "implementation_and_retest",
+    "automatic_discovery",
+    "native_staged_entry",
+    "planned_identical_dashboard_repeat"
+  ],
+  "full_workflow_pass": false
+}

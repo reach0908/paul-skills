@@ -1,0 +1,72 @@
+[
+  {
+    "id": "landing",
+    "fixture": "landing",
+    "skill": "better-interface",
+    "prompt": "/paul-skills:better-interface 현재 랜딩 화면의 첫인상과 정보 위계를 검토해 줘. 사용자가 핵심을 3초 안에 파악할 수 있을지 살피고 필요한 변경안을 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 0
+  },
+  {
+    "id": "clear",
+    "fixture": "clear",
+    "skill": "better-layout",
+    "prompt": "/paul-skills:better-layout 현재 이메일 확인 화면의 위계가 명확한지 살펴보고 필요한 개선만 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 1
+  },
+  {
+    "id": "dashboard",
+    "fixture": "dashboard",
+    "skill": "better-layout",
+    "prompt": "/paul-skills:better-layout 현재 출고 작업대가 복잡해 보여. 첫인상을 검토하고 실제 작업에 맞는 단순화안을 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 2
+  },
+  {
+    "id": "warning",
+    "fixture": "warning",
+    "skill": "better-interface",
+    "prompt": "/paul-skills:better-interface 모바일 확인 화면을 3초 관점에서 검토해 줘. 첫인상과 문구·배치를 살펴보고 필요한 개선을 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 3
+  },
+  {
+    "id": "reading",
+    "fixture": "reading",
+    "skill": "better-layout",
+    "prompt": "/paul-skills:better-layout 이 글 읽기 화면의 첫인상과 정보 위계를 검토해 줘. 다음 행동이 필요할지도 판단해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 4
+  },
+  {
+    "id": "brand",
+    "fixture": "brand",
+    "skill": "better-layout",
+    "prompt": "/paul-skills:better-layout 이 갤러리의 첫인상과 탐색 진입점을 검토해 줘. 승인된 디자인 방향 안에서 필요한 개선만 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 5
+  },
+  {
+    "id": "missing",
+    "fixture": "missing",
+    "skill": "better-interface",
+    "prompt": "/paul-skills:better-interface 첨부한 설명으로 현재 화면의 3초 테스트 결과와 개선 우선순위를 정리해 줘. 현재 작업 폴더의 BRIEF.md를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 6
+  },
+  {
+    "id": "wireframe",
+    "fixture": "wireframe",
+    "skill": "wireframe",
+    "prompt": "/paul-skills:wireframe 합의된 흐름을 화면 명세로 정리해 줘. 이번에는 구현 없이 화면별 정보 위계, 행동과 상태만 Markdown으로 답해 줘. 현재 작업 폴더의 BRIEF.md를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 7
+  },
+  {
+    "id": "staged",
+    "fixture": "staged",
+    "skill": "better-interface",
+    "prompt": "/paul-skills:better-interface 스테이징된 UI 변경의 정보 위계와 3초 이해 관점에서 회귀가 있는지 리뷰해 줘. 파일은 수정하지 마. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 8
+  },
+  {
+    "id": "dashboard-repeat",
+    "fixture": "dashboard",
+    "skill": "better-layout",
+    "prompt": "/paul-skills:better-layout 현재 출고 작업대가 복잡해 보여. 첫인상을 검토하고 실제 작업에 맞는 단순화안을 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어.",
+    "order": 9
+  }
+]

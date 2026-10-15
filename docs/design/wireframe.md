@@ -2,6 +2,8 @@
 
 Build low-fidelity interactive screens with a Markdown screen specification. Controls follow agreed task transitions, while neutral styling leaves brand direction undecided.
 
+Each screen/state carries its intended first message, next action when relevant, and information and controls to preserve. These intent fields remain distinct from browser observations and user validation.
+
 ## When to reach for it
 
 Type `/wireframe`, or the agent reaches for it automatically when a task fits.
@@ -14,15 +16,25 @@ A writable local project or prototype workspace. Existing-component work needs t
 
 ## Common questions
 
+**Who handles a requested first-impression check?**
+
+Wireframe passes the screen intent and artifact to [better-layout](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-layout.md), which owns the observation procedure. An unavailable owner or reference leaves the check pending. Ordinary screen specifications still carry intent forward without adding a test gate.
+
 **Do we need Figma or a complete backend?**
 
 No. The default deliverables are local browser screens and Markdown. Network, permission and persistence effects can be mocked, but the report must identify those boundaries and any unwired paths.
+
+**Does every wireframe need a three-second test?**
+
+No. Intent travels with the screen specification. A requested first-impression check uses the layout observation protocol; human validation remains pending until a timed human observation exists.
 
 ## It's working if
 
 - You can operate the selected task, recovery and exit paths locally.
 - Screen and state IDs trace back to the flow, including unresolved decisions.
 - Keyboard and wide/narrow checks have observations or explicit verification limits.
+
+- Screen intent and required information survive the handoff without an invented conversion goal.
 
 ## Where it fits
 

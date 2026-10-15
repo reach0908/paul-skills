@@ -1,0 +1,84 @@
+{
+  "arm": "candidate",
+  "case_id": "staged",
+  "session_id": "e336d044-822e-45a6-8431-9739f8b4f25e",
+  "prompt": "/paul-skills:better-interface 스테이징된 UI 변경의 정보 위계와 3초 이해 관점에서 회귀가 있는지 리뷰해 줘. 파일은 수정하지 마. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어. 최종 답변은 핵심 근거와 확인 한계를 포함해 500단어 이내로 정리해.",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 7.914,
+  "cost_usd": 0.0938948,
+  "result_subtype": "success",
+  "actual_model": "claude-opus-5-5",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10643,
+    "cache_read_input_tokens": 4814,
+    "output_tokens": 389,
+    "output_tokens_details": {
+      "thinking_tokens": 51
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10643,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 389,
+        "cache_read_input_tokens": 4814,
+        "cache_creation_input_tokens": 10643,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10643
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 389,
+      "cacheReadInputTokens": 4814,
+      "cacheCreationInputTokens": 10643,
+      "webSearchRequests": 0,
+      "costUSD": 0.0938948,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 51,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "files_before": {},
+  "files_after": {},
+  "freeze_sha256": "061a5f6987b2172f9d6a2892c74c3d6024e42eb3af33f9c7a6e3eca9503a6ef7",
+  "phase": "repair",
+  "host_version": "2.1.300",
+  "requested_effort": "low",
+  "response": "responses/repair-candidate-staged.md",
+  "response_sha256": "cf001632bc2f358cce8678b817278f7e2335685758663ea8bf0afe5571f1d6d1",
+  "raw_events_sha256": "58f462ccf9e5d7ce9a18280ef537efeb7cd35b28021c1f153a491a3a8e1aba33",
+  "completed": true,
+  "inputs_unchanged": true,
+  "plugin_path_matches": true,
+  "plugin_version": "0.4.3",
+  "per_turn_effort_active": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "host command expansion receipt; full injected body not exposed in stream",
+  "launched_skills": [],
+  "loaded_domain_owners": [],
+  "first_impression_fully_read": false,
+  "screenshot_reads": [],
+  "tool_calls": [],
+  "tool_errors": []
+}

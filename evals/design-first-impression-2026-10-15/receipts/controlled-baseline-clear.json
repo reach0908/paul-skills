@@ -1,0 +1,167 @@
+{
+  "arm": "baseline",
+  "case_id": "clear",
+  "session_id": "3796f525-956a-419b-a42b-11a39b48ad0d",
+  "prompt": "/paul-skills:better-layout 현재 이메일 확인 화면의 위계가 명확한지 살펴보고 필요한 개선만 제안해 줘. 현재 작업 폴더의 BRIEF.md와 index.html, capture.json, screen.png를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어. 최종 답변은 핵심 근거와 확인 한계를 포함해 500단어 이내로 정리해.",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 132.801,
+  "cost_usd": 0.7531554,
+  "result_subtype": "error_max_budget_usd",
+  "actual_model": "claude-opus-5-5",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 13014,
+    "cache_read_input_tokens": 4814,
+    "output_tokens": 331,
+    "output_tokens_details": {
+      "thinking_tokens": 25
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 13014,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 331,
+        "cache_read_input_tokens": 4814,
+        "cache_creation_input_tokens": 13014,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 13014
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 3501,
+      "cacheReadInputTokens": 42842,
+      "cacheCreationInputTokens": 17847,
+      "webSearchRequests": 0,
+      "costUSD": 0.2140054,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1504,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 23180,
+      "outputTokens": 6147,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.53915,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "files_before": {
+    "BRIEF.md": "5ef22a48400491d11042c4bce4b934831ad81441b91fbf4c2fd914d32bb90101",
+    "capture.json": "dcd8c31bd5a106996cee47cf76a92464a371e66961743a06e208426497d6070c",
+    "index.html": "fbcc9a9e4923df57c457a48ec5f1b64430ef2bbf09235d033b755ab0e3e9d465",
+    "screen.png": "62190a44a4743569fa14c9a712c4a8d1db6e9d4ebcf7189b7484519a005b0943"
+  },
+  "files_after": {
+    "BRIEF.md": "5ef22a48400491d11042c4bce4b934831ad81441b91fbf4c2fd914d32bb90101",
+    "capture.json": "dcd8c31bd5a106996cee47cf76a92464a371e66961743a06e208426497d6070c",
+    "index.html": "fbcc9a9e4923df57c457a48ec5f1b64430ef2bbf09235d033b755ab0e3e9d465",
+    "screen.png": "62190a44a4743569fa14c9a712c4a8d1db6e9d4ebcf7189b7484519a005b0943"
+  },
+  "freeze_sha256": "e1b8e2b5ea4a7a489ad2624aca8bdfe7079591fe0149417217ccdfbeb5807369",
+  "phase": "controlled",
+  "host_version": "2.1.300",
+  "requested_effort": "high",
+  "response": "responses/controlled-baseline-clear.md",
+  "response_sha256": "fdd520206dc190481a0b66068c298609e77a995627e0f66d9f80bdf723d3c381",
+  "raw_events_sha256": "33a575082a88f8a04e49f5964247ca9fffb9206ab3250aa3df64232752097a1d",
+  "completed": false,
+  "inputs_unchanged": true,
+  "plugin_path_matches": true,
+  "plugin_version": "0.4.3",
+  "per_turn_effort_active": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "host command expansion receipt; full injected body not exposed in stream",
+  "launched_skills": [],
+  "loaded_domain_owners": [],
+  "first_impression_fully_read": null,
+  "screenshot_reads": [
+    "FIXTURE/screen.png"
+  ],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/BRIEF.md"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "7b3d404c22bd8d7da6191a6b71e90a37efa7e597c1319800e34b153dd3572a3b",
+      "line_numbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/index.html"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "f7b3e81c997f28e4498a090e562c0db6094f504412652516063f0c5a1638c896",
+      "line_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/capture.json"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "85246695b018e83cd39b9d003ff0e81e4f8cd0120752d27fd58547ffc40f321b",
+      "line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/screen.png"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "37b85ca9ba43ff6166d7389ce1da88f9c7e800ec128a83570befa7f87d743b39",
+      "line_numbers": []
+    }
+  ],
+  "tool_errors": []
+}

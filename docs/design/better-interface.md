@@ -4,6 +4,8 @@ Reviews a screen or flow across accessibility, layout, writing, typography, colo
 
 A review preserves deliberate product choices. A different visual preference is not a defect, and keeping the original interface can be the right result.
 
+When first impression or simplification is in scope, it connects intended meaning, the observation method, supported mismatches and preservation checks to the same six-domain report.
+
 ## When to reach for it
 
 Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically for a UI review. It chooses the route from your request before inspecting files:
@@ -15,7 +17,7 @@ Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictio
 
 ## One report, six owners
 
-All six domain owners are loaded before coverage is judged, including for a one-attribute change. Each domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
+All six domain owners are loaded before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
 
 ## Common questions
 
@@ -25,19 +27,29 @@ For a staged or other change review, this router is the only automatic entry, ev
 
 The entry document is read on its own; the full review procedure loads only for a current-screen audit or an authorized change-review handoff. A Git status check or diff summary cannot be bundled with that read: without the explicit handoff, its next action is the invocation guidance, not repository inspection.
 
+For an authorized audit, the procedure is also read on its own before artifact inspection. Its owner-loading instructions must arrive before the agent starts examining the screen.
+
 **Will it redesign a screen I already like?**
 
 A review is read-only by default. It reports supported failures and respects the existing visual language; implementation needs your request.
 
+Declared prototype boundaries are part of the review scope. Unimplemented destinations outside that contract and unconfirmed visual risks stay in verification notes; missing required implementations remain findings. Source facts are not reported as observed clicks.
+
 **Why did it return a command instead of reviewing my changes?**
 
 Change attribution belongs to the directly invoked `interface-review`. Its absence from the automatic skill list does not mean it is uninstalled. Here, staged means the Git index, not a staging deployment. For all uncommitted changes, use `$paul-skills:interface-review working` in Codex or `/paul-skills:interface-review working` in Claude Code. This guidance also works before a repository is available. Invoking `better-interface` again does not authorize a change review.
+
+**Is a first-impression check another review domain?**
+
+No. Layout supplies its protocol and the cause keeps its existing owner. AI predictions, fresh AI observations and measured human responses remain separate; the final verdict does not certify human comprehension.
 
 ## It's working if
 
 - All six domains have evidence or a clear limit in the report.
 - The report distinguishes confirmed defects from taste and untested behavior.
 - An unnamed change request ends with the correct invocation instead of a guessed diff review.
+
+- First-impression evidence and pending human checks remain explicit in the final summary.
 
 ## Where it fits
 

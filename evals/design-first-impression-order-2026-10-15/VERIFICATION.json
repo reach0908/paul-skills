@@ -1,0 +1,90 @@
+{
+  "integrity_pass": true,
+  "attempts": 8,
+  "completed": 8,
+  "matched_completed_pairs": [
+    "landing",
+    "missing",
+    "warning",
+    "staged"
+  ],
+  "unstarted_cases": [],
+  "cost_with_timeout_reserves_usd": 2.8876158,
+  "old_evidence_files_unchanged": 110,
+  "original_checkout_and_settings_unchanged": true,
+  "owner_execution": {
+    "order-baseline-landing": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": false
+    },
+    "order-baseline-missing": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": false
+    },
+    "order-baseline-warning": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": true
+    },
+    "order-candidate-landing": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": true
+    },
+    "order-candidate-missing": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": true
+    },
+    "order-candidate-warning": {
+      "successful_owner_calls": [
+        "better-accessibility",
+        "better-layout",
+        "better-writing",
+        "better-typography",
+        "better-colors",
+        "better-ui"
+      ],
+      "all_six_in_order": true,
+      "before_artifact_and_optional_reference": true
+    }
+  },
+  "semantic_success_is_separate": true
+}

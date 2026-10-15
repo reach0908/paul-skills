@@ -1,0 +1,102 @@
+{
+  "arm": "baseline",
+  "case_id": "wireframe",
+  "session_id": "e2ba80c1-2f8c-4eef-b6ca-667fd524b823",
+  "prompt": "/paul-skills:wireframe 합의된 흐름을 화면 명세로 정리해 줘. 이번에는 구현 없이 화면별 정보 위계, 행동과 상태만 Markdown으로 답해 줘. 현재 작업 폴더의 BRIEF.md를 사용해. 제공된 자료 범위에서 답하고 파일을 수정하지 마. 브라우저나 추가 참가자는 이번 세션에서 사용할 수 없어. 최종 답변은 핵심 근거와 확인 한계를 포함해 500단어 이내로 정리해.",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 22.807,
+  "cost_usd": 0.1358726,
+  "result_subtype": "success",
+  "actual_model": "claude-opus-5-5",
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 11669,
+    "cache_read_input_tokens": 20923,
+    "output_tokens": 1916,
+    "output_tokens_details": {
+      "thinking_tokens": 32
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11669,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1835,
+        "cache_read_input_tokens": 16109,
+        "cache_creation_input_tokens": 374,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 374
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 1916,
+      "cacheReadInputTokens": 20923,
+      "cacheCreationInputTokens": 11669,
+      "webSearchRequests": 0,
+      "costUSD": 0.1358726,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 32,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "files_before": {
+    "BRIEF.md": "eaca9c180b403c0d9cee2168e85173f1ada25efa99dc99da8c6c9e99e57b798d"
+  },
+  "files_after": {
+    "BRIEF.md": "eaca9c180b403c0d9cee2168e85173f1ada25efa99dc99da8c6c9e99e57b798d"
+  },
+  "freeze_sha256": "29ace814cc22d82c43d81dfa9f1d63980bf97a9c263b2c084195877c67bf0a23",
+  "phase": "bounded",
+  "host_version": "2.1.300",
+  "requested_effort": "low",
+  "response": "responses/bounded-baseline-wireframe.md",
+  "response_sha256": "06fd6b6be552b7e55fa596cedab1cf34beccf4b22ee78066103e5f060ca0c70d",
+  "raw_events_sha256": "356c49766d41501be56f0c1639f2503b48b91b01a31ca4a491ef3fc349eb02b3",
+  "completed": true,
+  "inputs_unchanged": true,
+  "plugin_path_matches": true,
+  "plugin_version": "0.4.3",
+  "per_turn_effort_active": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "host command expansion receipt; full injected body not exposed in stream",
+  "launched_skills": [],
+  "loaded_domain_owners": [],
+  "first_impression_fully_read": null,
+  "screenshot_reads": [],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/BRIEF.md"
+      },
+      "result_received": true,
+      "is_error": false,
+      "result_sha256": "b07e796d5a9445bc1f1ff9b5692d7b05d0f1555e92edf0006e02203c14c458fb",
+      "line_numbers": [
+        1,
+        2
+      ]
+    }
+  ],
+  "tool_errors": []
+}

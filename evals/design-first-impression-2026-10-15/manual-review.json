@@ -1,0 +1,440 @@
+{
+  "baseline-landing": {
+    "status": "not_assessed",
+    "response_sha256": "06e38fdf1c791b4a00120df6890ee2ddf074a8d11bc18ebacc73dc561d22ff94",
+    "criteria": {},
+    "evidence": [
+      "240-second timeout; partial response is retained and not scored."
+    ],
+    "limitations": [
+      "Invalid paired quality comparison."
+    ]
+  },
+  "candidate-landing": {
+    "status": "reviewed",
+    "response_sha256": "15a7575ccafc51105e17d0cec31af7f5a0e6fc77a0c3ec89c7fe880339a583c2",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "배너와 .badge 규칙을 삭제하고 패널도 삭제; 요금, 동의 조건, 앵커, CTA 포커스 표시는 유지한다.",
+      "사람 대상 3초 테스트: not_run; BRIEF와 소스를 먼저 읽은 예측이라고 명시한다.",
+      "S01 / welcome / r1 / 1100×800과 의도, 다음 행동, 방법, 원인 담당, 재확인 미실행을 연결한다."
+    ],
+    "limitations": [
+      "Unpaired due to baseline timeout. Some copy/style findings are broader than the hierarchy concern; no actual edit or improvement measured."
+    ]
+  },
+  "baseline-clear": {
+    "status": "reviewed",
+    "response_sha256": "88522b476fdcffbe0b397307504e75b4bd9207769a8d44d21c73a0c46d94fd10",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "화면의 위계는 대체로 명확합니다.",
+      "재전송과 주소 변경을 한 패널로 묶는 제한된 구조 변경과 선택적 여백 수정을 제안한다.",
+      "제공된 1000×720 캡처와 소스를 정적으로 검토한 범위; 브라우저 확인 불가를 구분한다."
+    ],
+    "limitations": [
+      "Grouping suggestion has a stated rationale, so it is not scored as an unsafe or taste-only redesign. Explicit intended-message/method record is absent."
+    ]
+  },
+  "candidate-clear": {
+    "status": "reviewed",
+    "response_sha256": "248e42653df218b8115235df85d6afa9cf5260a419c5100ed12e72683b6ce261",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "위계는 바꾸지 않아도 됩니다.",
+      "처음 전달할 메시지는 브리프 목적에서 추론했다고 표시하고 발송 주소·복구·도움말을 유지한다.",
+      "작성자/AI 사전 점검; 사람 3초 관찰 not_run; 대상 r1/sent/1000×720을 연결한다."
+    ],
+    "limitations": [
+      "Fewer structural proposals than baseline, but no human evidence that the baseline grouping alternative was harmful."
+    ]
+  },
+  "baseline-dashboard": {
+    "status": "not_assessed",
+    "response_sha256": "01ba4719c80b6fe911b091a7c05124b64eeece964e09c058ef8f9805daca546b",
+    "criteria": {},
+    "evidence": [
+      "240-second timeout"
+    ],
+    "limitations": [
+      "No completed answer; preserve partial response without quality scoring."
+    ]
+  },
+  "candidate-dashboard": {
+    "status": "not_assessed",
+    "response_sha256": "57bca18219ed7565bff407b239bb145a497780d3852324b6fc5caebb54b0d3ec",
+    "criteria": {},
+    "evidence": [
+      "error_max_budget_usd"
+    ],
+    "limitations": [
+      "No completed answer; preserve partial response without quality scoring."
+    ]
+  },
+  "controlled-baseline-landing": {
+    "status": "not_assessed",
+    "response_sha256": "d7e2e4b1b75d29a03a3e2aa616f55ac785ff41e11df709a540163f0334a66861",
+    "criteria": {},
+    "evidence": [
+      "error_max_budget_usd"
+    ],
+    "limitations": [
+      "Retained text is not scored as a completed trial."
+    ]
+  },
+  "controlled-baseline-clear": {
+    "status": "not_assessed",
+    "response_sha256": "fdd520206dc190481a0b66068c298609e77a995627e0f66d9f80bdf723d3c381",
+    "criteria": {},
+    "evidence": [
+      "error_max_budget_usd"
+    ],
+    "limitations": [
+      "Retained text is not scored as a completed trial."
+    ]
+  },
+  "controlled-candidate-landing": {
+    "status": "reviewed",
+    "response_sha256": "afafeca9d00b8245c7467e9b9f250dac0ef620283671cf660eaf78feea72f62f",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "요금과 녹음 동의 조건은 보존 대상; 배지 강조를 낮추고 가치 제목을 복구한다.",
+      "AI 사전 판단이며 사람 관찰 아님; S01/welcome/r1/1100x800과 의도/행동/불일치를 연결한다."
+    ],
+    "limitations": [
+      "Baseline execution failed in this same profile; no paired quality conclusion."
+    ]
+  },
+  "controlled-candidate-clear": {
+    "status": "reviewed",
+    "response_sha256": "116473ca91258b9a85076467acfa82301414c85400a815b14aa6a58070424ee7",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "꼭 필요한 레이아웃 개선은 없습니다.",
+      "시간을 재지 않은 AI 예측과 사람/새 관찰자 not_run을 구분하고 복구 경로를 보존한다."
+    ],
+    "limitations": [
+      "Baseline execution failed in this same profile; no paired quality conclusion."
+    ]
+  },
+  "bounded-baseline-dashboard": {
+    "status": "reviewed",
+    "response_sha256": "c2d1daa7e5023a9e495c2982595191cd81ed5a72fc2bba6f7139ab5810c22a0e",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "partial",
+      "task": "partial",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "자주 쓰는 동작이라 메뉴에 숨기지 않습니다.",
+      "두 HIGH 항목을 fixture 한계인지 확인할 수 없다고 하면서 결론은 Block으로 둔다."
+    ],
+    "limitations": [
+      "Unverified fixture omissions receive conditional HIGH/Block; this is stronger than the evidence supports. Adds density/columns rather than documenting a bounded intent/observation contract."
+    ]
+  },
+  "bounded-candidate-dashboard": {
+    "status": "reviewed",
+    "response_sha256": "3302dc806913e3e9b42e39096156f29189f87c64294fe33c1a286918afb79c9d",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "필터 5개와 액션 4개 전부, 마감·지연 요약, 표 네 열, 도움말, 버튼 높이와 포커스 링을 보존한다.",
+      "AI precheck, untimed, intended message, predicted reading and unknown selection implementation are distinguished."
+    ],
+    "limitations": [
+      "Both versions already preserve frequent actions in this case; no demonstrated hiding-rule regression or real efficiency improvement."
+    ]
+  },
+  "bounded-baseline-missing": {
+    "status": "reviewed",
+    "response_sha256": "a8a5f2534e7a311f912bd191e37450ac54853ced56726cd4a770f349aa8831e7",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "r1 설명으로 r2 결과를 추정하면 근거 없는 결과를 지어내는 셈이라고 설명한다.",
+      "의도·현재 캡처·사람 응답이 없으므로 결과와 우선순위를 보류한다."
+    ],
+    "limitations": [
+      "Six domain owners were not loaded despite the existing audit contract. Suggests about five humans without a study-specific justification."
+    ]
+  },
+  "bounded-candidate-missing": {
+    "status": "reviewed",
+    "response_sha256": "c35b417687337528df6d8034f7868c9dc202941c52ee32f54e2722e10b042292",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "의도 unknown, 관찰 not_run; stale r1 버튼 수로 r2에 축소·CTA를 제안하지 않는다.",
+      "새 AI에는 화면과 중립 질문만 주고 의도는 응답 후 비교하며 사람 노출·가림·원래 답을 기록하도록 한다."
+    ],
+    "limitations": [
+      "Six domain owners were not loaded. It uses not_applicable for unavailable comparison, where not_run would be more precise."
+    ]
+  },
+  "bounded-baseline-wireframe": {
+    "status": "reviewed",
+    "response_sha256": "06fd6b6be552b7e55fa596cedab1cf34beccf4b22ee78066103e5f060ca0c70d",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "B01/F01/S01-S03와 실패 시 선택 보존, 재시도/이전 경로, 유지 시간 미결정을 전달한다.",
+      "렌더링·브라우저 확인·사용자 승인 없음이라고 명시한다."
+    ],
+    "limitations": [
+      "No explicit intended first message per screen; content/actions are otherwise present."
+    ]
+  },
+  "bounded-candidate-wireframe": {
+    "status": "reviewed",
+    "response_sha256": "53855566ff46f2f3c169f75f23a04d6d62ad41072f6a55f5d1dbfc8c59fa410f",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "S01/S02/S03마다 첫 메시지를 적고 주·보조 행동과 필요한 내용을 유지한다.",
+      "첫 메시지는 의도일 뿐 관찰 결과가 아니라고 하며 유지 시간/이용시간/취소규정/성공 화면을 미결정으로 남긴다."
+    ],
+    "limitations": [
+      "Specification only; no actual implementation, handoff consumer or human comprehension test."
+    ]
+  },
+  "bounded-baseline-warning": {
+    "status": "reviewed",
+    "response_sha256": "b6427aa3d332f7e9975a8eb540e555daa80d723ec7968bdf2e64b091c8d5c621",
+    "criteria": {
+      "preservation": "partial",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "경고 제목을 상대방 기록 접근 종료로 좁혀 확정 정책에 맞춘다.",
+      "No human data; expert estimate, not a test result.",
+      "도움말 링크를 연결하거나 삭제하라고 제안한다."
+    ],
+    "limitations": [
+      "Optional deletion of the recovery/help entry is not justified by the synthetic missing target; no preservation inventory. Six domain owners were not loaded."
+    ]
+  },
+  "bounded-candidate-warning": {
+    "status": "reviewed",
+    "response_sha256": "1aa6ead650fc4c15ad9fac326e89cd1570508df00078aeba15ccb6998a1fedee",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "내 기록 보존/상대 기록 접근 종료 정책에 맞춰 경고 제목을 바꾸고 경고·버튼 두 개·도움말·포커스를 유지한다.",
+      "의도를 알고 본 untimed prediction과 사람/새 관찰자 not_run을 구분한다."
+    ],
+    "limitations": [
+      "Six domain owners were not loaded; the response admits the coverage gap. Its final request for a fresh-observer three-second check is less precise than the earlier human/AI distinction."
+    ]
+  },
+  "bounded-baseline-landing": {
+    "status": "reviewed",
+    "response_sha256": "636e5f78612fed076501502eb74116a5a495397ae019e9b2784f091e5896c2ba",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "배지/장식 패널을 줄이고 제목 크기를 복구하며 요금·녹음 동의와 CTA를 유지한다.",
+      "3초 판단은 추정이며 실제 사람 관찰 아님이라고 말한다."
+    ],
+    "limitations": [
+      "Only two domain owners loaded. Suggests a five-second follow-up rather than an operational three-second protocol."
+    ]
+  },
+  "bounded-candidate-landing": {
+    "status": "reviewed",
+    "response_sha256": "3070c4a40d28b1a3a00c665a3b3668f4184e16ec7695196434a654c4dce2e3e2",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "의도·대상·untimed precheck·human/fresh-AI not_run·필수 요금/동의·재확인 pending을 함께 기록한다.",
+      "요금과 동의는 지우거나 접어 숨기면 안 된다고 명시한다."
+    ],
+    "limitations": [
+      "Full six-domain loading contract is not satisfied. Source-derived mobile concern duplicates the same title root cause in a separate row."
+    ]
+  },
+  "bounded-baseline-reading": {
+    "status": "reviewed",
+    "response_sha256": "c34a1261ce645b2ab989b810106051841f9bdd8ce3e86f194ef3350dd386ef3c",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "partial",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "판매 목표가 없으므로 주요 버튼 부재는 결함이 아니라고 판단한다.",
+      "사람 관찰은 없다고 하면서 사람이 참여하는 테스트의 추가 정보가 적고 필요 없다고 단정한다."
+    ],
+    "limitations": [
+      "The recommendation about human-test value is unmeasured. No false performed-test claim occurs."
+    ]
+  },
+  "bounded-candidate-reading": {
+    "status": "reviewed",
+    "response_sha256": "f4b5cf57976d1b7206a36f2d2d2a2c11269ef5f69310ef0f6d131773310eca32",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "읽기 목적에 맞춰 CTA를 추가하지 않고 주제·읽는 순서를 평가한다.",
+      "대상 article/r1/1000x740, 의도를 안 untimed prediction, human/fresh-AI not_run을 구분한다."
+    ],
+    "limitations": [
+      "No actual reading comprehension or navigation test."
+    ]
+  },
+  "bounded-baseline-brand": {
+    "status": "reviewed",
+    "response_sha256": "cbbb8a642ef49630630483eb7ab31338ef3969bd58be822666756984b83518f9",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "승인된 콜라주·비대칭·세리프·색을 유지하고 전환 CTA·SaaS 카드화·회전 제거를 제안하지 않는다.",
+      "연결 대상 미구현을 fixture 범위 한계로 남기고 실제 좁은 화면 문제는 미확인으로 구분한다."
+    ],
+    "limitations": [
+      "Some hierarchy advice is subjective; no observed user confusion or improvement."
+    ]
+  },
+  "bounded-candidate-brand": {
+    "status": "reviewed",
+    "response_sha256": "4a319e67c448e21530250be5222bc033851fab8a85a0df75683e9a620cc70de4",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "partial",
+      "task": "partial",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "승인된 정체성과 포커스·링크 이름을 유지하고 human/fresh AI not_run을 기록한다.",
+      "부분 구현 fixture의 연결 대상 부재를 HIGH/Block으로 처리한다.",
+      "오른쪽 빈 공간이 덜 채워진 느낌이라는 근거로 겹침·기울기 추가를 제안한다."
+    ],
+    "limitations": [
+      "Adverse paired observation: stronger blocking conclusion than the partial-artifact evidence warrants, plus taste-based elaboration. Do not claim a general quality improvement or a proven causal regression."
+    ]
+  },
+  "bounded-baseline-clear": {
+    "status": "reviewed",
+    "response_sha256": "907538b5a040cf3b35f9ea79ca87a69564942c90a446ada3d454861beffbbd73",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "partial",
+      "routing": "pass"
+    },
+    "evidence": [
+      "핵심 위계는 명확하고 구조 재설계가 필요 없다고 판단한다.",
+      "복구 링크를 패널 안으로 옮기는 제한된 grouping 제안과 여백 수정을 남기며 실제 관찰이 아닌 추론이라고 설명한다."
+    ],
+    "limitations": [
+      "Grouping alternative is defensible, so not scored as an unsafe redesign. No explicit intended-message/observation protocol."
+    ]
+  },
+  "bounded-candidate-clear": {
+    "status": "reviewed",
+    "response_sha256": "5f8022ee9bb98babb3345aecbc90f55d2529680a05e8531c29aab47e49cfb86f",
+    "criteria": {
+      "preservation": "pass",
+      "evidence": "pass",
+      "task": "pass",
+      "handoff": "pass",
+      "routing": "pass"
+    },
+    "evidence": [
+      "고칠 위계 문제 없음; 승인된 방향을 유지하며 복구 경로를 보존한다.",
+      "대상·의도·untimed AI precheck·human/fresh AI not_run과 캡처 한계를 기록한다."
+    ],
+    "limitations": [
+      "No human evidence that this recommendation is preferable to the baseline alternative."
+    ]
+  }
+}
