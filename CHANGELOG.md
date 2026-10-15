@@ -2,6 +2,12 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.5
+
+### Patch Changes
+
+- [#29](https://github.com/reach0908/paul-skills/pull/29) [`0a6c1b4`](https://github.com/reach0908/paul-skills/commit/0a6c1b47a6faced190f3e06bda34cddfce41aa03) Thanks [@reach0908](https://github.com/reach0908)! - Ground existing wireframe responsive specifications in the effective CSS cascade, distinguish source-derived values from browser observations, and keep unmeasured clipping risks pending verification.
+
 ## 0.4.4
 
 ### Patch Changes
