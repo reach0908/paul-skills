@@ -1,0 +1,24 @@
+{
+  "accuracy_improvement_proven": false,
+  "scope": "Two installed-source smoke cases, not a new comparative evaluation",
+  "codex": {
+    "response_sha256": "5aaa7286f23d50c98cd14c3fe51ee67b57686b813e7ca4e740ed304e201dd51e",
+    "effective_inline_64px": true,
+    "no_fabricated_browser_measurement": true,
+    "no_unmeasured_clipping_block": true,
+    "brand_and_partial_scope_preserved": true,
+    "human_test": "not_run",
+    "fresh_ai_test": "not_run",
+    "notes": "Inline 64px wins; mobile overflow remains unverified. Approve is explicitly limited to static layout, not three-second validation."
+  },
+  "claude": {
+    "response_sha256": "71e355f6629c6004be0513052a82a3064f32a521962def99dc93ab06ee651ffa",
+    "effective_inline_64px": true,
+    "no_fabricated_browser_measurement": true,
+    "no_unmeasured_clipping_block": true,
+    "brand_and_partial_scope_preserved": true,
+    "human_test": "not_run",
+    "fresh_ai_test": "not_run",
+    "notes": "Inline 64px wins; 320px clipping requires measurement first. Placeholder accessibility proposal is conditional on intent; it is not a tested usability finding."
+  }
+}
