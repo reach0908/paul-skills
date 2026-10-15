@@ -16,6 +16,10 @@ A writable local project or prototype workspace. Existing-component work needs t
 
 ## Common questions
 
+**Can a media query alone establish the mobile layout?**
+
+No. An existing screen specification follows the declarations that actually win for the element and width, including inline styles and important rules. Source-derived values remain distinct from browser measurements. Missing styles leave values unresolved, and predicted clipping stays a verification note until that width is observed.
+
 **Who handles a requested first-impression check?**
 
 Wireframe passes the screen intent and artifact to [better-layout](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-layout.md), which owns the observation procedure. An unavailable owner or reference leaves the check pending. Ordinary screen specifications still carry intent forward without adding a test gate.
