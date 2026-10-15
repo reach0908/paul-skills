@@ -1,0 +1,90 @@
+{
+  "method": "Unblinded implementing maintainer review of complete native outputs; no independent human UX validation",
+  "cases": [
+    {
+      "host": "claude",
+      "case_id": "brand",
+      "response_sha256": "0296907c64d4d425e563b98fc02e3db5de03ee314021a125ca3938249e08ed53",
+      "target_contract": "pass",
+      "evidence": [
+        "Approved collage, asymmetric composition and absent conversion CTA preserved.",
+        "Off-screen mobile overflow explicitly unverified and excluded from current severity.",
+        "Missing anchor destinations treated as partial fixture scope.",
+        "Untimed self-prediction separated from human and fresh AI not_run."
+      ],
+      "limitations": [
+        "LOW navigation styling/placement advice is subjective and has no participant evidence."
+      ]
+    },
+    {
+      "host": "claude",
+      "case_id": "warning",
+      "response_sha256": "4d403a77243ba0cf775e8268ce48768ed4144d6bde37b8d4368395e573ced321",
+      "target_contract": "pass",
+      "evidence": [
+        "All six successful owner invocations precede the first fixture read.",
+        "Required warning, both buttons and help link remain present.",
+        "Personal records retained policy preserved; copy refinement proposed.",
+        "Current artifact/state/revision and unavailable human/fresh AI checks reported."
+      ],
+      "limitations": [
+        "Color estimates are described as mental rough calculations, not reproducible contrast measurements; no color-certification claim is supported."
+      ]
+    },
+    {
+      "host": "claude",
+      "case_id": "wireframe-requested-check",
+      "response_sha256": "75585b53ddc43ba4d606d58a6e9eb75812b5d3d7b351732205723399e7c659cb",
+      "target_contract": "pass_with_ancillary_error",
+      "evidence": [
+        "Requested validation successfully delegates through better-layout Skill then reads its full reference.",
+        "Approved gallery identity and optional navigation intent retained.",
+        "Both human three-second and fresh AI observation are not_run."
+      ],
+      "limitations": [
+        "Source accuracy error outside the targeted invocation contract: response says <=600px title becomes 30px, but inline 64px overrides the media rule. No narrow viewport was rendered. This response is not a fully accurate screen specification."
+      ]
+    },
+    {
+      "host": "claude",
+      "case_id": "staged",
+      "response_sha256": "bf5a62462d5d92030c5e84ecc63e28bafeea1ef8a5d2b3fd42dcd37ac4682862",
+      "target_contract": "pass",
+      "evidence": [
+        "No tool calls or artifact/domain inspection.",
+        "Returns /paul-skills:interface-review staged and stops."
+      ],
+      "limitations": [
+        "The referred review command was not executed in this smoke."
+      ]
+    },
+    {
+      "host": "codex",
+      "case_id": "brand",
+      "target_contract": "not_run",
+      "execution_status": "execution_failed",
+      "reason": "CLI/model compatibility prevented execution; no semantic pass awarded"
+    },
+    {
+      "host": "codex",
+      "case_id": "warning",
+      "target_contract": "not_run",
+      "execution_status": "execution_failed",
+      "reason": "CLI/model compatibility prevented execution; no semantic pass awarded"
+    },
+    {
+      "host": "codex",
+      "case_id": "wireframe-requested-check",
+      "target_contract": "not_run",
+      "execution_status": "not_run",
+      "reason": "CLI/model compatibility prevented execution; no semantic pass awarded"
+    },
+    {
+      "host": "codex",
+      "case_id": "staged",
+      "target_contract": "not_run",
+      "execution_status": "not_run",
+      "reason": "CLI/model compatibility prevented execution; no semantic pass awarded"
+    }
+  ]
+}
