@@ -1,0 +1,82 @@
+{
+  "completed": true,
+  "actual_model": "claude-opus-5-5",
+  "host_version": "2.1.300",
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 10674,
+    "cache_read_input_tokens": 4814,
+    "output_tokens": 308,
+    "output_tokens_details": {
+      "thinking_tokens": 30
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 10674,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 308,
+        "cache_read_input_tokens": 4814,
+        "cache_creation_input_tokens": 10674,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 10674
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 308,
+      "cacheReadInputTokens": 4814,
+      "cacheCreationInputTokens": 10674,
+      "webSearchRequests": 0,
+      "costUSD": 0.0925228,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 30,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "plugin_version": "0.4.4",
+  "plugin_path_matches": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "native command expansion receipt; full injected body is not exposed by stream",
+  "launched_skills": [],
+  "fully_read_owner_files": [],
+  "audit_procedure_fully_read": false,
+  "first_impression_fully_read": false,
+  "first_artifact_read_event": null,
+  "all_six_owners_before_artifact": false,
+  "tool_calls": [],
+  "host": "claude",
+  "case_id": "staged",
+  "session_id": "b0429092-7d26-4d78-91f7-17114dc18e0f",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 6.535,
+  "cost_usd": 0.0925228,
+  "files_before": {},
+  "files_after": {},
+  "freeze_sha256": "7308c1117f3673b860cc7e3d59ac433669c4047f39f63c9b03b5fa74e01263a3",
+  "status": "completed",
+  "requested_effort": "low",
+  "inputs_unchanged": true,
+  "raw_events_sha256": "19e2d28e9823aaa02ec3c3f1ce411b24f17f19074d8d1e134190b64f444a105e",
+  "response": "responses/claude-staged.md",
+  "response_sha256": "bf5a62462d5d92030c5e84ecc63e28bafeea1ef8a5d2b3fd42dcd37ac4682862"
+}
