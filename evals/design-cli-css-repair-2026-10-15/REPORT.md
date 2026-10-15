@@ -63,3 +63,5 @@ npm run check
 ```
 
 위 검증은 통과했다. `npm run check`에서 버전·56개 source record·44개 promoted 경로와 38개 테스트를 확인했다. 정적/receipt 검증은 실제 사람 이해도나 모든 모델 실행의 정확성을 대신하지 않는다. `collect.py` 재생성에는 비공개 native 기록이 필요하며, `cli_probe.py`와 frozen runner는 기존 label/실행 디렉터리를 덮어쓰지 않는다.
+
+독립 Standards/Spec 검토는 고정 diff `b44f3699a46b13de8530594b1846476fd443aebd..0a6c1b47a6faced190f3e06bda34cddfce41aa03`를 대상으로 각각 조치가 필요한 문제 0건을 보고했다. Standards는 역할 경계, 문서 동기화, 전체 본문 전달 증거와 과거 기록 보존을 확인했다. Spec은 비공개 native 로그에서 13개 scoped receipt와 응답을 읽기 전용으로 다시 계산해 커밋된 결과와 일치함을 확인했다. 이 검토는 새 유료 trial이나 사람 검증을 추가하지 않았다.
