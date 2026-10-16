@@ -2,6 +2,14 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.6
+
+### Patch Changes
+
+- [`7465b52`](https://github.com/reach0908/paul-skills/commit/7465b528a1c49ba1668c08dd9a315d9b6593b538) Thanks [@reach0908](https://github.com/reach0908)! - Add `check:local` and `test:graders` commands to run the existing routing and source-read grader controls on a maintainer's machine. The full local command includes the current package checks and a whitespace check, while the GitHub Actions validation command stays unchanged. These deterministic controls do not launch model trials or establish skill quality.
+
+- [`3e022f7`](https://github.com/reach0908/paul-skills/commit/3e022f7e7ca1593db61704c44b95456a83e84140) Thanks [@reach0908](https://github.com/reach0908)! - Clarify existing-component identity and preserved behavior in build-design, and keep UI prototype alternatives anchored to approved benefits and visual choices. Distinguish public copy from internal research notes without hiding useful product limitations. Add complete-read and reload guidance plus browser preflight, bounded recovery and resume records. Synchronize the affected documentation and routing map; invocation boundaries and browser tool defaults remain unchanged.
+
 ## 0.4.5
 
 ### Patch Changes
