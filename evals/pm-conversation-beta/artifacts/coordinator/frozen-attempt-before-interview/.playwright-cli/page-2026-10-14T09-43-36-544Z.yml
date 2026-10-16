@@ -1,0 +1,30 @@
+- generic [active] [ref=e1]:
+  - heading "작은 책장" [level=1] [ref=e2]
+  - paragraph [ref=e3]: 읽고 싶은 책을 담고 다시 찾아보세요.
+  - generic [ref=e4]: 가상 도서 프로토타입입니다. 외부 전송은 없으며 새로고침하면 초기 상태가 됩니다.
+  - navigation "책장 탐색" [ref=e5]:
+    - button "추천" [ref=e6]
+    - button "내 보관함" [ref=e7]
+  - status [ref=e8]: 내 보관함에 담았어요
+  - main [ref=e9]:
+    - heading "추천" [level=2] [ref=e58]
+    - generic [ref=e59]:
+      - text: 책 찾기
+      - textbox "책 찾기" [ref=e60]:
+        - /placeholder: 제목으로 찾기
+    - generic [ref=e61]:
+      - article [ref=e62]:
+        - heading "별의 지도" [level=3] [ref=e63]
+        - paragraph [ref=e64]: 가상 저자 A · 우주
+        - button "별의 지도 살펴보기" [ref=e65]
+        - button "담았어요" [ref=e66]
+      - article [ref=e67]:
+        - heading "숲에서 읽는 편지" [level=3] [ref=e68]
+        - paragraph [ref=e69]: 가상 저자 B · 에세이
+        - button "숲에서 읽는 편지 살펴보기" [ref=e70]
+        - button "담기" [ref=e71]
+      - article [ref=e72]:
+        - heading "밤의 관측소" [level=3] [ref=e73]
+        - paragraph [ref=e74]: 가상 저자 C · 우주
+        - button "밤의 관측소 살펴보기" [ref=e75]
+        - button "담기" [ref=e76]

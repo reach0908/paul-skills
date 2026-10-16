@@ -1,0 +1,70 @@
+{
+  "scenario": {
+    "task": "별의 지도를 나중에 읽기 위해 담고, 내가 담은 책에서 소개를 살펴본 뒤 방금 보던 목록으로 돌아오세요.",
+    "url": "http://127.0.0.1:48617",
+    "session": "prototype-recheck-participant-1",
+    "viewport": {
+      "width": 390,
+      "height": 844
+    },
+    "touchEmulation": false,
+    "cli": "playwright-cli 0.1.22",
+    "browser": "Chrome, version not queried"
+  },
+  "startUtc": "2026-10-14T09:54:47.537Z",
+  "stopUtc": "2026-10-14T09:56:52.152Z",
+  "elapsedMs": 124615,
+  "actionCount": 5,
+  "actions": [
+    {
+      "number": 1,
+      "checkedUtc": "2026-10-14T09:55:06.048Z",
+      "expectation": "별의 지도 카드의 담기 버튼을 누르면 나중에 찾을 수 있도록 내 보관함에 추가될 것으로 예상.",
+      "command": "click e18",
+      "output": "### Ran Playwright code\n```js\nawait page.getByRole('button', { name: '담기' }).first().click();\n```\n### Page\n- Page URL: http://127.0.0.1:48617/\n- Page Title: 작은 책장\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-cli/page-2026-10-14T09-55-10-654Z.yml)\n",
+      "observedAt": "2026-10-14T09:55:10.665Z"
+    },
+    {
+      "number": 2,
+      "checkedUtc": "2026-10-14T09:55:24.373Z",
+      "expectation": "내 보관함을 누르면 방금 담은 별의 지도가 있는 목록이 나올 것으로 예상.",
+      "command": "click e7",
+      "output": "### Ran Playwright code\n```js\nawait page.getByRole('button', { name: '내 보관함' }).click();\n```\n### Page\n- Page URL: http://127.0.0.1:48617/\n- Page Title: 작은 책장\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-cli/page-2026-10-14T09-55-27-667Z.yml)\n",
+      "observedAt": "2026-10-14T09:55:27.677Z"
+    },
+    {
+      "number": 3,
+      "checkedUtc": "2026-10-14T09:55:40.047Z",
+      "expectation": "내 보관함의 별의 지도 살펴보기를 누르면 책 소개가 열릴 것으로 예상.",
+      "command": "click e51",
+      "output": "### Ran Playwright code\n```js\nawait page.getByRole('button', { name: '별의 지도 살펴보기' }).click();\n```\n### Page\n- Page URL: http://127.0.0.1:48617/\n- Page Title: 작은 책장\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-cli/page-2026-10-14T09-55-43-714Z.yml)\n",
+      "observedAt": "2026-10-14T09:55:43.724Z"
+    },
+    {
+      "number": 4,
+      "checkedUtc": "2026-10-14T09:56:02.382Z",
+      "expectation": "목록으로를 누르면 소개를 열기 직전에 보던 내 보관함 목록으로 돌아갈 것으로 예상.",
+      "command": "click e53",
+      "output": "### Ran Playwright code\n```js\nawait page.getByRole('button', { name: '목록으로' }).click();\n```\n### Page\n- Page URL: http://127.0.0.1:48617/\n- Page Title: 작은 책장\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-cli/page-2026-10-14T09-56-06-469Z.yml)\n",
+      "observedAt": "2026-10-14T09:56:06.488Z"
+    },
+    {
+      "number": 5,
+      "checkedUtc": "2026-10-14T09:56:25.300Z",
+      "expectation": "목록으로가 추천을 보여 주었으므로, 내 보관함 버튼으로 소개 직전의 담은 책 목록을 다시 열 수 있을 것으로 예상.",
+      "command": "click e7",
+      "output": "### Ran Playwright code\n```js\nawait page.getByRole('button', { name: '내 보관함' }).click();\n```\n### Page\n- Page URL: http://127.0.0.1:48617/\n- Page Title: 작은 책장\n- Console: 1 errors, 0 warnings\n### Snapshot\n- [Snapshot](.playwright-cli/page-2026-10-14T09-56-35-834Z.yml)\n",
+      "observedAt": "2026-10-14T09:56:35.847Z"
+    }
+  ],
+  "completion": "reached through unassisted visible navigation recovery",
+  "stoppingReason": "Task reached; stopped immediately after final state capture and inspection.",
+  "basis": [
+    "Save confirmation 내 보관함에 담았어요 and button 담았어요",
+    "내 보관함 list displayed 별의 지도",
+    "Introduction text 소개: 우주에 관한 가상 도서입니다. observed after opening from 내 보관함",
+    "목록으로 showed 추천 unexpectedly",
+    "Additional 내 보관함 click restored the list with 별의 지도 and 담았어요"
+  ],
+  "lateObservations": false
+}
