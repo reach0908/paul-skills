@@ -13,7 +13,9 @@
     "version": "changeset version && node scripts/sync-plugin-version.mjs",
     "check-plugin-version": "node scripts/sync-plugin-version.mjs --check",
     "check": "npm run check-plugin-version && python3 scripts/check-skills.py && npm test",
-    "test": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v"
+    "check:local": "npm run check && npm run test:graders && git diff --check",
+    "test": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
+    "test:graders": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s evals/design-domain-entry-repair-v4-2026-10-14 -p test_order_grader.py -v"
   },
   "devDependencies": {
     "@changesets/changelog-github": "^0.7.0",

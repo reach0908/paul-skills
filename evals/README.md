@@ -4,7 +4,7 @@ Evaluation is added by this fork; the upstream library supplies authoring guidan
 
 ## Three distinct checks
 
-- `npm run check` checks package/catalog/provenance consistency and deterministic helper behavior. It makes no claim about an AI following a skill.
+- `npm run check` checks package/catalog/provenance consistency and deterministic helper behavior. For local validation with routing and source-read grader controls, use [`npm run check:local`](../docs/maintenance.md#local-validation). These checks make no claim about an AI following a skill.
 - Public behavioral fixtures exercise an actual agent with a realistic user request and raw artifacts. The evaluator receives the task and skill, not expected answers. Preserve the task, skill revision/hash, host, observed outputs, and evaluator decision.
 - Comparative trials hold task, host, permissions, and skill fixed when comparing models, or hold model/host fixed when comparing skill versions. Keep no-skill, previous-skill, and candidate arms separate. Use multiple runs and report failures as well as successes before recommending a model.
 
