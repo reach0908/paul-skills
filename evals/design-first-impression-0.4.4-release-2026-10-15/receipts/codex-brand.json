@@ -1,0 +1,39 @@
+{
+  "completed": false,
+  "actual_model": "gpt-6-astra",
+  "host_version": "0.146.0",
+  "actual_effort": "low",
+  "model_execution": "blocked_before_response",
+  "selected_skill_exact_body_injected": true,
+  "selected_skill_sha256": "94084cc0b341ea4afba35746b3ea1ca9c3954d7eb5587e13c7246fe58fcb255c",
+  "selected_skill_path": "PLUGIN/skills/design/better-layout/SKILL.md",
+  "activation_boundary": "host assembled installed skill in request; model did not execute",
+  "failure": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}",
+  "raw_transcript_sha256": "ef7e813bdbf90447e96ad88a2dfebea220c686b96e104f5dc0216decefe22fc8",
+  "semantic_checks": "not_run",
+  "tool_calls": [],
+  "host": "codex",
+  "case_id": "brand",
+  "session_id": "01a13fd1-6b8d-7371-b168-3934ad1f6e41",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 11.46,
+  "cost_usd": null,
+  "files_before": {
+    "BRIEF.md": "b6fceeb2ca0798b892ea7b14e142c6063cf7331546a0d6ae82f0c2e11d71776f",
+    "capture.json": "453ca2bbf44b7af9574497b0e3fc653da6974f1e0cbecd673285300c9fd0f2f8",
+    "index.html": "d01e7e5aed7c95bb03936db791e7997423160bb3ab4d037af573818c3fb4cccd",
+    "screen.png": "d37a5d27b6a0a0da3786db5bd571b8dd29a97569b910822836d3901da3fc14b5"
+  },
+  "files_after": {
+    "BRIEF.md": "b6fceeb2ca0798b892ea7b14e142c6063cf7331546a0d6ae82f0c2e11d71776f",
+    "capture.json": "453ca2bbf44b7af9574497b0e3fc653da6974f1e0cbecd673285300c9fd0f2f8",
+    "index.html": "d01e7e5aed7c95bb03936db791e7997423160bb3ab4d037af573818c3fb4cccd",
+    "screen.png": "d37a5d27b6a0a0da3786db5bd571b8dd29a97569b910822836d3901da3fc14b5"
+  },
+  "freeze_sha256": "7308c1117f3673b860cc7e3d59ac433669c4047f39f63c9b03b5fa74e01263a3",
+  "status": "execution_failed",
+  "requested_effort": "low",
+  "inputs_unchanged": true,
+  "raw_events_sha256": "dc495e84724d35a38ff17f2344b04f8189b4415d8be286482754c024fec61d16"
+}

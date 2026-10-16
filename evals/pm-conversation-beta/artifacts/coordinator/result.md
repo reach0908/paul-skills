@@ -11,7 +11,7 @@
 - 시각: 2026-10-14 UTC. 참여자의 최초 시도 09:33:59, 재시도 기준 09:36:11, 최종 UI 관찰 09:44:31.
 - 대상 식별: 09:43:02 UTC HTTP 200 응답 본문의 SHA-256 `651ac3e7ddff408c13323d21caedae484b52d8edbe2cbbc2fae296237e077f8f`. 제작 버전이나 Git SHA는 제공되지 않았다. 이 값은 HTML 응답 식별자이며 전체 자산 버전의 증명은 아니다. [digest 원본](/private/tmp/pm-conversation-beta-20261014/runs/coordinator/target-digest.json).
 - 브라우저: Google Chrome 152.0.7977.82, Playwright CLI 0.1.22. `/opt/homebrew/bin/playwright-cli`.
-- 설치된 브라우저 지침: `/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md`.
+- 설치된 브라우저 지침: `$HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md`.
 - 화면: 실제 성공한 resize로 390×844 CSS px. 기기 에뮬레이션 없음. 초기 실패 세그먼트에서는 이 화면 크기를 설정하지 못했다.
 - 세션: `pmbooks-fresh-p1-20261014`. 자기 세션만 사용했고 최종 정상 작동은 지속 TTY 셸 6452 안에서 수행했다.
 - 시작 상태: 첫 추천 목록, 빈 검색 입력, 별의 지도 카드의 `담기`. 사용자가 지정한 가상 책장이고 담기는 현재 브라우저 세션만의 동작이다. 외부 전송 없음은 제공된 모형 경계이며 네트워크 검증으로 독립 확인하지 않았다.

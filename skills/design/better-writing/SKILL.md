@@ -1,11 +1,15 @@
 ---
 name: better-writing
-description: Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next.
+description: "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Writing
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill writes and reviews interface copy such as labels, errors, empty states and confirmations, along with the terms that run through them. It matches the product's existing voice and flags copy that misleads people or leaves them without a way forward.
 
@@ -24,6 +28,12 @@ Before writing or reviewing, find where the copy lives and read the copy around 
 3. Note the case used per element type and any voice or content style guide.
 
 New copy uses the terms on that list. A synonym is a finding only where the same thing is named two ways.
+
+## Give each string a reader and a job
+
+Use the existing brief and approved copy to identify the reader, core benefit and next decision. For a landing page or other explanatory surface, distinguish the headline's promise, the explanation of how it works, supporting evidence and the action label. Preserve approved meaning and flag neighboring strings that repeat a claim without helping another decision. Deliberate repetition for orientation, accessibility or a later action can stay.
+
+Keep internal research status, collection IDs and editorial instructions in source notes. Public copy states supported facts and limitations that affect the reader's choice. An actual product status such as a pending review, unavailable result or uncertain estimate belongs in the interface when the reader needs it; removing internal jargon must not turn uncertainty into an unsupported promise. Project-specific field rules and forbidden phrases stay with the project's content checks.
 
 ## One voice, one vocabulary
 

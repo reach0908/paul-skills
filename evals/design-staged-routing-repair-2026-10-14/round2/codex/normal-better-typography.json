@@ -1,0 +1,74 @@
+{
+  "case_id": "normal-better-typography",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a139dd-1f56-7e91-a174-a45802ccf5b0",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "아직 대상 화면·스타일 입력이 없어 실제 적합 여부는 판단하지 않습니다.\n\n### 필요한 입력\n\n- 대표 페이지 1개와 실제 한국어 본문·제목\n- 모바일 최소 폭, 데스크톱 본문 폭의 스크린샷\n- 사용 폰트·fallback, 본문/제목의 `font-size`, `line-height`, `font-weight`\n- 숫자 유형: 가격·통계·표·카운터 등\n- 말줄임 위치와 전체 내용을 여는 현재 동작\n\n### 점검 기준\n\n- **본문:** 실제 한글 폰트로 줄 길이를 측정한다. 영문 `60–75ch`를 그대로 적용하지 않는다. 기본 크기는 `16px` 이상, 행간은 단위 없는 `1.5–1.6`을 출발점으로 본다.\n- **크기 계층:** 제목 단계가 순서대로 작아지고 본문보다 작지 않아야 한다. `18px` 미만 텍스트는 `400` 이상의 굵기를 기준으로 한다.\n- **제목 줄바꿈:** 실제 한국어·영문 혼합 제목을 최소 지원 폭에서 확인한다. 특정 화면에 맞춘 수동 `<br>`은 피하고, 단어 묶음·고유명사·숫자가 부자연스럽게 갈라지지 않아야 한다.\n- **숫자:** 비교되는 표 열은 정렬 기준을 통일한다. 가격·카운터처럼 변하는 숫자는 `tabular-nums`로 폭 변화를 막되, 본문 속 숫자에는 강제하지 않는다.\n- **말줄임:** 잘린 텍스트에는 펼치기·상세 화면 등 키보드와 터치로 사용할 수 있는 전체 내용 접근 경로가 있어야 한다. 접근 경로가 없으면 `HIGH`로 판정한다.\n- **확인 조건:** 최소 지원 폭, 200% 확대, 긴 제목·긴 URL·혼합 언어·최댓값 숫자를 포함해 검사한다.\n\n현재 상태: **Not verified \u2014 입력 수집 전 준비 명세만 작성됨.**",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-typography"
+  ],
+  "injected_skills": [],
+  "loaded_file_hashes": {
+    "better-typography": "5dd66416ac1c18edfad53ba1568ae02475189b77b5ff724202b83007d486a476"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "5dd66416ac1c18edfad53ba1568ae02475189b77b5ff724202b83007d486a476"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/korean-text.md\"",
+      "exit_code": 0,
+      "output_sha256": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 70922,
+      "cached_input_tokens": 56704,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1241,
+      "reasoning_output_tokens": 382
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "stream_sha256": "0942bf6b585f31b04d60746421ea1adc9da778946774132804e62fcf53ce7b92",
+  "transcript_sha256": "0e508f22e8e0defc29119bef6a229a98e7a288e6e3a63f71e50a5476ef5f8645",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 37.956
+}

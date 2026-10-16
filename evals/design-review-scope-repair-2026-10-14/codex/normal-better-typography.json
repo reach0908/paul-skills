@@ -1,0 +1,84 @@
+{
+  "case_id": "normal-better-typography",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a4f-ef71-7311-a172-9862076abe08",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "한국어 긴 글 페이지의 타이포그래피를 점검하려고 해. 본문 줄 길이·행간·글자 크기 계층, 제목 줄바꿈, 숫자 정렬과 말줄임 시 전체 내용 접근이 대상이야. 레이아웃 재설계 없이 필요한 입력과 점검 기준을 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "## 필요한 입력\n\n- 대상 페이지의 데스크톱·모바일 화면 또는 디자인 캡처\n- 실제 한국어 본문·제목·숫자·말줄임 사례\n- 적용 폰트와 fallback, 글자 크기·굵기·행간·본문 너비 값\n- 지원 최소 화면 너비와 확대 기준\n- 말줄임된 내용을 여는 현재 경로(펼치기, 상세 화면 등)\n\n## 점검 기준\n\n- **본문:** 실제 한글 폰트와 콘텐츠로 줄 길이를 측정한다. 라틴 기준인 `60–75ch`를 그대로 적용하지 않는다. 본문은 `16px` 이상을 출발점으로 삼고, 단위 없는 행간 `1.5–1.6`을 확인한다.\n- **계층:** 제목 단계별 크기·굵기가 명확히 내려가며, 제목이 본문보다 작지 않아야 한다. `18px` 미만 텍스트는 굵기 `400` 이상을 기준으로 한다.\n- **제목 줄바꿈:** 한국어·영문 제품명·숫자가 섞인 실제 제목으로 확인한다. 특정 화면에 맞춘 강제 `<br>`은 피하고, 짧은 제목에만 균형 줄바꿈을 검토한다.\n- **숫자:** 가격·통계·카운터·표의 숫자는 비교 방향을 맞추고 `tabular-nums`로 자리 이동을 방지한다. 본문 속 숫자는 비례 숫자를 유지한다.\n- **말줄임:** 생략 여부가 시각적으로 드러나고, 키보드·터치로 전체 내용을 확인할 수 있어야 한다. 복원 경로가 없으면 `HIGH`로 판정한다.\n- **경계 조건:** 최소 지원 너비와 200% 확대에서 글자 잘림, 가로 스크롤, 비정상 단어 분리, 접근 불가능한 말줄임을 확인한다.\n\n현재 입력과 렌더링 증거가 없으므로 실제 합격·불합격 여부는 **미검증**입니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-typography"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-typography": {
+      "call_id": "call_eed6f128636242d9a4d72474470bc2b8",
+      "file_sha256": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc",
+      "output_sha256": "8aa1cb4dabf9a6aaed60dad39b7dc9b41d5852c570f4e410c150b1ba0146957f",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-typography": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md && rg -n \\\"typography|타이포|긴 글|줄 길이|행간|말줄임|숫자 정렬\\\" $EXPERIMENT/candidate/codex-home/memories/MEMORY.md | head -40\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "8aa1cb4dabf9a6aaed60dad39b7dc9b41d5852c570f4e410c150b1ba0146957f"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,280p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/korean-text.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "422b368c187b0379e1b80a7b524df7bf745fc1bbfb2ea395c5ac2356d7ef73ff"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 71161,
+      "cached_input_tokens": 56832,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1613,
+      "reasoning_output_tokens": 729
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "67925003006924f305ce74db2a8d66a8bbbb077bb93f27d99a6b44f17317a046",
+  "transcript_sha256": "35db96c88dc8528249ca0fb05b838d9d5a55a22a867567fbb5da144fb3baa42e",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 41.209
+}

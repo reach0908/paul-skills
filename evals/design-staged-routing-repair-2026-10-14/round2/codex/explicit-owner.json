@@ -1,0 +1,68 @@
+{
+  "case_id": "explicit-owner",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a139de-2cda-7050-8e88-b97db39ee925",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": false
+  },
+  "pass": false,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "`working` 범위 검토를 시작하려면 다음 입력이 필요합니다.\n\n- 변경 의도: 해결하려는 문제와 기대 동작\n- 비교 기준: 기본 브랜치와 기준 커밋\n- 작업 트리 상태: staged/unstaged 파일 목록과 전체 diff\n- 필요 시 관련 이슈·명세\n- 렌더링 검증 허용 여부 \u2014 없으면 시각·런타임 항목은 `Not verified`\n\n분류 방식:\n\n- `Introduced`: 이번 변경이 새로 만든 결함\n- `Regression`: 변경 전에는 정상이었지만 이번 변경으로 약화된 동작\n- `Pre-existing`: 기준 시점부터 있었고 이번 변경이 악화시키지 않은 결함\n\n판단할 때 추가된 줄뿐 아니라 제거된 줄과 대체 구현을 함께 확인하고, 변경 파일이 공유 컴포넌트·토큰이면 직접 소비 화면까지 제한적으로 추적합니다. `Pre-existing`은 최대 3개만 별도 참고로 기록하며 변경의 책임으로 간주하지 않습니다.\n\n완료 조건은 전체 diff의 양쪽을 읽고, 제외 파일과 영향 화면을 명시하며, 모든 발견에 상태와 전후 근거를 붙이는 것입니다. 접근성·레이아웃·문구·타이포그래피·색상·UI 영역의 검토 범위와 미검증 항목도 밝혀야 합니다. `Introduced`나 `Regression`이 없으면 “이번 변경에서 조치할 인터페이스 문제 없음”으로 마칩니다.\n\n현재는 실제 diff와 기준 정보가 제공되지 않았으므로 확인된 검토 결과는 없습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57",
+      "full_body_equal": true
+    }
+  ],
+  "loaded_file_hashes": {
+    "interface-review": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57"
+  },
+  "commands": [],
+  "usage": [
+    {
+      "input_tokens": 23964,
+      "cached_input_tokens": 19968,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 647,
+      "reasoning_output_tokens": 240
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "stream_sha256": "151f442763efa9c1b631077c253fddb54842a9a03bc7f6288181c3ab1fa0d5c2",
+  "transcript_sha256": "776dae7819f5033d6532d68616afbc10c6209d8277ccdd36f3d1f11bd29897e9",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 22.617
+}

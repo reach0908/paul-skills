@@ -1,0 +1,651 @@
+{
+  "arm": "candidate",
+  "fixture": "index-divergent",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "schema_version": 1,
+  "case_id": "staged-divergent",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "handoff",
+  "protocol_version": 1,
+  "trial_directory_name": "case_024",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review staged 범위의 로컬 UI 변경 전체를 실제로 리뷰해줘. Git 이전 내용과 해당 범위의 내용을 비교해서 검토를 끝까지 진행하고, 기준 SHA와 포함·제외한 파일을 명시해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.\n파일과 참조 문서는 Read/Glob/Grep으로 읽고, Git 조회는 허용된 읽기 전용 git 하위 명령을 각각 하나의 Bash 호출로 실행해. 셸 연결이나 파이프, cd, git -C 없이 현재 폴더에서 조회해.",
+  "session_id": "a0ffc27c-99dc-4b2c-8025-fc8010b5b865",
+  "started_at": "2026-10-14T12:18:14.101019+00:00",
+  "host_init_session_id": "a0ffc27c-99dc-4b2c-8025-fc8010b5b865",
+  "host_result_session_id": "a0ffc27c-99dc-4b2c-8025-fc8010b5b865",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Bash",
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "38b409bf-6009-4721-b983-c9ea057ef044",
+  "automatic_catalog_sha256": "cf893e72a07cbf5c9113b464d776077db54cc6c860508b523743db2ed077729d",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "3056af97-fa76-4b85-8b56-4feb229d73e1",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "body_sha256": "5ae3409669880922a35cb872efabcbbefb534a3ff20956132db414984e4b4b56",
+      "host_message_sha256": "3caada95c30acbb99716a96c8271e7b3f8da3b23868c84892dea75e25145619d",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-interface",
+      "event_uuid": "74e4683e-3389-4331-a06c-e4db10800b4a",
+      "file_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "body_sha256": "6dad1e1c94ec8dbb860ce09094c883042716b0964050d6b9b5712c79d3b1a387",
+      "host_message_sha256": "d398e928829ffe6a8c6c9bfe4b8fdec1467f0b5eb44766ee3bf4687f81cc5997",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-accessibility",
+      "event_uuid": "c51e70c1-3e31-4ca7-8378-20101da7b587",
+      "file_sha256": "e1b654c3a1a1a40e9183f364360e1211c0680ee0adffb996504afd44e8a5c173",
+      "body_sha256": "4588c33276fb57595852b994c751c6ac27fdd704d0a496901789c592ac69eab9",
+      "host_message_sha256": "c2314c6c86fe7e2aed5157b4ef8c6e7b0fd305ddf15330143a8f9ea5497bfd0d",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-layout",
+      "event_uuid": "1af3d07c-6fea-4376-bfcd-6aaeb20ae69c",
+      "file_sha256": "5ab7a453623b818f345f0cae78a04283c50f7221e757563513658a20e70d1c8b",
+      "body_sha256": "a47ba0ab2637eba194a81c9aea36ac39d477d3ba62a9cfc0585aaf40b222e6c7",
+      "host_message_sha256": "d7e9b613d14cf2ec06be63fe72e423640fc561f201840392d4e2ff9fa3cbc4f1",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-writing",
+      "event_uuid": "32c40aa6-af90-4c1c-a07b-07bc5ed31fb6",
+      "file_sha256": "0522f389720ecae8652f52948114d95b2383e1460d8bd5280b0d7a2d62ab245b",
+      "body_sha256": "7a65b6cd12299fb8865507c37f14193e3d438c06deb78010d5abf7ebc3cf2fef",
+      "host_message_sha256": "b402c336f7e057437b78bca87c094841800298d0c1d1c1878580bfc01b81de22",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-typography",
+      "event_uuid": "64e2f697-4678-4cfd-89b2-74f2bdfdbeec",
+      "file_sha256": "f1bb682c085bfbf85a25a97784d4a95b7381d93a9c499ef6f6d0effd41dd06cc",
+      "body_sha256": "c9878d89c354874eb9a334c2f38f0ca1239bbbf3c98f1f06e5568082149ed598",
+      "host_message_sha256": "6d8c6d990f9f89e5f82a9980e65e7aa4c9fa58530ba1e31dfdbba83ca0efa24d",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-colors",
+      "event_uuid": "5eff81a8-05d9-4fd3-871f-a954c4ed24e0",
+      "file_sha256": "dc859a827af1681c59b3bbe094cee91d4899bf8e531c4e36da8c201d13819270",
+      "body_sha256": "269a14d1bd53a015ae6396f18016bd890a3d3b37aea4e7d572dc5ff6ce13888c",
+      "host_message_sha256": "8f216462ac84d59c1a15aeff3356cd098c0650475751bce61b40564c4c853b30",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-ui",
+      "event_uuid": "254085f0-a74e-497a-9d18-901f433db5de",
+      "file_sha256": "6ecf2c0197290d27e3e3b52537f412333b7b249fe55fab531112663d77c2ad48",
+      "body_sha256": "803369a98346bc59c40211762c4006d2c0bcb955a19752acf748f726fd4fed33",
+      "host_message_sha256": "dc6655c1f886bbc12756f799f27977d38a9193b80d7296ec4cf02aad0d949d86",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git rev-parse HEAD",
+        "description": "Resolve the full HEAD SHA"
+      },
+      "tool_use_id": "toolu_014nbMd9FLswSrQ2zTeSZ57a",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7a5fc9ef79274d8efcddf132d1089568c36b7b0646c0073ff6d031f2711fc0f4"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --cached HEAD --name-status",
+        "description": "List files staged relative to HEAD"
+      },
+      "tool_use_id": "toolu_01T9KL2za17rp4efZMtnVToj",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ce0720fa9e5682efae136f92c9b87c42330e7d4496ccf1a4d8ae9dabd89ec8ac"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git status --porcelain=v1 --untracked-files=all",
+        "description": "Show working tree and index status"
+      },
+      "tool_use_id": "toolu_017Eet354TN1Hti5mLJDfr8h",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "026945910e40cdfdb6778828576af30a9213265d4559aafdaeda1b790028f3c6"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*.md",
+        "path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/interface-review"
+      },
+      "tool_use_id": "toolu_01ChQX61vQSe5UeL9F2dryMj",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "f81edcfb1656ac96e20c7b9e6215b92abed3e705ebcad8dc05156a84b99b114c"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --cached HEAD",
+        "description": "Show staged diff against HEAD"
+      },
+      "tool_use_id": "toolu_01VpLyuAXqtMkojy9uQs1JKL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "3817229c03f58254236d0ed3be173cc45016d0fec200694f7b8e255965949bc4"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show HEAD:src/Panel.html",
+        "description": "Show Panel.html as committed at HEAD"
+      },
+      "tool_use_id": "toolu_01NPvCaCbLxgXYJa9AMy6ud2",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8e47b85542599f979b3ce637591bf9b8de00e96759a15420d95f01725c2ca96a"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show :src/Panel.html",
+        "description": "Show Panel.html from the index snapshot"
+      },
+      "tool_use_id": "toolu_01UFMLUdRQQRDJDiberMe1c3",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c754c27f97db98fdfa2b2bd3714118634ffd2239b55c60e8c9642e6367974656"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/interface-review/scope-resolution.md"
+      },
+      "tool_use_id": "toolu_015AomcMjQa8BnZDs5UATpdc",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7d28403b0ddf3ffd317fb5c2d1d6691e4ae3f07bba33781095b4c82f5993c7b0"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/interface-review/removed-signals.md"
+      },
+      "tool_use_id": "toolu_01SHJusZ516kbBD9csjxcBe6",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "1dc5b0caee65e0c4fcf250ab733d7c6a879ac0f8ec9afb9f4c411200e6f0e945"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git log --format=%H%x09%s%x09%b HEAD",
+        "description": "List commit history with subjects and bodies"
+      },
+      "tool_use_id": "toolu_01EvpHUygN913c8Pjzxf7eiN",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "cef8e90d232fdb5690787412d38f1366f4121ec2caf7bef95f68e815c356296d"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git ls-files --cached",
+        "description": "List all files tracked in the index"
+      },
+      "tool_use_id": "toolu_016rwxJhRqhVN5V1uxnJA9Rq",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "370467998f96af0bb26741d5b221bf3348938d867251b947e3eeb8677f5ee5b7"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git grep --cached -n -i -e Panel",
+        "description": "Search the index for references to Panel"
+      },
+      "tool_use_id": "toolu_01KScRV4fkAuBKsbPbwvhP6F",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "574ac12b0811f203273e370662166b9631a0fde7c7328580b1e3e1e3d22fe7e6"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --name-status",
+        "description": "List unstaged changes between index and working tree"
+      },
+      "tool_use_id": "toolu_01N7T1XpcvSDVMwvRWVzGx9E",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "71958b809979582c8ec376b86c5aefe562941b6d811a4ee7cd98c16fb2c3dc7b"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git rev-parse --git-path rebase-merge --git-path rebase-apply --git-path MERGE_HEAD --git-path CHERRY_PICK_HEAD",
+        "description": "Resolve paths for in-progress operation markers"
+      },
+      "tool_use_id": "toolu_01F7K6Sqz8FgNd1x2KUHD9nP",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "6e6d979e20a08e44b64b8dbf40ce029a96c596d197fe8230aba590026d44700e"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "{rebase-merge,rebase-apply,MERGE_HEAD,CHERRY_PICK_HEAD}",
+        "path": "$TRIAL/.git"
+      },
+      "tool_use_id": "toolu_01EUJAry2xxQB8JqxSLPhfXQ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "60d8af0bac804a684f5e426be34d338d5762a1c7009d35054eab2cb484cd1d6f"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show 9b0917ad41a586a0c14376986cd4b8a472080972 --stat --patch",
+        "description": "Show the HEAD commit that named the close control"
+      },
+      "tool_use_id": "toolu_01JnedXNppLaSWAnbBZN7NgK",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e1086335f1c68220805a85a9a7a208f8a29984e7efb5fd8df4370e9796dce5ee"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --cached HEAD --name-only -- . \":(exclude)package-lock.json\" \":(exclude)pnpm-lock.yaml\" \":(exclude)yarn.lock\" \":(glob,exclude)**/dist/**\" \":(glob,exclude)**/build/**\" \":(glob,exclude)**/vendor/**\" \":(glob,exclude)**/node_modules/**\" \":(glob,exclude)**/__snapshots__/**\"",
+        "description": "List staged files after applying exclusion pathspecs"
+      },
+      "tool_use_id": "toolu_0187SzKTkDoi3vDhWp9z7hH1",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2ff37cf0fe84542367c8e5a16c0d39a38edec67b80059939bcfe47121f528b49"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "Authorized change-review handoff from the user's explicit `/paul-skills:interface-review` invocation, target `staged`. Keep interface-review's scope and report format; apply domain checks, ranking, consolidation, coverage and verdict. Permitted verification: local static evidence only (Read/Glob/Grep, single read-only git subcommands). No file edits, no fetch, no browser, no external services; rendered claims are Not verified.\n\nScope block: Target `staged`. Base = HEAD 9b0917ad41a586a0c14376986cd4b8a472080972 (\"Name the close control\"). Head = index snapshot (`git diff --cached HEAD`; staged blob 4fba4eb, HEAD blob 250fe1a). Commits: 0 committed, 1 staged file. Files in scope: 1 (`src/Panel.html`) after exclusions; no excluded-path matches. Not in scope: unstaged edits to `src/Panel.html` (index→worktree) and untracked `src/New.html`. No mid-rebase/merge markers. Surfaces expanded: `src/Panel.html` is a standalone HTML page; `git grep --cached -i Panel` finds no importers; 0 consumers, 0 unexpanded.\n\nDiff (single hunk, line 4): removed `aria-label=\"Close subscription panel\"` from the icon-only `<button type=\"button\">` whose only child is `<svg aria-hidden=\"true\">`. Nothing else changed. No aria-labelledby, visible text, title or sr-only text replaces it. The staged blob 4fba4eb equals the parent of 9b0917a (1bdc19f), i.e. the staged change exactly reverses commit 9b0917a \"Name the close control\".\n\nCandidate finding: Accessibility, Regression, `src/Panel.html:4` (index), Before `aria-label=\"Close subscription panel\"` on the close button; After button has no accessible name. Owner: better-accessibility (WCAG 4.1.2 Name, Role, Value; also 2.5.3 not applicable since no visible label).\n\nUnchanged context lines 1–3 (lang=\"en\", title, button 44px min target, :focus-visible 3px #005fcc outline with offset, #111 on #fff body) predate this change; pre-existing only if a domain finds a problem."
+      },
+      "tool_use_id": "toolu_01B2FTexS9KiU28QDEh7yKGZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "f5bda6516ad569b1d310092c6f3ae946f603d9f6fa52e2ad05349ed7f92abdb5"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/better-interface/audit-procedure.md"
+      },
+      "tool_use_id": "toolu_01Hc7a3PZV8eE17sxtN6As8b",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "0b79fd478444bd2fcd6975d5f1629e7347aa0cf146ab38b3c24d3755e0f7e282"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*.md",
+        "path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/better-accessibility"
+      },
+      "tool_use_id": "toolu_01S582izgHjqiVmHMWtRmLNf",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "21f9ae2f4f22a0d44e66ec2644f398fd3497daed3871e8e11826533837960760"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-review-scope-20261014/candidate/marketplace/plugin/skills/design/better-interface/review-format.md"
+      },
+      "tool_use_id": "toolu_01DXsohbECtuSDgnJ9xRGxfR",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ecd63262a0d5af2eaac5e7c4016e0c0d7360810fdf0e4fa44314bb1a0470c7bc"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*",
+        "path": "$TRIAL"
+      },
+      "tool_use_id": "toolu_016QMadBJ6qH7iwQmLcgyeaG",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "d8071cbc9d4f07823bbd9727ae0cd5eaacb4d5fd81a0255cb6e2f6cb47cc44e7"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-accessibility",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. Single hunk at line 4 removes `aria-label=\"Close subscription panel\"` from an icon-only `<button type=\"button\">` whose only child is `<svg aria-hidden=\"true\">`. Confirm whether the control now lacks an accessible name, and check the rest of the page (lang, title, main/h1 landmarks, 44px button minimum, :focus-visible outline 3px #005fcc offset 3px) for any introduced or pre-existing issues. Return rule-level evidence, not a separate report format."
+      },
+      "tool_use_id": "toolu_015CZgYULW5pKTGi8c1vJBRo",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ebc9ffda7f8bcbc4bf5b44b182c9d0e9517f240e1f796fdfe6cbdeb51185ac5d"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-layout",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. The single staged hunk (line 4) removes only `aria-label=\"Close subscription panel\"` from the icon-only close button; no markup structure, CSS or layout changed. Check for introduced layout effects and note any pre-existing issues in unchanged lines (body margin 1rem, button padding .75rem min 44×44, no viewport meta). Return rule-level evidence, not a separate report format."
+      },
+      "tool_use_id": "toolu_018tfagbthKpvD5j6pALooMZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "eed3345b8bb95bbc5d2df70c73bce8125c6d5bd36ffab9b1097e73d4d7e5f114"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-writing",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. The single staged hunk (line 4) deletes the user-facing (assistive-technology) string `aria-label=\"Close subscription panel\"` from the icon-only close button; visible strings \"Subscription settings\" (title), \"Subscription\" (h1) and \"Your subscription is active.\" are unchanged. Judge the deleted string under the removed-signal rule (a user-facing string deleted) and note any pre-existing copy issues. Return rule-level evidence, not a separate report format."
+      },
+      "tool_use_id": "toolu_015xoJdNhtByFTonXp6b6C2C",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c5aea440782595ad8f4c7ef0a5753384e5df349439be4521835bd8f057a1028e"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-typography",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. The single staged hunk (line 4) removes only `aria-label` from the close button; no text, font or CSS changed. Unchanged: `<html lang=\"en\">`, `body{font:1rem/1.5 system-ui}`, `button{font:inherit}`. Check for introduced typography effects and note pre-existing issues. Return rule-level evidence, not a separate report format."
+      },
+      "tool_use_id": "toolu_014XC6KuNvMWmjpfgp96kvkG",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8fd5aaf193234c588b3226af6572bc20160153423ceeeed0d486746a6a97a60a"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-colors",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. The single staged hunk (line 4) removes only `aria-label`; no color changed. Unchanged pairs to measure for pre-existing status: body text #111 on #fff; :focus-visible outline #005fcc (3px, offset 3px) against #fff. Button and SVG stroke use UA defaults / currentColor. Return measurements, not a separate report format."
+      },
+      "tool_use_id": "toolu_017pqCSAhsRjnXpzuV5E28z8",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "828fd93e775e674b139e320aeb1637f3121e119dc86840885c486a1ee9b04f56"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-ui",
+        "args": "Authorized domain handoff from better-interface within the user's explicit `/paul-skills:interface-review staged` review. Read-only, local static evidence only; no edits, fetch, browser or external services. Scope: index snapshot of `src/Panel.html` vs HEAD 9b0917ad41a586a0c14376986cd4b8a472080972. The single staged hunk (line 4) removes only `aria-label` from the icon-only close button; no surface, icon or motion changed. Unchanged: inline 16×16 SVG X icon (`stroke=\"currentColor\"`, default stroke-width), UA-default button surface, no transitions or animation. Check for introduced UI effects and note pre-existing issues. Return rule-level evidence, not a separate report format."
+      },
+      "tool_use_id": "toolu_0175tmAAMtkFaQmBBmiQjgeq",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c9f07b597542a8ac9e1d03bfea7d5023159860251a6457b5ed430e9c11bbd6a2"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 인터페이스 리뷰: `staged`\n\n결과는 **Block**입니다. 스테이징된 변경이 닫기 버튼(아이콘만 있는 버튼)의 접근 가능한 이름을 지워서, 스크린 리더 사용자가 이 버튼이 무엇인지 알 수 없게 됩니다.\n\n## 범위\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `staged` |\n| Base ref | `HEAD` = `9b0917ad41a586a0c14376986cd4b8a472080972` (\"Name the close control\") |\n| Head ref | 인덱스 스냅샷 (`git diff --cached HEAD`; HEAD blob `250fe1a` → 인덱스 blob `4fba4eb`) |\n| Commits | 커밋 0개, 스테이징된 파일 1개 |\n| 포함 파일 | `src/Panel.html` (인덱스 사본만, `git show :src/Panel.html`로 읽음) |\n| 제외: 리뷰 대상 아님 | `src/Panel.html`의 스테이징되지 않은 작업 트리 수정, 추적되지 않는 `src/New.html` |\n| 제외: 경로 규칙 | 해당 없음 (lockfile, 스냅샷, 생성물, vendor, 바이너리 모두 0건) |\n| 확장한 화면 | `src/Panel.html` 단독 페이지입니다. `git grep --cached -i Panel`로 참조하는 파일이 0개라서 더 확장할 소비 화면도 0개입니다. |\n| 저장소 상태 | rebase·merge·cherry-pick 진행 중 표식 없음 |\n\n- **스택:** 인라인 `<style>`을 쓰는 정적 HTML입니다. 디자인 토큰, 컴포넌트 라이브러리, 번역 카탈로그는 없습니다.\n- **프로젝트 규약 문서:** 없습니다. `CONTRIBUTING.md`, `AGENTS.md`, `CLAUDE.md`, 디자인 시스템 문서 모두 찾지 못했습니다.\n- **의도:** 스테이징된 작업에는 커밋 메시지나 PR이 없습니다. 인덱스의 `src/Panel.html`(`4fba4eb`)은 `9b0917a` 직전 상태와 똑같습니다. 즉 이 변경은 HEAD 커밋 \"Name the close control\"을 그대로 되돌립니다. 지운 레이블을 대신하는 `aria-labelledby`, 보이는 텍스트, `title`, 스크린 리더 전용 텍스트도 없습니다.\n\n## 검토 범위\n\n| 영역 | 확인한 근거 | 결과 |\n| --- | --- | --- |\n| Accessibility | 4행 닫기 버튼의 이름 계산(자식은 `<svg aria-hidden=\"true\">`뿐), `lang=\"en\"`, `<title>`, `<main>`·`<h1>`, `min-width/min-height:44px`, `:focus-visible` 링 | 1건 (Regression) |\n| Layout | 3행 CSS(물리 left/right 속성, 고정 너비·높이, sticky 요소 없음), 4행의 DOM 순서와 화면 순서 | Clear |\n| Writing | 지워진 문구 \"Close subscription panel\"은 아이콘 모양이 아니라 동작을 말하므로 규칙에 맞습니다. title·h1·본문 용어(\"subscription\")는 일관됩니다. 번역 카탈로그는 없습니다. | Clear (지워진 문구 문제는 Accessibility 항목에 합침) |\n| Typography | `font:1rem/1.5 system-ui`(단위 없는 line-height, `rem`), `button{font:inherit}`, `lang=\"en\"`. 숫자·말줄임·입력 필드 없음 | Clear |\n| Colors | `#111`/`#fff` 본문, `#005fcc`/`#fff` 포커스 링을 선언값으로 계산 | Clear |\n| UI | SVG 아이콘(`currentColor`), 버튼 표면, 모션·hover·중첩 표면 없음 | Clear (기존 문제 LOW 1건) |\n\n## 발견 사항\n\n| 심각도 | 영역 | 상태 | 위치 | 변경 전 | 변경 후(수정안) | 이유 |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Accessibility | Regression | `src/Panel.html:4` (인덱스) | `<button type=\"button\" aria-label=\"Close subscription panel\">`. 이 변경이 `aria-label`을 지웠습니다. | `aria-label=\"Close subscription panel\"`을 그대로 되살립니다. | 버튼의 자식은 `aria-hidden` SVG뿐이라 지금은 이름이 비어 있습니다(WCAG 4.1.2 Name, Role, Value, Level A). 스크린 리더는 \"button\"이라고만 읽어서 사용자가 닫기 동작을 알아낼 수 없습니다. 이름 없는 조작 요소는 상향 기준에 해당하므로 바로 HIGH입니다. 지워진 문구가 이미 Writing 규칙(대상과 동작을 말함)에 맞으므로 새 이름 대신 원래 문구를 복원하는 것이 가장 간단합니다. |\n\n## 기존 문제 (이 변경의 책임 아님)\n\n| 심각도 | 영역 | 위치 | 문제 |\n| --- | --- | --- | --- |\n| LOW | UI | `src/Panel.html:4` | X 아이콘에 `stroke-width`가 없습니다. 그래서 SVG 기본값 1이 적용되고, 16px 크기의 viewBox 16에서는 1px 선이 됩니다. 400 굵기 텍스트에 맞추는 기준은 1.5px입니다. 이 값은 소스에서 계산한 것이고 실제 렌더링은 확인하지 않았습니다. |\n\n닫기 버튼에 연결된 스크립트나 동작이 없다는 점은 HEAD 때부터 그랬습니다. 이는 기능 정확성 문제라 디자인 리뷰가 아니라 일반 코드 리뷰(`/paul-skills:code-review`)에서 다룰 일입니다.\n\n## 검증\n\n**실행한 확인 (모두 읽기 전용 git 명령을 하나씩 실행):**\n\n- `git rev-parse HEAD`: 기준 SHA를 확정했습니다.\n- `git diff --cached HEAD --name-status`, `git diff --cached HEAD`: 스테이징된 파일 1개, 4행 hunk 1개입니다. diff 전체를 읽었습니다.\n- `git show HEAD:src/Panel.html`, `git show :src/Panel.html`: 변경 전후 내용을 비교했습니다.\n- `git show 9b0917a… --stat --patch`: 인덱스가 이 커밋을 정확히 되돌린다는 것을 확인했습니다.\n- `git status --porcelain=v1 --untracked-files=all`, `git diff --name-status`: 스테이징되지 않은 수정과 추적되지 않는 파일을 확인하고 범위에서 뺐습니다.\n- `git diff --cached HEAD --name-only -- . <제외 패턴>`: 제외 규칙을 적용해도 파일 수는 1개 그대로입니다.\n- `git ls-files --cached`, `git grep --cached -n -i -e Panel`: 이 페이지를 참조하는 곳은 0개입니다.\n- `git rev-parse --git-path …`와 Glob: 진행 중인 git 작업이 없습니다.\n- `git log`: 의도를 파악할 메시지는 \"Name the close control\", \"Initial screen\" 두 개뿐입니다.\n- 대비는 선언값과 WCAG 상대 휘도 공식으로 손 계산했습니다(소스 기준):\n  - `#111`/`#fff`: 18.88:1로 4.5:1 기준을 통과합니다.\n  - `#005fcc`/`#fff`: 5.98:1로 1.4.11의 3:1 기준을 통과합니다. `outline-offset:3px` 때문에 링과 맞닿는 색은 `#fff`뿐입니다.\n\n**Not verified (렌더링 검증 없음, 요청대로 브라우저·외부 서비스 미사용):**\n\n- 렌더링된 화면, 그리고 접근성 트리에서 계산된 이름과 역할\n- 키보드 탐색과 실제 포커스 링 표시\n- 스크린 리더 실제 낭독\n- 320px 너비, 200% 확대, RTL 미러링\n- 실제 칠해진 색 대비, 그리고 브라우저 기본 버튼 배경 위 `currentColor` 아이콘 대비(1.4.11)\n- 버튼의 실제 히트 영역 크기와 아이콘 선의 실제 렌더링 두께\n\n## 판정\n\n**Block**: HIGH 1건(Regression)이 남아 있습니다. 6개 영역을 모두 검토했고 Not reviewed 영역은 없습니다.\n\n이 판정은 인덱스 스냅샷에만 해당합니다. 같은 파일 `src/Panel.html`에 스테이징되지 않은 수정이 있고, 이번 리뷰에서는 보지 않았습니다. 사람의 승인, 완전한 접근성 적합성, 배포 승인은 이 디자인 판정과 별개로 각자의 근거가 필요합니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true,
+    "authorized_owners_loaded": true,
+    "real_git_diff": true,
+    "classified_finding": true,
+    "audit_procedure_loaded": true,
+    "no_default_branch_resolution": true,
+    "target_snapshot_read": true
+  },
+  "pass": true,
+  "duration_seconds": 243.075,
+  "duration_api_ms": 240439,
+  "usage": {
+    "input_tokens": 30,
+    "cache_creation_input_tokens": 68622,
+    "cache_read_input_tokens": 599429,
+    "output_tokens": 14763,
+    "output_tokens_details": {
+      "thinking_tokens": 6307
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 66655,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 741,
+        "cache_read_input_tokens": 65328,
+        "cache_creation_input_tokens": 6247,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 6247
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 68552,
+        "output_tokens": 5827,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 3679,
+        "cache_read_input_tokens": 71575,
+        "cache_creation_input_tokens": 1967,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1967,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 30,
+      "outputTokens": 14763,
+      "cacheReadInputTokens": 599429,
+      "cacheCreationInputTokens": 68622,
+      "webSearchRequests": 0,
+      "costUSD": 0.9583408,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 6307,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 68552,
+      "outputTokens": 5827,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.97687,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 1.9352108000000001,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "926033665b5d6b9a7746bdaf24b7e5c8b6f5f1e87f8d44b1395050458968cd79",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "d8db64db739489468eb01b52acaddc416b84baf802cad78e1cfa177676177f72",
+    ".git/logs/refs/heads/feature/checkout": "dfcff6a87c670f4f440dd1bb105fc8c2f2d41e465557e859b4376aa8b2cf41cf",
+    ".git/logs/refs/heads/main": "b844800650551e85680887c2d4fb2668a3dc28f42e281d4efb6692664e6c7c10",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/1b/dc19fcba2686de515cb9c685a033d8b4448c7e": "c6d5d5c9bad718e43ce46d5649ca5280309cf5a7e505244812e9a4b638c3fcdf",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/9b/0917ad41a586a0c14376986cd4b8a472080972": "97c7cf378dbb5bdb45cdbb75d2cefaee40042beb9b9783e6ee70eabf2b4b61b6",
+    ".git/refs/heads/feature/checkout": "8d43cc6d5da0d4d8d14ffbee640cf320ae4c6bcc7685d24ba95b39f86f9aee5d",
+    ".git/refs/heads/main": "bd10157dc1a948267b7d89b8c9c650165bb25c423c6a965d2760263ecd6ed5a4",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "input_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "926033665b5d6b9a7746bdaf24b7e5c8b6f5f1e87f8d44b1395050458968cd79",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "d8db64db739489468eb01b52acaddc416b84baf802cad78e1cfa177676177f72",
+    ".git/logs/refs/heads/feature/checkout": "dfcff6a87c670f4f440dd1bb105fc8c2f2d41e465557e859b4376aa8b2cf41cf",
+    ".git/logs/refs/heads/main": "b844800650551e85680887c2d4fb2668a3dc28f42e281d4efb6692664e6c7c10",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/1b/dc19fcba2686de515cb9c685a033d8b4448c7e": "c6d5d5c9bad718e43ce46d5649ca5280309cf5a7e505244812e9a4b638c3fcdf",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/9b/0917ad41a586a0c14376986cd4b8a472080972": "97c7cf378dbb5bdb45cdbb75d2cefaee40042beb9b9783e6ee70eabf2b4b61b6",
+    ".git/refs/heads/feature/checkout": "8d43cc6d5da0d4d8d14ffbee640cf320ae4c6bcc7685d24ba95b39f86f9aee5d",
+    ".git/refs/heads/main": "bd10157dc1a948267b7d89b8c9c650165bb25c423c6a965d2760263ecd6ed5a4",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 36,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "stream_sha256": "31dd9087147e329ef46990ff905beeff830a282b2f53c1416d58232b7f714e88",
+  "transcript_sha256": "add555b291c252f6b3f9ba34d29185a88f754ce709bc742e193262aa418cdfa3",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

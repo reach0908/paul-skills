@@ -1,0 +1,253 @@
+{
+  "arm": "candidate",
+  "fixture": "git",
+  "bundle_manifest_sha256": "2d275b13bc80e9f4e713556e105f7ffed97e051140945783a07bf690ec0f88ed",
+  "schema_version": 1,
+  "case_id": "staged-1",
+  "host_protocol_sha256": "577e0365e3739867b1ce0edaf5c1efc39db4e0f8c911acaee84e003f213f53d5",
+  "mode": "boundary",
+  "protocol_version": 1,
+  "trial_directory_name": "case_001",
+  "expected": "better-interface",
+  "prompt": "스테이징에 올라간 UI 변경만 보고 이번 수정으로 생긴 접근성과 레이아웃 회귀를 리뷰해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "session_id": "6137cb60-c505-4842-894c-af3ecf9acc8d",
+  "started_at": "2026-10-14T10:12:07.263045+00:00",
+  "host_init_session_id": "6137cb60-c505-4842-894c-af3ecf9acc8d",
+  "host_result_session_id": "6137cb60-c505-4842-894c-af3ecf9acc8d",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-staged-routing-20261014/round3/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "5a66eb57-ac7c-4158-9c77-6a1a8302a66d",
+  "automatic_catalog_sha256": "c223f485c452146ef3dd91e032d37d7b130bbbb77fa36bffb2b64131cde3edd9",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "8ccc7fe1-1587-4f6d-80cd-bf1e81f9a94e",
+      "file_sha256": "dc7a6d55c9bcf6e935d42322764f3984d1452849be141fc407e6eef4a0e7cad2",
+      "body_sha256": "e7032484bc6f57ba0eb34ac9b77575352b270587ac53614a43022641674960dd",
+      "host_message_sha256": "b4f8752cf03ccd424469fb73d765151c8a729616d54b9a426dddc22ac10a7d27",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "스테이징된(index) UI 변경만 대상으로, 이번 수정으로 생긴 접근성·레이아웃 회귀 리뷰. 제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지, 미확인 결과를 사실처럼 말하지 말 것."
+      },
+      "tool_use_id": "toolu_01VqmE6QjbagT2bv4WtYWtRB",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "4aec9009bfcd1be803bce1e6b1038dd9b37e2f2f3a9d512ecaf007c591ac5f20"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "`/paul-skills:interface-review staged`\n\n스테이징된 변경에서 새로 생겼거나 나빠진 접근성·레이아웃 문제를 가리는 리뷰는 사용자가 `interface-review`를 직접 실행해야 시작할 수 있어서, 저는 아직 파일을 열거나 판정을 내리지 않았습니다. 위 명령을 실행할 때 제품 파일 수정 금지, 브라우저·외부 서비스 실행 금지, 확인하지 않은 결과는 사실처럼 말하지 않기 조건을 함께 적어 주세요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "no_user_only_loads_or_attempts": true,
+    "expected_owner": true,
+    "explicit_handoff": true,
+    "no_domain_calls": true,
+    "only_route_bodies": true,
+    "router_body_loaded": true,
+    "no_file_inspection": true
+  },
+  "pass": true,
+  "duration_seconds": 10.341,
+  "duration_api_ms": 8189,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15745,
+    "cache_read_input_tokens": 18670,
+    "output_tokens": 597,
+    "output_tokens_details": {
+      "thinking_tokens": 201
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15745,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 293,
+        "cache_read_input_tokens": 14938,
+        "cache_creation_input_tokens": 4539,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 4539
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 597,
+      "cacheReadInputTokens": 18670,
+      "cacheCreationInputTokens": 15745,
+      "webSearchRequests": 0,
+      "costUSD": 0.14165,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 201,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.14165,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {
+    ".git/COMMIT_EDITMSG": "9fcbf0d9ed48aca3a540a10b63a743305f21178df625c65ea8f6d5533eb87136",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "2960afc0a372e58f2d68908f8f9108bf161bbd164965e811b8b1bf4da4c92368",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "633e3bae88f84db618bf719d8176e5cdfcaa2bb9c89748eaf12cca6a5f633303",
+    ".git/logs/refs/heads/feature/checkout": "a95a8c70f65e75424b3fb21de81dedd222aeb76778eb4aab0e8fd83aa1dac9fb",
+    ".git/logs/refs/heads/main": "c72660fe529fb81e44477990a5443b52e102b2b9bcedbc940140d8b587a4394f",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/a5/eafb3d1249e27cb14677ea287747d754747f71": "76979779b43be4948f6fb8124f4d943bed58af07f41e6390cf58e7d37d460df1",
+    ".git/refs/heads/feature/checkout": "d39e153b32e3e5c6892f5919f4631e993c75ff8abdf3c9b4c5ac3051837f4d02",
+    ".git/refs/heads/main": "d39e153b32e3e5c6892f5919f4631e993c75ff8abdf3c9b4c5ac3051837f4d02",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "input_after": {
+    ".git/COMMIT_EDITMSG": "9fcbf0d9ed48aca3a540a10b63a743305f21178df625c65ea8f6d5533eb87136",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "2960afc0a372e58f2d68908f8f9108bf161bbd164965e811b8b1bf4da4c92368",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "633e3bae88f84db618bf719d8176e5cdfcaa2bb9c89748eaf12cca6a5f633303",
+    ".git/logs/refs/heads/feature/checkout": "a95a8c70f65e75424b3fb21de81dedd222aeb76778eb4aab0e8fd83aa1dac9fb",
+    ".git/logs/refs/heads/main": "c72660fe529fb81e44477990a5443b52e102b2b9bcedbc940140d8b587a4394f",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/a5/eafb3d1249e27cb14677ea287747d754747f71": "76979779b43be4948f6fb8124f4d943bed58af07f41e6390cf58e7d37d460df1",
+    ".git/refs/heads/feature/checkout": "d39e153b32e3e5c6892f5919f4631e993c75ff8abdf3c9b4c5ac3051837f4d02",
+    ".git/refs/heads/main": "d39e153b32e3e5c6892f5919f4631e993c75ff8abdf3c9b4c5ac3051837f4d02",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 3,
+  "protocol_sha256": "a55868be23f079eb802a839a2c0b07998c1efb2804d27596d4031b9ca7d5ac92",
+  "cases_sha256": "f5c66ed8208e0e91e7bb6a8e86e2b5cbd28b7dd2e09d4a3480d939770878f929",
+  "stream_sha256": "166c5a480e57f45a74d4052ad348ee4ab3ac31cc5c1f79d35c485d94ebecc0d0",
+  "transcript_sha256": "aecda62608bc4f97f8bf7b47a2a9f66024c2ff38c65217b6beff1b38ae202c46",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

@@ -1,0 +1,42 @@
+{
+  "npm_check": {
+    "pass": true,
+    "unit_tests": 38,
+    "log_sha256": "5f9790f01c8236354b55403d082711960f015b15f600059424cba6f332af1c8f"
+  },
+  "strict_plugin_validate": {
+    "pass": true,
+    "log_sha256": "954bfd13a7e33f31a087f744809ab7c13440b8246bcf4fa9d3c5dc34004de96b"
+  },
+  "review_integrity_tests": {
+    "pass": true,
+    "count": 14,
+    "log_sha256": "c78718e3db4fad7eacd1073ad97312ab7300fd03ba02c9d03a779579e4ae7c38"
+  },
+  "publication": {
+    "user_authorized": true,
+    "raw_secrets_or_settings_included": false
+  },
+  "known_failed_native_cases": [
+    "codex/installed-resolved",
+    "claude/installed-unknown"
+  ],
+  "evidence_verifier": {
+    "integrity_pass": true,
+    "installation_verified": true,
+    "source_application_verified": false,
+    "source_application_passed": 10,
+    "native_sessions": 12,
+    "counts": {
+      "codex": {
+        "completed": 6,
+        "passed": 5
+      },
+      "claude": {
+        "completed": 6,
+        "passed": 5
+      }
+    },
+    "full_sample_passed": false
+  }
+}

@@ -19,7 +19,7 @@ The question picks the branch, and the branches produce different artifacts:
 - **"Does this logic / state model feel right?"**: a **single shareable HTML file**. One self-contained page, no build and no server, that someone opens by double-clicking. It carries a labelled state panel that re-renders after every click, free-play buttons for poking at the model in any order, and tabbed **guided walkthroughs** (one scenario per tab, each with the ordered buttons to press underneath it). Everything is labelled in domain language, so you can hand it to a designer, a PM or a domain expert and let them try the model themselves. The logic behind the page is a small pure module (a reducer, a machine, a set of functions) with no DOM code in it, so you can move the validated version straight into the real code.
 - **"What should this look like?"**: several **radically different** UI variations on one route, switchable from a floating bottom bar and a `?variant=` URL param. Variants must disagree about structure, not colour; three card grids with small tweaks answer nothing. They render inside a real page wherever possible, against real data and real density, because a variant judged on an empty page always looks fine.
 
-For an existing UI, include the original in the comparison. The alternatives answer a stated design question; being visibly different does not prove they are better.
+For an existing UI, include the original in the comparison. The existing brief and approved screen supply fixed benefits, content and visual choices. Alternatives vary only the dimensions the question leaves open; being visibly different does not prove they are better.
 
 Both keep state in memory, start with no setup, and show you the full state after every step. The moment you find yourself hardening one (adding a test, wiring the real database, generalising for a case you might want later), you have stopped prototyping.
 
@@ -32,6 +32,9 @@ You record the **answer** (the verdict plus the question it settled) somewhere p
 The **prototype** is the runnable evidence the answer came from, and you do not delete it. It doesn't belong in main either, because nobody maintains it and it goes stale fast. So you commit it to a throwaway `prototype/<name>` branch out of main, never merge it, and leave a [context pointer](https://www.aihero.dev/ai-coding-dictionary/context-pointer) to that branch on the implementation issue. Main stays clean, and whoever picks the work up next can find and re-run the prototype.
 
 ## Common questions
+
+**Can I compare layouts without losing the approved message or visual direction?**
+Yes. The comparison records its baseline and fixed conditions first, then checks every alternative against them. Public copy gives each heading, explanation and action a distinct job; internal research and comparison notes stay outside that copy.
 
 **What if the original is better, but the comparison tool was useful?**
 Keep the original and record that decision. The prototype succeeded in making the alternatives inspectable; that is separate from accepting a redesign. Further variants need an unresolved question, not a demand to make the page look different.
@@ -64,6 +67,7 @@ It can be, if you prototype questions you could have answered by talking, or let
 - Someone says "wait, that shouldn't be possible" or "huh, I assumed X". That's a bug in the *idea*, which is what the prototype is for.
 - The UI variants disagree about layout and information hierarchy, not just colour and copy, and the feedback you get is "the header from B with the sidebar from C".
 - Keeping the original can resolve the question without triggering implementation work.
+- Every alternative keeps the agreed benefits and approved elements, and its tradeoff answers the same question.
 - It is answered in one sitting. If you're still building it a day later, the question was too big; split it.
 - When it's over, main contains the decision and none of the prototype, and the implementation issue points at the branch that still holds it.
 

@@ -10,7 +10,7 @@ It was called `writing-great-skills` until v1.1. The new name fits what it alway
 
 Type `/writing-for-agents`, or the agent reaches for it on its own when you're creating or editing a skill, or modifying `AGENTS.md` or `CLAUDE.md`.
 
-Reach for it by hand for everything else an agent reads: your docs, specs and [tickets](https://www.aihero.dev/ai-coding-dictionary/ticket), system and [AFK](https://www.aihero.dev/ai-coding-dictionary/afk) prompts. The test is one question: does an agent read this? It does not matter how the agent gets the document: a pointer names it, a human pastes it, or it is in the repo. To find out what a codebase contains, use [grill-with-docs](https://aihero.dev/skills-grill-with-docs). This reference controls how a document reads, not what it knows.
+Reach for it by hand for everything else an agent reads: your docs, specs and [tickets](https://www.aihero.dev/ai-coding-dictionary/ticket), system and [AFK](https://www.aihero.dev/ai-coding-dictionary/afk) prompts. The test is one question: does an agent read this? It does not matter how the agent gets the document: a pointer names it, a human pastes it, or it is in the repo. To find out what a codebase contains, use [grill-with-docs](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/grill-with-docs.md). This reference controls how a document reads, not what it knows.
 
 ## The two loads
 
@@ -52,6 +52,9 @@ Ask which load you want to pay. `CLAUDE.md` loads into every [session](https://w
 **Do I need to rewrite my documents for each new model?**
 Mostly no, and over-fitting to one model causes its own problems. Updating for a new model is usually another no-op pass rather than a rewrite.
 
+**Does avoiding repeated reads mean an old summary is enough?**
+No. A complete current body can be reused while it remains in context. Lost instructions after compaction, changed versions and missing branch references require another read. A path or hash records which source was involved; it cannot prove the reader received its contents.
+
 **My skill only works on the exact task I built it from.**
 The common method (do the work once, then have the agent write it up as a skill) fits that one run too closely, and the examples come out too specific. Keep the run as evidence, then generalise on purpose: strip what belonged to that repo and those files, and write for the class of task.
 
@@ -64,7 +67,8 @@ No. Finding the word that packs the most behaviour into the fewest [tokens](http
 - You can point at a leading word and see it change the agent's behaviour in more than one place.
 - Nothing is stated twice, in any form. Duplication is the most reliable sign a document was never tested.
 - Reference that only one branch needs sits behind a pointer rather than in the main file.
+- Required reads have visible completion evidence, and reloads have a reason instead of being counted as waste automatically.
 
 ## Where it fits
 
-This is a reach-for-it-anytime standalone reference. It applies to the whole set, not to one skill. Every skill here was written with it, and it also covers the documents the other skills produce (a `GLOSSARY.md` and its ADRs, a spec, a ticket) once an agent has to read them. Its one direct caller is [retro](https://aihero.dev/skills-retro), which loads it before proposing any steering file or skill. When you're unsure which skill or flow fits a task, [ask-matt](https://aihero.dev/skills-ask-matt) routes you over the whole set.
+This is a reach-for-it-anytime standalone reference. It applies to the whole set, not to one skill. Every skill here was written with it, and it also covers the documents the other skills produce (a `GLOSSARY.md` and its ADRs, a spec, a ticket) once an agent has to read them. Its one direct caller is [retro](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/retro.md), which loads it before proposing any steering file or skill. When you're unsure which skill or flow fits a task, [ask-matt](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/ask-matt.md) routes you over the whole set.

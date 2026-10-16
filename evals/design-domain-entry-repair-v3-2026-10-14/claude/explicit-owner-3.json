@@ -1,0 +1,174 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "schema_version": 1,
+  "case_id": "explicit-owner-3",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_023",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "22b54879-674d-4f90-af2d-6871ceb8ed1a",
+  "started_at": "2026-10-14T12:58:52.382260+00:00",
+  "host_init_session_id": "22b54879-674d-4f90-af2d-6871ceb8ed1a",
+  "host_result_session_id": "22b54879-674d-4f90-af2d-6871ceb8ed1a",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "15a471c9-c5ae-4845-beef-a004a07326b4",
+  "automatic_catalog_sha256": "509792e2a2032bf1fd4c8caf55f796f57df69657d4aa4478e757440c1781dbeb",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "ab386afb-f3d6-437c-a58a-d8c2421656f0",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "body_sha256": "5ae3409669880922a35cb872efabcbbefb534a3ff20956132db414984e4b4b56",
+      "host_message_sha256": "853ce2229a6dad1733526723af2537d3f286a6785643a52741da7509e665b42f",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 인터페이스 리뷰 준비: `working` 범위\n\nGit, 브라우저, 외부 서비스는 실행하지 않았고 diff도 읽지 않았습니다. 그래서 아래 내용은 리뷰 절차이고, 확인된 발견 사항은 하나도 없습니다.\n\n## 1. 범위 기준\n\n- **비교 기준(Base):** 현재 `HEAD` 커밋입니다. SHA는 실제 검토가 허용되면 그때 확정합니다.\n- **검토 대상:** `HEAD`와 현재 작업 트리의 실제 차이(`git diff HEAD`)와 추적되지 않은 새 파일(`git ls-files --others --exclude-standard`)입니다.\n  - staged와 unstaged 변경을 모두 포함합니다.\n  - 이미 커밋된 변경은 0건으로 보고 제외합니다.\n  - 기본 브랜치나 merge base는 필요하지 않습니다.\n- **제외 대상:** lockfile, 스냅샷, 생성 결과물, vendored 코드, 바이너리는 제외하고, 제외한 항목을 이름으로 밝힙니다.\n\n## 2. 필요한 입력\n\n1. **저장소 경로:** 환경 정보상 현재 디렉터리(`case_023`)는 Git 저장소로 잡히지 않습니다. 리뷰할 저장소 경로를 알려주세요.\n2. **실제 검토 허가:** 이 단계에서는 diff와 blame만 읽고 파일은 바꾸지 않습니다.\n3. **변경 의도:** `working`에는 커밋 메시지가 없습니다. 이 변경으로 무엇을 하려는지, 관련 이슈나 PR 설명이 있다면 함께 주세요. 의도와 비교해야 빠진 상태를 찾을 수 있습니다.\n4. **렌더링 검증 여부:** 따로 요청이 없으면 화면이나 실행 중 동작에 대한 판단은 모두 **Not verified**로 표시합니다.\n5. **번역 카탈로그 위치(선택):** 있다면 새 문구가 등록됐는지 확인할 수 있습니다.\n\n## 3. 기존 결함과 새 회귀를 나누는 방법\n\n상태는 문제가 발견된 위치가 아니라 **원인**으로 정합니다.\n\n| 상태 | 판정 기준 |\n| --- | --- |\n| `Introduced` | 이번 변경이 새로 만든 문제입니다. 추적되지 않은 새 파일은 전부 여기에 해당합니다. |\n| `Regression` | 원래 맞던 것을 이번 변경이 약화한 경우입니다. 각 변경 블록의 삭제 줄(`-`)에서 `aria-label`, `outline`, `prefers-reduced-motion` 같은 신호가 빠졌는지 확인합니다. diff의 다른 곳에 대체 코드가 없고 해당 도메인 스킬이 확인한 경우에만 회귀로 봅니다. |\n| `Pre-existing` | 변경 전부터 있었고 이번 변경으로 나빠지지 않은 문제입니다. 변경된 줄 바로 옆에 있어도 여기에 넣습니다. 최대 3건만 별도 섹션에 적습니다. |\n\n- **줄의 출처 판별:** 기준 범위 없이 `git blame -L n,n -- path`를 실행합니다. `Not Committed Yet`으로 나오면 이번 변경에 속하고, 기존 커밋이 나오면 원래 있던 줄입니다.\n- **영향 범위:** 변경된 파일 자체가 아니라 그 파일이 렌더링되는 화면을 검토합니다.\n  - 기본은 직접 import하는 쪽까지 한 단계만 따라갑니다.\n  - 토큰, 테마, 공유 컴포넌트는 두 단계까지 따라갑니다.\n  - 검토하는 소비처는 최대 5곳이고, 펼치지 않은 소비처 수도 밝힙니다.\n  - 바뀐 토큰 때문에 수정하지 않은 화면에 문제가 생겼다면 그것도 `Introduced` 또는 `Regression`입니다.\n\n## 4. 완료 조건\n\n- [ ] 범위 정보가 모두 채워져 있습니다. Target은 `working`, Base는 `HEAD` SHA, Head는 작업 트리이고, 커밋 0건과 미커밋 N건, 제외 후 파일 수, 제외 목록, 펼친 화면과 펼치지 않은 화면 수가 들어갑니다.\n- [ ] diff를 끝까지 읽었고, 모든 삭제 줄을 회귀 신호와 대조했습니다.\n- [ ] 모든 발견 사항에 상태가 붙어 있습니다.\n- [ ] 의도와 비교해 빠진 상태를 점검했습니다. hover, focus, disabled, loading 같은 상호작용 상태, empty와 error 상태, 번역, 같은 위치의 다른 화면이 대상입니다.\n- [ ] `better-interface`로 넘겨 다음 항목을 받았습니다.\n  - 검토 범위 표\n  - 심각도\n  - 중복 정리\n  - 최종 판정\n  - 근거가 없는 영역은 `Not reviewed: no evidence in the change scope`로 표시합니다.\n- [ ] 화면을 띄워 보지 않은 판단은 **Not verified**로 표시했습니다.\n- [ ] 작업 트리를 바꾸지 않았습니다. `checkout`, `switch`, `stash`는 쓰지 않습니다.\n- [ ] 검토 대상이 비어 있으면 승인(`Approve`)하지 않습니다. 빈 범위였다고 보고하고 다른 대상을 요청하며, 범위를 임의로 넓히지 않습니다.\n- [ ] 정확성, 테스트, 보안, 성능 문제는 일반 `code-review` 쪽이라고 한 번만 언급하고 다루지 않습니다. 그 결과와 점수를 합치지 않습니다.\n\n위 1~3번 입력을 주시면 실제 범위를 확정하고 검토를 시작하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 45.426,
+  "duration_api_ms": 43878,
+  "usage": {
+    "input_tokens": 2,
+    "cache_creation_input_tokens": 16021,
+    "cache_read_input_tokens": 3732,
+    "output_tokens": 4562,
+    "output_tokens_details": {
+      "thinking_tokens": 2361
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 16021,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 4562,
+        "cache_read_input_tokens": 3732,
+        "cache_creation_input_tokens": 16021,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 16021
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 2,
+      "outputTokens": 4562,
+      "cacheReadInputTokens": 3732,
+      "cacheCreationInputTokens": 16021,
+      "webSearchRequests": 0,
+      "costUSD": 0.22016239999999998,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2361,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.22016239999999998,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "5a892b9cf7e5193c9b4d584b465f2f31f8c782a2a970cd1374fbf9997aeb21c1",
+  "transcript_sha256": "3b1b37ab7d16ec27fe02dfce0d9c75b19da7a634a6110e4374ff14adac068f7d",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

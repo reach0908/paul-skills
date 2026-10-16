@@ -1,0 +1,69 @@
+{
+  "case_id": "normal-better-accessibility",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a139dc-89e2-7002-a6a2-a1c1d8911791",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "구독 해지 대화상자의 접근성을 점검하려고 해. 키보드만으로 열기·이동·닫기·원래 버튼으로 포커스 복귀, 접근 가능한 이름과 오류 알림, 화면 확대와 움직임 감소 설정이 대상이야. 필요한 입력과 검증 순서, 완료 조건을 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재는 준비 명세만 작성했으며, 실제 접근성 결과는 **검증되지 않음(Not verified)** 상태입니다.\n\n### 필요한 입력\n\n- 점검 대상 화면/대화상자와 해지 버튼의 정확한 위치\n- 정상 해지, 입력 오류, 서버 오류를 재현할 수 있는 안전한 테스트 계정\n- 대화상자 제목, 버튼명, 오류 문구 등 기대 동작\n- 지원 대상 OS·브라우저·스크린 리더 조합\n- 해지 완료 후 이동 위치와 포커스 처리 기준\n\n### 검증 순서\n\n1. `Tab`으로 해지 버튼에 도달하고 포커스 표시 확인\n2. `Enter`와 `Space`로 각각 열기\n3. 열린 직후의 초기 포커스와 배경 비활성화 확인\n4. `Tab`/`Shift+Tab`으로 내부 순환 및 순서 확인\n5. 대화상자의 이름·역할·상태와 각 컨트롤의 접근 가능한 이름 확인\n6. 제출 오류 발생 시 첫 오류 필드 포커스, 연결된 설명, 스크린 리더 알림 확인\n7. `Escape`, 취소 버튼, 닫기 버튼으로 각각 닫고 원래 해지 버튼으로 포커스 복귀 확인\n8. 200% 확대 및 320 CSS px 너비에서 내용·조작 손실과 불필요한 가로 스크롤 확인\n9. 움직임 감소 설정에서 슬라이드·확대·자동 움직임이 제거되거나 최소화되는지 확인\n\n### 완료 조건\n\n- 마우스 없이 전체 흐름을 완료하거나 안전하게 취소할 수 있음\n- 포커스가 대화상자 밖으로 빠지지 않고, 닫힌 뒤 호출 버튼으로 복귀함\n- 모든 조작 요소에 이름·역할·상태가 정확히 전달됨\n- 오류가 시각적으로 표시되고 적절히 연결·발표됨\n- 200% 확대와 320px 리플로에서 정보나 기능 손실이 없음\n- `prefers-reduced-motion` 설정이 존중됨\n- 미검증 항목 없이 대상 환경에서 증거가 기록되고, 작업을 막는 `HIGH` 결함이 없음",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-accessibility"
+  ],
+  "injected_skills": [],
+  "loaded_file_hashes": {
+    "better-accessibility": "cf90927907f247cdc98cf5cad5c92e679eacc1e437c02bc8d157f25e80338af6"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "cf90927907f247cdc98cf5cad5c92e679eacc1e437c02bc8d157f25e80338af6"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45565,
+      "cached_input_tokens": 32256,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1030,
+      "reasoning_output_tokens": 339
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "stream_sha256": "2db42179a603c46f3e1215119597a95257012d65688968a95fe765553d23e8c5",
+  "transcript_sha256": "01fa4e7b877062c86c2b94446d706f1b28fcdf079843a3cfbcfb83c53ab931ed",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 30.122
+}

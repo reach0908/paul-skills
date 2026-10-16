@@ -1,0 +1,122 @@
+{
+  "order-baseline-landing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "9599db860f7da520b17e0c24d6531d710b459ec4e3f5448c435a17cabd253d32",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/order-baseline-landing.md",
+        "assessment": "전체 여섯 owner 호출은 성공했지만 artifact를 먼저 읽어 순서 실패. 가격·동의 조건 유지와 AI 예측 구분은 충족."
+      }
+    ]
+  },
+  "order-baseline-missing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "84318630c4a3e9269a9f07ea06b346e569b84e91b7b88b9eccd551013f650bc6",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": false
+    },
+    "evidence": [
+      {
+        "response": "responses/order-baseline-missing.md",
+        "assessment": "여섯 owner 호출은 성공했지만 BRIEF가 선행. 현재 r2 근거 부재와 unknown/not_run은 구별."
+      }
+    ]
+  },
+  "order-baseline-staged": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "53836fd45dd065eea6b66d60b2660b6e6a698c1ed39f8149de21997cd0a3a389",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-baseline-staged.md",
+        "assessment": "interface-review staged 안내에서 종료. tool calls 0, 직접 검토 없음."
+      }
+    ]
+  },
+  "order-baseline-warning": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "23bb87be5112ed744c39446df6d58870ff6545e730f148aa58a0e6ec4bbe131c",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-baseline-warning.md",
+        "assessment": "이번 반복에서는 순서도 충족. 경고·두 버튼·내 기록 보존 정책 유지. 경고를 MEDIUM으로 분류하고 일부 추가 저장 문구를 제안하는 판단 차이 존재."
+      }
+    ]
+  },
+  "order-candidate-landing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "0f0135616c1bbced820070d417f855f1a5f88d64b8b085005fe6becf82603b22",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-candidate-landing.md",
+        "assessment": "절차 단독 읽기 → 여섯 owner → artifact와 참조 순서 확인. 요금·동의 조건 유지. 실측/사람 관찰 미실행 명시."
+      }
+    ]
+  },
+  "order-candidate-missing": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "bb1b85be2d10bdd7283df38f67cf6393917e5b3b56c818fcd2edc3e786c88678",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-candidate-missing.md",
+        "assessment": "화면이 없어도 여섯 owner를 먼저 읽고 실제 영역 검토는 미수행으로 구분. 의도와 관찰 unknown/not_run. 승인이나 근거 없는 결함 없음."
+      }
+    ]
+  },
+  "order-candidate-staged": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "be50f81f1a310dc054f5b8f2ebacec4353e70579c71a5620aa8abd06bf69c471",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "routing_control": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-candidate-staged.md",
+        "assessment": "interface-review staged 안내에서 종료. tool calls 0, 직접 검토 없음."
+      }
+    ]
+  },
+  "order-candidate-warning": {
+    "status": "reviewed",
+    "reviewer": "implementing maintainer; unblinded",
+    "response_sha256": "b5542c8675fd99aac971de747b0c9e1641ce1d7095552a49e267eeaf2420be03",
+    "criteria": {
+      "evidence_and_preservation": true,
+      "owner_execution": true
+    },
+    "evidence": [
+      {
+        "response": "responses/order-candidate-warning.md",
+        "assessment": "순서와 여섯 owner 모두 충족. 경고 제목을 확정 정책에 맞춰 좁히고 경고·두 버튼 유지. source/CSS와 미실행 브라우저·사람 관찰 구분."
+      }
+    ]
+  }
+}

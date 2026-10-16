@@ -1,0 +1,91 @@
+{
+  "case_id": "explicit-owner-3",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13a4c-6173-7543-8055-eb9e6e7a9fb1",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재는 준비만 했으며 Git, 실제 diff, 제품 파일, 브라우저·외부 서비스는 확인하지 않았습니다.\n\n### 필요한 입력\n\n- 대상: 이미 `working`으로 확정\n- 범위: 실행 시점의 `HEAD` 대비 작업 트리 전체\n  - staged + unstaged 추적 파일\n  - untracked 파일\n  - 이전 커밋은 제외, committed change는 `0`\n- 변경 의도: 관련 이슈·명세·디자인 또는 기대 동작. 없으면 의도 충족 여부는 판단 불가로 표시\n- 렌더링 검증 여부: 이번 조건에서는 브라우저를 실행하지 않으므로 시각·런타임 항목은 `Not verified`\n\n현재 `HEAD` SHA, 대상 파일, 제외 파일, 영향 화면은 아직 확인되지 않았습니다.\n\n### 결함 분류\n\n- `Introduced`: 이번 변경이 새로 만든 결함\n- `Regression`: 이전에 정상이던 동작을 이번 변경이 약화한 결함. 삭제된 코드와 대체 구현 유무를 함께 확인\n- `Pre-existing`: 이전부터 있었고 이번 변경이 악화하지 않은 결함\n\n위치가 아니라 원인으로 분류합니다. 변경된 토큰 때문에 수정되지 않은 화면이 깨져도 `Introduced` 또는 `Regression`이며, 기존 결함은 별도 섹션에 최대 3건만 기록합니다.\n\n### 완료 조건\n\n- `HEAD` 기준 SHA, 파일 목록, 제외 항목을 포함한 범위가 확정됨\n- 변경 파일의 직접 소비 화면을 확인하고, 공유 토큰·프리미티브는 필요한 경우 2단계까지 확장하되 소비자는 최대 5개로 제한함\n- 접근성·레이아웃·문구·타이포그래피·색상·UI 영역별 검토 범위를 명시함\n- 각 발견에 `Introduced`·`Regression`·`Pre-existing` 상태와 전후 근거가 있음\n- 판정은 `Introduced`와 `Regression`만 반영하고, 미실행 검증은 명확히 `Not verified`로 남김\n- `working` 범위가 비어 있으면 승인 판정을 내리지 않고 다른 대상을 요청함",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-interface",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {
+    "better-interface": {
+      "call_id": "call_5de06b66fbc64df7b9ad1e5be9fd269e",
+      "file_sha256": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+      "output_sha256": "b5e345efbf4162e0d0d1b4ce3b748f6f5862f83a0e6e550175bbf1fd45506854",
+      "full_body_equal": true
+    },
+    "interface-review": {
+      "call_id": "call_5de06b66fbc64df7b9ad1e5be9fd269e",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "output_sha256": "b5e345efbf4162e0d0d1b4ce3b748f6f5862f83a0e6e550175bbf1fd45506854",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-interface": "d056ee5eb493e3749238ca51a75140c7018fcfccc0e05a47cea6069b0d1ba919",
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/SKILL.md && sed -n '1,300p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "b5e345efbf4162e0d0d1b4ce3b748f6f5862f83a0e6e550175bbf1fd45506854"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 52487,
+      "cached_input_tokens": 35328,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 1182,
+      "reasoning_output_tokens": 444
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "7a2ef8eb236892aaf02b4a4a2aeafb23df14de63af0a6925cd1ddebe88ee09c2",
+  "cases_sha256": "1e6daad6c7f033969638d7f942dc5cf2ccfc3ced234922508739fc76f93fc299",
+  "bundle_manifest_sha256": "91b28ff8541f8b7c83a1f40ac5d651f85bfce86cb158795c968b9ec42d817bcd",
+  "stream_sha256": "23480609c4df08be829a5ba6642c76b642a0ca16d9abaadc2272e0d5996f9f44",
+  "transcript_sha256": "ff7078e34b38765cd637ced6cd79d4efd1b996f37ad6c38fda2fc98f0b4d5522",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 34.567
+}

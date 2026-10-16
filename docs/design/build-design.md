@@ -14,6 +14,10 @@ A writable local project or prototype workspace. Existing-component work needs t
 
 ## Common questions
 
+**Why did it reuse the wrong card even though the build passed?**
+
+Names and appearance can match several components. Before editing, it maps the reference screen and section to the actual export, target location and behavior. Reuse is then checked through that export, link destination and keyboard action, alongside matching-state captures.
+
 **Is Figma required, and can it invent missing design values?**
 
 Figma is optional for local browser, Markdown and image inputs. Specified values, browser-computed values and image estimates stay distinct. Unspecified choices and meaningful token rounding are recorded as defaults, assumptions or deviations.
@@ -21,6 +25,7 @@ Figma is optional for local browser, Markdown and image inputs. Specified values
 ## It's working if
 
 - Each scoped screen and state has a reference locator and a comparison result.
+- The source component and target call site are named before reuse; existing decisions resolve ambiguity without another approval round.
 - Existing tokens and components are reused, and meaningful deviations are visible.
 - Loading, error, empty and keyboard behavior survive even when the visual reference omits them.
 

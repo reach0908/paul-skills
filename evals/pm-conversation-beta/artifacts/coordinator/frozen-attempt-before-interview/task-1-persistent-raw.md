@@ -8,7 +8,7 @@ Status: task completed by one UI action. Record fixed after observing the result
 - URL: http://127.0.0.1:48617/
 - CLI: /opt/homebrew/bin/playwright-cli, version 0.1.22
 - Browser: Google Chrome 152.0.7977.82
-- Skill read: /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md
+- Skill read: $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md
 - Skill package identifier: paul-skills/0.4.1
 - Playwright session: pmbooks-fresh-p1-20261014
 - Persistent shell: zsh -f, TTY session_id 6452

@@ -1,0 +1,92 @@
+{
+  "case_id": "installed-resolved",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13aeb-230f-7481-8775-61de302783cb",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "daily_global_install": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true,
+    "contrast_reference_fully_read": false
+  },
+  "pass": false,
+  "prompt": "$paul-skills:better-colors 현재 폼 색상 검토를 준비해줘. 불투명 검정 글자와 흰 배경, 흰색 위의 반투명 검정 막 위에 흰 글자가 있는 두 가지 조합이야. 두 번째는 sRGB source-over, opacity 0.5, 추가 레이어 없음으로 합성 조건이 모두 주어졌어. 실제 UI는 아직 실행하지 않았어. 계산 가능한 항목과 화면에서 확인할 항목을 나누고, 활성 placeholder·readonly 입력·disabled 버튼에 적용할 WCAG AA 대비 기준과 APCA의 역할도 짧게 설명해줘. 이번에는 수치를 계산하지 말고 방법과 판정 범위만 제시해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 아직 수행하지 않은 측정은 결과처럼 말하지 마.",
+  "final_response": "현재 단계에서는 두 조합 모두 계산 절차를 확정할 수 있지만, 대비값이나 합격 여부는 아직 산출·확인하지 않은 `Pending` 상태입니다.\n\n### 계산 가능한 항목\n\n| 조합 | 계산 방법 | 판정 범위 |\n|---|---|---|\n| 불투명 검정 글자 / 흰 배경 | 확정된 sRGB 값을 선형화해 상대 휘도를 구한 뒤 WCAG 대비율 `(밝은 휘도 + 0.05) / (어두운 휘도 + 0.05)` 적용 | 주어진 색상쌍 자체만 판정. 실제 UI 적용 여부는 별도 확인 |\n| 불투명 흰 글자 / opacity 0.5 검정 막 / 흰 배경 | 먼저 sRGB source-over로 `합성 배경 = 검정 × 0.5 + 흰색 × 0.5`를 구하고, 그 결과와 흰 글자의 상대 휘도로 대비율 계산 | “검정 막만 반투명이고 글자는 별도의 불투명 레이어”라는 조건에 한정 |\n\n두 번째 조합에서 `opacity: 0.5`가 막이 아니라 부모 요소 전체에 적용되어 글자까지 함께 투명해진다면 다른 합성이므로 다시 계산해야 합니다.\n\n### 화면에서 확인할 항목\n\n- 실제 computed color가 의도한 검정·흰색인지\n- 배경 뒤에 이미지, 그라디언트, 그림자, backdrop 효과가 없는지\n- 투명도가 검정 막에만 적용되고 흰 글자에는 적용되지 않는지\n- light/dark theme과 hover, focus, readonly, disabled 상태별 실제 배경\n- 입력 테두리나 상태 표시처럼 컨트롤 식별에 필요한 요소의 실제 인접색\n- `readonly`와 `disabled`가 외형뿐 아니라 실제 HTML 상태 및 상호작용과 일치하는지\n\n### WCAG AA 적용 기준\n\n| 대상 | 적용 기준 |\n|---|---|\n| 활성 입력의 placeholder | 일반 텍스트는 `4.5:1`, 큰 텍스트는 `3:1`. Placeholder도 정보를 전달하는 텍스트이므로 예외가 아님 |\n| readonly 입력의 값 | 원칙적으로 일반 텍스트와 동일하게 `4.5:1` 또는 큰 텍스트 `3:1`. `readonly`는 선택·복사·포커스가 가능할 수 있으므로 자동으로 비활성 예외로 보지 않음 |\n| 활성·readonly 입력의 경계/상태 표시 | 컨트롤을 식별하는 데 필요한 시각 정보라면 인접색 대비 `3:1` |\n| 실제 disabled 버튼 | 비활성 UI 구성요소 예외에 해당하므로 버튼 글자와 경계에 WCAG AA 최소 대비율이 강제되지 않음. 다만 가독성과 비활성 상태 인지는 별도로 검토 |\n| disabled처럼 보이지만 작동하는 버튼 | 비활성 예외를 적용할 수 없음. 글자는 `4.5:1` 또는 `3:1`, 필요한 컨트롤 표시는 `3:1` 기준 적용 |\n\n큰 텍스트는 대략 일반 굵기 `24 CSS px` 이상 또는 굵은 글씨 `18.66 CSS px` 이상을 뜻합니다.\n\nAPCA는 글자 크기·굵기·명암 방향까지 고려해 체감 가독성을 보완 평가하는 데 유용합니다. 특히 흰 글자처럼 극성이 반대인 조합을 비교할 때 참고할 수 있지만, 현재 WCAG 2.x AA 적합성 판정을 대체하지는 않습니다. 따라서 WCAG 비율로 적합성을 판단하고 APCA는 추가 설계 진단으로 병기합니다.\n\n판정 상태: `Pending` \u2014 수치 계산과 실제 렌더링 검사가 모두 미수행이므로 현재는 통과·실패 또는 승인 판단을 내리지 않습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and foc",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-r",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading ",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and moti",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the proj",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, ",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered ",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification."
+  },
+  "loaded_skills": [
+    "better-colors"
+  ],
+  "injected_skills": [
+    {
+      "name": "better-colors",
+      "file_sha256": "ec1ef9d7e56d3eb229fd42a95d55748e2b3507dbc554d8e426fe974be0bdc48c",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-colors": "ec1ef9d7e56d3eb229fd42a95d55748e2b3507dbc554d8e426fe974be0bdc48c"
+  },
+  "expected_exit_evidence": {},
+  "commands": [],
+  "usage": [
+    {
+      "input_tokens": 23754,
+      "cached_input_tokens": 11264,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 3002,
+      "reasoning_output_tokens": 2070
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "2fb5cf450f12f9b75b8d22b112772934211e53f58b585b904d4990354b7e4a6c",
+  "cases_sha256": "e7f65fcb85cbfcb766f8fc21253ef6dd6289fcb4d5cb83d958001248994709e0",
+  "bundle_manifest_sha256": "c61bd3f8dc2ab6684188a50704b63a235e99cb0b53bd6ae414a3d09ed0083b23",
+  "stream_sha256": "113d326ab0dba5e1d88f4c1565fc79488afc410c75401b70713c2285a886654f",
+  "transcript_sha256": "ba226469bf5c6ea39a5f0ef4e2b2caa609fce86f4461d4591762c5097f7cf108",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 65.344,
+  "response_sha256": "91829af85be064e43ff8c53ec80ea6588c8dfed7fca80e97eee3651b2b2047ef",
+  "contrast_reference": {
+    "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+    "full_body_equal": false
+  }
+}

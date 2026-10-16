@@ -1,0 +1,9 @@
+# Controlled follow-up after execution-limit failures
+
+Frozen before this phase. The original protocol, runner, six attempted native sessions and failures remain unchanged. Initial inherited-effort runs produced two 240-second timeouts and one USD 1 budget exhaustion. The actual inherited effort value was not exposed; per-turn effort was active. These are execution limits, not proof of a source-quality defect or a measured root cause.
+
+Run the same ten synthetic tasks in twenty fresh sessions with both source snapshots unchanged. Append the same 500-word final-response limit to both arms and explicitly select high effort for both. Keep the actual model inherited and verify it matches within every pair. Record the CLI version from each native initialization; reject version-mismatched pairs. This is a separately labeled phase, not a retry that erases failures or an effort-ranking experiment. Compare versions only within the same phase.
+
+Each process now has 360 seconds and a USD 0.75 reported-cost ceiling. At most two processes run concurrently. The combined total across both phases remains USD 12; reserve the full original per-session ceiling for every initial timeout whose final cost was not reported. Before each new pair, reserve both new ceilings. If insufficient budget remains, record the unstarted cases as not_run. Stop after two execution failures in this phase. Do not rerun a completed response to improve its grade. Actual billed cost is unknown.
+
+All other task permissions, tool availability, fixed rubric, reference-read checks, artifact integrity requirements and limitations from PROTOCOL.md apply unchanged. The agents receive the fixed task and raw artifacts only. No grading criteria, baseline answer or expected outcome is supplied. The candidate remains exactly the same five-file change tested in the initial phase.

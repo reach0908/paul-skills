@@ -1,0 +1,24 @@
+{
+  "npm_run_check": {
+    "exit_code": 0,
+    "tests": 38,
+    "log": "package-check.txt"
+  },
+  "evidence_unit_tests": {
+    "exit_code": 0,
+    "tests": 6,
+    "log": "evidence-tests.txt"
+  },
+  "strict_marketplace_validation": true,
+  "strict_plugin_validation": true,
+  "quick_validate_skills": [
+    "better-layout",
+    "better-interface"
+  ],
+  "manual_result_counts_match": {
+    "baseline": 3,
+    "candidate": 5
+  },
+  "version": "0.4.3",
+  "release_or_global_install": false
+}

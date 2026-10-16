@@ -12,6 +12,10 @@ Useful text remains readable, selectable and recoverable. Font fallback, user te
 
 ## Common questions
 
+**What if I mention this domain while reviewing staged changes?**
+
+The automatic catalog makes the change-review route take priority over the domain words, before this domain document is loaded. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) first supplies the explicit change-review command. This domain resumes after the authorized handoff; ordinary screen audits and requested fixes still enter it directly.
+
 **Does this require replacing our font or type scale?**
 
 No. It reuses the project system and asks for a change when a supported rendering or readability problem needs one.

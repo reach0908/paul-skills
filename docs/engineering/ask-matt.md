@@ -52,6 +52,8 @@ People often get two of these wrong, which is why the router gives the order and
 
 An existing UI can remain unchanged after a prototype comparison. The router returns to implementation only when the decision calls for a change.
 
+For reuse of an approved design, [build-design](https://github.com/reach0908/paul-skills/blob/main/docs/design/build-design.md) identifies the source component and preserved behavior. A prototype comparison keeps agreed benefits and visual choices fixed. [design-browser](https://github.com/reach0908/paul-skills/blob/main/docs/design/design-browser.md) checks readiness before collecting evidence and records where to resume a blocked observation.
+
 Component workbenches remain explicit choices: [state-machine](https://github.com/reach0908/paul-skills/blob/main/docs/design/state-machine.md) exposes existing states, [break](https://github.com/reach0908/paul-skills/blob/main/docs/design/break.md) observes hostile-content failures, [variant](https://github.com/reach0908/paul-skills/blob/main/docs/design/variant.md) compares directions, and [explain-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/explain-interface.md) explains a reference. The router recommends these; the user invokes them.
 
 ## Product, design and engineering
@@ -64,6 +66,10 @@ A usability experiment asks whether people can complete a product task and defin
 
 ## Common questions
 
+**Which entry wins when a staged review names several UI domains?**
+
+[better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) routes the change-review request first. The named domain skills receive the authorized scope later; their ordinary screen audits and fixes remain directly available.
+
 **Which review command handles UI changes?**
 
 For what a change introduced or regressed, invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) with the target. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) can automatically route an unnamed request to that command before inspecting files; its ordinary screen review remains automatic.
@@ -71,6 +77,10 @@ For what a change introduced or regressed, invoke [interface-review](https://git
 **Does using the PM beta force every task through all three stages?**
 
 No. Reuse the supplied context and start where a question remains open. A scoped design change preserves unaffected product decisions; its existence does not authorize a new product direction. A trial pass does not promote a candidate or establish user acceptance.
+
+**Does merging a beta into main make it part of the installed plugin?**
+
+No. The plugin ships the promoted manifest entries. A beta remains separately available, and its optional router entry does not install it or approve promotion. The [maintenance policy](https://github.com/reach0908/paul-skills/blob/main/docs/maintenance.md) keeps those decisions separate.
 
 **Isn't there just a list of the skills in the right order?**
 

@@ -1,0 +1,3 @@
+# Evidence boundary
+
+This local packet contains synthetic prompts, complete sanitized model answers, source and transcript hashes, host metadata, grading decisions and validation receipts. Native logs, cloned host context, authentication and settings remain in ignored .scratch and private temporary directories. The earlier failed release receipt stays unchanged. The packet was prepared locally for diagnosis and comparison. The user subsequently authorized publication as an official patch, updating both global installations and completing fresh-session verification. The pre-release report preserves its original observation boundary; a separate release record will document publication and activation.

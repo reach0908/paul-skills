@@ -1,0 +1,1 @@
+export function CreatorCard(person) { const card=document.createElement("button"); card.className="card"; card.innerHTML=`<span class="faces" aria-hidden="true">● ● ●</span><strong>${person.name}</strong>`; card.addEventListener("click",()=>{card.textContent="Profile: "+person.name}); return card; }

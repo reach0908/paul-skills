@@ -1,6 +1,6 @@
 # AI walkthrough participant packet
 
-You are the single fresh AI participant in an exploratory prototype walkthrough. Read `participant-instructions.md` and the installed browser skill at `/Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md` before the UI attempt. Do not read any other files outside your workspace except that installed browser skill and its necessary CLI help. Do not read memory, repository, source code, author intent, sibling outputs, tests, network traffic, storage or hidden DOM. Your workspace and evidence directory is `/private/tmp/pm-conversation-beta-20261014/runs/prototype-recheck/participant/`.
+You are the single fresh AI participant in an exploratory prototype walkthrough. Read `participant-instructions.md` and the installed browser skill at `$HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md` before the UI attempt. Do not read any other files outside your workspace except that installed browser skill and its necessary CLI help. Do not read memory, repository, source code, author intent, sibling outputs, tests, network traffic, storage or hidden DOM. Your workspace and evidence directory is `/private/tmp/pm-conversation-beta-20261014/runs/prototype-recheck/participant/`.
 
 ## Scenario
 

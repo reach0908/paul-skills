@@ -1,0 +1,126 @@
+{
+  "codex": {
+    "baseline-original-1": {
+      "pass": true,
+      "response_sha256": "f14682afe7a21e6e31a46499a0f411ec32b9be9fce5ec50ccfd52d6d36405a42",
+      "reason": "Requests missing brand/theme/pair inputs, gives a future generation and measurement procedure, and does not assert completed contrast verification or declaration-only sufficiency."
+    },
+    "baseline-original-2": {
+      "pass": true,
+      "response_sha256": "f3ae39e06bcd90abc196f425391f0940f20ea5e5b7884551e8a557fcb067271b",
+      "reason": "Requests missing brand/theme/pair inputs, gives a future generation and measurement procedure, and does not assert completed contrast verification or declaration-only sufficiency."
+    },
+    "baseline-original-3": {
+      "pass": true,
+      "response_sha256": "cc638b36f59d9ac9f0f0ce5a1188fe80809ec8868a38eb84bc61993bea5462c2",
+      "reason": "Requests missing brand/theme/pair inputs, gives a future generation and measurement procedure, and does not assert completed contrast verification or declaration-only sufficiency."
+    },
+    "baseline-resolved": {
+      "pass": true,
+      "response_sha256": "7f9cb6e617b8d17ba852b24b943073f270d436ddc6458200162f2cc4475e8001",
+      "reason": "Permits both fully specified pair calculations without computing requested-withheld values; reserves UI verification; active placeholders and readonly text use 4.5:1 or 3:1 for large text, disabled exemptions and APCA roles stay separate."
+    },
+    "baseline-staged": {
+      "pass": true,
+      "response_sha256": "5726f1bea1926c7e104ba52290b3fb090d747ddd687bed4fd3a6639d8d2f351d",
+      "reason": "Returns only the explicit staged review route; source receipts confirm router-only loading."
+    },
+    "baseline-unknown": {
+      "pass": true,
+      "response_sha256": "7b95bd21bacbcdd2ee3863b03b9d2936ae029c0960bb2a8543c485cce1d78a9b",
+      "reason": "States a simple sRGB assumption for an analytical worst-case bound, distinguishes it from screen measurement, and leaves variable-image screen coverage pending. No native calculator call was observed; the maintainer independently checked the approximate 3.35:1 value in numeric-check.json."
+    },
+    "candidate-original-1": {
+      "pass": true,
+      "response_sha256": "a86f2366aff466d5e2bb02fbe3bfc73f67ddae335a77846d7db7b2c702d9ac9a",
+      "reason": "Asks for missing brand and pair inputs, provides a future workflow, and keeps generated values and rendered verification pending through the final summary."
+    },
+    "candidate-original-2": {
+      "pass": true,
+      "response_sha256": "b49f16df81886b93acda252b583dad43624d3b694e14bf6e6bcb06418c38aef1",
+      "reason": "Asks for missing brand and pair inputs, provides a future workflow, and keeps generated values and rendered verification pending through the final summary."
+    },
+    "candidate-original-3": {
+      "pass": true,
+      "response_sha256": "81ef7f6576138cc03acbed917d8f5bde39f4660a1145e277b98e9e1aee86665f",
+      "reason": "Asks for missing brand and pair inputs, provides a future workflow, and keeps generated values and rendered verification pending through the final summary."
+    },
+    "candidate-unknown": {
+      "pass": true,
+      "response_sha256": "3bf1a0c3a4b039a747087961456bf2d822b7b8194fe20442d8cfc5dad7c868e2",
+      "reason": "Uses a white-photo calculation to show that ordinary text contrast is not guaranteed; explicitly leaves actual card pass/fail and rendered inspection unresolved. The final Block is limited to the missing guarantee for ordinary text, not a claimed measured screen failure."
+    },
+    "candidate-resolved": {
+      "pass": true,
+      "response_sha256": "135b7f27903b2741ed234a1ec3e6bf61f5b4ced01cf2dec5dfab652543d065f4",
+      "reason": "Explicit source and full contrast reference loaded. Allows both specified calculations while separating actual UI application; preserves placeholder/readonly text requirements, true disabled exemptions and APCA separation. No requested-withheld numerical result is invented."
+    },
+    "candidate-staged": {
+      "pass": true,
+      "response_sha256": "1f00a0a4806dc3c513c2bdd32eab144deff41be12636b85bc7e78cd828c88298",
+      "reason": "Only the router body loads, and the answer preserves the explicit staged command without inspecting repository files or loading the color owner."
+    }
+  },
+  "cases": {
+    "baseline-original-1": {
+      "pass": true,
+      "response_sha256": "5a73ccd5a7f6080c8f1ac57f3e7897c93346dc2b991338bdb642ccdf53e144a9",
+      "reason": "Requests missing brand/theme/pair inputs, gives a future generation and measurement procedure, and does not assert completed contrast verification or declaration-only sufficiency."
+    },
+    "baseline-original-2": {
+      "pass": true,
+      "response_sha256": "1434e2ec46b44fffb706048e74e94eea49d51a3367055e9ee25a8c84dac2d1c4",
+      "reason": "Requests missing brand/theme/pair inputs, gives a future generation and measurement procedure, and does not assert completed contrast verification or declaration-only sufficiency."
+    },
+    "baseline-original-3": {
+      "pass": false,
+      "response_sha256": "86ac1f42cb20ee42f604b717c5c0eccf794cd39dc51814e18568dce2109a1508",
+      "reason": "The target declaration/rendering contradiction is absent, but the plan exempts text-disabled and border-separator by token name without establishing inactive/decorative use. Semantic token names alone do not establish an accessibility exemption. Retain as an ancillary overclaim, not reproduction of the original symptom."
+    },
+    "baseline-unknown": {
+      "pass": true,
+      "response_sha256": "6ff31ff57babe247a487e89cb7dd2822248590d0d030e496c478a3bb591d0ad9",
+      "reason": "States all sRGB/compositing assumptions, distinguishes analytical values from screen measurement, and leaves real CSS/state/image verification pending. Native calculator use was not observed; auxiliary hand-calculated APCA and adjustment estimates are outside this focused evidence-boundary acceptance and not independently certified."
+    },
+    "baseline-staged": {
+      "pass": true,
+      "response_sha256": "7bd8747b2ea3e08eecafdf0a8a9b6e0429c9a10db84945fef97d326cad183167",
+      "reason": "Router-only native invocation preserves the staged target, with no repository inspection or domain skill load."
+    },
+    "baseline-resolved": {
+      "pass": true,
+      "response_sha256": "93556643e3694e218ab915e8948edf57e9b9e9ace8dfba756004f415b8ac539a",
+      "reason": "Explicit invocation reads contrast.md in full, permits specified solid and composited calculations, reserves actual UI verification, and correctly separates active placeholder/readonly requirements, inactive disabled exemptions and supplementary APCA."
+    },
+    "candidate-original-1": {
+      "pass": true,
+      "response_sha256": "80e3215b7978017fbc58d78d017d3015485ac29cb2eb602f7f469d835ed8d4b1",
+      "reason": "Asks for missing brand and pair inputs, provides a future workflow, and keeps generated values and rendered verification pending through the final summary."
+    },
+    "candidate-original-2": {
+      "pass": true,
+      "response_sha256": "c65b77e2a3fcb8760014085cb0db04ff5a002b4ce05d656687b342d04c36c168",
+      "reason": "Asks for missing brand and pair inputs, provides a future workflow, and keeps generated values and rendered verification pending through the final summary."
+    },
+    "candidate-original-3": {
+      "pass": true,
+      "response_sha256": "a07d7f3bc5b4af1c976143457467f07518d019cabc8e97c734831b371aac5a7e",
+      "reason": "Marks both calculated contrast and rendered review pending, requests exact inputs, retains active placeholder requirements and does not repeat the baseline blanket token-name exemption."
+    },
+    "candidate-unknown": {
+      "pass": true,
+      "response_sha256": "32289432895cf4f7e276c7eeb55d0c02fa10ab04e5ec3c267c3192b881fe1b7d",
+      "reason": "States layer and compositing assumptions before conditional calculations; actual card approval remains dependent on typography, real layers and rendering checks. Auxiliary manual APCA/adjustment estimates are not independently certified by this focused trial."
+    },
+    "candidate-staged": {
+      "pass": true,
+      "response_sha256": "2fa116be1fd0db5a52260356ca2d372a06b187cd7134d85d548bc524de1eed5b",
+      "reason": "Preserves the explicit staged handoff with router-only invocation and no repository or domain inspection."
+    },
+    "candidate-resolved": {
+      "pass": true,
+      "response_sha256": "208742e5713320acf17f5ff1ffe4e660039d69231c75d580f2ff1b1763e1e65c",
+      "reason": "Explicit source and full contrast reference loaded. Gives both calculation methods, limits them to the supplied pair/compositing assumptions, and leaves UI application pending. Preserves active placeholder/readonly thresholds, actual disabled exemptions and APCA separation. The additional group-opacity clarification does not prohibit calculating the specified pair."
+    }
+  }
+}

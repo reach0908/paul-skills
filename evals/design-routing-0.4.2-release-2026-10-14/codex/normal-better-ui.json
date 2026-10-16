@@ -1,0 +1,96 @@
+{
+  "case_id": "normal-better-ui",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13ab7-7f3c-7563-84f4-c9fb7ed1a771",
+  "model": "gpt-5.6-sol",
+  "effort": "xhigh",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "daily_global_install": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "아직 화면·코드 입력이 없어 실제 상태는 확인하지 않았습니다.\n\n필요한 입력:\n\n- 대상 버튼·카드의 스크린샷 또는 컴포넌트 코드\n- 기본·hover·pressed·disabled·selected 상태\n- 적용 중인 radius, padding, border, shadow, transition 토큰\n- 사용 아이콘 원본 SVG와 크기·stroke 값\n- 가능하면 light/dark 및 모바일 화면\n\n점검 순서:\n\n1. **중첩 radius**: 균일한 inset이면 `바깥 radius = 안쪽 radius + padding + border`인지 확인\n2. **그림자**: 구조 구분은 border, 높이 표현은 shadow로 역할 분리하고 카드 간 일관성 확인\n3. **아이콘**: 텍스트 대비 크기·stroke·baseline과 광학 중심 확인\u2014필요 시 1–2px 보정\n4. **상태 구분**: hover·pressed·disabled가 색상, 그림자, 위치 변화로 명확하며 레이아웃 이동은 없는지 확인\n5. **모션**: 변경 속성만 transition하고 `transition-all` 제외. 빈번한 hover는 즉시 또는 150ms 이하, 버튼 pressed는 `scale(0.96) 150ms ease-out`\n6. **안전 조건**: hover는 hover 가능 포인터에만 적용하고 disabled press 및 reduced-motion 대체 상태 확인\n\n산출물은 구조·문구 변경 없이 위치별 `현재값 → 권장값 → 이유` 형식의 짧은 점검표가 적합합니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color sy",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit chan",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, read",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text render",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and ",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface ",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the ",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interactio",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architectu",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswe",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specificat"
+  },
+  "loaded_skills": [
+    "better-ui"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {
+    "better-ui": {
+      "call_id": "call_c2533d0385f8437fa1dcbe9cd89537a5",
+      "file_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d",
+      "output_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-ui": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_3",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.2/skills/design/better-ui/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 46175,
+      "cached_input_tokens": 41472,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 938,
+      "reasoning_output_tokens": 405
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "18d6201d8dcb99f77078026dd5720aa6f50f0df4a97896beb944b6846883ee51",
+  "cases_sha256": "bd6644f8eb98616b1addd79b7907e42a6c1ab1350aed1e9456815d25844d67e1",
+  "bundle_manifest_sha256": "7fdca87937dadec06c77e291d2d6f596a401deebcad7ac4d8fadf3702e5b07b5",
+  "stream_sha256": "19432bf93f172deaa9c9e87ad59f65db39f66cc258d0d7a0718820325cc23a5c",
+  "transcript_sha256": "d962b425b676e426ef4888da790c73b959d60c7232601b36efe7c4a20ef2429b",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 31.519
+}

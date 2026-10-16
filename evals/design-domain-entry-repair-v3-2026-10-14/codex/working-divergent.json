@@ -1,0 +1,280 @@
+{
+  "case_id": "working-divergent",
+  "arm": "candidate",
+  "mode": "handoff",
+  "session_id": "01a13a79-6cd9-7361-924a-dc7be0a46604",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "all_owners_loaded": true,
+    "real_git_diff": true,
+    "classified_finding": true,
+    "audit_procedure_loaded": true,
+    "no_default_branch_resolution": true,
+    "target_snapshot_read": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 로컬 UI 변경 전체를 실제로 리뷰해줘. Git 이전 내용과 해당 범위의 내용을 비교해서 검토를 끝까지 진행하고, 기준 SHA와 포함·제외한 파일을 명시해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.",
+  "final_response": "## 범위\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `working` |\n| Base ref | `HEAD` \u2014 `b4bd8963eaa01478b1f9b5cb73466cd17739a652` |\n| Head ref | 현재 working tree |\n| Commits | committed 0; uncommitted 순변경 1파일 |\n| 포함 | [src/New.html]($TRIAL/src/New.html:1) |\n| 제외 | 생성물·lockfile 등 규칙상 제외 없음. `src/Panel.html`은 staged/unstaged 변경이 상쇄되어 현재 내용과 `HEAD` blob이 동일하므로 `working` 순변경에서 제외 |\n| Surfaces expanded | `New.html`; 직접 소비자 0개, 미확장 소비자 0개 |\n\n기준 버전에는 `src/New.html`이 없으며, 현재 범위에서 새로 추가된 내용은 다음 한 줄입니다.\n\n```html\n<button id=\"new-action\"><svg aria-hidden=\"true\"></svg></button>\n```\n\n저장소는 별도 프레임워크나 프로젝트 UI 지침 없이 두 개의 HTML 파일만 있습니다. 기존 [src/Panel.html]($TRIAL/src/Panel.html:4)은 네이티브 버튼에 동작을 설명하는 `aria-label`, 실제 SVG 경로, 크기와 `viewBox`를 제공하고 있습니다.\n\n## 도메인 커버리지\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | 새 버튼의 accessible-name 계산, 네이티브 의미, 숨겨진 SVG 및 기존 버튼 관례 | HIGH 1건 |\n| Layout | 새 파일의 DOM과 스타일 유무 | Not reviewed: 변경 범위에 레이아웃 증거 없음 |\n| Writing | 버튼의 보이는 문구와 동작명 유무 | 접근성 finding에 통합; 실제 동작명은 로컬 증거로 판단 불가 |\n| Typography | 텍스트 및 타이포그래피 선언 유무 | Not reviewed: 변경 범위에 텍스트 증거 없음 |\n| Colors | 색상·토큰·상태 선언 유무 | Not reviewed: 변경 범위에 색상 증거 없음 |\n| UI | 빈 SVG의 그리기 요소·크기·상태와 기존 SVG 관례 | 접근성 finding에 통합 |\n\n## Finding\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Accessibility | Introduced | [src/New.html:1]($TRIAL/src/New.html:1) | 기준에는 파일이 없었고, 현재는 텍스트와 accessible name이 없는 버튼 및 그리기 요소가 전혀 없는 `aria-hidden` SVG가 추가됨 | 제품의 실제 동작명을 보이는 텍스트로 제공하거나, 아이콘 전용이면 동작을 정확히 설명하는 `aria-label`과 실제 SVG glyph를 함께 제공 | 버튼의 접근 가능한 이름이 없어 WCAG 2.2 4.1.2를 위반합니다. 빈 SVG 때문에 시각적으로도 동작을 식별할 단서가 없습니다. 이름 없는 대화형 컨트롤은 즉시 `HIGH`입니다. |\n\n별도의 pre-existing finding은 확인되지 않았습니다.\n\n## 검증\n\n통과한 정적 확인:\n\n- `git rev-parse HEAD` → 기준 SHA 확인\n- `git diff --name-only HEAD -- .` → tracked 순변경 없음\n- `git ls-files --others --exclude-standard` → `src/New.html`만 확인\n- `git diff --no-index -- /dev/null src/New.html` → 기준에 없던 한 줄의 추가 확인\n- `git hash-object src/Panel.html`과 `git rev-parse HEAD:src/Panel.html` → 둘 다 `250fe1a01029bf046794f79325fe7d2ad396e6e7`\n- `rg` 소비자 검색 → `New.html` 또는 `new-action`의 직접 소비자 없음\n- `git grep` 기준 버전 검색 → 기존 버튼은 동작명과 실제 SVG 내용을 제공\n\n**Not verified:** 브라우저 렌더링, computed style, 접근성 트리, 키보드 포커스, 320px/200% 확대, 실제 라우트 및 버튼 동작. 요청에 따라 브라우저와 외부 서비스를 사용하지 않았으므로 렌더링 기반 결론은 내리지 않았습니다.\n\n## 판정\n\n**Block** \u2014 새 버튼의 접근 가능한 이름이 없다는 `HIGH` finding이 남아 있습니다. 이는 이 `working` 순변경에 한정된 정적 UI 리뷰이며, 렌더링 검증·완전한 접근성 적합성·출시 승인을 의미하지 않습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state w",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested ",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-s",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {
+    "better-interface": {
+      "call_id": "call_402d74b2c91548c88005ab0d3f168154",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "output_sha256": "c53df04852e28c2833de7c71f12bde52798f21c0d48be839d99426b6c85e7f88",
+      "full_body_equal": true
+    },
+    "interface-review": {
+      "call_id": "call_402d74b2c91548c88005ab0d3f168154",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "output_sha256": "c53df04852e28c2833de7c71f12bde52798f21c0d48be839d99426b6c85e7f88",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-colors": "a84a8609737405a87cd65538d70e51ace2b8725af7b4a07fbd0b48441fd97d51",
+    "better-interface": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+    "better-typography": "b3ae486746f5cb27a34964e1383cc55818280698aa952f2479a3ed296bb2ccd6",
+    "better-accessibility": "e7ed2b54ae6eb5b3008fde819e59da856b43da422ee455c1e59472a5c8f5d904",
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+    "better-ui": "59b505fc1437a1c5f09336a7b4f4a165eb31c8da7f012b3fdcfe84326ff7a3b7",
+    "better-layout": "0ee0559091c0edeccd193903e7ebfe8001d30f77b714e1482ed946574a7cd1cd",
+    "better-writing": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/SKILL.md && sed -n '1,320p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "c53df04852e28c2833de7c71f12bde52798f21c0d48be839d99426b6c85e7f88"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,320p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/scope-resolution.md; sed -n '1,300p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/interface-review/removed-signals.md; sed -n '1,360p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/audit-procedure.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "04643d15ba62cbbaa32ec7748ebc27046f443419f9f4fbbb5f8815366d162bae"
+    },
+    {
+      "command": "/bin/zsh -lc 'git rev-parse --show-toplevel; git rev-parse HEAD; git status --short; git diff --name-status --find-renames=40% HEAD; git ls-files --others --exclude-standard; git diff --stat HEAD; for marker in rebase-merge rebase-apply MERGE_HEAD CHERRY_PICK_HEAD; do p=$(git rev-parse --git-path \"$marker\"); if test -e \"$p\"; then echo \"MID_OPERATION $marker $p\"; fi; done; rg --files -g '\"'AGENTS.md' -g 'CLAUDE.md' -g 'CONTRIBUTING.md' -g 'CODING_STANDARDS.md' -g '*design*' -g '*storybook*' -g 'package.json' -g 'vite.config.*' -g 'next.config.*' -g 'src/**' -g 'app/**' | sed -n '1,240p'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "c26470d8ea50d1c9535bb38181ea405ff662930798e6d6f46c6897f72979d746"
+    },
+    {
+      "command": "/bin/zsh -lc \"git diff --name-status HEAD -- .; git diff --cached -- src/Panel.html; git diff -- src/Panel.html; git diff HEAD -- src/Panel.html; git hash-object src/Panel.html; git rev-parse HEAD:src/Panel.html; nl -ba src/New.html; find . -maxdepth 3 -type f -not -path './.git/*' -print | sort; sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/review-format.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "329b4a63f5dae857071b63c0158bf96b456a3a243e824609eeb458e7e98e6083"
+    },
+    {
+      "command": "/bin/zsh -lc \"for f in '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/SKILL.md' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-layout/SKILL.md' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-colors/SKILL.md' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-ui/SKILL.md'; do echo \\\"FILE \"'$f\"; sed -n '\"'1,360p' \\\"\"'$f\"; done'",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "6cc351f40b531e7a2ee8eab183b2c8d9bacb86af0caf9b671454736e1eed0497"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,420p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-colors/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "a84a8609737405a87cd65538d70e51ace2b8725af7b4a07fbd0b48441fd97d51"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,420p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-layout/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0ee0559091c0edeccd193903e7ebfe8001d30f77b714e1482ed946574a7cd1cd"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,420p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "b3ae486746f5cb27a34964e1383cc55818280698aa952f2479a3ed296bb2ccd6"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,420p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "6801bc25303a72f842d6cb0ab5227e32ff20ef999a9b125a0bc09852a53065a0"
+    },
+    {
+      "command": "/bin/zsh -lc \"wc -l '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md'; sed -n '1,260p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-writing/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "efad7e7921b8976d23aeb53da75a4aca51ef5701dd76807a4c2fd6d8b96777ae"
+    },
+    {
+      "command": "/bin/zsh -lc \"wc -l '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md'; sed -n '1,320p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-typography/SKILL.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "8a8e6031cfbc5badcc566f6b7b03aed1fbf4879698bd482fc8799fa0ffdbde29"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,360p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/screen-readers.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "0d0911a369bbf332a6237d2cf4c5209b13e7f02e5bb01a6d47bbca3f328df71a"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,360p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-accessibility/semantics-and-aria.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "818ad7d45a8b25a3291e52bdc51ec316c4e00e22ed58940f26321e35365b741e"
+    },
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,360p' '$EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-ui/icons.md'\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "eac6195bb5d5ba77efd6d9d7751295a7b0d4dadf6a68146639091b02f1e3dbbd"
+    },
+    {
+      "command": "/bin/zsh -lc \"git log -1 --format='HEAD %H%nSUBJECT %s'; git status --short; git diff --name-only HEAD -- .; printf 'UNTRACKED\\\\n'; git ls-files --others --exclude-standard; printf 'NEW_FILE_BASE\\\\n'; git cat-file -e HEAD:src/New.html 2>&1 || true; printf 'NEW_FILE_PATCH\\\\n'; git diff --no-index -- /dev/null src/New.html || true; printf 'PANEL_NET_DIFF\\\\n'; git diff HEAD -- src/Panel.html; printf 'PANEL_BLOBS\\\\n'; git hash-object src/Panel.html; git rev-parse HEAD:src/Panel.html; printf 'CONSUMERS\\\\n'; rg -n --glob '\"'!src/New.html'\"' 'New\\\\.html|new-action|src/New' . || true; printf 'BUTTON_CONVENTIONS\\\\n'; git grep -n -E '<button|aria-label|aria-labelledby|<svg' HEAD -- '*.html' || true; printf 'PROJECT_DOCS\\\\n'; find . -type f \\\\( -name AGENTS.md -o -name CLAUDE.md -o -name CONTRIBUTING.md -o -name CODING_STANDARDS.md -o -iname '*design-system*' -o -iname '*storybook*' \\\\) -not -path './.git/*' -print\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "526ed806a3c76dca7d935896b18f1162aad3860aee9134c7277b02ab29a24206"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 448911,
+      "cached_input_tokens": 399488,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 8187,
+      "reasoning_output_tokens": 4534
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "5e4fdf03f8d5b60c4dc4a8b09bccaa169d90068a581561bba19c4ca24c71878a",
+  "transcript_sha256": "6b16b31be943f12f953020ae4eb0965db1878b69fa341cbc3b257660f25b34cc",
+  "inputs_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "90ab2c8b7d000f997bbbfefb4c6d4e72edfbedada78bfad05d952374ae933c7c",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "1c2c436df62ec002cff6a206c651757628fda8d77ae8936ab63d1d2aca58d39a",
+    ".git/logs/refs/heads/feature/checkout": "a3d25fbd8b3641511cc6bca218f021df2737ab687257d7b0b3c366e581ef09b1",
+    ".git/logs/refs/heads/main": "b0b5cde1875ae53278254a97c59a0bf6ee6da0deb357873443d1b16b14a634db",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4c/76dd24bc7c33967b81d73819523a006845ac0b": "33068cdc23b9b653bbd418eeae6d48e836832145fc0c867bc26e133fd51a7e2f",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/b4/bd8963eaa01478b1f9b5cb73466cd17739a652": "348293d392af4578cc7871c8354a0d48eed949bc3572c3b51eea331183a988c8",
+    ".git/refs/heads/feature/checkout": "12449357907701156bccfe00e82796e0b94ce15821d8ffabd46b24673797c42b",
+    ".git/refs/heads/main": "3c64faea4121a11005929e8f3895a3049a7c72a5d7b302aaac8ffa4177bec3f9",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "inputs_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "90ab2c8b7d000f997bbbfefb4c6d4e72edfbedada78bfad05d952374ae933c7c",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "1c2c436df62ec002cff6a206c651757628fda8d77ae8936ab63d1d2aca58d39a",
+    ".git/logs/refs/heads/feature/checkout": "a3d25fbd8b3641511cc6bca218f021df2737ab687257d7b0b3c366e581ef09b1",
+    ".git/logs/refs/heads/main": "b0b5cde1875ae53278254a97c59a0bf6ee6da0deb357873443d1b16b14a634db",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4c/76dd24bc7c33967b81d73819523a006845ac0b": "33068cdc23b9b653bbd418eeae6d48e836832145fc0c867bc26e133fd51a7e2f",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/b4/bd8963eaa01478b1f9b5cb73466cd17739a652": "348293d392af4578cc7871c8354a0d48eed949bc3572c3b51eea331183a988c8",
+    ".git/refs/heads/feature/checkout": "12449357907701156bccfe00e82796e0b94ce15821d8ffabd46b24673797c42b",
+    ".git/refs/heads/main": "3c64faea4121a11005929e8f3895a3049a7c72a5d7b302aaac8ffa4177bec3f9",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "duration_seconds": 161.072
+}

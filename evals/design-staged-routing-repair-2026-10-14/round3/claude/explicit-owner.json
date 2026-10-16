@@ -1,0 +1,185 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "2d275b13bc80e9f4e713556e105f7ffed97e051140945783a07bf690ec0f88ed",
+  "schema_version": 1,
+  "case_id": "explicit-owner",
+  "host_protocol_sha256": "577e0365e3739867b1ce0edaf5c1efc39db4e0f8c911acaee84e003f213f53d5",
+  "mode": "explicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_015",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "e476853e-cbdf-45a1-9759-d68ebcca2a98",
+  "started_at": "2026-10-14T10:19:48.821785+00:00",
+  "host_init_session_id": "e476853e-cbdf-45a1-9759-d68ebcca2a98",
+  "host_result_session_id": "e476853e-cbdf-45a1-9759-d68ebcca2a98",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-staged-routing-20261014/round3/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "d7514f2a-5547-49fe-a15b-dacf6de49afd",
+  "automatic_catalog_sha256": "c223f485c452146ef3dd91e032d37d7b130bbbb77fa36bffb2b64131cde3edd9",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "5c82468c-223c-49c2-8e4f-ddb52c11e504",
+      "file_sha256": "274bb4cff9dc4613a4679167bcc461752ce88adad7bba96506de677091d41d57",
+      "body_sha256": "03f5e188018b297e64678cd3ef89b8fe817cbc88ce601abec5abb939bfcbf38e",
+      "host_message_sha256": "76ae7909ff87cea60910322ca07d8f247ea827f6c89db4ebc2c43bc80fc58623",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-staged-routing-20261014/round3/candidate/marketplace/plugin/skills/design/interface-review/scope-resolution.md"
+      },
+      "tool_use_id": "toolu_01NwigrotTqHLvXHAD2LkvQA",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "4c362c56ec5fdabcdf21cb42b60dc8e63b683d67438523140cc2813ed779143b"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "아직 diff를 읽거나 명령을 실행하지 않았습니다. 그래서 결과는 없고, 이 글은 검토를 시작하기 전의 명세입니다. 참고로 하네스는 현재 작업 디렉터리가 git 저장소가 아니라고 보고합니다. 그래서 `working` 범위를 여기서 바로 정할 수 없습니다.\n\n## 1. 필요한 입력\n\n| 입력 | 이유 |\n| --- | --- |\n| **저장소 경로** | `working` 범위를 정하려면 git 저장소가 필요합니다. 현재 디렉터리는 저장소가 아닙니다. |\n| **기준 커밋(`$BASE`)** | `working` 범위에서는 `HEAD`의 SHA가 기준입니다. 범위는 `git diff HEAD`의 tracked 변경(staged와 unstaged)에 `git ls-files --others --exclude-standard`로 찾은 untracked 파일을 더한 것입니다. untracked 파일을 빼면 새로 추가한 컴포넌트가 조용히 범위에서 빠집니다. |\n| **변경 의도 1~2줄** | 커밋 메시지나 PR 본문이 없으면 \"의도대로 됐는가\"와 상태 누락(hover·focus·disabled·loading·empty·error·좁은 화면)을 판단할 근거가 없습니다. |\n| **번역 카탈로그 위치** (있다면) | 새로 들어간 사용자 문구가 카탈로그에 등록됐는지 확인하는 데 씁니다. |\n| **미리보기 명령** (선택) | 렌더링 검증은 사용자가 요청할 때만 합니다. 이 입력이 없으면 시각·런타임 주장은 모두 **Not verified**로 표시합니다. |\n\n시작 전에 두 가지를 확인합니다.\n- **진행 중인 작업:** rebase·merge·cherry-pick 중이면 diff가 실제 변경과 다를 수 있으므로 중단합니다.\n- **제외 경로:** lockfile, 스냅샷, 생성물, vendored 코드, 바이너리는 범위에서 빼고 무엇을 뺐는지 적습니다. 이것만 바뀌었다면 검토할 변경이 없다고 보고합니다.\n\n## 2. 기존 결함과 새 회귀를 나누는 방식\n\n판단 기준은 위치가 아니라 원인입니다.\n\n- **`Introduced`:** 이번 변경이 만든 문제입니다.\n- **`Regression`:** 전에는 맞던 것을 이번 변경이 약하게 만든 경우입니다. diff의 `-` 쪽(삭제된 줄)에서 찾습니다. 예를 들어 `aria-label`, `outline`, `prefers-reduced-motion`이 사라진 경우입니다. 이런 신호는 아직 단서일 뿐입니다. 같은 diff 안에 동등한 대체가 없고 해당 도메인 스킬이 확인해야 `Regression`이 됩니다.\n- **`Pre-existing`:** 변경 전부터 있었고 이번 변경으로 나빠지지 않은 문제입니다. 바뀐 줄 바로 옆에 있어도 여기에 속합니다. 최대 3건까지만, 별도 섹션에 적습니다.\n\n줄이 언제 생겼는지는 `git blame -L <n>,<n> -- <file>`로 확인합니다. `working` 범위라서 range 인자는 쓰지 않습니다.\n- `Not Committed Yet`으로 나오면 이번 변경에 속합니다.\n- 그 외 커밋으로 나오면 변경 전부터 있던 줄입니다.\n\n예외가 하나 있습니다. 바뀐 토큰이나 공유 컴포넌트 때문에 손대지 않은 소비자 화면에서 문제가 생기면, 그것도 `Introduced` 또는 `Regression`입니다.\n\n## 3. 완료 조건\n\n1. **범위 블록:** Target(`working`), 기준 SHA, tracked/untracked 파일 수, 제외 후 파일 수, 제외 목록, 확장한 화면과 확장하지 않은 소비자 수를 모두 채웁니다.\n2. **diff 전체 읽기:** 삭제된 줄까지 읽습니다. 소비자는 기본적으로 1단계까지 확장합니다. 토큰·테마·공유 primitive만 2단계까지 갑니다. 전체 최대 5개이며, 잘라낸 개수를 적습니다.\n3. **상태 표기:** 모든 발견에 상태가 하나씩 붙어 있습니다. `Introduced`와 `Regression`에는 변경 전/후 근거가 있습니다.\n4. **`better-interface` 인계:** 커버리지 표, 심각도, 통합, 판정은 이 단계에서 나옵니다. 이 스킬을 쓸 수 없으면 범위와 파일 목록만 보고하고 멈춥니다. 판정을 지어내지 않습니다.\n5. **검증 한계 명시:** 렌더링하지 않은 시각·런타임 주장은 **Not verified**로 둡니다.\n6. **읽기 전용:** `checkout`, `switch`, `stash`를 쓰지 않습니다.\n7. **빈 범위 처리:** 범위가 비면 `Approve`가 아니라 사실을 정리한 뒤 다른 경로를 제안합니다. 정확성·테스트·보안·성능 문제는 일반 코드 리뷰로 넘기고 한 번만 언급합니다.\n\n검토를 시작하려면 저장소 경로와 변경 의도를 알려주세요.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true
+  },
+  "pass": true,
+  "duration_seconds": 38.594,
+  "duration_api_ms": 36671,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 19256,
+    "cache_read_input_tokens": 22909,
+    "output_tokens": 3633,
+    "output_tokens_details": {
+      "thinking_tokens": 1528
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 19256,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2947,
+        "cache_read_input_tokens": 19177,
+        "cache_creation_input_tokens": 3811,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 3811
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 3633,
+      "cacheReadInputTokens": 22909,
+      "cacheCreationInputTokens": 19256,
+      "webSearchRequests": 0,
+      "costUSD": 0.2313058,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 1528,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.2313058,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 2,
+  "protocol_sha256": "a55868be23f079eb802a839a2c0b07998c1efb2804d27596d4031b9ca7d5ac92",
+  "cases_sha256": "f5c66ed8208e0e91e7bb6a8e86e2b5cbd28b7dd2e09d4a3480d939770878f929",
+  "stream_sha256": "1dc8f38c4951d3eb659d8f3bc38d55ad8b6accbeda8bca85794e5acdd9e3c945",
+  "transcript_sha256": "25bbde7fcb3905feab5e0e1f8e54549f47744db5ceea4e3550c195afa41e6897",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

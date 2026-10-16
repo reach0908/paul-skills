@@ -1,0 +1,200 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "e47e12dc38c5a3b9e770687c3ec79f96e8d4b1d5d2c335c264cbd91884103e74",
+  "schema_version": 1,
+  "case_id": "normal-better-colors-thresholds",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_004",
+  "expected": "better-colors",
+  "prompt": "구독 폼 색상 검토 명세를 준비해줘. 제공된 값은 일반 크기 16px 글자의 전경·배경 대비 2.8:1이야. 활성 이메일 입력란의 placeholder, 실제로 비활성인 제출 버튼의 문구, 읽기 전용 계정 정보 문구를 각각 WCAG 2.2 AA에서 어떻게 판정할지 설명해줘. APCA Lc 30이라는 별도 목표가 WCAG 판정을 바꾸는지도 구분해줘. 새 측정이나 파일 수정, 브라우저·외부 서비스 실행은 하지 말고, 주어진 값에 대한 기준 설명만 해줘.",
+  "session_id": "1348d08f-e139-44ef-8849-798c0d27c8f7",
+  "started_at": "2026-10-14T13:33:52.926282+00:00",
+  "host_init_session_id": "1348d08f-e139-44ef-8849-798c0d27c8f7",
+  "host_result_session_id": "1348d08f-e139-44ef-8849-798c0d27c8f7",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-contrast-boundary-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "bb91a156-c8d0-4832-a224-aee690089422",
+  "automatic_catalog_sha256": "de4298e7e53d9d231ee6aeda3d801ac072151b3ffa22f41c57c99fc4dc2838f8",
+  "full_body_loads": [],
+  "tool_calls": [],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# 구독 폼 색상 검토 명세: WCAG 2.2 AA 판정 기준\n\n## 전제\n- 아래 판정은 제공하신 **2.8:1**(16px 일반 굵기, 글자색과 배경색 대비) 한 값이 세 요소 모두에 똑같이 적용된다고 가정합니다.\n- 이 값은 **글자와 배경 사이의 대비**만 나타냅니다. 입력란 테두리나 포커스 표시처럼 글자가 아닌 요소는 SC 1.4.11 대상이라 이 명세에서 다루지 않습니다.\n- 기준 임계값: 16px 일반 굵기는 WCAG의 \"큰 글자\"(24px 이상, 또는 굵게 약 18.66px 이상)가 아닙니다. 따라서 **SC 1.4.3 대비(최소) AA 기준은 4.5:1**입니다.\n- 2.8:1은 큰 글자 기준인 3:1에도 못 미칩니다. 글자 크기를 키워 큰 글자로 분류하더라도 통과하지 못합니다.\n\n## 판정 근거: 1.4.3의 예외 목록\n1.4.3이 요구사항에서 빼 주는 경우는 아래 두 가지뿐입니다. 각 요소가 여기에 해당하는지로 판정합니다.\n- **부수적 텍스트**: 비활성 UI 구성요소의 일부, 순수 장식, 아무에게도 보이지 않는 텍스트, 다른 시각 요소가 많은 그림 속 텍스트\n- **로고타입**\n\n## 판정표\n\n| 요소 | 적용 SC | 예외 해당 여부 | WCAG 2.2 AA 판정 | 판정 전제조건 | APCA Lc 30 (별도 목표) |\n|---|---|---|---|---|---|\n| 활성 이메일 입력란의 placeholder | 1.4.3 | 해당 없음 | **부적합** (4.5:1 필요) | 입력란이 활성 상태 | 판정 불가 (측정 안 함) |\n| 실제로 비활성인 제출 버튼 문구 | 1.4.3 | **비활성 UI 구성요소** | **적용 제외** (\"통과\" 아님) | 비활성 상태가 실제이고 프로그램으로 노출됨 | 판정 불가 (측정 안 함) |\n| 읽기 전용 계정 정보 문구 | 1.4.3 | 해당 없음 | **부적합** (4.5:1 필요) | 읽기 전용이 비활성은 아님 | 판정 불가 (측정 안 함) |\n\n### 1. placeholder: 부적합\n- 입력란이 활성이므로 \"비활성 구성요소\" 예외에 해당하지 않습니다.\n- placeholder는 형식 안내 같은 정보를 전달하는 텍스트입니다. 라벨과 내용이 겹치더라도 \"순수 장식\"이 되지는 않습니다.\n- 맞는 예외가 없으므로 4.5:1이 적용되고, 2.8:1은 부적합입니다.\n\n### 2. 비활성 제출 버튼: 적용 제외\n- \"비활성 UI 구성요소의 일부인 텍스트\"에 해당하므로 1.4.3 대비 요구에서 빠집니다.\n- 명세에는 \"통과\"가 아니라 **\"적용 제외(예외)\"**로 적습니다. 대비가 충분해서가 아니라 요구사항 자체가 적용되지 않는 것이기 때문입니다.\n- 이 판정은 아래 조건이 맞을 때만 유효하므로 명세에 함께 적어 둡니다.\n  - 비활성 상태가 프로그램으로 노출되어야 합니다(`disabled` 속성, 또는 `aria-disabled=\"true\"`이면서 실제로 동작하지 않음).\n  - 회색으로 보이기만 하고 클릭이나 제출이 되면 예외가 성립하지 않습니다. 그 경우 4.5:1이 적용되어 부적합입니다.\n- SC 1.4.11에도 같은 비활성 예외가 있어서, 버튼 테두리와 배경의 비텍스트 대비도 제외됩니다.\n\n### 3. 읽기 전용 계정 정보: 부적합\n- 읽기 전용은 비활성이 아닙니다. 이 문구는 사용자가 읽으라고 보여 주는 정보이므로 예외에 해당하지 않습니다.\n- 4.5:1이 적용되고, 2.8:1은 부적합입니다.\n- 주의할 점: 이 정보를 `disabled` 필드로 구현해 예외를 적용받으려는 경우가 있습니다. 명세에서는 이를 **예외 오용으로 지적**하고 예외로 인정하지 않도록 적어 두는 것을 권합니다. 비활성 예외는 동작하지 않는 컨트롤을 위한 것이지, 읽어야 할 내용을 위한 것이 아닙니다.\n\n## APCA Lc 30은 WCAG 판정을 바꾸지 않습니다\n- **WCAG 2.2의 공식 기준이 아닙니다.** Lc 30을 달성해도 1.4.3 부적합이 적합으로 바뀌지 않습니다. 반대로 Lc 30에 못 미쳐도 WCAG 부적합이 새로 생기지 않습니다. 그래서 판정표에서도 별도 열로 분리했습니다.\n- **2.8:1에서 Lc 값을 계산할 수 없습니다.** APCA 값은 실제 두 색상과 극성(밝은 배경 위 어두운 글자인지, 그 반대인지)에 따라 달라지고, WCAG 대비비 하나로는 정해지지 않습니다. 새 측정을 하지 않는다는 조건에서는 세 요소 모두 Lc 30 충족 여부가 **\"판정 불가(측정 안 함)\"**입니다.\n- **Lc 30의 위치:** APCA 지침에서 Lc 30은 가장 낮은 단계로, placeholder나 비활성 텍스트 같은 종류에 대응시키는 수준입니다. 16px 일반 굵기의 본문용 텍스트에는 APCA 자체도 훨씬 높은 수준을 권합니다. 따라서 Lc 30을 목표로 삼을 때도 계정 정보처럼 읽어야 하는 텍스트에는 부족할 수 있습니다. 정확한 기준표 수치는 여기서 확인하지 않았기 때문에 인용하지 않았습니다.\n- APCA가 WCAG 3에 들어갈지도 아직 정해지지 않았습니다. 명세에 \"차기 표준\"이라고 적지 않는 편이 정확합니다.\n\n## 명세에 적을 조치 기준\n- placeholder와 읽기 전용 계정 정보: 글자색과 배경색 대비를 **4.5:1 이상**으로 맞춰야 WCAG 2.2 AA를 충족합니다.\n- 비활성 제출 버튼: 대비 요구는 없습니다. 대신 비활성 상태가 프로그램으로 노출되는지를 확인 항목으로 둡니다.\n- APCA Lc 30: WCAG 적합성과는 별개인 팀 내부 목표로 따로 기록합니다. 판정하려면 실제 색상 값으로 별도로 측정해야 합니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": false,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": false,
+  "duration_seconds": 101.016,
+  "duration_api_ms": 99413,
+  "usage": {
+    "input_tokens": 4,
+    "cache_creation_input_tokens": 15527,
+    "cache_read_input_tokens": 18786,
+    "output_tokens": 5561,
+    "output_tokens_details": {
+      "thinking_tokens": 2922
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 11322,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2927,
+        "cache_read_input_tokens": 3732,
+        "cache_creation_input_tokens": 11322,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 11322
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 19545,
+        "output_tokens": 2846,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2634,
+        "cache_read_input_tokens": 15054,
+        "cache_creation_input_tokens": 4205,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 4205,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 4,
+      "outputTokens": 5561,
+      "cacheReadInputTokens": 18786,
+      "cacheCreationInputTokens": 15527,
+      "webSearchRequests": 0,
+      "costUSD": 0.22659420000000002,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2922,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 19545,
+      "outputTokens": 2846,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.33775,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5643442000000001,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 1,
+  "protocol_sha256": "0270c263349c77cc58c5d2efe77c9c6db7dc60e5869bce38a61d02cbefe323c8",
+  "cases_sha256": "be2cc3ccccfc9c45e3a112194d7e798c84f6b3865eeda520084cfbd31035123b",
+  "stream_sha256": "6b0390a4ccefaa2c3eaaf4868e48a81ec5ef6afc0763c939a8c56738d5592aab",
+  "transcript_sha256": "d341130861d068968afb013b0b8fc22c978782b2fd329519b8cae66e502cc827",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

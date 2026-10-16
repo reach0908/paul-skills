@@ -1,0 +1,231 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "schema_version": 1,
+  "case_id": "normal-better-layout",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_009",
+  "expected": "better-layout",
+  "prompt": "현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조를 검토하려고 해. 데스크톱 3열이 320px에서는 중요한 내용부터 나오고 독일어로 길어진 라벨도 버텨야 해. 색과 폰트 교체는 범위 밖이야. 필요한 입력과 배치 검토 순서를 짧게 준비해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "2ea545a2-915f-4818-a33b-6d8bb822c0b2",
+  "started_at": "2026-10-14T12:47:50.282978+00:00",
+  "host_init_session_id": "2ea545a2-915f-4818-a33b-6d8bb822c0b2",
+  "host_result_session_id": "2ea545a2-915f-4818-a33b-6d8bb822c0b2",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "ae4f924e-b487-4a90-a6b7-fe174c297b54",
+  "automatic_catalog_sha256": "509792e2a2032bf1fd4c8caf55f796f57df69657d4aa4478e757440c1781dbeb",
+  "full_body_loads": [
+    {
+      "name": "better-layout",
+      "event_uuid": "92406869-21ad-47f5-b854-6eec59ac4c9a",
+      "file_sha256": "0ee0559091c0edeccd193903e7ebfe8001d30f77b714e1482ed946574a7cd1cd",
+      "body_sha256": "a47ba0ab2637eba194a81c9aea36ac39d477d3ba62a9cfc0585aaf40b222e6c7",
+      "host_message_sha256": "8e8fcede644e0011720220933807d7e5e610147853e6e540ce39248d63d6f594",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-layout",
+        "args": "현재 대시보드의 그룹, 정렬, 읽는 순서와 반응형 구조 검토 준비. 데스크톱 3열 → 320px에서 중요한 내용 우선, 독일어 긴 라벨 대응. 색·폰트 교체는 범위 밖. 이번에는 필요한 입력과 배치 검토 순서만 짧게 준비 (파일 수정·브라우저·외부 서비스 실행 금지)."
+      },
+      "tool_use_id": "toolu_01B9z5beExjzdwAWSFkQ4QZj",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "f3a8da5dbad4334dd9d31022a48c17198253e5f397b81386fe5a1cb38b83fb6f"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01VoTy9jx5Uj6q7vTmwuwdSh",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "2181156a37056c3a8d638800ad8627efed827543a9afa810a77d251e376cce63"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "작업 디렉터리(`case_009`)가 비어 있어서 아직 검토한 파일이 없습니다. 그래서 지금 드릴 수 있는 발견사항은 없고, 필요한 입력과 검토 순서만 정리했습니다.\n\n## 필요한 입력\n\n1. **대시보드 마크업과 스타일**: 컴포넌트·템플릿 파일과 CSS를 경로로 알려주시거나 붙여넣어 주세요. 간격 토큰, 그리드·브레이크포인트 설정, 컨테이너 쿼리 설정도 같이 필요합니다.\n2. **데스크톱 3열 선언**: 3열이 어느 요소에 걸려 있고 열 너비를 어떻게 정의하는지 알려주세요.\n3. **지원 뷰포트**: 최소 320px, 최대 너비, 200% 확대 지원 여부를 알려주세요.\n4. **320px에서의 우선순위**: 위젯·카드별 중요도 순서가 필요합니다. 코드에서 알 수 없는 제품 결정이라 직접 정해주셔야 합니다.\n   - 화면에 보이는 순서는 소스(DOM) 순서와 같아야 해서 `order`, `row-reverse`, 그리드 배치로 순서를 바꾸지 않습니다. 따라서 가장 중요한 위젯이 소스에서 앞에 있지 않으면, 고칠 때 **데스크톱 열 위치도 함께 바뀝니다**. 이게 괜찮은지 알려주세요.\n5. **독일어 문자열**: 번역 파일이 있으면 좋고, 없으면 가장 긴 라벨만이라도 주세요. 짧은 원문일수록 번역하면 비율상 더 길어지므로 한 단어짜리 버튼, KPI 제목, 표 헤더가 가장 중요합니다.\n6. **고정 헤더 여부**: sticky 헤더 같은 고정 영역이 있는지 알려주세요.\n7. **RTL 포함 여부**: 요청에 없어서 따로 정하지 않았습니다. 범위에 넣을지 알려주세요.\n8. **말줄임 허용 여부**: 라벨을 자를 수 있는지 정책만 알려주세요. 실제 자르는 방식은 타이포그래피 영역이라 이번 범위 밖입니다.\n\n## 배치 검토 순서 (정적 검토, 브라우저 없이)\n\n1. **읽는 순서**: 3열 그리드의 DOM 순서와 화면 순서를 비교합니다. 320px에서 중요한 내용이 먼저 나오는지 판단하는 핵심 단계입니다.\n2. **열과 자식 크기**: 독일어 라벨이 잘리는 원인을 찾습니다. 대상은 `minmax(0, 1fr)` 없이 쓴 `1fr`, `min-width: 0`이 빠진 flex 자식, 텍스트 박스에 고정된 `width`·`height`입니다.\n3. **브레이크포인트**: 기기 크기가 아니라 내용 기준인지, 미디어 쿼리와 컨테이너 쿼리 중 어느 쪽인지, 잘리기 전에 1열로 접히는지 봅니다.\n4. **그룹과 정렬**: 그룹 사이 간격이 그룹 안 간격의 2배 이상인지, 정렬 기준선이 공통인지 확인합니다.\n5. **숨은 내용**: 넘치거나 접힌 내용에 보이는 단서가 있는지, 잘린 값의 전체 텍스트를 볼 방법이 있는지 확인합니다.\n6. **논리 속성**: RTL이 범위에 들어갈 때만 봅니다.\n7. **패턴 검사**: `100vw`, 고정 `height`, 컴포넌트 안의 `@media`, `scroll-padding` 누락 같은 위험 패턴을 코드 검색으로 찾습니다.\n\n## 보고 방식\n\n- 결과는 심각도(HIGH/MEDIUM/LOW)를 매긴 표로 정리합니다. 320px나 200% 확대에서 잘리거나 겹치면 HIGH입니다.\n- 실제 화면을 봐야 하는 확인(320px 렌더링, 200% 확대, RTL 반전)은 이번에 브라우저를 쓰지 않으므로 `Not verified`로 표시합니다.\n- 색과 폰트는 범위 밖이라 발견사항에 넣지 않습니다.\n\n1번(파일 경로)과 4번(우선순위)만 있어도 검토를 시작할 수 있습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 64.066,
+  "duration_api_ms": 61897,
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 16265,
+    "cache_read_input_tokens": 56509,
+    "output_tokens": 2183,
+    "output_tokens_details": {
+      "thinking_tokens": 239
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 15207,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 138,
+        "cache_read_input_tokens": 18801,
+        "cache_creation_input_tokens": 138,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 138
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 20561,
+        "output_tokens": 2422,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1646,
+        "cache_read_input_tokens": 18939,
+        "cache_creation_input_tokens": 1058,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1058,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 2183,
+      "cacheReadInputTokens": 56509,
+      "cacheCreationInputTokens": 16265,
+      "webSearchRequests": 0,
+      "costUSD": 0.18193980000000004,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 239,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 20561,
+      "outputTokens": 2422,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.32671,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5086498,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "a45abcbb4700fbd1e7c922c0fe45e31d538d6e8957782b1db67ed8f8aade856c",
+  "transcript_sha256": "3b122621b6c8618db4bffc596944457180e01ee4a13a3f9172e367ede0e33af5",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

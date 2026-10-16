@@ -1,11 +1,15 @@
 ---
 name: better-colors
-description: Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast.
+description: "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Colors
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill builds and audits color systems. It generates ramps, maps their steps to roles and token names, converts notation and measures rendered contrast pairs.
 
@@ -14,6 +18,10 @@ Never report a contrast value you did not measure, and never estimate a color yo
 Whether a pair is required to pass belongs to `better-accessibility`. Surfaces, shadows and icon color belong to `better-ui`.
 
 For browser evidence, call the Skill tool with "design-browser" and pass the task purpose and expected observations. Without a Skill tool, read its installed SKILL.md. Follow its tool routing; if unavailable, use the caller's tool policy and installed help, and report verification limits.
+
+## Read supporting references
+
+Resolve linked files from this skill's installed directory. Use a native file-reading tool when available. With a shell tool, pass the resolved, shell-quoted absolute filename directly in its command, such as `cat '/absolute/path/to/contrast.md'`. Each command must contain its actual filename: a JavaScript loop variable does not populate shell positional parameters. Independent reads may run in parallel; check every result and read any truncated remainder before relying on it.
 
 ## Match the project's color system
 
@@ -89,7 +97,13 @@ The space is a look, not a correctness setting. Default to `in oklab`, and reach
 
 Three symptoms are `HIGH` on sight whatever the surface, matching `better-interface`'s escalation triggers. They are body or control text whose rendered pair fails its required ratio, state or meaning carried by color alone and a semantic color used against its meaning.
 
-**Verification.** Without a browser: token values, the gamut of every declared color, both theme blocks present and contrast computed from the declared token pair. With one: measure each required text, control and graphic pair against its actual painted background, including opacity and any image beneath it, in the supported appearances. Account for the scoped roles with measurements, justified exemptions or named verification limits.
+**Verification.** Check token values, gamut and both theme blocks. Give each contrast conclusion its evidence and scope:
+
+- **Calculated pair:** compute from resolved foreground and background values. For transparency or blending, state the known layers and compositing assumptions first. This establishes the supplied pair's contrast; actual UI application remains pending.
+- **Rendered check:** measure each required text, control and graphic pair against its actual painted background, including opacity, image regions, states and supported appearances. Record the inspected scope and justify exemptions by actual use.
+- **Pending:** name the missing inputs or observations. Unresolved image, gradient or backdrop content leaves the affected rendered check pending.
+
+Carry the same evidence status into the final summary. A plan lists the measurements still needed; completed claims identify the calculation or observation that supports them.
 
 **Format.** Group findings under the principle each violates, ordered by severity, one row per root cause listing every location it appears in:
 

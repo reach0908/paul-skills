@@ -1,0 +1,86 @@
+{
+  "case_id": "normal-better-ui",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a74-b638-72e0-811b-5b81dcd448cf",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "`better-ui` 기준으로 준비 명세만 확정합니다. 아직 대상 입력이 없으므로 점검 결과는 확인되지 않았습니다.\n\n필요한 입력:\n\n- 대상 화면 또는 버튼·카드 목록\n- 현재 상태별 캡처: default, hover, pressed, disabled, selected/loading\n- 관련 CSS·컴포넌트 코드 또는 토큰 정의\n- 기준 디자인이 있다면 이미지/Figma 캡처\n- 지원 환경: 데스크톱·터치, 라이트·다크 모드\n\n점검 순서:\n\n1. 구조와 문구를 고정하고 대상 상태를 목록화\n2. 중첩 radius가 `바깥 radius = 안쪽 radius + padding + border` 원칙에 맞는지 확인\n3. 그림자가 elevation을, border가 구조·선택 상태를 표현하는지 확인\n4. 아이콘 크기·stroke와 텍스트 굵기를 맞추고 광학적 치우침 확인\n5. hover는 hover 가능 포인터에만 적용하고 pressed·disabled 충돌 확인\n6. pressed는 필요 시 `scale(0.96)`, `150ms`, `ease-out`을 기준으로 검토\n7. `transition-all` 없이 변경 속성만 지정했는지, easing·duration 일관성 확인\n8. reduced motion과 정적 상태 단서가 있는지 확인\n\n결과물은 항목별 `현재값 → 제안값 → 이유 → 확인 상태` 형식으로 정리하며, 제공되지 않은 상태는 `Not verified`로 표시합니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state w",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and requested ",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-s",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-ui"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-ui": "59b505fc1437a1c5f09336a7b4f4a165eb31c8da7f012b3fdcfe84326ff7a3b7"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "59b505fc1437a1c5f09336a7b4f4a165eb31c8da7f012b3fdcfe84326ff7a3b7"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45511,
+      "cached_input_tokens": 40960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 726,
+      "reasoning_output_tokens": 215
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "eee62dd1d86f43b5a3f09f422ac67c3e2ef61a96410ce7fa23d72ce09e2130cf",
+  "transcript_sha256": "cc876051b76895dc748b3cd43ecd06871fd3ad3abf95e448932be431c64543a2",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 25.828
+}

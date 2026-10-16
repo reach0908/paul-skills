@@ -1,0 +1,38 @@
+{
+  "package_check": {
+    "command": "npm run check",
+    "exit_code": 0,
+    "unit_tests_passed": 38,
+    "skill_records": 56,
+    "promoted_skills": 44,
+    "log_sha256": "8e17b0d635bc2570e3258271530129ad51ffdb9ef63e0788c7698326a1d7a546"
+  },
+  "grader_controls": {
+    "command": "python3 -m unittest discover -s evals/design-contrast-reference-proof-2026-10-14 -p test_order_grader.py",
+    "exit_code": 0,
+    "tests_passed": 26
+  },
+  "plugin_validation": {
+    "command": "claude plugin validate . --strict",
+    "exit_code": 0
+  },
+  "whitespace_check": {
+    "command": "git diff --check",
+    "exit_code": 0
+  },
+  "versions": {
+    "codex_cli": "0.146.0",
+    "claude_cli": "2.1.296",
+    "daily_plugin": "0.4.1"
+  },
+  "candidate_bundle_files": 175,
+  "global_before_files": {
+    "codex": 174,
+    "claude": 174
+  },
+  "limitations": [
+    "Native CLI models and scenarios specified in PROTOCOL.md only.",
+    "Maintainer semantic judgments; no independent blinded reviewer.",
+    "No candidate publication or global installation."
+  ]
+}

@@ -1,0 +1,230 @@
+{
+  "arm": "candidate",
+  "fixture": "empty",
+  "bundle_manifest_sha256": "3ae89cdd8a40e8b27febd2688d34a6e4e392e94d26c6d1a9729b5c7c8474fa3b",
+  "schema_version": 1,
+  "case_id": "normal-ia",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_019",
+  "expected": "information-architecture",
+  "prompt": "기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "session_id": "4d6e3ed7-86bb-4a08-94aa-a09a32104a0a",
+  "started_at": "2026-10-14T10:07:50.884985+00:00",
+  "host_init_session_id": "4d6e3ed7-86bb-4a08-94aa-a09a32104a0a",
+  "host_result_session_id": "4d6e3ed7-86bb-4a08-94aa-a09a32104a0a",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-staged-routing-20261014/round2/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "5622ebee-5ae7-4b9a-ace7-df9de2101f0c",
+  "automatic_catalog_sha256": "905df92699a284da95c88a12137dba3915e6d8026b67dbb44995c49d96455b42",
+  "full_body_loads": [
+    {
+      "name": "information-architecture",
+      "event_uuid": "cd0f6602-3d48-42ab-951b-68150c4a5209",
+      "file_sha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20",
+      "body_sha256": "14ffbceb8c85124fd376ba430f610752b8ab379b3ebbf380dc839c0499a7c108",
+      "host_message_sha256": "25039467116ac0ff56a42d03496a4aa5e3679b0aa3f896c739b0b95be37bd456",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:information-architecture",
+        "args": "읽기 서비스: 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 메뉴 이름, 상하위 관계, 목적지 ID를 짧게 정리. 화면 배치·시각 디자인 제외. 제품 파일 수정·브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_01FMZDiLK4LxrmBb6G3jMtQb",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "ea10635a7f9c383bd666fee736485817b30af6388f56f79faa2de503fc96b845"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_013DoddcpjZsWyadGq8Givij",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "0fdf734967c34e065729198988febd45f326cc2ebd0189cdaaf80512067da5ae"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "기획 문서를 받지 못해서 요청 문장만으로 초안을 만들었습니다. 승인된 구조는 아닙니다. 작업 폴더가 비어 있어 파일로 저장하지 않았습니다.\n\n**필요한 입력:** 기획 문서의 위치나 내용을 알려주세요. 받으면 아래 가정을 기획 문서 기준으로 바꾸겠습니다.\n\n## 목적지\n\n| ID | 메뉴 이름 | 내용 | 지원 과업 | 접근 조건 |\n|---|---|---|---|---|\n| `article-list` | 글 | 전체 글 목록 | 글 찾기 | 누구나 |\n| `article-detail` | (메뉴에 없음) | 글 본문, 주제 링크, 저장 동작 | 읽기, 저장 | 누구나 |\n| `topic-index` | 주제 | 주제 목록 | 주제로 글 찾기 | 누구나 |\n| `topic-detail` | (메뉴에 없음) | 한 주제에 속한 글 목록 | 주제로 글 찾기 | 누구나 |\n| `saved-list` | 저장한 글 | 내가 저장한 글 목록 | 저장한 글 다시 찾기 | 로그인 필요 |\n| `account-settings` | 계정 설정 | 계정 정보와 설정 | 계정 관리 | 로그인 필요 |\n\n- **`article-detail`:** 어느 경로로 들어와도 같은 ID를 씁니다. 상위 분류는 `article-list`입니다. 뒤로 가면 들어온 곳(목록, 주제, 저장한 글)으로 돌아갑니다. 이 부분은 흐름 설계 때 정합니다.\n- **`topic-detail`:** 내용은 글 목록을 주제로 거른 것입니다. 별도 목적지로 둘지 `article-list`의 필터로 둘지는 아래 결정 2에 따라 정해집니다.\n- **메뉴 이름:** \"저장 목록\" 대신 \"저장한 글\"을 골랐습니다. 글의 \"저장\" 동작과 말을 맞추기 위한 선택이고 확정된 결정은 아닙니다.\n\n## 상하위 관계\n\n```\n주 메뉴\n├─ 글            article-list\n│   └─ 글 상세    article-detail\n├─ 주제          topic-index\n│   └─ 주제별 글  topic-detail → article-detail\n└─ 저장한 글      saved-list → article-detail\n보조 메뉴\n└─ 계정\n    └─ 계정 설정  account-settings\n```\n\n- 주 메뉴 세 개와 보조 메뉴의 계정 설정은 화면이 좁아져도 모두 접근할 수 있어야 합니다.\n- **미정:** 로그인 목적지가 목록에 없습니다. 새로 만들지 않고 미정 항목으로 남겼습니다.\n\n## 과업별 경로\n\n1. **찾아서 읽기:** 글 → `article-list` → `article-detail`, 또는 주제 → `topic-index` → `topic-detail` → `article-detail`. 끝나면 들어온 목록으로 돌아갑니다. 검색은 결정 1이 정해져야 넣을 수 있습니다.\n2. **저장:** `article-detail`에서 저장합니다. 저장은 동작이고 따로 목적지를 두지 않습니다. 로그인하지 않은 사용자가 저장하려 할 때는 결정 4가 필요합니다.\n3. **다시 찾기:** 저장한 글 → `saved-list` → `article-detail` → `saved-list`로 돌아갑니다. 저장한 글 안에서 범위를 좁히는 방법은 결정 1과 3에 따라 달라집니다.\n\n## 구조를 바꾸는 결정\n\n1. **검색 범위:** 전체 글, 저장한 글 안, 없음 중 무엇인가요? 범위에 따라 검색 결과 목적지가 생깁니다.\n2. **글과 주제의 관계:** 글 하나가 주제 하나에만 속하나요, 여러 주제에 속하나요? 글 상세의 상위 분류와 `topic-detail`을 별도 목적지로 둘지가 이걸로 정해집니다.\n3. **저장한 글 정리 방식:** 한 목록으로 두나요, 폴더나 컬렉션으로 나누나요? 나누면 저장한 글 아래에 하위 목적지가 생깁니다.\n4. **로그인하지 않은 사용자의 저장:** 허용하나요? 허용하지 않으면 로그인 목적지가 필요합니다.\n5. **첫 화면:** 글 목록이 첫 화면인가요, 따로 홈이 있나요?\n\n**\"주제 모음\"의 뜻:** 운영자가 만든 주제 분류로도, 사용자가 직접 만드는 모음으로도 읽힙니다. 이 초안은 운영자가 만든 주제 분류로 보고 만들었습니다. 사용자가 만드는 모음이라면 \"주제\"는 결정 3의 저장한 글 정리 방식 쪽으로 옮겨야 합니다.\n\n위 결정에 답해주시면 ID를 확정하겠습니다. 저장할 경로를 알려주시면 Markdown 문서로 남기겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true
+  },
+  "pass": true,
+  "duration_seconds": 79.872,
+  "duration_api_ms": 78458,
+  "usage": {
+    "input_tokens": 6,
+    "cache_creation_input_tokens": 16565,
+    "cache_read_input_tokens": 35107,
+    "output_tokens": 4853,
+    "output_tokens_details": {
+      "thinking_tokens": 2686
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 12865,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 2624,
+        "cache_read_input_tokens": 14778,
+        "cache_creation_input_tokens": 1819,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 1819
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 20724,
+        "output_tokens": 1839,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 1872,
+        "cache_read_input_tokens": 16597,
+        "cache_creation_input_tokens": 3700,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 3700,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 6,
+      "outputTokens": 4853,
+      "cacheReadInputTokens": 35107,
+      "cacheCreationInputTokens": 16565,
+      "webSearchRequests": 0,
+      "costUSD": 0.22552540000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2686,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 20724,
+      "outputTokens": 1839,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.29918999999999996,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.5247153999999999,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {},
+  "input_after": {},
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 4,
+  "protocol_sha256": "8ac525b33f0e8c4d4eabc2fda7f606cb3b4127d9e8dc3f40eb36d62acdd0c3be",
+  "cases_sha256": "1eaa228e9267be72c352a7db3ea2de563d4de84c6140f08f32d38d5193afa17c",
+  "stream_sha256": "069a47b8921f2fe4c3dc5c2ca25182260e452ed239b274d2725ac575ffbd9853",
+  "transcript_sha256": "30865923ad079764deff102751418174d9f133d4e42f1f78ec85aadbb67757ec",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

@@ -8,7 +8,7 @@ Status: stopped at session reconnect failure after successful permission-recover
 - Initial failed segment remains preserved in task-1-raw.md and tool-failure.txt
 - Facilitator intervention: explicitly authorized one escalated retry of the same Playwright CLI open for local browser startup. No UI guidance or producer explanation was supplied.
 - Facilitator revised the time allowance for the new UI attempt to 8 minutes from retry start, keeping the previous 72 seconds separate.
-- Required skill read: /Users/jinhokim/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md
+- Required skill read: $HOME/.codex/plugins/cache/paul-skills/paul-skills/0.4.1/skills/design/design-browser/SKILL.md
 - Installed skill package identifier: paul-skills/0.4.1
 - CLI: /opt/homebrew/bin/playwright-cli, 0.1.22
 - Browser: Google Chrome 152.0.7977.82

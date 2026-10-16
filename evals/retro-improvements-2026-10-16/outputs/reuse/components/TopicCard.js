@@ -1,0 +1,1 @@
+export function CreatorCard(topic) { const card=document.createElement("a"); card.className="card"; card.href="?page=topic&id="+encodeURIComponent(topic.id); card.innerHTML=`<span class="faces" aria-hidden="true">● ● ●</span><strong>${topic.name}</strong><span> · ${topic.count} writers</span>`; return card; }

@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Verify recorded artifact integrity, not agent behavior or product quality."""
+"""Verify historical evidence; optionally require matching current skill trees."""
 import argparse
 import hashlib
 import importlib.util
@@ -26,9 +26,15 @@ def main():
     parser = argparse.ArgumentParser(description=__doc__)
     parser.add_argument('--evidence-root', type=Path, default=Path(__file__).resolve().parent)
     parser.add_argument('--upstream-root', type=Path)
+    parser.add_argument('--check-current', action='store_true',
+                        help='Also require current skills to match this historical evaluation.')
     args = parser.parse_args()
     evidence = args.evidence_root
-    registry = json.loads((ROOT / 'skill-sources.json').read_text())
+    baseline = json.loads((evidence / 'source-baseline.json').read_text())
+    assert len(baseline['revision']) == 40, 'missing historical source revision'
+    assert {row['id'] for row in baseline['skills']} == {
+        'problem-discovery', 'product-brief', 'experiment-design'
+    }, 'incomplete historical source inventory'
     spec = importlib.util.spec_from_file_location('source_compare', ROOT / 'skills/in-progress/upstream-sync/scripts/compare.py')
     helper = importlib.util.module_from_spec(spec)
     spec.loader.exec_module(helper)
@@ -60,24 +66,30 @@ def main():
     assert repair['skillDigest'] != first['skillDigest']
     source_files = json.loads((evidence / 'upstream-files.json').read_text())
     upstream = {(row['source'], row['path']): row for row in source_files}
-    for row in registry['skills']:
-        if row['id'] not in ('problem-discovery', 'product-brief', 'experiment-design'):
-            continue
-        current_digest = helper.digest(helper.local_tree(ROOT, row['path']))
-        current_trials = [r for r in trials if r['skill'] == row['id']]
-        assert current_trials[-1]['skillDigest'] == current_digest, row['id'] + ': current skill not exercised'
+    for row in baseline['skills']:
+        evaluated = [r for r in trials if r['skill'] == row['id']][-1]
+        snapshot = contained(evidence, evaluated['snapshot'])
+        if args.check_current:
+            current_digest = helper.digest(helper.local_tree(ROOT, row['path']))
+            assert evaluated['skillDigest'] == current_digest, (
+                row['id'] + ': current skill differs from this historical evaluation; '
+                'run evals/pm-conversation-beta/verify.py for the later five-skill evidence'
+            )
         for origin in row['origins']:
-            assert origin['localDigest'] == current_digest
+            assert origin['localDigest'] == evaluated['skillDigest'], row['id'] + ': baseline digest drift'
             source_id = 'pm-skills' if origin['source'] == 'phuryn-pm-skills' else origin['source']
             for path, expected in origin['files'].items():
                 item = upstream[(source_id, path)]
                 assert item['sha256'] == expected and item['revision'] == origin['importedRevision'] == origin['reviewedRevision']
-            notice = ROOT / row['path'] / ('LICENSE.' + source_id)
+            notice = snapshot / ('LICENSE.' + source_id)
             assert digest_file(notice) == upstream[(source_id, 'LICENSE')]['sha256']
     if args.upstream_root:
         for row in source_files:
             assert digest_file(contained(args.upstream_root, row['source'] + '/' + row['path'])) == row['sha256'], row['path'] + ': upstream drift'
-    print('Verified 11 trial records, five identical-input pairs, one repair, four immutable skill snapshots and direct-source/MIT hashes. Behavior verdicts remain evaluator-owned.')
+    print('Verified historical evidence at ' + baseline['revision'] + ': 11 trial records, '
+          'five identical-input pairs, one repair, four immutable skill snapshots and direct-source/MIT hashes.')
+    print('Current skill equality: ' + ('checked' if args.check_current else 'not requested') +
+          '. Behavior verdicts remain evaluator-owned.')
 
 
 if __name__ == '__main__':

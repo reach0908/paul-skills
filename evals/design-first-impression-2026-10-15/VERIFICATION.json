@@ -1,0 +1,56 @@
+{
+  "integrity_pass": true,
+  "attempts": 26,
+  "completed": 21,
+  "valid_pairs_by_phase": {
+    "initial": [
+      "clear"
+    ],
+    "controlled": [],
+    "bounded": [
+      "brand",
+      "clear",
+      "dashboard",
+      "landing",
+      "missing",
+      "reading",
+      "warning",
+      "wireframe"
+    ]
+  },
+  "unstarted_cases_by_phase": {
+    "initial": [
+      "warning",
+      "reading",
+      "brand",
+      "missing",
+      "wireframe",
+      "staged",
+      "dashboard-repeat"
+    ],
+    "controlled": [
+      "dashboard",
+      "warning",
+      "reading",
+      "brand",
+      "missing",
+      "wireframe",
+      "staged",
+      "dashboard-repeat"
+    ],
+    "bounded": [
+      "staged",
+      "dashboard-repeat"
+    ]
+  },
+  "reported_cost_usd": 8.871280600000002,
+  "cost_unknown_attempts": [
+    "baseline-dashboard",
+    "baseline-landing"
+  ],
+  "cost_with_timeout_reserves_usd": 10.8712806,
+  "human_three_second_test": "not_run",
+  "automatic_discovery": "not_run",
+  "implementation_retest": "not_run",
+  "semantic_success_is_separate": true
+}

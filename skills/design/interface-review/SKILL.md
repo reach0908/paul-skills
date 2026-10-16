@@ -32,9 +32,18 @@ Read the whole diff before forming an opinion of it. A skimmed diff produces fin
 
 ### 1. Resolve the change scope first
 
-The whole invocation is the target, so `/interface-review pr 482` reviews pull request 482. [Scope resolution](scope-resolution.md) holds the accepted targets and how each resolves.
+Read the target before choosing a base, including when the user asks only for preparation. Explicit local targets use this contract:
 
-With no target supplied, resolve in this order and stop at the first match:
+| Target | Base | Reviewed state and inventory |
+| --- | --- | --- |
+| `working` | Current `HEAD` SHA | Net tracked difference from `HEAD` to the working tree (`git diff HEAD`), plus untracked files (`git ls-files --others --exclude-standard`). Includes staged and unstaged work as it exists now; excludes earlier commits. |
+| `staged` | Current `HEAD` SHA | Index snapshot only (`git diff --cached HEAD`). Read reviewed files with `git show :path`; exclude unstaged edits and untracked files. |
+
+Neither local target requires the default branch or a merge base, even when `HEAD` is ahead or detached. A staged edit reversed in the working tree belongs to `staged` but not the net `working` change. State zero committed changes for both targets. Resolve the full SHA only when actual inspection is authorized; a preparation answer explains the contract without running Git.
+
+For `branch`, `pr <n>`, a ref or a range, use [Scope resolution](scope-resolution.md). The target is the scope token or range in the invocation, not its surrounding natural-language instructions.
+
+**Only with no target supplied**, resolve in this order and stop at the first match:
 
 1. `HEAD` is ahead of `git merge-base origin/<default-branch> HEAD`. Review that range **plus** any uncommitted changes, stating the commit count and the uncommitted file count separately.
 2. The working tree is dirty. Review the uncommitted changes.
@@ -46,9 +55,9 @@ Exclude lockfiles, snapshots, generated output, vendored code and binaries per [
 
 ### 2. With no change, ask rather than invent one
 
-A clean tree with nothing ahead of the merge base means there is no change to review. Never fall back to `HEAD~1..HEAD` on your own. The last commit is whatever happened to land, often a merge or someone else's work.
+An explicit `working` or `staged` target with an empty selected inventory has no change to review, even if the branch contains earlier commits. Report that selected scope as empty and ask for another target without widening it. For no-target discovery, a clean tree with nothing ahead of the merge base means there is no change to review. Never fall back to `HEAD~1..HEAD` on your own. The last commit is whatever happened to land, often a merge or someone else's work.
 
-Gather the facts in [Nothing to review](scope-resolution.md#nothing-to-review), state them, then offer these routes and wait:
+For no-target discovery, gather the facts in [Nothing to review](scope-resolution.md#nothing-to-review), state them, then offer these routes and wait:
 
 - **The open pull request** on the current branch, first when there is one. A branch whose commits already landed resolves to no change, while its pull request is still exactly what the user meant.
 - **The last commit**, `HEAD~1..HEAD`, named by short SHA and subject so the user sees what they would get.
@@ -125,7 +134,7 @@ Rendered verification is opt-in here, in place of `better-interface`'s **Verify 
 
 | Mistake | Fix |
 | --- | --- |
-| The scope block counts only uncommitted files while `HEAD` is ahead of the merge base | Review the branch range plus the uncommitted changes, with both counts |
+| A no-target discovery counts only uncommitted files while `HEAD` is ahead of the merge base | Include the branch range and uncommitted changes; explicit `working` and `staged` still use `HEAD` with zero committed changes |
 | A report on `HEAD~1..HEAD` the user never chose | State the facts and offer the routes in **With no change, ask rather than invent one** |
 | A changed shared component with no consumer under `Surfaces expanded` | Expand to its consumers and name the ones you skipped |
 | A deleted `aria-label`, `outline` or `prefers-reduced-motion` with no finding and no note | Route it to its owner through [Removed signals](removed-signals.md) |
@@ -142,9 +151,9 @@ Open with the scope block:
 | Field | Value |
 | --- | --- |
 | Target | `branch`, `working`, `staged`, `pr 482` or the range as entered |
-| Base ref | `origin/main` at `a1b2c3d` |
-| Head ref | `refs/remotes/pr/482` at `e4f5g6h` |
-| Commits | 7 committed, 2 files uncommitted |
+| Base ref | Resolved base SHA; for `working` and `staged`, `HEAD` at that SHA |
+| Head ref | Working tree, index snapshot, or resolved head ref and SHA |
+| Commits | Committed and uncommitted counts; local targets have 0 committed |
 | Files in scope | 12 after exclusions |
 | Excluded | `pnpm-lock.yaml`, `src/__snapshots__/`, lockfile and snapshots |
 | Surfaces expanded | `CheckoutPage`, `SettingsPanel`; 3 further `Button` consumers not expanded |

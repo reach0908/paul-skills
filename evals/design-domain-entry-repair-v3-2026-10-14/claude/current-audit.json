@@ -1,0 +1,332 @@
+{
+  "arm": "candidate",
+  "fixture": "git",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "schema_version": 1,
+  "case_id": "current-audit",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "implicit",
+  "protocol_version": 1,
+  "trial_directory_name": "case_014",
+  "expected": "better-interface",
+  "prompt": "현재 구독 화면의 UI를 종합적으로 검토하려고 해. 키보드 접근성부터 배치, 문구, 글꼴, 색상, 시각 디테일까지 검토 절차와 필요한 증거를 짧게 준비해줘.\n이번 응답에서는 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 확인하지 않은 결과를 사실처럼 말하지 마.",
+  "session_id": "d1c26e80-55bb-425d-b10e-f4bb579b563b",
+  "started_at": "2026-10-14T12:51:18.040495+00:00",
+  "host_init_session_id": "d1c26e80-55bb-425d-b10e-f4bb579b563b",
+  "host_result_session_id": "d1c26e80-55bb-425d-b10e-f4bb579b563b",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "099ca09c-9837-4f56-a342-ec6f0fb59188",
+  "automatic_catalog_sha256": "509792e2a2032bf1fd4c8caf55f796f57df69657d4aa4478e757440c1781dbeb",
+  "full_body_loads": [
+    {
+      "name": "better-interface",
+      "event_uuid": "ea63d83a-3212-4d96-9b26-1f8fdb8abe38",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "body_sha256": "6dad1e1c94ec8dbb860ce09094c883042716b0964050d6b9b5712c79d3b1a387",
+      "host_message_sha256": "74657e2d083e3f0665a05471676858b876d5f13373345218efabae5c7f3d040e",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "현재 구독 화면 종합 UI 검토(현재 상태 감사): 키보드 접근성, 배치, 문구, 글꼴, 색상, 시각 디테일. 이번 응답은 검토 절차와 필요한 증거만 준비. 제품 파일 수정·브라우저·외부 서비스 실행 금지."
+      },
+      "tool_use_id": "toolu_01SmwcqqsN4JQFNzU3sbGBUC",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c249361510f955764b8cb1b8c245c2b9868cee312b2383dd2bafa0100b19a568"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin/skills/design/better-interface/audit-procedure.md"
+      },
+      "tool_use_id": "toolu_01TmPgKAq9krFxKiresXWcyk",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "5b4463f1eabc0cf6f36796c23165f8758d1da8384fbd5165817d158db3529999"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*"
+      },
+      "tool_use_id": "toolu_01EdRXEcNrkJDbXPxzW69efw",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "be0420be72de062fff68089ee081404f35d9f7ab77bed97385cc4c5c5ed82aca"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v3-20261014/candidate/marketplace/plugin/skills/design/better-interface/review-format.md"
+      },
+      "tool_use_id": "toolu_01SrZerS9dY2eJJWJivxYykL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "446c4013dca018615ebefa5d278e5c1c0c242cc37ee7a44adf9d24ea4010a173"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "$TRIAL/src/Panel.html"
+      },
+      "tool_use_id": "toolu_015d9vQk7vu9nkeFuai33pqw",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e239e8ffcc4522b54e25cef0dbb1459e078998ea946005857bd252b3e18a6a43"
+    }
+  ],
+  "user_only_loads_or_attempts": [],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "## 구독 화면 UI 검토 준비\n\n검토는 \"지금 보이는 화면\"을 기준으로 합니다. 이번에는 파일 읽기만 했습니다. 브라우저, 외부 서비스, 도메인 스킬 6개는 실행하지 않았고 제품 파일도 바꾸지 않았습니다. 그래서 확정된 결과는 아직 없고 판정도 내리지 않습니다.\n\n### 1. 범위와 기본 정보\n- **대상:** `src/Panel.html` 한 화면, 상태는 하나입니다. 소스에 빈 상태, 로딩, 오류 상태가 없어서 이 상태들은 검토했다고 하지 않겠습니다.\n- **구성:** 정적 HTML에 `<style>`이 직접 들어 있고 글꼴은 `system-ui`입니다. 디자인 토큰, 컴포넌트 라이브러리, 실행 명령, 테스트 명령은 없습니다. 개선안도 일반 HTML/CSS로 쓰겠습니다.\n- **프로젝트 문서:** `CLAUDE.md`, `CONTRIBUTING.md` 같은 규칙 문서나 디자인 문서는 없었습니다.\n- **언어:** `lang=\"en\"`이고 화면 문구도 영어라서 문구 검토도 영어 기준입니다.\n- **스테이징된 수정:** 같은 파일에 커밋 전 수정이 있지만 diff는 보지 않았습니다. 그 수정이 무엇을 바꿨는지 따지려면 `/paul-skills:interface-review staged`를 직접 실행하셔야 합니다.\n\n### 2. 절차\n1. 도메인 스킬을 다음 순서로 하나씩 엽니다: 접근성 → 배치 → 문구 → 글꼴 → 색상 → UI.\n2. 각 도메인의 규칙마다 셋 중 하나로 정리하고 다음 도메인으로 넘어갑니다: 확인한 증거, 문제점, 확인하지 못한 이유.\n3. 문제점은 표 하나로 합칩니다. 최대 15개이고, 반드시 막아야 하는 문제(HIGH)를 먼저 둡니다. 원인이 같으면 한 줄로 묶습니다.\n4. 실제로 화면을 띄워 확인한 내용을 적고, 마지막에 출시를 막을지(Block) 승인할지(Approve) 판정합니다.\n\n현재 도메인 6개는 모두 **대기** 상태입니다. \"문제 없음\"으로 처리한 도메인은 없습니다.\n\n### 3. 필요한 증거\n\n| 도메인 | 소스로 확인 가능 | 화면을 띄워야 확인 가능 |\n| --- | --- | --- |\n| 접근성 | 버튼의 접근 이름(`:4`), `type=\"button\"`, 44px 최소 크기, `:focus-visible` 규칙, 애니메이션 없음 | 실제 Tab 순서, Enter·Space·Esc 동작, 포커스 링이 보이는지, 접근성 트리 |\n| 배치 | 읽는 순서: 제목 → 닫기 버튼 → 본문 | 320px 폭과 200% 확대에서 잘리거나 겹치는지 |\n| 문구 | 탭 제목 \"Subscription settings\"와 화면 제목 \"Subscription\"의 차이, \"Your subscription is active.\" 다음에 할 일이 있는지 | \u2014 |\n| 글꼴 | `font:1rem/1.5 system-ui`, 버튼이 글꼴을 물려받는지 | 대상 플랫폼에서 실제로 쓰이는 글꼴과 줄 길이 |\n| 색상 | 측정할 값: 글자 `#111`과 배경 `#fff`, 포커스 외곽선 `#005fcc`와 `#fff`. 색만으로 상태를 전달하는지 | 실제 렌더링 색으로 대비 확인 |\n| UI | 16px 아이콘, 선 두께 기본값 | 44px 버튼 안에서 아이콘이 시각적으로 가운데인지, 브라우저 기본 버튼 스타일, hover·active 상태 |\n\n증거는 종류별로 따로 남기겠습니다.\n- 소스 위치(`path:line`)\n- 화면 폭별 스크린샷: 데스크톱, 320px, 200% 확대\n- 키보드로 직접 움직여 본 기록\n- 접근성 트리 스냅샷\n- 대비 측정값\n\n각 기록에는 리비전을 함께 적습니다. HEAD는 `7be7ff0`이고, 검토 대상은 스테이징된 수정이 반영된 작업 트리입니다.\n\n### 4. 소스에서 본 후보 (아직 확정 아님)\n- **닫기 버튼에 접근 이름이 없어 보입니다** (`src/Panel.html:4`). 텍스트도 `aria-label`도 없고, SVG는 `aria-hidden` 처리돼 있습니다. 접근성 검토에서 확인되면 HIGH 문제가 됩니다.\n- **화면 안에 닫을 대상이 없습니다.** 닫기 버튼의 목적과 위치는 배치·문구 검토에서 판단하겠습니다.\n- **제목 불일치와 다음 행동 안내**는 문구 검토에서 판단합니다. 심각도는 아직 매기지 않았습니다.\n\n### 5. 다음 단계\n화면을 띄워야 하는 항목은 모두 **확인 안 됨**입니다. 다음 단계에서 `design-browser`로 Playwright를 써서 파일을 `file://`로 열어 확인할지 허락해 주시면, 도메인 스킬 6개를 불러 검토를 진행하겠습니다.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "expected_skill_invoked_and_loaded": true,
+    "no_user_only_loads_or_attempts": true,
+    "no_change_review_redirect": true
+  },
+  "pass": true,
+  "duration_seconds": 111.668,
+  "duration_api_ms": 110040,
+  "usage": {
+    "input_tokens": 12,
+    "cache_creation_input_tokens": 20441,
+    "cache_read_input_tokens": 100038,
+    "output_tokens": 4618,
+    "output_tokens_details": {
+      "thinking_tokens": 2021
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 18807,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 474,
+        "cache_read_input_tokens": 22126,
+        "cache_creation_input_tokens": 413,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 413
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 24153,
+        "output_tokens": 3410,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 3146,
+        "cache_read_input_tokens": 22539,
+        "cache_creation_input_tokens": 1634,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1634,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 12,
+      "outputTokens": 4618,
+      "cacheReadInputTokens": 100038,
+      "cacheCreationInputTokens": 20441,
+      "webSearchRequests": 0,
+      "costUSD": 0.2710416,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 2021,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 24153,
+      "outputTokens": 3410,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 0.41203,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 0.6830716,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "714e79c1726def160625640dc9bd3b103208f945cbfb8f68b349906668b40e13",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "3da2f8163b41a3305ae6a73077ae79c3629fa3bb9d10542da3bc600b3d3d2226",
+    ".git/logs/refs/heads/feature/checkout": "a48b1e24cb1583235d6c418cf16095f06cae21b475629932c2d5c243546aa83e",
+    ".git/logs/refs/heads/main": "5c7778ac173b1646674777b2ef260bc79b345e84c65df279c5a2ed1152bd15db",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/79/a7e1ecec467a25cfb57a3005e8c6a9c687390d": "04182586c37f57a2db56265e9b5d962fb3fcb9857f4a2b7d445541e082ef0df5",
+    ".git/objects/7b/e7ff0ec2ec1642eddb401ebcb78fd851744b60": "3fe6187007c22d27b16a340dd10c032fe00419b10f05a03c26a5aa7674b9a4fc",
+    ".git/refs/heads/feature/checkout": "1d34215cdccf611d33a135e695fa07d5ed72f0ed123e143b1d90b3c4b29be39b",
+    ".git/refs/heads/main": "644bb45dd9b8b624e61db1859e88c5ccf88b730d0a7ea96597b5dd4880b71dc6",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "input_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "714e79c1726def160625640dc9bd3b103208f945cbfb8f68b349906668b40e13",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "3da2f8163b41a3305ae6a73077ae79c3629fa3bb9d10542da3bc600b3d3d2226",
+    ".git/logs/refs/heads/feature/checkout": "a48b1e24cb1583235d6c418cf16095f06cae21b475629932c2d5c243546aa83e",
+    ".git/logs/refs/heads/main": "5c7778ac173b1646674777b2ef260bc79b345e84c65df279c5a2ed1152bd15db",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/79/a7e1ecec467a25cfb57a3005e8c6a9c687390d": "04182586c37f57a2db56265e9b5d962fb3fcb9857f4a2b7d445541e082ef0df5",
+    ".git/objects/7b/e7ff0ec2ec1642eddb401ebcb78fd851744b60": "3fe6187007c22d27b16a340dd10c032fe00419b10f05a03c26a5aa7674b9a4fc",
+    ".git/refs/heads/feature/checkout": "1d34215cdccf611d33a135e695fa07d5ed72f0ed123e143b1d90b3c4b29be39b",
+    ".git/refs/heads/main": "644bb45dd9b8b624e61db1859e88c5ccf88b730d0a7ea96597b5dd4880b71dc6",
+    "src/Panel.html": "5c78db23457c0984b435ab1a8e1727cc323cb0df0c646f65a60fbd5864e7761f"
+  },
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 7,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "a3656ba92679b3571c4149d360cd0cb728a2e49b01cc3117beed8129a4609aea",
+  "transcript_sha256": "bab03565b260cc803528b7a0a9ee5291791178266d54576406144fa5bc4aa922",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

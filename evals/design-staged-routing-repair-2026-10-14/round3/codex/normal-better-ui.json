@@ -1,0 +1,69 @@
+{
+  "case_id": "normal-better-ui",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a139e6-a910-7a31-8758-0017c1f7843a",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재 입력이 없어 점검 결과는 확정할 수 없습니다.\n\n필요한 입력:\n\n- 대상 버튼·카드의 화면 캡처 또는 디자인 원본\n- 컴포넌트 파일 경로와 관련 스타일·토큰\n- 기본/hover/pressed/disabled/loading 상태 정의\n- 사용 중인 아이콘 라이브러리와 모션 라이브러리\n- 라이트·다크 모드 및 반응형 범위\n\n점검 순서:\n\n1. 중첩 면의 `외부 radius = 내부 radius + padding + border` 관계 확인\n2. 그림자가 elevation을, border가 구조·선택 상태를 표현하는지 확인\n3. 아이콘 크기·stroke와 텍스트 굵기, SVG 및 버튼 내부의 광학 정렬 확인\n4. hover가 hover 가능 포인터에만 적용되는지 확인\n5. pressed는 비활성 버튼을 제외하고 `scale(0.96)`, `150ms`, `ease-out`인지 확인\n6. `transition-all` 없이 실제 변경 속성만 전환하는지 확인\n7. 토글 상태에 keyframes를 쓰지 않는지, easing·duration이 일관적인지 확인\n8. reduced-motion 대체 피드백과 애니메이션 외 정적 상태 단서 확인\n\n구조와 문구는 변경 대상에서 제외합니다. 실제 파일이나 상태를 받기 전까지 모든 항목은 `Not verified`로 기록하고 승인 판정은 내리지 않습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "loaded_skills": [
+    "better-ui"
+  ],
+  "injected_skills": [],
+  "loaded_file_hashes": {
+    "better-ui": "0c3505fca708563d8f3256515742ab5749067525e7e60f77a0286dc212e0fd1d"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,240p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-ui/SKILL.md\"",
+      "exit_code": 0,
+      "output_sha256": "0c3505fca708563d8f3256515742ab5749067525e7e60f77a0286dc212e0fd1d"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45589,
+      "cached_input_tokens": 39936,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 695,
+      "reasoning_output_tokens": 172
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "a55868be23f079eb802a839a2c0b07998c1efb2804d27596d4031b9ca7d5ac92",
+  "cases_sha256": "f5c66ed8208e0e91e7bb6a8e86e2b5cbd28b7dd2e09d4a3480d939770878f929",
+  "bundle_manifest_sha256": "2d275b13bc80e9f4e713556e105f7ffed97e051140945783a07bf690ec0f88ed",
+  "stream_sha256": "de227a959d3b7607060f7fd314ce4f85412362268d4428e9c0e4d90ceea1dc05",
+  "transcript_sha256": "a56c08b38b0b0289c0f118cd428dc5e56171d72c9a82da50d888a85ac9129cd0",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 18.065
+}

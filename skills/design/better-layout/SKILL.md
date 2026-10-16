@@ -1,11 +1,15 @@
 ---
 name: better-layout
-description: Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored.
+description: "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state work and requested fixes, or after an authorized review handoff. Change attribution belongs to better-interface first."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
 
 # Layout
+
+## Review entry
+
+For a review of what UI changes introduced or regressed, call the Skill tool with "better-interface" before inspecting files or applying this domain. Without a Skill tool, read its installed SKILL.md. It owns the route and decides whether this task ends with an explicit command. Continue here when its authorized review handoff supplies the scope. Current-screen audits and requested fixes use this domain directly.
 
 This skill sets grouping, alignment, spacing and responsive structure. It then stress-tests that structure by resizing it, translating it and mirroring it for RTL.
 
@@ -35,9 +39,11 @@ Write direction-dependent layout as leading and trailing: `margin-inline-start`,
 
 The most important content sits near the top and the leading edge. Within a row, identifying content leads and metadata and actions trail. Visual order matches DOM order, so never move content out of source sequence with `order`, `row-reverse` or grid placement. See [grouping-and-alignment.md](grouping-and-alignment.md#order-by-importance).
 
-## One primary action per view
+## Make the task hierarchy clear
 
-Give each view one primary action. Put secondary actions behind a menu once there are more than 3. Prefer a short view that links deeper over one long view that shows everything at the top level. `better-colors` owns how color marks the primary action.
+Make the next action prominent when the screen's purpose calls for one. Choose visible and disclosed actions by task, frequency, state and comparison needs, rather than a fixed action count. Preserve frequently used controls and information needed to decide; a dense work surface can need several visible actions. Reading and gallery surfaces need a clear content hierarchy without an invented conversion action. `better-colors` owns how color marks the primary action.
+
+For first-impression or three-second checks, competing emphasis, or a request to simplify screen hierarchy, read [first-impression.md](first-impression.md) in full before judging or proposing changes. It defines intent, observation methods and preservation checks. Ordinary spacing fixes need it only when they affect that hierarchy.
 
 ## Hint at hidden content
 

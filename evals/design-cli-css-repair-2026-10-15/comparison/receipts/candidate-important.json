@@ -1,0 +1,231 @@
+{
+  "completed": true,
+  "actual_model": "claude-opus-5-5",
+  "host_version": "2.1.300",
+  "usage": {
+    "input_tokens": 8,
+    "cache_creation_input_tokens": 18297,
+    "cache_read_input_tokens": 66328,
+    "output_tokens": 2742,
+    "output_tokens_details": {
+      "thinking_tokens": 351
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 18297,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 1952,
+        "cache_read_input_tokens": 23156,
+        "cache_creation_input_tokens": 2536,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2536
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 8,
+      "outputTokens": 2742,
+      "cacheReadInputTokens": 66328,
+      "cacheCreationInputTokens": 18297,
+      "webSearchRequests": 0,
+      "costUSD": 0.21451360000000003,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 351,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "plugin_version": "0.4.4",
+  "plugin_path_matches": true,
+  "explicit_entry_command_recorded": true,
+  "primary_body_visibility": "native command expansion receipt; full injected body is not exposed by stream",
+  "launched_skills": [
+    {
+      "name": "better-layout",
+      "result_event": 16
+    }
+  ],
+  "fully_read_owner_files": [],
+  "audit_procedure_fully_read": false,
+  "first_impression_fully_read": true,
+  "first_artifact_read_event": 2,
+  "all_six_owners_before_artifact": false,
+  "tool_calls": [
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/BRIEF.md"
+      },
+      "call_event": 2,
+      "result_event": 3,
+      "successful": true,
+      "result_sha256": "8d34a1ca9918918f373ee975e96a68b620ff589e8a1e16b2ad147aa8662deb31",
+      "line_numbers": [
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/index.html"
+      },
+      "call_event": 4,
+      "result_event": 5,
+      "successful": true,
+      "result_sha256": "e97af1f4d14ff3c1377340798edef6f9f2e2daaa05782fe242948257568030e7",
+      "line_numbers": [
+        1,
+        2
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/capture.json"
+      },
+      "call_event": 6,
+      "result_event": 8,
+      "successful": true,
+      "result_sha256": "34bec17b7dada83d9d9ae2dc4a68d0a8c04c56d7f04e941b2e5209f9ba939d71",
+      "line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8
+      ]
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "FIXTURE/screen.png"
+      },
+      "call_event": 7,
+      "result_event": 9,
+      "successful": true,
+      "result_sha256": "338ec131e5caf000369dede06b07010ebeee6e354c418a81884a8faa19e492e9",
+      "line_numbers": []
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-layout",
+        "args": "First-impression (3-second) review of S06 gallery r1-important, index.html + screen.png (1040x800 capture). Intent: gallery announcing works and browse entry points; no primary CTA. Allowed observation: static screenshot and source only; no browser, no participants. No file edits."
+      },
+      "call_event": 15,
+      "result_event": 16,
+      "successful": true,
+      "result_sha256": "db727b1196c607215586b181e76c1a012831510f364459202e300e304ad456a1"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "PLUGIN/skills/design/better-layout/first-impression.md"
+      },
+      "call_event": 18,
+      "result_event": 19,
+      "successful": true,
+      "result_sha256": "c56eca36777c94ebfbb8b57d40fee419144fb67e75dc3987804b9747db527d52",
+      "line_numbers": [
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9,
+        10,
+        11,
+        12,
+        13,
+        14,
+        15,
+        16,
+        17,
+        18,
+        19,
+        20,
+        21,
+        22,
+        23,
+        24,
+        25,
+        26,
+        27,
+        28,
+        29,
+        30,
+        31,
+        32,
+        33,
+        34,
+        35,
+        36,
+        37,
+        38,
+        39,
+        40,
+        41,
+        42,
+        43,
+        44,
+        45,
+        46,
+        47,
+        48,
+        49,
+        50,
+        51
+      ]
+    }
+  ],
+  "host": "claude",
+  "arm": "candidate",
+  "case_id": "important",
+  "session_id": "48c99835-0df7-4d2e-a7c6-270124f98e78",
+  "exit_code": 0,
+  "timed_out": false,
+  "duration_seconds": 47.286,
+  "cost_usd": 0.21451360000000003,
+  "files_before": {
+    "BRIEF.md": "d2caf1879fd2c35f24bb9df1218aee63cf5c32c9ebef3c812588baecb9318fee",
+    "capture.json": "9f5486c10af552765e8ffdb80ced9eed7403de39bc5133327fcdbdca22d05d0b",
+    "index.html": "b96affc3da062a7ff97d75c8a95667fb8a8f08d0b70cee8f6ac68970da79464d",
+    "screen.png": "d37a5d27b6a0a0da3786db5bd571b8dd29a97569b910822836d3901da3fc14b5"
+  },
+  "files_after": {
+    "BRIEF.md": "d2caf1879fd2c35f24bb9df1218aee63cf5c32c9ebef3c812588baecb9318fee",
+    "capture.json": "9f5486c10af552765e8ffdb80ced9eed7403de39bc5133327fcdbdca22d05d0b",
+    "index.html": "b96affc3da062a7ff97d75c8a95667fb8a8f08d0b70cee8f6ac68970da79464d",
+    "screen.png": "d37a5d27b6a0a0da3786db5bd571b8dd29a97569b910822836d3901da3fc14b5"
+  },
+  "freeze_sha256": "6e7e855d5e01826dc7c1c59ea0207f30bca3e5f82243936591701032b9b452eb",
+  "inputs_unchanged": true,
+  "raw_events_sha256": "e60b689c79de8575e9d3b09bfa0b47891b8657853a4e05d7bc3c413c49dfbbf3",
+  "response": "comparison/responses/candidate-important.md",
+  "response_sha256": "09f3ea8ad8cc4bcd9248b9a544a324cee7044bfa97d9d32e4a3254381ca79e3b"
+}

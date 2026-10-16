@@ -1,0 +1,100 @@
+{
+  "case_id": "explicit-owner-2",
+  "arm": "candidate",
+  "mode": "explicit",
+  "session_id": "01a13a77-07f6-7512-af78-345549cfb047",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_host_injected": true,
+    "no_unauthorized_user_only_loads": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "$paul-skills:interface-review working 범위의 UI 변경을 검토하려고 해. 이번에는 실제 diff를 읽지 말고 필요한 입력, 기존 결함과 새 회귀를 나누는 방식, 완료 조건만 짧게 설명해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "### 필요한 입력\n\n- 대상: `working`\n- 실행 시점의 `HEAD` 전체 SHA\n- `HEAD` 대비 추적 파일의 순변경과 untracked 파일 목록\n- 변경 의도: PR/이슈/커밋 메시지 또는 짧은 목적 설명\n- 제외할 생성물·lockfile·snapshot 목록\n- 렌더링 검증 허용 여부 \u2014 이번 요청에서는 허용하지 않음\n\n### 결함 분류\n\n- `Introduced`: 이번 변경이 새로 만든 문제\n- `Regression`: 이전에는 정상이었지만 이번 변경으로 약화된 문제\n- `Pre-existing`: 변경 전부터 있었고 이번 변경이 악화하지 않은 문제\n\n판정할 때 diff의 추가·삭제 양쪽과 대체 구현을 확인하고, 필요하면 기준 시점 blame으로 원인을 구분합니다. `Pre-existing`은 최대 3개만 별도 참고로 기록하며 변경 승인 판정에는 포함하지 않습니다.\n\n### 완료 조건\n\n- `HEAD → working tree` 전체 diff와 untracked 파일을 빠짐없이 검토\n- 제외 파일과 영향을 받는 화면을 명시하고, 직접 소비자를 기본 1단계·최대 5개까지 추적\n- 접근성·레이아웃·문구·타이포그래피·색상·UI 영역별 검토 범위를 표시\n- 모든 발견에 상태, 근거, 위치, 심각도를 부여\n- 판정은 `Introduced`와 `Regression`만으로 결정\n- 실행하지 않은 시각·런타임 검증은 `Not verified`로 표시\n\n현재는 diff와 파일을 읽지 않았으므로 확인된 UI 결함이나 승인 판정은 없습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Keyboard, focus and accessible semantics. Excludes change/regression reviews. Revi",
+    "better-colors": "Palettes, color tokens and contrast. Excludes change/regression reviews. Helps yo",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. R",
+    "better-layout": "Responsive layout and reading order. Excludes change/regression reviews. Helps wi",
+    "better-typography": "Typography, fonts and text wrapping. Excludes change/regression reviews. Sets and",
+    "better-ui": "Surfaces, icons and animation. Excludes change/regression reviews. Polishes the s",
+    "better-writing": "Interface copy and error messages. Excludes change/regression reviews. Writes an",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame o",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendere",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mappin",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implement",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Ma"
+  },
+  "loaded_skills": [
+    "better-interface",
+    "interface-review"
+  ],
+  "injected_skills": [
+    {
+      "name": "interface-review",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "full_body_equal": true
+    }
+  ],
+  "native_trace_loads": {
+    "better-interface": {
+      "call_id": "call_80cc53c278f047b19cac4e872abab0bd",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "output_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "full_body_equal": true
+    }
+  },
+  "loaded_file_hashes": {
+    "better-interface": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+    "interface-review": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf"
+  },
+  "commands": [
+    {
+      "command": "/bin/zsh -lc \"sed -n '1,260p' $EXPERIMENT/candidate/codex-home/plugins/cache/paul-staged-trial/paul-skills/0.4.1/skills/design/better-interface/SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 50507,
+      "cached_input_tokens": 45056,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 959,
+      "reasoning_output_tokens": 368
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "ede9064815e4d3dc5ae77d6b66280118a80f346b9579bbf0d83cf157faa08102",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "d14bb4cee1e9be7af089b25f0fba6264810b80c249627816ca98e92f27a29d21",
+  "stream_sha256": "f10f2f3ca71f5260ddcddc0d2d18f6e6eb1df060e519aa5c0598e4dfc2b76d6f",
+  "transcript_sha256": "22014f71716ce408d04456be0c44f8eb5817454b0bb046c1ce9f8c3ab1bb0720",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 32.96
+}

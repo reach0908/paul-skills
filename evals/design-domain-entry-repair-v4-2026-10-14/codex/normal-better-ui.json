@@ -1,0 +1,88 @@
+{
+  "case_id": "normal-better-ui",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a88-54e2-7453-9173-35748e9be741",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "지금 버튼과 카드의 시각적 마무리를 점검하려고 해. 중첩 radius, 그림자, 아이콘 광학 정렬, hover/pressed 상태와 애니메이션 easing·duration이 대상이야. 구조나 문구는 유지해. 필요한 입력과 구체적인 점검 순서를 짧게 정리해줘.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "현재 제품 입력이 없어 확인된 결과는 없습니다. 구조·문구는 고정하고 시각적 마무리만 점검합니다.\n\n필요한 입력:\n\n- 대상 화면/컴포넌트와 상태별 캡처: default, hover, pressed, disabled\n- 버튼·카드 구현 파일 및 관련 스타일·토큰\n- 사용 중인 아이콘 라이브러리와 모션 규칙\n- 기준 디자인 또는 의도된 elevation 정보\n\n점검 순서:\n\n1. 중첩 radius: 균일한 inset이면 `외부 radius = 내부 radius + padding + border`.\n2. 그림자: 구조용 border와 elevation용 shadow를 구분하고 상태 변화 시 크기 이동 확인.\n3. 아이콘: 텍스트 굵기와 stroke, 시각적 중심, 아이콘 쪽 padding을 확인.\n4. 상태: hover는 hover 가능 포인터에만 적용하고, pressed는 비활성 상태에서 제외.\n5. 모션: 변경 속성만 transition하며 `transition-all`과 상태용 keyframe은 피함.\n6. 기준값: pressed는 `scale(0.96)`, `150ms`, `ease-out`; 고빈도 hover는 즉시 또는 `150ms` 이하.\n7. 접근성 경계: 모션 외에도 정적 상태 단서를 유지하고 reduced-motion 대체 상태를 명시.\n\n산출물은 위치별 `Before / After / 이유 / 검증 여부` 표로 정리하며, 제공되지 않은 상태는 `미검증`으로 표시합니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state wor",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state wor",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and reque",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-st",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "better-ui"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "better-ui": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 45498,
+      "cached_input_tokens": 40960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 664,
+      "reasoning_output_tokens": 156
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "stream_sha256": "05f8508cd4bc4f352a5c7c8640bd323a2861337e2cdcbf9dff04b04d77c81b93",
+  "transcript_sha256": "bbd0815ab314cfb3a9d57ff00ab81e7ea805c39983277a043b5fc2b28494ee2c",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 25.436
+}

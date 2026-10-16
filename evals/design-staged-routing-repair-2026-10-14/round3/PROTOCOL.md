@@ -1,0 +1,7 @@
+# Candidate 3: prohibit repository work in the route-read call
+
+Candidate 2 passed the three original staged prompts but failed the typography/color variant: Codex combined the router read, memory lookup and Git status/diff queries in one call. Its final invocation was correct, but the premature inspection remains a failure. Preserve all nineteen cases per host and their source snapshot.
+
+Candidate 3 puts the prohibition on batched Git inspection in the discovery description and at the beginning of the router body. Other skill bodies, domain rules, host configuration and fixture stay fixed. Run all nineteen prior cases plus two additional repetitions of the failed typography/color prompt, in fresh native sessions for each host. Do not select the best answer or erase earlier attempts. This is an adaptive repair confirmation, not an independent held-out reliability estimate.
+
+Use the prior tools, six-minute per-case timeout, concurrency two per host and privacy rules. Allow up to fifteen dollars of reported Claude list cost for this twenty-one-case batch. Grade source loading, invocation order, no unauthorized inspection, normal domain entry and the authorized real-diff handoff separately from substantive design quality. The requested normal outputs are preparation-only and do not prove all seventeen roles' implementation quality. Only this frozen candidate supports the final-source conclusion.

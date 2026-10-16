@@ -92,22 +92,22 @@ Use this route once the product intent is known. Enter at the first unsettled st
 | Organize agreed content and findability | **`/information-architecture`** for destinations, labels and navigation |
 | Specify task actions, outcomes, interruption or recovery | **`/user-flow`** for the transition contract, including exit and return |
 | Decide screen hierarchy and responsive action placement | **`/wireframe`** for local interactive screens plus Markdown |
-| Implement an approved prototype, screen specification or image | **`/build-design`** for source-to-code mapping and comparison |
+| Implement an approved prototype, screen specification or image | **`/build-design`** for reference-to-export mapping, preserved behavior and matching-state comparison |
 | Work on the reachable states of one existing component | Ask the user to invoke **`/state-machine`** for a removable state workbench |
 | Observe one component under plausible hostile content | Ask the user to invoke **`/break`** for a single-look stress page |
 | Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |
 | Choose among visual directions for one component | Ask the user to invoke **`/variant`** for a comparison in its real page |
 | Review a screen or flow across disciplines | **`/better-interface`**, which loads all six domain owners and consolidates one report |
-| Review what a branch, PR, staged or uncommitted change caused | **`better-interface`** is the automatic routing entry; ask the user to invoke **`/interface-review`** with their target before inspecting files. That explicit invocation owns scope and classification, then composes `better-interface` |
+| Review what a branch, PR, staged or uncommitted change caused | **`better-interface`** is the first and only automatic entry, even when the request names specific UI domains; ask the user to invoke **`/interface-review`** with their target before inspecting files. That explicit invocation owns scope and classification, then composes `better-interface` |
 | Keyboard, focus, semantics, names or announcements | **`/better-accessibility`** |
 | Grouping, spacing, reading order, responsive structure or RTL | **`/better-layout`** |
 | Labels, errors, empty states, confirmations or product vocabulary | **`/better-writing`** |
 | Type scale, wrapping, truncation, font behavior or text selection | **`/better-typography`** |
 | Palettes, semantic color tokens or contrast measurement | **`/better-colors`** |
 | Surfaces, icon states, optical details or motion | **`/better-ui`** |
-| Browser observations for a review or comparison | **`/design-browser`**, which uses Playwright CLI for development checks and Aside for research or general browsing, unless the user specifies a tool |
+| Browser observations for a review or comparison | **`/design-browser`** for readiness checks, observations and a resume record when blocked; Playwright CLI for development checks and Aside for research or general browsing, unless the user specifies a tool |
 
-The planning chain is `information-architecture → user-flow → wireframe → build-design`. Pass source revisions, stable destination/state IDs and unresolved decisions forward; continue only through the steps the user requested. Product flow planning uses `user-flow` directly and does not authorize loading the `state-machine` workbench. Broader throwaway UI or logic questions belong to `prototype`.
+The planning chain is `information-architecture → user-flow → wireframe → build-design`. Pass source revisions, stable destination/state IDs and unresolved decisions forward; continue only through the steps the user requested. Product flow planning uses `user-flow` directly and does not authorize loading the `state-machine` workbench. Broader throwaway UI or logic questions belong to `prototype`, which reuses the approved brief and baseline, fixes the conditions each alternative must preserve, and varies the unresolved question. `better-writing` handles a substantive copy pass within that scope.
 
 `state-machine`, `break`, `explain-interface`, `variant` and `interface-review` are user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
 

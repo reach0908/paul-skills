@@ -1,0 +1,20 @@
+{
+  "package_tests": 38,
+  "package_result": "pass",
+  "grader_controls": 34,
+  "grader_result": "pass",
+  "strict_plugin_validation": "pass with full versioned skills tree",
+  "source_skill_files_equal_evaluated_candidate": 174,
+  "private_publication_scan": {
+    "files": 651,
+    "bytes": 7258108,
+    "credential_or_private_root_hits": 0
+  },
+  "setup_attempt": {
+    "manifest_only_archive_validation": "failed because the archive omitted all 44 skill directories",
+    "complete_archive_validation": "pass",
+    "source_modified": false
+  },
+  "grader_amendment": "8 narrow Git expected-result controls added after preserved first grading",
+  "released_package_check": "38 tests pass on 0.4.2"
+}

@@ -1,0 +1,189 @@
+{
+  "reviewer": "maintainer agent; manual response review, not blind independent evaluation",
+  "codex": {
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "59d3c45a341e3676277bfa3c7125eadf074a3396fad63e605f6202bf3a209389",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "dbc065312ab4b76bf1e06ff0ab5cfad6fa75d5b2f429ab4985043fd677588839",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "13f2cb382b0950733d7bac9ed1ec33c06fb3a909bf431cb45d5853850ed87135",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "21fe3dedda722a7f745415a617756eb0fcc64c99b6db96d9de6bf2567b163c24",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "aa1373d8aaacd417fb495d70c4021c9d2ac8f47b0c04112f71dd23be38837da5",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "8d0c4006cb28bba99094135b2683dae101b1657365cbd541a4ae4f93e5367ce4",
+      "reason": "Defines working against current HEAD, net staged plus unstaged and untracked; no merge-base or prior committed changes. Preparation is clearly distinct from execution."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "aa4f9c1ecfe4ff26c469ba2f94c23d598f4898f0cd83844877f127c2270e08f3",
+      "reason": "Current-screen six-domain audit with concrete evidence and unverified limitations; no change-review redirect.",
+      "no_change_review_redirect": true
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "cad722fe32196c75f70b6c0059be40bd034fd466951ca7af5ff9a8c985a201af",
+      "reason": "Keyboard open/close, focus restoration, accessible names, errors, zoom/reflow and reduced motion are actionable preparation without invented results."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "925064164c427704f5ab704ba1f2afe0ec58fde49c8983e149758e1aeff898ef",
+      "reason": "Prioritizes task/DOM order at 320px, actual long German strings and overflow evidence; excludes color/font redesign."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "b9af824db09ec0e2b512fecc0c040af9fdb009bf824c17091feffb970168f98c",
+      "reason": "Concrete Korean labels and recovery text with assumptions and alternatives; no invented product behavior."
+    },
+    "normal-better-colors": {
+      "pass": false,
+      "response_sha256": "7a400ca68f211981c948027e4656427b027e9b55a2a9ec6e40eef0c0f41b97fa",
+      "reason": "The response correctly plans actual rendered-pair measurements but also says declared values alone can verify transparent/gradient/image colors. That contradictory clause is inaccurate and fails response clarity; no executed contrast result was fabricated. Retain this as an output-quality failure, not evidence of a proven source regression."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "71d9a5e55d80aaffc03e0a289efae3a46e0740e63e1dbc817a543596bbcf4b9b",
+      "reason": "Addresses real Korean wrapping, type hierarchy, line-height, tabular digits, and accessible truncation with explicit unverified status."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "3441a9443726403464c5959660926ea5d501742e9bc73e6d517418a3fdd04cb2",
+      "reason": "Concrete radius, shadows, optical alignment, states and motion plan; preserves structure/copy and identifies absent inputs."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "577e99a80a23dab1fd7a92366fa5364cae1ef720bdae873acaae78360450dce9",
+      "reason": "Defines destination IDs, shared article identity and return context; leaves search and topic granularity as unresolved inputs without drifting into visual design."
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "response_sha256": "5193bde1dd02449eaad2259ca8f19efe729095e659ab85b73d5591ef52404488",
+      "reason": "Uses current HEAD and net working changes; identifies the removed accessible name as a HIGH Regression with static before/after evidence and correct runtime limitations. All six owners were loaded before exclusions."
+    },
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "e170588555b636df0a6c04686c70535fd4860310cfe4b7f6e47203ed834ad92b",
+      "reason": "Reads the complete released contrast reference. Correctly fails active placeholder/read-only 2.8:1, treats disabled text as exempt rather than pass, and keeps APCA separate without deriving a measurement."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "cbf6d73736991dfd32ee8a105721068a045c90bf91b5c0a3fd287fd0b8afb255",
+      "reason": "Uses HEAD versus index, explicitly excludes unstaged restoration and untracked New.html, and identifies only the staged accessible-name regression. All owners and procedure are actually loaded."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "22a012c0d5eac00334b3d9676cf330425625203f131a2c49e41fc418e4ee6b14",
+      "reason": "Correctly excludes Panel.html because staged and unstaged cancel against HEAD; includes only untracked New.html and classifies its unnamed button as Introduced, not the restored regression. No browser results invented."
+    }
+  },
+  "cases": {
+    "staged-1": {
+      "pass": true,
+      "response_sha256": "14ba1f599963a22cde66602f4b70d091cc7c0b534f2d46f7d67b48c9f9626b47",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "staged-type-color": {
+      "pass": true,
+      "response_sha256": "2233108ed91eacdb73ab24687bc7ba8aee2424ff4f05d853f7d5f903c440fb9a",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "staged-copy-motion": {
+      "pass": true,
+      "response_sha256": "dd4345aab24c1b446eacbd4bfc8566236a82038780e094ff64b2e51c2c6b8c16",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "working": {
+      "pass": true,
+      "response_sha256": "5dbda8093c4f43c2f056eb98746c51c9ba2bdeecdcc5cfaef8f6184304640d67",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "explicit-router": {
+      "pass": true,
+      "response_sha256": "4f20fabd5e1e1acd049f7a411e79bd11a2656c5f01b8b5e1c40a767f3c730787",
+      "reason": "Correct target-specific explicit handoff; no review findings or unperformed verification claimed."
+    },
+    "explicit-owner": {
+      "pass": true,
+      "response_sha256": "ba07517e0c2d4d1bb51675fc4eb8e92709b9517fd7ba2c76ef2e04572bbc2a64",
+      "reason": "Defines working against current HEAD, net staged plus unstaged and untracked; no merge-base or prior committed changes. Preparation is clearly distinct from execution."
+    },
+    "current-audit": {
+      "pass": true,
+      "response_sha256": "6f752b400058a4547057319c9fd549340d646a7e79f096a43eb81d17677d8d3a",
+      "reason": "Completes a six-domain current-screen plan with source observations and unverified runtime boundaries. The final staged command is optional explanatory context, not a blocking redirect or replacement of the requested audit.",
+      "no_change_review_redirect": true
+    },
+    "normal-better-accessibility": {
+      "pass": true,
+      "response_sha256": "3b789dff5686c6d8d6a787c37708d913d74fe8aabd6bfe68fcb07e37c3fd79b3",
+      "reason": "Covers keyboard, initial/restored focus, accessible names, error announcements, zoom and reduced motion. Identifies missing sources and separates static from browser evidence."
+    },
+    "normal-better-colors": {
+      "pass": true,
+      "response_sha256": "96230a8c59b24ccbe83bbbe5cb6e84f28e75696d28901b6fcdc8cfd3e0fc3eae",
+      "reason": "Separates declared-token calculations from rendered opacity/image backgrounds; active placeholder uses text ratio, WCAG and APCA are distinct. No measured values fabricated."
+    },
+    "normal-better-layout": {
+      "pass": true,
+      "response_sha256": "3742fa446b1a550b82a1b98ef360ebd23c9e18d30a06d3c2095eefe071ac720d",
+      "reason": "Prioritizes DOM/content order and actual long German labels at narrow widths; browser outcomes stay unverified and colors/fonts are excluded."
+    },
+    "normal-better-writing": {
+      "pass": true,
+      "response_sha256": "40951a42a4d93d48011219ded79ea47c0060b51ccaf07d43ce50c9835ceb560e",
+      "reason": "Specific Korean labels, recovery and empty-state alternatives tied to explicit assumptions; payment/permission branches handled without claiming product facts."
+    },
+    "normal-better-typography": {
+      "pass": true,
+      "response_sha256": "002c9886e3a9fe31f2e482dde4f809ea22f66b6ce1999e2c5862515873af7217",
+      "reason": "Correctly prepares Korean-specific line length and wrapping, type hierarchy, numeric alignment and truncation; no actual render outcomes claimed."
+    },
+    "normal-better-ui": {
+      "pass": true,
+      "response_sha256": "9d40fcb64cdbd1a3b0b50575b838375ef1d3482da9e5b3f02481a45e789144d1",
+      "reason": "Uses concrete surface/icon/state/motion criteria and existing-token inputs, respecting the requested structure/copy boundary and unverified state."
+    },
+    "normal-ia": {
+      "pass": true,
+      "response_sha256": "b15f1816ad587c2028d6a48830c90b115c7cca2e3bec890d9d397e28b96e8ba9",
+      "reason": "Maintains stable destinations, shared detail identity, entry-context return and task coverage. Open topic/search/auth decisions remain explicit draft inputs; no visual design or user-testing outcome claimed."
+    },
+    "staged-divergent": {
+      "pass": true,
+      "response_sha256": "892fa726625ce6fedb77004430151216c2c345eaff4dc54bdb8bdf5dac488115",
+      "reason": "Reviews HEAD against the index, excludes unstaged restoration and unread untracked file, reports the accessible-name regression, and separates pre-existing issues and unverified browser outcomes. All six domain owners are loaded."
+    },
+    "authorized-handoff": {
+      "pass": true,
+      "response_sha256": "03239f488dccf4b55e449ade416ae892f3de67fe5804006caee98751c1f64545",
+      "reason": "Correct current HEAD working scope; accessible-name deletion is a HIGH regression. All six owner bodies and procedure were loaded; no file mutations or runtime confirmation claimed."
+    },
+    "normal-better-colors-thresholds": {
+      "pass": true,
+      "response_sha256": "caa799f1f2c1b9f3e4dc6c3daaa024c8e54048f873142d71ee31f9b94066fde7",
+      "reason": "Full released contrast reference was read. Active placeholder and read-only 2.8:1 fail the text threshold; truly disabled controls are exempt; APCA does not replace WCAG. Supplied measurements and actual runtime verification remain distinct."
+    },
+    "working-divergent": {
+      "pass": true,
+      "response_sha256": "8522cbf1b6369e0b9e8937cefb301fbe40bca387cbd4c0e21a15b99bb19dbce0",
+      "reason": "Includes only untracked New.html in HEAD-net working scope and classifies introduced name/icon issues. Restored Panel.html is excluded from findings; index warning is correctly separate. Six domain owners and procedure loaded, runtime limits explicit."
+    }
+  }
+}

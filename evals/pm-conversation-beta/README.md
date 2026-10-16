@@ -15,3 +15,11 @@ See SOURCE-REVIEW.md for source identity/adaptation and RESULTS.md for actual ru
 - `$problem-discovery`: recover missing product context without starting a second interview.
 
 These are unnamespaced individual betas alongside the promoted Paul plugin. They are not included in that plugin's skill list. `ask-matt` in the development branch includes their optional map; a released plugin router updates only when a release containing that map is installed.
+
+## Public evidence copies
+
+The observations and judgments describe the original 2026-10-14 runs. Eight public artifact copies now replace only the author home-directory prefix with `$HOME`; all failures, actions and timings remain. `public-copy.json` records the original commit, original/public file hashes and ten replacements. `integrity.original.json` preserves the original manifest. Embedded freeze manifests still describe those original bytes; use the ledger to locate the corresponding public copy. Original bytes remain recoverable at the recorded Git revision.
+
+The same ledger records the verifier as a separate maintenance amendment because it was included in the original artifact manifest. This amendment validates public copies; it is not a new observation or an edit to the historical verdicts.
+
+Run `PYTHONDONTWRITEBYTECODE=1 python3 evals/pm-conversation-beta/verify.py` to check the public artifacts, ledger and five evaluated skill trees. This is integrity evidence, not a new behavior trial or approval to promote the beta. The earlier three-skill trial is verified separately through its recorded snapshots.

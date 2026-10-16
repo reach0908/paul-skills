@@ -1,0 +1,90 @@
+{
+  "codex": {
+    "normal-better-colors": {
+      "session_id": "01a13ab6-e536-7791-8e91-0a07d0bc6453",
+      "completed_full_reads": {
+        "color-formats.md": {
+          "source_sha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba",
+          "full_body_equal": true,
+          "command_sha256": "5cfc78fbd2fe69cca23907a2ae13a35f4f9c117e861d17f0ccc8cc9a39fb0883",
+          "output_sha256": "6c5d7f243dde1c2604c35f40a7668bc20ff8b79249fa52633ac4f1be02fa73ba"
+        },
+        "color-usage.md": {
+          "source_sha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773",
+          "full_body_equal": true,
+          "command_sha256": "c0f68646eeaaa4b3be7da5d4ba80436fc6219271be1911e92f6f0022f69c908d",
+          "output_sha256": "02ee247c8782d256a0841c154aee5decb456966f0f7db8701bef37ed4694e773"
+        },
+        "contrast.md": {
+          "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+          "full_body_equal": true,
+          "command_sha256": "e5cb2c510c7c2185de15a83e1a32ae475b6588b9b26a5917a7ceab4e04ba7e7e",
+          "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+        },
+        "palette-generation.md": {
+          "source_sha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5",
+          "full_body_equal": true,
+          "command_sha256": "0cb60a11b54a2986ac6c032ac2d4324cddb65cbb80bf7985a8f1676df277775d",
+          "output_sha256": "0b50caa5e77085d1d762bb3d362c552103ebbf5ca5ad297b364f8172441c72a5"
+        },
+        "palette-structure.md": {
+          "source_sha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+          "full_body_equal": true,
+          "command_sha256": "614d2611aac095c265359ee7e3dc194a756d6466e0a88c4427bfc6a297dbad7b",
+          "output_sha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62"
+        },
+        "token-naming.md": {
+          "source_sha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a",
+          "full_body_equal": true,
+          "command_sha256": "18d42e75e51ed903e74a4219c48276a1a345d4933bb8e9ac10c8d958c1a3f64b",
+          "output_sha256": "2cc8c435a37cff3d4320076953431572fa77a6f58aaf88ff62381d2cdcfd022a"
+        }
+      },
+      "count": 6
+    },
+    "normal-better-colors-thresholds": {
+      "session_id": "01a13abb-d540-7220-bb0a-ecfd9b8d70fe",
+      "completed_full_reads": {
+        "contrast.md": {
+          "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+          "full_body_equal": true,
+          "command_sha256": "f09d09d307650f2d2eb995624127c7079670158bbe526c0983f453cdd7bb8a67",
+          "output_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4"
+        }
+      },
+      "count": 1
+    }
+  },
+  "claude": {
+    "normal-better-colors": {
+      "session_id": "2d9447eb-77d5-45ab-8c23-94db20de4b3c",
+      "completed_full_reads": {
+        "contrast.md": {
+          "tool_use_id": "toolu_01VsuPqa972tuQEZetRWhaRh",
+          "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+          "full_body_equal": true,
+          "output_sha256": "3ea944e7e7478ea289c62667fa1c49d2ec0f913f43872ba461cfb65b34fb33ff"
+        },
+        "palette-structure.md": {
+          "tool_use_id": "toolu_01VNrZrPqo4pemrdWZ5rTS2Q",
+          "source_sha256": "bba9cd296c1e4ee613420b32023b8ce1a1bb45d1340e99e906cee37413d3dd62",
+          "full_body_equal": true,
+          "output_sha256": "cf959c2ce19f0876cbb69af0327d8756a01acde3956fabb83ec77bb4e3265155"
+        }
+      },
+      "count": 2
+    },
+    "normal-better-colors-thresholds": {
+      "session_id": "000d60b5-be5d-4740-8d06-5378aa9613bb",
+      "completed_full_reads": {
+        "contrast.md": {
+          "tool_use_id": "toolu_011BLM8fuNmgtBA1aYgNRgit",
+          "source_sha256": "9960e63d0b545f331c2582ff0c9b67bbf19ff5f29d8a159100112ada98e67ea4",
+          "full_body_equal": true,
+          "output_sha256": "3ea944e7e7478ea289c62667fa1c49d2ec0f913f43872ba461cfb65b34fb33ff"
+        }
+      },
+      "count": 1
+    }
+  }
+}

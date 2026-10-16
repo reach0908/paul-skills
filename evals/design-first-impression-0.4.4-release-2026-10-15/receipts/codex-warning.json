@@ -1,0 +1,39 @@
+{
+  "completed": false,
+  "actual_model": "gpt-6-astra",
+  "host_version": "0.146.0",
+  "actual_effort": "low",
+  "model_execution": "blocked_before_response",
+  "selected_skill_exact_body_injected": true,
+  "selected_skill_sha256": "ccb7f183cb2aa6ac0e05d172965d73fb45de8b84000d7b1598b3575dd74c1aa1",
+  "selected_skill_path": "PLUGIN/skills/design/better-interface/SKILL.md",
+  "activation_boundary": "host assembled installed skill in request; model did not execute",
+  "failure": "{\"type\":\"error\",\"status\":400,\"error\":{\"type\":\"invalid_request_error\",\"message\":\"The 'gpt-6-astra' model requires a newer version of Codex. Please upgrade to the latest app or CLI and try again.\"}}",
+  "raw_transcript_sha256": "6b9c53b8335ec267656a0aea07b415c931c674e9877c6c9a74b7acbaf38a0ef0",
+  "semantic_checks": "not_run",
+  "tool_calls": [],
+  "host": "codex",
+  "case_id": "warning",
+  "session_id": "01a13fd1-6b77-7fb2-b5ce-4024d812107c",
+  "exit_code": 1,
+  "timed_out": false,
+  "duration_seconds": 11.565,
+  "cost_usd": null,
+  "files_before": {
+    "BRIEF.md": "f7b6348461cf5e3a054d5dd92492208bb9eaf01620782cfc7786e28bb6e632c6",
+    "capture.json": "962eb79cdce312cdc799ee3ceaf8ff38a60375099fc715b19ff6497e66d0bdae",
+    "index.html": "02b69d685a75768016d8658e5fbbf538633468a3f947d3b0b86b497e5d9e99c6",
+    "screen.png": "8b4d122c724d8b5e6c090c7641eb363d95c06a007ea922ffdf12e613ce48addf"
+  },
+  "files_after": {
+    "BRIEF.md": "f7b6348461cf5e3a054d5dd92492208bb9eaf01620782cfc7786e28bb6e632c6",
+    "capture.json": "962eb79cdce312cdc799ee3ceaf8ff38a60375099fc715b19ff6497e66d0bdae",
+    "index.html": "02b69d685a75768016d8658e5fbbf538633468a3f947d3b0b86b497e5d9e99c6",
+    "screen.png": "8b4d122c724d8b5e6c090c7641eb363d95c06a007ea922ffdf12e613ce48addf"
+  },
+  "freeze_sha256": "7308c1117f3673b860cc7e3d59ac433669c4047f39f63c9b03b5fa74e01263a3",
+  "status": "execution_failed",
+  "requested_effort": "low",
+  "inputs_unchanged": true,
+  "raw_events_sha256": "f1d627ef6ea001167374094f7f6f08e4b92011dda154a00699a842ae656bbcdf"
+}

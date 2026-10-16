@@ -2,6 +2,50 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.4.6
+
+### Patch Changes
+
+- [`7465b52`](https://github.com/reach0908/paul-skills/commit/7465b528a1c49ba1668c08dd9a315d9b6593b538) Thanks [@reach0908](https://github.com/reach0908)! - Add `check:local` and `test:graders` commands to run the existing routing and source-read grader controls on a maintainer's machine. The full local command includes the current package checks and a whitespace check, while the GitHub Actions validation command stays unchanged. These deterministic controls do not launch model trials or establish skill quality.
+
+- [`3e022f7`](https://github.com/reach0908/paul-skills/commit/3e022f7e7ca1593db61704c44b95456a83e84140) Thanks [@reach0908](https://github.com/reach0908)! - Clarify existing-component identity and preserved behavior in build-design, and keep UI prototype alternatives anchored to approved benefits and visual choices. Distinguish public copy from internal research notes without hiding useful product limitations. Add complete-read and reload guidance plus browser preflight, bounded recovery and resume records. Synchronize the affected documentation and routing map; invocation boundaries and browser tool defaults remain unchanged.
+
+## 0.4.5
+
+### Patch Changes
+
+- [#29](https://github.com/reach0908/paul-skills/pull/29) [`0a6c1b4`](https://github.com/reach0908/paul-skills/commit/0a6c1b47a6faced190f3e06bda34cddfce41aa03) Thanks [@reach0908](https://github.com/reach0908)! - Ground existing wireframe responsive specifications in the effective CSS cascade, distinguish source-derived values from browser observations, and keep unmeasured clipping risks pending verification.
+
+## 0.4.4
+
+### Patch Changes
+
+- [#26](https://github.com/reach0908/paul-skills/pull/26) [`eb19775`](https://github.com/reach0908/paul-skills/commit/eb1977505c0a385a7608f19861962b660f575dfc) Thanks [@reach0908](https://github.com/reach0908)! - Connect screen intent, evidence-labeled first-impression checks and task-aware simplification across wireframe, layout and interface review. Preserve required content, frequent actions and review authorization; distinguish AI predictions from timed human observations.
+  
+  Load all six interface-review owners before artifact inspection and separate load failures from product findings. Respect partial prototype contracts and approved brand composition when judging first impressions; retain unconfirmed risks as verification limits.
+  
+  Route requested wireframe first-impression validation through the owning layout skill.
+
+## 0.4.3
+
+### Patch Changes
+
+- [#23](https://github.com/reach0908/paul-skills/pull/23) [`98098fa`](https://github.com/reach0908/paul-skills/commit/98098fa69cffc6495f1f5264de7feaad3bac37cc) Thanks [@reach0908](https://github.com/reach0908)! - Clarify better-colors reporting so calculated pairs, rendered checks and pending inputs retain their evidence scope in the final summary. Preserve valid calculations for fully specified compositing, and keep unresolved image or backdrop checks pending. Add bounded Codex and Claude regression evidence without treating non-reproduction as proof that a stochastic response error is eliminated.
+
+## 0.4.2
+
+### Patch Changes
+
+- [#20](https://github.com/reach0908/paul-skills/pull/20) [`8666bad`](https://github.com/reach0908/paul-skills/commit/8666bad397f1954b0615fa0e2beb7ff778cf8f01) Thanks [@reach0908](https://github.com/reach0908)! - Choose better-interface before repository inspection or domain skills when a UI change-review request names accessibility, layout or other UI domains. Preserve direct current-screen audits and fixes, and continue domain work after the authorized change-review handoff.
+  
+  Separate the review entry from its execution procedure. Define working reviews against HEAD and staged reviews against the index, including preparation-only answers, without default-branch discovery. Validate native Codex read tools and Claude invocation compatibility with divergent Git states.
+  
+  Put the domain change-review exclusion at the start of discovery descriptions so shortened native catalogs retain it. Read color references through explicit resolved paths and check each result, including parallel reads.
+  
+  Keep authorized handoffs visible in the same short discovery description, and load all six installed review owners before declaring a domain out of scope.
+  
+  Separate WCAG text requirements for active-field placeholders and read-only content from disabled-control exemptions and APCA readability targets.
+
 ## 0.4.1
 
 ### Patch Changes

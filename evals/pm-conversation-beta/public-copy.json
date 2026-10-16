@@ -1,0 +1,64 @@
+{
+  "source_revision": "97931a18539bcec549724a0695611ba8d76875e0",
+  "original_manifest": "integrity.original.json",
+  "original_manifest_sha256": "943d2fdfbc1250135ea43304b5cc6c328b52b39f42292d818ff1d779f35554ff",
+  "transformation": "Replace only the author home-directory prefix with $HOME. Preserve every failure, action, observation and timing. Embedded historical freeze hashes still describe the original bytes; map them through this ledger.",
+  "files": [
+    {
+      "path": "artifacts/coordinator/frozen-attempt-before-interview/task-1-persistent-raw.md",
+      "original_sha256": "a5d1c1981021deb1962e734d7ed8ef189ed428bfbce40cb140d93b1eb60b5801",
+      "public_sha256": "9bad3821f6cfe411d7ee32038be8560d046c7dcc684646f471868e212e373317",
+      "replacement_count": 1
+    },
+    {
+      "path": "artifacts/coordinator/frozen-attempt-before-interview/task-1-retry-raw.md",
+      "original_sha256": "4a2f6ae401798dad45338ffdbcd8cbdd9abde2a7742b6a879038ad532cb00994",
+      "public_sha256": "3906ef9e88c89a5023937bc9917f100e920a2813a180a173c0bafea086af1f3a",
+      "replacement_count": 1
+    },
+    {
+      "path": "artifacts/coordinator/frozen-attempt-before-interview/tool-failure.txt",
+      "original_sha256": "110d2001943a52a6ed1803bff2cc2b5a765d0cf4af97d6eacaf20fc3975e950b",
+      "public_sha256": "6d724718c3717e2755a5ddf1def547460e4fa14603d975f45ef54b7169f110f4",
+      "replacement_count": 2
+    },
+    {
+      "path": "artifacts/coordinator/frozen-task-1/task-1-persistent-raw.md",
+      "original_sha256": "a5d1c1981021deb1962e734d7ed8ef189ed428bfbce40cb140d93b1eb60b5801",
+      "public_sha256": "9bad3821f6cfe411d7ee32038be8560d046c7dcc684646f471868e212e373317",
+      "replacement_count": 1
+    },
+    {
+      "path": "artifacts/coordinator/frozen-tool-failure/tool-failure.txt",
+      "original_sha256": "110d2001943a52a6ed1803bff2cc2b5a765d0cf4af97d6eacaf20fc3975e950b",
+      "public_sha256": "6d724718c3717e2755a5ddf1def547460e4fa14603d975f45ef54b7169f110f4",
+      "replacement_count": 2
+    },
+    {
+      "path": "artifacts/coordinator/participant-dispatch-01.txt",
+      "original_sha256": "c0b60d2e19d546ca88a9b806b955999151f3314ffb5e58ced513d8b48a9529f6",
+      "public_sha256": "d4d3270edddb849582ab48991869a96bbc681fe2b53fbb1127cd1d6e4b7e4e98",
+      "replacement_count": 1
+    },
+    {
+      "path": "artifacts/coordinator/result.md",
+      "original_sha256": "6a40ccc88036db053e4dee88d4394468707450c7580d4744c6c982a5df2f18e1",
+      "public_sha256": "07ac3d8e6058e8a859ac6f6e69c7113a238a8a183bc389a9badf46c9edd517c0",
+      "replacement_count": 1
+    },
+    {
+      "path": "artifacts/prototype-recheck/participant/packet.md",
+      "original_sha256": "427e2b2fef693c3c0499073e1c0f407cd8b17b1406324c45dd613a356d9d01ed",
+      "public_sha256": "7e6c5adf9f6eaadc0ff75d160854ad989701cdf8a084bf9e2b40e67bbbae4a78",
+      "replacement_count": 1
+    }
+  ],
+  "maintenance": [
+    {
+      "path": "verify.py",
+      "original_sha256": "ca9190d00d96eb5b8a0bcd04f761aea0289dab3a3b786b43a1e4eef1a84d392f",
+      "public_sha256": "65301b7b8f53740235f6b28c73dbdbee240d20559a62057c42419ca8ddfe6cc4",
+      "reason": "Validate the public-copy ledger while preserving original evidence membership and skill hashes."
+    }
+  ]
+}

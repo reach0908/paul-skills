@@ -1,0 +1,88 @@
+{
+  "case_id": "normal-ia",
+  "arm": "candidate",
+  "mode": "implicit",
+  "session_id": "01a13a8a-9b00-7a40-9157-802988a57a3c",
+  "model": "gpt-5.6-sol",
+  "effort": "medium",
+  "checks": {
+    "completed": true,
+    "inputs_unchanged": true,
+    "automatic_design_catalog_exact_12": true,
+    "target_body_equal": true,
+    "no_failed_commands": true,
+    "correct_source_reads": true,
+    "discovery_scope_guard_visible": true,
+    "target_path_read": true,
+    "no_unauthorized_user_only_loads": true,
+    "no_hidden_owner_redirect": true,
+    "semantic_review_pass": true
+  },
+  "pass": true,
+  "prompt": "기획이 끝난 읽기 서비스에서 콘텐츠의 목적지와 탐색 구조를 정해줘. 사용자는 글을 찾아 읽고 저장하며 저장한 글을 다시 찾는다. 글 목록, 글 상세, 주제 모음, 저장 목록, 계정 설정이 있다. 메뉴 이름과 상하위 관계, 각 목적지의 ID를 짧게 정리해줘. 화면 배치와 시각 디자인은 아직 하지 마.\n이번 응답은 준비 또는 짧은 명세까지만이야. 제품 파일을 수정하거나 브라우저·외부 서비스를 실행하지 마. 입력이 없다면 확인된 결과처럼 말하지 말고 필요한 입력을 명시해줘.",
+  "final_response": "### 정보 구조 초안\n\n상태: **미승인 초안** \u2014 현재 요청에 포함된 기능만 반영했습니다.\n\n```text\n탐색 (nav_explore)\n├─ 글 (dest_articles)\n│  └─ 글 상세 (dest_article_detail) \u2014 메뉴에 노출하지 않음\n└─ 주제 (dest_topics)\n\n저장한 글 (dest_saved)\n\n설정 (dest_account_settings)\n```\n\n| 목적지 ID | 메뉴 이름 | 목적 |\n|---|---|---|\n| `dest_articles` | 글 | 전체 글을 탐색하고 선택 |\n| `dest_article_detail` | 글 상세 | 선택한 글 읽기 및 저장 |\n| `dest_topics` | 주제 | 주제별로 글 탐색 |\n| `dest_saved` | 저장한 글 | 저장한 글을 다시 찾기 |\n| `dest_account_settings` | 설정 | 계정 관련 설정 관리 |\n\n확인이 필요한 입력:\n\n- 각 주제가 고유한 상세 목적지를 갖는지 여부\n- 글 검색·정렬·필터가 범위에 포함되는지 여부\n- 비로그인 사용자의 저장 목록 및 설정 접근 정책\n\n화면 배치와 시각적 메뉴 형태는 포함하지 않았습니다.",
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "delivered_design_descriptions": {
+    "better-accessibility": "Accessibility. Excludes direct change/regression reviews; handoffs allowed. Reviews and fixes keyboard and focus behavior, ARIA, accessible names, forms, screen-reader announcements, motion and zoom in your project against WCAG 2.2. Use directly for current-state wor",
+    "better-colors": "Colors. Excludes direct change/regression reviews; handoffs allowed. Helps you build and check a color system for your project. It generates palettes, names semantic tokens, converts between formats and measures contrast. Use directly for current-state work and requ",
+    "better-interface": "UI change/regression reviews: load ONLY this skill in the first call, then stop. Returns the explicit change-review command for staged/index, working/uncommitted, branch, PR and commit ranges, even when a domain is named. Also coordinates current-screen audits.",
+    "better-layout": "Layout. Excludes direct change/regression reviews; handoffs allowed. Helps with grouping, alignment, reading order, responsive structure and room for translated text, so a layout holds up when it is resized, translated or mirrored. Use directly for current-state wor",
+    "better-typography": "Typography. Excludes direct change/regression reviews; handoffs allowed. Sets and reviews how text renders in your product, from the type scale and spacing to font features, wrapping, truncation and punctuation. Use directly for current-state work and requested fixe",
+    "better-ui": "UI polish. Excludes direct change/regression reviews; handoffs allowed. Polishes the surfaces, icons and motion in your project with exact values for border radius, optical alignment, shadows, icon states and animation. Use directly for current-state work and reque",
+    "better-writing": "UI copy. Excludes direct change/regression reviews; handoffs allowed. Writes and reviews your interface copy, from labels and errors to empty states and confirmations, so it matches your product's voice and tells people what to do next. Use directly for current-st",
+    "build-design": "Builds an approved browser prototype, Markdown screen specification, Figma frame or design image with the project's existing tokens and components. Use when asked to implement a supplied design.",
+    "design-browser": "Collect browser evidence for interface work. Use for reference browsing, rendered inspection, interaction QA, performance measurements or design comparison. Default to Playwright CLI; use Aside for research and general browsing.",
+    "information-architecture": "Organize product content into destinations, labels and navigation. Use when mapping information architecture, a sitemap or findability from an agreed product brief, or restructuring an existing information hierarchy.",
+    "user-flow": "Specify a product task's actions, transitions and recovery paths before implementation, including unanswered requests, interruption, exit and return. Use this skill directly for flow planning; do not load state-machine unless the user explicitly invokes that separa",
+    "wireframe": "Turn agreed task flows and content into low-fidelity interactive screens and a Markdown screen specification. Use when deciding screen hierarchy, controls and responsive order before visual design or production implementation."
+  },
+  "loaded_skills": [
+    "information-architecture"
+  ],
+  "injected_skills": [],
+  "native_trace_loads": {},
+  "loaded_file_hashes": {
+    "information-architecture": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20"
+  },
+  "expected_exit_evidence": {},
+  "commands": [
+    {
+      "command_id": "item_2",
+      "command": "/bin/zsh -lc \"sed -n '1,240p' SKILL.md\"",
+      "exit_code": 0,
+      "exit_is_success_or_expected_result": true,
+      "output_sha256": "18ac5d33c284063ae6993addad3e931ed23847fdde21debfce293fc9b9a80d20"
+    }
+  ],
+  "usage": [
+    {
+      "input_tokens": 43361,
+      "cached_input_tokens": 40960,
+      "cache_write_input_tokens": 0,
+      "output_tokens": 896,
+      "reasoning_output_tokens": 457
+    }
+  ],
+  "actual_billed_usd": null,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "stream_sha256": "2829f0c231b0f701b8005fad79aa425d4aba38a1835bebc89ad4c31a4d96d03e",
+  "transcript_sha256": "df1113a1cc9fbc0d023f3fd762a216e970c30de0f94266a0eb665a1a6d762381",
+  "inputs_before": {},
+  "inputs_after": {},
+  "duration_seconds": 28.121
+}

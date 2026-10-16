@@ -1,0 +1,660 @@
+{
+  "arm": "candidate",
+  "fixture": "index-divergent",
+  "bundle_manifest_sha256": "b61352a3c7c9ee9dfc68883e310651709624575cbf9d1908780b16d6222bbd57",
+  "schema_version": 1,
+  "case_id": "staged-divergent",
+  "host_protocol_sha256": "63aee0e45e7bf017c975d9f9565b4f6fd8b71bb54c7403bac2031c1d5fb7bf4c",
+  "mode": "handoff",
+  "protocol_version": 1,
+  "trial_directory_name": "case_024",
+  "expected": "interface-review",
+  "prompt": "/paul-skills:interface-review staged 범위의 로컬 UI 변경 전체를 실제로 리뷰해줘. Git 이전 내용과 해당 범위의 내용을 비교해서 검토를 끝까지 진행하고, 기준 SHA와 포함·제외한 파일을 명시해줘. 로컬 정적 증거만 사용하고 파일 수정, fetch, 브라우저, 외부 서비스는 실행하지 마. 렌더링 검증이 없는 부분은 한계로 남겨줘.\n파일과 참조 문서는 Read/Glob/Grep으로 읽고, Git 조회는 허용된 읽기 전용 git 하위 명령을 각각 하나의 Bash 호출로 실행해. 셸 연결이나 파이프, cd, git -C 없이 현재 폴더에서 조회해.",
+  "session_id": "a7ea498c-bad4-43ba-b10c-0ecee6e6f236",
+  "started_at": "2026-10-14T13:08:36.658028+00:00",
+  "host_init_session_id": "a7ea498c-bad4-43ba-b10c-0ecee6e6f236",
+  "host_result_session_id": "a7ea498c-bad4-43ba-b10c-0ecee6e6f236",
+  "host_version": "2.1.296",
+  "model": "claude-opus-5-5",
+  "available_tools": [
+    "Bash",
+    "Glob",
+    "Grep",
+    "Read",
+    "Skill"
+  ],
+  "mcp_servers": [],
+  "effort_observed": [
+    "xhigh"
+  ],
+  "permission_mode": "dontAsk",
+  "plugin": [
+    {
+      "name": "paul-skills",
+      "path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin",
+      "source": "paul-skills@inline",
+      "version": "0.4.1"
+    }
+  ],
+  "automatic_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "build-design",
+    "design-browser",
+    "information-architecture",
+    "user-flow",
+    "wireframe"
+  ],
+  "direct_design_catalog": [
+    "better-accessibility",
+    "better-colors",
+    "better-interface",
+    "better-layout",
+    "better-typography",
+    "better-ui",
+    "better-writing",
+    "break",
+    "build-design",
+    "design-browser",
+    "explain-interface",
+    "information-architecture",
+    "interface-review",
+    "state-machine",
+    "user-flow",
+    "variant",
+    "wireframe"
+  ],
+  "automatic_catalog_event_uuid": "f9c26546-16b0-4804-a574-f01be2285291",
+  "automatic_catalog_sha256": "de4298e7e53d9d231ee6aeda3d801ac072151b3ffa22f41c57c99fc4dc2838f8",
+  "full_body_loads": [
+    {
+      "name": "interface-review",
+      "event_uuid": "205f607c-25ab-4e4e-8ea0-484bef02c42e",
+      "file_sha256": "8da387b5338f6d4f0411249f55c7ab9122ac8652d16c9d07f141f463b16987bf",
+      "body_sha256": "5ae3409669880922a35cb872efabcbbefb534a3ff20956132db414984e4b4b56",
+      "host_message_sha256": "9ece6947b0bef53d68d913ec6f0acb7b7a1df9fbef1135443ce9806407f2d33f",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-interface",
+      "event_uuid": "9098d825-936c-4c6a-855d-ac423b3be24e",
+      "file_sha256": "5837bf393ad0558f6a9d08a9310f721bb35e0549194cce2665e0d60d01f7082f",
+      "body_sha256": "6dad1e1c94ec8dbb860ce09094c883042716b0964050d6b9b5712c79d3b1a387",
+      "host_message_sha256": "db62189df8e71a5eedb134468f7788a12c2097fa09c340f6cb73ebd897b42cf6",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-accessibility",
+      "event_uuid": "c040ef6f-c002-4d6f-895c-cbb4a6b71ea8",
+      "file_sha256": "b43ccd04e86f0d32164d7359f77706c63f2ed9bfa46c3c3a960ac1598d6d11b2",
+      "body_sha256": "4588c33276fb57595852b994c751c6ac27fdd704d0a496901789c592ac69eab9",
+      "host_message_sha256": "a5127ff94e6454a3e8d8ea1b7e869a6f0bae5c7c36823f76f6731e3a5546dc47",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-layout",
+      "event_uuid": "3aff035f-496c-4e3e-b0f5-4c76b6323b48",
+      "file_sha256": "5cc5420de32d6fa328a0dff41f95535ee91719b77b0f2a7be254e2910372d5e4",
+      "body_sha256": "a47ba0ab2637eba194a81c9aea36ac39d477d3ba62a9cfc0585aaf40b222e6c7",
+      "host_message_sha256": "cdddb463c4b9f1f2c334d6fb366131f86cea82d4a22c8b447dbb1241a829bc8a",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-writing",
+      "event_uuid": "6a2aeba9-3948-4b71-a406-c4b6bddb98a8",
+      "file_sha256": "dc8eb14015d21e00f205730abfb4e247f5005eb9afa462190849af40fe1a9d04",
+      "body_sha256": "7a65b6cd12299fb8865507c37f14193e3d438c06deb78010d5abf7ebc3cf2fef",
+      "host_message_sha256": "6169ac27ff82734a81c1b9cb1e8644ad5e3fbeca07efafa2cba78d00dc47da01",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-typography",
+      "event_uuid": "912c990b-4058-4137-bfc8-bb30f82d7264",
+      "file_sha256": "2be73d646535af1b7e7f5da15a35d31d3225aab5b9af1a7d05bee35cd0b3aafc",
+      "body_sha256": "c9878d89c354874eb9a334c2f38f0ca1239bbbf3c98f1f06e5568082149ed598",
+      "host_message_sha256": "5f597e84e4c783097f8f928ae96a0e7d7a75b760b79d0b2ac639796458cbe423",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-colors",
+      "event_uuid": "97e1430f-ba44-4746-9430-b209ca9479f1",
+      "file_sha256": "062956628f2c25aed58ae48baa73375a5f2fb80affa74ab676ca368239f7d77e",
+      "body_sha256": "c8b07e83da97c9c08027eea9d6753c9aeb0b577fe338b484418158b446fe8d9f",
+      "host_message_sha256": "bd22285925332d226bfcfa0a742cd70ee74b0df61db14cf6fca339683977d7be",
+      "full_body_equal": true
+    },
+    {
+      "name": "better-ui",
+      "event_uuid": "2147bff9-0eea-4f6d-80b6-9be031c83f48",
+      "file_sha256": "4bb81749b55105a2bd25b2ad4fb1aeab6be3892e3a1fdd8879487a7d10b41c9d",
+      "body_sha256": "803369a98346bc59c40211762c4006d2c0bcb955a19752acf748f726fd4fed33",
+      "host_message_sha256": "83bd336a357b02d57699a28245d479fcee9740bca5592f80ad73d72143b5efc6",
+      "full_body_equal": true
+    }
+  ],
+  "tool_calls": [
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git rev-parse HEAD",
+        "description": "Resolve the full SHA of HEAD"
+      },
+      "tool_use_id": "toolu_012KAfQoLzwGADdnQLDLDgd9",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "62660a0b8a8156b6adc18aca60c36c90f1d5f09c1b43590f690800edad2ce2ad"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --cached --name-status HEAD",
+        "description": "List files staged relative to HEAD"
+      },
+      "tool_use_id": "toolu_01Mt1eVs93ycDsNeKbVPLBDM",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "174774f86b4e69a775df5e210bb203af9ebacbdcf9ec0362d2dddca7d8f0472d"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git status --porcelain=v1 --untracked-files=all",
+        "description": "Show working tree and index status"
+      },
+      "tool_use_id": "toolu_01A1VP2z2e6qsVPGUgSXLnrS",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "359c00325e0674180f4b8bb05d6eb21c71f7f2e8cee6aba70bf65f3244ba3f7e"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "*.md",
+        "path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/interface-review"
+      },
+      "tool_use_id": "toolu_01D7Gx7cwjpCYuYwP5yhWtGH",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "749e26ab0dc648ae7fa0c6a1c963203839b71dc6d8a515b0b98b2d3c5c519dff"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --cached HEAD",
+        "description": "Show the staged diff against HEAD"
+      },
+      "tool_use_id": "toolu_019bSxhviucr1Ea1H7sUe91Q",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "b8cc46ba27534bcddff3b0dea6f9f054e8decf712d0f8dfa5c22d13ee4167aa0"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show HEAD:src/Panel.html",
+        "description": "Show Panel.html as of HEAD"
+      },
+      "tool_use_id": "toolu_01Jr2ozjpuh6sVrsKBpVNZy8",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "c40974df90ea98d09258a808a28ffe7c0eae8e5743ff6f6ad8a5627025214321"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show :src/Panel.html",
+        "description": "Show Panel.html from the index snapshot"
+      },
+      "tool_use_id": "toolu_01Prwo8hmpk9ZEoFumpmbX1f",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e12a4752e13b881599813ce9ba7075b09e58c5af83bda305b27f89695108e91d"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/interface-review/removed-signals.md"
+      },
+      "tool_use_id": "toolu_01LKtCxzNTPYcwUT9YdzXNaq",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "d84591161650ad7f757b5fdc114e72a2da7bdd55ad77436eb44975ec26bc459c"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/interface-review/scope-resolution.md"
+      },
+      "tool_use_id": "toolu_01Rq6qhbgwivQbRfh2QKRcmj",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "18c45996dd5f634f16a84a3f60caa714a17a53a34c2f626c4809d4668dcc0e88"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git status",
+        "description": "Check for in-progress rebase, merge or cherry-pick"
+      },
+      "tool_use_id": "toolu_01EcyLKLyA85w8uzLb2jAR6f",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "9097d112280adf68f2d3410601f47920f6009eaf549f8990e015b856029e0e83"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git log --format=%H%x09%s%n%b -n 5",
+        "description": "Show recent commit subjects and bodies"
+      },
+      "tool_use_id": "toolu_018n7BEGzKtq6DsZzyFamtTZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "15990b63922fb2d02cf7493e997684070b7b2b8a8573299d26652ba3dc2ed7a1"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git ls-files --cached",
+        "description": "List all files in the index"
+      },
+      "tool_use_id": "toolu_01PiFvr3gnarihiuwGiG1kiV",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "48c58fc77d58fbbda2a55cfe68e49bc309e117c6338b9110f010f04653034e29"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git grep --cached -n -e Panel",
+        "description": "Search the index for references to Panel"
+      },
+      "tool_use_id": "toolu_01FaTfgYfjbknzo1KaWDs9h8",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "25699c288faed3523fb3908affdd7ad168be7237d55ea51e8453bbdbb180e523"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff --name-status",
+        "description": "List unstaged tracked changes to exclude"
+      },
+      "tool_use_id": "toolu_01F6pz9ANTdm2X1UUWRFCYTL",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "bd028b0347c999c1eefc8da5d3ec6be9c5cce16cc41b0afaee7547ae68829f44"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git blame -L 4,4 HEAD -- src/Panel.html",
+        "description": "Blame the close button line at HEAD"
+      },
+      "tool_use_id": "toolu_01LxmVQFWsjjhfDgddTsXAuz",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "bf025e13706fc61e40b1e7639cb74fee42bf9a8b7d9870009435b17723b3255b"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git show 8f3c934f8dbb1dd40d1b51eac204787ee388eec1",
+        "description": "Show the HEAD commit that named the close control"
+      },
+      "tool_use_id": "toolu_01GnGpCYtVLSZUSUJQShJVwQ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "9f1cfd0ae5c581b24c5f22fa5b81cf738133a4d6856402a404fa90e2a53b5323"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git diff -U0 --cached HEAD",
+        "description": "Show the staged diff with no context lines"
+      },
+      "tool_use_id": "toolu_0182nhwwRQTVmQU89KBTC7qC",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "6f9b2cfd98b3be52f0a7e9ae91f4fe2dd9d598492bc0106d202ccf07270adb0b"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "Authorized change-review handoff from the user's explicit `/paul-skills:interface-review staged` invocation (interface-review §7). Keep interface-review's scope and report format; apply six domain checks, ranking, consolidation and verdict.\n\nScope block:\n- Target: staged\n- Base ref: HEAD at 8f3c934f8dbb1dd40d1b51eac204787ee388eec1 (\"Name the close control\")\n- Head ref: index snapshot (`git show :src/Panel.html`, blob 4fba4eb)\n- Commits: 0 committed, 1 staged file\n- Files in scope: 1 (src/Panel.html)\n- Excluded: no excluded-paths matches. Excluded by staged contract: unstaged working-tree edit to src/Panel.html, untracked src/New.html\n- Surfaces expanded: none; src/Panel.html is the only tracked file and `git grep --cached` found no referrers; 0 consumers skipped\n\nPermitted verification: local static evidence only. No file edits, fetch, browser or external services. Visual/runtime claims are Not verified.\n\nCandidate finding (route to better-accessibility for confirmation):\n- Status: Regression; Domain: Accessibility; Location: src/Panel.html:4 (index snapshot)\n- Before: `<button type=\"button\" aria-label=\"Close subscription panel\"><svg aria-hidden=\"true\" ...>` (icon-only button, only child is an aria-hidden SVG)\n- After: `<button type=\"button\"><svg aria-hidden=\"true\" ...>`; no aria-label, aria-labelledby, title or visible text. No equivalent replacement in the diff.\n- Evidence: the staged blob 4fba4eb is byte-identical to the blob that 8f3c934 replaced, so the staged change is an exact revert of the commit titled \"Name the close control\". The blame of line 4 at HEAD points to 8f3c934.\n\nOther domains: the diff touches nothing else. The focus-visible outline, 44px target, colors, type and copy are identical on both sides."
+      },
+      "tool_use_id": "toolu_012HZ4ENUrkZ5CKjABAdrWxc",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8b2280abeeac2390543af639144f495645a81373b86655ee773252e33f06e1bb"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/better-interface/audit-procedure.md"
+      },
+      "tool_use_id": "toolu_01JzYWtejsPfBLnsP57oYV9b",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "691bc426eeac315ad4ddecff36ebf1a77f1a6663ab0652ecb6f22e3c4d915319"
+    },
+    {
+      "name": "Read",
+      "input": {
+        "file_path": "/private/tmp/paul-design-domain-entry-v4-20261014/candidate/marketplace/plugin/skills/design/better-interface/review-format.md"
+      },
+      "tool_use_id": "toolu_01T9VAAus2zqkGu7xBxakHKZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "e6357e4f236fce249827034e503a7928edca8a555f9734c5e4b082fb07939204"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "**/*.md"
+      },
+      "tool_use_id": "toolu_01N8nkLxMcj13YyeHs6d9bPr",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "652deaa74742047569b040952b5eb896956d5fc01b2f66825b999e84ff5c1e33"
+    },
+    {
+      "name": "Glob",
+      "input": {
+        "pattern": "*"
+      },
+      "tool_use_id": "toolu_01N6xzYjRQCkJtXFo21khGkw",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "39e9518d34858e0309b4d51fdc4250d7802743359bdc53fec6fe4a729528b4e5"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-accessibility",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Confirm or reject one candidate: src/Panel.html:4 (index snapshot). Before (HEAD 8f3c934): `<button type=\"button\" aria-label=\"Close subscription panel\"><svg aria-hidden=\"true\" width=\"16\" height=\"16\" viewBox=\"0 0 16 16\"><path d=\"m3 3 10 10M13 3 3 13\" stroke=\"currentColor\"/></svg></button>`. After (index): same button without aria-label; no aria-labelledby, title or visible text. Unchanged on both sides: `<html lang=\"en\">`, `button:focus-visible{outline:3px solid #005fcc;outline-offset:3px}`, `min-width:44px;min-height:44px`, `<main>`, `<h1>`. Static evidence only: no edits, browser or external services."
+      },
+      "tool_use_id": "toolu_01MZuqyP8sHRuJobPucHeNVM",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "350b06f5cbd21304452da77440190f99f09762b77d48171e724f6c42ba6b187c"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-layout",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Scope: src/Panel.html, index snapshot vs HEAD 8f3c934. The only change is removal of aria-label from an icon-only close button at line 4. CSS (line 3) and DOM structure/order are identical on both sides. Check whether any layout rule has evidence in this change. Static evidence only: no edits, browser or external services."
+      },
+      "tool_use_id": "toolu_01TFHebirxgQbFtQfHrdV15S",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "0343aef86d33543dfb77f3e66cc19f8cabfde094d225320d6955e13d67457de1"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-writing",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Scope: src/Panel.html, index snapshot vs HEAD 8f3c934. The only change is removal of the string aria-label=\"Close subscription panel\" from an icon-only close button at line 4 (a user-facing accessible-name string deleted). Visible copy (<title>Subscription settings</title>, <h1>Subscription</h1>, <p>Your subscription is active.</p>) is identical on both sides. Accessibility owns the missing-name finding; check whether writing has an independent finding. Static evidence only."
+      },
+      "tool_use_id": "toolu_01GX2AvM8yctnioqs4TDB93P",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "85f011d0b3c8b7f3923d3a091c4fa4e6ed094af55961e8c5472eb24d7e5ce905"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-typography",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Scope: src/Panel.html, index snapshot vs HEAD 8f3c934. The only change is removal of aria-label from an icon-only close button at line 4. `<html lang=\"en\">`, `body{font:1rem/1.5 system-ui}`, `button{font:inherit}` and all text nodes are identical on both sides. Check whether any typography rule has evidence in this change. Static evidence only."
+      },
+      "tool_use_id": "toolu_01CXnwXDpGtrtpini5RUSEjA",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "8778e4edafc675e553f751d3b9b741f40dda3ce81f9938251924641ba4211aeb"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-colors",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Scope: src/Panel.html, index snapshot vs HEAD 8f3c934. The only change is removal of aria-label from an icon-only close button at line 4. Color values (body color:#111 on background:#fff, focus outline #005fcc, SVG stroke currentColor) are identical on both sides; no token swapped, no prefers-contrast removed. Check whether any color rule has evidence in this change. Static evidence only: no edits, browser or external services."
+      },
+      "tool_use_id": "toolu_017zssUUpgtgaMPSwNkBU5DC",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "57104c1c159d845316420ab1f2c62b142879bc632097502155da174caae6c266"
+    },
+    {
+      "name": "Skill",
+      "input": {
+        "skill": "paul-skills:better-ui",
+        "args": "Authorized change-review handoff from better-interface (user explicitly invoked /paul-skills:interface-review staged). Scope: src/Panel.html, index snapshot vs HEAD 8f3c934. The only change is removal of aria-label from an icon-only close button at line 4. The SVG icon (16x16, stroke currentColor, aria-hidden), button padding, and the absence of radius, shadow and motion are identical on both sides. Check whether any UI-polish rule has evidence in this change. Static evidence only."
+      },
+      "tool_use_id": "toolu_01S1acBHCWC4Tu4sjA8DqyUq",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "9d8c8e94e9c6cc094a2c24f3ef5294da6ec791458b2f9b3c87e390cdfb4200a0"
+    },
+    {
+      "name": "Bash",
+      "input": {
+        "command": "git rev-parse :src/Panel.html HEAD:src/Panel.html HEAD~1:src/Panel.html",
+        "description": "Resolve blob hashes for index, HEAD and HEAD~1 Panel.html"
+      },
+      "tool_use_id": "toolu_018vThy5NHmynKNUwvqfMWwZ",
+      "result_present": true,
+      "is_error": false,
+      "result_sha256": "7cd4b9aa66baa04b729d8032b08f0491bc693f90c1499b4fec67173ae6cb49ea"
+    }
+  ],
+  "user_only_loads_or_attempts": [
+    "interface-review"
+  ],
+  "user_only_bodies_in_file_results": [],
+  "final_response": "# Interface review: `staged`\n\nThe staged change removes the accessible name from the close button, which blocks it. It's one `HIGH` Regression.\n\n## Scope\n\n| Field | Value |\n| --- | --- |\n| Target | `staged` |\n| Base ref | `HEAD` = `8f3c934f8dbb1dd40d1b51eac204787ee388eec1` (\"Name the close control\") |\n| Head ref | Index snapshot, `:src/Panel.html` = blob `4fba4eb6f9500c5970dfb87118a2d5cdb7ea62af` |\n| Commits | 0 committed, 1 file staged |\n| Files in scope | 1: `src/Panel.html` (M) |\n| Excluded | No files matched the excluded-paths patterns. The `staged` target leaves out two items, and I didn't open either: the unstaged edit to `src/Panel.html` and the untracked file `src/New.html`. |\n| Surfaces expanded | None. `git ls-files --cached` shows `src/Panel.html` is the only tracked file, and `git grep --cached -n -e Panel` found no references. 0 consumers left unexpanded. |\n\n**Stack and conventions:** a single static HTML file with an inline `<style>`. There are no design tokens, component library or translation catalogue. I found no project convention documents (CONTRIBUTING, AGENTS.md, CLAUDE.md or a design-system doc).\n\n**Intent:** the staged change has no commit message yet. Its index blob is byte-identical to `HEAD~1:src/Panel.html` (`4fba4eb…`), so the staged change exactly reverts the previous commit, \"Name the close control\". The only stated intent on record is the one this change undoes.\n\n## Coverage\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `src/Panel.html:4`, before and after: the button's accessible name. Unchanged on both sides: `lang`, focus ring, 44px target, `<main>`, `<h1>`. | 1 finding |\n| Writing | The deleted string \"Close subscription panel\", checked against the action-label rule (it names the action and the object). Visible copy is identical on both sides. | `Clear`: same root cause as the Accessibility finding, merged into its row |\n| Layout | Line 3 CSS and the DOM order are identical on both sides | `Not reviewed: no evidence in the change scope` |\n| Typography | `lang=\"en\"`, `font:1rem/1.5 system-ui`, `font:inherit` and all text nodes are identical on both sides | `Not reviewed: no evidence in the change scope` |\n| Colors | `#111`/`#fff`, `#005fcc` and `currentColor` are identical on both sides; no token or `prefers-contrast` change | `Not reviewed: no evidence in the change scope` |\n| UI | The SVG icon (16×16, `currentColor`), padding and the absence of motion are identical on both sides | `Not reviewed: no evidence in the change scope` |\n\n## Findings\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Accessibility | Regression | `src/Panel.html:4` (index snapshot) | `<button type=\"button\" aria-label=\"Close subscription panel\"><svg aria-hidden=\"true\" …>` | Restore `aria-label=\"Close subscription panel\"` on the `<button>` in the staged content. This reuses the value the project already had at `HEAD`. | The button's only child is an `aria-hidden` SVG, so after this change the button has no accessible name: no `aria-label`, `aria-labelledby`, `title` or visible text. That fails WCAG 4.1.2 Name, Role, Value (A); a screen reader announces only \"button\", and the user can't tell it closes the panel. This is an escalation trigger (an interactive control with no accessible name). Writing note: the removed text was a well-formed action label. |\n\nThere are no pre-existing findings to report.\n\n## Verification\n\n**Checks run (static, local and read-only):**\n- `git rev-parse HEAD` → `8f3c934f8dbb1dd40d1b51eac204787ee388eec1`\n- `git status` → no rebase, merge or cherry-pick in progress. Staged `src/Panel.html`; unstaged `src/Panel.html`; untracked `src/New.html`.\n- `git diff --cached --name-status HEAD` → `M src/Panel.html`\n- `git diff --cached HEAD` and `git diff -U0 --cached HEAD` → one hunk at line 4. The only removal is `aria-label=\"Close subscription panel\"`, and the diff adds nothing that replaces it, such as `aria-labelledby`, `title` or visible text.\n- `git show HEAD:src/Panel.html` compared with `git show :src/Panel.html` → the files differ only by that attribute\n- `git show 8f3c934…` → that commit added the attribute\n- `git blame -L 4,4 HEAD -- src/Panel.html` → `8f3c934f`\n- `git rev-parse :src/Panel.html HEAD:src/Panel.html HEAD~1:src/Panel.html` → index = `HEAD~1` = `4fba4eb…`, `HEAD` = `250fe1a…`\n- `git ls-files --cached` → `src/Panel.html` only\n- `git grep --cached -n -e Panel` → no matches\n- Glob for `**/*.md` (project documents) → none\n- Pipes weren't allowed, so instead of the removed-signals grep pipeline I read the single `-U0` hunk directly. It covers the same ground.\n\n**Not verified** (you ruled out the browser and external services):\n- The computed accessible name and role in the rendered accessibility tree\n- What a screen reader actually announces\n- The keyboard tab walk and how the focus ring renders\n- Reflow at 320px width and 200% zoom\n- Rendered contrast. I measured nothing, so this report contains no contrast values.\n- The unstaged working-tree changes and `src/New.html`, which are outside the `staged` scope\n\nReview revision: base `8f3c934f8dbb1dd40d1b51eac204787ee388eec1`, head is the index blob `4fba4eb6f9500c5970dfb87118a2d5cdb7ea62af`. Method: source analysis only; no rendering, keyboard or screen-reader input.\n\n## Verdict\n\n**`Block`**: 1 `HIGH` Regression remains (the close button's missing accessible name). Not reviewed: no evidence in the change scope for Layout, Typography, Colors and UI.\n\nThis is a design-review verdict for the staged change only. Full accessibility conformance and release approval need their own evidence and decisions.\n\n---\n\nThe working tree has further unstaged edits to `src/Panel.html` that this review didn't read. To review the net state including those edits, run `/paul-skills:interface-review working`.",
+  "checks": {
+    "model_completed": true,
+    "host_session_matches_request": true,
+    "automatic_catalog_exact_12": true,
+    "direct_catalog_all_17": true,
+    "correct_plugin_source": true,
+    "inputs_unchanged": true,
+    "no_permission_denials": true,
+    "no_failed_tools": true,
+    "semantic_review_pass": true,
+    "candidate_override": true,
+    "neutral_working_directory": true,
+    "target_body_equal": true,
+    "no_other_user_only_loads": true,
+    "authorized_owners_loaded": true,
+    "real_git_diff": true,
+    "classified_finding": true,
+    "audit_procedure_loaded": true,
+    "no_default_branch_resolution": true,
+    "target_snapshot_read": true
+  },
+  "pass": true,
+  "duration_seconds": 219.869,
+  "duration_api_ms": 217497,
+  "usage": {
+    "input_tokens": 34,
+    "cache_creation_input_tokens": 70028,
+    "cache_read_input_tokens": 711326,
+    "output_tokens": 11951,
+    "output_tokens_details": {
+      "thinking_tokens": 4934
+    },
+    "server_tool_use": {
+      "web_search_requests": 0,
+      "web_fetch_requests": 0
+    },
+    "service_tier": "standard",
+    "cache_creation": {
+      "ephemeral_1h_input_tokens": 67370,
+      "ephemeral_5m_input_tokens": 0
+    },
+    "inference_geo": "global",
+    "iterations": [
+      {
+        "input_tokens": 2,
+        "output_tokens": 26,
+        "cache_read_input_tokens": 70183,
+        "cache_creation_input_tokens": 2107,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 2107
+        },
+        "type": "message"
+      },
+      {
+        "input_tokens": 73917,
+        "output_tokens": 2526,
+        "cache_read_input_tokens": 0,
+        "cache_creation_input_tokens": 0,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 0,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "advisor_message",
+        "model": "claude-fable-5-1"
+      },
+      {
+        "input_tokens": 2,
+        "output_tokens": 2365,
+        "cache_read_input_tokens": 72290,
+        "cache_creation_input_tokens": 1189,
+        "cache_creation": {
+          "ephemeral_5m_input_tokens": 1189,
+          "ephemeral_1h_input_tokens": 0
+        },
+        "type": "message"
+      }
+    ],
+    "speed": "standard",
+    "fallback_credit": null
+  },
+  "model_usage": {
+    "claude-opus-5-5": {
+      "inputTokens": 34,
+      "outputTokens": 11951,
+      "cacheReadInputTokens": 711326,
+      "cacheCreationInputTokens": 70028,
+      "webSearchRequests": 0,
+      "costUSD": 0.9336712000000001,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 128000,
+      "thinkingTokens": 4934,
+      "canonicalModel": "claude-opus-5-5",
+      "provider": "firstParty",
+      "costBasis": "list"
+    },
+    "claude-fable-5-1": {
+      "inputTokens": 106531,
+      "outputTokens": 6144,
+      "cacheReadInputTokens": 0,
+      "cacheCreationInputTokens": 0,
+      "webSearchRequests": 0,
+      "costUSD": 1.37251,
+      "contextWindow": 1000000,
+      "maxOutputTokens": 64000,
+      "thinkingTokens": 0,
+      "canonicalModel": "claude-fable-5-1",
+      "provider": "firstParty",
+      "costBasis": "list"
+    }
+  },
+  "reported_cost_usd": 2.3061812,
+  "cost_basis": "host-reported list estimate; actual invoice not available",
+  "actual_billed_usd": null,
+  "permission_denials": [],
+  "input_before": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "dced7a7de409a0571cc10ec0a5b8fa9d0280027d65f33bbaad21a31fb25cbe1c",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "1c2d92a7dacf9e921dd9756247256ec68a06d82116c2156e7c5a0649f4ad017f",
+    ".git/logs/refs/heads/feature/checkout": "a8c3b636f0fa39f389840c4a285c92867492d7762dd73adf0fccd1a9a4b9d114",
+    ".git/logs/refs/heads/main": "b80e122db57eeb6da23d54dfac327eea82cfc0f414c3e30dc491601affed89a3",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/48/87e918668aa9852fb1f1e10fa45fbbe64b6368": "bcf35fb7f97135605e6ab774167606eb94cc1da5b4e8f207739ea379f5de8c38",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/8f/3c934f8dbb1dd40d1b51eac204787ee388eec1": "aace1c48c40d456b0c67d8a9811e571d3fab327ad4a023bd946194f23931544d",
+    ".git/refs/heads/feature/checkout": "c8195c5b8110241b6a1f250769dd624f761150e4f28f327dbf422f1993fa7520",
+    ".git/refs/heads/main": "adebeb9357bac87a06702b154d633302bf4ea2d49fd6b5ec8e95ca1eb882a264",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "input_after": {
+    ".git/COMMIT_EDITMSG": "bf50f68c25d69146696a6f654aa5362bcd537a021d29ddbb5281641641bb7d7b",
+    ".git/HEAD": "2d6f3cbee75984cc5d74a1783686de9b89689f4f243f634b493274eca54a966d",
+    ".git/config": "cae33efdb02cf774435c1ff9cb16bcc1014606908530c6e1dc727615fe3e8cda",
+    ".git/description": "85ab6c163d43a17ea9cf7788308bca1466f1b0a8d1cc92e26e9bf63da4062aee",
+    ".git/hooks/applypatch-msg.sample": "0223497a0b8b033aa58a3a521b8629869386cf7ab0e2f101963d328aa62193f7",
+    ".git/hooks/commit-msg.sample": "1f74d5e9292979b573ebd59741d46cb93ff391acdd083d340b94370753d92437",
+    ".git/hooks/fsmonitor-watchman.sample": "e0549964e93897b519bd8e333c037e51fff0f88ba13e086a331592bf801fa1d0",
+    ".git/hooks/post-update.sample": "81765af2daef323061dcbc5e61fc16481cb74b3bac9ad8a174b186523586f6c5",
+    ".git/hooks/pre-applypatch.sample": "e15c5b469ea3e0a695bea6f2c82bcf8e62821074939ddd85b77e0007ff165475",
+    ".git/hooks/pre-commit.sample": "57185b7b9f05239d7ab52db045f5b89eb31348d7b2177eab214f5eb872e1971b",
+    ".git/hooks/pre-merge-commit.sample": "d3825a70337940ebbd0a5c072984e13245920cdf8898bd225c8d27a6dfc9cb53",
+    ".git/hooks/pre-push.sample": "ecce9c7e04d3f5dd9d8ada81753dd1d549a9634b26770042b58dda00217d086a",
+    ".git/hooks/pre-rebase.sample": "4febce867790052338076f4e66cc47efb14879d18097d1d61c8261859eaaa7b3",
+    ".git/hooks/pre-receive.sample": "a4c3d2b9c7bb3fd8d1441c31bd4ee71a595d66b44fcf49ddb310252320169989",
+    ".git/hooks/prepare-commit-msg.sample": "e9ddcaa4189fddd25ed97fc8c789eca7b6ca16390b2392ae3276f0c8e1aa4619",
+    ".git/hooks/push-to-checkout.sample": "a53d0741798b287c6dd7afa64aee473f305e65d3f49463bb9d7408ec3b12bf5f",
+    ".git/hooks/sendemail-validate.sample": "44ebfc923dc5466bc009602f0ecf067b9c65459abfe8868ddc49b78e6ced7a92",
+    ".git/hooks/update.sample": "8d5f2fa83e103cf08b57eaa67521df9194f45cbdbcb37da52ad586097a14d106",
+    ".git/index": "dced7a7de409a0571cc10ec0a5b8fa9d0280027d65f33bbaad21a31fb25cbe1c",
+    ".git/info/exclude": "6671fe83b7a07c8932ee89164d1f2793b2318058eb8b98dc5c06ee0a5a3b0ec1",
+    ".git/logs/HEAD": "1c2d92a7dacf9e921dd9756247256ec68a06d82116c2156e7c5a0649f4ad017f",
+    ".git/logs/refs/heads/feature/checkout": "a8c3b636f0fa39f389840c4a285c92867492d7762dd73adf0fccd1a9a4b9d114",
+    ".git/logs/refs/heads/main": "b80e122db57eeb6da23d54dfac327eea82cfc0f414c3e30dc491601affed89a3",
+    ".git/objects/04/0d05cfb587b9f612ff938efadbc6bfa0dff3d3": "39ddc42dfe7ac474048a427def2a7aff761a70bef788870a0b2bc591926df11a",
+    ".git/objects/13/adac7cb2d5cc8167e4b74aea1a9f7d87a04d66": "9a021eb6e50bb59f2f20f1c37a27dee17533f459655d9070bbe8d4c499fb215f",
+    ".git/objects/25/0fe1a01029bf046794f79325fe7d2ad396e6e7": "bfd8ff549242933ce56ba7d2aced5143b8037d6346213653a89c202a980c59a6",
+    ".git/objects/44/f7ea773ad6d74f5f3a88c6fb6907a95f609213": "0f915068d2c180f249b10e5a4127944d00e6aa926535a93d0d6cbc15700224df",
+    ".git/objects/48/87e918668aa9852fb1f1e10fa45fbbe64b6368": "bcf35fb7f97135605e6ab774167606eb94cc1da5b4e8f207739ea379f5de8c38",
+    ".git/objects/4f/ba4eb6f9500c5970dfb87118a2d5cdb7ea62af": "7affbccadaed0f46b3a3eb34caadfdf7fc2b077d78fed26058b7cbcc028f6d83",
+    ".git/objects/58/09cbc96fc2adeff037b366f543caa67f5f8f46": "6ff66c359ee962b65db98421476e148ce2508617f7277c937d056724573c9dd6",
+    ".git/objects/8f/3c934f8dbb1dd40d1b51eac204787ee388eec1": "aace1c48c40d456b0c67d8a9811e571d3fab327ad4a023bd946194f23931544d",
+    ".git/refs/heads/feature/checkout": "c8195c5b8110241b6a1f250769dd624f761150e4f28f327dbf422f1993fa7520",
+    ".git/refs/heads/main": "adebeb9357bac87a06702b154d633302bf4ea2d49fd6b5ec8e95ca1eb882a264",
+    "src/New.html": "999f74b10a2c9e0c16f36f2f9dc4fa60ba31371e8a90031ac6ed448e58d1b13e",
+    "src/Panel.html": "6588b23203c40076a5bc128af45cd5657a229bb14882222e124a8eb070de8aa3"
+  },
+  "exit_code": 0,
+  "result_subtype": "success",
+  "api_error_status": null,
+  "stop_reason": "end_turn",
+  "num_turns": 37,
+  "protocol_sha256": "e0b61ebdc106066865a8d2addfabd365e61522e2f585863f1705242b113a1e03",
+  "cases_sha256": "689aa92ee0f1026db250d4d36e1535d2d6d3a6816074e06e4d67762bd509a61b",
+  "stream_sha256": "e9e7d078b755cf625aca6d2b0c0c65a604832c0a4ed85d66f241acaef8d130e6",
+  "transcript_sha256": "61f303477c3675bb86045417b9d013ef08355554929721d698cf8084298598bd",
+  "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "stderr_bytes": 0
+}

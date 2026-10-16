@@ -4,7 +4,7 @@ Evaluation is added by this fork; the upstream library supplies authoring guidan
 
 ## Three distinct checks
 
-- `npm run check` checks package/catalog/provenance consistency and deterministic helper behavior. It makes no claim about an AI following a skill.
+- `npm run check` checks package/catalog/provenance consistency and deterministic helper behavior. For local validation with routing and source-read grader controls, use [`npm run check:local`](../docs/maintenance.md#local-validation). These checks make no claim about an AI following a skill.
 - Public behavioral fixtures exercise an actual agent with a realistic user request and raw artifacts. The evaluator receives the task and skill, not expected answers. Preserve the task, skill revision/hash, host, observed outputs, and evaluator decision.
 - Comparative trials hold task, host, permissions, and skill fixed when comparing models, or hold model/host fixed when comparing skill versions. Keep no-skill, previous-skill, and candidate arms separate. Use multiple runs and report failures as well as successes before recommending a model.
 
@@ -51,8 +51,34 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [Claude review-routing repair and regression evidence](design-claude-routing-repair-2026-10-14/REPORT.md) distinguishes the released baseline, session-only candidates, all 17 normal entry points, target-preserving routing and an actual local Git review handoff. Failed attempts and grader corrections remain visible.
 
 - [Design routing patch 0.4.1 release](./design-routing-patch-release-2026-10-14/REPORT.md): both global installs verified; fresh Claude 6/6 and Codex 5/6, with one remaining staged-routing failure and two initial model compatibility failures preserved.
+- [Codex staged-routing repair and Claude regression checks](./design-staged-routing-repair-2026-10-14/REPORT.md): preserves three candidate attempts, exact source loads, routing-order failures and ordinary domain-entry checks. This is an unreleased local candidate, not a global-installation update or a new design-quality parity claim.
 
+- [Native review entry and local-scope repair](design-review-scope-repair-2026-10-14/REPORT.md) separates the routing entry from execution, verifies HEAD/index semantics in divergent fixtures, and keeps Codex native reads separate from Claude tools.
+
+- [Domain discovery and reference-reading repair](design-domain-entry-repair-v4-2026-10-14/REPORT.md) checks the actual shortened Codex catalog, preserves three failed candidates, verifies native reference reads and repeats the full cross-host routing/scope matrix.
+
+- [Final routing and reference proof](design-contrast-reference-proof-2026-10-14/REPORT.md) records the release recommendation, unchanged-dependency evidence, fresh color regressions, explicit source-reading proofs and retained diagnostic failures. That record describes the pre-release candidate; the subsequent 0.4.2 installation record below covers publication and global activation.
+
+- [Design routing patch 0.4.2 release](design-routing-0.4.2-release-2026-10-14/REPORT.md) records the immutable release tag, both actual user installations, complete installed-source equality, fresh host sessions, and retained execution limitations.
+
+- [Color evidence consistency](design-color-evidence-2026-10-14/REPORT.md) preserves the historical contradiction, records non-reproduction in fixed repeats, and compares a preventive reporting clarification in 24 fresh native sessions. The candidate passes 12/12; one ancillary baseline Claude overclaim remains recorded. Global installations were still at 0.4.2 during that pre-release trial.
+
+- [Color evidence patch 0.4.3 release](design-color-0.4.3-release-2026-10-14/REPORT.md) records the immutable patch tag, both updated global installations and 12 fresh native sessions. Answer consistency passes 12/12, while source application passes 10/12: one Codex reference read and one Claude automatic invocation remain missing. Failed receipts and the evidence-verifier amendment are preserved.
+
+- [First-impression workflow comparison](design-first-impression-2026-10-15/REPORT.md) records the five-file implementation, unchanged baseline/candidate snapshots, preserved execution-limit failures and eight completed pairs in a separate budget-constrained profile. Explicit reference reading, partial audit coverage and human validation remain distinct.
+
+- [First-impression scope and owner repair](design-first-impression-repair-2026-10-15/REPORT.md) compares eight fresh pairs, preserves the original failed evidence, and distinguishes successful six-owner invocation from three failed ordering checks. Its [entry-order follow-up](design-first-impression-order-2026-10-15/REPORT.md) tests the isolated procedure read with a separate frozen candidate and four pairs.
+
+- [PR #26 final review](design-first-impression-final-review-2026-10-15/REPORT.md) records separate Standards and Spec reviews, the wireframe dependency repair, and a fresh matched pair for requested first-impression validation. Historical trial evidence remains pinned to its original source.
+
+- [First-impression workflow 0.4.4 release](design-first-impression-0.4.4-release-2026-10-15/REPORT.md) records PR #26 and version PR #27 merges, the immutable tag and both installed updates. Claude completes four fresh cases with an ancillary screen-specification error retained; Codex preserves two CLI/model compatibility failures and two unstarted cases. Installation, native execution and human validation remain separate.
+
+- [CLI compatibility and wireframe CSS follow-up](design-cli-css-repair-2026-10-15/REPORT.md) preserves the failed 0.4.4 records, updates the active Codex CLI and completes all four installed cases. A browser oracle and four Claude pairs support a bounded responsive-evidence clarification; both arms explain CSS values correctly, so no accuracy improvement is claimed. A separate diagnostic's unmeasured blocking verdict remains recorded.
+
+- [Wireframe evidence patch 0.4.5 release](wireframe-0.4.5-release-2026-10-15/REPORT.md) records PR #29 and version PR #30 merges, the immutable tag, both global updates and one fresh wireframe case per host. Historical failures and the tied comparison remain intact; installation activation does not establish an accuracy gain or human validation.
 
 The [PM beta trials](product-management-beta/README.md) compare three product-context candidates with no-skill controls on synthetic tasks, including the boundary between product experiments and design QA. They preserve task/skill hashes, raw artifacts, verdict grounds and limits; they do not promote the candidates.
 
 The [PM conversation and prototype walkthrough beta](pm-conversation-beta/RESULTS.md) records the office-hours behavioral fork, fresh AI task/interview protocol, existing-PM updates and bounded tests. It keeps original observations, host limits and user acceptance separate.
+
+The [PM beta integration repairs](pm-beta-integration-2026-10-16/REPORT.md) reconcile the main merge, optional routing policy and provenance baseline, separate historical and current-tree verification, and trace public-copy redactions. Local verifier controls do not promote the candidates or replace behavior evidence.

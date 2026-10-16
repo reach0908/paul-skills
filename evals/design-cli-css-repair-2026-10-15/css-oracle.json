@@ -1,0 +1,79 @@
+{
+  "browser": "152.0.7977.82",
+  "method": "setContent of exact fixture source; narrow desktop viewport",
+  "results": [
+    {
+      "case": "inline",
+      "viewport": {
+        "width": 1040,
+        "height": 800
+      },
+      "computed": "64px",
+      "inline": "64px",
+      "text": "불완전한종이의 풍경",
+      "expected": "64px"
+    },
+    {
+      "case": "inline",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "computed": "64px",
+      "inline": "64px",
+      "text": "불완전한종이의 풍경",
+      "expected": "64px"
+    },
+    {
+      "case": "important",
+      "viewport": {
+        "width": 1040,
+        "height": 800
+      },
+      "computed": "64px",
+      "inline": "64px",
+      "text": "불완전한종이의 풍경",
+      "expected": "64px"
+    },
+    {
+      "case": "important",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "computed": "30px",
+      "inline": "64px",
+      "text": "불완전한종이의 풍경",
+      "expected": "30px"
+    },
+    {
+      "case": "stylesheet",
+      "viewport": {
+        "width": 1040,
+        "height": 800
+      },
+      "computed": "38px",
+      "inline": "",
+      "text": "불완전한종이의 풍경",
+      "expected": "38px"
+    },
+    {
+      "case": "stylesheet",
+      "viewport": {
+        "width": 360,
+        "height": 800
+      },
+      "computed": "30px",
+      "inline": "",
+      "text": "불완전한종이의 풍경",
+      "expected": "30px"
+    }
+  ],
+  "script_sha256": "e3fd0ab34f7e2d81064c178d45a4617823194f9bb45b4a1e6d540e31690a8bde",
+  "cli_version": "0.1.22",
+  "fixture_sha256": {
+    "inline": "d01e7e5aed7c95bb03936db791e7997423160bb3ab4d037af573818c3fb4cccd",
+    "important": "b96affc3da062a7ff97d75c8a95667fb8a8f08d0b70cee8f6ac68970da79464d",
+    "stylesheet": "60b4e29f1f5a44be9d48eea8e5c890605722e2b6215a2669237300c8b81e315d"
+  }
+}
