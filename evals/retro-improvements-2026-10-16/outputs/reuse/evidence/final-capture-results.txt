@@ -1,0 +1,19 @@
+### Result
+[{"width":390,"height":844,"route":"http://127.0.0.1:53825/?page=collection","focus":"BODY"},{"width":1280,"height":844,"route":"http://127.0.0.1:53825/?page=collection","focus":"BODY"}]
+### Ran Playwright code
+```js
+await (async (page) => {
+  const results=[];
+  for(const width of [390,1280]) {
+    await page.setViewportSize({width,height:844});
+    await page.goto('http://127.0.0.1:53825/?page=collection');
+    await page.screenshot({path:`evidence/collection-default-after-${width}.png`,fullPage:true});
+    results.push({width,height:844,route:page.url(),focus:await page.evaluate(()=>document.activeElement.tagName)});
+  }
+  return results;
+}
+)(page);
+```
+### Page
+- Page URL: http://127.0.0.1:53825/?page=collection
+- Page Title: Reading room

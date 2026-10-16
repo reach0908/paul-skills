@@ -1,0 +1,80 @@
+{
+  "status": "bounded_candidate_checks_completed",
+  "ci_runs_dispatched": 0,
+  "native_cross_host_trials": "not_run",
+  "global_installation": "unchanged",
+  "model_comparison": "not_run",
+  "token_savings": "unmeasured",
+  "package_validation": {
+    "command": "npm run check:local",
+    "exit_code": 0,
+    "skill_records": 56,
+    "promoted_paths": 44,
+    "helper_tests": 38,
+    "grader_controls": 26,
+    "helper_seconds": 13.221,
+    "grader_seconds": 0.144,
+    "plugin_validate_strict": "pass"
+  },
+  "auxiliary_quick_validate": {
+    "passed": [
+      "build-design",
+      "prototype",
+      "better-writing",
+      "design-browser",
+      "writing-for-agents"
+    ],
+    "schema_unsupported": [
+      "retro",
+      "ask-matt"
+    ],
+    "baseline_same_failure": true,
+    "reason": "Generic validator rejects pre-existing disable-model-invocation; repo checker and strict plugin validation support the required explicit-only policy."
+  },
+  "forward_checks": [
+    {
+      "case": "reuse",
+      "status": "observed_contract_pass",
+      "context": "fresh agent, explicit candidate",
+      "browser_cases": 4,
+      "widths": [
+        390,
+        1280
+      ],
+      "evidence": [
+        "outputs/reuse/app.js",
+        "outputs/reuse/WORK-REPORT.md",
+        "outputs/reuse/evidence/after-results.txt"
+      ]
+    },
+    {
+      "case": "prototype",
+      "status": "observed_contract_pass",
+      "context": "fresh agent, explicit candidate",
+      "browser_cases": 6,
+      "widths": [
+        320,
+        390
+      ],
+      "evidence": [
+        "outputs/prototype/index.html",
+        "outputs/prototype/WORK-REPORT.md",
+        "outputs/prototype/evidence/browser-observations.txt",
+        "outputs/prototype/evidence/bottom-observations.txt"
+      ],
+      "process_limit": "Agent listed broad temporary-directory paths during instruction discovery; it reports no other case file content or conclusions read. Treat isolation as bounded, not a sealed holdout."
+    },
+    {
+      "case": "records",
+      "status": "record_decisions_match_protocol",
+      "context": "fresh agent, synthetic record analysis; no live retries",
+      "browser_records": 4,
+      "read_records": 6,
+      "evidence": [
+        "outputs/records/decisions.json",
+        "outputs/records/WORK-REPORT.md"
+      ]
+    }
+  ],
+  "scope": "Explicit candidate smoke checks, not automatic discovery, comparative quality, human usability or release verification."
+}

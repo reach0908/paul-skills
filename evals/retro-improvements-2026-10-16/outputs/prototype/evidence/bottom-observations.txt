@@ -1,0 +1,9 @@
+### Result
+[{"width":320,"variant":"A","statusBottom":582.65625,"footerBottom":693.65625,"barTop":711.203125,"scrollY":100},{"width":320,"variant":"B","statusBottom":586.9375,"footerBottom":693.9375,"barTop":711.203125,"scrollY":349},{"width":320,"variant":"C","statusBottom":586.796875,"footerBottom":693.796875,"barTop":725.203125,"scrollY":173},{"width":390,"variant":"A","statusBottom":582.65625,"footerBottom":693.65625,"barTop":725.203125,"scrollY":79},{"width":390,"variant":"B","statusBottom":587.09375,"footerBottom":694.09375,"barTop":725.203125,"scrollY":246},{"width":390,"variant":"C","statusBottom":587.015625,"footerBottom":694.015625,"barTop":725.203125,"scrollY":116}]
+### Ran Playwright code
+```js
+await (async (page) => { const observations=[]; for(const width of [320,390]) { await page.setViewportSize({width,height:844}); for(const variant of ["A","B","C"]) { await page.goto("http://127.0.0.1:8769/?variant="+variant); await page.locator("#start").scrollIntoViewIfNeeded(); const bounds=await page.evaluate(()=>{const s=document.querySelector("#page [role=status]").getBoundingClientRect();const f=document.querySelector("#start").getBoundingClientRect();const b=document.querySelector("#tools").getBoundingClientRect();return {statusBottom:s.bottom,footerBottom:f.bottom,barTop:b.top,scrollY};}); if(bounds.statusBottom>bounds.barTop) throw Error("offline covered at bottom"); await page.screenshot({path:"evidence/"+variant+"-"+width+"-bottom.png"}); observations.push({width,variant,...bounds}); }} return observations; })(page);
+```
+### Page
+- Page URL: http://127.0.0.1:8769/?variant=C
+- Page Title: Fieldnotes · local comparison

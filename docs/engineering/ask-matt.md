@@ -52,6 +52,8 @@ People often get two of these wrong, which is why the router gives the order and
 
 An existing UI can remain unchanged after a prototype comparison. The router returns to implementation only when the decision calls for a change.
 
+For reuse of an approved design, [build-design](https://github.com/reach0908/paul-skills/blob/main/docs/design/build-design.md) identifies the source component and preserved behavior. A prototype comparison keeps agreed benefits and visual choices fixed. [design-browser](https://github.com/reach0908/paul-skills/blob/main/docs/design/design-browser.md) checks readiness before collecting evidence and records where to resume a blocked observation.
+
 Component workbenches remain explicit choices: [state-machine](https://github.com/reach0908/paul-skills/blob/main/docs/design/state-machine.md) exposes existing states, [break](https://github.com/reach0908/paul-skills/blob/main/docs/design/break.md) observes hostile-content failures, [variant](https://github.com/reach0908/paul-skills/blob/main/docs/design/variant.md) compares directions, and [explain-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/explain-interface.md) explains a reference. The router recommends these; the user invokes them.
 
 ## Common questions

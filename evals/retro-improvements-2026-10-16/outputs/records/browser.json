@@ -1,0 +1,50 @@
+[
+  {
+    "attempt": "a1",
+    "revision": "v1",
+    "viewport": "390x844",
+    "tool": "Playwright CLI",
+    "connection": "snapshot succeeded",
+    "target": "http://127.0.0.1:41231/",
+    "access": "public",
+    "actions": [
+      "Tab reached Save",
+      "Enter opened saved detail"
+    ],
+    "artifacts": [
+      "a1-capture.txt"
+    ],
+    "result": "observed"
+  },
+  {
+    "attempt": "a2",
+    "revision": "v2",
+    "viewport": "390x844",
+    "tool": "Playwright CLI",
+    "connection": "Browser is not available",
+    "target": "http://127.0.0.1:41231/",
+    "server_probe": "HTTP 200",
+    "recovery": "reconnected task-owned session once",
+    "retry": "Browser is not available",
+    "actions": []
+  },
+  {
+    "attempt": "a3",
+    "revision": "v2",
+    "tool": "Aside",
+    "connection": "snapshot succeeded on blank page",
+    "target": "http://127.0.0.1:41232/",
+    "server_probe": "connection refused",
+    "actions": []
+  },
+  {
+    "attempt": "a4",
+    "revision": "v2",
+    "tool": "Aside",
+    "connection": "snapshot succeeded",
+    "target": "https://fixture.invalid/account",
+    "navigation": "HTTP 302 to /login; sign-in form visible",
+    "account": "designated profile",
+    "actions": []
+  }
+]

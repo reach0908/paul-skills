@@ -13,6 +13,8 @@ Execute the requested browser scenario and return observable evidence. The analy
 
 Record the target URL or local route, the scope, states, widths and interactions requested. A whole-page request covers the full page even when its URL contains an anchor. A component request stays bounded to that component and its necessary context.
 
+On resuming a scenario, apply the [required-read contract](../../productivity/writing-for-agents/required-reads.md) to earlier skill, reference and tool-help loads. A retained summary does not replace lost instructions.
+
 ## Choose the evidence route
 
 Honor an explicit tool choice for the task. Otherwise use this purpose-based policy:
@@ -26,7 +28,7 @@ Honor an explicit tool choice for the task. Otherwise use this purpose-based pol
 
 A mixed task can gather reference context with Aside and verify implementation with Playwright. State the purpose of each part. Separate browser observations from the analysis agent's interpretation. If choosing between tools needs evidence, use [controlled tool comparison](references/tool-comparison.md); until then, keep this default rather than claiming an unmeasured efficiency advantage.
 
-Follow the selected execution branch, then return its evidence under **Return and release**.
+Before scenario actions, follow [preflight and recovery](references/preflight.md) with the selected execution branch. Start the observation budget only when the required connection, target and access checks are ready, then return evidence under **Return and release**.
 
 ## Playwright execution
 
@@ -68,5 +70,7 @@ For tasks that would submit, publish, purchase or alter account data, use the au
 ## Return and release
 
 Return the chosen tool and purpose, URL, observation time, CLI/browser versions, session, viewport/device, state, actions, artifact paths and each observed result. Separate observations from inferences and unavailable checks. Leave severity and the QA verdict to the responsible analysis agent, and design acceptance to the human.
+
+Include preflight status and, for an interrupted run, the last verified state, blocked observation and concrete resume step. A failed rerun leaves earlier evidence attached to its original revision and conditions; it neither invalidates that observation nor verifies the new one.
 
 Close only the session created for this task. Detach from a user-owned attached browser instead of closing it. If the user needs an interactive handoff, leave that named session open and report it. Keep evidence in the product's existing artifact location, with sensitive state excluded.

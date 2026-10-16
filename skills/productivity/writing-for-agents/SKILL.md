@@ -19,6 +19,8 @@ A pointer does two jobs: state what the material is, and list the **branches** t
 - **One trigger per branch.** Synonyms that rename a single branch are one branch written twice; collapse them and keep only genuinely distinct branches.
 - **Cut identity the body already carries.**
 
+A required-read pointer also needs a completion condition. When authoring or following a workflow with repeated skill/reference loads, use [required-reads.md](required-reads.md): retain complete current bodies, reload lost or changed material, and distinguish a read receipt from the instructions themselves.
+
 ## The two loads
 
 Every document and pointer you add spends one of two budgets:

@@ -37,13 +37,17 @@ In both sub-shapes the floating bottom bar is identical.
 
 Default to **3 variants**. More than 5 stops being radically different and starts being noise, so cap there.
 
-State the unresolved design question and what the comparison should reveal. For an existing page, include its current version as the baseline within the variant count. A small perceived difference is not by itself a reason to expand the redesign.
+Read the existing product brief, decision record and approved screen before drafting. Reuse settled audience, core benefits, content priority and visual choices. An absent brief does not require a new discovery exercise: use the supplied context and label only unresolved assumptions.
 
-Write down the plan in one line, in the prototype's location or a top-of-file comment:
+State one unresolved design question and what the comparison should reveal. For an existing page, include its current version as the baseline within the variant count. A small perceived difference is not by itself a reason to expand the redesign.
 
-> "Three variants of the settings page, switchable via `?variant=`, on the existing `/settings` route."
+Record the comparison in the prototype's notes or a top-of-file comment:
 
-This works whether the user is here to push back or not.
+| Question and baseline locator/revision | Fixed conditions | What each alternative changes |
+| --- | --- | --- |
+| Which grouping makes notification controls easier to find? Existing `/settings` | Approved header, available controls, labels and save behavior | A: current grouping; B: grouped by activity; C: grouped by delivery channel |
+
+For reused UI, record the source export and behavior being kept; read the [component mapping](../../design/build-design/browser-and-spec.md#map-existing-ui-before-editing) when that identity is unresolved. Continue with settled choices and ask only when conflicting evidence changes the comparison.
 
 ### 2. Generate radically different variants
 
@@ -52,6 +56,8 @@ Draft each alternative as a different answer to the stated question. Structural 
 - The page's purpose and the data it has access to.
 - The project's component library / styling system (TailwindCSS, shadcn, MUI, plain CSS, whatever).
 - A clear exported component name, e.g. `VariantA`, `VariantB`, `VariantC`.
+
+Change only the dimensions the question leaves open. Every alternative retains the fixed benefits, approved elements and behavior, even when its arrangement differs radically. For copy-led surfaces, assign each heading, explanation, proof and action a distinct job. For a substantive copy pass, call the Skill tool with "better-writing"; without that tool, read its installed SKILL.md. A repeated benefit earns its place only when it helps a distinct decision. Keep research notes and comparison commentary in the prototype notes or switcher, separate from product copy.
 
 Variants must be **structurally different**: different layout, different information hierarchy, different primary affordance, not just different colours. Three slightly-tweaked card grids isn't a UI prototype, it's wallpaper. If two drafts come out too similar, redo one with explicit "do not use a card grid" guidance.
 
@@ -95,7 +101,7 @@ Put the switcher in a single shared component so both sub-shapes can reuse it. L
 
 ### 5. Hand it over
 
-Surface the URL (and the `?variant=` keys), the question and the material tradeoff of each alternative. The user will flip through whenever they get to it. Keeping the original is a valid answer, separately from whether the comparison tool was useful. The interesting feedback is usually **"I want the header from B with the sidebar from C"**, which is the actual design they want.
+Surface the URL (and the `?variant=` keys), the question and the material tradeoff of each alternative. Check each alternative against the fixed conditions and report deviations before asking the user to compare. The user will flip through whenever they get to it. Keeping the original is a valid answer, separately from whether the comparison tool was useful. The interesting feedback is usually **"I want the header from B with the sidebar from C"**, which is the actual design they want.
 
 ### 6. Capture the answer and clean up
 

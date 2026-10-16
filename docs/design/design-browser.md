@@ -16,7 +16,7 @@ An explicit tool choice takes precedence. Source analysis can stay with the resp
 
 ## Prerequisites
 
-The selected CLI must be available, and the target needs an accessible URL or local preview. The [skill](https://www.aihero.dev/ai-coding-dictionary/skill) checks installed help and project instructions; a missing tool is reported rather than silently replaced.
+The selected CLI must be available, and the target needs an accessible URL or local preview. The [skill](https://www.aihero.dev/ai-coding-dictionary/skill) checks installed help, a usable browser connection, target reachability and required access before the scenario begins. Setup retries are separate from the observation budget.
 
 ## Evidence answers the question
 
@@ -32,11 +32,16 @@ No. Local images, Markdown, browser prototypes and product code can supply the r
 
 It proves an observed visual state. Flow completion requires the requested interactions, state changes and counts, with failures preserved. Tool efficiency claims need a separate controlled comparison.
 
+**What happens if the browser or login fails during a recheck?**
+
+The record identifies the blocked layer, preserves the last verified state and says what must be restored to resume. One retry follows a concrete authorized recovery. A repeated unchanged failure stops that path. Earlier observations retain their original conditions; they do not prove the interrupted recheck passed.
+
 ## It's working if
 
 - Artifacts identify the route, state, viewport and interaction.
 - Expected and completed counts agree, or omissions are reported.
 - Only task-owned browser resources are closed; existing user sessions remain available.
+- Browser, server and access failures remain distinct from product findings, with a concrete resume step.
 
 ## Where it fits
 

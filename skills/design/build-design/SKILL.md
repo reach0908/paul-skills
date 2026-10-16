@@ -36,11 +36,13 @@ Read the project's tokens and component library before writing anything. Then ma
 | A bound variable or style | The token with the same name or the same value |
 | A raw value that equals a token | That token |
 | A raw value with no token | The nearest existing token, listed in the report as rounded |
-| A component instance | The project's component of that name, with the variant the design shows |
+| A component instance | The export and variant traced from the reference's actual call site, rather than a name match alone |
 | A component instance with no project equivalent | Plain markup in place, listed as a deviation, and ask whether a component should exist |
 | A one-off group of layers | Plain markup in place, not a new component |
 
 Never add a token, a component variant or an arbitrary value to hit a number. Stop and ask which way to go when rounding would visibly change the design. That means more than 2px on spacing or size, or a color landing on a different step.
+
+When the request reuses existing UI, resolve the [component mapping](browser-and-spec.md#map-existing-ui-before-editing) before editing. A similar name or appearance does not identify the requested component.
 
 Check what data the design needs and wire it to what exists. Where the backend for part of it does not exist yet, build that part as UI fed by props and name it in the report as unwired.
 
@@ -57,6 +59,8 @@ Render the build at each specified width and compare the properties **Read the d
 With a browser at hand, capture the build at each width and retain the corresponding measurements or state observations. Without one, hand over the local URL with the widths to check and say the comparison is unverified. A rendered build checked against Markdown can satisfy that specification; it cannot establish pixel fidelity to an image that was never supplied.
 
 Fix mismatches within the agreed scope, then compare again. Record the design revision, code revision or working-tree digest, route, state and viewport with each comparison. Finish when each difference is corrected, an agreed rounding, or a recorded deviation/question. Keep usability conflicts visible even when the pixels match.
+
+For component reuse, verify the mapped export is used at the target and compare its link destination and keyboard action in matching states. A passing build or screenshot alone cannot establish that the intended component was reused.
 
 ## 5. Report and stop
 

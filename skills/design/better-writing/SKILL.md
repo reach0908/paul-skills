@@ -29,6 +29,12 @@ Before writing or reviewing, find where the copy lives and read the copy around 
 
 New copy uses the terms on that list. A synonym is a finding only where the same thing is named two ways.
 
+## Give each string a reader and a job
+
+Use the existing brief and approved copy to identify the reader, core benefit and next decision. For a landing page or other explanatory surface, distinguish the headline's promise, the explanation of how it works, supporting evidence and the action label. Preserve approved meaning and flag neighboring strings that repeat a claim without helping another decision. Deliberate repetition for orientation, accessibility or a later action can stay.
+
+Keep internal research status, collection IDs and editorial instructions in source notes. Public copy states supported facts and limitations that affect the reader's choice. An actual product status such as a pending review, unavailable result or uncertain estimate belongs in the interface when the reader needs it; removing internal jargon must not turn uncertainty into an unsupported promise. Project-specific field rules and forbidden phrases stay with the project's content checks.
+
 ## One voice, one vocabulary
 
 The product has one voice and its existing copy establishes it. A local edit does not get to invent a new one. If it's "Archive" in the menu, it isn't "Move to storage" in the toast.

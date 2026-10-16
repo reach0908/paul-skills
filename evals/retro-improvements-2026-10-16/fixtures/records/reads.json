@@ -1,0 +1,48 @@
+[
+  {
+    "id": "r1",
+    "path": "/plugin/0.4.5/design-browser/SKILL.md",
+    "version": "0.4.5",
+    "body": "complete",
+    "current_context": "full body present",
+    "references": "complete",
+    "next_task": "same branch"
+  },
+  {
+    "id": "r2",
+    "path": "/plugin/0.4.5/design-browser/SKILL.md",
+    "version": "0.4.5",
+    "body": "complete before compaction",
+    "current_context": "summary only",
+    "references": "summary only"
+  },
+  {
+    "id": "r3",
+    "path": "/plugin/0.4.5/design-browser/SKILL.md",
+    "version": "requested 0.4.6",
+    "body": "0.4.5 complete",
+    "current_context": "full 0.4.5 body present"
+  },
+  {
+    "id": "r4",
+    "path": "/plugin/0.4.5/prototype/SKILL.md",
+    "body": "complete",
+    "current_context": "full body present",
+    "references": "LOGIC.md complete",
+    "next_task": "UI branch"
+  },
+  {
+    "id": "r5",
+    "call_id": "read-5",
+    "command": "cat /plugin/SKILL.md",
+    "exit_code": 0,
+    "output": "Warning: truncated output\nfirst half of body"
+  },
+  {
+    "id": "r6",
+    "call_id": "read-6",
+    "command": "cat /wrong/SKILL.md",
+    "exit_code": 1,
+    "output": "No such file or directory"
+  }
+]

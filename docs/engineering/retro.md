@@ -8,7 +8,7 @@ It changes the environment, not the code. Take the bug the agent shipped, the fi
 
 You invoke this by typing `/retro`, and the agent won't reach for it on its own.
 
-Reach for it at the end of a session that was harder than it should have been. For example, the agent searched too long for something, made a mistake a tool could have caught, or needed information it could not get. A smooth session has little to teach, and the findings come from the difficult ones. If you want a verdict on the code the session produced, use [code-review](https://aihero.dev/skills-code-review) instead.
+Reach for it at the end of a session that was harder than it should have been. For example, the agent searched too long for something, made a mistake a tool could have caught, or needed information it could not get. A smooth session has little to teach, and the findings come from the difficult ones. If you want a verdict on the code the session produced, use [code-review](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/code-review.md) instead.
 
 ## Where the findings land
 
@@ -30,6 +30,10 @@ Before `retro` writes any rule, it classifies the violation. A **mechanical** vi
 
 ## Common questions
 
+**Can we verify improvements locally to avoid more CI usage?**
+
+Yes. An existing test suite can be exposed through a local command. The proposal distinguishes manual execution from an installed hook, and respects the chosen execution and cost constraints. Existing authorization to implement selected findings carries into that work.
+
 **Does it write the lint rule itself, or wait for a yes? Can I wire it to run after every session?**
 
 It waits. `retro` only proposes. Nothing changes until you pick a candidate, so it edits nothing by hand and installs no hook automatically. This is deliberate. One user asked for exactly this after being "burned by auto-hooks that blocked good changes." It takes judgement to decide what deserves a permanent check, so the skill stays [human-in-the-loop](https://www.aihero.dev/ai-coding-dictionary/human-in-the-loop) and user-invoked. Some users do run it after every implementation run. But a smooth session has little to teach, so a run after every session mostly produces rules nobody needed. There is no dry-run mode. A proposed check is code like any other, so try it against the repo before you let it block merges.
@@ -46,17 +50,21 @@ This is the strongest criticism of it. One user found that "once the job is fini
 
 By default it reviews the current session. That is the best case, because the struggles are still in the context window. If the session has already moved out of the [smart zone](https://www.aihero.dev/ai-coding-dictionary/smart-zone), [clear](https://www.aihero.dev/ai-coding-dictionary/clearing) it, and point a fresh `/retro` at the previous session in the session logs.
 
+**Is repeatedly reading the same skill always wasted work?**
+
+No. Compaction, source changes and a newly required branch can justify another read. The retrospective checks paired calls and outputs for completeness and distinguishes those reloads from avoidable repeats. Truncated or failed loads remain incomplete, even if the run later continued.
+
 **The agent keeps making the same mistake. Should I add a line to `CLAUDE.md`?**
 
 Usually not, and `retro` pushes back on this more than anything else. A line in `CLAUDE.md` loads into every session, gives less weight to everything else in the file, and goes out of date as the code changes. If the mistake is mechanical, the fix is a check that fails. If it is a judgement call, it goes in the coding standards the reviewer reads. `AGENTS.md` and `CLAUDE.md` are for navigation pointers and little else. For the same reason, `retro` is not a [memory system](https://www.aihero.dev/ai-coding-dictionary/memory-system). It does not store what happened. It changes the environment so the mistake cannot happen again.
 
 **My setup mentions `CODING_STANDARDS.md` and I don't have one. Where does it come from?**
 
-No skill ships the file. The first time a session finds a judgement-call rule for the reviewer, `retro` proposes to create it. After you accept, [code-review](https://aihero.dev/skills-code-review) reads it. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
+No skill ships the file. The first time a session finds a judgement-call rule for the reviewer, `retro` proposes to create it. After you accept, [code-review](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/code-review.md) reads it. Any other standards doc you already keep, such as `CONTRIBUTING.md`, works the same way.
 
 **How is it different from `improve-codebase-architecture`?**
 
-The input is different. [improve-codebase-architecture](https://aihero.dev/skills-improve-codebase-architecture) needs only the code, and looks for structural improvements to it. `retro` needs a session history, and improves the environment the agent works in, not the code. You use both; neither replaces the other.
+The input is different. [improve-codebase-architecture](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/improve-codebase-architecture.md) needs only the code, and looks for structural improvements to it. `retro` needs a session history, and improves the environment the agent works in, not the code. You use both; neither replaces the other.
 
 ## It's working if
 
@@ -75,7 +83,7 @@ grill-with-docs → to-spec → to-tickets → implement → code-review → ret
 
 Run it after a build worth learning from, in the same session or pointed at that session's log. You can skip it after a smooth build.
 
-- [code-review](https://aihero.dev/skills-code-review) is the reviewer agent that `retro` most often tunes. New coding standards go where its Standards axis reads them.
+- [code-review](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/code-review.md) is the reviewer agent that `retro` most often tunes. New coding standards go where its Standards axis reads them.
 - [writing-for-agents](https://aihero.dev/skills-writing-for-agents) sets the writing style for every steering file and skill that `retro` proposes, and `retro` loads it before it starts.
 
-[ask-matt](https://aihero.dev/skills-ask-matt) routes across the whole set when you are unsure which skill the situation needs.
+[ask-matt](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/ask-matt.md) routes across the whole set when you are unsure which skill the situation needs.
