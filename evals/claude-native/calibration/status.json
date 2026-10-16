@@ -1,0 +1,7598 @@
+{
+  "judgeModel": "claude-opus-5-5",
+  "claudeVersion": "2.1.301",
+  "startedAt": "2026-10-16T16:10:19.987Z",
+  "rubricVersion": "rubric-v0.3",
+  "summary": {
+    "agree": 525,
+    "false_pass": 0,
+    "false_fail": 0,
+    "unjudged": 0,
+    "human_review": 30,
+    "runs": 132
+  },
+  "rows": [
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": false,
+        "A3-vague-error-copy": false,
+        "A3-no-invented-defects": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": false,
+        "A3-vague-error-copy": false,
+        "A3-no-invented-defects": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": false,
+        "A3-vague-error-copy": false,
+        "A3-no-invented-defects": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-F",
+      "kind": "fail",
+      "criterion": "A4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": false
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": true,
+        "A3-vague-error-copy": true,
+        "A3-no-invented-defects": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": true,
+        "A3-vague-error-copy": true,
+        "A3-no-invented-defects": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-rendered-claim": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A3-unnamed-delete-button": true,
+        "A3-vague-error-copy": true,
+        "A3-no-invented-defects": true
+      }
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "artifact": "A-P",
+      "kind": "pass",
+      "criterion": "A4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "A4-locations-cited": true,
+        "A4-verdict-block": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-card",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-card",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-card",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-css",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-css",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-css",
+      "kind": "fail",
+      "criterion": "B3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "B4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "B4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "B4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-F-reply",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": false
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-card",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-card",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-card",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-markup": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-css",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-css",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-css",
+      "kind": "pass",
+      "criterion": "B3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B3-photo-first-styles": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "B4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "B4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "B4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "B4-conflict-reported": true
+      }
+    },
+    {
+      "case": "build-design-scoped-card",
+      "artifact": "B-P-reply",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-comparison-unverified": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-reply",
+      "kind": "fail",
+      "criterion": "G3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-reply",
+      "kind": "fail",
+      "criterion": "G3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-reply",
+      "kind": "fail",
+      "criterion": "G3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-src",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-src",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-src",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-test",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-test",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-F-test",
+      "kind": "fail",
+      "criterion": "G2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": false
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-reply",
+      "kind": "pass",
+      "criterion": "G3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-reply",
+      "kind": "pass",
+      "criterion": "G3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-reply",
+      "kind": "pass",
+      "criterion": "G3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G3-evidence-reported": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-src",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-src",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-src",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-fix-keeps-scroll": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-test",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-test",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": true
+      }
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "artifact": "G-P-test",
+      "kind": "pass",
+      "criterion": "G2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "G2-regression-test-observes-scroll": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": false,
+        "I2-index-not-working-copy": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": false,
+        "I2-index-not-working-copy": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": false,
+        "I2-index-not-working-copy": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "C3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": false
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-F4",
+      "kind": "fail",
+      "criterion": "I6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C2-no-runtime-claim": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "C3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "C3-review-reply": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I2-lockfile-excluded": true,
+        "I2-index-not-working-copy": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I3-close-control-finding": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I4-legacy-width-not-regression": true
+      }
+    },
+    {
+      "case": "interface-review-staged",
+      "artifact": "I-P",
+      "kind": "pass",
+      "criterion": "I6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "I6-verdict-block": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R2",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R2",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R2",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-B",
+      "kind": "boundary",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-v2-limit-stated": true,
+        "R1-answers-all-three": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-v1-limit-scoped": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-speed": true
+      }
+    },
+    {
+      "case": "research-atlas-v2",
+      "artifact": "R-P2-pilot",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-conflict-named": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-capability": true
+      }
+    },
+    {
+      "case": "research-requirement-conflict",
+      "artifact": "R3-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F4",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-answers-per-host": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-owner-citations": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R3-forum-not-decisive": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-invented-results": true
+      }
+    },
+    {
+      "case": "research-same-name-tools",
+      "artifact": "R2-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-B",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F2",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F3",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U4-close-and-reopen-consistent": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F6",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": "human",
+      "observed": "pass",
+      "outcome": "human_review",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U5",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "U5-all-states-covered": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-F7",
+      "kind": "fail",
+      "criterion": "U7",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": false
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U1-destination-ids-kept": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U2-transition-fields": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U3",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U3-request-and-confirmation": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U4-close-and-reopen-consistent": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U5-all-states-covered": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U6-refresh-policy-open": true
+      }
+    },
+    {
+      "case": "user-flow-export-panel",
+      "artifact": "U-P2-pilot",
+      "kind": "pass",
+      "criterion": "U7",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "U7-handoff-sections": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F2",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 0,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 0,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 1,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 1,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R5",
+      "run": 2,
+      "expected": false,
+      "observed": "fail",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-F5",
+      "kind": "fail",
+      "criterion": "R6",
+      "run": 2,
+      "expected": "human",
+      "observed": "fail",
+      "outcome": "human_review",
+      "graders": {
+        "R6-unreadable-not-missing": false
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R6",
+      "run": 0,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R6",
+      "run": 1,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R1",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R1-both-answered": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R2",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R2-file-citations": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R4",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R4-no-registration-claim": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R5",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R5-required-sections": true
+      }
+    },
+    {
+      "case": "research-unreadable-evidence",
+      "artifact": "R4-P",
+      "kind": "pass",
+      "criterion": "R6",
+      "run": 2,
+      "expected": true,
+      "observed": "pass",
+      "outcome": "agree",
+      "graders": {
+        "R6-unreadable-not-missing": true
+      }
+    }
+  ],
+  "graders": {
+    "better-interface-settings-audit:C2-no-rendered-claim": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "a4d5a2dee29dc363647725bb2b07dd05b68afbc3b9216221265a9b196e6fa8d3"
+    },
+    "better-interface-settings-audit:A3-unnamed-delete-button": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "fbe84e25438a3ef084b307091947b4eecd073e7772fe55faba2faa071ca110bd"
+    },
+    "better-interface-settings-audit:A3-vague-error-copy": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "25df7fa58a9c92f0e6068daf3da086868ecff601b4c0fe2b6fa7017af887b672"
+    },
+    "better-interface-settings-audit:A3-no-invented-defects": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "298850f656235e66fe8641d3ff15bb5b79413c47c8c414bb345eab9bae8abd74"
+    },
+    "build-design-scoped-card:B3-photo-first-markup": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "d0f20d950f9b7a1213a8efffd7ba307960c7c5369599c99fed27c4a962ba8189"
+    },
+    "build-design-scoped-card:B3-photo-first-styles": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6a66d4ec91eb8ef21483db28cbfcf93266b917323ef0d0fc474198e6dc2b6e76"
+    },
+    "build-design-scoped-card:B4-conflict-reported": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "4e763e94994428ee98bdfa8dc4f089e0f16cef734289e4987dd6155f78652b70"
+    },
+    "build-design-scoped-card:C2-comparison-unverified": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "4cd258527435fc115be92ae77cf9e0a47e80efd0d8b1ffdf7e56443bbded5a37"
+    },
+    "diagnosing-bugs-scroll-reset:G3-evidence-reported": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "27fbf7edf3e63fdd61cd35c791bb23cc3ef32fceb701f07673d66f13a6d5fb90"
+    },
+    "diagnosing-bugs-scroll-reset:G2-fix-keeps-scroll": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "3a1338e29d4996b863dc3b5b0680eb455d133fa3317e35e303524ee10cb4fcb8"
+    },
+    "diagnosing-bugs-scroll-reset:G2-regression-test-observes-scroll": {
+      "agreed": 6,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "17684b329213f2531d1bbbde160665f85ac0dcc20a6ed7eae46d256b44feafaf"
+    },
+    "interface-review-staged:C2-no-runtime-claim": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "0cc58d3e885db4d3c50b667f4b5a6b77ed8979b09a7818337af98ca380099960"
+    },
+    "interface-review-staged:I2-index-not-working-copy": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6ef97366c7e76a4e0828ca4c15a775a0cab30bc4457a42a26994845fb408f876"
+    },
+    "interface-review-staged:I3-close-control-finding": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "f7b718b8e36c4b6a842f18872025fc3367f23fff6894090a69f3649a762e8943"
+    },
+    "interface-review-staged:I4-legacy-width-not-regression": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "114f08323f05612867f2399ebd50ad396d5b358e0e71e9ec4a5e8c400beac58e"
+    },
+    "research-atlas-v2:R1-answers-all-three": {
+      "agreed": 18,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "172e1fe4b61d367cb8da4b550ff286ebc553e44e8791995c314993e13288de38"
+    },
+    "research-atlas-v2:R2-owner-citations": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 6,
+      "criteriaSha256": "c346d4e4c89c1b25836c38047f60018363720e0b1f02c19538c135b9128b4b4d"
+    },
+    "research-atlas-v2:R3-v1-limit-scoped": {
+      "agreed": 18,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6ab80fa4a2b6a7e9a10bca6617ad853c9be132eb841b7f1ddf9dab962533d8f3"
+    },
+    "research-atlas-v2:R4-no-invented-speed": {
+      "agreed": 18,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "0f292102cd4a0cf3bbd504fee314715c73e2f82ff5840cd9ea6561f3a231c98d"
+    },
+    "research-atlas-v2:R5-required-sections": {
+      "agreed": 18,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6e74c5722f03d0a81dd88ab75ff73ca58736e7b74ea27aecac6965e0eea1f23d"
+    },
+    "research-requirement-conflict:R1-conflict-named": {
+      "agreed": 15,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "4734cf238d4d19a0b5a6ed764090270d7e5b3bcb1135c8b57cb63a5e40a83100"
+    },
+    "research-requirement-conflict:R2-owner-citations": {
+      "agreed": 15,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "a97b223965d892d785944542f3f51b797c347e0455af6db9b644a8a32486c436"
+    },
+    "research-requirement-conflict:R4-no-invented-capability": {
+      "agreed": 15,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "f044e51e55d25ab97778bd16df00f1555955f1935f82db679186e2d9b97ca22f"
+    },
+    "research-requirement-conflict:R5-required-sections": {
+      "agreed": 15,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6e74c5722f03d0a81dd88ab75ff73ca58736e7b74ea27aecac6965e0eea1f23d"
+    },
+    "research-same-name-tools:R1-answers-per-host": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "ec9ed1c0b0569b1f880932b5c50d15810d963dc21a628b7ba725fc84d5769252"
+    },
+    "research-same-name-tools:R2-owner-citations": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "725920e889c82d67930c41613c5aa4f0e553f0cddc4711ec780d689d84dd3141"
+    },
+    "research-same-name-tools:R3-forum-not-decisive": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "7f4a8b7c237fcf86ce12aa9e2b1e5313fc7e845f47c6006c687613875057ca85"
+    },
+    "research-same-name-tools:R4-no-invented-results": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "f3586ea074a24f04ce9ed7927411bb714bc46f84d9cb44067d2fa1d6326745f5"
+    },
+    "research-same-name-tools:R5-required-sections": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "6e74c5722f03d0a81dd88ab75ff73ca58736e7b74ea27aecac6965e0eea1f23d"
+    },
+    "user-flow-export-panel:U2-transition-fields": {
+      "agreed": 24,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "ad34b4e29918bef47d7995b2430861235c02874c98014a2f3240ad70175ed58f"
+    },
+    "user-flow-export-panel:U3-request-and-confirmation": {
+      "agreed": 24,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "0505da7aae501e887241d696ae767b0ecd1da1b062306753253bf1b2f0fcbd19"
+    },
+    "user-flow-export-panel:U4-close-and-reopen-consistent": {
+      "agreed": 21,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 3,
+      "criteriaSha256": "775ed72f02f98cd20c863c72f8f3c9755ce95b5e49575098141bdb96d5e0c343"
+    },
+    "user-flow-export-panel:U5-all-states-covered": {
+      "agreed": 15,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 9,
+      "criteriaSha256": "42ac9ba17c99e634514059a2548e39a63f751100f991df83851710a5ec464ae6"
+    },
+    "user-flow-export-panel:U6-refresh-policy-open": {
+      "agreed": 24,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "8228823f6e7cd9e188214e2cae2c9429e83f94f54164c2fa3283e6a50249b6b4"
+    },
+    "user-flow-export-panel:U7-handoff-sections": {
+      "agreed": 21,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 3,
+      "criteriaSha256": "cc866cb30d1e25a14644fbabf8b276ee9cf3e3b6c2edab1e837cce3f49c3a389"
+    },
+    "research-unreadable-evidence:R1-both-answered": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "7e84d119c63eeee0a5eec26306d748bd7d2e0f3f4adc405a8b9837fe8101963f"
+    },
+    "research-unreadable-evidence:R2-file-citations": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "102d27f90620139ef8768f682abec3c6dceb278ec8eb42a38a67a9b2a8f2ecd8"
+    },
+    "research-unreadable-evidence:R4-no-registration-claim": {
+      "agreed": 12,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 0,
+      "criteriaSha256": "447f8c1dc5f2eeab0db247aca1c85dd334ee7b18e9bb2a4f1357b251ca9cc3fc"
+    },
+    "research-unreadable-evidence:R5-required-sections": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 3,
+      "criteriaSha256": "6e74c5722f03d0a81dd88ab75ff73ca58736e7b74ea27aecac6965e0eea1f23d"
+    },
+    "research-unreadable-evidence:R6-unreadable-not-missing": {
+      "agreed": 9,
+      "falsePass": 0,
+      "falseFail": 0,
+      "unjudged": 0,
+      "human": 3,
+      "criteriaSha256": "4a234bb29c171ee1709dd25aa783ed66714b4f1357b28d6550466547da8569c3"
+    }
+  }
+}

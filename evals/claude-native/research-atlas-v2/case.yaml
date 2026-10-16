@@ -1,0 +1,38 @@
+{
+  "schema_version": "1.1",
+  "name": "research-atlas-v2",
+  "description": "R-01: answer a version-bounded question from conflicting supplied sources and save cited findings.",
+  "tags": ["research", "development", "group-with-without"],
+  "runs": 3,
+  "expected_outcome": "outputs/research.md says v2 supports CSV up to 20 MB (D1 Import, D4 Limits), attributes 5 MB to v1 and the undated blog, and states that the sources hold no measured speed.",
+  "execution": {
+    "max_turns": 30,
+    "timeout_seconds": 600,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Write",
+      "Edit"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-research-file-created", "type": "file_exists", "path": "outputs/research.md"},
+    {"name": "C1-no-other-write", "type": "tool_used", "tool": "Write", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C1-no-other-edit", "type": "tool_used", "tool": "Edit", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "R1-v2-limit-stated", "type": "regex", "pattern": "20\\s?MB", "flags": "i", "target": {"source": "file", "path": "outputs/research.md"}},
+    {"name": "R1-answers-all-three", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report answers all three points for Atlas Import v2: CSV is supported; the maximum CSV upload size is 20 MB; measured speed cannot be determined from the supplied sources. FAIL if any point is missing or answered differently."},
+    {"name": "R2-owner-citations", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "The supplied sources say exactly this. D1 (v2 manual, product team), section Import: CSV files up to 20 MB are supported; XLSX is not supported. D2 (v1 manual, product team), section Import: CSV files up to 5 MB are supported. D3 (independent blog, no version or method): uploads are limited to 5 MB. D4 (v2 release notes, product team), section Limits: the CSV limit increased from 5 MB to 20 MB. PASS only if each core v2 conclusion of the report (CSV support, the maximum size) cites D1 and/or D4 by file name or ID together with the section or line that locates it, and the cited section actually says what that conclusion claims. FAIL if a core conclusion is uncited, rests only on D3, cites a section that does not support it, or cites a source without a section or line."},
+    {"name": "R3-v1-limit-scoped", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the 5 MB figure is attributed to v1 (D2) or to the undated third-party blog (D3), and the report states that v2 raised the limit (D4) or that D3 cannot establish a v2 limit. FAIL if it says v2 is limited to 5 MB, or leaves 5 MB versus 20 MB as an unresolved conflict for v2."},
+    {"name": "R4-no-invented-speed", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report states that the supplied sources contain no measured upload or import speed, and makes no claim about speed, throughput or relative performance. FAIL if it asserts any speed or performance figure or comparison as fact."},
+    {"name": "R5-required-sections", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report contains all of: a conclusion, evidence with nearby citations, a research or checked date, limitations, and open questions or next checks. FAIL if any of these is absent."},
+    {"name": "IND-research-skill-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?research\""}
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.1",
+  "name": "user-flow-export-panel",
+  "description": "U-01: a transition contract with an async export, close and reopen in every state, and one undecided policy.",
+  "tags": ["user-flow", "development", "group-with-without"],
+  "runs": 3,
+  "expected_outcome": "outputs/user-flow.md keeps exports-panel and documents-list, models idle, running, failed and done with close and reopen in each, creates the key only on start and the receipt only on confirmed completion, never cancels on close, and leaves the refresh policy open.",
+  "execution": {
+    "max_turns": 40,
+    "timeout_seconds": 900,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Write",
+      "Edit"
+    ]
+  },
+  "graders": [
+    {"name": "C3-flow-file-created", "type": "file_exists", "path": "outputs/user-flow.md"},
+    {"name": "C1-no-other-write", "type": "tool_used", "tool": "Write", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/user-flow\\.md\")", "min": 0, "max": 0},
+    {"name": "C1-no-other-edit", "type": "tool_used", "tool": "Edit", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/user-flow\\.md\")", "min": 0, "max": 0},
+    {"name": "C1-no-state-machine", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?state-machine\"", "arm": "both", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "U1-destination-ids-kept", "type": "regex", "pattern": "^(?=[\\s\\S]*exports-panel)(?=[\\s\\S]*documents-list)", "target": {"source": "file", "path": "outputs/user-flow.md"}},
+    {"name": "U2-transition-fields", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "Judge only the rows of the transition table; a transition missing from the table is judged by a different criterion. PASS only if the document uses stable state IDs and every row states its origin state, the user action or system event, any condition, the feedback, the destination state and the data retained or changed. A row explicitly marked as waiting on a named undecided policy may leave its feedback, destination and data effect open, and a row that records an action as intentionally not offered or out of scope may leave its destination and data effect empty. FAIL if transitions are prose only, or a row omits its feedback, destination or data effect without naming the undecided policy it waits on."},
+    {"name": "U3-request-and-confirmation", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "PASS only if all hold: starting creates a new request key; pressing start again while running reuses the same request; failure keeps the options and key; retry reuses the same key; the receipt and download appear only after the server confirms completion. FAIL if any of these is contradicted, for example a receipt or success state right after start, or a new key on retry."},
+    {"name": "U4-close-and-reopen-consistent", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "PASS only if closing the panel is available in all four operation states (not started, running, failed, done), closing never cancels the request, closing returns to documents-list, reopening in the same session restores the operation state and its data, a completion while closed shows as done on reopen, and the unstarted state restores no request key or receipt. FAIL if close is missing for any of the four states, close cancels the request, or an unstarted state is given a key or receipt."},
+    {"name": "U5-all-states-covered", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "PASS only if close and reopen transitions are specified for all four operation states (not started, running, failed, done), and the document walks the success path, the failure and retry path, and a close then reopen path. FAIL if close or reopen is specified for only some of the four states, or a claim that all paths were checked is contradicted by the transition table."},
+    {"name": "U6-refresh-policy-open", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "PASS only if restoring after a page refresh is marked as an undecided policy, with the affected transitions left unresolved, while the rest of the flow is still specified. FAIL if it states a definite refresh behavior as decided, or omits the refresh question."},
+    {"name": "U7-handoff-sections", "type": "llm", "focus": {"source": "file", "path": "outputs/user-flow.md"}, "criteria": "PASS only if the document includes where the policies came from, the state IDs, the transitions, the path walkthrough results and the open decisions, and says that its walkthrough checks internal consistency rather than implementation or real user behavior. FAIL if any of these is missing or it claims user or implementation validation."},
+    {"name": "IND-user-flow-skill-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?user-flow\""}
+  ]
+}

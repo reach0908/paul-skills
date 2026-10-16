@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.1",
+  "name": "diagnosing-bugs-scroll-reset",
+  "description": "G-01: a reported UI-state bug that the existing tests miss; the fix should follow a red-capable loop and a regression test.",
+  "tags": ["diagnosing-bugs", "development", "group-code-with-without", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "Runs the tests, adds a test that reproduces the scroll reset and sees it fail, then fixes selectCreator so scrollTop survives a selection, reruns green, and reports the before and after evidence.",
+  "execution": {
+    "max_turns": 50,
+    "timeout_seconds": 900,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Edit",
+      "Bash",
+      "Write"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C1-only-bug-files-edited", "type": "tool_used", "tool": "Edit", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*(src/onboarding\\.js|test/onboarding\\.test\\.js)\")", "min": 0, "max": 0},
+    {"name": "C1-only-bug-files-edited-write", "type": "tool_used", "tool": "Write", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*(src/onboarding\\.js|test/onboarding\\.test\\.js)\")", "min": 0, "max": 0},
+    {"name": "G2-regression-test-observes-scroll", "type": "llm", "focus": {"source": "file", "path": "test/onboarding.test.js"}, "criteria": "This is a node:test file for a creator picker. PASS only if it contains a test that sets a non-zero scroll position, selects a creator and asserts that scrollTop is unchanged afterwards, while the original two tests remain. FAIL if no test observes scrollTop after a selection, or an original test was deleted or weakened."},
+    {"name": "G2-fix-keeps-scroll", "type": "llm", "focus": {"source": "file", "path": "src/onboarding.js"}, "criteria": "This module holds the creator picker state; the view restores the list from scrollTop after each change. Before the fix, reload() sorted selected creators first, incremented version and set scrollTop to 0; keeping the sort and the version increment is expected. PASS only if selecting or deselecting a creator no longer resets scrollTop, selection toggling still works, and nothing else in the module was rewritten. FAIL if a selection still sets scrollTop to 0, or the fix removes or changes selection behavior."},
+    {"name": "G3-evidence-reported", "type": "llm", "focus": "last_message", "criteria": "PASS only if the reply reports the reproducing command, that it failed before the fix, that the tests pass after the fix, and the cause (the selection rebuilds the list and resets scrollTop). FAIL if it claims a fix without a before-and-after test result, or claims device or browser verification that was not performed."},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "IND-diagnosing-bugs-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?diagnosing-bugs\""}
+  ]
+}

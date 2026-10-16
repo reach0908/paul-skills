@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.1",
+  "name": "better-interface-settings-audit",
+  "description": "A-01: a current-screen audit request; entry, procedure and six owners must load before inspection, read-only.",
+  "tags": ["better-interface", "development", "group-with-without", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "Routes to a current-screen audit, reads audit-procedure.md and loads the six owners before reading src/, reports the unnamed delete button as HIGH Accessibility at Settings.tsx:13 and the vague error as Writing at :17, marks rendered checks Not verified and ends with Block.",
+  "execution": {
+    "max_turns": 60,
+    "timeout_seconds": 1200,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
+    {"name": "A1-entry-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-interface\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-procedure-before-inspection", "type": "tool_order", "before": {"tool": "Read", "input_match": "better-interface/audit-procedure\\.md"}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-accessibility-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-accessibility\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-layout-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-layout\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-writing-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-writing\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-typography-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-typography\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-colors-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-colors\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A2-ui-before-inspection", "type": "tool_order", "before": {"tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-ui\""}, "after": {"tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/"}},
+    {"name": "A3-unnamed-delete-button", "type": "llm", "focus": "last_message", "criteria": "Context: in src/Settings.tsx line 13 an icon-only delete-account button contains only an SVG with no text, aria-label or title. PASS only if the review reports this as an Accessibility finding at the highest severity it uses (HIGH), with its location (src/Settings.tsx:13 or the button), the impact (screen readers announce an unnamed button, so users cannot tell it deletes the account) and a fix such as an accessible name. FAIL if the finding is missing, mis-located or rated below the top severity."},
+    {"name": "A3-vague-error-copy", "type": "llm", "focus": "last_message", "criteria": "Context: src/Settings.tsx line 17 shows the error text 'Error occurred.' PASS only if the review reports this as a Writing finding that the message does not say what went wrong or what to do next, with its location and a concrete replacement direction. FAIL if the finding is missing."},
+    {"name": "A3-no-invented-defects", "type": "llm", "focus": "last_message", "criteria": "Context: the button already has a 44px target (2.75rem), the email wraps with overflow-wrap and min-width 0, headings are in order and there is no color or motion code beyond one error color. PASS if every finding the review reports is supported by the code described and none claims a rendered, contrast-measured or keyboard-tested result. FAIL if it reports an unsupported defect as fact, such as a small touch target, email overflow, or a measured contrast failure."},
+    {"name": "A4-locations-cited", "type": "regex", "pattern": "Settings\\.tsx:\\d+", "target": "last_message"},
+    {"name": "A4-verdict-block", "type": "regex", "pattern": "\\bBlock\\b", "target": "last_message"},
+    {"name": "C2-no-rendered-claim", "type": "llm", "focus": "last_message", "criteria": "Context: no browser or renderer was available, and the user said browser checks are not needed. PASS only if the review marks rendered, keyboard and screen-reader verification as not performed (Not verified) and claims no such check. FAIL if it states or implies a rendered or assistive-technology check ran."},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0}
+  ]
+}

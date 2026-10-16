@@ -1,0 +1,257 @@
+[
+ [
+  "interface-review-flow-change",
+  "with",
+  {
+   "pending_human": 3
+  },
+  {},
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "interface-review-staged",
+  "with",
+  {
+   "pending_human": 3
+  },
+  {},
+  {
+   "I1": 3,
+   "I5": 3,
+   "I6": 3
+  }
+ ],
+ [
+  "interface-review-unnamed",
+  "with",
+  {
+   "pending_human": 3
+  },
+  {},
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "better-interface-settings-audit",
+  "with",
+  {
+   "required_pass": 2,
+   "fail": 1
+  },
+  {
+   "C2-no-rendered-claim": 1
+  },
+  {}
+ ],
+ [
+  "better-interface-settings-audit",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "C2-no-rendered-claim": 3,
+   "A1-entry-before-inspection": 3,
+   "A2-procedure-before-inspection": 3,
+   "A2-accessibility-before-inspection": 3,
+   "A2-layout-before-inspection": 3,
+   "A2-writing-before-inspection": 3,
+   "A2-typography-before-inspection": 3,
+   "A2-colors-before-inspection": 3,
+   "A2-ui-before-inspection": 3,
+   "A4-verdict-block": 3,
+   "A3-no-invented-defects": 1,
+   "A3-unnamed-delete-button": 1
+  },
+  {}
+ ],
+ [
+  "research-atlas-v2",
+  "with",
+  {
+   "fail": 3
+  },
+  {
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-atlas-v2",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "R2-owner-citations": 3,
+   "R5-required-sections": 3,
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-requirement-conflict",
+  "with",
+  {
+   "fail": 3
+  },
+  {
+   "R2-owner-citations": 2,
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-requirement-conflict",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "R2-owner-citations": 3,
+   "R5-required-sections": 3,
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-same-name-tools",
+  "with",
+  {
+   "fail": 3
+  },
+  {
+   "R5-reread-after-save": 3,
+   "R4-no-invented-results": 1
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-same-name-tools",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "R2-owner-citations": 3,
+   "R4-no-invented-results": 2,
+   "R5-required-sections": 3,
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "user-flow-export-panel",
+  "with",
+  {
+   "pending_human": 3
+  },
+  {},
+  {
+   "C2": 3,
+   "U1": 3
+  }
+ ],
+ [
+  "user-flow-export-panel",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "U2-transition-fields": 3,
+   "U5-all-states-covered": 3,
+   "U7-handoff-sections": 3
+  },
+  {
+   "C2": 3,
+   "U1": 3
+  }
+ ],
+ [
+  "research-unreadable-evidence",
+  "with",
+  {
+   "fail": 3
+  },
+  {
+   "R5-reread-after-save": 3,
+   "R2-file-citations": 1
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "research-unreadable-evidence",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "R5-reread-after-save": 3
+  },
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "build-design-scoped-card",
+  "with",
+  {
+   "required_pass": 3
+  },
+  {},
+  {}
+ ],
+ [
+  "build-design-scoped-card",
+  "without",
+  {
+   "required_pass": 3
+  },
+  {},
+  {}
+ ],
+ [
+  "diagnosing-bugs-scroll-reset",
+  "with",
+  {
+   "pending_human": 3
+  },
+  {},
+  {
+   "C2": 3
+  }
+ ],
+ [
+  "diagnosing-bugs-scroll-reset",
+  "without",
+  {
+   "fail": 3
+  },
+  {
+   "G3-evidence-reported": 3,
+   "G1-loop-run-before-fix": 2,
+   "G1-test-written-before-fix": 2
+  },
+  {
+   "C2": 3
+  }
+ ]
+]

@@ -41,6 +41,8 @@ Use `npm run test:graders` to run only the grader controls. These tests use Pyth
 
 Both commands run on the maintainer's machine without starting GitHub Actions or calling a model API. The existing validation workflow still runs `npm run check`; the extra grader suite remains local. Pushing a branch or opening a PR can still trigger the repository's existing workflows.
 
+`npm run eval:check` validates the [Claude native suite](../evals/claude-native/README.md) and its regex and `input_match` controls; `npm test` runs the same checks. `npm run eval:plan` asks the `claude` CLI to parse and plan every native case with a zero cost ceiling, so no model run starts. Running the native cases themselves is paid and follows that README.
+
 ## Independent versions
 
 Paul Skills starts at **0.1.0**, independently of Matt Pocock's release numbers. The earlier Paul 1.4.0 pilot and all inherited upstream tags/changelog entries remain historical records. Never delete or move them to reset the version. New tags use `paul-skills@<version>` to avoid collisions with inherited `v1.0.0` and later tags.

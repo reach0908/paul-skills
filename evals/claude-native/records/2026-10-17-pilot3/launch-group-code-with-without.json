@@ -1,0 +1,67 @@
+{
+  "group": "group-code-with-without",
+  "command": [
+    "claude",
+    "plugin",
+    "eval",
+    ".",
+    "--eval-dir",
+    "evals/claude-native",
+    "--tag",
+    "group-code-with-without",
+    "--ablation",
+    "with-without",
+    "--scaffold",
+    "--no-publish",
+    "--trust-plugin",
+    "--model",
+    "claude-opus-5-5",
+    "--judge-model",
+    "claude-opus-5-5",
+    "--runs",
+    "3",
+    "--concurrency",
+    "4",
+    "--max-cost-usd",
+    "200",
+    "--keep-temp",
+    "--json",
+    "<repo>/evals/claude-native/results/pilot3-group-code-with-without.json",
+    "--allow-tools",
+    "Edit",
+    "Write",
+    "Bash(node:*)",
+    "Bash(npm:*)",
+    "Bash(git:*)"
+  ],
+  "cwd": "/var/folders/2k/3kx4nnlj4519lnk8p6mm_0f40000gn/T/paul-eval-ardigc6f/plugin",
+  "startedAt": "2026-10-16T16:28:34.510867+00:00",
+  "finishedAt": "2026-10-16T16:30:23.911156+00:00",
+  "exitCode": 0,
+  "stage": {
+    "digest": "sha256:aea8ef30e0e47cdcccee0a98feb0c3aa8eb0f791b11666f51ccf106efa6cbe9c",
+    "fileCount": 265,
+    "repository": {
+      "head": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
+      "skillTrees": {
+        "research": "703ad605f47c8f05cb252e74497522bae9a83255",
+        "interface-review": "667659acbb19c4d4dd177553ffeed3d3346c79db",
+        "better-interface": "c08fede46c8a7f888a18d5826cef3efa643cafd2",
+        "user-flow": "10ced6db25c9273de41714014489c678e6a64a75",
+        "build-design": "8744eb0f2182600c593d0b289e34f3cf631aa7cb",
+        "diagnosing-bugs": "e936d3c8865e52a82a9819c5d153c70fd2e0c736"
+      },
+      "rubricContractRevision": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
+      "dirtyPaths": [
+        "?? evals/claude-native/"
+      ]
+    }
+  },
+  "grants": [
+    "Edit",
+    "Write",
+    "Bash(node:*)",
+    "Bash(npm:*)",
+    "Bash(git:*)"
+  ]
+}

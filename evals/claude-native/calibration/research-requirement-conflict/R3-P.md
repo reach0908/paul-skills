@@ -1,0 +1,32 @@
+# 모래시계 본체와 3D 모래 구현 방향
+
+- 조사일: 2026-10-16
+- 범위: `sources/`의 K1, K2만 확인했다. 코드 실행이나 성능 측정은 하지 않았다.
+
+## 결론
+
+두 목표는 GlassKit만으로는 함께 이룰 수 없다. `glassEffect()`는 뷰의 2D 모양 안에만 유리 재질을 그리고, 3D나 부피 있는 형상은 그리지 않는다 [K1 `sources/K1-glasskit-glass-effect.md` §Overview, §Limits]. 그래서 GlassKit 유리 본체 안에 진짜 3D 모래를 담을 수는 없다.
+
+정해야 할 선택지는 두 가지다.
+
+1. **GlassKit 유리 셸 + 별도 3D 모래 층**: 본체 윤곽은 `glassEffect()`의 2D 유리로 만들고 [K1 §Overview], 모래는 그 뒤나 앞의 3D 장면에서 그린다. (추론) 2D 유리는 3D 형상을 그리지 않으므로 [K1 §Limits], 유리가 모래를 실제로 굴절시키지는 않을 것이다.
+2. **DepthKit 투명 3D 본체 + 모래 파티클**: 본체를 `TransparentMaterial` 메시로 만들고 그 안에서 모래 파티클을 그린다 [K2 `sources/K2-depthkit-materials.md` §Transparent materials]. 대신 GlassKit의 유리 효과는 쓰지 않는다.
+
+어느 쪽을 우선할지(유리 효과의 일관성 대 3D 사실감) 정해줘.
+
+## 근거
+
+| 주장 | 자료 | 위치 |
+| --- | --- | --- |
+| glassEffect는 2D 모양 안에만 그림 | K1 | §Overview |
+| 3D 형상은 그리지 않음, 3D는 투명 PBR 재질 권장 | K1 | §Limits |
+| 투명 메시 안에 파티클 렌더 가능 | K2 | §Transparent materials |
+
+## 한계
+
+- 두 문서만 봤다. 성능, 기기별 동작은 확인하지 않았다.
+
+## 남은 질문
+
+- 선택지 1과 2 중 어느 쪽을 택할지.
+- 택한 방식의 기기별 성능은 실제 측정이 필요하다.

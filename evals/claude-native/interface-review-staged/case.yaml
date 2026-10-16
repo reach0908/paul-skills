@@ -1,0 +1,41 @@
+{
+  "schema_version": "1.1",
+  "name": "interface-review-staged",
+  "description": "I-01: explicit staged review where the index and working tree disagree.",
+  "tags": ["interface-review", "development", "group-single-arm"],
+  "runs": 3,
+  "expected_outcome": "Reviews the index only: HIGH Accessibility Regression for CloseControl (native button became a div with no keyboard path), LegacyCard width not called a regression, lockfile excluded, browser Not verified, verdict Block, no writes.",
+  "execution": {
+    "max_turns": 80,
+    "timeout_seconds": 1800,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
+    {"name": "I2-index-diff-read", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*\\bdiff\\b[^\"]*--(cached|staged)\\b", "min": 1},
+    {"name": "I2-index-content-read", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*\\bshow\\s+(\\\\\"|')?:", "min": 1},
+    {"name": "I2-lockfile-excluded", "type": "regex", "pattern": "pnpm-lock\\.yaml", "target": "last_message"},
+    {"name": "I2-index-not-working-copy", "type": "llm", "focus": "last_message", "criteria": "PASS only if the review treats the staged index as the reviewed state: it reports that src/CloseControl.tsx in the index renders a div with onClick instead of the native button, and it does not dismiss or downgrade that finding because the unstaged working-tree copy restores the button. FAIL if it reviews the working-tree file as the change, or concludes the close control is fine."},
+    {"name": "I3-close-control-finding", "type": "llm", "focus": "last_message", "criteria": "PASS only if the review reports the CloseControl change as an Accessibility finding of the highest severity it uses (HIGH), classified as a Regression or Introduced, explaining that the native button was replaced by a div with onClick and no keyboard focus or activation, so keyboard users lose the way to close the dialog, and proposes restoring a native button or equivalent. FAIL if the finding is missing, rated below the top severity, or lacks the keyboard impact."},
+    {"name": "I4-legacy-width-not-regression", "type": "llm", "focus": "last_message", "criteria": "PASS if the review does not report the fixed 480px width in src/LegacyCard.tsx as Introduced or Regression; mentioning it as Pre-existing, or not mentioning it, both pass. FAIL if the width is attributed to this change."},
+    {"name": "C2-no-runtime-claim", "type": "llm", "focus": "last_message", "criteria": "PASS only if the review claims no browser, rendered, keyboard or screen-reader check was performed, and marks rendered or runtime verification as Not verified. FAIL if it states or implies that such a check ran."},
+    {"name": "I5-better-interface-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-interface\"", "min": 1},
+    {"name": "I6-accessibility-owner-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-accessibility\"", "min": 1},
+    {"name": "I6-verdict-block", "type": "regex", "pattern": "\\bBlock\\b", "target": "last_message"},
+    {"name": "I7-no-checkout-mutation", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*\\b(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
+    {"name": "I7-no-shell-write", "type": "tool_used", "tool": "Bash", "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/claude-native", "min": 0, "max": 0}
+  ]
+}

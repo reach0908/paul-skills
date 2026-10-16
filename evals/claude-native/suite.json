@@ -1,0 +1,1483 @@
+{
+  "suiteVersion": 1,
+  "rubric": "rubric.json",
+  "evalDir": "evals/claude-native",
+  "calibrationDir": "evals/claude-native-calibration",
+  "groups": {
+    "group-with-without": {
+      "ablation": "with-without",
+      "allowTools": [
+        "Write",
+        "Edit"
+      ],
+      "comparison": "The task is meaningful without the plugin, so the no-plugin arm measures added value."
+    },
+    "group-single-arm": {
+      "ablation": "none",
+      "allowTools": [
+        "Bash(git:*)"
+      ],
+      "comparison": "n/a: explicit invocation and its routing boundary do not exist without the plugin."
+    },
+    "group-edit-with-without": {
+      "ablation": "with-without",
+      "allowTools": [
+        "Edit",
+        "Write"
+      ],
+      "comparison": "The task is meaningful without the plugin; the graders forbid new or unrelated files."
+    },
+    "group-code-with-without": {
+      "ablation": "with-without",
+      "allowTools": [
+        "Edit",
+        "Write",
+        "Bash(node:*)",
+        "Bash(npm:*)",
+        "Bash(git:*)"
+      ],
+      "comparison": "The task is meaningful without the plugin; edits and node, npm and git commands are allowed."
+    }
+  },
+  "cases": {
+    "research-atlas-v2": {
+      "skill": "research",
+      "rubricCase": "R-01",
+      "split": "development",
+      "independentTask": "research-atlas-v2",
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "notApplicable": {
+        "R6": "No source is made inaccessible in this case."
+      },
+      "quality": [
+        "RQ1",
+        "RQ2"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools, so network access cannot occur; Edit and Write are graded so that only the report may change."
+      },
+      "calibration": [
+        {
+          "label": "R-P",
+          "kind": "pass",
+          "artifact": "calibration/research-atlas-v2/R-P.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R3": true,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R-F",
+          "kind": "fail",
+          "artifact": "calibration/research-atlas-v2/R-F.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": false,
+            "R2": false,
+            "R3": false,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R-B",
+          "kind": "boundary",
+          "artifact": "calibration/research-atlas-v2/R-B.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": "human",
+            "R3": true,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R-F4",
+          "kind": "fail",
+          "artifact": "calibration/research-atlas-v2/R-F4.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": false,
+            "R2": "human",
+            "R3": true,
+            "R4": false,
+            "R5": true
+          }
+        },
+        {
+          "label": "R-F5",
+          "kind": "fail",
+          "artifact": "calibration/research-atlas-v2/R-F5.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R3": true,
+            "R4": true,
+            "R5": false
+          }
+        },
+        {
+          "label": "R-P2-pilot",
+          "kind": "pass",
+          "artifact": "calibration/research-atlas-v2/R-P2-pilot.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R3": true,
+            "R4": true,
+            "R5": true
+          }
+        }
+      ],
+      "traceChecks": [
+        {
+          "name": "R5-reread-after-save",
+          "type": "order",
+          "mode": "followed",
+          "before": {
+            "tools": [
+              "Write",
+              "Edit"
+            ],
+            "path": "outputs/research\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Read"
+            ],
+            "path": "outputs/research\\.md$"
+          }
+        }
+      ]
+    },
+    "interface-review-staged": {
+      "skill": "interface-review",
+      "rubricCase": "I-01",
+      "split": "development",
+      "independentTask": "interface-review-dialog-fixture",
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "I1",
+        "I2",
+        "I3",
+        "I4",
+        "I5",
+        "I6",
+        "I7"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "IQ1",
+        "IQ2"
+      ],
+      "human": [
+        "I1",
+        "I5",
+        "I6"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit, WebFetch and WebSearch are not in allowed_tools; Bash is granted only as Bash(git:*).",
+        "I7": "Write and Edit are withheld, so file edits can only be attempted through Bash, which the I7 graders check."
+      },
+      "fixture": {
+        "baseSha": "eabf6a77bcb748b855f8f0dea909408814930115"
+      },
+      "calibration": [
+        {
+          "label": "I-P",
+          "kind": "pass",
+          "artifact": "calibration/interface-review-staged/I-P.md",
+          "target": "last_message",
+          "expect": {
+            "C2": true,
+            "C3": true,
+            "I2": true,
+            "I3": true,
+            "I4": true,
+            "I6": true
+          }
+        },
+        {
+          "label": "I-F",
+          "kind": "fail",
+          "artifact": "calibration/interface-review-staged/I-F.md",
+          "target": "last_message",
+          "expect": {
+            "C2": false,
+            "I2": false,
+            "I3": false,
+            "I4": true,
+            "I6": false
+          }
+        },
+        {
+          "label": "I-F4",
+          "kind": "fail",
+          "artifact": "calibration/interface-review-staged/I-F4.md",
+          "target": "last_message",
+          "expect": {
+            "C2": true,
+            "C3": true,
+            "I2": true,
+            "I3": true,
+            "I4": false,
+            "I6": true
+          }
+        }
+      ]
+    },
+    "interface-review-unnamed": {
+      "skill": "interface-review",
+      "rubricCase": "I-N",
+      "split": "development",
+      "independentTask": "interface-review-dialog-fixture",
+      "variantOf": "interface-review-staged",
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "I1"
+      ],
+      "notApplicable": {
+        "I2": "Intended stop before scope resolution.",
+        "I3": "Intended stop before scope resolution.",
+        "I4": "Intended stop before scope resolution.",
+        "I5": "Intended stop before scope resolution.",
+        "I6": "Intended stop before scope resolution.",
+        "I7": "Covered by C1 for an intended stop.",
+        "IQ1": "No review report is expected from an intended stop.",
+        "IQ2": "No review report is expected from an intended stop."
+      },
+      "quality": [],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit, WebFetch and WebSearch are not in allowed_tools; Bash is granted only as Bash(git:*)."
+      },
+      "fixture": {
+        "baseSha": "eabf6a77bcb748b855f8f0dea909408814930115"
+      },
+      "calibration": [
+        {
+          "label": "I-N-P",
+          "kind": "pass",
+          "artifact": "calibration/interface-review-unnamed/I-N-P.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "I1": true
+          }
+        },
+        {
+          "label": "I-N-F",
+          "kind": "fail",
+          "artifact": "calibration/interface-review-unnamed/I-N-F.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "I1": false
+          }
+        }
+      ]
+    },
+    "user-flow-export-panel": {
+      "skill": "user-flow",
+      "rubricCase": "U-01",
+      "split": "development",
+      "independentTask": "user-flow-export-panel",
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "U1",
+        "U2",
+        "U3",
+        "U4",
+        "U5",
+        "U6",
+        "U7"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "UQ1",
+        "UQ2"
+      ],
+      "human": [
+        "C2",
+        "U1"
+      ],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools; Edit and Write are graded so that only the flow document may change."
+      },
+      "calibration": [
+        {
+          "label": "U-P",
+          "kind": "pass",
+          "artifact": "calibration/user-flow-export-panel/U-P.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": true,
+            "U4": true,
+            "U5": true,
+            "U6": true,
+            "U7": true
+          }
+        },
+        {
+          "label": "U-F",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-F.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": "human",
+            "U2": true,
+            "U3": true,
+            "U4": false,
+            "U5": "human",
+            "U6": true,
+            "U7": true
+          }
+        },
+        {
+          "label": "U-B",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-B.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": true,
+            "U4": false,
+            "U5": false,
+            "U6": true,
+            "U7": true
+          }
+        },
+        {
+          "label": "U-F2",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-F2.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": false,
+            "U3": true,
+            "U4": true,
+            "U5": true,
+            "U6": true,
+            "U7": true
+          }
+        },
+        {
+          "label": "U-F3",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-F3.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": false,
+            "U4": true,
+            "U5": "human",
+            "U6": true,
+            "U7": true
+          }
+        },
+        {
+          "label": "U-F6",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-F6.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": true,
+            "U4": "human",
+            "U5": true,
+            "U6": false,
+            "U7": "human"
+          }
+        },
+        {
+          "label": "U-F7",
+          "kind": "fail",
+          "artifact": "calibration/user-flow-export-panel/U-F7.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": true,
+            "U4": true,
+            "U5": "human",
+            "U6": true,
+            "U7": false
+          }
+        },
+        {
+          "label": "U-P2-pilot",
+          "kind": "pass",
+          "artifact": "calibration/user-flow-export-panel/U-P2-pilot.md",
+          "target": "outputs/user-flow.md",
+          "expect": {
+            "U1": true,
+            "U2": true,
+            "U3": true,
+            "U4": true,
+            "U5": true,
+            "U6": true,
+            "U7": true
+          }
+        }
+      ]
+    },
+    "build-design-scoped-card": {
+      "skill": "build-design",
+      "rubricCase": "B-01",
+      "split": "development",
+      "independentTask": "build-design-trip-card",
+      "sessionEpisodes": [
+        "C1",
+        "C2",
+        "E4",
+        "B5"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "BQ1"
+      ],
+      "human": [],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools; Edit and Write are graded so that only the card files may change."
+      },
+      "calibration": [
+        {
+          "label": "B-P-card",
+          "kind": "pass",
+          "artifact": "calibration/build-design-scoped-card/B-P-card.tsx.md",
+          "target": "src/TripCard.tsx",
+          "expect": {
+            "B3": true
+          }
+        },
+        {
+          "label": "B-F-card",
+          "kind": "fail",
+          "artifact": "calibration/build-design-scoped-card/B-F-card.tsx.md",
+          "target": "src/TripCard.tsx",
+          "expect": {
+            "B3": false
+          }
+        },
+        {
+          "label": "B-P-reply",
+          "kind": "pass",
+          "artifact": "calibration/build-design-scoped-card/B-P-reply.md",
+          "target": "last_message",
+          "expect": {
+            "B4": true,
+            "C2": true
+          }
+        },
+        {
+          "label": "B-F-reply",
+          "kind": "fail",
+          "artifact": "calibration/build-design-scoped-card/B-F-reply.md",
+          "target": "last_message",
+          "expect": {
+            "B4": false,
+            "C2": false
+          }
+        },
+        {
+          "label": "B-P-css",
+          "kind": "pass",
+          "artifact": "calibration/build-design-scoped-card/B-P-css.css.md",
+          "target": "src/styles/trip-card.css",
+          "expect": {
+            "B3": true
+          }
+        },
+        {
+          "label": "B-F-css",
+          "kind": "fail",
+          "artifact": "calibration/build-design-scoped-card/B-F-css.css.md",
+          "target": "src/styles/trip-card.css",
+          "expect": {
+            "B3": false
+          }
+        }
+      ],
+      "traceChecks": [
+        {
+          "name": "C3-card-changed",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "(src/TripCard\\.tsx|src/styles/trip-card\\.css)$"
+          },
+          "min": 1
+        },
+        {
+          "name": "B2-decisions-read-before-change",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Read"
+            ],
+            "path": "docs/decisions\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "(src/TripCard\\.tsx|src/styles/trip-card\\.css)$"
+          }
+        },
+        {
+          "name": "B2-call-site-read-before-change",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Read"
+            ],
+            "path": "src/TripFolder\\.tsx$"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "(src/TripCard\\.tsx|src/styles/trip-card\\.css)$"
+          }
+        }
+      ]
+    },
+    "diagnosing-bugs-scroll-reset": {
+      "skill": "diagnosing-bugs",
+      "rubricCase": "G-01",
+      "split": "development",
+      "independentTask": "diagnosing-bugs-onboarding-scroll",
+      "sessionEpisodes": [
+        "B9",
+        "D14"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "G1",
+        "G2",
+        "G3"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "GQ1"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Web tools are not in allowed_tools; Bash is granted only for node, npm and git, and Edit and Write are graded so that only the bug files may change."
+      },
+      "calibration": [
+        {
+          "label": "G-P-test",
+          "kind": "pass",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-P-test.js.md",
+          "target": "test/onboarding.test.js",
+          "expect": {
+            "G2": true
+          }
+        },
+        {
+          "label": "G-F-test",
+          "kind": "fail",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-F-test.js.md",
+          "target": "test/onboarding.test.js",
+          "expect": {
+            "G2": false
+          }
+        },
+        {
+          "label": "G-P-src",
+          "kind": "pass",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-P-src.js.md",
+          "target": "src/onboarding.js",
+          "expect": {
+            "G2": true
+          }
+        },
+        {
+          "label": "G-F-src",
+          "kind": "fail",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-F-src.js.md",
+          "target": "src/onboarding.js",
+          "expect": {
+            "G2": false
+          }
+        },
+        {
+          "label": "G-P-reply",
+          "kind": "pass",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-P-reply.md",
+          "target": "last_message",
+          "expect": {
+            "G3": true
+          }
+        },
+        {
+          "label": "G-F-reply",
+          "kind": "fail",
+          "artifact": "calibration/diagnosing-bugs-scroll-reset/G-F-reply.md",
+          "target": "last_message",
+          "expect": {
+            "G3": false
+          }
+        }
+      ],
+      "traceChecks": [
+        {
+          "name": "C3-source-changed",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/onboarding\\.js$"
+          },
+          "min": 1
+        },
+        {
+          "name": "G1-loop-run-before-fix",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Bash"
+            ],
+            "command": "node --test|npm (run )?test"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/onboarding\\.js$"
+          }
+        },
+        {
+          "name": "G1-test-written-before-fix",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "test/onboarding\\.test\\.js$"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/onboarding\\.js$"
+          }
+        }
+      ]
+    },
+    "research-same-name-tools": {
+      "skill": "research",
+      "rubricCase": "R-02",
+      "split": "development",
+      "independentTask": "research-same-name-tools",
+      "sessionEpisodes": [
+        "A11"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "R1",
+        "R2",
+        "R3",
+        "R4",
+        "R5"
+      ],
+      "notApplicable": {
+        "R6": "No source is made inaccessible in this case."
+      },
+      "quality": [
+        "RQ1",
+        "RQ2"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools, so network access cannot occur; Edit and Write are graded so that only the report may change."
+      },
+      "calibration": [
+        {
+          "label": "R2-P",
+          "kind": "pass",
+          "artifact": "calibration/research-same-name-tools/R2-P.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R3": true,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R2-F",
+          "kind": "fail",
+          "artifact": "calibration/research-same-name-tools/R2-F.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": false,
+            "R2": false,
+            "R3": false,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R2-F4",
+          "kind": "fail",
+          "artifact": "calibration/research-same-name-tools/R2-F4.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": false,
+            "R3": true,
+            "R4": false,
+            "R5": true
+          }
+        },
+        {
+          "label": "R2-F5",
+          "kind": "fail",
+          "artifact": "calibration/research-same-name-tools/R2-F5.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R3": true,
+            "R4": true,
+            "R5": false
+          }
+        }
+      ],
+      "traceChecks": [
+        {
+          "name": "R5-reread-after-save",
+          "type": "order",
+          "mode": "followed",
+          "before": {
+            "tools": [
+              "Write",
+              "Edit"
+            ],
+            "path": "outputs/research\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Read"
+            ],
+            "path": "outputs/research\\.md$"
+          }
+        }
+      ]
+    },
+    "research-requirement-conflict": {
+      "skill": "research",
+      "rubricCase": "R-03",
+      "split": "development",
+      "independentTask": "research-requirement-conflict",
+      "sessionEpisodes": [
+        "E8"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "R1",
+        "R2",
+        "R4",
+        "R5"
+      ],
+      "notApplicable": {
+        "R3": "No conflicting or outdated sources are supplied; the conflict is between user goals and is graded under R1.",
+        "R6": "No source is made inaccessible in this case."
+      },
+      "quality": [
+        "RQ1",
+        "RQ2"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools, so network access cannot occur; Edit and Write are graded so that only the report may change."
+      },
+      "calibration": [
+        {
+          "label": "R3-P",
+          "kind": "pass",
+          "artifact": "calibration/research-requirement-conflict/R3-P.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R3-F",
+          "kind": "fail",
+          "artifact": "calibration/research-requirement-conflict/R3-F.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": false,
+            "R2": true,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R3-F2",
+          "kind": "fail",
+          "artifact": "calibration/research-requirement-conflict/R3-F2.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": false,
+            "R4": true,
+            "R5": true
+          }
+        },
+        {
+          "label": "R3-F4",
+          "kind": "fail",
+          "artifact": "calibration/research-requirement-conflict/R3-F4.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": false,
+            "R4": false,
+            "R5": true
+          }
+        },
+        {
+          "label": "R3-F5",
+          "kind": "fail",
+          "artifact": "calibration/research-requirement-conflict/R3-F5.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R4": true,
+            "R5": false
+          }
+        }
+      ],
+      "traceChecks": [
+        {
+          "name": "R5-reread-after-save",
+          "type": "order",
+          "mode": "followed",
+          "before": {
+            "tools": [
+              "Write",
+              "Edit"
+            ],
+            "path": "outputs/research\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Read"
+            ],
+            "path": "outputs/research\\.md$"
+          }
+        }
+      ]
+    },
+    "better-interface-settings-audit": {
+      "skill": "better-interface",
+      "rubricCase": "A-01",
+      "split": "development",
+      "independentTask": "better-interface-settings",
+      "sessionEpisodes": [
+        "C7",
+        "B1"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "A1",
+        "A2",
+        "A3",
+        "A4"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "AQ1"
+      ],
+      "human": [],
+      "notApplicableWithout": {
+        "A1": "Routing through better-interface does not exist without the plugin.",
+        "A2": "The audit procedure and domain owners do not exist without the plugin."
+      },
+      "harnessEnforced": {
+        "C1": "Write, Edit, Bash and web tools are not in allowed_tools, so the audit cannot change files."
+      },
+      "calibration": [
+        {
+          "label": "A-P",
+          "kind": "pass",
+          "artifact": "calibration/better-interface-settings-audit/A-P.md",
+          "target": "last_message",
+          "expect": {
+            "C2": true,
+            "C3": true,
+            "A3": true,
+            "A4": true
+          }
+        },
+        {
+          "label": "A-F",
+          "kind": "fail",
+          "artifact": "calibration/better-interface-settings-audit/A-F.md",
+          "target": "last_message",
+          "expect": {
+            "C2": false,
+            "C3": true,
+            "A3": false,
+            "A4": false
+          }
+        }
+      ]
+    },
+    "interface-review-flow-change": {
+      "skill": "interface-review",
+      "rubricCase": "I-V",
+      "split": "development",
+      "independentTask": "interface-review-dialog-fixture",
+      "variantOf": "interface-review-unnamed",
+      "sessionEpisodes": [
+        "B6"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "I1"
+      ],
+      "notApplicable": {
+        "I2": "Intended stop before scope resolution.",
+        "I3": "Intended stop before scope resolution.",
+        "I4": "Intended stop before scope resolution.",
+        "I5": "Intended stop before scope resolution.",
+        "I6": "Intended stop before scope resolution.",
+        "I7": "Covered by C1 for an intended stop.",
+        "IQ1": "No review report is expected from an intended stop.",
+        "IQ2": "No review report is expected from an intended stop."
+      },
+      "quality": [],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit, WebFetch and WebSearch are not in allowed_tools; Bash is granted only as Bash(git:*)."
+      },
+      "fixture": {
+        "baseSha": "eabf6a77bcb748b855f8f0dea909408814930115"
+      },
+      "calibration": [
+        {
+          "label": "I-V-P",
+          "kind": "pass",
+          "artifact": "calibration/interface-review-flow-change/I-V-P.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "I1": true
+          }
+        },
+        {
+          "label": "I-V-F",
+          "kind": "fail",
+          "artifact": "calibration/interface-review-flow-change/I-V-F.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "I1": false
+          }
+        }
+      ]
+    },
+    "research-unreadable-evidence": {
+      "skill": "research",
+      "rubricCase": "R-04",
+      "split": "development",
+      "independentTask": "research-site-verification",
+      "sessionEpisodes": [
+        "D4",
+        "E5"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "R1",
+        "R2",
+        "R4",
+        "R5",
+        "R6"
+      ],
+      "notApplicable": {
+        "R3": "No conflicting or outdated sources are supplied; the unreadable file is graded under R6."
+      },
+      "quality": [
+        "RQ1",
+        "RQ2"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools, so network access cannot occur; Edit and Write are graded so that only the report may change."
+      },
+      "traceChecks": [
+        {
+          "name": "R5-reread-after-save",
+          "type": "order",
+          "mode": "followed",
+          "before": {
+            "tools": [
+              "Write",
+              "Edit"
+            ],
+            "path": "outputs/research\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Read"
+            ],
+            "path": "outputs/research\\.md$"
+          }
+        }
+      ],
+      "calibration": [
+        {
+          "label": "R4-P",
+          "kind": "pass",
+          "artifact": "calibration/research-unreadable-evidence/R4-P.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R4": true,
+            "R5": true,
+            "R6": true
+          }
+        },
+        {
+          "label": "R4-F",
+          "kind": "fail",
+          "artifact": "calibration/research-unreadable-evidence/R4-F.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": false,
+            "R2": false,
+            "R4": false,
+            "R5": "human",
+            "R6": false
+          }
+        },
+        {
+          "label": "R4-F2",
+          "kind": "fail",
+          "artifact": "calibration/research-unreadable-evidence/R4-F2.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": false,
+            "R4": true,
+            "R5": false,
+            "R6": true
+          }
+        },
+        {
+          "label": "R4-F5",
+          "kind": "fail",
+          "artifact": "calibration/research-unreadable-evidence/R4-F5.md",
+          "target": "outputs/research.md",
+          "expect": {
+            "R1": true,
+            "R2": true,
+            "R4": true,
+            "R5": false,
+            "R6": "human"
+          }
+        }
+      ]
+    }
+  },
+  "inputControls": [
+    {
+      "case": "research-atlas-v2",
+      "grader": "C1-no-other-write",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/outputs/research.md",
+        "content": "x"
+      },
+      "matches": false
+    },
+    {
+      "case": "research-atlas-v2",
+      "grader": "C1-no-other-write",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/sources/D1-atlas-import-v2-manual.md",
+        "content": "x"
+      },
+      "matches": true
+    },
+    {
+      "case": "research-atlas-v2",
+      "grader": "IND-research-skill-loaded",
+      "input": {
+        "skill": "paul-skills:research"
+      },
+      "matches": true
+    },
+    {
+      "case": "research-atlas-v2",
+      "grader": "IND-research-skill-loaded",
+      "input": {
+        "skill": "paul-skills:research-notes"
+      },
+      "matches": false
+    },
+    {
+      "case": "research-atlas-v2",
+      "grader": "C4-no-eval-read",
+      "input": {
+        "file_path": "/Users/me/paul-skills/evals/claude-native/research-atlas-v2/case.yaml"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I2-index-diff-read",
+      "input": {
+        "command": "git diff --cached HEAD",
+        "description": "Show staged diff"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I2-index-diff-read",
+      "input": {
+        "command": "git diff HEAD",
+        "description": "Show working diff"
+      },
+      "matches": false
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I2-index-content-read",
+      "input": {
+        "command": "git show :src/CloseControl.tsx"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I2-index-content-read",
+      "input": {
+        "command": "git show \":src/CloseControl.tsx\""
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I2-index-content-read",
+      "input": {
+        "command": "git show HEAD:src/CloseControl.tsx"
+      },
+      "matches": false
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-checkout-mutation",
+      "input": {
+        "command": "git diff --cached HEAD -- src/LegacyCard.tsx"
+      },
+      "matches": false
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-checkout-mutation",
+      "input": {
+        "command": "git ls-files --others --exclude-standard"
+      },
+      "matches": false
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-checkout-mutation",
+      "input": {
+        "command": "git stash push -m review"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-checkout-mutation",
+      "input": {
+        "command": "git restore --staged src/CloseControl.tsx"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-shell-write",
+      "input": {
+        "command": "git diff --cached HEAD 2>/dev/null",
+        "description": "Staged diff -> stdout"
+      },
+      "matches": false
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-shell-write",
+      "input": {
+        "command": "git diff --cached HEAD > review.patch"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I7-no-shell-write",
+      "input": {
+        "command": "git show :src/CloseControl.tsx | tee copy.tsx"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I5-better-interface-loaded",
+      "input": {
+        "skill": "paul-skills:better-interface",
+        "args": "change review"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-staged",
+      "grader": "I6-accessibility-owner-loaded",
+      "input": {
+        "skill": "better-accessibility"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-unnamed",
+      "grader": "I1-no-git-before-stop",
+      "input": {
+        "command": "git status --short"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-unnamed",
+      "grader": "I1-no-source-read",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/CloseControl.tsx"
+      },
+      "matches": true
+    },
+    {
+      "case": "interface-review-unnamed",
+      "grader": "I1-no-source-read",
+      "input": {
+        "file_path": "/Users/me/paul-skills/skills/design/better-interface/SKILL.md"
+      },
+      "matches": false
+    },
+    {
+      "case": "user-flow-export-panel",
+      "grader": "C1-no-state-machine",
+      "input": {
+        "skill": "paul-skills:state-machine"
+      },
+      "matches": true
+    },
+    {
+      "case": "user-flow-export-panel",
+      "grader": "C1-no-state-machine",
+      "input": {
+        "skill": "paul-skills:user-flow"
+      },
+      "matches": false
+    },
+    {
+      "case": "user-flow-export-panel",
+      "grader": "C1-no-other-write",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/ExportPanel.tsx",
+        "content": "x"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-scoped-card",
+      "grader": "C1-only-card-files-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/TripCard.tsx",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": false
+    },
+    {
+      "case": "build-design-scoped-card",
+      "grader": "C1-only-card-files-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/styles/trip-card.css",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": false
+    },
+    {
+      "case": "build-design-scoped-card",
+      "grader": "C1-only-card-files-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/TripFolder.tsx",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-scoped-card",
+      "grader": "B1-folder-shell-untouched",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/styles/folder-shell.css",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-scoped-card",
+      "grader": "B1-folder-shell-untouched",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/styles/trip-card.css",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": false
+    },
+    {
+      "case": "diagnosing-bugs-scroll-reset",
+      "grader": "C1-only-bug-files-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/package.json",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": true
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "grader": "A1-entry-before-inspection",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/Settings.tsx"
+      },
+      "matches": true,
+      "side": "after"
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "grader": "A1-entry-before-inspection",
+      "input": {
+        "file_path": "/tmp/paul-eval-x/plugin/skills/design/better-interface/SKILL.md"
+      },
+      "matches": false,
+      "side": "after"
+    },
+    {
+      "case": "better-interface-settings-audit",
+      "grader": "A2-procedure-before-inspection",
+      "input": {
+        "file_path": "/tmp/paul-eval-x/plugin/skills/design/better-interface/audit-procedure.md"
+      },
+      "matches": true,
+      "side": "before"
+    },
+    {
+      "case": "interface-review-flow-change",
+      "grader": "C1-no-user-flow",
+      "input": {
+        "skill": "paul-skills:user-flow"
+      },
+      "matches": true
+    }
+  ]
+}
