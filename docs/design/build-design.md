@@ -6,7 +6,7 @@ Implement an approved design using the project's existing tokens and components,
 
 Type `/build-design`, or the agent reaches for it automatically when a task fits.
 
-Use it when the chosen local prototype, Markdown screen specification or design image already supplies the intended result. Exploring alternatives belongs to a separate decision.
+Use it when the chosen local prototype, Markdown screen specification or design image already supplies the intended result, or when an existing component should be reused on another screen. Exploring alternatives belongs to a separate decision.
 
 ## Prerequisites
 
