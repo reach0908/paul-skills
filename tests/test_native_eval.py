@@ -248,9 +248,13 @@ class Records(TempSuite):
         self.assertFalse(ok('claude-opus-5-5', text))
 
     def test_skill_changed_since_rubric_is_flagged(self):
-        self.assertFalse(any(u.startswith('rubric_contract_drift')
-                             for u in native.record(aggregate('research-atlas-v2', [research_run()]))['unresolved']))
+        # Pin the copied rubric to the checkout's own trees so the test holds on branches that change a skill.
         suite = self.copy_suite()
+        current = {name: native.git('rev-parse', f'HEAD:{c["path"]}') for name, c in
+                   json.loads((suite / 'rubric.json').read_text())['contracts'].items()}
+        self.edit_json(suite / 'rubric.json', lambda d: [c.update(tree=current[n]) for n, c in d['contracts'].items()])
+        rec = native.record(aggregate('research-atlas-v2', [research_run()]), suite_dir=suite)
+        self.assertFalse(any(u.startswith('rubric_contract_drift') for u in rec['unresolved']))
         self.edit_json(suite / 'rubric.json', lambda d: d['contracts']['research'].update(tree='0' * 40))
         rec = native.record(aggregate('research-atlas-v2', [research_run()]), suite_dir=suite)
         self.assertIn('rubric_contract_drift:research', rec['unresolved'])
