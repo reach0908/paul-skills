@@ -60,7 +60,7 @@ When every scoped question has supporting evidence or a stated unresolved gap. A
 
 **Where should the file live, and should I commit it?**
 
-The caller's path takes priority, followed by the repo's existing convention. The skill saves the file and reports its absolute path. Your project decides whether to retain, commit, attach, or archive it. Recheck date-sensitive findings before reusing them.
+The caller's path takes priority, followed by the repo's existing convention. The skill saves the file, reads it back after the last write, and only then reports its absolute path. Your project decides whether to retain, commit, attach, or archive it. Recheck date-sensitive findings before reusing them.
 
 ## It's working if
 
@@ -69,6 +69,7 @@ The caller's path takes priority, followed by the repo's existing convention. Th
 - An existing research executor completes the task directly, with one output artifact.
 - Important claims link to original evidence and state dates, versions, and verification limits.
 - The saved file states what remains unresolved and what check would settle it.
+- The transcript shows the saved file being read back after its last write, before the final report.
 - A failed web run leaves a usable brief and its actual status.
 
 ## Where it fits

@@ -451,6 +451,15 @@
               ],
               "decision": "keep-local",
               "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Name the read-back in step 4 and give the step a completion criterion after native evals observed no read-back of the saved findings file (0/12). Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/claude-native/records/2026-10-17-research-reread/README.md"
             }
           ]
         }
