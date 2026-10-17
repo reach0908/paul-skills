@@ -484,7 +484,8 @@
         "B1",
         "B2",
         "B3",
-        "B4"
+        "B4",
+        "B5"
       ],
       "notApplicable": {},
       "quality": [
@@ -598,8 +599,22 @@
             ],
             "path": "(src/TripCard\\.tsx|src/styles/trip-card\\.css)$"
           }
+        },
+        {
+          "name": "B5-skill-loaded",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Skill"
+            ],
+            "skill": "^(?:[\\w-]+:)?build-design$"
+          },
+          "min": 1
         }
-      ]
+      ],
+      "notApplicableWithout": {
+        "B5": "The skill does not exist without the plugin."
+      }
     },
     "diagnosing-bugs-scroll-reset": {
       "skill": "diagnosing-bugs",
@@ -1199,7 +1214,8 @@
         "B1",
         "B2",
         "B3",
-        "B4"
+        "B4",
+        "B5"
       ],
       "notApplicable": {},
       "quality": [
@@ -1258,6 +1274,17 @@
             ],
             "path": "src/collection/CollectionPage\\.tsx$"
           }
+        },
+        {
+          "name": "B5-skill-loaded",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Skill"
+            ],
+            "skill": "^(?:[\\w-]+:)?build-design$"
+          },
+          "min": 1
         }
       ],
       "calibration": [
@@ -1318,7 +1345,10 @@
             "C2": false
           }
         }
-      ]
+      ],
+      "notApplicableWithout": {
+        "B5": "The skill does not exist without the plugin."
+      }
     },
     "code-review-merge-readiness": {
       "skill": "code-review",
@@ -1336,7 +1366,8 @@
         "K1",
         "K2",
         "K3",
-        "K4"
+        "K4",
+        "K5"
       ],
       "notApplicable": {},
       "quality": [
@@ -1363,6 +1394,17 @@
               "Bash"
             ],
             "command": "\\bdiff\\b[^;&|]*(\\.\\.\\.|merge-base|a8bdef8)"
+          },
+          "min": 1
+        },
+        {
+          "name": "K5-skill-loaded",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Skill"
+            ],
+            "skill": "^(?:[\\w-]+:)?code-review$"
           },
           "min": 1
         }
@@ -1433,7 +1475,96 @@
             "K4": false
           }
         }
-      ]
+      ],
+      "notApplicableWithout": {
+        "K5": "The skill does not exist without the plugin."
+      }
+    },
+    "code-review-near-miss": {
+      "skill": "code-review",
+      "rubricCase": "K-N",
+      "split": "development",
+      "independentTask": "code-review-discount-fixture",
+      "variantOf": "code-review-merge-readiness",
+      "sessionEpisodes": [],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "K5"
+      ],
+      "notApplicable": {
+        "K1": "Not a review.",
+        "K2": "Not a review.",
+        "K3": "Covered by C1 for a read-only answer.",
+        "K4": "No merge verdict is requested.",
+        "KQ1": "No review report is expected."
+      },
+      "quality": [],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit and web tools are not in allowed_tools; Bash is granted only as Bash(git:*)."
+      },
+      "traceChecks": [
+        {
+          "name": "K5-skill-not-loaded",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Skill"
+            ],
+            "skill": "^(?:[\\w-]+:)?code-review$"
+          },
+          "max": 0
+        }
+      ],
+      "calibration": []
+    },
+    "build-design-near-miss": {
+      "skill": "build-design",
+      "rubricCase": "B-N",
+      "split": "development",
+      "independentTask": "build-design-topic-card-fixture",
+      "variantOf": "build-design-same-name-card",
+      "sessionEpisodes": [],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "B5"
+      ],
+      "notApplicable": {
+        "B1": "Covered by C1 for a read-only answer.",
+        "B2": "Nothing is built.",
+        "B3": "Nothing is built.",
+        "B4": "Nothing is built.",
+        "BQ1": "No build report is expected."
+      },
+      "quality": [],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit and web tools are not in allowed_tools; Bash is granted only as Bash(git:*)."
+      },
+      "traceChecks": [
+        {
+          "name": "B5-skill-not-loaded",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Skill"
+            ],
+            "skill": "^(?:[\\w-]+:)?build-design$"
+          },
+          "max": 0
+        }
+      ],
+      "calibration": []
     }
   },
   "inputControls": [

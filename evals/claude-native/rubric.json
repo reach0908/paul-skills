@@ -1,5 +1,5 @@
 {
-  "rubricVersion": "rubric-v0.4",
+  "rubricVersion": "rubric-v0.5",
   "derivedFrom": "rubric-draft-v0.1 (KJH_AI_WIKI, 2026-10-14, AI-written hypothetical calibration examples)",
   "goldStatus": "ai_draft_pending_human",
   "contractRevision": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
@@ -286,6 +286,16 @@
       "scope": "code-review",
       "kind": "quality",
       "text": "A reviewer can act on each blocker without rereading the diff: location, cause and fix are stated once."
+    },
+    "B5": {
+      "scope": "build-design",
+      "kind": "required",
+      "text": "Invocation boundary: build-design is loaded for requests in its scope (implementing a supplied design or reusing an existing component) and not for questions about existing UI."
+    },
+    "K5": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "Invocation boundary: code-review is loaded for reviews against a fixed point and merge-readiness judgements, and not for explaining or reading code."
     }
   }
 }
