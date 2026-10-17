@@ -1,0 +1,19 @@
+- generic [ref=e1]:
+  - heading "작은 책장" [level=1] [ref=e2]
+  - paragraph [ref=e3]: 읽고 싶은 책을 담고 다시 찾아보세요.
+  - generic [ref=e4]: 가상 도서 프로토타입입니다. 외부 전송은 없으며 새로고침하면 초기 상태가 됩니다.
+  - navigation "책장 탐색" [ref=e5]:
+    - button "추천" [ref=e6]
+    - button "내 보관함" [active] [ref=e7]
+  - status [ref=e8]: 내 보관함에 담았어요
+  - main [ref=e9]:
+    - heading "내 보관함" [level=2] [ref=e77]
+    - generic [ref=e78]:
+      - text: 책 찾기
+      - textbox "책 찾기" [ref=e79]:
+        - /placeholder: 제목으로 찾기
+    - article [ref=e81]:
+      - heading "별의 지도" [level=3] [ref=e82]
+      - paragraph [ref=e83]: 가상 저자 A · 우주
+      - button "별의 지도 살펴보기" [ref=e84]
+      - button "담았어요" [ref=e85]

@@ -1,0 +1,1 @@
+이 폴더의 product/brief-v2.md가 현재 정본이다. reviews/feedback.md의 내 피드백만 반영해서 정본을 갱신하고, 다음 디자인 담당을 위한 짧은 handoff를 써줘. 메모의 AI 아이디어는 아직 선택하지 않았다. 실제 제품을 완성하거나 다음 단계 작업을 실행하는 요청은 아니다. product/brief-v1.md도 남아 있으니 참고해도 된다.

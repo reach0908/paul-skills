@@ -21,7 +21,7 @@ You invoke this by typing `/ask-matt`; the agent won't reach for it on its own.
 
 ## Prerequisites
 
-The router names skills; it does not install them. Everything it points at has to be installed for the recommendation to be actionable, and it only knows the promoted skills in this repo.
+The router names skills; it does not install them. Everything it points at has to be installed for the recommendation to be actionable, and the normal flow uses the promoted skills in this repo. Its PM beta branch is conditional on the candidate being separately available; it does not install or promote it.
 
 The tracker-dependent routes (triage, `to-spec`, `to-tickets`, `implement`) assume [setup-matt-pocock-skills](https://github.com/reach0908/paul-skills/blob/main/docs/engineering/setup-matt-pocock-skills.md) has already configured an issue tracker in the repo. The router recommends them even before that has happened.
 
@@ -56,6 +56,14 @@ For reuse of an approved design, [build-design](https://github.com/reach0908/pau
 
 Component workbenches remain explicit choices: [state-machine](https://github.com/reach0908/paul-skills/blob/main/docs/design/state-machine.md) exposes existing states, [break](https://github.com/reach0908/paul-skills/blob/main/docs/design/break.md) observes hostile-content failures, [variant](https://github.com/reach0908/paul-skills/blob/main/docs/design/variant.md) compares directions, and [explain-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/explain-interface.md) explains a reference. The router recommends these; the user invokes them.
 
+## Product, design and engineering
+
+For product work, the router preserves a path from product context to design decisions to engineering inputs. The optional [PM beta candidates](https://github.com/reach0908/paul-skills/blob/main/skills/in-progress/README.md) develop an idea in office-hours, recover a problem, preserve a brief, design a decision test or observe fresh AI prototype attempts. They are outside the promoted plugin and are recommended for execution only when separately available.
+
+Design takes the agreed scope, product rules and current evidence into navigation, flows, screens and interface review. Engineering takes the canonical product contract and latest design inputs into technical synthesis, implementation slices and verification. A small settled task can start at the appropriate stage without another interview or a new bundle of documents.
+
+A usability experiment asks whether people can complete a product task and defines what the result changes. A clipping or keyboard check belongs to interface QA. Fresh AI prototype task attempts and post-task interviews belong to prototype-user-test; the author's intent stays out of the participant packet until observation is frozen. They are not human-user evidence. Product handoff stays in product-brief and checks current decisions, evidence state, contradictions, superseded inputs and one next action.
+
 ## Common questions
 
 **Which entry wins when a staged review names several UI domains?**
@@ -65,6 +73,14 @@ Component workbenches remain explicit choices: [state-machine](https://github.co
 **Which review command handles UI changes?**
 
 For what a change introduced or regressed, invoke [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) with the target. [better-interface](https://github.com/reach0908/paul-skills/blob/main/docs/design/better-interface.md) can automatically route an unnamed request to that command before inspecting files; its ordinary screen review remains automatic.
+
+**Does using the PM beta force every task through all three stages?**
+
+No. Reuse the supplied context and start where a question remains open. A scoped design change preserves unaffected product decisions; its existence does not authorize a new product direction. A trial pass does not promote a candidate or establish user acceptance.
+
+**Does merging a beta into main make it part of the installed plugin?**
+
+No. The plugin ships the promoted manifest entries. A beta remains separately available, and its optional router entry does not install it or approve promotion. The [maintenance policy](https://github.com/reach0908/paul-skills/blob/main/docs/maintenance.md) keeps those decisions separate.
 
 **Isn't there just a list of the skills in the right order?**
 

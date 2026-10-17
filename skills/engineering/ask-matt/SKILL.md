@@ -18,7 +18,7 @@ A **flow** is a path through the skills. Most paths run along one **main flow**,
 
 The route most work travels. You have an idea and want it built.
 
-1. **`/grill-with-docs`** sharpens the idea by interview. Start here whenever you are **working in a working directory**: it's stateful, retaining what it learns in `GLOSSARY.md` and ADRs. (No working directory? Use `/grill-me` instead, covered under Standalone. Both run the same `/grilling` primitive; `grill-with-docs` is the one that leaves a paper trail, which makes it the better of the two whenever a repo is there to leave it in.)
+1. **Choose the unresolved question.** For a product problem, decision update or product assumption, use the optional PM beta entry below when available. For an existing idea needing a deliberate stress-test, **`/grill-with-docs`** sharpens it by interview. When that interview is wanted in a working directory, use this wrapper, retaining what it learns in `GLOSSARY.md` and ADRs. (No working directory? Use `/grill-me` instead, covered under Standalone. Both run the same `/grilling` primitive; `grill-with-docs` is the one that leaves a paper trail, which makes it the better of the two whenever a repo is there to leave it in.)
 2. **Branch: can you settle every question in conversation?** If a question needs a runnable answer (state, business logic, a UI you have to see), detour through a prototype, bridged by **`/handoff`** in both directions (a prototype lives in its own directory, which is exactly what `/handoff` is for; see Phase boundaries):
    - **`/handoff`** out, then open a fresh session against that file,
    - **`/prototype`** to answer the question with throwaway code,
@@ -40,6 +40,28 @@ The route most work travels. You have an idea and want it built.
 Keep steps 1–3 in **one unbroken context window** (don't compact or clear until after `/to-tickets`) so the grilling, spec, and tickets all build on the same thinking. Each `/implement` then starts fresh, working from the ticket. Run `/retro` in the session it's looking back on, before you clear; after clearing, point it at that session's log instead.
 
 The limit on this is the **[smart zone](https://www.aihero.dev/ai-coding-dictionary/smart-zone)**: the window (~150k tokens on state-of-the-art models) within which the model still reasons sharply. If a session approaches it before `/to-tickets`, don't push on degraded; `/compact` at the nearest phase boundary and carry on (see Phase boundaries).
+
+## Product → design → engineering (optional PM beta)
+
+These candidates are in `in-progress/`, outside the promoted plugin. Recommend one only when the user has made that candidate available in an isolated trial or installed it individually; otherwise identify it as an optional beta, not an installed prerequisite. Read its actual SKILL.md before describing its behavior.
+
+| Open work | Entry | Result and next role |
+| --- | --- | --- |
+| Explore an idea together, challenge its framing or find the exciting version | `/office-hours` | Startup or builder dialogue, explicit premise/approach choices and a canonical decision record |
+| User situation, current alternative or first problem scope is unclear | `/problem-discovery` | Short Problem Brief; skip the interview when context is already sufficient |
+| Existing decisions or prototype feedback need to become reusable product input | `/product-brief` | Current decision brief, scoped before/after record and short product handoff |
+| A consequential assumption needs evidence before a product commitment, or its results need interpretation | `/experiment-design` | Bounded hypothesis, criteria, stop budget and result-dependent next decision |
+| Have fresh agents use the prototype, interview them and compare actual behavior with intent | `/prototype-user-test` | Neutral task attempts before author-intent comparison; AI evidence, not human validation |
+| Navigation, task transitions, screen hierarchy or interface quality is the open question | Available design role: information-architecture, user-flow, wireframe or interface-review/better-interface respectively | Preserve the brief's scope and product rules; return design artifacts and actual observations |
+| Agreed behavior needs technical synthesis or implementation slices | `/to-spec`, then `/to-tickets` when needed | Preserve the canonical product contract and latest design inputs; their existing prerequisites still apply |
+
+The stages preserve intent through **product context → design decisions → engineering decisions and verification**. They are not required documents or a compulsory sequence. A small settled task can start at design or engineering. Screen variants, focus checks and clipping QA go directly to design; experiment-design is for a product assumption and the decision its evidence changes. When usability is the assumption, PM defines the test and verdict conditions, while design supplies the task artifact and scoped browser evidence.
+
+The product-brief handoff links the purpose, latest decisions and reasons, observed/reported/intended state, remaining gaps, exact canonical inputs and one next action. Mark superseded inputs as historical. Design owns IA, flows, screens and interface review. Engineering owns technical specs, tickets, code and checks. A policy or feasibility gap returns to its decision owner without reopening unaffected choices. AI suggestions, user decisions, mock behavior and observed implementation keep their status across every stage.
+
+The design roles are promoted separately; these beta additions do not promote them again. Verify each installed SKILL.md and invocation policy before recommending execution. prototype remains the runnable exploration role; variant, state-machine and break remain user-invoked choices for component alternatives, coded-state workbenches and boundary scenarios. design-browser collects observations, not the product verdict.
+
+The five optional candidates are model-invoked, but this router recommends and stops. office-hours is the idea-development conversation; problem-discovery is quick context recovery; grilling stress-tests an existing plan. Do not chain their interviews by default. prototype-user-test serves design evaluation and separates its private author packet from fresh participant prompts. product-brief carries accepted decisions and the tested/simulated limits into the next role. An exploratory prototype can feed back into product decisions before formal design without restarting settled choices. User-invoked engineering or design roles are choices for the human; other skills cannot call them. Model-invoked dependencies use a separate Skill tool call for each included task.
 
 ## On-ramps
 

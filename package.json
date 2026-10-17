@@ -13,9 +13,10 @@
     "version": "changeset version && node scripts/sync-plugin-version.mjs",
     "check-plugin-version": "node scripts/sync-plugin-version.mjs --check",
     "check": "npm run check-plugin-version && python3 scripts/check-skills.py && npm test",
-    "check:local": "npm run check && npm run test:graders && git diff --check",
+    "check:local": "npm run check && npm run test:graders && npm run test:pm-beta && git diff --check",
     "test": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v",
     "test:graders": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s evals/design-domain-entry-repair-v4-2026-10-14 -p test_order_grader.py -v",
+    "test:pm-beta": "PYTHONDONTWRITEBYTECODE=1 python3 evals/product-management-beta/verify.py && PYTHONDONTWRITEBYTECODE=1 python3 evals/pm-conversation-beta/verify.py && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s evals/product-management-beta -p test_verify.py -v",
     "eval:check": "PYTHONDONTWRITEBYTECODE=1 python3 evals/claude-native/tools/native_eval.py check",
     "eval:plan": "PYTHONDONTWRITEBYTECODE=1 python3 evals/claude-native/tools/native_eval.py plan"
   },
