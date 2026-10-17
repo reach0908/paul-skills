@@ -43,6 +43,8 @@ Both commands run on the maintainer's machine without starting GitHub Actions or
 
 `npm run test:pm-beta` verifies the historical three-skill trial snapshots, the later five-skill evidence and its public-copy ledger, and the verifier regression controls. It is included in `check:local` and remains outside the CI command. Historical evidence does not require current skill bodies to remain identical; use the explicit historical `--check-current` option only to test that separate property.
 
+`npm run eval:check` validates the [Claude native suite](../evals/claude-native/README.md) and its regex and `input_match` controls; `npm test` runs the same checks. `npm run eval:plan` asks the `claude` CLI to parse and plan every native case with a zero cost ceiling, so no model run starts. Running the native cases themselves is paid and follows that README.
+
 ## Independent versions
 
 Paul Skills starts at **0.1.0**, independently of Matt Pocock's release numbers. The earlier Paul 1.4.0 pilot and all inherited upstream tags/changelog entries remain historical records. Never delete or move them to reset the version. New tags use `paul-skills@<version>` to avoid collisions with inherited `v1.0.0` and later tags.

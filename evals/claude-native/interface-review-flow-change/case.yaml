@@ -1,0 +1,33 @@
+{
+  "schema_version": "1.1",
+  "name": "interface-review-flow-change",
+  "description": "I-V: a request to check how flows changed on main is a change review; it gets the explicit command, not user-flow.",
+  "tags": ["interface-review", "development", "group-single-arm", "invocation-boundary", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "Replies with /paul-skills:interface-review and a target as the command to run, loads no user-flow skill and stops before any git inspection or source read.",
+  "execution": {
+    "max_turns": 15,
+    "timeout_seconds": 300,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
+    {"name": "I1-recommends-review-command", "type": "regex", "pattern": "/paul-skills:interface-review\\b", "target": "last_message"},
+    {"name": "I1-no-git-before-stop", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b", "min": 0, "max": 0},
+    {"name": "I1-no-source-read", "type": "tool_used", "tool": "Read", "input_match": "\"file_path\"\\s*:\\s*\"[^\"]*/src/", "min": 0, "max": 0},
+    {"name": "C1-no-user-flow", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?user-flow\"", "min": 0, "max": 0},
+    {"name": "C1-no-shell-write", "type": "tool_used", "tool": "Bash", "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0}
+  ]
+}

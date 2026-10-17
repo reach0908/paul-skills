@@ -8,6 +8,10 @@ Evaluation is added by this fork; the upstream library supplies authoring guidan
 - Public behavioral fixtures exercise an actual agent with a realistic user request and raw artifacts. The evaluator receives the task and skill, not expected answers. Preserve the task, skill revision/hash, host, observed outputs, and evaluator decision.
 - Comparative trials hold task, host, permissions, and skill fixed when comparing models, or hold model/host fixed when comparing skill versions. Keep no-skill, previous-skill, and candidate arms separate. Use multiple runs and report failures as well as successes before recommending a model.
 
+## Claude native suite
+
+The [Claude native suite](claude-native/README.md) runs repeatable cases through `claude plugin eval` and turns grader results into rubric verdicts. Required criteria gate each run instead of a weighted score, unjudged graders stay unknown, and LLM graders count as final only for a judge calibrated against labelled pass, fail and boundary artifacts. A Codex model cross-checks the Claude judge. Its thirteen development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface`, `diagnosing-bugs` and `code-review`; nine reproduce behavior seen in recent real sessions, which stay private. `npm run eval:check` and `npm run eval:plan` make no model calls; calibration and group runs are paid.
+
 ## First pilot
 
 `upstream-sync/make_fixture.py` creates isolated Git histories for inspect and apply tasks. It makes no network or model call. The independent agent works only in the generated workspace. The maintainer checks actual file changes and outputs afterward. These public development cases are smoke tests, not hidden holdout evidence.

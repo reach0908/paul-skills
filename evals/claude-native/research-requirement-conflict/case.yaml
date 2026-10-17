@@ -1,0 +1,36 @@
+{
+  "schema_version": "1.1",
+  "name": "research-requirement-conflict",
+  "description": "R-03: two user goals conflict on the evidence; the report must surface the conflict as a decision.",
+  "tags": ["research", "development", "group-with-without", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "outputs/research.md states that glassEffect renders only in 2D view shapes (K1 Limits), so a GlassKit glass body cannot hold true 3D sand, and offers options such as a 2D glass shell over a separate 3D sand layer or a DepthKit transparent 3D body, leaving the choice to the user.",
+  "execution": {
+    "max_turns": 30,
+    "timeout_seconds": 600,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Write",
+      "Edit"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-research-file-created", "type": "file_exists", "path": "outputs/research.md"},
+    {"name": "C1-no-other-write", "type": "tool_used", "tool": "Write", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C1-no-other-edit", "type": "tool_used", "tool": "Edit", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "R1-conflict-named", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report states that the two goals conflict on the evidence (glassEffect renders inside 2D view shapes and not 3D geometry, so a GlassKit glass body cannot contain true 3D sand) and presents this as a decision for the user with at least two concrete options, for example a 2D glass shell with a separate 3D sand layer, or a DepthKit transparent 3D body with sand particles. FAIL if it silently picks one approach, or proposes glassEffect for the 3D body."},
+    {"name": "R2-owner-citations", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "The supplied sources say exactly this. K1 (GlassKit 4, glassEffect), section Overview: renders a translucent glass material inside a view's 2D shape, designed for controls, toolbars and cards; section Limits: does not render volumetric or 3D geometry, use a transparent physically based material in a 3D scene. K2 (DepthKit 2), section Transparent materials: TransparentMaterial renders refraction and thickness on 3D meshes, and particle systems such as sand can render inside a transparent mesh. PASS only if each core conclusion cites K1 or K2 with its section or line and the cited section supports it. FAIL if a core conclusion is uncited or cites a section that does not support it. A statement the report explicitly labels as inference, recommendation or an open option needs no citation, as long as it is not presented as a source fact. Claims about performance are graded by another criterion and do not change this verdict."},
+    {"name": "R4-no-invented-capability", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "The supplied sources say exactly this. K1 (GlassKit 4: glassEffect), section Overview: 'glassEffect() renders a translucent glass material inside a view's 2D shape, refracting the content behind the view. It is designed for controls, toolbars and cards.' Section Limits: 'glassEffect() does not render volumetric or 3D geometry. Inside a 3D scene, use a transparent physically based material instead.' K2 (DepthKit 2: physically based materials), section Transparent materials: 'TransparentMaterial renders refraction and thickness on 3D meshes. Particle systems such as sand can render inside a transparent mesh in the same scene.' A statement explicitly labelled as inference from the sources is not an invented capability. PASS only if the report claims no GlassKit or DepthKit capability beyond the sources and no measured performance. FAIL if it claims glassEffect can render 3D or volumetric geometry, or reports frame rates, benchmarks or device results."},
+    {"name": "R5-required-sections", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report contains all of: a conclusion, evidence with nearby citations, a research or checked date, limitations, and open questions or next checks. FAIL if any of these is absent."},
+    {"name": "IND-research-skill-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?research\""}
+  ]
+}

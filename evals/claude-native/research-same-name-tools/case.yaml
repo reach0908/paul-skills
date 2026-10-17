@@ -1,0 +1,37 @@
+{
+  "schema_version": "1.1",
+  "name": "research-same-name-tools",
+  "description": "R-02: one tool name, two hosts with different features; the answer depends on which is meant.",
+  "tags": ["research", "development", "group-with-without", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "outputs/research.md separates Orbit Agents skill-forge (evals: yes, H1 Evaluate) from Quill CLI skill-forge (no evals, H2), asks or answers per host, and does not rely on the unattributed forum post.",
+  "execution": {
+    "max_turns": 30,
+    "timeout_seconds": 600,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Write",
+      "Edit"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-research-file-created", "type": "file_exists", "path": "outputs/research.md"},
+    {"name": "C1-no-other-write", "type": "tool_used", "tool": "Write", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C1-no-other-edit", "type": "tool_used", "tool": "Edit", "input_match": "\"file_path\"\\s*:\\s*\"(?![^\"]*outputs/research\\.md\")", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "R1-answers-per-host", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report makes the answer depend on which same-named tool is meant: evals are available with the Orbit Agents skill-forge plugin (H1) and not with the Quill CLI built-in skill-forge (H2), and it either answers for both or asks which one the user means. FAIL if it gives a single yes or no without distinguishing the two tools."},
+    {"name": "R2-owner-citations", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "The supplied sources say exactly this. H1 (Orbit Agents: skill-forge plugin; 'Publisher: Orbit Agents. Applies to the skill-forge plugin 2.x for Orbit Agents.'), section Evaluate: 'skill-forge eval runs a skill against saved cases, compares two skill versions side by side and reports a benchmark table.' H2 (Quill CLI: built-in skill-forge; 'Publisher: Quill CLI. Applies to Quill CLI 0.9 and later.'), section What it does: 'The built-in skill-forge system skill scaffolds a new skill folder and validates its frontmatter. It has no evaluation or benchmark commands.' H3 (forum post; 'Author: a forum user. No host or version is named.'): 'I run skill-forge eval on every change and it catches regressions.' PASS only if each core conclusion cites H1 or H2 with its section or line and the cited section supports it. FAIL if a core conclusion is uncited, rests on H3, or cites a section that does not support it. Judge only the conclusions about whether each host's skill-forge supports evals."},
+    {"name": "R3-forum-not-decisive", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the forum post H3 is treated as unattributed (no host or version) and is not used to establish whether skill-forge supports evals. FAIL if H3 is used as evidence that skill-forge in general supports evals."},
+    {"name": "R4-no-invented-results", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "The supplied sources say exactly this. H1 (Orbit Agents: skill-forge plugin; 'Publisher: Orbit Agents. Applies to the skill-forge plugin 2.x for Orbit Agents.'), section Evaluate: 'skill-forge eval runs a skill against saved cases, compares two skill versions side by side and reports a benchmark table.' H2 (Quill CLI: built-in skill-forge; 'Publisher: Quill CLI. Applies to Quill CLI 0.9 and later.'), section What it does: 'The built-in skill-forge system skill scaffolds a new skill folder and validates its frontmatter. It has no evaluation or benchmark commands.' H3 (forum post; 'Author: a forum user. No host or version is named.'): 'I run skill-forge eval on every change and it catches regressions.' PASS only if the report claims no evaluation result, benchmark number or feature beyond these source statements, attributes any relayed claim to its source, and states that it ran nothing. FAIL if it reports eval results, scores or features the sources do not state, or presents H3's experience as its own finding."},
+    {"name": "R5-required-sections", "type": "llm", "focus": {"source": "file", "path": "outputs/research.md"}, "criteria": "PASS only if the report contains all of: a conclusion, evidence with nearby citations, a research or checked date, limitations, and open questions or next checks. FAIL if any of these is absent."},
+    {"name": "IND-research-skill-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?research\""}
+  ]
+}
