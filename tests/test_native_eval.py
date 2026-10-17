@@ -240,13 +240,21 @@ class Records(TempSuite):
         self.assertTrue(ok('claude-opus-5-5', text))
         self.assertFalse(ok('claude-opus-5-5', text + ' Edited.'))
         self.assertFalse(ok('claude-haiku-5-5', text))
+        old = 'PASS only if the earlier report is good.'
+        status['graders']['research-atlas-v2:R4-no-invented-speed@' + native.criteria_sha(old)] = {
+            'agreed': 3, 'falsePass': 0, 'falseFail': 0, 'criteriaSha256': native.criteria_sha(old)}
+        self.assertTrue(ok('claude-opus-5-5', old))
         del status['graders']['research-atlas-v2:R4-no-invented-speed']['criteriaSha256']
         self.assertFalse(ok('claude-opus-5-5', text))
 
     def test_skill_changed_since_rubric_is_flagged(self):
-        self.assertFalse(any(u.startswith('rubric_contract_drift')
-                             for u in native.record(aggregate('research-atlas-v2', [research_run()]))['unresolved']))
+        # Pin the copied rubric to the checkout's own trees so the test holds on branches that change a skill.
         suite = self.copy_suite()
+        current = {name: native.git('rev-parse', f'HEAD:{c["path"]}') for name, c in
+                   json.loads((suite / 'rubric.json').read_text())['contracts'].items()}
+        self.edit_json(suite / 'rubric.json', lambda d: [c.update(tree=current[n]) for n, c in d['contracts'].items()])
+        rec = native.record(aggregate('research-atlas-v2', [research_run()]), suite_dir=suite)
+        self.assertFalse(any(u.startswith('rubric_contract_drift') for u in rec['unresolved']))
         self.edit_json(suite / 'rubric.json', lambda d: d['contracts']['research'].update(tree='0' * 40))
         rec = native.record(aggregate('research-atlas-v2', [research_run()]), suite_dir=suite)
         self.assertIn('rubric_contract_drift:research', rec['unresolved'])
@@ -297,10 +305,23 @@ class TraceChecks(TempSuite):
 
     def test_write_counts_as_a_card_change(self):
         trace = self.root / 't.jsonl'
-        write_trace(trace, [('Read', {'file_path': '/w/docs/decisions.md'}), ('Read', {'file_path': '/w/src/TripFolder.tsx'}),
-                            ('Write', {'file_path': '/w/src/TripCard.tsx', 'content': 'x'})])
+        calls = [('Read', {'file_path': '/w/docs/decisions.md'}), ('Read', {'file_path': '/w/src/TripFolder.tsx'}),
+                 ('Write', {'file_path': '/w/src/TripCard.tsx', 'content': 'x'})]
+        write_trace(trace, [('Skill', {'skill': 'paul-skills:build-design'})] + calls)
         rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('build-design-scoped-card'), {}, str(trace))}
         self.assertEqual(set(rows.values()), {'pass'})
+        write_trace(trace, calls)
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('build-design-scoped-card'), {}, str(trace))}
+        self.assertEqual(rows['B5-skill-loaded'], 'fail')
+
+    def test_near_miss_fails_when_the_skill_loads(self):
+        trace = self.root / 't.jsonl'
+        write_trace(trace, [('Skill', {'skill': 'paul-skills:code-review'}), ('Read', {'file_path': '/w/src/discount.js'})])
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('code-review-near-miss'), {}, str(trace))}
+        self.assertEqual(rows['K5-skill-not-loaded'], 'fail')
+        write_trace(trace, [('Read', {'file_path': '/w/src/discount.js'})])
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('code-review-near-miss'), {}, str(trace))}
+        self.assertEqual(rows['K5-skill-not-loaded'], 'pass')
 
     def test_reread_may_follow_an_existence_check(self):
         trace = self.root / 't.jsonl'

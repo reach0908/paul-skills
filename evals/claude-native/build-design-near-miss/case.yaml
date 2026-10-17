@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.1",
+  "name": "build-design-near-miss",
+  "description": "B-N: finding where a component is used is not building a design; build-design stays unloaded.",
+  "tags": ["build-design", "development", "group-single-arm", "invocation-boundary"],
+  "expected_outcome": "Names the files that use each TopicCard without loading build-design and without changing code.",
+  "runs": 3,
+  "execution": {
+    "max_turns": 20,
+    "timeout_seconds": 600,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-usage-reply", "type": "regex", "pattern": "LibraryPage", "target": "last_message"},
+    {"name": "C1-no-repository-change", "type": "tool_used", "tool": "Bash", "input_match": "\"command\"\\s*:\\s*\"[^\"]*\\bgit\\b[^\"]*\\b(add|commit|checkout|switch|stash|reset|restore|merge|rebase|push|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/claude-native", "min": 0, "max": 0}
+  ]
+}

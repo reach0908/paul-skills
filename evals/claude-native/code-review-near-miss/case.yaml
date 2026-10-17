@@ -1,0 +1,30 @@
+{
+  "schema_version": "1.1",
+  "name": "code-review-near-miss",
+  "description": "K-N: explaining code on a branch is not a review; code-review stays unloaded.",
+  "tags": ["code-review", "development", "group-single-arm", "invocation-boundary"],
+  "expected_outcome": "Explains applyDiscount from the source without loading code-review and without changing the repository.",
+  "runs": 3,
+  "execution": {
+    "max_turns": 20,
+    "timeout_seconds": 600,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-explanation-reply", "type": "regex", "pattern": "applyDiscount", "target": "last_message"},
+    {"name": "C1-no-repository-change", "type": "tool_used", "tool": "Bash", "input_match": "\"command\"\\s*:\\s*\"[^\"]*\\bgit\\b[^\"]*\\b(add|commit|checkout|switch|stash|reset|restore|merge|rebase|push|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/claude-native", "min": 0, "max": 0}
+  ]
+}

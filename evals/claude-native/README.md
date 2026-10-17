@@ -2,7 +2,7 @@
 
 Cases for `claude plugin eval`, plus the rubric, verdict and calibration tooling around them. The runner executes a fresh Claude session per case with only this plugin loaded, then applies the case graders. This directory turns those grader results into rubric verdicts that a maintainer can review and compare over time.
 
-Status: eleven development cases for `research`, `interface-review`, `user-flow`, `build-design`, `better-interface` and `diagnosing-bugs`. Seven come from behavior observed in recent real Claude Code and Codex sessions; the private sessions stay outside this repository and each case records only episode IDs. Expected verdicts and judge criteria are AI drafts that the user accepted without itemized review (`goldStatus` stays pending human confirmation). The judge was chosen by calibration (see [Choosing the judge](#choosing-the-judge)), and the [first unreviewed pilot record](records/2026-10-17-pilot3/README.md) is committed.
+Status: thirteen development cases for `research`, `interface-review`, `user-flow`, `build-design`, `better-interface`, `diagnosing-bugs` and `code-review`. Nine come from behavior observed in recent real Claude Code and Codex sessions; the private sessions stay outside this repository and each case records only episode IDs. Expected verdicts and judge criteria are AI drafts that the user accepted without itemized review (`goldStatus` stays pending human confirmation). The judge was chosen by calibration (see [Choosing the judge](#choosing-the-judge)), and the [first unreviewed pilot record](records/2026-10-17-pilot3/README.md) is committed.
 
 ## What a verdict means
 
@@ -55,7 +55,9 @@ Every grader name starts with the criterion it evidences (`R2-owner-citations`) 
 | `better-interface-settings-audit` | A-01 | with-without | Current-screen audit: entry, procedure and six owners before inspection; planted unnamed button and vague error; no invented defects | C7, B1 |
 | `user-flow-export-panel` | U-01 | with-without | Async export with close and reopen in all four states, key and receipt rules, one undecided policy | Rubric draft |
 | `build-design-scoped-card` | B-01 | edit-with-without | Restyle one card while an approved shell and decision stay intact; report the spec conflict as a deviation | C1, C2, E4, B5, E1, D1 |
+| `build-design-same-name-card` | B-02 | edit-with-without | Two exported `TopicCard`s; only the reference's call site identifies the one to reuse | C1, F1 |
 | `diagnosing-bugs-scroll-reset` | G-01 | code-with-without | Reported scroll reset that existing tests miss: red-capable loop and regression test before the fix | B9, D14, D3 |
+| `code-review-merge-readiness` | K-01 | review-with-without | "Can this branch merge without CI?": pinned SHAs, Standards and Spec findings, conflict found without changing any ref | A8 |
 
 Episode IDs refer to a private review of 33 top-level sessions from 2026-10-03 to 2026-10-17. Episodes that need a browser, a live service, concurrent sessions or an in-progress skill remain candidates outside this suite.
 
@@ -63,10 +65,11 @@ Each group fixes the ablation and grants that the runner applies to a whole invo
 
 | Group | Ablation | Grant | Why |
 | --- | --- | --- | --- |
-| `group-with-without` | `with-without` | `Write` | The task is meaningful without the plugin, so the no-plugin arm measures added value |
+| `group-with-without` | `with-without` | `Write`, `Edit` | The task is meaningful without the plugin, so the no-plugin arm measures added value |
 | `group-single-arm` | `none` | `Bash(git:*)` | Explicit invocation and its routing boundary do not exist without the plugin |
-| `group-edit-with-without` | `with-without` | `Edit` | Only existing files can change |
-| `group-code-with-without` | `with-without` | `Edit`, `Bash(node:*)`, `Bash(npm:*)`, `Bash(git:*)` | Bug fixing with tests |
+| `group-edit-with-without` | `with-without` | `Edit`, `Write` | Graders forbid new or unrelated files |
+| `group-code-with-without` | `with-without` | `Edit`, `Write`, `Bash(node:*)`, `Bash(npm:*)`, `Bash(git:*)` | Bug fixing with tests |
+| `group-review-with-without` | `with-without` | `Bash(git:*)` | Merge judgement; repository state is graded directly |
 
 A criterion listed in `notApplicableWithout` (for example loading the audit procedure) is `n/a` in the no-plugin arm instead of a failure.
 
@@ -149,12 +152,13 @@ A judge only checks a short artifact against concrete criteria, which is easier 
 | 2 | U2 exempts undecided rows; U-F rebuilt as a single-cause failure | 0, 3 | 3, 13 | 1, 1 | 0, 5 |
 | 3 | U2 judges only table rows; the exemption covers feedback | 0, 0 | not run | 2, 0 | 0, 0 |
 
-Shared false fails across all judges pointed at the criteria and artifacts, not the judges, and were fixed there. After that, Opus and Codex agreed with every expectation; Haiku passed the U-B close omission in two of three runs, and Sonnet passed it in every run of round 2. Opus 5.5 is the native judge and Codex the cross-check. After the session-derived cases and their single-cause failure artifacts were added, Opus agreed with all 525 judged expectations over 132 runs, and `calibration/status.json` records it for each grader's exact criteria text. Codex disagreed on 21, mostly by judging research citations (R2) and invented claims (R4) more strictly; [the comparison](records/2026-10-17-pilot3/judge-comparison.json) lists them for criteria review. Where the two judges split on an expectation, it became a human judgement. Judge cost per 24-run round was about $12.4 for Opus, $5.6 for Sonnet and $0.4 for Haiku. These are eight-artifact development results, not a general ranking of the models.
+Shared false fails across all judges pointed at the criteria and artifacts, not the judges, and were fixed there. After that, Opus and Codex agreed with every expectation; Haiku passed the U-B close omission in two of three runs, and Sonnet passed it in every run of round 2. Opus 5.5 is the native judge and Codex the cross-check. After the session-derived cases and their single-cause failure artifacts were added, Opus agreed with all 525 judged expectations over 132 runs. Codex disagreed on 21, mostly research citations (R2) and invented claims (R4); [the comparison](records/2026-10-17-pilot3/judge-comparison.json) lists them. The disagreements traced to criteria text: a source summary that dropped details, citations demanded for statements labelled as inference, and a raw value the judge could not know was pre-existing. After those criteria were revised, Opus agreed with all 627 judged expectations over 165 runs, including the two newest cases, and Codex with 624 and no false pass. `calibration/status.json` records each grader's exact criteria text, keeping earlier calibrated texts as `<case>:<grader>@<sha>` for records judged with them. Judge cost per 24-run round was about $12.4 for Opus, $5.6 for Sonnet and $0.4 for Haiku. These are eight-artifact development results, not a general ranking of the models.
 
 ## Known limits
 
 - Aggregate JSON schema 1 reports cost, turns and duration but no token usage, so tokens are `null`.
 - Whether the eval session expands `/paul-skills:interface-review staged` as a skill invocation is not yet observed. `I1` stays human-judged for `interface-review-staged` until a trace shows how it appears.
+- `--case` takes one glob; when repeated, only the last one applies. Use a single glob such as `cal-research-*`.
 - Always pass `--eval-dir`. A bare `claude plugin eval .` scans every `case.yaml` under `evals/`, including generated calibration cases, under one set of grants.
 - `input_match` patterns are heuristics checked by the controls in `suite.json`. For example, `git grep -e add` would trip `I7-no-checkout-mutation`.
 - An Edit grant also allows Write. `check` requires every zero-call Edit or Write grader to have a twin on the other tool, rejects single-tool graders that need a file change, and requires Edit/Write `input_match` patterns to start at `"file_path"`. The second pilot lost a correct build-design run and two correct diagnosing-bugs runs to these mistakes.

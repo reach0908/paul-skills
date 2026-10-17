@@ -1,5 +1,5 @@
 {
-  "rubricVersion": "rubric-v0.3",
+  "rubricVersion": "rubric-v0.5",
   "derivedFrom": "rubric-draft-v0.1 (KJH_AI_WIKI, 2026-10-14, AI-written hypothetical calibration examples)",
   "goldStatus": "ai_draft_pending_human",
   "contractRevision": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
@@ -27,6 +27,10 @@
     "diagnosing-bugs": {
       "path": "skills/engineering/diagnosing-bugs",
       "tree": "e936d3c8865e52a82a9819c5d153c70fd2e0c736"
+    },
+    "code-review": {
+      "path": "skills/engineering/code-review",
+      "tree": "07d27012fc049c7873796cee6878bf92db700a3b"
     }
   },
   "verdictRules": [
@@ -257,6 +261,41 @@
       "scope": "diagnosing-bugs",
       "kind": "quality",
       "text": "The explanation lets a reviewer follow cause, fix and remaining risk without rerunning the investigation."
+    },
+    "K1": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "Pins the fixed point: reports the base, head and merge-base SHAs and reviews the change from the merge base rather than from the current base tip."
+    },
+    "K2": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "Runs the Standards and Spec reviews and reports them as separate axes: Standards cites the documented rule each finding breaks, Spec names the unmet requirement, each with a file:line location."
+    },
+    "K3": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "Judges merge readiness without changing the repository: HEAD, refs, index, working tree and remotes stay as they were; a conflict check uses object-only or out-of-workspace means, and conflicting files are reported."
+    },
+    "K4": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "States a merge verdict separate from the review findings and consistent with them, names what blocks merging, and states what was not verified, such as CI or tests that were not run."
+    },
+    "KQ1": {
+      "scope": "code-review",
+      "kind": "quality",
+      "text": "A reviewer can act on each blocker without rereading the diff: location, cause and fix are stated once."
+    },
+    "B5": {
+      "scope": "build-design",
+      "kind": "required",
+      "text": "Invocation boundary: build-design is loaded for requests in its scope (implementing a supplied design or reusing an existing component) and not for questions about existing UI."
+    },
+    "K5": {
+      "scope": "code-review",
+      "kind": "required",
+      "text": "Invocation boundary: code-review is loaded for reviews against a fixed point and merge-readiness judgements, and not for explaining or reading code."
     }
   }
 }

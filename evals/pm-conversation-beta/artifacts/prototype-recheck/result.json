@@ -1,0 +1,55 @@
+{
+  "task": "별의 지도를 나중에 읽기 위해 담고, 내가 담은 책에서 소개를 살펴본 뒤 방금 보던 목록으로 돌아오세요.",
+  "url": "http://127.0.0.1:48617",
+  "participants": 1,
+  "freshContext": "fork_turns=none",
+  "viewport": {
+    "width": 390,
+    "height": 844,
+    "touchEmulation": false
+  },
+  "uiAttempt": {
+    "startUtc": "2026-10-14T09:54:47.537Z",
+    "stopUtc": "2026-10-14T09:56:52.152Z",
+    "elapsedSeconds": 124.615,
+    "actions": 5,
+    "maxSeconds": 180,
+    "maxActions": 8,
+    "completion": "unassisted recovery",
+    "lateObservations": false
+  },
+  "postTaskInterview": {
+    "rounds": 1,
+    "additionalUiActions": 0,
+    "authorIntentExposed": false
+  },
+  "directReturn": {
+    "alignment": "mismatch",
+    "expectedListFromAuthorDraft": "내 보관함",
+    "observedList": "추천",
+    "recovery": "내 보관함 navigation selected once"
+  },
+  "searchPreservation": "not reached; no query entered",
+  "persistence": "out of scope and unobserved",
+  "externalTransmission": "unverified; no network inspection",
+  "appModified": false,
+  "extraTrials": 0,
+  "externalModelCalls": 0,
+  "sessionClosed": true,
+  "unknown": [
+    "app exact revision",
+    "browser exact build",
+    "exact model/version",
+    "cost telemetry"
+  ],
+  "procedureLimit": "Moderator list_agents status inventory incidentally returned unrelated task summaries after fresh participant dispatch; not used and not passed to participant.",
+  "evidence": {
+    "report": "report.md",
+    "attempt": "participant/attempt.md",
+    "structuredAttempt": "participant/attempt.json",
+    "interview": "participant/interview.md",
+    "preflight": "infrastructure/preflight.md",
+    "setup": "participant/setup.md",
+    "freeze": "participant/freeze.sha256"
+  }
+}

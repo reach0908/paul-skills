@@ -10,7 +10,7 @@ Evaluation is added by this fork; the upstream library supplies authoring guidan
 
 ## Claude native suite
 
-The [Claude native suite](claude-native/README.md) runs repeatable cases through `claude plugin eval` and turns grader results into rubric verdicts. Required criteria gate each run instead of a weighted score, unjudged graders stay unknown, and LLM graders count as final only for a judge calibrated against labelled pass, fail and boundary artifacts. A Codex model cross-checks the Claude judge. Its eleven development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface` and `diagnosing-bugs`; seven reproduce behavior seen in recent real sessions, which stay private. `npm run eval:check` and `npm run eval:plan` make no model calls; calibration and group runs are paid.
+The [Claude native suite](claude-native/README.md) runs repeatable cases through `claude plugin eval` and turns grader results into rubric verdicts. Required criteria gate each run instead of a weighted score, unjudged graders stay unknown, and LLM graders count as final only for a judge calibrated against labelled pass, fail and boundary artifacts. A Codex model cross-checks the Claude judge. Its thirteen development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface`, `diagnosing-bugs` and `code-review`; nine reproduce behavior seen in recent real sessions, which stay private. `npm run eval:check` and `npm run eval:plan` make no model calls; calibration and group runs are paid.
 
 ## First pilot
 
@@ -80,3 +80,9 @@ The [remaining eight-skill readiness review](design-beta-readiness-2026-10-14/RE
 - [CLI compatibility and wireframe CSS follow-up](design-cli-css-repair-2026-10-15/REPORT.md) preserves the failed 0.4.4 records, updates the active Codex CLI and completes all four installed cases. A browser oracle and four Claude pairs support a bounded responsive-evidence clarification; both arms explain CSS values correctly, so no accuracy improvement is claimed. A separate diagnostic's unmeasured blocking verdict remains recorded.
 
 - [Wireframe evidence patch 0.4.5 release](wireframe-0.4.5-release-2026-10-15/REPORT.md) records PR #29 and version PR #30 merges, the immutable tag, both global updates and one fresh wireframe case per host. Historical failures and the tied comparison remain intact; installation activation does not establish an accuracy gain or human validation.
+
+The [PM beta trials](product-management-beta/README.md) compare three product-context candidates with no-skill controls on synthetic tasks, including the boundary between product experiments and design QA. They preserve task/skill hashes, raw artifacts, verdict grounds and limits; they do not promote the candidates.
+
+The [PM conversation and prototype walkthrough beta](pm-conversation-beta/RESULTS.md) records the office-hours behavioral fork, fresh AI task/interview protocol, existing-PM updates and bounded tests. It keeps original observations, host limits and user acceptance separate.
+
+The [PM beta integration repairs](pm-beta-integration-2026-10-16/REPORT.md) reconcile the main merge, optional routing policy and provenance baseline, separate historical and current-tree verification, and trace public-copy redactions. Local verifier controls do not promote the candidates or replace behavior evidence.

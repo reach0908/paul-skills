@@ -1,0 +1,260 @@
+{
+  "revision": "aa676799bb33ed0ec311a5cd7b6c3c9e6e7d8f20",
+  "skills": [
+    {
+      "id": "problem-discovery",
+      "path": "skills/in-progress/problem-discovery",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:21ecb4f9c6eeb9df2d969b502052b003b89281430e6c7ee51fabd8488b842792",
+          "files": {
+            "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
+            "office-hours/sections/phase-2b-builder-brainstorm.md": "sha256:05251d190b32f1da63165e8339211404963556ef5b9cf4c3e46361cbc51027e2"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/sections/phase-2a-startup-diagnostic.md",
+                "office-hours/sections/phase-2b-builder-brainstorm.md"
+              ],
+              "decision": "adapt",
+              "reason": "Retain startup/builder purpose routing, specificity, status quo, smallest scope and smart-skip; replace forced pressure and mandatory later phases with decision-changing gaps and sufficient-input completion.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "product-brief",
+      "path": "skills/in-progress/product-brief",
+      "kind": "composite",
+      "origins": [
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/create-prd",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "files": {
+            "pm-execution/skills/create-prd/SKILL.md": "sha256:e3aa10a437ed7f748a957bd5d1eb06d8fa3f56dc728dcb93ce484387ecc3fa13"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/create-prd/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use lean decision-ready scope and honest assumptions; replace mandatory eight sections, fixed size and blanket missing-input gate with relevant fields, scoped updates and product behavior.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-strategy/skills/value-proposition",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "files": {
+            "pm-product-strategy/skills/value-proposition/SKILL.md": "sha256:b07cc0399582fc178be31b513b313d2420c7941dd568b52a0bf6cfb0ab6c4ec7"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-strategy/skills/value-proposition/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Select situation/current alternative/desired outcome questions; preserve Huryn and Abdul Rauf credit, omit mandatory marketing positioning and unsupported framework superiority claims.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/job-stories",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "files": {
+            "pm-execution/skills/job-stories/SKILL.md": "sha256:69f75264b311418a1ebaf06c9872ed1271203cfc6316466fcb99cc948ade800b"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/job-stories/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Select situation, motivation, outcome and observable completion; omit fixed story counts and backlog deliverables.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+          "files": {
+            "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/sections/design-and-handoff.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use decision-plus-reason concision, rejected-alternative brevity and Supersedes lineage; add explicit authority and observed/reported/intended handoff, omit gstack runtime, telemetry and profile.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "experiment-design",
+      "path": "skills/in-progress/experiment-design",
+      "kind": "composite",
+      "origins": [
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/identify-assumptions-existing",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "files": {
+            "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md": "sha256:59d788213014552ac64f589c71ce82b135f9ef4b84fec457446ad90795fd439f"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use existing-product perspective checks and current evidence; bound the selected uncertainty rather than require every risk category.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/identify-assumptions-new",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "files": {
+            "pm-product-discovery/skills/identify-assumptions-new/SKILL.md": "sha256:962b1e0c01e45ceb930e4d806c0ffb05e36cf25dcfef5497e7828d89d6ae474b"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/identify-assumptions-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use new-product assumption review; retain upstream conceptual attribution, omit automatic eight-category inventory.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/prioritize-assumptions",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "files": {
+            "pm-product-discovery/skills/prioritize-assumptions/SKILL.md": "sha256:18160a0138c788790c9dd22995ffdcfac485c1f0599c170d8668678e59766073"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/prioritize-assumptions/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Retain consequential-impact and uncertainty comparison; omit mismatched confidence formula, unsupported ICE/RICE scores and quadrant-based automatic build/reject.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/brainstorm-experiments-new",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "files": {
+            "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md": "sha256:fe66d9ba76cf6b0e156298c88f752d8e1e62549fe77a7c01c0a74d8679da9334"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use falsifiable behavior, small tests and method/observation/criteria; distinguish interest from demand and add inconclusive, validity, budget and stop decisions.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "After the paired smoke trial, distinguish proposed test operating constraints from approved product requirements in downstream handoff; same-input fresh recheck recorded. Upstream pins and hashes remain unchanged.",
+              "report": "evals/product-management-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/pre-mortem",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+          "files": {
+            "pm-execution/skills/pre-mortem/SKILL.md": "sha256:4e5cf10a46ac1d1cdde6aa009ba2b860c532f55c0c3d9ec53a82082cad073052"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/pre-mortem/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use failure-backward questions only for existing-plan review; omit fixed launch dates, defaults and compulsory risk labels.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  ]
+}
