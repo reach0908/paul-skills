@@ -2,6 +2,26 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.5.0
+
+### Minor Changes
+
+- [#10](https://github.com/reach0908/paul-skills/pull/10) [`28cf2cd`](https://github.com/reach0908/paul-skills/commit/28cf2cdce70d14e533579b00760cf431e814b067) Thanks [@reach0908](https://github.com/reach0908)! - Add optional office-hours and prototype-user-test betas, preserving gstack's staged idea conversation and separating fresh AI task attempts from author-intent comparison. Strengthen existing PM context recovery, reference-to-decision synthesis, scoped change impact, experiment routing and product-to-design-to-engineering handoff checks. All five candidates remain outside the promoted plugin pending human validation.
+
+- [#10](https://github.com/reach0908/paul-skills/pull/10) [`aa67679`](https://github.com/reach0908/paul-skills/commit/aa676799bb33ed0ec311a5cd7b6c3c9e6e7d8f20) Thanks [@reach0908](https://github.com/reach0908)! - Add problem-discovery, product-brief and experiment-design as in-progress PM candidates, with pinned source attribution and product-to-design-to-engineering handoffs. Product handoff remains inside product-brief.
+  
+  Keep the candidates outside the promoted plugin, root catalog and product-management docs. Include bounded paired agent trials and report their observed limitations; automated checks and trial outcomes do not establish customer effects, user acceptance or promotion approval.
+
+### Patch Changes
+
+- [#34](https://github.com/reach0908/paul-skills/pull/34) [`e6bcc1d`](https://github.com/reach0908/paul-skills/commit/e6bcc1da6743befad20e2ecb293b2b006f3f4cf2) Thanks [@reach0908](https://github.com/reach0908)! - `code-review` now takes merge-readiness questions: its description names them, and a Merge step reports the target, head and merge-base SHAs, checks conflicts with a ref-preserving `git merge-tree`, and gives a verdict citing both axes. `build-design` names reusing an existing component on another screen, which its body already covers. `ask-matt` routes both the same way. In the Claude native suite neither skill loaded for these requests before the change.
+
+- [#32](https://github.com/reach0908/paul-skills/pull/32) [`3179ac0`](https://github.com/reach0908/paul-skills/commit/3179ac0d547bc15b4821a9025dbf50593aaf62b2) Thanks [@reach0908](https://github.com/reach0908)! - Add a Claude native evaluation suite for `claude plugin eval`. Thirteen development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface`, `diagnosing-bugs` and `code-review`; nine reproduce behavior observed in recent real Claude Code and Codex sessions with synthetic fixtures. A rubric and per-case profiles map every grader to a criterion, required criteria gate each run instead of the weighted native score, unjudged graders stay unknown and errored runs are excluded. The tooling stages a small plugin copy for each run, records the exact command, adds static, regex and `input_match` controls to `npm test`, offers a zero-cost plan check, and calibrates LLM judges against labelled artifacts, including a Codex cross-judge. Opus 5.5 was chosen as the native judge after calibration rounds in which Sonnet and Haiku passed a known-bad artifact. Expected verdicts remain AI drafts pending human confirmation.
+
+- Reconcile optional PM beta routing with the maintenance policy while retaining the main provenance review baseline. Verify historical trials against their recorded source snapshots, keep current-tree equality explicit, and trace public artifact redactions through original and public hashes. Add local verifier controls without changing the CI command or promoting the five beta skills.
+
+- [#33](https://github.com/reach0908/paul-skills/pull/33) [`a2734a5`](https://github.com/reach0908/paul-skills/commit/a2734a562df710e09a4f270edaf81b143c01ac43) Thanks [@reach0908](https://github.com/reach0908)! - `research` now names the read-back in step 4 and ends that step on a completion criterion: the saved findings file is read back after the final write, and the report follows that read. In the Claude native suite this moved read-backs with the plugin from 0/12 to 11/12 runs across four research cases, with the no-plugin control unchanged at 0/12.
+
 ## 0.4.6
 
 ### Patch Changes
