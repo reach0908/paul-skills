@@ -301,10 +301,23 @@ class TraceChecks(TempSuite):
 
     def test_write_counts_as_a_card_change(self):
         trace = self.root / 't.jsonl'
-        write_trace(trace, [('Read', {'file_path': '/w/docs/decisions.md'}), ('Read', {'file_path': '/w/src/TripFolder.tsx'}),
-                            ('Write', {'file_path': '/w/src/TripCard.tsx', 'content': 'x'})])
+        calls = [('Read', {'file_path': '/w/docs/decisions.md'}), ('Read', {'file_path': '/w/src/TripFolder.tsx'}),
+                 ('Write', {'file_path': '/w/src/TripCard.tsx', 'content': 'x'})]
+        write_trace(trace, [('Skill', {'skill': 'paul-skills:build-design'})] + calls)
         rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('build-design-scoped-card'), {}, str(trace))}
         self.assertEqual(set(rows.values()), {'pass'})
+        write_trace(trace, calls)
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('build-design-scoped-card'), {}, str(trace))}
+        self.assertEqual(rows['B5-skill-loaded'], 'fail')
+
+    def test_near_miss_fails_when_the_skill_loads(self):
+        trace = self.root / 't.jsonl'
+        write_trace(trace, [('Skill', {'skill': 'paul-skills:code-review'}), ('Read', {'file_path': '/w/src/discount.js'})])
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('code-review-near-miss'), {}, str(trace))}
+        self.assertEqual(rows['K5-skill-not-loaded'], 'fail')
+        write_trace(trace, [('Read', {'file_path': '/w/src/discount.js'})])
+        rows = {r['name']: r['value'] for r in native.trace_rows(self.profile('code-review-near-miss'), {}, str(trace))}
+        self.assertEqual(rows['K5-skill-not-loaded'], 'pass')
 
     def test_reread_may_follow_an_existence_check(self):
         trace = self.root / 't.jsonl'
