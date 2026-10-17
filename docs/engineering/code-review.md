@@ -6,7 +6,7 @@ The skill never merges or re-ranks the two axes. The report ends with a worst is
 
 ## When to reach for it
 
-Type `/code-review`, or the agent reaches for it automatically when you ask to review a branch, a PR, work in progress, or anything "since X".
+Type `/code-review`, or the agent reaches for it automatically when you ask to review a branch, a PR, work in progress, anything "since X", or whether a branch is ready to merge. A merge question adds a Merge section: the target, head and merge-base SHAs, a conflict check that leaves the checkout and refs untouched, and a verdict.
 
 | Your situation | Reach for |
 | --- | --- |

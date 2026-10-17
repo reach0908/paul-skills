@@ -29,7 +29,7 @@ The route most work travels. You have an idea and want it built.
      - **`/implement-spec`** for the whole spec in one run. It reads the tickets as a **task graph**, runs implementer subagents across the ready **frontier** in parallel, and lands everything on one **integration branch**. Reach for it when you'd rather orchestrate the build than drive each ticket yourself.
    - **No** → **`/implement`** right here, in the same context window.
 
-   Either way, the code gets built by driving **`/tdd`** (one red-green slice at a time) and closes out with **`/code-review`**, a two-axis review (Standards + Spec) of the diff. `/implement` runs both per ticket; `/implement-spec`'s implementers each drive `/tdd`, and it runs one `/code-review` over the integration branch. Reach for **`/tdd`** on its own when you just want to build a concrete behaviour test-first without a full spec, and **`/code-review`** on its own whenever you want to review a branch or PR against a fixed point.
+   Either way, the code gets built by driving **`/tdd`** (one red-green slice at a time) and closes out with **`/code-review`**, a two-axis review (Standards + Spec) of the diff. `/implement` runs both per ticket; `/implement-spec`'s implementers each drive `/tdd`, and it runs one `/code-review` over the integration branch. Reach for **`/tdd`** on its own when you just want to build a concrete behaviour test-first without a full spec, and **`/code-review`** on its own whenever you want to review a branch or PR against a fixed point, or judge whether it is ready to merge.
 
    When the work goes up as a pull request, **`/pr`** shapes the body: the smallest visual that shows the change, before/after evidence that it works, and a one-way or two-way door call. It's model-invoked, so the agent reaches for it whenever it writes a PR.
 
@@ -92,7 +92,7 @@ Use this route once the product intent is known. Enter at the first unsettled st
 | Organize agreed content and findability | **`/information-architecture`** for destinations, labels and navigation |
 | Specify task actions, outcomes, interruption or recovery | **`/user-flow`** for the transition contract, including exit and return |
 | Decide screen hierarchy and responsive action placement | **`/wireframe`** for local interactive screens plus Markdown |
-| Implement an approved prototype, screen specification or image | **`/build-design`** for reference-to-export mapping, preserved behavior and matching-state comparison |
+| Implement an approved prototype, screen specification or image, or reuse an existing component on another screen | **`/build-design`** for reference-to-export mapping, preserved behavior and matching-state comparison |
 | Work on the reachable states of one existing component | Ask the user to invoke **`/state-machine`** for a removable state workbench |
 | Observe one component under plausible hostile content | Ask the user to invoke **`/break`** for a single-look stress page |
 | Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |

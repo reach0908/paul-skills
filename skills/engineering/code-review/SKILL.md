@@ -1,6 +1,6 @@
 ---
 name: code-review
-description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, or asks to \"review since X\"."
+description: "Review the changes since a fixed point (commit, branch, tag, or merge-base) along two axes: Standards (does the code follow this repo's documented coding standards?) and Spec (does the code match what the originating issue/spec asked for?). Runs both reviews in parallel sub-agents and reports them side by side. Use when the user wants to review a branch, a PR, work-in-progress changes, asks to \"review since X\", or asks whether a branch is ready to merge."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
@@ -80,6 +80,10 @@ If the spec is missing, skip the Spec sub-agent and note this in the final repor
 Present the two reports under `## Standards` and `## Spec` headings, verbatim or lightly cleaned. Do **not** merge or rerank findings, because the two axes are deliberately separate (see _Why two axes_).
 
 End with a one-line summary: total findings per axis, and the worst issue _within each axis_ (if any). Don't pick a single winner across axes: that's the reranking the separation exists to prevent.
+
+### 6. Answer a merge question
+
+When the user asks whether the branch can merge, add a `## Merge` section after the two axes. Name the target, `HEAD` and the merge-base as short SHAs so the comparison can be re-checked. Check mergeability with `git merge-tree --write-tree <target> HEAD`, which writes only objects and lists conflicting files, leaving the checkout, index and refs as they were. Give the verdict there: cite the blocking findings from each axis and any conflicts, and name what was not run, such as CI or tests. Done when the `## Merge` section names the three SHAs, the conflict result and a verdict that follows from them.
 
 ## Why two axes
 
