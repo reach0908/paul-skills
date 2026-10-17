@@ -1,0 +1,9 @@
+playwright-cli click <target> [button]
+
+Perform click on a web page
+
+Arguments:
+  <target>                    exact target element reference from the page snapshot, or a unique element selector
+  [button]                    button to click, defaults to left
+Options:
+  --modifiers                 modifier key to press (repeatable)

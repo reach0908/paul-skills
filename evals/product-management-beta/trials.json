@@ -1,0 +1,379 @@
+{
+  "schemaVersion": 1,
+  "date": "2026-10-14",
+  "baseRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e",
+  "branch": "codex/pm-skills-beta-20261014",
+  "host": {
+    "name": "Codex desktop in-session collaboration agents",
+    "version": null,
+    "modelId": null,
+    "reasoningEffort": null,
+    "settingPolicy": "Fresh fork_turns=none agents inherit the same parent settings; no model/effort overrides. Effective identifiers and provider telemetry are not exposed.",
+    "invocation": "Explicitly read supplied skill files; no Skill tool receipt or automatic discovery claim."
+  },
+  "permissions": "Offline, own synthetic input/artifact folder only, no external operations or delegation. Candidate has copied workflow; baseline cannot read/invoke skills. Evaluator criteria live outside worker folders.",
+  "trials": [
+    {
+      "id": "discovery-ready-baseline",
+      "case": "discovery-ready",
+      "arm": "baseline",
+      "agent": "/root/discovery_baseline",
+      "task": "cases/discovery-ready/task.md",
+      "taskDigest": "sha256:230d384240877213308e3c0696bb7e818e576cd54708f14cc618e860cf72fb17",
+      "inputs": {},
+      "skill": null,
+      "skillRevision": null,
+      "skillDigest": null,
+      "snapshot": null,
+      "artifacts": [
+        {
+          "path": "artifacts/discovery-ready-baseline/result.md",
+          "sha256": "sha256:6bb5046237db23df5c5512a66b7b5f240c2faa5305983207f04a01dfd868b4d6"
+        }
+      ],
+      "judgment": "No repeated interview; personal/offline purpose and first boundary retained; self-report and effect limits explicit.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/discovery-ready-baseline/task.md directly. This is a bounded offline task. Read only task.md and supplied product input files under that directory; do not read or invoke skills, other trials, repository instructions or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "discovery-ready-candidate",
+      "case": "discovery-ready",
+      "arm": "candidate",
+      "agent": "/root/discovery_candidate",
+      "task": "cases/discovery-ready/task.md",
+      "taskDigest": "sha256:230d384240877213308e3c0696bb7e818e576cd54708f14cc618e860cf72fb17",
+      "inputs": {},
+      "skill": "problem-discovery",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + pre-commit candidate tree",
+      "skillDigest": "sha256:21ecb4f9c6eeb9df2d969b502052b003b89281430e6c7ee51fabd8488b842792",
+      "snapshot": "snapshots/problem-discovery/21ecb4f9c6eeb9df2d969b502052b003b89281430e6c7ee51fabd8488b842792",
+      "artifacts": [
+        {
+          "path": "artifacts/discovery-ready-candidate/result.md",
+          "sha256": "sha256:ba88560d1f71d1a912212a62d2cc72d6899aefe1134a6981dadff4f0d413a74a"
+        }
+      ],
+      "judgment": "No repeated interview; linked task evidence, hypothesis/unknown and later/excluded scope explicit. Both supplied usable problem input.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/discovery-ready-candidate/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "brief-update-baseline",
+      "case": "brief-update",
+      "arm": "baseline",
+      "agent": "/root/brief_baseline",
+      "task": "cases/brief-update/task.md",
+      "taskDigest": "sha256:7703b663aab450d62e53bc91505ea544b7ac117e16f3d608e3c7254523a168d5",
+      "inputs": {
+        "product/brief-v2.md": "sha256:d74836ad36595a7b2620be70fe60d08b73ef141dc3340d7de6b8d0748e33e3c7",
+        "product/brief-v1.md": "sha256:e5f2b7d22445f442863337b9177a8bdfefc2aa573d9e65d6be63804d9bba1ab8",
+        "reviews/feedback.md": "sha256:a95e6521e24b387a31f04507067b516486159882dfd2b1cdd9dd377e3e2df494",
+        "evidence/local-walkthrough.md": "sha256:346dd34a9f1a1274d030f060fe5c970074d5288209f7842e78ba471fc939b3f1",
+        "notes/build-report.md": "sha256:6b7facb5e402d993b43e682a3f266417af5a3964fc4b9de64e0de607053a4c44"
+      },
+      "skill": null,
+      "skillRevision": null,
+      "skillDigest": null,
+      "snapshot": null,
+      "artifacts": [
+        {
+          "path": "artifacts/brief-update-baseline/product/brief-v2.md",
+          "sha256": "sha256:2238a364c2844053ef8e47101bca3f3c04d5c520043abd3e605b46228abff1aa"
+        },
+        {
+          "path": "artifacts/brief-update-baseline/result.md",
+          "sha256": "sha256:52c01ed3b3a7f35794dd3109dc7eb92883f7f6de227c6d02cf84c953aa4649db"
+        }
+      ],
+      "judgment": "D5 only changed and D1-D4/P1 preserved. No before/after ledger or handoff account of mock/report discrepancy; historical conflict not explained in result.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/brief-update-baseline/task.md directly. This is a bounded offline task. Read only task.md and supplied product input files under that directory; do not read or invoke skills, other trials, repository instructions or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "brief-update-candidate",
+      "case": "brief-update",
+      "arm": "candidate",
+      "agent": "/root/brief_candidate",
+      "task": "cases/brief-update/task.md",
+      "taskDigest": "sha256:7703b663aab450d62e53bc91505ea544b7ac117e16f3d608e3c7254523a168d5",
+      "inputs": {
+        "product/brief-v2.md": "sha256:d74836ad36595a7b2620be70fe60d08b73ef141dc3340d7de6b8d0748e33e3c7",
+        "product/brief-v1.md": "sha256:e5f2b7d22445f442863337b9177a8bdfefc2aa573d9e65d6be63804d9bba1ab8",
+        "reviews/feedback.md": "sha256:a95e6521e24b387a31f04507067b516486159882dfd2b1cdd9dd377e3e2df494",
+        "evidence/local-walkthrough.md": "sha256:346dd34a9f1a1274d030f060fe5c970074d5288209f7842e78ba471fc939b3f1",
+        "notes/build-report.md": "sha256:6b7facb5e402d993b43e682a3f266417af5a3964fc4b9de64e0de607053a4c44"
+      },
+      "skill": "product-brief",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + pre-commit candidate tree",
+      "skillDigest": "sha256:04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+      "snapshot": "snapshots/product-brief/04d60a8bce5dcbb3aca2e00d5b5eae7166c0aca9fc8d9e3badb93045a0cbfef7",
+      "artifacts": [
+        {
+          "path": "artifacts/brief-update-candidate/product/brief-v2.md",
+          "sha256": "sha256:6d48cce3c0eba4e66759fbd3991d160b872e3d399c1704191456b3862e94de45"
+        },
+        {
+          "path": "artifacts/brief-update-candidate/result.md",
+          "sha256": "sha256:91899a71854cc8147d12fa4c1d8f5337e04dd87d59b004d1d375feb1dbbc702d"
+        }
+      ],
+      "judgment": "D5 before/after and reason recorded. D1-D4/P1 preserved. Handoff links current revision, describes observed memory-only mock versus reported PASS, and identifies superseded v1 rules.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/brief-update-candidate/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "experiment-plan-baseline",
+      "case": "experiment-plan",
+      "arm": "baseline",
+      "agent": "/root/plan_baseline",
+      "task": "cases/experiment-plan/task.md",
+      "taskDigest": "sha256:0de67368902b6c91858fcf0d02f57206662d7228308a401510a3015f8fe18f5a",
+      "inputs": {
+        "evidence.md": "sha256:79f08e908d3b3ee138fa7a58727bcc626a34de5d202158e437a4a2d6944982a7"
+      },
+      "skill": null,
+      "skillRevision": null,
+      "skillDigest": null,
+      "snapshot": null,
+      "artifacts": [
+        {
+          "path": "artifacts/experiment-plan-baseline/result.md",
+          "sha256": "sha256:2f10dcf4fd550a80cb1aacb59c3934210e729c82171130a1f576f156b8347785"
+        }
+      ],
+      "judgment": "Interest/local PASS distinguished from repeat-use evidence; proposed sample/time/budget and validity/stop criteria. Requires readiness check for actual saving; no execution.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/experiment-plan-baseline/task.md directly. This is a bounded offline task. Read only task.md and supplied product input files under that directory; do not read or invoke skills, other trials, repository instructions or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "experiment-plan-candidate",
+      "case": "experiment-plan",
+      "arm": "candidate",
+      "agent": "/root/plan_candidate",
+      "task": "cases/experiment-plan/task.md",
+      "taskDigest": "sha256:0de67368902b6c91858fcf0d02f57206662d7228308a401510a3015f8fe18f5a",
+      "inputs": {
+        "evidence.md": "sha256:79f08e908d3b3ee138fa7a58727bcc626a34de5d202158e437a4a2d6944982a7"
+      },
+      "skill": "experiment-design",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + pre-commit candidate tree",
+      "skillDigest": "sha256:53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "snapshot": "snapshots/experiment-design/53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "artifacts": [
+        {
+          "path": "artifacts/experiment-plan-candidate/result.md",
+          "sha256": "sha256:905450137f6552d1837c0660e21fecb48089f0bd7ac9d88d61ba9b0bedeae13e"
+        }
+      ],
+      "judgment": "Manual repeat-use plan, proposed numbers with bases, validity, inconclusive and stop/next decisions. Weakness: final handoff lists original-preservation/private-access rules without explicitly keeping these manual-test conditions separate from approved product requirements.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "observed-with-handoff-ambiguity",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/experiment-plan-candidate/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "experiment-result-baseline",
+      "case": "experiment-result",
+      "arm": "baseline",
+      "agent": "/root/result_baseline",
+      "task": "cases/experiment-result/task.md",
+      "taskDigest": "sha256:27d6d39a4d97a08d07327c8ae9f2092c331f65ef9131d9c5cc5bbadb511a89a1",
+      "inputs": {
+        "plan.md": "sha256:25dd230498a65514de52ed073611560f81dc5412bd69b0d0413ef0cd5a85d83f",
+        "observations.json": "sha256:b2f61293cb4befe3b107e6b6f04f4ec5c2e0ea6ab1c26d1bb12af28bc7d7ab97"
+      },
+      "skill": null,
+      "skillRevision": null,
+      "skillDigest": null,
+      "snapshot": null,
+      "artifacts": [
+        {
+          "path": "artifacts/experiment-result-baseline/observations.json",
+          "sha256": "sha256:398581358b7350093c49fbb59afae624e94fe19295988efb90a7d95ecee8d87d"
+        },
+        {
+          "path": "artifacts/experiment-result-baseline/plan.md",
+          "sha256": "sha256:4bd8da0af428714daa09ca8252dbc3408b2ee53478122d3a088e636d8b8edfc6"
+        },
+        {
+          "path": "artifacts/experiment-result-baseline/result.md",
+          "sha256": "sha256:dbf0cca423dd207ff276d04f6da99075c67f643c6dc4372f76ffd8a1beb9febd"
+        }
+      ],
+      "judgment": "Minimum-valid-pair gap gives inconclusive; ends at one attempt/30 minutes, retains unconfirmed A1 and continues template-based card work.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/experiment-result-baseline/task.md directly. This is a bounded offline task. Read only task.md and supplied product input files under that directory; do not read or invoke skills, other trials, repository instructions or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "experiment-result-candidate",
+      "case": "experiment-result",
+      "arm": "candidate",
+      "agent": "/root/result_candidate",
+      "task": "cases/experiment-result/task.md",
+      "taskDigest": "sha256:27d6d39a4d97a08d07327c8ae9f2092c331f65ef9131d9c5cc5bbadb511a89a1",
+      "inputs": {
+        "plan.md": "sha256:25dd230498a65514de52ed073611560f81dc5412bd69b0d0413ef0cd5a85d83f",
+        "observations.json": "sha256:b2f61293cb4befe3b107e6b6f04f4ec5c2e0ea6ab1c26d1bb12af28bc7d7ab97"
+      },
+      "skill": "experiment-design",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + pre-commit candidate tree",
+      "skillDigest": "sha256:53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "snapshot": "snapshots/experiment-design/53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "artifacts": [
+        {
+          "path": "artifacts/experiment-result-candidate/plan.md",
+          "sha256": "sha256:7b51b93395cb40ec6b4baedf5de9aab96de7d710a773907f3d3a4d8b5f83e5df"
+        },
+        {
+          "path": "artifacts/experiment-result-candidate/result.md",
+          "sha256": "sha256:96a0689252977b210616e064f4ec870dda0520e8ef6edbde927613def7925e5e"
+        }
+      ],
+      "judgment": "Same bounded verdict/stop/next decision, with planned/executed/observed separation and explicit absent pair-level/provider/user-effect evidence. Does not invent product fields.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/experiment-result-candidate/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "design-boundary-baseline",
+      "case": "design-boundary",
+      "arm": "baseline",
+      "agent": "/root/boundary_baseline",
+      "task": "cases/design-boundary/task.md",
+      "taskDigest": "sha256:b3de9f38dd28a298df3b694334eaefcb48c4f54352aeb45ea3e6b8f5396a58e5",
+      "inputs": {
+        "roles.md": "sha256:e7dc719f3d1a821e4f5e170db5f82b087c79e1ac22344e3abc4d026700335b8f"
+      },
+      "skill": null,
+      "skillRevision": null,
+      "skillDigest": null,
+      "snapshot": null,
+      "artifacts": [
+        {
+          "path": "artifacts/design-boundary-baseline/result.md",
+          "sha256": "sha256:956db79421718360b7dd8696caf9e983390fa0593cdcd0fbb6051e917f803263"
+        }
+      ],
+      "judgment": "Routes the two QA checks to better-interface plus design-browser; missing screen/run means unverified.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/design-boundary-baseline/task.md directly. This is a bounded offline task. Read only task.md and supplied product input files under that directory; do not read or invoke skills, other trials, repository instructions or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "design-boundary-candidate",
+      "case": "design-boundary",
+      "arm": "candidate",
+      "agent": "/root/boundary_candidate",
+      "task": "cases/design-boundary/task.md",
+      "taskDigest": "sha256:b3de9f38dd28a298df3b694334eaefcb48c4f54352aeb45ea3e6b8f5396a58e5",
+      "inputs": {
+        "roles.md": "sha256:e7dc719f3d1a821e4f5e170db5f82b087c79e1ac22344e3abc4d026700335b8f"
+      },
+      "skill": "experiment-design",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + pre-commit candidate tree",
+      "skillDigest": "sha256:53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "snapshot": "snapshots/experiment-design/53290e2dd94f93ab9b7e8757a3b6f21c793e8b64c76837a6cc7de9c05fa4f5e4",
+      "artifacts": [
+        {
+          "path": "artifacts/design-boundary-candidate/result.md",
+          "sha256": "sha256:6750954b68b08763696ab3c9d1ddb2dba1eaccebcb3aecaff6c9505edb68d384"
+        }
+      ],
+      "judgment": "Routes the same checks to design roles without creating participants, demand experiments or a browser run. Missing screen/run remains unverified.",
+      "judge": "root maintainer agent, qualitative artifact review; human acceptance pending",
+      "outcome": "scoped-behavior-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/design-boundary-candidate/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    },
+    {
+      "id": "experiment-plan-repair",
+      "case": "experiment-plan",
+      "arm": "candidate-repair",
+      "agent": "/root/plan_repair",
+      "task": "cases/experiment-plan/task.md",
+      "taskDigest": "sha256:0de67368902b6c91858fcf0d02f57206662d7228308a401510a3015f8fe18f5a",
+      "inputs": {
+        "evidence.md": "sha256:79f08e908d3b3ee138fa7a58727bcc626a34de5d202158e437a4a2d6944982a7"
+      },
+      "skill": "experiment-design",
+      "skillRevision": "c6bd4d24ed4df1f4f3fdcf52f7b635f7f432b70e + repaired pre-commit candidate tree",
+      "skillDigest": "sha256:b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+      "snapshot": "snapshots/experiment-design/b9d359d416935b296ad08525125ea035f85d33dbf44ec15cfc1c8e52dfe30b0c",
+      "artifacts": [
+        {
+          "path": "artifacts/experiment-plan-repair/result.md",
+          "sha256": "sha256:57f6296361f8261b874607188e81f3a407378382519290edcba57d51676be638"
+        }
+      ],
+      "judgment": "Same-input fresh run explicitly retains only the supplied fixed screen as product condition, and labels sample, time, manual help and notification choices as experimental proposals rather than actual product requirements.",
+      "judge": "root maintainer agent; human acceptance pending",
+      "outcome": "scoped-repair-observed",
+      "durationSeconds": null,
+      "tokens": null,
+      "cost": null,
+      "humanInterventions": 0,
+      "retries": 0,
+      "dispatch": "Perform the Korean task in /private/tmp/paul-pm-beta-trial-20261014/runs/experiment-plan-repair/task.md using the supplied workflow/SKILL.md and its applicable references. This is a bounded offline task. Read only task.md, workflow and supplied product input files under that directory; do not read other trials, the repository or evaluation material. Do not use network, contact people, or modify services. Write your full user-facing deliverable to result.md in that directory; if the task requires edits, edit only supplied product artifacts there. Do not add meta-analysis of the exercise. Report the output path and any limitation. Do not delegate."
+    }
+  ],
+  "limitations": [
+    "One pair per case plus one same-input repair recheck; no repeated comparative estimate.",
+    "Raw deliverables and product edits are saved; a complete per-worker tool-event transcript was not available through these collaboration tools.",
+    "No exact model/effort/version/token/cost/duration telemetry; null values are not zero.",
+    "No real-user effectiveness, customer demand, human acceptance, source parity, automatic routing, host activation or promotion claim."
+  ]
+}

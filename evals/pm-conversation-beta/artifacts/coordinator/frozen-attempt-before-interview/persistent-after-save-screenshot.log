@@ -1,0 +1,11 @@
+### Result
+- [Screenshot of viewport](./task-1-after-save.png)
+### Ran Playwright code
+```js
+// Screenshot viewport and save it as ./task-1-after-save.png
+await page.screenshot({
+  path: './task-1-after-save.png',
+  scale: 'css',
+  type: 'png'
+});
+```

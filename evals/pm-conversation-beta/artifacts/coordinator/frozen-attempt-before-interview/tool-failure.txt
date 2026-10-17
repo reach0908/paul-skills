@@ -1,0 +1,20 @@
+Command: playwright-cli -s=pmbooks-fresh-p1-20261014 open http://127.0.0.1:48617 --browser=chrome
+
+node:fs:561
+  return binding.open(
+                 ^
+
+Error: EPERM: operation not permitted, open '$HOME/Library/Caches/ms-playwright/daemon/91238f9996cd4d46/pmbooks-fresh-p1-20261014.err'
+    at Object.openSync (node:fs:561:18)
+    at Session.startDaemon (/opt/homebrew/lib/node_modules/@playwright/cli/node_modules/playwright-core/lib/tools/cli-client/session.js:126:35)
+    at async startSession (/opt/homebrew/lib/node_modules/@playwright/cli/node_modules/playwright-core/lib/tools/cli-client/program.js:263:10)
+    at async program (/opt/homebrew/lib/node_modules/@playwright/cli/node_modules/playwright-core/lib/tools/cli-client/program.js:130:23) {
+  errno: -1,
+  code: 'EPERM',
+  syscall: 'open',
+  path: '$HOME/Library/Caches/ms-playwright/daemon/91238f9996cd4d46/pmbooks-fresh-p1-20261014.err'
+}
+
+Node.js v22.19.0
+
+The pipeline's tee only saved stdout in open.log. This error text was copied from the tool output without another open attempt.
