@@ -142,5 +142,40 @@
       }
     ],
     "note": "Codex judged the artifacts before the R-04 fixture and R4-F2 were rewritten, so R-04 rows are excluded."
+  },
+  "afterCriteriaRevision": {
+    "note": "All artifacts after the R2/R4 and B3 criteria revisions, including the two newest cases.",
+    "opus": {
+      "agree": 627,
+      "false_pass": 0,
+      "false_fail": 0,
+      "unjudged": 0,
+      "human_review": 30,
+      "runs": 165
+    },
+    "codex": {
+      "agree": 624,
+      "false_pass": 0,
+      "false_fail": 3,
+      "unjudged": 0,
+      "human_review": 30,
+      "runs": 165
+    },
+    "codexDisagreements": [
+      {
+        "case": "research-requirement-conflict",
+        "artifact": "R3-F5",
+        "criterion": "R2",
+        "outcome": "false_fail",
+        "runs": 2
+      },
+      {
+        "case": "research-unreadable-evidence",
+        "artifact": "R4-F2",
+        "criterion": "R1",
+        "outcome": "false_fail",
+        "runs": 1
+      }
+    ]
   }
 }

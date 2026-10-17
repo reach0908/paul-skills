@@ -240,6 +240,10 @@ class Records(TempSuite):
         self.assertTrue(ok('claude-opus-5-5', text))
         self.assertFalse(ok('claude-opus-5-5', text + ' Edited.'))
         self.assertFalse(ok('claude-haiku-5-5', text))
+        old = 'PASS only if the earlier report is good.'
+        status['graders']['research-atlas-v2:R4-no-invented-speed@' + native.criteria_sha(old)] = {
+            'agreed': 3, 'falsePass': 0, 'falseFail': 0, 'criteriaSha256': native.criteria_sha(old)}
+        self.assertTrue(ok('claude-opus-5-5', old))
         del status['graders']['research-atlas-v2:R4-no-invented-speed']['criteriaSha256']
         self.assertFalse(ok('claude-opus-5-5', text))
 

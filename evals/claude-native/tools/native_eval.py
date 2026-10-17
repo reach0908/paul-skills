@@ -12,6 +12,7 @@ a required failure is not offset, unjudged graders stay unknown and errored runs
 Standard library only; JavaScript regex semantics are delegated to node.
 """
 import argparse
+import fnmatch
 import json
 import re
 import shutil
@@ -381,9 +382,12 @@ def criteria_sha(text):
 
 def calibrated(status, case, grader, judge_model, criteria=None):
     """Calibration counts only for the same judge model and the exact criteria text that was calibrated."""
-    entry = status.get('graders', {}).get(f'{case}:{grader}')
+    sha = criteria_sha(criteria)
+    graders = status.get('graders', {})
+    # Earlier criteria versions stay calibrated for records judged with them: "<case>:<grader>@<sha>".
+    entry = graders.get(f'{case}:{grader}@{sha}') or graders.get(f'{case}:{grader}')
     return bool(entry and judge_model and status.get('judgeModel') == judge_model
-                and entry.get('criteriaSha256') and entry['criteriaSha256'] == criteria_sha(criteria)
+                and entry.get('criteriaSha256') and entry['criteriaSha256'] == sha
                 and entry['agreed'] > 0 and entry['falsePass'] == 0 and entry['falseFail'] == 0)
 
 
@@ -688,7 +692,7 @@ def codex_vote(criteria, target, artifact, model, effort):
     return None, 'judge produced no verdict'
 
 
-def cross_judge_calibration(model, effort='high', votes=3, workers=6, repeats=1, suite_dir=SUITE_DIR):
+def cross_judge_calibration(model, effort='high', votes=3, workers=6, repeats=1, case_glob='*', suite_dir=SUITE_DIR):
     """Judge the labelled artifacts with a Codex model and emit an aggregate-shaped result for `calibrate`."""
     from concurrent.futures import ThreadPoolExecutor
     from datetime import datetime, timezone
@@ -699,6 +703,8 @@ def cross_judge_calibration(model, effort='high', votes=3, workers=6, repeats=1,
             graders = [g for g in cases[name]['graders'] if g['type'] in ('regex', 'llm')
                        and target_of(g) == item['target'] and criterion_of(g['name'], rubric) in item['expect']]
             if not any(g['type'] in PAID for g in graders):
+                continue
+            if not fnmatch.fnmatch(f'cal-{name}-{item["label"]}', case_glob):
                 continue
             text = (suite_dir / item['artifact']).read_text()
             for g in graders:
@@ -822,6 +828,7 @@ def main(argv=None):
     p.add_argument('--votes', type=int, default=3)
     p.add_argument('--workers', type=int, default=6)
     p.add_argument('--repeats', type=int, default=1)
+    p.add_argument('--case', default='*', help='glob over calibration case names, as with claude plugin eval --case')
     p.add_argument('--out', required=True)
     argv = list(sys.argv[1:] if argv is None else argv)
     extra = argv[argv.index('--') + 1:] if '--' in argv else []
@@ -838,7 +845,7 @@ def main(argv=None):
         print(json.dumps({'exitCode': code, 'out': args.out, 'stage': meta['stage']['digest']}))
         return 0 if code in (0, 1, 2) else code
     if args.command == 'cross-judge':
-        result = cross_judge_calibration(args.model, args.effort, args.votes, args.workers, args.repeats)
+        result = cross_judge_calibration(args.model, args.effort, args.votes, args.workers, args.repeats, args.case)
         Path(args.out).write_text(json.dumps(result, ensure_ascii=False, indent=2) + '\n')
         print(f'wrote {args.out}: {len(result["cases"])} calibration cases')
         return 0

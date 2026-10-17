@@ -10,7 +10,7 @@ Evaluation is added by this fork; the upstream library supplies authoring guidan
 
 ## Claude native suite
 
-The [Claude native suite](claude-native/README.md) runs repeatable cases through `claude plugin eval` and turns grader results into rubric verdicts. Required criteria gate each run instead of a weighted score, unjudged graders stay unknown, and LLM graders count as final only for a judge calibrated against labelled pass, fail and boundary artifacts. A Codex model cross-checks the Claude judge. Its eleven development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface` and `diagnosing-bugs`; seven reproduce behavior seen in recent real sessions, which stay private. `npm run eval:check` and `npm run eval:plan` make no model calls; calibration and group runs are paid.
+The [Claude native suite](claude-native/README.md) runs repeatable cases through `claude plugin eval` and turns grader results into rubric verdicts. Required criteria gate each run instead of a weighted score, unjudged graders stay unknown, and LLM graders count as final only for a judge calibrated against labelled pass, fail and boundary artifacts. A Codex model cross-checks the Claude judge. Its thirteen development cases cover `research`, `interface-review`, `user-flow`, `build-design`, `better-interface`, `diagnosing-bugs` and `code-review`; nine reproduce behavior seen in recent real sessions, which stay private. `npm run eval:check` and `npm run eval:plan` make no model calls; calibration and group runs are paid.
 
 ## First pilot
 

@@ -1,6 +1,6 @@
 {
   "recordVersion": 1,
-  "rubricVersion": "rubric-v0.3",
+  "rubricVersion": "rubric-v0.4",
   "goldStatus": "ai_draft_pending_human",
   "run": {
     "claudeVersion": "2.1.301",
@@ -85,18 +85,37 @@
     }
   },
   "repository": {
-    "head": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
+    "head": "3179ac0d547bc15b4821a9025dbf50593aaf62b2",
     "skillTrees": {
       "research": "703ad605f47c8f05cb252e74497522bae9a83255",
       "interface-review": "667659acbb19c4d4dd177553ffeed3d3346c79db",
       "better-interface": "c08fede46c8a7f888a18d5826cef3efa643cafd2",
       "user-flow": "10ced6db25c9273de41714014489c678e6a64a75",
       "build-design": "8744eb0f2182600c593d0b289e34f3cf631aa7cb",
-      "diagnosing-bugs": "e936d3c8865e52a82a9819c5d153c70fd2e0c736"
+      "diagnosing-bugs": "e936d3c8865e52a82a9819c5d153c70fd2e0c736",
+      "code-review": "07d27012fc049c7873796cee6878bf92db700a3b"
     },
     "rubricContractRevision": "0f4cb92c5e07d3b96714c00a6877c837bd8f8df1",
     "dirtyPaths": [
-      "?? evals/claude-native/"
+      "M evals/claude-native/README.md",
+      " M evals/claude-native/build-design-scoped-card/case.yaml",
+      " M evals/claude-native/calibration/status.json",
+      " M evals/claude-native/records/2026-10-17-pilot3/judge-comparison.json",
+      " M evals/claude-native/records/2026-10-17-pilot3/record-group-code-with-without.json",
+      " M evals/claude-native/records/2026-10-17-pilot3/record-group-edit-with-without.json",
+      " M evals/claude-native/records/2026-10-17-pilot3/record-group-single-arm.json",
+      " M evals/claude-native/records/2026-10-17-pilot3/record-group-with-without.json",
+      " M evals/claude-native/research-atlas-v2/case.yaml",
+      " M evals/claude-native/research-requirement-conflict/case.yaml",
+      " M evals/claude-native/research-same-name-tools/case.yaml",
+      " M evals/claude-native/rubric.json",
+      " M evals/claude-native/suite.json",
+      " M evals/claude-native/tools/native_eval.py",
+      "?? evals/claude-native/build-design-same-name-card/",
+      "?? evals/claude-native/calibration/build-design-same-name-card/",
+      "?? evals/claude-native/calibration/code-review-merge-readiness/",
+      "?? evals/claude-native/code-review-merge-readiness/",
+      "?? evals/claude-native/records/2026-10-17-pilot4-new-cases/"
     ]
   },
   "cases": [

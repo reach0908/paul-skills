@@ -37,6 +37,13 @@
         "Bash(git:*)"
       ],
       "comparison": "The task is meaningful without the plugin; edits and node, npm and git commands are allowed."
+    },
+    "group-review-with-without": {
+      "ablation": "with-without",
+      "allowTools": [
+        "Bash(git:*)"
+      ],
+      "comparison": "A merge-readiness judgement is meaningful without the plugin; Bash is granted only for git and the repository state is graded directly."
     }
   },
   "cases": {
@@ -116,7 +123,7 @@
           "target": "outputs/research.md",
           "expect": {
             "R1": false,
-            "R2": "human",
+            "R2": true,
             "R3": true,
             "R4": false,
             "R5": true
@@ -794,7 +801,7 @@
           "target": "outputs/research.md",
           "expect": {
             "R1": true,
-            "R2": false,
+            "R2": true,
             "R3": true,
             "R4": false,
             "R5": true
@@ -911,7 +918,7 @@
           "target": "outputs/research.md",
           "expect": {
             "R1": true,
-            "R2": false,
+            "R2": true,
             "R4": false,
             "R5": true
           }
@@ -1171,6 +1178,259 @@
             "R4": true,
             "R5": false,
             "R6": "human"
+          }
+        }
+      ]
+    },
+    "build-design-same-name-card": {
+      "skill": "build-design",
+      "rubricCase": "B-02",
+      "split": "development",
+      "independentTask": "build-design-same-name-card",
+      "sessionEpisodes": [
+        "C1",
+        "retro F1"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "B1",
+        "B2",
+        "B3",
+        "B4"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "BQ1"
+      ],
+      "human": [],
+      "harnessEnforced": {
+        "C1": "Bash and web tools are not in allowed_tools; Edit and Write are graded so that only the collection page may change."
+      },
+      "fixture": {
+        "baseSha": "1934cb01a75c4f44de5e79aba6e6c77bce5c8f8f"
+      },
+      "traceChecks": [
+        {
+          "name": "C3-target-changed",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/collection/CollectionPage\\.tsx$"
+          },
+          "min": 1
+        },
+        {
+          "name": "B2-reference-read-before-change",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Read"
+            ],
+            "path": "docs/reference\\.md$"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/collection/CollectionPage\\.tsx$"
+          }
+        },
+        {
+          "name": "B2-call-site-read-before-change",
+          "type": "order",
+          "before": {
+            "tools": [
+              "Read"
+            ],
+            "path": "src/library/LibraryPage\\.tsx$"
+          },
+          "after": {
+            "tools": [
+              "Edit",
+              "Write"
+            ],
+            "path": "src/collection/CollectionPage\\.tsx$"
+          }
+        }
+      ],
+      "calibration": [
+        {
+          "label": "B2-P-target",
+          "kind": "pass",
+          "artifact": "calibration/build-design-same-name-card/B2-P-target.tsx.md",
+          "target": "src/collection/CollectionPage.tsx",
+          "expect": {
+            "B3": true
+          }
+        },
+        {
+          "label": "B2-F-target-plainlist",
+          "kind": "fail",
+          "artifact": "calibration/build-design-same-name-card/B2-F-target-plainlist.tsx.md",
+          "target": "src/collection/CollectionPage.tsx",
+          "expect": {
+            "B3": false
+          }
+        },
+        {
+          "label": "B2-F-target-recommend",
+          "kind": "fail",
+          "artifact": "calibration/build-design-same-name-card/B2-F-target-recommend.tsx.md",
+          "target": "src/collection/CollectionPage.tsx",
+          "expect": {
+            "B3": false
+          }
+        },
+        {
+          "label": "B2-P-reply",
+          "kind": "pass",
+          "artifact": "calibration/build-design-same-name-card/B2-P-reply.md",
+          "target": "last_message",
+          "expect": {
+            "B4": true,
+            "C2": true
+          }
+        },
+        {
+          "label": "B2-F-reply-unnamed",
+          "kind": "fail",
+          "artifact": "calibration/build-design-same-name-card/B2-F-reply-unnamed.md",
+          "target": "last_message",
+          "expect": {
+            "B4": false,
+            "C2": true
+          }
+        },
+        {
+          "label": "B2-F-reply-visual",
+          "kind": "fail",
+          "artifact": "calibration/build-design-same-name-card/B2-F-reply-visual.md",
+          "target": "last_message",
+          "expect": {
+            "B4": true,
+            "C2": false
+          }
+        }
+      ]
+    },
+    "code-review-merge-readiness": {
+      "skill": "code-review",
+      "rubricCase": "K-01",
+      "split": "development",
+      "independentTask": "code-review-discount-merge",
+      "sessionEpisodes": [
+        "A8"
+      ],
+      "required": [
+        "C1",
+        "C2",
+        "C3",
+        "C4",
+        "K1",
+        "K2",
+        "K3",
+        "K4"
+      ],
+      "notApplicable": {},
+      "quality": [
+        "KQ1"
+      ],
+      "human": [
+        "C2"
+      ],
+      "harnessEnforced": {
+        "C1": "Write, Edit and web tools are not in allowed_tools and Bash is granted only as Bash(git:*); the repository state itself is graded under K3."
+      },
+      "fixture": {
+        "mainSha": "ac9af4f98775c543355796a73012f97c5e113db2",
+        "headSha": "bc82060b1e99d8a7d79d4eb0c008d318168d5e3f",
+        "mergeBaseSha": "a8bdef83db5b8c357553f3681ba191f1cded1dcd",
+        "allowedConflictCheck": "Read-only git commands and git merge-tree --write-tree (writes objects only) in the workspace; a rehearsal clone outside the workspace is allowed and judged only through the workspace state graders."
+      },
+      "traceChecks": [
+        {
+          "name": "K1-diff-from-merge-base",
+          "type": "count",
+          "match": {
+            "tools": [
+              "Bash"
+            ],
+            "command": "\\bdiff\\b[^;&|]*(\\.\\.\\.|merge-base|a8bdef8)"
+          },
+          "min": 1
+        }
+      ],
+      "calibration": [
+        {
+          "label": "K-P",
+          "kind": "pass",
+          "artifact": "calibration/code-review-merge-readiness/K-P.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "K1": true,
+            "K2": true,
+            "K3": true,
+            "K4": true
+          }
+        },
+        {
+          "label": "K-F-std",
+          "kind": "fail",
+          "artifact": "calibration/code-review-merge-readiness/K-F-std.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "K1": true,
+            "K2": false,
+            "K3": true,
+            "K4": true
+          }
+        },
+        {
+          "label": "K-F-spec",
+          "kind": "fail",
+          "artifact": "calibration/code-review-merge-readiness/K-F-spec.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "K1": true,
+            "K2": false,
+            "K3": true,
+            "K4": true
+          }
+        },
+        {
+          "label": "K-F-conflict",
+          "kind": "fail",
+          "artifact": "calibration/code-review-merge-readiness/K-F-conflict.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "K1": true,
+            "K2": true,
+            "K3": false,
+            "K4": "human"
+          }
+        },
+        {
+          "label": "K-F-verdict",
+          "kind": "fail",
+          "artifact": "calibration/code-review-merge-readiness/K-F-verdict.md",
+          "target": "last_message",
+          "expect": {
+            "C3": true,
+            "K1": true,
+            "K2": true,
+            "K3": true,
+            "K4": false
           }
         }
       ]
@@ -1476,6 +1736,234 @@
       "grader": "C1-no-user-flow",
       "input": {
         "skill": "paul-skills:user-flow"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-same-name-card",
+      "grader": "C1-only-target-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/collection/CollectionPage.tsx",
+        "old_string": "import { TopicCard } from '../components/TopicCard';",
+        "new_string": "x"
+      },
+      "matches": false
+    },
+    {
+      "case": "build-design-same-name-card",
+      "grader": "C1-only-target-edited",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/library/TopicCard.tsx",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-same-name-card",
+      "grader": "B1-components-untouched",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/components/TopicCard.tsx",
+        "old_string": "a",
+        "new_string": "b"
+      },
+      "matches": true
+    },
+    {
+      "case": "build-design-same-name-card",
+      "grader": "B1-components-untouched",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/collection/CollectionPage.tsx",
+        "old_string": "from '../library/TopicCard'",
+        "new_string": "x"
+      },
+      "matches": false
+    },
+    {
+      "case": "build-design-same-name-card",
+      "grader": "B1-components-untouched-write",
+      "input": {
+        "file_path": "/tmp/e-1/home/cwd/src/library/LibraryPage.tsx",
+        "content": "x"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git merge main",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git checkout main",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git switch -c try-merge",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git stash push -m wip",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git branch -D feature/discount-codes",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git update-ref refs/heads/main HEAD",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git reset --hard main",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git status --short && git merge --no-commit main",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git -c core.pager=cat commit -m x",
+        "description": "Inspect the branch"
+      },
+      "matches": true
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git merge-tree --write-tree main HEAD",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git merge-base main HEAD",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git diff main...HEAD -- src/discount.js",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git log main..HEAD --oneline",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git rev-parse main HEAD",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git show main:README.md",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git branch --show-current",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git status --short",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "git -C /tmp/e-1/tmp/rehearsal merge main",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "K3-no-workspace-mutation",
+      "input": {
+        "command": "cd /tmp/e-1/tmp/rehearsal && git merge main",
+        "description": "Inspect the branch"
+      },
+      "matches": false
+    },
+    {
+      "case": "code-review-merge-readiness",
+      "grader": "C4-no-eval-bash",
+      "input": {
+        "command": "cat /x/evals/claude-native/suite.json"
       },
       "matches": true
     }

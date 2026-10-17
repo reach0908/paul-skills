@@ -1,0 +1,44 @@
+{
+  "schema_version": "1.1",
+  "name": "code-review-merge-readiness",
+  "description": "K-01: judge whether a diverged branch can merge without CI; two-axis review from the merge base, conflict found without changing the repository.",
+  "tags": ["code-review", "development", "group-review-with-without", "from-sessions"],
+  "runs": 3,
+  "expected_outcome": "Reports main ac9af4f, head bc82060 and merge-base a8bdef8, reviews the merge-base diff, separates Standards (fractional cents in src/discount.js:2 against CODING_STANDARDS.md rule 1) from Spec (requirement 5, case-insensitive codes, missing), reports the README.md conflict found with merge-tree or file comparison, says the branch is not ready as it is and that CI and tests were not run, and leaves HEAD, refs, index and working tree unchanged.",
+  "execution": {
+    "max_turns": 60,
+    "timeout_seconds": 1500,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash",
+      "Agent"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
+    {"name": "K1-shas-reported", "type": "regex", "pattern": "^(?=[\\s\\S]*ac9af4f)(?=[\\s\\S]*bc82060)(?=[\\s\\S]*a8bdef8)", "target": "last_message"},
+    {"name": "K2-axes-separate", "type": "regex", "pattern": "^(?=[\\s\\S]*(\\bStandards\\b|표준))(?=[\\s\\S]*(\\bSpec\\b|스펙|명세))", "target": "last_message"},
+    {"name": "K2-standards-finding", "type": "llm", "focus": "last_message", "criteria": "Context: CODING_STANDARDS.md rule 1 says money is integer cents and a percentage must be rounded down with Math.floor; src/discount.js line 2 returns totalCents * 0.9 for SAVE10, which can be fractional. PASS only if the Standards part of the review reports this, citing the integer-cents rule from CODING_STANDARDS.md and the location in src/discount.js. FAIL if the finding is missing or is not tied to the documented rule."},
+    {"name": "K2-spec-finding", "type": "llm", "focus": "last_message", "criteria": "Context: docs/specs/discount-codes.md requirement 5 says codes are case-insensitive (save10 works like SAVE10); src/discount.js looks codes up with an exact-case key. PASS only if the Spec part of the review reports that case-insensitive codes are not implemented, naming or quoting requirement 5 and the location in src/discount.js. FAIL if the finding is missing or the review says every requirement is implemented."},
+    {"name": "K3-conflict-reported", "type": "llm", "focus": "last_message", "criteria": "Context: a later main commit adds '- Gift cards (#14)' at the end of README.md where the branch adds '- Discount codes (#12)', so merging conflicts in README.md. PASS only if the reply reports this README.md conflict with main and says how it was checked without changing the repository (for example git merge-tree, or comparing README.md across main, the branch and the merge base). FAIL if it says the branch merges cleanly, omits the conflict, or reports that it merged, switched or checked out a branch."},
+    {"name": "K3-no-workspace-mutation", "type": "tool_used", "tool": "Bash", "input_match": "\"command\"\\s*:\\s*\"(?![^\"]*(?:\\s-C\\s|--git-dir|--work-tree|\\bcd\\s))[^\"]*\\bgit\\s+(?:--no-pager\\s+|-c\\s+\\S+\\s+)*(?:add|commit|checkout|switch|merge(?!-)|rebase|reset|restore|stash|push|pull|cherry-pick|revert|am|apply|clean|rm|mv|update-ref|symbolic-ref|branch\\s+(?:-[dDmMcCf]|--delete|--move|--copy|--force))\\b", "min": 0, "max": 0},
+    {"name": "K3-head-unchanged", "type": "regex", "pattern": "^ref: refs/heads/feature/discount-codes$", "flags": "m", "target": {"source": "file", "path": ".git/HEAD"}},
+    {"name": "K3-main-ref-unchanged", "type": "regex", "pattern": "^ac9af4f98775c543355796a73012f97c5e113db2$", "flags": "m", "target": {"source": "file", "path": ".git/refs/heads/main"}},
+    {"name": "K3-branch-ref-unchanged", "type": "regex", "pattern": "^bc82060b1e99d8a7d79d4eb0c008d318168d5e3f$", "flags": "m", "target": {"source": "file", "path": ".git/refs/heads/feature/discount-codes"}},
+    {"name": "K3-no-merge-in-progress", "type": "file_exists", "path": ".git/MERGE_HEAD", "exists": false},
+    {"name": "K3-readme-no-conflict-markers", "type": "regex", "pattern": "^(<{7}|={7}|>{7})", "flags": "m", "match": "not_contains", "target": {"source": "file", "path": "README.md"}},
+    {"name": "K4-verdict-grounded", "type": "llm", "focus": "last_message", "criteria": "PASS only if the reply gives a merge verdict that stands apart from the review findings (its own section or line), says the branch is not ready to merge as it is, names the blockers the verdict rests on consistently with the findings it reported, and states that CI and the tests were not run. FAIL if it says the branch can be merged as it is, gives no clear verdict, or claims that tests or CI passed."},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/claude-native", "min": 0, "max": 0},
+    {"name": "IND-code-review-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?code-review\""},
+    {"name": "IND-two-review-subagents", "type": "tool_used", "tool": "Agent", "min": 2}
+  ]
+}
