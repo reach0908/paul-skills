@@ -36,6 +36,11 @@
       "repository": "https://github.com/phuryn/pm-skills",
       "ref": "c68487d721e419ec87af1ae6412a842978eab785",
       "license": "MIT"
+    },
+    "transitions-dev": {
+      "repository": "https://github.com/Jakubantalik/transitions.dev",
+      "ref": "6a7d68260d624eb66661cc3af17e0989476f48ae",
+      "license": "Transitions.dev License (transitions/ and skills/: use and modify, no republishing of the collection or a substantial part of it as a transitions library, motion pack or animation kit); MIT for agent/, cli/, cli-legacy/, refine/, build/, scripts/"
     }
   },
   "skills": [
@@ -2684,6 +2689,32 @@
       "kind": "original",
       "origins": [],
       "influences": []
+    },
+    {
+      "id": "transitions",
+      "path": "skills/in-progress/transitions",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "transitions-dev",
+          "path": "skills/transitions-dev/SKILL.md",
+          "revision": "6a7d68260d624eb66661cc3af17e0989476f48ae",
+          "reason": "Pattern selection by visible element and verb, the lower-overhead tie-break, offering choices instead of guessing, and implementation traps, rewritten in this skill's words. A few published default values are cited as attributed fallbacks below better-ui and project tokens. Redistribution decision: no transitions.dev snippet, token file, per-transition reference or catalog table is copied; the skill is independently written prose with credit, so the collection is not republished."
+        },
+        {
+          "source": "transitions-dev",
+          "path": "skills/transitions-polish/_refine-rules.md",
+          "revision": "6a7d68260d624eb66661cc3af17e0989476f48ae",
+          "reason": "Choreography rules: quieter exits with symmetric exceptions, overshoot only on entrances, intent delay and never delaying a close, stagger caps, distance and pre-scale limits. better-ui exact values take precedence; the refine and polish commands are not ported. Redistribution decision: no transitions.dev snippet, token file, per-transition reference or catalog table is copied; the skill is independently written prose with credit, so the collection is not republished."
+        },
+        {
+          "source": "transitions-dev",
+          "path": "skills/transitions-ui-generation/SKILL.md",
+          "revision": "6a7d68260d624eb66661cc3af17e0989476f48ae",
+          "reason": "A generation effect is a one-off moment, never a loading state for small or frequent UI. No runtime ported."
+        }
+      ]
     }
   ],
   "localSources": {
