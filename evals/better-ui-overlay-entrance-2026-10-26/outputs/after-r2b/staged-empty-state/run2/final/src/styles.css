@@ -1,0 +1,41 @@
+:root {
+  --color-text: #1d2939;
+  --color-muted: #475467;
+  --color-border: #d0d5dd;
+  --radius-md: 10px;
+}
+body { margin: 0; font-family: system-ui, sans-serif; color: var(--color-text); }
+.topbar { padding: 12px 24px; border-bottom: 1px solid var(--color-border); }
+
+.projects { display: grid; place-items: center; min-height: 70vh; padding: 24px; }
+.empty-state { max-width: 420px; display: grid; justify-items: center; gap: 12px; text-align: center; }
+.empty-icon { color: var(--color-muted); }
+.empty-state h1 { margin: 0; font-size: 20px; }
+.empty-state p { margin: 0; color: var(--color-muted); }
+.actions { display: flex; gap: 8px; margin-top: 8px; }
+.primary, .secondary { border-radius: var(--radius-md); padding: 10px 14px; text-decoration: none; }
+.primary { background: #1d2939; color: #fff; }
+.secondary { border: 1px solid var(--color-border); color: inherit; }
+
+/* Staged entrance: icon, title, description, actions, 100ms apart.
+   Hidden state lives in the `from` keyframe so content stays visible if the animation never runs. */
+.empty-state > * { animation: empty-fade-in 300ms ease-out both; }
+.empty-state > :nth-child(2) { animation-delay: 100ms; }
+.empty-state > :nth-child(3) { animation-delay: 200ms; }
+.empty-state > :nth-child(4) { animation-delay: 300ms; }
+
+@media (prefers-reduced-motion: no-preference) {
+  .empty-state > * { animation-name: empty-fade-in-up; }
+}
+
+@keyframes empty-fade-in {
+  from { opacity: 0; }
+}
+
+@keyframes empty-fade-in-up {
+  from {
+    opacity: 0;
+    transform: translateY(12px);
+    filter: blur(4px);
+  }
+}

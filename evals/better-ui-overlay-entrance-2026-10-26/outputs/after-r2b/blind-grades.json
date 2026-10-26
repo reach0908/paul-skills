@@ -1,0 +1,89 @@
+{
+  "grader": "claude-opus-5-5",
+  "grades": [
+    {
+      "case": "overlay-open-close",
+      "run": 0,
+      "checks": {"Q1": "pass", "Q2": "pass", "Q3": "pass", "Q4": "pass", "Q5": "pass"},
+      "evidence": {
+        "Q1": "styles.css:17 `.menu { transform-origin: top right }` (menu is anchored right:0 below the button, so this is the corner that faces it); slight scale in :79 `.menu[hidden] { scale: 0.96 }` and :80 `@starting-style { .menu:not([hidden]) { scale: 0.96 } }`. No translate.",
+        "Q2": ":82 `.toast[hidden] { translate: -50% 16px }` (exit) and :83 `@starting-style { .toast:not([hidden]) { translate: -50% 16px } }` (enter). Both are +y, toward the bottom edge.",
+        "Q3": ":58-61 `.modal` transitions `opacity, display` with `transition-behavior: allow-discrete`, so removing `.is-open` (app.js:27) keeps display:flex while opacity fades over --duration-short. :64 @starting-style handles the enter. Card scale exits via :85 `.modal:not(.is-open) .modal-card { scale: 0.96 }`.",
+        "Q4": "Scale and translate values exist only inside `@media (prefers-reduced-motion: no-preference)` (:78-87). The opacity fades in the base rules (:23-24 menu, :47-48 toast, :63-64 modal) still apply under reduce. There is no blur anywhere.",
+        "Q5": ".modal-card scales 0.96 to 1 (:71-75, :85-86) with the default transform-origin (center). No translateY."
+      },
+      "otherDefects": [
+        "Minor: the base transition-property lists include scale/translate (:18, :42) even under reduced motion. This is harmless because the values never change there.",
+        "@starting-style and allow-discrete have no fallback. In browsers without them the overlays still pop in and out (graceful degradation, not a regression)."
+      ]
+    },
+    {
+      "case": "overlay-open-close",
+      "run": 1,
+      "checks": {"Q1": "pass", "Q2": "pass", "Q3": "pass", "Q4": "pass", "Q5": "pass"},
+      "evidence": {
+        "Q1": "styles.css:17 `.menu { transform-origin: top right }`; inside the no-preference block :83 `.menu[hidden] { scale: 0.96 }` and :94 `@starting-style { .menu:not([hidden]) { scale: 0.96 } }`. No translate.",
+        "Q2": ":85 `.toast[hidden] { translate: -50% 16px }` (exit) and :95 `@starting-style { .toast:not([hidden]) { translate: -50% 16px } }` (enter). Both are +y.",
+        "Q3": ":62-65 `.modal` transitions `opacity, display` with `allow-discrete`, so the display:none flip is deferred until the fade ends. :75-77 @starting-style handles the enter. Card exits via :86-92 (default scale 0.96, `.is-open` scale 1).",
+        "Q4": "The base rules transition only opacity (:18, :44, :62) with the fades at :23-26, :49-52, :67/:75-77. Scale and translate rules and their transition-property overrides are all inside `@media (prefers-reduced-motion: no-preference)` (:81-98). No blur.",
+        "Q5": ".modal-card scale 0.96 to 1 (:86-92, :96) about the default center origin. No translateY."
+      },
+      "otherDefects": [
+        "@starting-style and allow-discrete have no fallback. In browsers without them the overlays still pop (graceful degradation)."
+      ]
+    },
+    {
+      "case": "overlay-open-close",
+      "run": 2,
+      "checks": {"Q1": "pass", "Q2": "pass", "Q3": "pass", "Q4": "pass", "Q5": "pass"},
+      "evidence": {
+        "Q1": "styles.css:17 `.menu { transform-origin: top right }`; :28 `.menu[hidden] { scale: 0.96 }`, :30 `@starting-style { .menu:not([hidden]) { scale: 0.96 } }`. No translate.",
+        "Q2": ":60 `.toast[hidden] { translate: -50% 16px }` (exit) and :62 `@starting-style { .toast:not([hidden]) { translate: -50% 16px } }` (enter). Both are +y.",
+        "Q3": ":74-77 `.modal` transitions `opacity, display` with `allow-discrete`, so the exit fade runs before display:none. :80-82 @starting-style handles the enter. Card exits via :93 `.modal:not(.is-open) .modal-card { scale: 0.96 }`.",
+        "Q4": "Scale and translate appear only in the no-preference media blocks (:27-32, :59-64, :92-97). The opacity fades remain in the base rules (:23-26, :55-58, :79-82). No blur.",
+        "Q5": ".modal-card scale 0.96 to 1 (:89, :93-95) about the default center origin. No translateY."
+      },
+      "otherDefects": [
+        "Hardcoded durations and easing where tokens.css defines --duration-short (150ms), --duration-medium (250ms) and --ease-standard: 300ms/150ms and `ease-out` at styles.css:19, :20, :23, :52, :53, :55, :75, :76, :79, :89, :91. The 300ms enter also departs from the project's --duration-medium of 250ms.",
+        "`transition: scale 150ms ease-out` shorthand on .modal-card (:89) is inconsistent with the longhand pattern used elsewhere in the file.",
+        "@starting-style and allow-discrete have no fallback (graceful degradation)."
+      ]
+    },
+    {
+      "case": "staged-empty-state",
+      "run": 0,
+      "checks": {"S1": "pass", "S2": "pass", "S3": "pass", "S4": "pass"},
+      "evidence": {
+        "S1": "styles.css:22-25: `.empty-state > *` animates each child (icon svg, h1, p, .actions per index.html:16-24) with nth-child(2..4) delays of 100/200/300ms, so the chunks are 100ms apart.",
+        "S2": ":22 `animation: ... 300ms ease-out both`; :35-40 `@keyframes empty-fade-in-up { from { opacity: 0; transform: translateY(12px); filter: blur(4px) } }` is selected at :28 under no-preference.",
+        "S3": "The default keyframe `empty-fade-in` (:31-33) is opacity only. The translate+blur keyframe is swapped in only inside `@media (prefers-reduced-motion: no-preference)` (:27-29). The hidden state lives only in `from` keyframes and no base rule sets opacity:0, so content is visible if the animation never runs.",
+        "S4": "No transform-origin and no edge slide; the only movement is a 12px rise."
+      },
+      "otherDefects": []
+    },
+    {
+      "case": "staged-empty-state",
+      "run": 1,
+      "checks": {"S1": "pass", "S2": "pass", "S3": "pass", "S4": "pass"},
+      "evidence": {
+        "S1": "styles.css:23 `.empty-state > *` plus :27-29 nth-child(2..4) delays of 100/200/300ms give four chunks (icon, h1, p, .actions) 100ms apart. The nth-child selectors are more specific, so the media-query animation-name longhand at :25 does not reset the delays.",
+        "S2": ":23 `300ms ease-out both`; :34-35 `from { opacity: 0; transform: translateY(12px); filter: blur(4px) }` applies via :24-26 under no-preference.",
+        "S3": "The base keyframe (:31-33) is opacity only; blur and translate are gated by `prefers-reduced-motion: no-preference` (:24-26). No static opacity:0, so content is visible without animation.",
+        "S4": "No transform-origin and no edge slide."
+      },
+      "otherDefects": []
+    },
+    {
+      "case": "staged-empty-state",
+      "run": 2,
+      "checks": {"S1": "pass", "S2": "pass", "S3": "pass", "S4": "pass"},
+      "evidence": {
+        "S1": "styles.css:22-25: `.empty-state > *` with nth-child(2..4) delays of 100/200/300ms; four chunks (icon, h1, p, .actions) 100ms apart.",
+        "S2": ":22 `300ms ease-out both`; :35-40 `from { opacity: 0; transform: translateY(12px); filter: blur(4px) }` selected at :28.",
+        "S3": "The opacity-only `empty-fade-in` (:31-33) is the default; motion and blur are swapped in only under `prefers-reduced-motion: no-preference` (:27-29). The hidden state exists only in the `from` keyframe, so content stays visible if the animation does not run.",
+        "S4": "No transform-origin and no edge slide."
+      },
+      "otherDefects": []
+    }
+  ]
+}

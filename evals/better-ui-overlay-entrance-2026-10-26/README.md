@@ -79,6 +79,10 @@ Under the [quality floor](../design-beta/quality-floor.md), against Jakub's orig
 - The `0.96` pre-scale in the recipe reuses better-ui's press value; no trial compared other values, and Q1 asks for a slight scale, so it partly grades the recipe's own choice.
 - The `[popover]` recipe, like the base one, gates nothing behind reduced motion itself; the skill's reduced-motion principle covers it.
 
+## Second after-r2 run
+
+The first traces were not kept, so after r2 ran again on both cases with outputs saved in [outputs/after-r2b](outputs/after-r2b/README.md). A blind re-grade passes the checklist in 27/27 run items. Overlay run 2 fails T4 (hardcoded `300ms` and `150ms` instead of the project tokens), so the mechanical graders pass 5/6. Spend $1.39, bringing the total to $6.15.
+
 ## Cost
 
 Total paid spend $4.76 against an $8 budget: before O-01 $0.94, ablations $0.56, after r1 O-01 $0.91, before O-N $0.52, after r1 O-N $0.53, after r2 O-01 $0.78, after r2 O-N $0.52. These are the runner's list-price figures, not a billed invoice.
