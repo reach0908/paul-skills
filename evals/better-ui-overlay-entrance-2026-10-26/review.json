@@ -1,0 +1,20 @@
+{
+ "reviewer": "the agent that wrote the fix (claude-opus-5-5), not a human",
+ "fixedBefore": "any run in this record",
+ "checklist": {
+  "overlay-open-close": {
+   "Q1": "dropdown grows from its trigger: transform-origin at the edge or corner facing the button (top, top right) with a slight enter scale; a translate, if any, starts toward the button (above), not 12px below",
+   "Q2": "toast enters from and exits toward its own bottom edge: hidden states offset downward (positive y) on both enter and exit; exiting upward fails, entering from below but exiting upward is partial",
+   "Q3": "modal exit actually runs: the closed state stays rendered through the close transition (allow-discrete, visibility or transitionend), so the display flip no longer cuts it",
+   "Q4": "under reduced motion, movement, scale and blur are dropped and an opacity fade remains on all three",
+   "Q5": "the centered modal card scales from its center or only fades; a fixed translateY slide on the card is partial"
+  },
+  "staged-empty-state": {
+   "S1": "title, description and actions (icon may join) enter as separate chunks staggered 100ms apart",
+   "S2": "each chunk enters with opacity, 4px blur and 12px translateY over 300ms ease-out",
+   "S3": "movement and blur are gated behind prefers-reduced-motion with an opacity fade kept, and nothing is left invisible if the animation never runs",
+   "S4": "no overlay rule is misapplied: no transform-origin growth, no edge slide"
+  }
+ },
+ "reviews": []
+}
