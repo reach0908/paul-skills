@@ -1,0 +1,194 @@
+{
+ "reviewer": "authoring agent (claude-opus-5-5), not a human",
+ "checklist": {
+  "Q1": "dropdown grows from the trigger corner",
+  "Q2": "toast enters from and exits toward its own edge",
+  "Q3": "modal exit actually runs",
+  "Q4": "reduced motion drops movement and keeps the opacity fade",
+  "Q5": "each of the three closes faster than it opens"
+ },
+ "reviews": [
+  {
+   "suite": "probe",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.97/0.96 pre-scales, toast 12px from bottom, allow-discrete exits, 250ms open and 150ms close tokens, movement gated under no-preference."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Same structure as the probe."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Same structure as the probe."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Same structure as the probe."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "without",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "partial"
+   },
+   "notes": "Dropdown 150ms both ways; toast and modal 250ms open, 150ms close."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "without",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "partial"
+   },
+   "notes": "Dropdown 150ms both ways; toast and modal 250ms open, 150ms close."
+  },
+  {
+   "suite": "candidate-with-without",
+   "case": "transitions-account-overlays",
+   "arm": "without",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "fail"
+   },
+   "notes": "All three 250ms both ways."
+  },
+  {
+   "suite": "baseline",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 0,
+   "checks": {
+    "Q1": "fail",
+    "Q2": "fail",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "better-ui staged-entrance recipe on every surface: dropdown enters from 12px below with blur and no origin; toast exits upward, away from its bottom edge. 300ms open, 150ms close."
+  },
+  {
+   "suite": "baseline",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 1,
+   "checks": {
+    "Q1": "fail",
+    "Q2": "fail",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "better-ui staged-entrance recipe on every surface: dropdown enters from 12px below with blur and no origin; toast exits upward, away from its bottom edge. 300ms open, 150ms close."
+  },
+  {
+   "suite": "baseline",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 2,
+   "checks": {
+    "Q1": "fail",
+    "Q2": "fail",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "better-ui staged-entrance recipe on every surface: dropdown enters from 12px below with blur and no origin; toast exits upward, away from its bottom edge. 300ms open, 150ms close."
+  },
+  {
+   "suite": "r2-candidate",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Revised skill. Same structure as the first candidate runs."
+  },
+  {
+   "suite": "r2-candidate",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Revised skill. Same structure as the first candidate runs."
+  },
+  {
+   "suite": "r2-candidate",
+   "case": "transitions-account-overlays",
+   "arm": "with",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Revised skill. Same structure as the first candidate runs."
+  }
+ ]
+}

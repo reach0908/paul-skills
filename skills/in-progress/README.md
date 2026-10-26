@@ -24,3 +24,4 @@ npx skills@latest add reach0908/paul-skills --skill=<name>
 
 - **[office-hours](./office-hours/SKILL.md)**: Develop an idea through startup diagnosis or builder brainstorming, premise revision and an explicit approach choice. Model-invoked PM beta.
 - **[prototype-user-test](./prototype-user-test/SKILL.md)**: Observe fresh AI task attempts, interview participants and compare behavior with author intent. Model-invoked design-evaluation beta; not human-user validation.
+- **[transitions](./transitions/SKILL.md)**: Choose and build the transition pattern for one UI element's state change, drawing on ideas from transitions.dev's selection rules. Model-invoked design beta; motion values stay with `better-ui`.
