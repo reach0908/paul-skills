@@ -76,6 +76,8 @@ A popover, dialog or element toggled from `display: none` has no previous style 
 
 An overlay moves from its anchor. The example assumes a popover placed below and to the right of its trigger, so it grows from its top-left corner; derive the origin from the actual placement.
 
+The overlay rule gives no duration or easing, so the project's duration and easing tokens apply wherever it has them, as [Exact values, optional polish](SKILL.md#exact-values-optional-polish) sets out. The example's `150ms`, `300ms` and `ease-out` are fallbacks for a project without them.
+
 ```css
 [popover] {
   opacity: 0;
