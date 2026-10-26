@@ -74,7 +74,7 @@ Under the [quality floor](../design-beta/quality-floor.md), against Jakub's orig
 
 ## Limits
 
-- Two tasks, n=3 per arm (6 after runs per task across r1 and r2), one model, one host; the reviewer wrote the fix. The checklist needs human confirmation.
+- Two tasks, n=3 per arm (12 after runs per task across r1, r2, the r2 rerun and r3), one model, one host; the reviewer wrote the fix. The checklist needs human confirmation.
 - Nothing was rendered: directions, exits and reduced motion are read from CSS, not watched in a browser.
 - Only a bottom toast and a below-right dropdown were tested. Flipped placements, tooltips, drawers, sheets, React or Motion projects, review tasks (`better-interface` handoff) and Codex were not run.
 - The `0.96` pre-scale in the recipe reuses better-ui's press value; no trial compared other values, and Q1 asks for a slight scale, so it partly grades the recipe's own choice.

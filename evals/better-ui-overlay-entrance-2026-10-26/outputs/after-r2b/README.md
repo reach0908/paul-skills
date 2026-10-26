@@ -26,4 +26,4 @@ A fresh Claude Code session (Opus 5.5, `--model opus --effort medium`, brief sta
 - staged-empty-state S1 to S4: pass in 3/3 runs (12/12).
 - The session also flagged run 2's hardcoded durations and easing on its own list of defects outside the checklist. That matches the T4 failure. The brief named hardcoded durations as an example of such a defect.
 
-The checklist agrees with the first r2 review, but one mechanical grader fails, so this run does not pass as a whole. Spend: $1.39 (list price).
+The checklist agrees with the first r2 review, but one mechanical grader fails, so this run does not pass as a whole. Runner spend for the two cases: $1.39 (list price). The grading session ran on a Claude Max subscription, with no separate charge.

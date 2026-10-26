@@ -23,4 +23,4 @@ A fresh Claude Code session graded the checklist from `review.json` without the 
 - staged-empty-state S1 to S4: pass in 3/3 runs (12/12).
 - Outside the checklist, it noted for all three overlay runs that the closing menu and modal backdrop stay hit-testable during the `150ms` exit, because the closed state has no `pointer-events: none`. Neither the prompt nor the checklist covers this, and better-ui does not prescribe it.
 
-Spend: $1.34 (list price).
+Runner spend for the two cases: $1.34 (list price). The grading session ran on a Claude Max subscription, with no separate charge.
