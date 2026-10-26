@@ -49,7 +49,7 @@ record = {'suites': []}
 for arg in sys.argv[1:]:
     label, path = arg.split('=', 1)
     agg = json.loads(Path(path).read_text())
-    suite = {'label': label, 'claudeVersion': agg['claudeVersion'], 'model': agg['suite']['modelOverride'],
+    suite = {'label': label, 'startedAt': agg['startedAt'], 'claudeVersion': agg['claudeVersion'], 'model': agg['suite']['modelOverride'],
              'ablation': agg['suite']['ablation'], 'costUsd': agg['costUsd'], 'durationSeconds': agg['durationSeconds'],
              'partial': agg['partial'], 'tokens': None, 'runs': []}
     for case in agg['cases']:
@@ -57,7 +57,7 @@ for arg in sys.argv[1:]:
             for i, run in enumerate(runs):
                 facts = trace_facts(run.get('tracePath'))
                 suite['runs'].append({
-                    'case': case['name'], 'arm': arm, 'run': i, 'error': run['error'],
+                    'case': case['name'], 'arm': arm, 'run': i, 'startedAt': run['startedAt'], 'error': run['error'],
                     'costUsd': run['costUsd'], 'judgeCostUsd': run['judgeCostUsd'],
                     'durationSeconds': run['durationSeconds'], 'turns': run['turns'],
                     'graders': {g['name']: g['passed'] for g in run['graders']},

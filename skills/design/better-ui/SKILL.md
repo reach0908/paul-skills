@@ -71,13 +71,13 @@ Exit staged content with opacity, `4px` of blur and a fixed `-12px` `translateY`
 
 ## Overlays move from their anchor
 
-A dropdown, popover, menu, tooltip, toast, drawer, sheet or modal takes its motion from what anchors it, not from the staged recipe:
+Overlays take their motion from what anchors them, not from the staged recipe:
 
 - A surface opened from a trigger, such as a dropdown, popover, menu or tooltip, grows from the trigger edge. Set `transform-origin` to the side or corner facing the trigger, and flip it when the placement flips.
 - A surface attached to a viewport edge, such as a toast, drawer or sheet, enters from that edge and exits back toward it.
 - A centered modal or dialog scales from its center while its backdrop fades.
 
-Any translate follows the anchor, never a fixed `-12px` up. Exits stay shorter than enters, and the reduced-motion fallback still applies. The recipe for overlays toggled from `display: none` is in [enter-exit.md](enter-exit.md#entering-from-display-none).
+Any translate follows the anchor, never a fixed `-12px` up. Exits stay shorter than enters. The recipe for overlays toggled from `display: none` is in [enter-exit.md](enter-exit.md#entering-from-display-none).
 
 ## Skip state animations on first render
 

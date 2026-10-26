@@ -74,7 +74,7 @@ The hidden state lives in the `from` keyframe, so an item whose animation never 
 
 A popover, dialog or element toggled from `display: none` has no previous style to transition from. `@starting-style` supplies one, and `transition-behavior: allow-discrete` keeps it rendered through the exit. The open state's duration applies on enter and the closed state's on exit.
 
-An overlay moves from its anchor. This popover opens below and to the right of its trigger, so it grows from its top-left corner; derive the origin from the actual placement.
+An overlay moves from its anchor. The example assumes a popover placed below and to the right of its trigger, so it grows from its top-left corner; derive the origin from the actual placement.
 
 ```css
 [popover] {

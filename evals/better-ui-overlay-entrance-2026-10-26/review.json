@@ -83,7 +83,7 @@
    "notes": "Diagnostic, not pooled. Origin top right with 0.96 scale; toast 12px from and back toward the bottom; modal card scales 0.96."
   },
   {
-   "suite": "after-overlay",
+   "suite": "after-r1-overlay",
    "case": "overlay-open-close",
    "run": 0,
    "checks": {
@@ -96,7 +96,7 @@
    "notes": "Origin top right, 0.96 scale; toast enters from and exits to calc(100% + 24px) below; modal card scales 0.96; allow-discrete on all three; movement gated under no-preference with opacity for everyone."
   },
   {
-   "suite": "after-overlay",
+   "suite": "after-r1-overlay",
    "case": "overlay-open-close",
    "run": 1,
    "checks": {
@@ -109,7 +109,7 @@
    "notes": "Origin top right, 0.96 scale; toast 16px from and back toward the bottom; modal switched to the hidden attribute (app.js and index.html edited) with display none plus allow-discrete, card scales 0.96 from center."
   },
   {
-   "suite": "after-overlay",
+   "suite": "after-r1-overlay",
    "case": "overlay-open-close",
    "run": 2,
    "checks": {
@@ -158,7 +158,7 @@
    "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
   },
   {
-   "suite": "after-staged",
+   "suite": "after-r1-staged",
    "case": "staged-empty-state",
    "run": 0,
    "checks": {
@@ -170,7 +170,7 @@
    "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
   },
   {
-   "suite": "after-staged",
+   "suite": "after-r1-staged",
    "case": "staged-empty-state",
    "run": 1,
    "checks": {
@@ -182,7 +182,82 @@
    "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
   },
   {
-   "suite": "after-staged",
+   "suite": "after-r1-staged",
+   "case": "staged-empty-state",
+   "run": 2,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-r2-overlay",
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast 12px from and back toward the bottom; modal card scales 0.96 from center; allow-discrete on all three; movement gated under no-preference."
+  },
+  {
+   "suite": "after-r2-overlay",
+   "case": "overlay-open-close",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast enters from and exits to calc(100% + 24px) below; modal card scales 0.96 under no-preference while the backdrop fades for everyone."
+  },
+  {
+   "suite": "after-r2-overlay",
+   "case": "overlay-open-close",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast 16px from and back toward the bottom; modal card scales 0.96 from center while the backdrop fades."
+  },
+  {
+   "suite": "after-r2-staged",
+   "case": "staged-empty-state",
+   "run": 0,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-r2-staged",
+   "case": "staged-empty-state",
+   "run": 1,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-r2-staged",
    "case": "staged-empty-state",
    "run": 2,
    "checks": {

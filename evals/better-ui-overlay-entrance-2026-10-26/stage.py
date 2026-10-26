@@ -7,21 +7,26 @@ after:  every promoted skill as in this working tree.
 The cases are copied to <out>/evals/overlay. The out directory must not exist.
 
 usage: stage.py <before|after> <out> [--better-ui <dir>]
+Digests hash sorted relative paths and SHA-256 contents, without file modes, so they are not
+comparable with skill-sources.json's localDigest.
 """
+import argparse
 import hashlib
 import io
 import json
 import shutil
 import subprocess
-import sys
 import tarfile
 from pathlib import Path
 
 BASE = 'e5438096106564ded2ddaede61d8061f9f7b9380'
 root = Path(__file__).resolve().parents[2]
-arm, out = sys.argv[1], Path(sys.argv[2])
-override = Path(sys.argv[4]) if len(sys.argv) == 5 and sys.argv[3] == '--better-ui' else None
-assert arm in ('before', 'after'), 'arm must be before or after'
+parser = argparse.ArgumentParser()
+parser.add_argument('arm', choices=['before', 'after'])
+parser.add_argument('out', type=Path)
+parser.add_argument('--better-ui', type=Path, dest='override')
+args = parser.parse_args()
+arm, out, override = args.arm, args.out, args.override
 assert not out.exists(), f'{out} exists; choose a fresh directory'
 if arm == 'before':
     src = out.with_name(out.name + '.base')

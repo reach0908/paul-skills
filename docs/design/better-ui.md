@@ -30,7 +30,7 @@ No. Some frequent interactions should have none. The project’s motion language
 
 **Will my dropdowns and toasts get the page entrance animation?**
 
-No. Through 0.4.6 they could: in a trial, a dropdown rose from below its button and a bottom toast left upward. Overlays now take their direction from the trigger or screen edge they belong to, and the staged entrance stays on page and section content.
+No. Through 0.4.6 they could: in trials, a dropdown slid in with no origin at its button and a bottom toast left upward, away from its edge. Overlays now take their direction from the trigger or screen edge they belong to, and the staged entrance stays on page and section content.
 
 **Is a screenshot enough to approve an animation?**
 
