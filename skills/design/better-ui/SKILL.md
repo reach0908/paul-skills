@@ -63,11 +63,21 @@ Every animated state change also leaves a static cue in the form of a color, ico
 
 ## Stagger infrequent entrances by 100ms
 
-Where sequence communicates hierarchy in a staged entrance, split the content into semantic chunks such as title, description and actions. Stagger them `100ms` apart, each entering with opacity, `4px` of blur and `12px` of `translateY` over `300ms` with `ease-out`. Never stagger routine interactions. See [enter-exit.md](enter-exit.md).
+Where sequence communicates hierarchy in a staged entrance of page or section content, such as a hero, an empty state, onboarding or a section reveal, split the content into semantic chunks such as title, description and actions. Stagger them `100ms` apart, each entering with opacity, `4px` of blur and `12px` of `translateY` over `300ms` with `ease-out`. Never stagger routine interactions. See [enter-exit.md](enter-exit.md).
 
 ## Exits are shorter and smaller than enters
 
-Exit with opacity, `4px` of blur and a fixed `-12px` `translateY` over `150ms` with `ease-out`, never the full container height. Slide fully out only where the destination carries meaning, such as a drawer closing. Remove the element instantly where motion adds no information. See [enter-exit.md](enter-exit.md#exit-animations).
+Exit staged content with opacity, `4px` of blur and a fixed `-12px` `translateY` over `150ms` with `ease-out`, never the full container height. Slide fully out only where the destination carries meaning, such as a drawer closing. Remove the element instantly where motion adds no information. See [enter-exit.md](enter-exit.md#exit-animations).
+
+## Overlays move from their anchor
+
+A dropdown, popover, menu, tooltip, toast, drawer, sheet or modal takes its motion from what anchors it, not from the staged recipe:
+
+- A surface opened from a trigger, such as a dropdown, popover, menu or tooltip, grows from the trigger edge. Set `transform-origin` to the side or corner facing the trigger, and flip it when the placement flips.
+- A surface attached to a viewport edge, such as a toast, drawer or sheet, enters from that edge and exits back toward it.
+- A centered modal or dialog scales from its center while its backdrop fades.
+
+Any translate follows the anchor, never a fixed `-12px` up. Exits stay shorter than enters, and the reduced-motion fallback still applies. The recipe for overlays toggled from `display: none` is in [enter-exit.md](enter-exit.md#entering-from-display-none).
 
 ## Skip state animations on first render
 

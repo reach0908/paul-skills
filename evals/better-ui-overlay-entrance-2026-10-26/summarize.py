@@ -2,7 +2,8 @@
 """Summarize claude plugin eval aggregate JSONs (and their kept traces) into one record.
 
 usage: summarize.py <label>=<aggregate.json> ... > record.json
-Tokens are null: aggregate schema 1 reports no token usage.
+Aggregate schema 1 reports no token usage, so per-run tokens come from the trace's result
+event and stay null when the trace or its usage is missing. The suite total is null too.
 """
 import json
 import re
@@ -13,13 +14,21 @@ SKILL = re.compile(r'(?:[\w-]+:)?([\w-]+)$')
 
 
 def trace_facts(path):
-    facts = {'skills': [], 'edited': [], 'reads': [], 'lastMessage': None, 'traceFound': False}
+    facts = {'skills': [], 'edited': [], 'reads': [], 'lastMessage': None, 'traceFound': False,
+             'tokens': None, 'costBasis': None}
     p = Path(path) if path else None
     if not p or not p.exists():
         return facts
     facts['traceFound'] = True
     for line in p.read_text().splitlines():
         event = json.loads(line)
+        if event.get('type') == 'result' and event.get('usage'):
+            usage = event['usage']
+            facts['tokens'] = {'input': usage.get('input_tokens'), 'output': usage.get('output_tokens'),
+                               'cacheRead': usage.get('cache_read_input_tokens'),
+                               'cacheCreation': usage.get('cache_creation_input_tokens'),
+                               'thinking': (usage.get('output_tokens_details') or {}).get('thinking_tokens')}
+            facts['costBasis'] = next(iter((event.get('modelUsage') or {}).values()), {}).get('costBasis')
         if event.get('type') != 'assistant':
             continue
         for block in event['message'].get('content', []):

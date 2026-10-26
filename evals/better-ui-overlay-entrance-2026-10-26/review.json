@@ -16,5 +16,182 @@
    "S4": "no overlay rule is misapplied: no transform-origin growth, no edge slide"
   }
  },
- "reviews": []
+ "reviews": [
+  {
+   "suite": "before-overlay",
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "partial",
+    "Q2": "partial",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "partial"
+   },
+   "notes": "Dropdown drops 12px from above with 4px blur and exits 12px up; no transform-origin or scale. Toast enters from 12px below but exits 12px up, away from its edge. Modal card enters from 12px below, exits 12px up, with blur. allow-discrete keeps the modal rendered on close. Project tokens for durations."
+  },
+  {
+   "suite": "before-overlay",
+   "case": "overlay-open-close",
+   "run": 1,
+   "checks": {
+    "Q1": "fail",
+    "Q2": "partial",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "partial"
+   },
+   "notes": "Staged recipe on all three: dropdown enters from 12px below (away from its button) with blur and exits 12px up; toast exits 12px up; modal card slides 12px up and down. 300ms open, --duration-short close."
+  },
+  {
+   "suite": "before-overlay",
+   "case": "overlay-open-close",
+   "run": 2,
+   "checks": {
+    "Q1": "partial",
+    "Q2": "partial",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "partial"
+   },
+   "notes": "Dropdown moves 4px from above both ways, no origin or scale. Toast enters from 12px below with blur, exits 12px up. Modal card translateY 12px in, -12px out, with blur."
+  },
+  {
+   "suite": "ablation-skill-only",
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Diagnostic, not pooled. Origin top right with 0.96 scale; toast 16px from and back toward the bottom; modal card scales 0.96 from center."
+  },
+  {
+   "suite": "ablation-reference-only",
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Diagnostic, not pooled. Origin top right with 0.96 scale; toast 12px from and back toward the bottom; modal card scales 0.96."
+  },
+  {
+   "suite": "after-overlay",
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast enters from and exits to calc(100% + 24px) below; modal card scales 0.96; allow-discrete on all three; movement gated under no-preference with opacity for everyone."
+  },
+  {
+   "suite": "after-overlay",
+   "case": "overlay-open-close",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast 16px from and back toward the bottom; modal switched to the hidden attribute (app.js and index.html edited) with display none plus allow-discrete, card scales 0.96 from center."
+  },
+  {
+   "suite": "after-overlay",
+   "case": "overlay-open-close",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "notes": "Origin top right, 0.96 scale; toast 16px from and back toward the bottom; modal card scales 0.96 from center while the backdrop fades."
+  },
+  {
+   "suite": "before-staged",
+   "case": "staged-empty-state",
+   "run": 0,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "before-staged",
+   "case": "staged-empty-state",
+   "run": 1,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "before-staged",
+   "case": "staged-empty-state",
+   "run": 2,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-staged",
+   "case": "staged-empty-state",
+   "run": 0,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-staged",
+   "case": "staged-empty-state",
+   "run": 1,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  },
+  {
+   "suite": "after-staged",
+   "case": "staged-empty-state",
+   "run": 2,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "notes": "Icon, title, description and actions as separate chunks, 100ms delays, opacity plus 4px blur plus translateY(12px) over 300ms ease-out; hidden state only in the from keyframe; movement keyframe only under no-preference, opacity keyframe otherwise."
+  }
+ ]
 }
