@@ -1,6 +1,6 @@
 ---
 name: transitions
-description: "Transition choice. Picks and builds the enter, exit or state-change transition for one UI element: a dropdown, modal, drawer, toast, tooltip, accordion, tabs, page or step swap, or a text, number or icon change. Use when an element pops with no motion or the user asks which transition fits. Tuning existing motion values belongs to better-ui, change reviews to better-interface, reduced-motion audits to better-accessibility."
+description: "Transition choice. Picks and builds the enter, exit or state-change transition for one UI element: a dropdown, modal, drawer, toast, tooltip, accordion, tabs, page or step swap, or a text, number or icon change. Use when an element pops with no motion or the user asks which transition fits. General styling and tuning existing motion values belong to better-ui, change reviews to better-interface, reduced-motion audits to better-accessibility."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
@@ -9,7 +9,7 @@ metadata:
 
 This skill picks the transition **pattern** for one element's state change, choreographs it and builds it in the project's existing stack. The pattern is the decision: which pieces move, from where, in what order, and how the exit differs from the enter. Values come last and mostly come from elsewhere.
 
-The selection method, choreography rules and implementation traps are adapted from [transitions.dev](https://transitions.dev) by Jakub Antalik, rewritten in this skill's own words. No transitions.dev snippet, token file or catalog entry is included; its license forbids republishing the collection.
+The selection method, choreography rules and implementation traps draw on ideas from [transitions.dev](https://transitions.dev) by Jakub Antalik; the text is this skill's own. No transitions.dev snippet, token file or catalog is included, because its license forbids republishing the collection.
 
 ## Ownership
 
@@ -21,7 +21,7 @@ Before choosing anything, establish five facts from the code:
 
 - **Element**: what the user sees change (a menu anchored to a button, a centered dialog, a value in a table cell).
 - **Verb**: open/close, swap in place, resize, reveal after loading, move between positions, or confirm/reject.
-- **Frequency**: how often one user triggers it. Keystrokes, row hovers and tab switches are high-frequency, and `better-ui` gives them no animation or a fade of `150ms` or less. Say so instead of designing a pattern for them.
+- **Frequency**: how often one user triggers it. Keystrokes, row hovers and tab switches are high-frequency, and `better-ui`'s high-frequency rule governs them. Say so instead of designing a pattern for them.
 - **Mount mechanism**: conditional render, `display: none`, the `hidden` attribute, a native `<dialog>` or `popover`, a headless-library `data-state`, or a class toggle. This decides whether an exit can run at all.
 - **Stack**: plain CSS, CSS modules, Tailwind (which major version), or a motion library already in `package.json`, plus any motion tokens the project defines.
 
@@ -42,9 +42,9 @@ These rules apply to every pattern:
 - **Origin follows the trigger.** An anchored surface grows from the edge nearest its trigger, so set `transform-origin` from its actual placement, including when it flips above the trigger. A centered surface scales from its center. A surface entering a region slides from the side it belongs to.
 - **Move the pieces, not the frame.** Animate the part that carries the meaning: the dot on a badge, the sections inside a page, the content chunks inside a card. Animating the outer container drags everything inside along and usually triggers layout.
 - **Exits are quieter than enters.** An open/close pair closes faster and with less travel than it opens, using `better-ui`'s exit values. Swaps that the user moves back and forth through (a tab indicator, an accordion, a page or step pair, an icon or text swap) are the exception: they run the same duration and easing both ways.
-- **Overshoot belongs to small entrances only.** A badge or count may land with a slight overshoot when the product's tone allows it. A close never overshoots, and motion-library springs keep `better-ui`'s `bounce: 0`.
+- **No overshoot.** Surfaces settle without bouncing, on enter and on close, as `better-ui` sets for springs.
 - **Delay only for intent.** A hover-triggered surface such as a tooltip waits briefly so a passing pointer does not fire it, and once one is open its neighbors open at once. Never delay a close or a hover-out. When motion feels late, shorten the duration before adding any delay.
-- **Stagger infrequent entrances only.** Use `better-ui`'s stagger between semantic chunks, and stop staggering once the last chunk would start more than about `300ms` after the first: stagger the first few items and bring the rest in together.
+- **Stagger infrequent entrances only,** with `better-ui`'s staged-entrance rule. For a long list, stagger only the first few items and bring the rest in together, so the list never trickles in.
 - **Small distances.** Enter and exit travel stays within `better-ui`'s small translate. Travel past about `40px` reads sluggish, except for a drawer or page whose destination carries meaning. A pre-scale below about `0.9` reads as a zoom rather than an appearance.
 - **Interruptible by default.** Toggled states use transitions, which reverse mid-flight. Keyframes are for sequences that play once, as `better-ui` sets out.
 
@@ -64,7 +64,7 @@ Value precedence is fixed: the project's own motion tokens, then `better-ui`'s e
 | Reduced motion | Movement, scale and blur run only under `prefers-reduced-motion: no-preference`; the opacity fade remains |
 | Static cue | The new state is legible without the motion (label, icon, color or focus move) |
 | Value sources | Every value is traceable to a project token, `better-ui`, or the fallback table |
-| Verification | Rendered behavior checked through the `design-browser` skill when a browser is available; otherwise each unrendered check is reported as `Not verified` |
+| Verification | Rendered behavior checked in a browser, when one is available, by calling the Skill tool with "design-browser"; otherwise each unrendered check is reported as `Not verified` |
 
 ## Report
 
