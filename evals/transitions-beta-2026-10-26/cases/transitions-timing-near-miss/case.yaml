@@ -1,0 +1,24 @@
+{
+  "schema_version": "1.1",
+  "name": "transitions-timing-near-miss",
+  "description": "T-N: retuning the values of transitions that already exist is better-ui's job; transitions stays unloaded.",
+  "tags": ["transitions", "development", "invocation-boundary"],
+  "expected_outcome": "Retunes the existing values (better-ui if a skill loads) without loading transitions.",
+  "runs": 3,
+  "execution": {
+    "max_turns": 30,
+    "timeout_seconds": 600,
+    "allowed_tools": ["Read", "Glob", "Grep", "Skill", "Edit", "Write"]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "N1-transitions-not-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?transitions\"", "min": 0, "max": 0},
+    {"name": "N2-file-edited", "type": "regex", "pattern": "320ms", "match": "not_contains", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "IND-better-ui-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-ui\"", "min": 1},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/", "min": 0, "max": 0}
+  ]
+}
