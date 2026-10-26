@@ -1,0 +1,119 @@
+{
+ "grader": "claude-opus-5-5",
+ "grades": [
+  {
+   "case": "overlay-open-close",
+   "run": 0,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "evidence": {
+    "Q1": "styles.css:17 .menu transform-origin: top right; :28/:30 .menu[hidden] and @starting-style .menu:not([hidden]) scale: 0.96; no translate.",
+    "Q2": "styles.css:60 .toast[hidden] translate: -50% 16px (exit) and :62 @starting-style .toast:not([hidden]) translate: -50% 16px (enter); both offsets are positive y. Transitions on translate (:50).",
+    "Q3": ".modal :74-77 transition-property: opacity, display with transition-behavior: allow-discrete, so display:none (:69) is held until the 150ms opacity fade ends; :80-82 @starting-style handles the enter. The card's scale also transitions back (:85-87).",
+    "Q4": "scale/translate are only set inside @media (prefers-reduced-motion: no-preference) (:27-32 menu, :59-64 toast, :84-92 card). Opacity fades stay outside it (:23/:25 menu, :55/:57 toast, :73/:79/:81 modal). No blur is used.",
+    "Q5": ".modal-card :86 scale: 0.96 -> :89 scale: 1 with the default center transform-origin; no translate."
+   },
+   "otherDefects": [
+    "Minor, not covered by the checklist: during the 150ms exit the closing .menu and the full-screen .modal stay hit-testable (no pointer-events:none on the closed state), so a quick click can land on a fading menu item or be swallowed by the fading backdrop."
+   ]
+  },
+  {
+   "case": "overlay-open-close",
+   "run": 1,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "evidence": {
+    "Q1": "styles.css:17 .menu transform-origin: top right; :27-28 .menu[hidden] / @starting-style scale: 0.96; no translate.",
+    "Q2": "styles.css:56 .toast[hidden] translate: -50% calc(100% + 24px) (exit) and :57 @starting-style the same (enter). Both are positive y, so the toast slides fully past the bottom edge and back.",
+    "Q3": ".modal :68-71 opacity + display with allow-discrete keeps it rendered through the 150ms exit; :74 @starting-style opacity: 0 handles the enter.",
+    "Q4": "Base transition-property is opacity, display only (:18, :47). scale/translate and their transition-property are added only inside no-preference (:25-29, :54-58, :76-80). Opacity fades remain on all three. No blur.",
+    "Q5": ".modal-card :77-79 scale 0.96 -> 1 from the default center origin; no translateY."
+   },
+   "otherDefects": [
+    "Minor, not covered by the checklist: during the 150ms exit the closing .menu and the full-screen .modal stay hit-testable (no pointer-events:none on the closed state), so a quick click can land on a fading menu item or be swallowed by the fading backdrop."
+   ]
+  },
+  {
+   "case": "overlay-open-close",
+   "run": 2,
+   "checks": {
+    "Q1": "pass",
+    "Q2": "pass",
+    "Q3": "pass",
+    "Q4": "pass",
+    "Q5": "pass"
+   },
+   "evidence": {
+    "Q1": "styles.css:18 .menu transform-origin: top right; :81-82 .menu[hidden] / @starting-style scale: 0.96 (inside no-preference); no translate.",
+    "Q2": "styles.css:84 .toast[hidden] translate: -50% 16px (exit) and :85 @starting-style the same (enter); positive y both ways. translate is in the transition list (:44).",
+    "Q3": ".modal :60-63 opacity, display with allow-discrete; .menu[hidden]/.toast[hidden] explicitly set display: none (:24, :49) and also transition it discretely. The modal stays rendered through the 150ms close fade.",
+    "Q4": "All movement is in one @media (prefers-reduced-motion: no-preference) block (:80-89). Opacity on/off states stay outside it (:24-25, :49-50, :59/:65-66). No blur.",
+    "Q5": ".modal:not(.is-open) .modal-card scale: 0.96 (:87) and is-open resolves to the default scale with a center origin, transitioned via :73-77; no translate."
+   },
+   "otherDefects": [
+    "Minor, not covered by the checklist: during the 150ms exit the closing .menu and the full-screen .modal stay hit-testable (no pointer-events:none on the closed state), so a quick click can land on a fading menu item or be swallowed by the fading backdrop."
+   ]
+  },
+  {
+   "case": "staged-empty-state",
+   "run": 0,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "evidence": {
+    "S1": "styles.css :16: .empty-state > * animation; nth-child(2/3/4) delays 100/200/300ms (:20-22). Icon, h1, p and .actions are four separate chunks 100ms apart.",
+    "S2": "@keyframes empty-fade-in-up from { opacity: 0; transform: translateY(12px); filter: blur(4px) } (:27) with 300ms ease-out (:16).",
+    "S3": "The base animation is the opacity-only empty-fade-in (:23-25). The movement/blur keyframe is swapped in only under @media (prefers-reduced-motion: no-preference) (:17-19). The hidden state exists only in the `from` keyframes (fill-mode both), so the content stays visible if animations never run.",
+    "S4": "No transform-origin, no scale and no edge-of-viewport slide; the only movement is the 12px translateY rise."
+   },
+   "otherDefects": []
+  },
+  {
+   "case": "staged-empty-state",
+   "run": 1,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "evidence": {
+    "S1": "styles.css :22: .empty-state > * animation; nth-child(2/3/4) delays 100/200/300ms (:26-28). Icon, h1, p and .actions are four separate chunks 100ms apart.",
+    "S2": "@keyframes empty-fade-in-up from { opacity: 0; transform: translateY(12px); filter: blur(4px) } (:34) with 300ms ease-out (:22).",
+    "S3": "The base animation is the opacity-only empty-fade-in (:30-32). The movement/blur keyframe is swapped in only under @media (prefers-reduced-motion: no-preference) (:23-25). The hidden state exists only in the `from` keyframes (fill-mode both), so the content stays visible if animations never run.",
+    "S4": "No transform-origin, no scale and no edge-of-viewport slide; the only movement is the 12px translateY rise."
+   },
+   "otherDefects": []
+  },
+  {
+   "case": "staged-empty-state",
+   "run": 2,
+   "checks": {
+    "S1": "pass",
+    "S2": "pass",
+    "S3": "pass",
+    "S4": "pass"
+   },
+   "evidence": {
+    "S1": "styles.css :22: .empty-state > * animation; nth-child(2/3/4) delays 100/200/300ms (:23-25). Icon, h1, p and .actions are four separate chunks 100ms apart.",
+    "S2": "@keyframes empty-fade-in-up from { opacity: 0; transform: translateY(12px); filter: blur(4px) } (:36) with 300ms ease-out (:22).",
+    "S3": "The base animation is the opacity-only empty-fade-in (:31-33). The movement/blur keyframe is swapped in only under @media (prefers-reduced-motion: no-preference) (:27-29). The hidden state exists only in the `from` keyframes (fill-mode both), so the content stays visible if animations never run.",
+    "S4": "No transform-origin, no scale and no edge-of-viewport slide; the only movement is the 12px translateY rise."
+   },
+   "otherDefects": []
+  }
+ ]
+}

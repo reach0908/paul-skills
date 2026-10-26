@@ -14,7 +14,8 @@ Copied from that trial and adapted so it needs no `transitions` skill. [stage.py
 | --- | --- | --- |
 | before | as at `e5438096` (origin/main when this branch started) | `sha256:f0c8fc8b023310f4ef87120aa68dd613e132879019ac9eb41eea1e5e527e7f0e` |
 | after r1 | the fix as first committed (`61b6d04`) | `sha256:b3564384e0a9f09fe5e08c7b2ce1f60b904eb9cd11f4b847ebdd1264634b3edd` |
-| after r2 | this branch as shipped, after code review | `sha256:52b9895b9050b9349d01066af08d1a8f4348708f8d6f61c22a5774f272ee9d0e` |
+| after r2 | the text after code review (`9793470`) | `sha256:52b9895b9050b9349d01066af08d1a8f4348708f8d6f61c22a5774f272ee9d0e` |
+| after r3 | this branch as shipped: r2 plus one sentence pointing the overlay recipe at project motion tokens (`90b56bd`) | `sha256:73207f480c73e177460aa50bae984eba8f5c5b94314a99910eedab8ff9b6fbac` |
 | ablation skill-only | this branch's `SKILL.md`, base `enter-exit.md` | `sha256:072653fe029e5cd7b80a0f13ce72cf8bef2c02ed43bcc5f6ccec4f86de67d796` |
 | ablation reference-only | base `SKILL.md`, this branch's `enter-exit.md` | `sha256:539175c76deb124b6b93c9418c7ce668637dea7f2dd59b48eb1ef24026afef6a` |
 
@@ -81,8 +82,12 @@ Under the [quality floor](../design-beta/quality-floor.md), against Jakub's orig
 
 ## Second after-r2 run
 
-The first traces were not kept, so after r2 ran again on both cases with outputs saved in [outputs/after-r2b](outputs/after-r2b/README.md). A blind re-grade passes the checklist in 27/27 run items. Overlay run 2 fails T4 (hardcoded `300ms` and `150ms` instead of the project tokens), so the mechanical graders pass 5/6. Spend $1.39, bringing the total to $6.15.
+The first traces were not kept, so after r2 ran again on both cases with outputs saved in [outputs/after-r2b](outputs/after-r2b/README.md). A blind re-grade passes the checklist in 27/27 run items. Overlay run 2 fails T4 (hardcoded `300ms` and `150ms` instead of the project tokens), so the mechanical graders pass 5/6. Spend $1.39.
+
+## after r3
+
+r3 adds one sentence to the popover recipe: the project's duration and easing tokens apply where it has them, and the recipe's `150ms`, `300ms` and `ease-out` are fallbacks. Both cases ran again with outputs in [outputs/after-r3](outputs/after-r3/README.md). Mechanical graders pass 6/6 (O-01 3/3 including T4, O-N 3/3), and a blind re-grade by a fresh session passes the checklist in 27/27 run items. Spend $1.34.
 
 ## Cost
 
-Total paid spend $4.76 against an $8 budget: before O-01 $0.94, ablations $0.56, after r1 O-01 $0.91, before O-N $0.52, after r1 O-N $0.53, after r2 O-01 $0.78, after r2 O-N $0.52. These are the runner's list-price figures, not a billed invoice.
+Total paid spend $7.49: $4.76 against the first $8 budget, then $1.39 for after-r2b and $1.34 for after r3, each under its own cap. The first $4.76 splits as before O-01 $0.94, ablations $0.56, after r1 O-01 $0.91, before O-N $0.52, after r1 O-N $0.53, after r2 O-01 $0.78, after r2 O-N $0.52. These are the runner's list-price figures, not a billed invoice.
