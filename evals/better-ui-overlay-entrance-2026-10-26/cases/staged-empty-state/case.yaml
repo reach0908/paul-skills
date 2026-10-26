@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.1",
+  "name": "staged-empty-state",
+  "description": "O-N near miss: a first-view empty state is where better-ui's staged entrance applies; its exact values must survive the overlay fix.",
+  "tags": ["better-ui", "staged-entrance", "development", "near-miss"],
+  "expected_outcome": "Title, description and actions enter as staggered chunks 100ms apart, each with opacity, 4px blur and 12px translateY over 300ms ease-out, gated behind reduced motion with an opacity fallback.",
+  "runs": 3,
+  "execution": {
+    "max_turns": 30,
+    "timeout_seconds": 600,
+    "allowed_tools": ["Read", "Glob", "Grep", "Skill", "Edit", "Write"]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "N1-stagger-100ms", "type": "regex", "pattern": "\\b100ms\\b|\\b0?\\.1s\\b", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "N2-blur-4px", "type": "regex", "pattern": "blur\\(\\s*4px\\s*\\)", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "N3-translate-12px", "type": "regex", "pattern": "translateY\\(\\s*12px\\s*\\)|translate\\s*:\\s*0\\s+12px", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "N4-300ms-ease-out", "type": "regex", "pattern": "(300ms|0?\\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\\.3s)|duration\\s*:\\s*300ms", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "N5-reduced-motion-gate", "type": "regex", "pattern": "prefers-reduced-motion", "target": {"source": "file", "path": "src/styles.css"}},
+    {"name": "IND-better-ui-loaded", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-ui\"", "min": 1},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/", "min": 0, "max": 0}
+  ]
+}

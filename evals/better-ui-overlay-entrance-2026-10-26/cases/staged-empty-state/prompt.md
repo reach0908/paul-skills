@@ -1,0 +1,1 @@
+When someone opens the projects page for the first time and has no projects, the empty state just appears all at once and feels flat. Give it a nicer entrance when it first shows up. Edit the files directly.

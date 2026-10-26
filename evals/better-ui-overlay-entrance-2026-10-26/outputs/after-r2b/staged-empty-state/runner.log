@@ -1,0 +1,49 @@
+Note: --scaffold runs each case's scaffold_script as you. Only use it on case files you (or your org) authored.
+Plugin under test: "paul-skills" version "0.4.6" at "/private/tmp/bui-regrade/stage-after-r2b"
+Concurrency: up to 3 runs in flight (all children share your rate limit; progress lines interleave, results keep case order)
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/staged-empty-state/scaffold.sh
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/staged-empty-state/scaffold.sh
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/staged-empty-state/scaffold.sh
+  kept temp: /private/tmp/e-TSYo8n
+⚠ kept /private/tmp/e-TSYo8n: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-TSYo8n/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-TSYo8n /private/tmp/e-TSYo8n/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  staged-empty-state run 2/3: score 1.00  $0.18
+    ✓ N1-stagger-100ms (weight 1): matched \b100ms\b|\b0?\.1s\b
+    ✓ N2-blur-4px (weight 1): matched blur\(\s*4px\s*\)
+    ✓ N3-translate-12px (weight 1): matched translateY\(\s*12px\s*\)|translate\s*:\s*0\s+12px
+    ✓ N4-300ms-ease-out (weight 1): matched (300ms|0?\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\.3s)|duration\s*:\s*300ms
+    ✓ N5-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+  kept temp: /private/tmp/e-KPNWDz
+⚠ kept /private/tmp/e-KPNWDz: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-KPNWDz/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-KPNWDz /private/tmp/e-KPNWDz/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  staged-empty-state run 1/3: score 1.00  $0.18
+    ✓ N1-stagger-100ms (weight 1): matched \b100ms\b|\b0?\.1s\b
+    ✓ N2-blur-4px (weight 1): matched blur\(\s*4px\s*\)
+    ✓ N3-translate-12px (weight 1): matched translateY\(\s*12px\s*\)|translate\s*:\s*0\s+12px
+    ✓ N4-300ms-ease-out (weight 1): matched (300ms|0?\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\.3s)|duration\s*:\s*300ms
+    ✓ N5-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+  kept temp: /private/tmp/e-yTjZY7
+⚠ kept /private/tmp/e-yTjZY7: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-yTjZY7/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-yTjZY7 /private/tmp/e-yTjZY7/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  staged-empty-state run 3/3: score 1.00  $0.17
+    ✓ N1-stagger-100ms (weight 1): matched \b100ms\b|\b0?\.1s\b
+    ✓ N2-blur-4px (weight 1): matched blur\(\s*4px\s*\)
+    ✓ N3-translate-12px (weight 1): matched translateY\(\s*12px\s*\)|translate\s*:\s*0\s+12px
+    ✓ N4-300ms-ease-out (weight 1): matched (300ms|0?\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\.3s)|duration\s*:\s*300ms
+    ✓ N5-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+✓ staged-empty-state  score 1.00  (3 runs)  $0.53
+
+CASE                SCORE PASS% RUNS COST    NOTES
+staged-empty-state  1.00  100%  3    $0.53
+
+1 case(s) · 38s · $0.53
+Report: /private/tmp/bui-regrade/out-staged-empty-state/report.html

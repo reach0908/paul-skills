@@ -1,0 +1,52 @@
+Note: --scaffold runs each case's scaffold_script as you. Only use it on case files you (or your org) authored.
+Plugin under test: "paul-skills" version "0.4.6" at "/private/tmp/bui-regrade/stage-after-r2b"
+Concurrency: up to 3 runs in flight (all children share your rate limit; progress lines interleave, results keep case order)
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/overlay-open-close/scaffold.sh
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/overlay-open-close/scaffold.sh
+  scaffold: /private/tmp/bui-regrade/stage-after-r2b/evals/overlay/overlay-open-close/scaffold.sh
+  kept temp: /private/tmp/e-xVLb2o
+⚠ kept /private/tmp/e-xVLb2o: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-xVLb2o/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-xVLb2o /private/tmp/e-xVLb2o/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  overlay-open-close run 3/3: score 0.90  $0.26
+    ✓ T1-no-transition-all (weight 1): pattern absent as expected
+    ✓ T2-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ T3-menu-origin (weight 1): matched transform-origin
+    ✗ T4-project-duration-tokens (weight 1): pattern not found in file src/styles.css
+    ✓ T5-no-new-dependency (weight 1): pattern absent as expected
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ IND-enter-exit-read (weight 1): Read called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+  kept temp: /private/tmp/e-F7vLXt
+⚠ kept /private/tmp/e-F7vLXt: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-F7vLXt/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-F7vLXt /private/tmp/e-F7vLXt/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  overlay-open-close run 1/3: score 1.00  $0.27
+    ✓ T1-no-transition-all (weight 1): pattern absent as expected
+    ✓ T2-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ T3-menu-origin (weight 1): matched transform-origin
+    ✓ T4-project-duration-tokens (weight 1): matched var\(--duration-(short|medium)\)
+    ✓ T5-no-new-dependency (weight 1): pattern absent as expected
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ IND-enter-exit-read (weight 1): Read called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+  kept temp: /private/tmp/e-5qdMFi
+⚠ kept /private/tmp/e-5qdMFi: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-5qdMFi/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-5qdMFi /private/tmp/e-5qdMFi/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  overlay-open-close run 2/3: score 1.00  $0.33
+    ✓ T1-no-transition-all (weight 1): pattern absent as expected
+    ✓ T2-reduced-motion-gate (weight 1): matched prefers-reduced-motion
+    ✓ T3-menu-origin (weight 1): matched transform-origin
+    ✓ T4-project-duration-tokens (weight 1): matched var\(--duration-(short|medium)\)
+    ✓ T5-no-new-dependency (weight 1): pattern absent as expected
+    ✓ IND-better-ui-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ IND-enter-exit-read (weight 1): Read called 1x (expected 1..∞)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+✗ overlay-open-close  score 0.97  (3 runs)  $0.86
+
+CASE                SCORE PASS% RUNS COST    NOTES
+overlay-open-close  0.97  67%   3    $0.86   T4-project-duration-tokens: pattern not found in file src/styles.css
+
+1 case(s) · 62s · $0.86
+Report: /private/tmp/bui-regrade/out-overlay-open-close/report.html

@@ -1,6 +1,6 @@
 # Enter and exit animations
 
-Recipes for staged entrances and the exits that follow them. For interactive state feedback see [animations.md](animations.md), and for icon swaps see [icon-transitions.md](icon-transitions.md).
+Recipes for staged entrances of page and section content, the exits that follow them, and overlays toggled from `display: none`. For interactive state feedback see [animations.md](animations.md), and for icon swaps see [icon-transitions.md](icon-transitions.md).
 
 ## Enter animations
 
@@ -74,11 +74,16 @@ The hidden state lives in the `from` keyframe, so an item whose animation never 
 
 A popover, dialog or element toggled from `display: none` has no previous style to transition from. `@starting-style` supplies one, and `transition-behavior: allow-discrete` keeps it rendered through the exit. The open state's duration applies on enter and the closed state's on exit.
 
+An overlay moves from its anchor. The example assumes a popover placed below and to the right of its trigger, so it grows from its top-left corner; derive the origin from the actual placement.
+
+The overlay rule gives no duration or easing, so the project's duration and easing tokens apply wherever it has them, as [Exact values, optional polish](SKILL.md#exact-values-optional-polish) sets out. The example's `150ms`, `300ms` and `ease-out` are fallbacks for a project without them.
+
 ```css
 [popover] {
   opacity: 0;
-  translate: 0 12px;
-  transition-property: opacity, translate, display, overlay;
+  scale: 0.96;
+  transform-origin: top left;
+  transition-property: opacity, scale, display, overlay;
   transition-duration: 150ms;
   transition-timing-function: ease-out;
   transition-behavior: allow-discrete;
@@ -86,14 +91,14 @@ A popover, dialog or element toggled from `display: none` has no previous style 
 
 [popover]:popover-open {
   opacity: 1;
-  translate: 0 0;
+  scale: 1;
   transition-duration: 300ms;
 }
 
 @starting-style {
   [popover]:popover-open {
     opacity: 0;
-    translate: 0 12px;
+    scale: 0.96;
   }
 }
 ```

@@ -1,0 +1,12 @@
+{
+ "note": "stage.py output for each staged plugin (re-run after staging; before and both ablations reproduced byte-for-byte). Digest algorithm in stage.py's docstring; not comparable with localDigest.",
+ "stages": [
+  {"label": "before", "suites": ["before-overlay", "before-staged"], "stageDigest": "sha256:b7bc361371f1eb78e848f111b52f34340b311695b4653e6f10a0576f10ef57df", "betterUiTree": "sha256:f0c8fc8b023310f4ef87120aa68dd613e132879019ac9eb41eea1e5e527e7f0e"},
+  {"label": "ablation skill-only", "suites": ["ablation-skill-only"], "stageDigest": "sha256:a7a9aaf25810349e0894f74b5e382659a0f65676a8b762657b411076aca700c0", "betterUiTree": "sha256:072653fe029e5cd7b80a0f13ce72cf8bef2c02ed43bcc5f6ccec4f86de67d796"},
+  {"label": "ablation reference-only", "suites": ["ablation-reference-only"], "stageDigest": "sha256:e349fa1b281ca4faa309cbe823149a5030c271bd5b1f4225811d58429ed15f3c", "betterUiTree": "sha256:539175c76deb124b6b93c9418c7ce668637dea7f2dd59b48eb1ef24026afef6a"},
+  {"label": "after r1 (61b6d04)", "suites": ["after-r1-overlay", "after-r1-staged"], "stageDigest": "sha256:3ae664106203634462bcf439ac0682d8af955a178478a4a26397b52c88e85b39", "betterUiTree": "sha256:b3564384e0a9f09fe5e08c7b2ce1f60b904eb9cd11f4b847ebdd1264634b3edd"},
+  {"label": "after r2 (9793470)", "suites": ["after-r2-overlay", "after-r2-staged"], "stageDigest": "sha256:207153da7d4a0e7b953f04d6e6762f0e89f4228e08e811ba0bab8039b8a2fe18", "betterUiTree": "sha256:52b9895b9050b9349d01066af08d1a8f4348708f8d6f61c22a5774f272ee9d0e"},
+  {"label": "after r2 rerun (after-r2b)", "suites": ["after-r2b-overlay", "after-r2b-staged"], "stageDigest": "sha256:207153da7d4a0e7b953f04d6e6762f0e89f4228e08e811ba0bab8039b8a2fe18", "betterUiTree": "sha256:52b9895b9050b9349d01066af08d1a8f4348708f8d6f61c22a5774f272ee9d0e"},
+  {"label": "after r3 (shipped, 90b56bd)", "suites": ["after-r3-overlay", "after-r3-staged"], "stageDigest": "sha256:63a9de60469bb623520fc511a9e51436c44336a037c1f11eb59d2a5eeb9b5299", "betterUiTree": "sha256:73207f480c73e177460aa50bae984eba8f5c5b94314a99910eedab8ff9b6fbac"}
+ ]
+}

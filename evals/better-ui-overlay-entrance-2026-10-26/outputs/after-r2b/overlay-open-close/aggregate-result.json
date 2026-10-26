@@ -1,0 +1,455 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.310",
+  "startedAt": "2026-10-26T07:12:57.974Z",
+  "durationSeconds": 62,
+  "costUsd": 0.8583702,
+  "partial": false,
+  "suite": {
+    "root": "/private/tmp/bui-regrade/stage-after-r2b",
+    "ablation": "none",
+    "modelOverride": "claude-opus-5-5",
+    "caseFilter": "overlay-open-close",
+    "threshold": 1,
+    "concurrency": 3,
+    "plugins": [
+      {
+        "name": "paul-skills",
+        "version": "0.4.6",
+        "path": "/private/tmp/bui-regrade/stage-after-r2b"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "overlay-open-close",
+      "dir": "evals/overlay/overlay-open-close",
+      "source": "mixed",
+      "promptMarkdown": "On the account settings page, the account dropdown and the \"Changes saved\" toast just pop in and out, and the delete-account modal doesn't animate properly either. Give these three proper open and close transitions. Edit the files directly.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 900,
+      "maxTurns": 40,
+      "graders": [
+        {
+          "name": "T1-no-transition-all",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "transition(-property)?\\s*:\\s*all\\b",
+            "flags": "",
+            "match": "not_contains"
+          }
+        },
+        {
+          "name": "T2-reduced-motion-gate",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "prefers-reduced-motion",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "T3-menu-origin",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "transform-origin",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "T4-project-duration-tokens",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "var\\(--duration-(short|medium)\\)",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "T5-no-new-dependency",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "package.json"
+            },
+            "pattern": "\"dependencies\"",
+            "flags": "",
+            "match": "not_contains"
+          }
+        },
+        {
+          "name": "IND-better-ui-loaded",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Skill",
+            "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-ui\"",
+            "min": 1
+          }
+        },
+        {
+          "name": "IND-enter-exit-read",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Read",
+            "input_match": "better-ui/enter-exit\\.md",
+            "min": 1
+          }
+        },
+        {
+          "name": "C4-no-eval-read",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Read",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "name": "C4-no-eval-grep",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Grep",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "name": "C4-no-eval-glob",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Glob",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 11,
+            "costUsd": 0.2693168,
+            "judgeCostUsd": 0,
+            "durationSeconds": 54,
+            "startedAt": "2026-10-26T07:12:57.998Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-F7vLXt/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "T1-no-transition-all",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T2-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T3-menu-origin",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched transform-origin",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T4-project-duration-tokens",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched var\\(--duration-(short|medium)\\)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T5-no-new-dependency",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-enter-exit-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 15,
+            "costUsd": 0.328224,
+            "judgeCostUsd": 0,
+            "durationSeconds": 62,
+            "startedAt": "2026-10-26T07:12:57.998Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-5qdMFi/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "T1-no-transition-all",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T2-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T3-menu-origin",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched transform-origin",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T4-project-duration-tokens",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched var\\(--duration-(short|medium)\\)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T5-no-new-dependency",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-enter-exit-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          },
+          {
+            "score": 0.9,
+            "passed": false,
+            "turns": 10,
+            "costUsd": 0.2608294,
+            "judgeCostUsd": 0,
+            "durationSeconds": 42,
+            "startedAt": "2026-10-26T07:12:57.998Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-xVLb2o/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "T1-no-transition-all",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T2-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T3-menu-origin",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched transform-origin",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T4-project-duration-tokens",
+                "passed": false,
+                "weight": 1,
+                "explanation": "pattern not found in file src/styles.css",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "T5-no-new-dependency",
+                "passed": true,
+                "weight": 1,
+                "explanation": "pattern absent as expected",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-enter-exit-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 0.9666666666666667,
+        "passRate": 0.6666666666666666
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 0,
+    "overallScore": 0.9666666666666667,
+    "overallPassRate": 0.6666666666666666
+  }
+}

@@ -1,0 +1,421 @@
+{
+  "schemaVersion": 1,
+  "claudeVersion": "2.1.310",
+  "startedAt": "2026-10-26T07:12:57.906Z",
+  "durationSeconds": 38,
+  "costUsd": 0.5269226,
+  "partial": false,
+  "suite": {
+    "root": "/private/tmp/bui-regrade/stage-after-r2b",
+    "ablation": "none",
+    "modelOverride": "claude-opus-5-5",
+    "caseFilter": "staged-empty-state",
+    "threshold": 1,
+    "concurrency": 3,
+    "plugins": [
+      {
+        "name": "paul-skills",
+        "version": "0.4.6",
+        "path": "/private/tmp/bui-regrade/stage-after-r2b"
+      }
+    ]
+  },
+  "cases": [
+    {
+      "name": "staged-empty-state",
+      "dir": "evals/overlay/staged-empty-state",
+      "source": "mixed",
+      "promptMarkdown": "When someone opens the projects page for the first time and has no projects, the empty state just appears all at once and feels flat. Give it a nicer entrance when it first shows up. Edit the files directly.",
+      "runsPerCase": 3,
+      "timeoutSeconds": 600,
+      "maxTurns": 30,
+      "graders": [
+        {
+          "name": "N1-stagger-100ms",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "\\b100ms\\b|\\b0?\\.1s\\b",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "N2-blur-4px",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "blur\\(\\s*4px\\s*\\)",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "N3-translate-12px",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "translateY\\(\\s*12px\\s*\\)|translate\\s*:\\s*0\\s+12px",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "N4-300ms-ease-out",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "(300ms|0?\\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\\.3s)|duration\\s*:\\s*300ms",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "N5-reduced-motion-gate",
+          "type": "regex",
+          "weight": 1,
+          "config": {
+            "target": {
+              "source": "file",
+              "path": "src/styles.css"
+            },
+            "pattern": "prefers-reduced-motion",
+            "flags": "",
+            "match": "contains"
+          }
+        },
+        {
+          "name": "IND-better-ui-loaded",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Skill",
+            "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-ui\"",
+            "min": 1
+          }
+        },
+        {
+          "name": "C4-no-eval-read",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Read",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "name": "C4-no-eval-grep",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Grep",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        },
+        {
+          "name": "C4-no-eval-glob",
+          "type": "tool_used",
+          "weight": 1,
+          "config": {
+            "tool": "Glob",
+            "input_match": "evals/",
+            "min": 0,
+            "max": 0
+          }
+        }
+      ],
+      "arms": {
+        "with": [
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 8,
+            "costUsd": 0.1761648,
+            "judgeCostUsd": 0,
+            "durationSeconds": 30,
+            "startedAt": "2026-10-26T07:12:57.928Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-KPNWDz/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "N1-stagger-100ms",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched \\b100ms\\b|\\b0?\\.1s\\b",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N2-blur-4px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched blur\\(\\s*4px\\s*\\)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N3-translate-12px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched translateY\\(\\s*12px\\s*\\)|translate\\s*:\\s*0\\s+12px",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N4-300ms-ease-out",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched (300ms|0?\\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\\.3s)|duration\\s*:\\s*300ms",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N5-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 9,
+            "costUsd": 0.1761368,
+            "judgeCostUsd": 0,
+            "durationSeconds": 25,
+            "startedAt": "2026-10-26T07:12:57.928Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-TSYo8n/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "N1-stagger-100ms",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched \\b100ms\\b|\\b0?\\.1s\\b",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N2-blur-4px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched blur\\(\\s*4px\\s*\\)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N3-translate-12px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched translateY\\(\\s*12px\\s*\\)|translate\\s*:\\s*0\\s+12px",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N4-300ms-ease-out",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched (300ms|0?\\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\\.3s)|duration\\s*:\\s*300ms",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N5-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          },
+          {
+            "score": 1,
+            "passed": true,
+            "turns": 8,
+            "costUsd": 0.174621,
+            "judgeCostUsd": 0,
+            "durationSeconds": 38,
+            "startedAt": "2026-10-26T07:12:57.928Z",
+            "error": null,
+            "tracePath": "/private/tmp/e-yTjZY7/out/trace.jsonl",
+            "skippedPaidGraders": false,
+            "graders": [
+              {
+                "name": "N1-stagger-100ms",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched \\b100ms\\b|\\b0?\\.1s\\b",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N2-blur-4px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched blur\\(\\s*4px\\s*\\)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N3-translate-12px",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched translateY\\(\\s*12px\\s*\\)|translate\\s*:\\s*0\\s+12px",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N4-300ms-ease-out",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched (300ms|0?\\.3s)[^;]*ease-out|ease-out[^;]*(300ms|0?\\.3s)|duration\\s*:\\s*300ms",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "N5-reduced-motion-gate",
+                "passed": true,
+                "weight": 1,
+                "explanation": "matched prefers-reduced-motion",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "IND-better-ui-loaded",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Skill called 1x (expected 1..∞)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-read",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Read called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-grep",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Grep called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              },
+              {
+                "name": "C4-no-eval-glob",
+                "passed": true,
+                "weight": 1,
+                "explanation": "Glob called 0x (expected 0..0)",
+                "withOnly": false,
+                "scored": true
+              }
+            ]
+          }
+        ]
+      },
+      "aggregates": {
+        "score": 1,
+        "passRate": 1
+      }
+    }
+  ],
+  "aggregates": {
+    "casesTotal": 1,
+    "casesPassed": 1,
+    "overallScore": 1,
+    "overallPassRate": 1
+  }
+}

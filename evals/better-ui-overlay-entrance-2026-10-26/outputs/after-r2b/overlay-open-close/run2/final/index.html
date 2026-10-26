@@ -1,0 +1,48 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Account settings</title>
+  <link rel="stylesheet" href="src/tokens.css">
+  <link rel="stylesheet" href="src/styles.css">
+</head>
+<body>
+  <header class="topbar">
+    <span class="brand">Ledger</span>
+    <div class="account">
+      <button id="account-button" class="account-button" aria-haspopup="menu" aria-expanded="false" aria-controls="account-menu">Mina Park</button>
+      <ul id="account-menu" class="menu" role="menu" hidden>
+        <li role="none"><a role="menuitem" href="/profile">Profile</a></li>
+        <li role="none"><a role="menuitem" href="/billing">Billing</a></li>
+        <li role="none"><a role="menuitem" href="/logout">Sign out</a></li>
+      </ul>
+    </div>
+  </header>
+
+  <main class="settings">
+    <h1>Settings</h1>
+    <label for="display-name">Display name</label>
+    <input id="display-name" value="Mina Park">
+    <div class="actions">
+      <button id="save-button" class="primary">Save changes</button>
+      <button id="delete-button" class="danger">Delete account</button>
+    </div>
+  </main>
+
+  <div id="toast" class="toast" role="status" hidden>Changes saved</div>
+
+  <div id="delete-modal" class="modal" role="dialog" aria-modal="true" aria-labelledby="delete-title">
+    <div class="modal-card">
+      <h2 id="delete-title">Delete account?</h2>
+      <p>This removes your ledger and every export. It cannot be undone.</p>
+      <div class="actions">
+        <button id="cancel-delete">Cancel</button>
+        <button id="confirm-delete" class="danger">Delete</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="src/app.js"></script>
+</body>
+</html>
