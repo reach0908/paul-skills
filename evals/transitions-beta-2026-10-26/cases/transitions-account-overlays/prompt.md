@@ -1,0 +1,1 @@
+On the account settings page, the account dropdown and the "Changes saved" toast just pop in and out, and the delete-account modal doesn't animate properly either. Give these three proper open and close transitions. Edit the files directly.

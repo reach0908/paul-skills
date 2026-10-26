@@ -1,0 +1,1 @@
+The transitions in src/styles.css already exist, but their timing feels inconsistent and sluggish. Polish the durations and easing of these existing transitions so they feel consistent. Edit the file directly.

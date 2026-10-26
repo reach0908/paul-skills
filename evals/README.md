@@ -86,3 +86,5 @@ The [PM beta trials](product-management-beta/README.md) compare three product-co
 The [PM conversation and prototype walkthrough beta](pm-conversation-beta/RESULTS.md) records the office-hours behavioral fork, fresh AI task/interview protocol, existing-PM updates and bounded tests. It keeps original observations, host limits and user acceptance separate.
 
 The [PM beta integration repairs](pm-beta-integration-2026-10-16/REPORT.md) reconcile the main merge, optional routing policy and provenance baseline, separate historical and current-tree verification, and trace public-copy redactions. Local verifier controls do not promote the candidates or replace behavior evidence.
+
+The [transitions beta trial](transitions-beta-2026-10-26/README.md) runs the in-progress `transitions` skill through `claude plugin eval` on a plugin staged outside the repository, with candidate, no-plugin and promoted-baseline arms on one overlay task and one value-tuning near miss. It records machine graders, an author-agent checklist review and $5.11 of runner-reported cost over two skill revisions; it is not a promotion decision.
