@@ -15,9 +15,16 @@ Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictio
 | Review the current screen, flow or repository interface | Review across the six domains |
 | Review what uncommitted, staged, branch, PR or commit-range changes caused | Return the explicit [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) command with that target and a brief reason; scope resolution starts after you invoke it |
 
-## One report, six owners
+## One report, one owner per domain
 
-A current-screen audit loads all six domain owners before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. A change review from `interface-review` loads only the owners its domain map selects from the changed lines; each skipped domain is reported as not reviewed, with the surface the change lacks. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
+The owners load before the surface or optional first-impression reference is inspected:
+
+| Review | Owners loaded |
+| --- | --- |
+| Current screen, flow or repository | All six, including for a one-attribute change or missing screenshot |
+| Change review from `interface-review` | Those its domain map selects from the changed lines; each skipped domain is reported as not reviewed, with the change it lacks |
+
+The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
 
 ## Common questions
 

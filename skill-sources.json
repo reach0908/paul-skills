@@ -153,6 +153,15 @@
               "decision": "keep-local",
               "reason": "Route merge-readiness judgements to code-review and component reuse to build-design, matching their updated descriptions. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep the change-review route accurate: the explicit interface-review invocation owns the domain map and composes better-interface with only the domain owners the changed lines reach. Router wording only; upstream reconciliation unchanged.",
+              "report": "evals/interface-review-scope-2026-10-28/REPORT.md"
             }
           ]
         }

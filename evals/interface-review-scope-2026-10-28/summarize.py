@@ -5,7 +5,8 @@ usage: summarize.py <label>=<aggregate.json> ... > record.json
 Trace paths in the aggregate are relative to its directory. Skills come from the trace's Skill tool_use blocks, paired with their tool_result so a failed
 load is visible (loaded=false). SKILL.md reads through Read are listed separately. Aggregate
 schema 1 reports no token usage, so tokens come from the trace's result event and stay null
-when the trace or its usage is missing. Missing telemetry is null, never zero.
+when the trace or its usage is missing. Missing telemetry is null, never zero. lastMessage is
+the result event's text (what last_message graders read), else the last assistant text block.
 """
 import json
 import re
@@ -17,13 +18,14 @@ OWNERS = ['better-accessibility', 'better-layout', 'better-writing', 'better-typ
 
 
 def trace_facts(path):
-    facts = {'traceFound': False, 'skillCalls': [], 'skillMdReads': [], 'referenceReads': [], 'bashCommands': 0,
+    facts = {'traceFound': False, 'skillCalls': None, 'skillMdReads': None, 'referenceReads': None, 'bashCommands': None,
              'ownersLoaded': None, 'lastMessage': None, 'tokens': None, 'traceCostUsd': None, 'costBasis': None, 'model': None}
     p = Path(path) if path else None
     if not p or not p.exists():
         return facts
-    facts['traceFound'] = True
+    facts.update(traceFound=True, skillCalls=[], skillMdReads=[], referenceReads=[], bashCommands=0)
     pending = {}
+    result_text = None
     for line in p.read_text().splitlines():
         event = json.loads(line)
         if event.get('type') == 'result':
@@ -34,6 +36,7 @@ def trace_facts(path):
                                    'cacheCreation': usage.get('cache_creation_input_tokens'),
                                    'thinking': (usage.get('output_tokens_details') or {}).get('thinking_tokens')}
             facts['traceCostUsd'] = event.get('total_cost_usd')
+            result_text = event.get('result')
             models = event.get('modelUsage') or {}
             if models:
                 facts['model'] = sorted(models)
@@ -60,6 +63,8 @@ def trace_facts(path):
                     facts['bashCommands'] += 1
             elif block.get('type') == 'text' and block['text'].strip():
                 facts['lastMessage'] = block['text'].strip()
+    if result_text is not None:
+        facts['lastMessage'] = result_text.strip()
     loaded = {c['skill'] for c in facts['skillCalls'] if c['loaded']}
     loaded |= {r.split('/')[0] for r in facts['skillMdReads']}
     facts['ownersLoaded'] = [o for o in OWNERS if o in loaded]

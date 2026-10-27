@@ -29,7 +29,7 @@ Before any domain owner loads, the review classifies each changed line by the su
 | The change touches | Domains loaded |
 | --- | --- |
 | Only server code, data, tests, configuration or performance work, with rendered output unchanged | None. The report states that no UI surface changed |
-| Colors, spacing, type, markup, copy or motion | The domains those lines reach, plus accessibility |
+| Colors, spacing, type, markup, copy, polish or motion | The domains those lines reach, plus accessibility |
 | Anything the map cannot place | All six |
 
 A skipped domain is reported as not reviewed, naming the surface the change lacks, never as clear.

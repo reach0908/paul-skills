@@ -70,7 +70,7 @@ Where exclusions emptied the scope, name the excluded files in the offer. Never 
 
 Classify every changed line with the [Surface map](surface-map.md) and record its domain map: each of the six `better-*` owners marked load or skip, with the changed lines that select it. The map decides which owners the review loads, so build it from the lines and keep it checkable against the diff.
 
-When no changed line has a UI surface, finish with the [no UI surface result](#no-ui-surface-result). That result needs no consumer expansion, no `better-interface` handoff and no domain owner. A line you cannot place is a surface, not an absence: it loads all six.
+When no changed line has a UI surface, read the stated intent per **Hold the change to its stated intent**, then finish with the [no UI surface result](#no-ui-surface-result). That result needs no consumer expansion, no `better-interface` handoff and no domain owner.
 
 ### 4. A diff is not a surface
 
@@ -143,8 +143,8 @@ Rendered verification is opt-in here, in place of `better-interface`'s **Verify 
 | --- | --- |
 | A no-target discovery counts only uncommitted files while `HEAD` is ahead of the merge base | Include the branch range and uncommitted changes; explicit `working` and `staged` still use `HEAD` with zero committed changes |
 | A report on `HEAD~1..HEAD` the user never chose | State the facts and offer the routes in **With no change, ask rather than invent one** |
-| A domain map row decided by file type, such as a `.tsx` marked markup when only its hooks changed, or by the change's description | Classify the changed lines with the [Surface map](surface-map.md) |
-| A skipped domain whose coverage row says `Clear` | `Not reviewed: no <surface> in the change scope`, from the domain map |
+| A domain map row decided by file type, such as a `.tsx` marked markup when only its request batching changed, or by the change's description | Classify the changed lines with the [Surface map](surface-map.md) |
+| A skipped domain whose coverage row says `Clear`, or a reason outside the `Result` cell | The domain map's skip reason, in the `Result` cell |
 | A changed shared component with no consumer under `Surfaces expanded` | Expand to its consumers and name the ones you skipped |
 | A deleted `aria-label`, `outline` or `prefers-reduced-motion` with no finding and no note | Route it to its owner through [Removed signals](removed-signals.md) |
 | A `Regression` whose removed attribute reappears elsewhere in the diff | Check the [equivalent replacements](removed-signals.md#equivalent-replacements) first |
@@ -193,5 +193,5 @@ When the domain map skips all six, report the scope block with `Surfaces expande
 | --- | --- | --- |
 | Accessibility | `api/orders.ts`, `db/migrations/0042_order_status.sql`: order status mapping and migration | Not reviewed: no UI surface in the change scope |
 
-Repeat the row for layout, writing, typography, colors and UI. Then state "No UI surface changed: no interface findings in this change." Name a correctness or performance concern once and point at the general code review. End there, with no `Approve` or `Block`: no domain was reviewed.
+Repeat the row for layout, writing, typography, colors and UI. Then state "No UI surface changed: no interface findings in this change." When the stated intent promises a visible change the diff does not make, say so: that is an incomplete change, not an absent one. Name a correctness or performance concern once and point at the general code review. End there, with no `Approve` or `Block`: no domain was reviewed.
 

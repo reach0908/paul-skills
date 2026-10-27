@@ -7,7 +7,7 @@ Read this procedure after the entry decision in [SKILL.md](SKILL.md): a current-
 Your next tool actions load the required owners in this order: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`.
 
 - **Current-screen audit:** all six are required.
-- **Change-review handoff:** exactly the owners its domain map marks load are required. Leave the owners it skips unloaded; their coverage row is the map's `Not reviewed: no <surface> in the change scope`.
+- **Change-review handoff:** the owners its domain map marks load are required. Leave the owners it skips unloaded unless the map grows during review; their coverage row is the map's `Not reviewed: no <surface> in the change scope`.
 
 Call the Skill tool once for each required owner, using the installed namespace. Pass the same scoped audit task and permitted checks; their standalone output formats are replaced by this procedure. When the host has no Skill tool, read each required owner's installed SKILL.md in full instead. Finish these loads before inspecting the artifact, opening the optional first-impression reference or drafting findings.
 
