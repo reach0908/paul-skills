@@ -123,7 +123,125 @@
    ],
    "factualSlips": [],
    "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R1",
+   "suite": "branch-r2",
+   "case": "color-layout-toolbar",
+   "run": 1,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [
+    "pre-existing row half-right on how the change affects the chip cue"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R2",
+   "suite": "branch-r2",
+   "case": "color-layout-toolbar",
+   "run": 2,
+   "checks": {
+    "F1": "pass HIGH split per consumer",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)",
+    "LOW Accessibility unlabelled filter group (unverifiable)"
+   ],
+   "factualSlips": [],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R3",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 0,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [
+    "text-vs-accent ratio 3.37->6.85 vs computed 3.43->6.98"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R4",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 1,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [
+    "says scrolling starts below 880px; about 1008-1040px given the centered 720px column"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R5",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 2,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "LOW Accessibility role=status mounted with text"
+   ],
+   "factualSlips": [
+    "After column holds new code; fix sits in Why"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "r2-R6",
+   "suite": "branch-r2",
+   "case": "color-layout-toolbar",
+   "run": 0,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW own row",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [],
+   "factualSlips": [
+    "ignores the border cue drop 4.17->2.05; calls chips a sibling in the same row"
+   ],
+   "otherChangeAttributed": []
   }
  ],
- "blindProcedure": "A fresh general-purpose subagent (claude-opus-5-5, same session host) read outputs/blind/R1..R6.md, diff.patch, context.txt and checklist.json only, with run IDs shuffled by random.Random(20261028); outputs/blind/mapping.json was revealed afterwards. Its full text is in outputs/blind/grader-report.md."
+ "blindProcedure": "A fresh general-purpose subagent (claude-opus-5-5, same session host) read outputs/blind/R1..R6.md, diff.patch, context.txt and checklist.json only, with run IDs shuffled by random.Random(20261028); outputs/blind/mapping.json was revealed afterwards. Its full text is in outputs/blind/grader-report.md.",
+ "blindProcedureR2": "A second fresh subagent graded main and branch r2 S-03 reports in outputs/blind-r2/ (seed 202610282), blind to arm; full text in outputs/blind-r2/grader-report.md. The main reports are the same three messages as in the first grade, regraded."
 }

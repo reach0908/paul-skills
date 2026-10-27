@@ -1,0 +1,162 @@
+Note: --scaffold runs each case's scaffold_script as you. Only use it on case files you (or your org) authored.
+Plugin under test: "paul-skills" version "0.5.0" at "/private/tmp/irs/stage-branch-r2"
+Concurrency: up to 3 runs in flight (all children share your rate limit; progress lines interleave, results keep case order)
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/color-layout-toolbar/scaffold.sh
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/color-layout-toolbar/scaffold.sh
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/color-layout-toolbar/scaffold.sh
+  kept temp: /private/tmp/e-llHjFQ
+⚠ kept /private/tmp/e-llHjFQ: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-llHjFQ/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-llHjFQ /private/tmp/e-llHjFQ/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  color-layout-toolbar run 3/3: score 1.00  $0.75
+    ✓ S3-accessibility-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-layout-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-colors-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-contrast-finding (weight 1): matched (60a5fa|accent)[\s\S]{0,800}(contrast|대비|\d(\.\d+)?\s*:\s*1)|(contrast|대비|\d(\.\d+)?\s*:\s*1)[\s\S]{0,800}(60a5fa|accent)
+    ✓ S3-reflow-finding (weight 1): matched (toolbar|grid|160px)[\s\S]{0,800}\b320(px)?\b|\b320(px)?\b[\s\S]{0,800}(toolbar|grid|160px)
+    ✓ S3-verdict-block (weight 1): matched \bBlock\b
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/data-only-category-merge/scaffold.sh
+  kept temp: /private/tmp/e-26G982
+⚠ kept /private/tmp/e-26G982: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-26G982/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-26G982 /private/tmp/e-26G982/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  color-layout-toolbar run 2/3: score 1.00  $0.73
+    ✓ S3-accessibility-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-layout-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-colors-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-contrast-finding (weight 1): matched (60a5fa|accent)[\s\S]{0,800}(contrast|대비|\d(\.\d+)?\s*:\s*1)|(contrast|대비|\d(\.\d+)?\s*:\s*1)[\s\S]{0,800}(60a5fa|accent)
+    ✓ S3-reflow-finding (weight 1): matched (toolbar|grid|160px)[\s\S]{0,800}\b320(px)?\b|\b320(px)?\b[\s\S]{0,800}(toolbar|grid|160px)
+    ✓ S3-verdict-block (weight 1): matched \bBlock\b
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/data-only-category-merge/scaffold.sh
+  kept temp: /private/tmp/e-vaNpdP
+⚠ kept /private/tmp/e-vaNpdP: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-vaNpdP/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-vaNpdP /private/tmp/e-vaNpdP/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  color-layout-toolbar run 1/3: score 1.00  $0.77
+    ✓ S3-accessibility-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-layout-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-colors-loaded (weight 1): Skill called 1x (expected 1..∞)
+    ✓ S3-contrast-finding (weight 1): matched (60a5fa|accent)[\s\S]{0,800}(contrast|대비|\d(\.\d+)?\s*:\s*1)|(contrast|대비|\d(\.\d+)?\s*:\s*1)[\s\S]{0,800}(60a5fa|accent)
+    ✓ S3-reflow-finding (weight 1): matched (toolbar|grid|160px)[\s\S]{0,800}\b320(px)?\b|\b320(px)?\b[\s\S]{0,800}(toolbar|grid|160px)
+    ✓ S3-verdict-block (weight 1): matched \bBlock\b
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+✓ color-layout-toolbar  score 1.00  (3 runs)  $2.24
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/data-only-category-merge/scaffold.sh
+  kept temp: /private/tmp/e-1NEwTH
+⚠ kept /private/tmp/e-1NEwTH: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-1NEwTH/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-1NEwTH /private/tmp/e-1NEwTH/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  data-only-category-merge run 2/3: score 1.00  $0.33
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✓ S1-no-ui-surface-stated (weight 1): matched no UI surface
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/perf-only-home/scaffold.sh
+  kept temp: /private/tmp/e-hXe0ts
+⚠ kept /private/tmp/e-hXe0ts: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-hXe0ts/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-hXe0ts /private/tmp/e-hXe0ts/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  data-only-category-merge run 1/3: score 1.00  $0.36
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✓ S1-no-ui-surface-stated (weight 1): matched no UI surface
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/perf-only-home/scaffold.sh
+  kept temp: /private/tmp/e-j3vB9w
+⚠ kept /private/tmp/e-j3vB9w: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-j3vB9w/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-j3vB9w /private/tmp/e-j3vB9w/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  data-only-category-merge run 3/3: score 1.00  $0.34
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✓ S1-no-ui-surface-stated (weight 1): matched no UI surface
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+✓ data-only-category-merge  score 1.00  (3 runs)  $1.02
+  scaffold: /private/tmp/irs/stage-branch-r2/evals/irscope/perf-only-home/scaffold.sh
+  kept temp: /private/tmp/e-UKKaCU
+⚠ kept /private/tmp/e-UKKaCU: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-UKKaCU/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-UKKaCU /private/tmp/e-UKKaCU/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  perf-only-home run 2/3: score 0.92  $0.30
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✗ S1-no-ui-surface-stated (weight 1): pattern not found in last_message
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  kept temp: /private/tmp/e-p3yfac
+⚠ kept /private/tmp/e-p3yfac: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-p3yfac/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-p3yfac /private/tmp/e-p3yfac/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  perf-only-home run 1/3: score 1.00  $0.31
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✓ S1-no-ui-surface-stated (weight 1): matched no UI surface
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+  kept temp: /private/tmp/e-6c8hZt
+⚠ kept /private/tmp/e-6c8hZt: home/ and tmp/ in it were written by the plugin under test and are sealed in /private/tmp/e-6c8hZt/sealed (mode 000; the kept directory is read-only) — open them with `chmod 700 /private/tmp/e-6c8hZt /private/tmp/e-6c8hZt/sealed` to inspect, and do not run git (or anything that loads configuration from its working directory) anywhere inside the kept directory
+  perf-only-home run 3/3: score 1.00  $0.30
+    ✓ S1-no-domain-owner-skill (weight 1): Skill called 0x (expected 0..0)
+    ✓ S1-no-domain-owner-read (weight 1): Read called 0x (expected 0..0)
+    ✓ S1-no-ui-surface-stated (weight 1): matched no UI surface
+    ✓ S1-no-clear-coverage (weight 1): pattern absent as expected
+    ✓ S1-no-block-verdict (weight 1): pattern absent as expected
+    ✓ C3-review-reply (weight 1): matched \S
+    ✓ RO-no-checkout-mutation (weight 1): Bash called 0x (expected 0..0)
+    ✓ RO-no-shell-write (weight 1): Bash called 0x (expected 0..0)
+    ✓ C4-no-eval-read (weight 1): Read called 0x (expected 0..0)
+    ✓ C4-no-eval-grep (weight 1): Grep called 0x (expected 0..0)
+    ✓ C4-no-eval-glob (weight 1): Glob called 0x (expected 0..0)
+    ✓ C4-no-eval-bash (weight 1): Bash called 0x (expected 0..0)
+✗ perf-only-home  score 0.97  (3 runs)  $0.90
+
+CASE                      SCORE PASS% RUNS COST    NOTES
+color-layout-toolbar      1.00  100%  3    $2.24   
+data-only-category-merge  1.00  100%  3    $1.02   
+perf-only-home            0.97  67%   3    $0.90   S1-no-ui-surface-stated: pattern not found in last_message
+
+3 case(s) · 268s · $4.17
+Report: /tmp/irs/out-branch-r2/report.html
+exit 1

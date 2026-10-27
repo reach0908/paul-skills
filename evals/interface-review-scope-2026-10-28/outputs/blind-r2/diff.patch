@@ -1,0 +1,28 @@
+diff --git a/src/components/Toolbar.css b/src/components/Toolbar.css
+index 2fb4938..dbd6d6e 100644
+--- a/src/components/Toolbar.css
++++ b/src/components/Toolbar.css
+@@ -1,7 +1,7 @@
+ .toolbar {
+-  display: flex;
+-  flex-wrap: wrap;
+-  gap: var(--space-2);
++  display: grid;
++  grid-template-columns: repeat(5, 160px);
++  gap: 12px;
+   padding: var(--space-3) var(--space-4);
+   border-bottom: 1px solid var(--color-border);
+ }
+diff --git a/src/styles/tokens.css b/src/styles/tokens.css
+index 32f57c4..ce5da39 100644
+--- a/src/styles/tokens.css
++++ b/src/styles/tokens.css
+@@ -3,7 +3,7 @@
+   --color-muted: #4b5563;
+   --color-surface: #ffffff;
+   --color-border: #e5e7eb;
+-  --color-accent: #2563eb;
++  --color-accent: #60a5fa;
+ 
+   --space-1: 4px;
+   --space-2: 8px;

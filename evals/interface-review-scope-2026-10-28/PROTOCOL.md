@@ -50,3 +50,7 @@ Claim a cost reduction only where the branch arm's mean cost is lower and its gr
 - `RO-no-checkout-mutation` matched `apply` inside `rebase-apply` in the mid-operation check that `scope-resolution.md` prescribes (`git rev-parse --git-path rebase-apply`, read-only); one main run failed on it. The pattern now requires the verb not to follow a word character or hyphen. Controls: `git checkout`, `git stash`, `git switch`, `git add` still match; `rebase-apply`, `git diff`, `git log` do not.
 - The runner's own verdicts for main stay in `outputs/main/aggregate-result.json`. [regrade.py](regrade.py) re-applies only these two graders to the kept traces (`outputs/<arm>/regrade.json`); the branch arm runs with the amended `case.yaml` directly.
 - The arms also differ in one router line of `skills/engineering/ask-matt/SKILL.md` (the change-review row). The summary records whether any run loads `ask-matt`.
+
+## Amendment, 2026-10-28, after code review
+
+Code review of the branch found ways a UI change could be read as "no UI surface". The fixes changed the skill text (commit `5c0e655`), so the whole branch arm ran again as r2, with the same cases, graders, settings and cap. r1 stays in `outputs/branch/`; r2 is in `outputs/branch-r2/`. A second fresh session graded main against r2 blind (`outputs/blind-r2/`). Nothing was rerun per run.
