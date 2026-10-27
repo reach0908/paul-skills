@@ -1,0 +1,551 @@
+{
+ "suites": [
+  {
+   "label": "branch",
+   "startedAt": "2026-10-27T23:24:32.242Z",
+   "claudeVersion": "2.1.312",
+   "model": "claude-opus-5-5",
+   "ablation": "none",
+   "costUsd": 4.0261734,
+   "durationSeconds": 234,
+   "partial": false,
+   "runs": [
+    {
+     "case": "color-layout-toolbar",
+     "arm": "with",
+     "run": 0,
+     "startedAt": "2026-10-27T23:24:32.278Z",
+     "error": null,
+     "costUsd": 0.7046049999999999,
+     "judgeCostUsd": 0,
+     "durationSeconds": 128,
+     "turns": 30,
+     "graders": {
+      "S3-accessibility-loaded": true,
+      "S3-layout-loaded": true,
+      "S3-colors-loaded": true,
+      "S3-contrast-finding": true,
+      "S3-reflow-finding": true,
+      "S3-verdict-block": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [
+      {
+       "skill": "better-interface",
+       "loaded": true
+      },
+      {
+       "skill": "better-accessibility",
+       "loaded": true
+      },
+      {
+       "skill": "better-layout",
+       "loaded": true
+      },
+      {
+       "skill": "better-colors",
+       "loaded": true
+      }
+     ],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "interface-review/removed-signals.md",
+      "styles/tokens.css",
+      "components/Toolbar.css",
+      "components/Toolbar.tsx",
+      "components/Button.css",
+      "components/CategoryChips.css",
+      "pages/Home.tsx",
+      "better-interface/audit-procedure.md",
+      "better-interface/review-format.md",
+      "components/Button.tsx",
+      "components/CategoryChips.tsx",
+      "pages/Home.css",
+      "cwd/package.json"
+     ],
+     "bashCommands": 4,
+     "ownersLoaded": [
+      "better-accessibility",
+      "better-layout",
+      "better-colors"
+     ],
+     "lastMessage": "# 인터페이스 리뷰: `main...HEAD`\n\n**판정: `Block`.** 이 브랜치는 accent 토큰 변경과 툴바 grid 변경 두 곳에서 HIGH 회귀 3건이 생깁니다. 파일은 읽기만 했고, 렌더링 확인 없이 소스로만 검토했습니다.\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`main`과의 merge-base) |\n| Head ref | `design/accent-toolbar` @ `c3c0e781e0d5608c0a1fc5d7d959e7d2fe50f258` |\n| Commits | 커밋 1개(\"Refresh accent color and align toolbar buttons\"), 커밋 안 된 변경 0개 |\n| Files in scope | 2개: `src/components/Toolbar.css`, `src/styles/tokens.css` |\n| Excluded | 없음 |\n| Surfaces expanded | `src/pages/Home.tsx`(화면), `Toolbar.tsx`, `Button.css`, `CategoryChips.css` (4/5개). 펼치지 않은 소비자 0개 |\n\n프로젝트 스택은 React 18, Vite, 일반 CSS와 `tokens.css`의 CSS 변수입니다. 인터페이스 규칙을 적은 문서(`CLAUDE.md`, `CONTRIBUTING.md`, 디자인 시스템 문서)는 없습니다.\n\n## Coverage\n\n| Domain | 검토한 근거 | 결과 |\n| --- | --- | --- |\n| Accessibility | 스킬 로드됨. 명도 대비 기준(1.4.3, 1.4.11), 색만으로 상태 표시(1.4.1), 320px 리플로우(1.4.10)를 `Button.css`, `CategoryChips.css`, `Toolbar.css`와 `Home.css` 컨테이너 폭에 대조 | 발견 3건 (HIGH 3) |\n| Layout | 스킬 로드됨. `Toolbar.css:1-7`을 `.home { max-width: 720px }` 안에 놓고 확인. 줄바꿈, 고정 폭, 간격 토큰 확인 | 발견 2건 (HIGH 1, LOW 1) |\n| Writing | Not reviewed: 변경 범위에 문구 없음 | — |\n| Typography | Not reviewed: 변경 범위에 문구나 글꼴 변경 없음 | — |\n| Colors | 스킬 로드됨. 대비는 WCAG 상대 휘도 공식으로 직접 계산 | 발견 2건 (HIGH 2) |\n| UI | Not reviewed: 변경 범위에 surface나 motion 변경 없음 | — |\n\n## Findings\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Layout | Regression | `src/components/Toolbar.css:2-4` | `display: grid; grid-template-columns: repeat(5, 160px); gap: 12px;` (이전: `display: flex; flex-wrap: wrap; gap: var(--space-2);`) | flex와 줄바꿈으로 되돌리기: `display: flex; flex-wrap: wrap; gap: var(--space-2);` | 트랙 폭이 5×160 + 4×12 = 848px이고 패딩까지 더하면 880px입니다. `.home`의 `max-width: 720px`(`Home.css:2`)보다 넓어서 **어떤 뷰포트에서도** 4·5번째 버튼이 본문 칼럼 밖으로 튀어나옵니다. 뷰포트가 880px보다 좁으면 가로 스크롤이 생기고 320px에서는 Refresh 버튼이 스크롤 너머로 밀려납니다(WCAG 1.4.10). 열 개수도 필터 4개 + Refresh에 묶여 있고, 160px 고정 트랙이라 긴 라벨이나 번역된 라벨이 잘립니다. |\n| HIGH | Colors | Regression | `src/styles/tokens.css:6` → `src/components/Button.css:10-11` | `--color-accent: #60a5fa;` 위에 흰 글자 (이전 `#2563eb`) | 대비를 맞추는 쪽으로 명도를 되돌리기. 예: `--color-accent: #2563eb;`. 밝은 파랑이 꼭 필요하면 다른 역할용 토큰으로 따로 추가 | 흰 글자 대 accent 대비가 **5.17:1에서 2.54:1로** 떨어져 4.5:1(1.4.3)에 못 미칩니다. 활성 툴바 필터(primary 버튼)의 라벨이 읽기 어려워지고, `Button`의 기본 variant가 `primary`라서 모든 primary 버튼이 같은 문제를 겪습니다. |\n| HIGH | Accessibility | Regression | `src/styles/tokens.css:6` → `src/components/CategoryChips.css:21-22` | 선택된 칩: 흰 바탕 위 `border-color`와 `color`가 `#60a5fa` | 위와 같은 토큰 수정(`#2563eb`이면 5.17:1) | 선택된 칩의 글자와 테두리 대비가 흰 바탕에서 2.54:1입니다. 글자 기준 4.5:1(1.4.3)과 상태 표시 기준 3:1(1.4.11)을 둘 다 통과하지 못합니다. 선택 상태를 화면에 보여주는 건 이 색 하나뿐이라, 선택된 카테고리를 알아보기 어려워집니다. |\n| LOW | Layout | Introduced | `src/components/Toolbar.css:4` | `gap: 12px;` | `gap: var(--space-2);` (원래 값) 또는 `var(--space-3)` | 간격 토큰 대신 숫자를 직접 썼고, 바로 옆 `CategoryChips`(`gap: var(--space-2)`)와도 간격이 달라집니다. 첫 번째 발견을 고치면 함께 해결됩니다. |\n\n토큰 수정 하나로 두 번째와 세 번째 발견이 함께 해결됩니다. 다만 영향받는 요소와 깨지는 기준이 달라서 따로 적었습니다.\n\n## Pre-existing\n\n이번 변경과 무관하게 원래 있던 문제입니다. 이 브랜치의 판정에는 반영하지 않았습니다.\n\n| Severity | Domain | Location | Issue |\n| --- | --- | --- | --- |\n| HIGH | Accessibility | `src/components/CategoryChips.css:20-23` | 선택된 칩은 테두리와 글자 색만 달라지고, 굵기·아이콘·배경 같은 다른 단서가 없습니다(1.4.1). `aria-pressed`는 보조기기에만 전달됩니다. 이번 변경 전부터 있었던 문제이고, 이번 변경으로 대비 문제(위 세 번째 발견)가 더해졌습니다. |\n\n## Verification\n\n- **실행한 검사:** `git diff main...HEAD`로 diff를 확인하고, `src/` 아래 파일을 읽고 `--color-accent`와 `Toolbar`를 검색해 소비자를 찾았습니다. 삭제된 줄도 확인했는데 aria, focus, outline, logical 속성은 삭제되지 않았습니다. focus ring(`#111827`)은 바뀌지 않았습니다.\n- **대비 수치는 직접 계산한 값입니다.** WCAG 상대 휘도 공식으로 계산했습니다(흰색 대 `#2563eb` = 5.17:1, 흰색 대 `#60a5fa` = 2.54:1). 계산 스크립트를 돌리려던 Bash 호출이 권한 모드에서 거부되어 손으로 계산했습니다. 렌더링된 화면에서 잰 값은 아닙니다.\n- **Not verified:** 렌더링 확인(요청 범위 밖), 실제 320px·200% 확대에서 넘치는 정도, 키보드와 스크린리더 동작.\n- 커밋 메시지가 말하는 의도(\"align toolbar buttons\")는 고정 grid로 구현됐습니다. 이 구현이 위 레이아웃 회귀의 원인입니다.\n\n## Verdict\n\n**`Block`.** HIGH 회귀 3건입니다: 툴바 grid가 넘침, primary 버튼 글자 대비, 선택된 칩 대비. Writing, Typography, UI는 변경 범위에 해당 surface가 없어 검토하지 않았습니다. 이 판정은 디자인 관점의 리뷰 결과일 뿐이고, 정확성이나 테스트 검토는 `code-review`의 몫입니다.",
+     "tokens": {
+      "input": 22,
+      "output": 9689,
+      "cacheRead": 393165,
+      "cacheCreation": 54013,
+      "thinking": 2782
+     },
+     "traceCostUsd": 0.7046049999999999,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "color-layout-toolbar",
+     "arm": "with",
+     "run": 1,
+     "startedAt": "2026-10-27T23:24:32.278Z",
+     "error": null,
+     "costUsd": 0.734889,
+     "judgeCostUsd": 0,
+     "durationSeconds": 123,
+     "turns": 29,
+     "graders": {
+      "S3-accessibility-loaded": true,
+      "S3-layout-loaded": true,
+      "S3-colors-loaded": true,
+      "S3-contrast-finding": true,
+      "S3-reflow-finding": true,
+      "S3-verdict-block": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [
+      {
+       "skill": "better-interface",
+       "loaded": true
+      },
+      {
+       "skill": "better-accessibility",
+       "loaded": true
+      },
+      {
+       "skill": "better-layout",
+       "loaded": true
+      },
+      {
+       "skill": "better-colors",
+       "loaded": true
+      }
+     ],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "interface-review/removed-signals.md",
+      "components/Button.css",
+      "components/CategoryChips.css",
+      "components/Toolbar.tsx",
+      "pages/Home.tsx",
+      "styles/tokens.css",
+      "pages/Home.css",
+      "components/Button.tsx",
+      "better-interface/audit-procedure.md",
+      "better-interface/review-format.md",
+      "components/CategoryChips.tsx"
+     ],
+     "bashCommands": 6,
+     "ownersLoaded": [
+      "better-accessibility",
+      "better-layout",
+      "better-colors"
+     ],
+     "lastMessage": "# 인터페이스 변경 리뷰: `main...HEAD`\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (merge-base이며 `main`과 같음) |\n| Head ref | `design/accent-toolbar` @ `c3c0e781e0d5608c0a1fc5d7d959e7d2fe50f258` |\n| Commits | 커밋 1개 (`c3c0e78`), 커밋되지 않은 변경 0개 (작업 트리 clean, untracked 없음) |\n| Files in scope | 2개: `src/components/Toolbar.css`, `src/styles/tokens.css` |\n| Excluded | 없음 |\n| Surfaces expanded | `Home` 페이지, `Toolbar`, `Button`, `CategoryChips` (5개 슬롯 중 4개 사용, 확장하지 않은 consumer 없음) |\n\n이번 변경의 의도(커밋 메시지): \"Lighter accent to match the new brand sheet; toolbar buttons now sit on an even grid.\"\n프로젝트 스택은 React와 일반 CSS이고, `tokens.css`의 CSS 커스텀 프로퍼티를 토큰으로 씁니다. 저장소에 인터페이스 컨벤션 문서는 없습니다.\n\n## Coverage\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `better-accessibility`를 불러옴. 확인한 곳: `Button.tsx`/`.css`, `CategoryChips.tsx`/`.css`, `Toolbar.tsx`/`.css`, `Home.tsx`/`.css`. 확인한 기준: 1.4.3, 1.4.11, 1.4.10, focus 스타일 | 3건 (색상·레이아웃과 같은 원인으로 합침) |\n| Layout | `better-layout`을 불러옴. 확인한 곳: `Toolbar.css:1-7`, `Home.css:1-7`, `Toolbar.tsx`. 확인한 항목: 트랙 크기, wrap, 토큰 재사용 | 2건 |\n| Writing | Not reviewed: no copy in the change scope | — |\n| Typography | Not reviewed: no type in the change scope | — |\n| Colors | `better-colors`를 불러옴. 확인한 곳: `tokens.css:6`과 이를 쓰는 `Button.css:10-11`, `CategoryChips.css:21-22`. 대비를 계산함 | 2건 |\n| UI | Not reviewed: no surface or motion in the change scope | — |\n\n## Findings\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Colors | Regression | `src/styles/tokens.css:6` → `src/components/Button.css:10-11` | `--color-accent: #2563eb;` 위에 흰 텍스트: **5.17:1** | `#60a5fa` 위에 흰 텍스트: **2.54:1**. 텍스트 대비가 필요한 역할(`.button-primary` 배경, 선택된 칩 텍스트)에는 `#2563eb` 같은 어두운 단계를 유지하세요. 밝은 브랜드 색은 텍스트가 올라가지 않는 곳에만 별도 토큰으로 쓰면 됩니다. 색 결정은 작성자 몫입니다 | 1.4.3 위반. 툴바에서 선택된 필터 버튼(14px/500)의 흰 레이블이 4.5:1에 못 미칩니다. 공유 토큰이라 이 accent를 쓰는 모든 primary 버튼에 영향이 갑니다 |\n| HIGH | Colors | Regression | `src/components/CategoryChips.css:21-22` (같은 토큰) | 선택된 칩의 텍스트와 테두리 `#2563eb`, 배경 `#ffffff`: 5.17:1 | 위와 같은 토큰 수정으로 해결됩니다 | 텍스트는 2.54:1로 4.5:1(1.4.3)에 못 미칩니다. 선택 상태를 보여주는 테두리도 2.54:1로 3:1(1.4.11)에 못 미칩니다. 선택된 카테고리를 알아보기 어려워집니다 |\n| HIGH | Layout | Regression | `src/components/Toolbar.css:2-4` | `display: flex; flex-wrap: wrap; gap: var(--space-2);` | `display: grid; grid-template-columns: repeat(auto-fill, minmax(min(160px, 100%), 1fr)); gap: var(--space-3);` | 고정 트랙 `repeat(5, 160px)`에 gap 4×12px와 padding 32px를 더하면 880px로, `.home`의 `max-width: 720px`를 넘습니다. wrap도 없어서 모든 폭에서 가로로 넘치고, 320px에서는 1.4.10 reflow 기준을 위반합니다. 열 개수도 지금의 필터 4개와 Refresh 버튼에 고정되어 있습니다 |\n| LOW | Layout | Introduced | `src/components/Toolbar.css:4` | `gap: 12px;` | `gap: var(--space-3);` (같은 12px) | 이미 있는 spacing 토큰 대신 리터럴 값을 썼습니다. 위 수정을 적용하면 함께 해결됩니다 |\n\nRemoved signals:\n- `flex-wrap: wrap` 삭제: 이를 대체하는 코드가 없어 3번 finding으로 보고했습니다.\n- accent 토큰을 더 밝은 값으로 교체: 1, 2번 finding으로 보고했습니다.\n- `aria-*`나 focus 관련 코드는 삭제되지 않았습니다. focus outline은 `--color-text`를 쓰므로 이번 변경의 영향을 받지 않습니다.\n\n## Pre-existing (이번 변경의 책임 아님)\n\n| Severity | Domain | Location | Issue |\n| --- | --- | --- | --- |\n| HIGH | Accessibility | `src/components/CategoryChips.css:20-23` | 선택된 칩은 테두리와 텍스트 색으로만 구분됩니다(1.4.1). `aria-pressed`가 있어 스크린 리더에는 상태가 전달되지만, 화면에서는 색 말고 다른 단서가 없습니다. 이번 변경 이전부터 있던 문제이고, 이번 변경으로 그 색의 대비가 더 낮아졌습니다 |\n\n## Verification\n\n- **소스 기반 계산:** WCAG relative luminance 공식으로 대비를 직접 계산했습니다. 결과는 `#fff`/`#2563eb` 5.17:1, `#fff`/`#60a5fa` 2.54:1입니다. 스크립트로 다시 계산하려던 명령은 이 세션의 Bash 권한이 막혀 실행하지 못했습니다.\n- **소스 기반 계산:** 툴바 폭 880px와 컨테이너 폭 720px는 CSS 값으로 계산했습니다. 고정 px 트랙이라 줄어들 수 없습니다.\n- **Not verified:** 렌더링된 화면에서의 대비, 320px 폭과 200% 줌에서의 실제 넘침, 키보드와 스크린 리더 동작. 요청대로 브라우저 검증은 하지 않았습니다.\n- **읽기 전용:** `git log`, `diff`, `grep`, 파일 읽기만 사용했고 작업 트리는 바꾸지 않았습니다.\n\n## Verdict\n\n**Block**: HIGH Regression 3건(accent 대비 2건, 툴바 overflow 1건)이 남아 있습니다. Writing, Typography, UI는 변경 범위에 해당 surface가 없어 검토하지 않았습니다. 이 결론은 소스 기반 디자인 리뷰이고, 렌더링 검증은 하지 않았습니다.",
+     "tokens": {
+      "input": 26,
+      "output": 9849,
+      "cacheRead": 493465,
+      "cacheCreation": 54889,
+      "thinking": 2766
+     },
+     "traceCostUsd": 0.734889,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "color-layout-toolbar",
+     "arm": "with",
+     "run": 2,
+     "startedAt": "2026-10-27T23:24:32.278Z",
+     "error": null,
+     "costUsd": 0.7419064000000001,
+     "judgeCostUsd": 0,
+     "durationSeconds": 127,
+     "turns": 30,
+     "graders": {
+      "S3-accessibility-loaded": true,
+      "S3-layout-loaded": true,
+      "S3-colors-loaded": true,
+      "S3-contrast-finding": true,
+      "S3-reflow-finding": true,
+      "S3-verdict-block": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [
+      {
+       "skill": "better-interface",
+       "loaded": true
+      },
+      {
+       "skill": "better-accessibility",
+       "loaded": true
+      },
+      {
+       "skill": "better-layout",
+       "loaded": true
+      },
+      {
+       "skill": "better-colors",
+       "loaded": true
+      }
+     ],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "interface-review/removed-signals.md",
+      "styles/tokens.css",
+      "components/Toolbar.tsx",
+      "components/Toolbar.css",
+      "components/Button.css",
+      "components/CategoryChips.css",
+      "pages/Home.tsx",
+      "components/Button.tsx",
+      "components/CategoryChips.tsx",
+      "pages/Home.css",
+      "better-interface/audit-procedure.md",
+      "better-interface/review-format.md"
+     ],
+     "bashCommands": 6,
+     "ownersLoaded": [
+      "better-accessibility",
+      "better-layout",
+      "better-colors"
+     ],
+     "lastMessage": "## 인터페이스 리뷰: `main...HEAD`\n\n이 브랜치는 머지 전에 고쳐야 할 회귀가 두 가지 있어서 **Block**입니다. 하나는 강조색이 밝아지면서 선택된 버튼과 칩의 글자 대비가 5.17:1에서 2.54:1로 떨어진 것이고, 다른 하나는 툴바가 고정 폭 그리드로 바뀌어 어떤 화면 폭에서도 페이지 밖으로 넘치는 것입니다. 검토는 소스만 읽고 했고, 파일 수정이나 브랜치 전환은 하지 않았습니다.\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`main`과 `HEAD`의 merge-base, `main`의 최신 커밋과 같음) |\n| Head ref | `design/accent-toolbar` @ `c3c0e781e0d5608c0a1fc5d7d959e7d2fe50f258` |\n| Commits | 커밋 1개, 커밋 안 된 변경 0개(작업 트리 깨끗함) |\n| Files in scope | 제외 후 2개: `src/components/Toolbar.css`, `src/styles/tokens.css` |\n| Excluded | 없음 |\n| Surfaces expanded | `Home` 라우트(`Home.tsx`, `Home.css`), `Toolbar.tsx`, `Button.css`(`.button-primary`), `CategoryChips.css`(`.chip[aria-pressed]`): 4개, 확장 못 한 소비처 0개 |\n\n**스택과 관례:** React(TSX)와 일반 CSS, `:root` 커스텀 프로퍼티 토큰을 씁니다. 저장소에 인터페이스 관례 문서(CONTRIBUTING, AGENTS.md, CLAUDE.md, 디자인 시스템 문서)는 없습니다.\n**커밋이 밝힌 의도:** \"Lighter accent to match the new brand sheet; toolbar buttons now sit on an even grid.\"\n\n### Coverage\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `better-accessibility` 로드함. 버튼과 칩 글자의 대비 기준(1.4.3, 1.4.11), 툴바 리플로우(1.4.10), 포커스 링(`Button.css:20-23`, `CategoryChips.css:25-28`, 변경 없음)을 확인 | 회귀 2건 |\n| Layout | `better-layout` 로드함. `Toolbar.css:1-7`을 `.home`의 `max-width: 720px`와 패딩 안에서 계산 | 회귀 1건 |\n| Writing | 도메인 맵에 따라 로드 안 함 | Not reviewed: no copy in the change scope |\n| Typography | 도메인 맵에 따라 로드 안 함 | Not reviewed: no type in the change scope |\n| Colors | `better-colors` 로드함. 강조색 토큰의 변경 전후 대비를 소비처 2곳에서 계산 | 회귀 1건 |\n| UI | 도메인 맵에 따라 로드 안 함 | Not reviewed: no surface or motion in the change scope |\n\n### Findings\n\n| Severity | Domain | Status | Location | Before | After | Why |\n| --- | --- | --- | --- | --- | --- | --- |\n| HIGH | Colors | Regression | `src/styles/tokens.css:6` → `src/components/Button.css:10-11`, `src/components/CategoryChips.css:21-22` | `--color-accent: #2563eb;` 흰 바탕과의 대비 5.17:1 | `--color-accent: #60a5fa;` 흰 바탕과의 대비 2.54:1. 브랜드 색은 장식용으로 쓰고, 글자와 테두리용 역할 토큰(4.5:1 이상)을 따로 둡니다. 또는 브랜드 시트에서 더 진한 단계를 고릅니다(예: 기존 `#2563eb`). 바꾼 뒤 다시 측정합니다 | 툴바의 활성 필터(`Latest` 기본 선택, primary 변형)는 14px/500 흰 글씨가 2.54:1이라 1.4.3의 4.5:1에 못 미칩니다. 선택된 칩의 글자도 같은 2.54:1이고, 테두리는 1.4.11의 3:1에도 못 미칩니다. 공유 토큰이라 이 색을 쓰는 모든 곳이 함께 실패합니다 |\n| HIGH | Layout | Regression | `src/components/Toolbar.css:2-4` | `display: flex; flex-wrap: wrap; gap: var(--space-2);` | `display: grid; grid-template-columns: repeat(5, 160px); gap: 12px;`. 원래의 `flex-wrap`으로 되돌리거나, 고른 격자를 원하면 `grid-template-columns: repeat(auto-fill, minmax(min(100%, 8rem), 1fr)); gap: var(--space-3);`을 씁니다 | 트랙 합계는 5×160px에 간격 4×12px을 더한 848px입니다. 쓸 수 있는 폭은 데스크톱 최대 688px(720px − 패딩 32px), 320px 화면에서는 288px뿐이라 모든 화면 폭에서 버튼이 넘칩니다. 이는 1.4.10(리플로우) 위반이고 접근성에도 영향이 있습니다. 열 수 `5`는 `FILTERS` 4개와 Refresh에 묶여 있고, 160px 고정 폭은 번역으로 라벨이 길어질 여지를 막습니다. `12px` 리터럴은 같은 값의 토큰 `--space-3`을 우회합니다 |\n\n### Pre-existing (이번 변경의 책임 아님)\n\n| Severity | Domain | Location | Issue |\n| --- | --- | --- | --- |\n| HIGH | Accessibility | `src/components/CategoryChips.css:20-23` | 선택된 칩은 테두리와 글자 색만 바뀌고 아이콘, 굵기 같은 다른 시각 단서가 없습니다. 선택 상태를 색으로만 구분하는 1.4.1 위반이며, 이번 변경 이전부터 있던 구조입니다. 판정에는 반영하지 않았습니다 |\n\n### Verification\n\n- **통과(소스 분석):** 변경 전후 대비를 WCAG 상대 휘도 공식으로 손으로 계산했습니다. `#ffffff`/`#2563eb`는 5.17:1, `#ffffff`/`#60a5fa`는 2.54:1입니다. 대비 계산 스크립트는 셸 권한이 거부되어 실행하지 못했으니, 수치를 독립적으로 재확인하려면 대비 계산기로 한 번 확인해 주세요.\n- **통과(소스 분석):** 툴바 폭(848px)과 부모 컨테이너 폭(688px, 320px 화면에서는 288px)을 계산했습니다.\n- **통과(소스 분석):** 제거된 줄에서 `focus`, `outline`, `aria-*`, 논리 속성이 빠진 곳은 없습니다. 지워진 것은 `flex-wrap`과 토큰 `var(--space-2)`뿐입니다.\n- **Not verified:** 실제 렌더링된 넘침, 가로 스크롤, 클리핑, 200% 확대, RTL 미러링, 렌더링된 대비 측정. 요청대로 브라우저 검증은 하지 않았습니다.\n\n**Verdict: Block.** `Regression` HIGH 2건이 남아 있습니다. Writing, Typography, UI는 변경 범위에 해당 표면이 없어 검토하지 않았습니다. 이 판정은 디자인 관점의 리뷰이고, 정확성, 테스트, 보안 검토는 `/paul-skills:code-review`의 Standards/Spec 리뷰와 따로 봐야 합니다.",
+     "tokens": {
+      "input": 26,
+      "output": 9729,
+      "cacheRead": 518312,
+      "cacheCreation": 55445,
+      "thinking": 3141
+     },
+     "traceCostUsd": 0.7419064000000001,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "data-only-category-merge",
+     "arm": "with",
+     "run": 0,
+     "startedAt": "2026-10-27T23:26:35.454Z",
+     "error": null,
+     "costUsd": 0.33266860000000004,
+     "judgeCostUsd": 0,
+     "durationSeconds": 58,
+     "turns": 11,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "components/CategoryChips.tsx",
+      "api/feed.ts",
+      "server/categories.ts"
+     ],
+     "bashCommands": 3,
+     "ownersLoaded": [],
+     "lastMessage": "범위 확인 결과 이 브랜치는 서버 측 데이터 변경만 담고 있습니다. UI 표면이 없으니 아래 \"No UI surface\" 형식으로 마무리합니다.\n\n## 범위\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (merge-base(`main`, `HEAD`), 현재 `main` 끝과 같음) |\n| Head ref | `feature/merge-ai-categories` @ `33d19b3d652090c7ab2e0aad4b912d6db5ca42ad` |\n| Commits | 커밋 1개 (`33d19b3 Merge ai-tools and llm categories into ai`), 커밋 안 된 변경 0개 (작업 트리 clean) |\n| Files in scope | 3개 (제외 후): `server/categories.ts`, `server/categories.test.ts`, `server/migrations/0007_merge_ai_categories.sql` |\n| Excluded | 없음 (lockfile, 스냅샷, 생성물 모두 diff에 없음) |\n| Surfaces expanded | 없음: UI 표면 없음 |\n\n## 도메인 맵\n\n| 도메인 | 로드 | 근거 (변경된 줄) |\n| --- | --- | --- |\n| 6개 도메인 모두 | 안 함 | `server/categories.ts:2,7-8`: 정규 slug 배열과 별칭 맵. `0007_merge_ai_categories.sql:1-3`: 데이터 마이그레이션. `categories.test.ts:10-12`: 테스트 |\n\n`src/`에는 `CANONICAL`, `normalizeCategory`, `ai-tools`, `llm`을 참조하는 곳이 없습니다. 칩에 보이는 카테고리 목록은 `/api/categories` 응답에서 옵니다(`src/api/feed.ts:19-21`). 이 응답은 변경되지 않은 `CategoryChips`(`src/components/CategoryChips.tsx:13-21`)를 거쳐 그대로 렌더링됩니다. 바뀐 것은 데이터 내용뿐이라 Surface map 기준으로 UI 표면에 해당하지 않습니다. `-` 쪽 줄(삭제된 slug 두 개, 이전 테스트 케이스)에도 접근성 속성, 포커스 스타일, 모션 쿼리 같은 제거 신호는 없습니다.\n\n## 커버리지\n\n| 도메인 | 확인한 근거 | 결과 |\n| --- | --- | --- |\n| Accessibility | `server/categories.ts`, `0007_merge_ai_categories.sql`, `categories.test.ts`: 카테고리 정규화 맵, 데이터 마이그레이션, 단위 테스트 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n| Layout | 위와 같음 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n| Writing | 위와 같음 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n| Typography | 위와 같음 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n| Colors | 위와 같음 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n| UI | 위와 같음 | 검토 안 함: 변경 범위에 UI 표면 없음 |\n\n**UI 표면이 바뀌지 않았으므로 이 변경에 대한 인터페이스 지적 사항은 없습니다.**\n\n일반 코드 리뷰에서 봐야 할 정확성 문제가 하나 있습니다. 이 브랜치가 의도대로 동작하려면 `/api/categories`가 `hidden = TRUE`인 카테고리를 걸러야 합니다. 그 엔드포인트 코드가 이 저장소에 없어서 확인하지 못했습니다. 걸러지지 않으면 빈 `ai-tools`와 `llm` 칩이 계속 보입니다. 이 부분은 `/paul-skills:code-review`에서 확인하세요.\n\n## 검증\n\n- 소스만 읽고 검토했고, 요청대로 브라우저 렌더링은 하지 않았습니다.\n- 작업 트리와 체크아웃은 건드리지 않았습니다.\n- 소비처 검색 중 Bash가 권한 정책으로 거부됐습니다. 그래서 진행 중인 merge나 rebase가 없다는 점은 `.git` 파일 목록으로 확인했고, 소비처는 작업 트리를 Grep으로 찾았습니다. 작업 트리가 clean이라 HEAD와 내용이 같습니다.\n- UI 도메인을 하나도 검토하지 않았으므로 `Approve`나 `Block` 판정은 내리지 않습니다.",
+     "tokens": {
+      "input": 12,
+      "output": 3483,
+      "cacheRead": 159523,
+      "cacheCreation": 28882,
+      "thinking": 678
+     },
+     "traceCostUsd": 0.33266860000000004,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "data-only-category-merge",
+     "arm": "with",
+     "run": 1,
+     "startedAt": "2026-10-27T23:26:39.539Z",
+     "error": null,
+     "costUsd": 0.3100868,
+     "judgeCostUsd": 0,
+     "durationSeconds": 50,
+     "turns": 8,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md"
+     ],
+     "bashCommands": 5,
+     "ownersLoaded": [],
+     "lastMessage": "## 인터페이스 리뷰: `main...HEAD`\n\n이번 브랜치는 UI를 바꾸지 않아서 인터페이스 관점의 지적 사항이 없습니다. 바뀐 건 서버의 카테고리 별칭, 마이그레이션, 테스트뿐입니다. 그래서 `better-interface`로 넘기지 않았고 Approve/Block 판정도 내리지 않습니다. 실제로 검토한 디자인 영역이 하나도 없기 때문입니다.\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` (세 점, merge base 기준) |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`merge-base main HEAD`, 현재 `main`과 같은 커밋) |\n| Head ref | `feature/merge-ai-categories` @ `33d19b3d652090c7ab2e0aad4b912d6db5ca42ad` |\n| Commits | 커밋 1개 (`33d19b3` Merge ai-tools and llm categories into ai), 커밋하지 않은 변경 0개 |\n| Files in scope | 3개: `server/categories.ts`, `server/categories.test.ts`, `server/migrations/0007_merge_ai_categories.sql` |\n| Excluded | 없음 (lockfile, 스냅샷, 생성물 없음) |\n| Surfaces expanded | 없음: UI 표면 없음 |\n\n### 커버리지\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `server/categories.ts`, `server/migrations/0007_merge_ai_categories.sql`, `server/categories.test.ts`: 카테고리 별칭·정규화 목록, 데이터 마이그레이션, 단위 테스트 | Not reviewed: no UI surface in the change scope |\n| Layout | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Writing | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Typography | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Colors | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| UI | 위와 같음 | Not reviewed: no UI surface in the change scope |\n\n**바뀐 UI가 없어서 이번 변경에 대한 인터페이스 지적 사항은 없습니다.**\n\nUI 표면이 없다고 본 이유:\n\n- 바뀐 줄은 서버 쪽 `CANONICAL`/`ALIASES` 슬러그, SQL `UPDATE` 두 줄, 테스트 기대값이 전부입니다.\n- 이 슬러그는 `/api/categories` 응답을 통해 화면에 나옵니다(`src/api/feed.ts:20`). 렌더링은 이번에 건드리지 않은 `CategoryChips` 컴포넌트가 맡습니다.\n- 그래서 칩 목록에서 `ai-tools`와 `llm`이 사라지는 건 바뀌지 않은 컴포넌트에 들어가는 데이터가 달라지는 것일 뿐입니다. 렌더링되는 요소, 렌더링 조건, 문자열, 스타일은 그대로입니다.\n- `Home.tsx`에서 선택된 카테고리는 메모리에만 있는 상태이고 항상 `'all'`에서 시작합니다. 그래서 숨겨진 슬러그가 선택된 채로 화면이 열릴 일도 없습니다.\n\n### 일반 코드 리뷰에서 볼 것\n\n정확성 관련 사항이 하나 있어서, 디자인 판정과 별도로 `/paul-skills:code-review`에서 확인하길 권합니다.\n\n- 마이그레이션이 `categories` 테이블에서 `ai-tools`와 `llm`을 `hidden = TRUE`로 숨깁니다.\n- 그런데 `/api/categories`가 `hidden` 행을 실제로 걸러내는지는 이번 diff로는 확인되지 않습니다.\n- 걸러내지 않는다면 칩은 그대로 보이는데 눌러도 글이 없는 카테고리가 됩니다.\n\n### 확인 범위\n\n- 브라우저 확인은 하지 않았습니다(요청 범위 밖). 소스만 읽었습니다.\n- Git 명령은 읽기 전용만 썼습니다: `diff`, `merge-base`, `log`, `grep`, `show`. 체크아웃, stash, 작업 트리 변경은 없었습니다.\n- 중간 상태(진행 중인 rebase/merge) 점검은 권한 문제로 실행하지 못했습니다. 다만 시작 시점의 git status는 clean이었습니다.",
+     "tokens": {
+      "input": 12,
+      "output": 2959,
+      "cacheRead": 156494,
+      "cacheCreation": 27445,
+      "thinking": 438
+     },
+     "traceCostUsd": 0.3100868,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "data-only-category-merge",
+     "arm": "with",
+     "run": 2,
+     "startedAt": "2026-10-27T23:26:40.098Z",
+     "error": null,
+     "costUsd": 0.35556920000000003,
+     "judgeCostUsd": 0,
+     "durationSeconds": 59,
+     "turns": 13,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "server/categories.ts",
+      "migrations/0007_merge_ai_categories.sql",
+      "server/categories.test.ts",
+      "components/CategoryChips.tsx",
+      "api/feed.ts"
+     ],
+     "bashCommands": 3,
+     "ownersLoaded": [],
+     "lastMessage": "# 인터페이스 리뷰: `main...HEAD`\n\n| Field | Value |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`main`과 `HEAD`의 merge base, 즉 `main`의 tip) |\n| Head ref | `feature/merge-ai-categories` @ `33d19b3d652090c7ab2e0aad4b912d6db5ca42ad` |\n| Commits | 커밋된 변경 1개(`33d19b3 Merge ai-tools and llm categories into ai`), 커밋되지 않은 변경 0개. 이 범위 지정에는 작업 트리가 포함되지 않으며, 작업 트리는 깨끗한 상태입니다 |\n| Files in scope | 제외 후 3개: `server/categories.ts`, `server/categories.test.ts`, `server/migrations/0007_merge_ai_categories.sql` |\n| Excluded | 없음 (이 범위에는 lockfile, 스냅샷, 생성 파일, 바이너리가 없음) |\n| Surfaces expanded | 없음: UI surface 없음 |\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `server/categories.ts:2,7-8` 카테고리 slug 상수와 alias 매핑, `server/categories.test.ts:10-12` 단위 테스트, `server/migrations/0007_merge_ai_categories.sql` 데이터 마이그레이션 | Not reviewed: no UI surface in the change scope |\n| Layout | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Writing | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Typography | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| Colors | 위와 같음 | Not reviewed: no UI surface in the change scope |\n| UI | 위와 같음 | Not reviewed: no UI surface in the change scope |\n\nUI surface 변경이 없으므로 이 변경에서 나온 인터페이스 지적 사항은 없습니다.\n\nUI surface가 없다고 본 근거는 다음과 같습니다.\n- `CANONICAL`과 `normalizeCategory`는 `server/` 안에서만 쓰입니다. `src/` 아래에는 둘 중 어느 것도 import하는 파일이 없습니다.\n- 카테고리 칩 `src/components/CategoryChips.tsx:21`은 `/api/categories` 응답의 `category.label`을 그대로 렌더링합니다. 이 컴포넌트는 이번 변경에서 수정되지 않았습니다.\n- 칩 목록이 줄어드는 것은 수정되지 않은 컴포넌트를 거쳐 들어가는 데이터 변화입니다. 화면에 그대로 보이는 문구나 마크업이 바뀐 것은 아닙니다.\n- 변경 전 줄(`-`)은 `CANONICAL` 배열 1줄과 테스트 3줄이 전부입니다. 접근성 속성, 스타일, 문구는 하나도 제거되지 않았습니다.\n\n**일반 코드 리뷰로 넘길 사항이 하나 있습니다.** 마이그레이션은 `categories.hidden = TRUE`만 설정합니다. 그런데 이 저장소에는 `/api/categories` 핸들러가 없어서, API가 `hidden` 카테고리를 걸러내는지 확인할 수 없었습니다. 걸러내지 않는다면 `ai-tools`와 `llm` 칩이 글 없는 빈 피드로 계속 보일 수 있습니다. 이건 정확성 문제라서 이 디자인 리뷰에서는 더 다루지 않았고, 일반 코드 리뷰(`/paul-skills:code-review` 또는 `/code-review`)에서 확인하면 됩니다.\n\n**검증 범위:**\n- 소스만 읽고 검토했습니다. 요청하신 대로 브라우저 렌더링은 하지 않았습니다.\n- 명령은 `git merge-base`, `git log`, `git diff --stat`, `git diff`를 실행했고, 파일과 grep 검색으로 읽었습니다. 작업 트리나 checkout은 건드리지 않았습니다.\n- UI 도메인이 하나도 해당하지 않아 `better-interface`로 넘기지 않았고, `Approve`/`Block` 판정도 내리지 않았습니다.",
+     "tokens": {
+      "input": 14,
+      "output": 3718,
+      "cacheRead": 193686,
+      "cacheCreation": 30302,
+      "thinking": 823
+     },
+     "traceCostUsd": 0.35556920000000003,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "perf-only-home",
+     "arm": "with",
+     "run": 0,
+     "startedAt": "2026-10-27T23:27:29.209Z",
+     "error": null,
+     "costUsd": 0.30911940000000004,
+     "judgeCostUsd": 0,
+     "durationSeconds": 49,
+     "turns": 9,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md",
+      "interface-review/removed-signals.md",
+      "pages/Home.tsx"
+     ],
+     "bashCommands": 3,
+     "ownersLoaded": [],
+     "lastMessage": "이번 브랜치 변경에는 화면에 영향을 주는 부분이 없습니다. 그래서 인터페이스 측면에서 지적할 문제가 없고, 디자인 도메인 리뷰도 진행하지 않았습니다.\n\n## 범위\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`merge-base(main, HEAD)`) |\n| Head ref | `perf/home-load` @ `1ab23f7787c8843a3918b7cdec1754a825b515d9` |\n| Commits | 커밋 1개 (`1ab23f7 Speed up home feed load`), 커밋되지 않은 변경 0개 |\n| Files in scope | 제외 후 2개: `src/api/feed.ts`, `src/pages/Home.tsx` |\n| Excluded | 없음 (잠금 파일, 스냅샷, 생성물 없음) |\n| Surfaces expanded | 없음 (UI 변경이 없음) |\n\n## 도메인별 결과\n\n| Domain | 검토한 변경 | Result |\n| --- | --- | --- |\n| Accessibility | `src/api/feed.ts`: 본문 요청 캐시, `prefetchArticleBodies` 추가. `src/pages/Home.tsx`: 두 요청 병렬화(`Promise.all`), 목록 정렬 메모이제이션(`useMemo`), 미리 불러오기 effect, 내부 상수 `PREFETCH_COUNT` 추가 | Not reviewed: no UI surface in the change scope |\n| Layout | 위와 동일 | Not reviewed: no UI surface in the change scope |\n| Writing | 위와 동일 | Not reviewed: no UI surface in the change scope |\n| Typography | 위와 동일 | Not reviewed: no UI surface in the change scope |\n| Colors | 위와 동일 | Not reviewed: no UI surface in the change scope |\n| UI | 위와 동일 | Not reviewed: no UI surface in the change scope |\n\nUI 변경이 없다고 본 근거는 다음과 같습니다.\n- **diff 위치:** 변경은 모두 데이터를 불러오는 코드와 메모이제이션에 있습니다. `Home.tsx` 51–73행의 JSX에는 diff가 없습니다. 무엇을 그릴지 정하는 `status === 'loading' | 'error' | 'ready'` 분기, 문구, `role`, 클래스도 바뀌지 않았습니다.\n- **정렬 결과:** `visible`은 `useMemo`로 감쌌을 뿐이고, 필터와 정렬 식은 이전과 같습니다.\n- **오류 처리:** 병렬로 바꾼 뒤에도 하나라도 실패하면 `error` 상태가 되는 것은 그대로입니다.\n- **삭제된 줄:** 삭제된 줄에는 접근성, 문구, 스타일과 관련된 내용이 없습니다.\n- **커밋 의도:** 커밋 메시지의 \"No visual change\"라는 설명과 코드가 일치합니다.\n\nNo UI surface changed: no interface findings in this change.\n\n## 일반 코드 리뷰로 넘길 사항\n\n`fetchArticleBody`의 `bodyCache`는 비우거나 크기를 제한하는 처리가 없습니다. 그래서 세션이 길어질수록 계속 커질 수 있습니다. 성능과 정확성에 관한 문제라 디자인 리뷰에서는 다루지 않았습니다. 필요하면 `/code-review`로 확인해 주세요.\n\n## 확인 방식과 한계\n\n- **소스 기반:** 요청하신 대로 소스만 읽었습니다. 브라우저에서 렌더링해 보지는 않았습니다.\n- **읽기 전용:** 작업 트리는 바꾸지 않았습니다. checkout, switch, stash도 쓰지 않았습니다.\n- **진행 중인 작업 확인:** rebase, merge, cherry-pick이 진행 중인지 보려던 Bash 명령이 권한 정책으로 막혔습니다. 대신 `.git` 안에서 해당 표식 파일을 찾았고, 하나도 없었습니다.\n- **`Home.tsx` 사본:** 작업 트리가 깨끗해서 작업 트리 사본을 head 사본으로 보고 읽었습니다.\n- **판정 없음:** 검토한 도메인이 없어서 Approve나 Block 판정은 내리지 않았습니다.",
+     "tokens": {
+      "input": 10,
+      "output": 2966,
+      "cacheRead": 126637,
+      "cacheCreation": 28054,
+      "thinking": 452
+     },
+     "traceCostUsd": 0.30911940000000004,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "perf-only-home",
+     "arm": "with",
+     "run": 1,
+     "startedAt": "2026-10-27T23:27:33.592Z",
+     "error": null,
+     "costUsd": 0.26878040000000003,
+     "judgeCostUsd": 0,
+     "durationSeconds": 35,
+     "turns": 7,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md"
+     ],
+     "bashCommands": 4,
+     "ownersLoaded": [],
+     "lastMessage": "I checked `main...HEAD`. **No UI surface changed: no interface findings in this change.**\n\nI read the whole diff from the source, ran no commands that change anything, and did no browser check. Because no changed line touches the UI, there were no consumers to expand and no handoff to `better-interface`.\n\n### Scope\n\n| Field | Value |\n| --- | --- |\n| Target | `main...HEAD` |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf`, the merge base of `main` and `HEAD` (it is also `main` itself) |\n| Head ref | `perf/home-load` @ `1ab23f7787c8843a3918b7cdec1754a825b515d9` |\n| Commits | 1 committed (`1ab23f7 Speed up home feed load`). The range has no uncommitted changes and the tree was clean when the session started. |\n| Files in scope | 2: `src/api/feed.ts`, `src/pages/Home.tsx` |\n| Excluded | None. There were no lockfiles, snapshots, generated files or binaries. |\n| Surfaces expanded | None, because no UI surface changed |\n\n### What changed, by line\n\n- **`src/api/feed.ts`**: adds a `bodyCache` Map that reuses article-body requests (failed requests are removed from it) and a new `prefetchArticleBodies` function. This is data-loading code only.\n- **`src/pages/Home.tsx`**:\n  - Imports `useMemo`, `prefetchArticleBodies` and a new `PREFETCH_COUNT` constant.\n  - Runs `fetchCategories` and `fetchFeed` in parallel with `Promise.all`. The `loading`/`error`/`ready` states and how they're set are unchanged. If either request fails, it still goes to the same `catch` as before.\n  - Wraps the `visible` filter and sort in `useMemo`. The result is the same; it is just memoized.\n  - Adds a `useEffect` that prefetches the first three article bodies once loading is done. It renders nothing.\n  - The JSX, class names, styles and user-facing strings are identical. `PREFETCH_COUNT` is a number and never shown on screen.\n\nThis matches the commit message: \"Fetch categories and feed in parallel, memoize the filtered sort and prefetch the first three article bodies. No visual change.\" Under the surface map's rules, parallel requests, memoization, caching and prefetching all count as performance work with no UI surface.\n\n### Coverage\n\n| Domain | What I inspected | Result |\n| --- | --- | --- |\n| Accessibility | `src/api/feed.ts`: request cache and prefetch function; `src/pages/Home.tsx`: parallel fetch, `useMemo`, prefetch effect | Not reviewed: no UI surface in the change scope |\n| Layout | Same | Not reviewed: no UI surface in the change scope |\n| Writing | Same | Not reviewed: no UI surface in the change scope |\n| Typography | Same | Not reviewed: no UI surface in the change scope |\n| Colors | Same | Not reviewed: no UI surface in the change scope |\n| UI | Same | Not reviewed: no UI surface in the change scope |\n\n**No UI surface changed: no interface findings in this change.**\n\nOne concern outside this design review: `bodyCache` never evicts successful responses, so it can keep growing during a long session. That belongs in the general code review (e.g. `/paul-skills:code-review`).\n\nSince no domain was reviewed, I'm giving no Approve or Block verdict.",
+     "tokens": {
+      "input": 8,
+      "output": 2289,
+      "cacheRead": 91802,
+      "cacheCreation": 25576,
+      "thinking": 379
+     },
+     "traceCostUsd": 0.26878040000000003,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    },
+    {
+     "case": "perf-only-home",
+     "arm": "with",
+     "run": 2,
+     "startedAt": "2026-10-27T23:27:38.756Z",
+     "error": null,
+     "costUsd": 0.2685486,
+     "judgeCostUsd": 0,
+     "durationSeconds": 47,
+     "turns": 6,
+     "graders": {
+      "S1-no-domain-owner-skill": true,
+      "S1-no-domain-owner-read": true,
+      "S1-no-ui-surface-stated": true,
+      "S1-no-clear-coverage": true,
+      "S1-no-block-verdict": true,
+      "C3-review-reply": true,
+      "RO-no-checkout-mutation": true,
+      "RO-no-shell-write": true,
+      "C4-no-eval-read": true,
+      "C4-no-eval-grep": true,
+      "C4-no-eval-glob": true,
+      "C4-no-eval-bash": true
+     },
+     "traceFound": true,
+     "skillCalls": [],
+     "skillMdReads": [],
+     "referenceReads": [
+      "interface-review/scope-resolution.md",
+      "interface-review/surface-map.md"
+     ],
+     "bashCommands": 3,
+     "ownersLoaded": [],
+     "lastMessage": "## 인터페이스 리뷰: `main...HEAD`\n\n| 항목 | 값 |\n| --- | --- |\n| Target | `main...HEAD` (입력한 범위 그대로 사용) |\n| Base ref | `af9728aabb6715e9dad27434d33a9e1d5303d9cf` (`main`과의 merge-base이며 `main`과 같음) |\n| Head ref | `perf/home-load`의 `1ab23f7787c8843a3918b7cdec1754a825b515d9` |\n| Commits | 커밋 1개(`1ab23f7 Speed up home feed load`), 커밋되지 않은 변경 0개 (작업 트리 깨끗함) |\n| Files in scope | 제외 후 2개: `src/api/feed.ts`, `src/pages/Home.tsx` |\n| Excluded | 없음 |\n| Surfaces expanded | 없음: UI 표면 없음 |\n\n**도메인 맵 근거.** 변경된 줄은 모두 데이터 로딩과 성능 코드입니다.\n- `src/api/feed.ts:27-41`: 본문 요청을 캐시하는 `bodyCache`와 미리 받아 두는 `prefetchArticleBodies`를 추가했습니다.\n- `src/pages/Home.tsx:1-2, 9`: import와 `PREFETCH_COUNT` 상수를 바꿨습니다.\n- `src/pages/Home.tsx:24`: 순차 `await` 두 개를 `Promise.all`로 묶었습니다. 로딩, 준비, 오류 상태가 바뀌는 순서는 그대로입니다.\n- `src/pages/Home.tsx:39-49`: 같은 filter/sort를 `useMemo`로 감쌌고, prefetch `useEffect`를 추가했습니다.\n\n렌더링 요소, 렌더 조건, 사용자에게 보이는 문자열, className, 스타일은 바뀌지 않았습니다. 그래서 Surface map의 어느 행에도 해당하지 않습니다. 커밋 메시지의 \"No visual change\"와도 맞습니다. 판단은 diff의 줄을 보고 했고, 커밋 메시지는 근거로 쓰지 않았습니다.\n\n| Domain | Evidence inspected | Result |\n| --- | --- | --- |\n| Accessibility | `src/api/feed.ts`, `src/pages/Home.tsx`: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n| Layout | 같은 파일: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n| Writing | 같은 파일: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n| Typography | 같은 파일: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n| Colors | 같은 파일: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n| UI | 같은 파일: 요청 병렬화, 메모이제이션, 본문 캐시와 prefetch | Not reviewed: no UI surface in the change scope |\n\n**No UI surface changed: no interface findings in this change.**\n\n성능과 정확성 쪽에서 볼 점이 하나 있습니다. `bodyCache`는 크기 제한도 만료도 없습니다. 그리고 filter가 바뀔 때마다 prefetch가 다시 실행됩니다. 이 부분은 이 리뷰의 범위가 아니니 일반 코드 리뷰(`/paul-skills:code-review` 또는 `/code-review`)에서 확인해 주세요.\n\n검토 범위에 대해:\n- 소스만 읽고 리뷰했고, 요청대로 브라우저 검증은 하지 않았습니다.\n- 작업 트리는 바꾸지 않았습니다. checkout, switch, stash를 쓰지 않았습니다.\n- 진행 중인 rebase, merge, cherry-pick이 없는 것을 확인했습니다.\n- 도메인을 하나도 검토하지 않았으므로 Approve나 Block 판정은 내리지 않습니다.",
+     "tokens": {
+      "input": 8,
+      "output": 2511,
+      "cacheRead": 92883,
+      "cacheCreation": 24965,
+      "thinking": 322
+     },
+     "traceCostUsd": 0.2685486,
+     "costBasis": "list",
+     "model": [
+      "claude-opus-5-5"
+     ]
+    }
+   ]
+  }
+ ]
+}

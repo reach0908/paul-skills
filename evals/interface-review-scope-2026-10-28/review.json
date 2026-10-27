@@ -10,5 +10,120 @@
    "X": "no finding attributed to this change that the diff did not cause (a pre-existing finding labelled Pre-existing is fine)"
   }
  },
- "reviews": []
+ "reviews": [
+  {
+   "blindId": "R1",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 1,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "R2",
+   "suite": "branch",
+   "case": "color-layout-toolbar",
+   "run": 0,
+   "checks": {
+    "F1": "pass HIGH split per consumer",
+    "F2": "pass HIGH",
+    "F3": "pass LOW",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [
+    "says translated labels would be clipped; no nowrap, so they wrap",
+    "F2 Before/After cells mislabelled"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "R3",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 2,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "LOW Accessibility role=status rendered with text already present"
+   ],
+   "factualSlips": [],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "R4",
+   "suite": "main",
+   "case": "color-layout-toolbar",
+   "run": 0,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass LOW",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [
+    "text-vs-accent contrast 3.37->6.85 stated; grader computed 3.43->6.98 (not graded)"
+   ],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "R5",
+   "suite": "branch",
+   "case": "color-layout-toolbar",
+   "run": 2,
+   "checks": {
+    "F1": "pass HIGH token",
+    "F2": "pass HIGH",
+    "F3": "pass, folded into F2 Why (no own row)",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [],
+   "otherChangeAttributed": []
+  },
+  {
+   "blindId": "R6",
+   "suite": "branch",
+   "case": "color-layout-toolbar",
+   "run": 1,
+   "checks": {
+    "F1": "pass HIGH split per consumer",
+    "F2": "pass HIGH",
+    "F3": "pass LOW",
+    "V": "pass",
+    "X": "pass"
+   },
+   "preExisting": [
+    "HIGH Accessibility chip state by color only (1.4.1)"
+   ],
+   "factualSlips": [],
+   "otherChangeAttributed": []
+  }
+ ],
+ "blindProcedure": "A fresh general-purpose subagent (claude-opus-5-5, same session host) read outputs/blind/R1..R6.md, diff.patch, context.txt and checklist.json only, with run IDs shuffled by random.Random(20261028); outputs/blind/mapping.json was revealed afterwards. Its full text is in outputs/blind/grader-report.md."
 }
