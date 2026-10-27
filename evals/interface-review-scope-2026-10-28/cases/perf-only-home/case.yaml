@@ -30,7 +30,7 @@
     {"name": "S1-no-clear-coverage", "type": "regex", "pattern": "\\|\\s*`?Clear\\b", "match": "not_contains", "target": "last_message"},
     {"name": "S1-no-block-verdict", "type": "regex", "pattern": "\\*\\*Block\\*\\*|Verdict[^\\n]{0,40}\\bBlock\\b", "match": "not_contains", "target": "last_message"},
     {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
-    {"name": "RO-no-checkout-mutation", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*\\b(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
+    {"name": "RO-no-checkout-mutation", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*(?<![\\w-])(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
     {"name": "RO-no-shell-write", "type": "tool_used", "tool": "Bash", "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]", "min": 0, "max": 0},
     {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/", "min": 0, "max": 0},
     {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/", "min": 0, "max": 0},

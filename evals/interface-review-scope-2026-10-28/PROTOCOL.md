@@ -43,3 +43,10 @@ Ceiling $40 list price for the whole trial, $12 per arm invocation. If a run err
 ## Decision
 
 Claim a cost reduction only where the branch arm's mean cost is lower and its graders pass. Claim equivalence on S-03 only if no main finding is lost. Anything else is reported as mixed or weak. Promotion and release are outside this trial.
+
+## Amendment, 2026-10-28, after the main run and before the branch run
+
+- `S3-reflow-finding` used `\b320\b`, which cannot match `320px` (no word boundary between `0` and `p`); all three main runs state the 320px overflow and failed only on that. The pattern is now `\b320(px)?\b`.
+- `RO-no-checkout-mutation` matched `apply` inside `rebase-apply` in the mid-operation check that `scope-resolution.md` prescribes (`git rev-parse --git-path rebase-apply`, read-only); one main run failed on it. The pattern now requires the verb not to follow a word character or hyphen. Controls: `git checkout`, `git stash`, `git switch`, `git add` still match; `rebase-apply`, `git diff`, `git log` do not.
+- The runner's own verdicts for main stay in `outputs/main/aggregate-result.json`. [regrade.py](regrade.py) re-applies only these two graders to the kept traces (`outputs/<arm>/regrade.json`); the branch arm runs with the amended `case.yaml` directly.
+- The arms also differ in one router line of `skills/engineering/ask-matt/SKILL.md` (the change-review row). The summary records whether any run loads `ask-matt`.

@@ -2,7 +2,7 @@
 """Summarize claude plugin eval aggregate JSONs (and their kept traces) into one record.
 
 usage: summarize.py <label>=<aggregate.json> ... > record.json
-Skills come from the trace's Skill tool_use blocks, paired with their tool_result so a failed
+Trace paths in the aggregate are relative to its directory. Skills come from the trace's Skill tool_use blocks, paired with their tool_result so a failed
 load is visible (loaded=false). SKILL.md reads through Read are listed separately. Aggregate
 schema 1 reports no token usage, so tokens come from the trace's result event and stay null
 when the trace or its usage is missing. Missing telemetry is null, never zero.
@@ -82,7 +82,7 @@ for arg in sys.argv[1:]:
                     'error': run.get('error'), 'costUsd': run.get('costUsd'), 'judgeCostUsd': run.get('judgeCostUsd'),
                     'durationSeconds': run.get('durationSeconds'), 'turns': run.get('turns'),
                     'graders': {g['name']: g['passed'] for g in run.get('graders', [])},
-                    **trace_facts(run.get('tracePath'))})
+                    **trace_facts(Path(path).parent / run['tracePath'] if run.get('tracePath') else None)})
     record['suites'].append(suite)
 json.dump(record, sys.stdout, indent=1, ensure_ascii=False)
 print()
