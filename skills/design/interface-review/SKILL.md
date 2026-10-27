@@ -66,7 +66,13 @@ For no-target discovery, gather the facts in [Nothing to review](scope-resolutio
 
 Where exclusions emptied the scope, name the excluded files in the offer. Never report a review of nothing as `Approve`.
 
-### 3. A diff is not a surface
+### 3. Map the change to its domains
+
+Classify every changed line with the [Surface map](surface-map.md) and record its domain map: each of the six `better-*` owners marked load or skip, with the changed lines that select it. The map decides which owners the review loads, so build it from the lines and keep it checkable against the diff.
+
+When no changed line has a UI surface, finish with the [no UI surface result](#no-ui-surface-result). That result needs no consumer expansion, no `better-interface` handoff and no domain owner. A line you cannot place is a surface, not an absence: it loads all six.
+
+### 4. A diff is not a surface
 
 A changed file is evidence, not the review subject. Its **blast radius** is the set of surfaces it renders in; review those.
 
@@ -74,13 +80,13 @@ Expand one hop by default, to the direct importers and callers. Expand a second 
 
 Review at most five consumers in total across both hops, ordered by [the rule in Scope resolution](scope-resolution.md#expanding-to-consumers). Count each distinct consumer reviewed, including an intermediate stylesheet or shared component: one shared stylesheet plus four routes uses all five slots. State how many you did not expand, since an unstated cutoff reads as completeness.
 
-### 4. Read the removed lines
+### 5. Read the removed lines
 
 Regressions are invisible in the post-change state. Read the `-` side of every hunk against [Removed signals](removed-signals.md).
 
 A signal is a lead, not a finding. A removal is a regression only when nothing in the change replaces it, and the domain skill owns that judgement. Route each unmatched removal to its owner, report only what that skill confirms and status it `Regression`.
 
-### 5. Classify every finding
+### 6. Classify every finding
 
 Give every finding one status:
 
@@ -98,7 +104,7 @@ git blame -L <line>,<line> "$BASE"..<head-ref> -- path/to/file
 
 For uncommitted work, drop the range. A line marked `Not Committed Yet` or blamed on a commit inside `$BASE..HEAD` belongs to the change.
 
-### 6. Hold the change to its stated intent
+### 7. Hold the change to its stated intent
 
 Read the pull request title and body, the linked issue and the commit messages, then review whether the interface delivers what they claim.
 
@@ -111,20 +117,21 @@ This is how you find the **incomplete** change, which a surface review misses be
 
 Do not report scope creep. Whether a change does too much is a process question, not an interface one.
 
-### 7. Hand the review to `better-interface`
+### 8. Hand the review to `better-interface`
 
 Call the Skill tool with "better-interface". If the host exposes no Skill tool, read its installed SKILL.md and applicable references. Supply an explicit handoff containing:
 
 - The user's `interface-review` invocation and target.
 - The resolved scope block: base, head, committed and uncommitted scope, file inventory and exclusions.
 - The affected surfaces, expansion limits and permitted verification.
+- The domain map from **Map the change to its domains**.
 - A status on every candidate finding, with before/after evidence for the owning domain to confirm.
 
-This is the authorized change-review branch of `better-interface`. It keeps this scope and the report format below while applying its six domain checks, ranking and consolidation. Continue through the handoff rather than requesting the same user invocation again.
+This is the authorized change-review branch of `better-interface`. It keeps this scope and the report format below while loading the owners the domain map selects and applying their checks, ranking and consolidation. Continue through the handoff rather than requesting the same user invocation again.
 
 If `better-interface` is unavailable, report the resolved scope and the file inventory, name it as the missing skill and stop. Do not invent a severity scale, a cap or a verdict.
 
-### 8. Never mutate the working tree
+### 9. Never mutate the working tree
 
 A change review is read-only, including the checkout. `git fetch` writes only to `.git` and is permitted. `gh pr checkout`, `git checkout`, `git switch` and `git stash` rewrite the files the author has open, so they are never permitted. Fetch pull request refs and read them in place.
 
@@ -136,6 +143,8 @@ Rendered verification is opt-in here, in place of `better-interface`'s **Verify 
 | --- | --- |
 | A no-target discovery counts only uncommitted files while `HEAD` is ahead of the merge base | Include the branch range and uncommitted changes; explicit `working` and `staged` still use `HEAD` with zero committed changes |
 | A report on `HEAD~1..HEAD` the user never chose | State the facts and offer the routes in **With no change, ask rather than invent one** |
+| A domain map row decided by file type, such as a `.tsx` marked markup when only its hooks changed, or by the change's description | Classify the changed lines with the [Surface map](surface-map.md) |
+| A skipped domain whose coverage row says `Clear` | `Not reviewed: no <surface> in the change scope`, from the domain map |
 | A changed shared component with no consumer under `Surfaces expanded` | Expand to its consumers and name the ones you skipped |
 | A deleted `aria-label`, `outline` or `prefers-reduced-motion` with no finding and no note | Route it to its owner through [Removed signals](removed-signals.md) |
 | A `Regression` whose removed attribute reappears elsewhere in the diff | Check the [equivalent replacements](removed-signals.md#equivalent-replacements) first |
@@ -158,7 +167,7 @@ Open with the scope block:
 | Excluded | `pnpm-lock.yaml`, `src/__snapshots__/`, lockfile and snapshots |
 | Surfaces expanded | `CheckoutPage`, `SettingsPanel`; 3 further `Button` consumers not expanded |
 
-The coverage table from `better-interface` follows it. A domain with no evidence in the change scope is `Not reviewed: no evidence in the change scope`, which is a coverage statement rather than a gap.
+The coverage table from `better-interface` follows it. A domain the domain map skips is `Not reviewed: no <surface> in the change scope`, as the [Surface map](surface-map.md#domain-map) words it. That is a coverage statement rather than a gap.
 
 Then the findings, with a `Status` column per **Classify every finding**:
 
@@ -175,3 +184,14 @@ Then `Pre-existing` findings, at most three, highest severity first, stated plai
 | MEDIUM | Typography | `src/Toolbar.tsx:7` | Numeric badges use proportional figures; predates this change |
 
 Verification and the verdict follow in `better-interface`'s format.
+
+### No UI surface result
+
+When the domain map skips all six, report the scope block with `Surfaces expanded` as `none: no UI surface`, then this coverage table, with the changed files summarised by kind in each evidence cell:
+
+| Domain | Evidence inspected | Result |
+| --- | --- | --- |
+| Accessibility | `api/orders.ts`, `db/migrations/0042_order_status.sql`: order status mapping and migration | Not reviewed: no UI surface in the change scope |
+
+Repeat the row for layout, writing, typography, colors and UI. Then state "No UI surface changed: no interface findings in this change." Name a correctness or performance concern once and point at the general code review. End there, with no `Approve` or `Block`: no domain was reviewed.
+

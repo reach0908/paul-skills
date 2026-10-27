@@ -4,9 +4,14 @@ Read this procedure after the entry decision in [SKILL.md](SKILL.md): a current-
 
 ## Load the owners before inspecting the surface
 
-Your next tool actions load these six installed owners in order: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`. Call the Skill tool once for each, using the installed namespace. Pass the same scoped audit task and permitted checks; their standalone output formats are replaced by this procedure. When the host has no Skill tool, read all six installed SKILL.md files in full instead. Finish these loads before inspecting the artifact, opening the optional first-impression reference or drafting findings.
+Your next tool actions load the required owners in this order: `better-accessibility`, `better-layout`, `better-writing`, `better-typography`, `better-colors`, `better-ui`.
 
-Track each successful load from its tool result, not a planned call or the owner's catalog description. If a call fails, record the failure and try the remaining owners. Missing screenshots, a narrow task, an early finding or a short final answer do not waive these loads. Spend the available review effort on the required owners before optional detail. If execution is interrupted or an owner cannot be loaded, report the audit as incomplete with the unloaded owners and reason; do not issue an approval or call the six-domain audit complete. Evidence availability is assessed after loading and can still leave a loaded domain unverified.
+- **Current-screen audit:** all six are required.
+- **Change-review handoff:** exactly the owners its domain map marks load are required. Leave the owners it skips unloaded; their coverage row is the map's `Not reviewed: no <surface> in the change scope`.
+
+Call the Skill tool once for each required owner, using the installed namespace. Pass the same scoped audit task and permitted checks; their standalone output formats are replaced by this procedure. When the host has no Skill tool, read each required owner's installed SKILL.md in full instead. Finish these loads before inspecting the artifact, opening the optional first-impression reference or drafting findings.
+
+Track each successful load from its tool result, not a planned call or the owner's catalog description. If a call fails, record the failure and try the remaining owners. Missing screenshots, a narrow task, an early finding or a short final answer do not waive these loads. Spend the available review effort on the required owners before optional detail. If execution is interrupted or a required owner cannot be loaded, report the audit as incomplete with the unloaded owners and reason; do not issue an approval or call the audit complete. Evidence availability is assessed after loading and can still leave a loaded domain unverified.
 
 ## Evidence, not taste
 
@@ -47,7 +52,7 @@ Use the owners loaded at the start; do not invoke them a second time. Read their
 5. `better-colors`
 6. `better-ui`
 
-Load all six installed owners before deciding that a domain has no applicable evidence. A narrow change can have narrow coverage, but a small diff or one confirmed finding does not make another installed owner unavailable.
+Load every required owner before deciding that a domain has no applicable evidence. In a change review the domain map, not a judgment formed while reviewing, decides which owners are required. When a check reveals a changed surface the map missed, load that owner and add it to the map. A small diff or one confirmed finding does not make a required owner optional.
 
 From each, take its principles, its references and its verification checks. Its severity ladder and its format are for standalone use; the ones in this file replace them.
 
@@ -59,7 +64,7 @@ When two skills appear to cover one issue, assign it to the owner of the underly
 
 Complete each owner's check before merging. Sharing an element or a proposed fix does not make two causes identical; preserve independent failures and their measurements even when one change resolves both.
 
-For a requested first-impression/three-second check, screen simplification or observed competition in the hierarchy, read `first-impression.md` from the loaded `better-layout` directory in full before judgment. Reuse its intent, observation and preservation contract, then assign each supported mismatch to its underlying domain. If that reference or current visual evidence is unavailable, name the limit. This is part of the applicable domain review, not a seventh domain or a substitute for completing all six owners. Keep change-review entry and handoff authorization unchanged.
+For a requested first-impression/three-second check, screen simplification or observed competition in the hierarchy, read `first-impression.md` from the loaded `better-layout` directory in full before judgment. Reuse its intent, observation and preservation contract, then assign each supported mismatch to its underlying domain. If that reference or current visual evidence is unavailable, name the limit. This is part of the applicable domain review, not a seventh domain or a substitute for completing the required owners. Keep change-review entry and handoff authorization unchanged.
 
 ### 5. Require evidence
 

@@ -17,7 +17,7 @@ Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictio
 
 ## One report, six owners
 
-All six domain owners are loaded before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
+A current-screen audit loads all six domain owners before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. A change review from `interface-review` loads only the owners its domain map selects from the changed lines; each skipped domain is reported as not reviewed, with the surface the change lacks. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
 
 ## Common questions
 
@@ -45,7 +45,7 @@ No. Layout supplies its protocol and the cause keeps its existing owner. AI pred
 
 ## It's working if
 
-- All six domains have evidence or a clear limit in the report.
+- Every domain has evidence or a clear limit in the report: all six for a screen audit, and the mapped owners plus a named reason for each skipped one in a change review.
 - The report distinguishes confirmed defects from taste and untested behavior.
 - An unnamed change request ends with the correct invocation instead of a guessed diff review.
 
