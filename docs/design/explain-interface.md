@@ -4,7 +4,7 @@ Explain how a specific site or visual effect works, using the evidence available
 
 ## When to reach for it
 
-You invoke this by typing `/explain-interface`; the agent will not reach for it on its own.
+Type `/explain-interface`, or the agent reaches for it automatically when you ask how someone else's site or effect was built. Reviewing your own interface stays with `better-interface`.
 
 Use it when a reference interests you and you want to understand its mechanism. It explains the named subject rather than judging its quality or rebuilding it.
 

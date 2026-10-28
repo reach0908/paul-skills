@@ -6,7 +6,7 @@ It recommends and stops. It does not grill, write a [spec](https://www.aihero.de
 
 ## When to reach for it
 
-You invoke this by typing `/ask-matt`; the agent won't reach for it on its own.
+Type `/ask-matt`, or the agent reaches for it automatically when you ask which skill or flow fits. Once the right skill is already clear, the agent goes straight to that skill rather than through the router.
 
 | Your situation | What the router gives back |
 | --- | --- |

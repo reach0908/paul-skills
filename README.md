@@ -47,7 +47,13 @@ codex plugin marketplace add reach0908/paul-skills
 codex plugin add paul-skills@paul-skills
 ```
 
-The host manages the installed bundle. Release versions come from `package.json` and are synchronized to the plugin manifest. Inspect the installed version after an update; source HEAD alone does not prove activation in an existing session.
+The host manages the installed bundle. Release versions come from `package.json` and are synchronized to both plugin manifests. Inspect the installed version after an update; source HEAD alone does not prove activation in an existing session.
+
+## Cursor
+
+Cursor reads `.cursor-plugin/plugin.json` from this repository, which ships the same promoted skills at the same version as the Claude Code and Codex plugin. Until the plugin is listed in a Cursor marketplace, import it from the repository: open Cursor's Customize view, choose **From GitHub Repository**, and enter `https://github.com/reach0908/paul-skills`. Once a marketplace listing exists, install `paul-skills` from that marketplace instead.
+
+Re-import or update from the same source to pick up a new release, then check the installed version in a fresh session.
 
 ## Editable or individual skills
 
@@ -69,17 +75,14 @@ Skills I use daily for code work.
 
 **User-invoked**
 
-- **[ask-matt](./skills/engineering/ask-matt/SKILL.md)**: Ask which skill or flow fits your situation. A router over the user-invoked skills in this repo.
 - **[grill-with-docs](./skills/engineering/grill-with-docs/SKILL.md)**: Grilling session that also builds your project's domain model, sharpening terminology and updating `GLOSSARY.md` and ADRs inline.
 - **[triage](./skills/engineering/triage/SKILL.md)**: Move issues through a state machine of triage roles.
-- **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
 - **[setup-matt-pocock-skills](./skills/engineering/setup-matt-pocock-skills/SKILL.md)**: Configure this repo for the engineering skills (issue tracker, triage labels, domain doc layout). Run once per repo before using the other engineering skills.
 - **[to-spec](./skills/engineering/to-spec/SKILL.md)**: Turn the current conversation into a spec and publish it to the issue tracker. No interview, just synthesizes what you've already discussed.
 - **[to-tickets](./skills/engineering/to-tickets/SKILL.md)**: Break any plan, spec, or conversation into a set of tracer-bullet tickets, each declaring its blocking edges, written as text in a local file, or as native blocking links on a real tracker.
 - **[implement](./skills/engineering/implement/SKILL.md)**: Build the work described by a spec or set of tickets, driving `/tdd` at pre-agreed seams and closing out with `/code-review` before committing.
 - **[implement-spec](./skills/engineering/implement-spec/SKILL.md)**: Implement a whole spec on one integration branch. Works the tickets as a task graph, running implementer subagents across the ready frontier for maximum concurrency, then closes out with `/code-review`.
 - **[wayfinder](./skills/engineering/wayfinder/SKILL.md)**: Plan a huge chunk of work, more than one agent session can hold, as a shared map of decision tickets on the issue tracker, and resolve them one at a time until the way to the destination is clear.
-- **[retro](./skills/engineering/retro/SKILL.md)**: Suggest improvements to the coding agent's environment (navigation, automated checks, coding standards, steering files, tooling) after a session, most severe first.
 
 **Model-invoked**
 
@@ -92,6 +95,9 @@ Skills I use daily for code work.
 - **[code-review](./skills/engineering/code-review/SKILL.md)**: Two-axis review of the diff since a fixed point: **Standards** (does it follow the repo's coding standards, plus a Fowler smell baseline?) and **Spec** (does it faithfully implement the originating issue/spec?), run as parallel sub-agents so neither pollutes the other.
 - **[pr](./skills/engineering/pr/SKILL.md)**: The shape a pull request body should take: a summary as the smallest visual that makes the change clear, before/after evidence that it works, and a merge-danger call (one-way or two-way door, plus blast radius).
 - **[wizard](./skills/engineering/wizard/SKILL.md)**: Generate an interactive bash wizard that walks a human through steps only they can perform: provisioning infrastructure, setting up credentials or CI secrets, walking an unfamiliar third-party dashboard, or running a one-off migration or cutover.
+- **[ask-matt](./skills/engineering/ask-matt/SKILL.md)**: Ask which skill or flow fits your situation. A router over the skills in this repo.
+- **[improve-codebase-architecture](./skills/engineering/improve-codebase-architecture/SKILL.md)**: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
+- **[retro](./skills/engineering/retro/SKILL.md)**: Suggest improvements to the coding agent's environment (navigation, automated checks, coding standards, steering files, tooling) after a session, most severe first.
 
 ### Productivity
 
@@ -100,15 +106,15 @@ General workflow tools, not code-specific.
 **User-invoked**
 
 - **[grill-me](./skills/productivity/grill-me/SKILL.md)**: Get relentlessly interviewed about a plan or design until every branch of the design tree is resolved.
-- **[handoff](./skills/productivity/handoff/SKILL.md)**: Compact the current conversation into a handoff document so another agent can continue the work.
 - **[teach](./skills/productivity/teach/SKILL.md)**: Teach the user a new skill or concept over multiple sessions, using the current directory as a stateful teaching workspace.
-- **[to-questionnaire](./skills/productivity/to-questionnaire/SKILL.md)**: Turn a decision you can't answer alone into a Markdown questionnaire for the one person who can, filled in async, or together over a meeting. It grills you about the send (who it's for, what you need back), not the subject.
-- **[wait-what](./skills/productivity/wait-what/SKILL.md)**: Fire this the moment a message doesn't land. The agent re-pitches it with the context you're missing, in plain English, using your `GLOSSARY.md` vocabulary.
 
 **Model-invoked**
 
 - **[grilling](./skills/productivity/grilling/SKILL.md)**: Interview the user relentlessly about a plan, decision, or idea until every branch of the design tree is resolved. The reusable interview primitive behind `grill-me`, `grill-with-docs`, `triage`, `wayfinder` and `improve-codebase-architecture`.
 - **[writing-for-agents](./skills/productivity/writing-for-agents/SKILL.md)**: Writing documents for agents: skills, AGENTS.md/CLAUDE.md, and any doc an agent reaches by a pointer.
+- **[handoff](./skills/productivity/handoff/SKILL.md)**: Compact the current conversation into a handoff document so another agent can continue the work.
+- **[to-questionnaire](./skills/productivity/to-questionnaire/SKILL.md)**: Turn a decision you can't answer alone into a Markdown questionnaire for the one person who can, filled in async, or together over a meeting. It grills you about the send (who it's for, what you need back), not the subject.
+- **[wait-what](./skills/productivity/wait-what/SKILL.md)**: Type `/wait-what`, or just say "wait, what?", the moment a message doesn't land. The agent re-pitches it with the context you're missing, in plain English, using your `GLOSSARY.md` vocabulary.
 
 ### Design
 
@@ -118,7 +124,6 @@ Composable planning, local prototypes, design implementation, interface review a
 
 - **[state-machine](./skills/design/state-machine/SKILL.md)**: Render reachable component states with real components, local fixtures and a switcher on a removable workbench.
 - **[break](./skills/design/break/SKILL.md)**: Stress a real component with plausible hostile content on one temporary page and report observed breakage.
-- **[explain-interface](./skills/design/explain-interface/SKILL.md)**: Explain a site or effect with measured, derived and inferred evidence, without claiming an image reveals its source.
 - **[variant](./skills/design/variant/SKILL.md)**: Compare one component along a chosen design axis in its real page while preserving task state.
 - **[interface-review](./skills/design/interface-review/SKILL.md)**: Review a branch, pull request or uncommitted change, separating introduced and regressed findings from existing problems.
 
@@ -136,3 +141,4 @@ Composable planning, local prototypes, design implementation, interface review a
 - **[better-colors](./skills/design/better-colors/SKILL.md)**: Build and audit semantic color roles and palettes, and measure contrast without replacing a consistent project system.
 - **[better-ui](./skills/design/better-ui/SKILL.md)**: Polish surfaces, icons and motion while preserving working interactions, geometry and project conventions.
 - **[design-browser](./skills/design/design-browser/SKILL.md)**: Collect bounded browser evidence using Playwright CLI for QA and Aside for research and general browsing.
+- **[explain-interface](./skills/design/explain-interface/SKILL.md)**: Explain a site or effect with measured, derived and inferred evidence, without claiming an image reveals its source.

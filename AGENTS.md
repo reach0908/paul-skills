@@ -8,9 +8,9 @@ Skills are organized into bucket folders under `skills/`:
 - `in-progress/`: beta: public on purpose, feedback wanted, not shipped in the plugin
 - `deprecated/`: no longer used
 
-The **promoted** buckets are `engineering/`, `productivity/`, `product-management/`, and `design/`. Every skill in them must have a reference in the top-level `README.md` and an entry in `.claude-plugin/plugin.json`'s `skills` array (the Claude Code plugin ships exactly the promoted set). Skills in `misc/`, `in-progress/`, and `deprecated/` must not appear in either.
+The **promoted** buckets are `engineering/`, `productivity/`, `product-management/`, and `design/`. Every skill in them must have a reference in the top-level `README.md` and an entry in `.claude-plugin/plugin.json`'s `skills` array (the plugin ships exactly the promoted set). `.cursor-plugin/plugin.json` mirrors that array and the other shared fields; edit the Claude manifest and run `node scripts/sync-plugin-version.mjs`, which `npm run check` verifies. Skills in `misc/`, `in-progress/`, and `deprecated/` must not appear in either.
 
-Install commands are copied verbatim from [.agents/install-block.md](./.agents/install-block.md). `.claude-plugin/marketplace.json` is the repo's own marketplace. Claude Code and Codex both install from our own marketplace; this fork is not listed in the official marketplace. Run `claude plugin validate . --strict` after touching either manifest. [ADR 0002](./.agents/adr/0002-ship-as-a-claude-code-plugin.md) records why.
+Install commands are copied verbatim from [.agents/install-block.md](./.agents/install-block.md). `.claude-plugin/marketplace.json` is the repo's own marketplace. Claude Code and Codex both install from it; Cursor imports the same repo through `.cursor-plugin/`. This fork is not listed in any official marketplace. Run `claude plugin validate . --strict` after touching a Claude manifest, and validate `.cursor-plugin/` against the Cursor schemas (see [maintenance.md](./docs/maintenance.md)) after touching it. [ADR 0002](./.agents/adr/0002-ship-as-a-claude-code-plugin.md) records why.
 
 Each skill entry in the top-level `README.md` must link the skill name to its `SKILL.md`.
 

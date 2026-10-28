@@ -25,7 +25,13 @@ codex plugin marketplace add reach0908/paul-skills
 codex plugin add paul-skills@paul-skills
 ```
 
-The host manages the installed bundle. Release versions come from `package.json` and are synchronized to the plugin manifest. Inspect the installed version after an update; source HEAD alone does not prove activation in an existing session.
+The host manages the installed bundle. Release versions come from `package.json` and are synchronized to both plugin manifests. Inspect the installed version after an update; source HEAD alone does not prove activation in an existing session.
+
+## Cursor
+
+Cursor reads `.cursor-plugin/plugin.json` from this repository, which ships the same promoted skills at the same version as the Claude Code and Codex plugin. Until the plugin is listed in a Cursor marketplace, import it from the repository: open Cursor's Customize view, choose **From GitHub Repository**, and enter `https://github.com/reach0908/paul-skills`. Once a marketplace listing exists, install `paul-skills` from that marketplace instead.
+
+Re-import or update from the same source to pick up a new release, then check the installed version in a fresh session.
 
 ## Editable or individual skills
 

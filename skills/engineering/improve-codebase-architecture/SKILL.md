@@ -1,7 +1,6 @@
 ---
 name: improve-codebase-architecture
-description: Scan a codebase for deepening opportunities, present them as a visual HTML report, then grill through whichever one you pick.
-disable-model-invocation: true
+description: "Survey a codebase for deepening opportunities, present them as a visual HTML report, then grill through the one the user picks. Use when the user asks for an architecture review, refactoring candidates, or where the codebase resists change or testing. Not for designing one module already chosen (codebase-design), fixing a bug, or reviewing a diff (code-review)."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---

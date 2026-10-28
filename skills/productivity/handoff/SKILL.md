@@ -1,8 +1,7 @@
 ---
 name: handoff
-description: Compact the current conversation into a handoff document for another agent to pick up.
+description: "Compact the current conversation into a handoff document in the OS temp directory for another agent to pick up. Use when the user asks for a handoff, or to carry this work into a new session, directory, harness or colleague. Not for routine context pressure (compact instead) or a summary the user wants in chat."
 argument-hint: "What will the next session be used for?"
-disable-model-invocation: true
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---

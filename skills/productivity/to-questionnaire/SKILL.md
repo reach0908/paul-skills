@@ -1,7 +1,6 @@
 ---
 name: to-questionnaire
-description: Turn a decision you can't fully answer into a questionnaire for someone else to fill in.
-disable-model-invocation: true
+description: "Turn a decision the user can't answer alone into a Markdown questionnaire for one other person to fill in. Use when the user asks for a questionnaire, or wants to send the questions they can't answer to the person who can. Not for interviewing the user about their own plan (grilling) or for surveys of many respondents."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---

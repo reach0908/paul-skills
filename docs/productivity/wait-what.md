@@ -6,7 +6,7 @@ The skill is three lines long. That is the design, not an unfinished draft. Skil
 
 ## When to reach for it
 
-You invoke it by typing `/wait-what`. The agent will not reach for it on its own, and it shouldn't. Only you know when you stopped following.
+Type `/wait-what`, or just say "wait, what?" or "I don't follow", and the agent reaches for it automatically. It fires only on that signal from you, since only you know when you stopped following.
 
 Use it as soon as you notice you're skimming. For example, the agent has started to use jargon it invented, put five acronyms in one sentence, or explained a decision whose premise you never saw. It fixes the conversation you're already in. To stop the jargon arriving at all, use [grill-with-docs](https://aihero.dev/skills-grill-with-docs), which builds the shared language upfront.
 

@@ -8,7 +8,6 @@ Seventeen skills were promoted with explicit user approval. The [first nine](../
 
 - **[state-machine](./state-machine/SKILL.md)**: Render reachable component states with real components, local fixtures and a switcher on a removable workbench.
 - **[break](./break/SKILL.md)**: Stress a real component with plausible hostile content on one temporary page and report observed breakage.
-- **[explain-interface](./explain-interface/SKILL.md)**: Explain a site or effect with measured, derived and inferred evidence, without claiming an image reveals its source.
 - **[variant](./variant/SKILL.md)**: Compare one component along a chosen design axis in its real page while preserving task state.
 - **[interface-review](./interface-review/SKILL.md)**: Review a branch, pull request or uncommitted change, separating introduced and regressed findings from existing problems.
 
@@ -26,3 +25,4 @@ Seventeen skills were promoted with explicit user approval. The [first nine](../
 - **[better-colors](./better-colors/SKILL.md)**: Build and audit semantic color roles and palettes, and measure contrast without replacing a consistent project system.
 - **[better-ui](./better-ui/SKILL.md)**: Polish surfaces, icons and motion while preserving working interactions, geometry and project conventions.
 - **[design-browser](./design-browser/SKILL.md)**: Collect bounded browser evidence using Playwright CLI for QA and Aside for research and general browsing.
+- **[explain-interface](./explain-interface/SKILL.md)**: Explain a site or effect with measured, derived and inferred evidence, without claiming an image reveals its source.

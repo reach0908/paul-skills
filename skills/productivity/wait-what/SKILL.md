@@ -1,7 +1,6 @@
 ---
 name: wait-what
-description: "Stop. That last message did not land: re-pitch it."
-disable-model-invocation: true
+description: "Re-pitch what you just said with the missing context, in plain language and GLOSSARY.md terms. Use when the user signals your last message did not land, such as 'wait, what?', 'I don't follow' or 'say that again simpler'. Not for a new question, disagreement with the content, or teaching a topic from scratch."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
