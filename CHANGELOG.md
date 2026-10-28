@@ -2,6 +2,14 @@
 
 Paul Skills starts its independent version sequence at **0.1.0**. The earlier 1.4.0 pilot and inherited upstream entries below are retained as history; they do not determine future Paul versions.
 
+## 0.6.0
+
+### Minor Changes
+
+- [#40](https://github.com/reach0908/paul-skills/pull/40) [`67b9601`](https://github.com/reach0908/paul-skills/commit/67b96015cdd60a213e22a01c465f1b13f698bf84) Thanks [@reach0908](https://github.com/reach0908)! - Paul Skills now also ships as a Cursor plugin from the same repository. `.cursor-plugin/plugin.json` lists the same promoted skills at the same version as the Claude Code and Codex plugin, and `.cursor-plugin/marketplace.json` lets Cursor import the repo from GitHub before any marketplace listing. No skill files are copied. `scripts/sync-plugin-version.mjs` now bumps both manifests and the lockfile together, copies the shared fields from the Claude manifest, and its `--check` (part of `npm run check`) fails when the Cursor manifest's version, name, description, license, homepage, repository, keywords, skills or author name drift. Claude Code and Codex install commands, the skill list and `.claude-plugin/marketplace.json` are unchanged.
+  
+  Seven shipped skills without side effects are now model-invoked, so the agent can reach for them when a request fits: `ask-matt`, `improve-codebase-architecture`, `retro`, `handoff`, `to-questionnaire`, `wait-what` and `explain-interface`. Their descriptions now name precise triggers and the requests they do not cover, and their Codex `allow_implicit_invocation: false` policy is removed to match. Skills that push, open PRs, commit, change issue trackers, write setup files or build scratch pages inside the app stay user-invoked, as do the `grill-me` and `grill-with-docs` aliases (their model-invoked primitives already cover automatic use) and `interface-review` (its evaluated explicit change-review gate). The effect on trigger rates, including unwanted invocations, is unmeasured.
+
 ## 0.5.0
 
 ### Minor Changes
