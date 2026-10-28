@@ -6,7 +6,7 @@ What it gives you is **portability**, not compression, so the skill is narrower 
 
 ## When to reach for it
 
-You invoke this by typing `/handoff`; the agent won't reach for it on its own. Pass a note about what the next session is for, and the skill writes the document for that purpose.
+Type `/handoff`, or the agent reaches for it automatically when you ask to carry the work into a new session, directory, harness or colleague. Routine context pressure is a job for `/compact`, not a handoff. Pass a note about what the next session is for, and the skill writes the document for that purpose.
 
 There are four triggers, and only four:
 
@@ -60,7 +60,7 @@ Ask whether it's true next month. `CLAUDE.md` is standing context about the proj
 This is a fair criticism, and people raise it often. Two things help. Pass the argument (tell it what the next session is for), so the skill keeps the reasoning that bears on *that* rather than flattening it. And watch for confident claims the session never verified, such as "X isn't built" or "Y is done". The next agent trusts the document and does not re-check it, so a belief written as a fact becomes a false premise for everything that follows. Read the document before you hand it over, and downgrade anything you only assumed.
 
 **Why is it a skill rather than a slash command?**
-Both work; they suit different situations. As a skill, it ships and updates through the same install path as everything else here, which makes it shareable. Its frontmatter, not the mechanism, is what stops the agent from firing it on its own.
+Both work; they suit different situations. As a skill, it ships and updates through the same install path as everything else here, which makes it shareable. Its description, not the mechanism, decides when the agent reaches for it: only when you ask to move the work somewhere else.
 
 ## It's working if
 

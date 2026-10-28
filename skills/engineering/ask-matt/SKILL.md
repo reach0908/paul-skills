@@ -1,7 +1,6 @@
 ---
 name: ask-matt
-description: Ask which skill or flow fits your situation. A router over the skills in this repo.
-disable-model-invocation: true
+description: "Router over this skill library. Use when the user asks which skill, flow or next step fits their situation, or whether a Paul skill exists for a task. Not for doing the task once its skill is clear; call that skill instead."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
@@ -95,7 +94,7 @@ Use this route once the product intent is known. Enter at the first unsettled st
 | Implement an approved prototype, screen specification or image, or reuse an existing component on another screen | **`/build-design`** for reference-to-export mapping, preserved behavior and matching-state comparison |
 | Work on the reachable states of one existing component | Ask the user to invoke **`/state-machine`** for a removable state workbench |
 | Observe one component under plausible hostile content | Ask the user to invoke **`/break`** for a single-look stress page |
-| Explain how a specific site or visual effect works | Ask the user to invoke **`/explain-interface`** for measured and qualified explanations |
+| Explain how a specific site or visual effect works | **`/explain-interface`** for measured and qualified explanations |
 | Choose among visual directions for one component | Ask the user to invoke **`/variant`** for a comparison in its real page |
 | Review a screen or flow across disciplines | **`/better-interface`**, which loads all six domain owners and consolidates one report |
 | Review what a branch, PR, staged or uncommitted change caused | **`better-interface`** is the first and only automatic entry, even when the request names specific UI domains; ask the user to invoke **`/interface-review`** with their target before inspecting files. That explicit invocation owns scope and classification, then composes `better-interface` |
@@ -109,7 +108,7 @@ Use this route once the product intent is known. Enter at the first unsettled st
 
 The planning chain is `information-architecture → user-flow → wireframe → build-design`. Pass source revisions, stable destination/state IDs and unresolved decisions forward; continue only through the steps the user requested. Product flow planning uses `user-flow` directly and does not authorize loading the `state-machine` workbench. Broader throwaway UI or logic questions belong to `prototype`, which reuses the approved brief and baseline, fixes the conditions each alternative must preserve, and varies the unresolved question. `better-writing` handles a substantive copy pass within that scope.
 
-`state-machine`, `break`, `explain-interface`, `variant` and `interface-review` are user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
+`state-machine`, `break`, `variant` and `interface-review` are user-invoked and may be hidden from the automatic list while installed. In Codex, recommend `$paul-skills:interface-review staged` for staged changes only and `$paul-skills:interface-review working` for all uncommitted changes. In Claude Code, use `/paul-skills:interface-review` with the same target. Keep the engineering `code-review` Standards and Spec verdict separate from the interface verdict.
 
 ## Vocabulary underneath
 
@@ -140,7 +139,7 @@ Off the main flow entirely.
 - **`/research`**: investigate a bounded question against **primary sources**, using local material directly and the **Aside CLI** for web discovery. It checks scope and evidence, then leaves one cited Markdown file with verification limits and unresolved gaps. An existing research executor does the work directly; a standalone caller can delegate while continuing other work. Take the file into the main flow at `/grill-with-docs` to inform the decision.
 - **`/to-questionnaire`** comes in when the thing blocking you isn't in your head or the codebase but in **someone else's**, and it writes them a questionnaire to fill in. It's the inverse of `/grill-me`: instead of interviewing you about the subject, it interviews you about the **send** (who it's going to, what you need back) and aims the questions at the gap. What comes back is material for `/grill-with-docs` or `/to-spec`.
 - **`/wizard`** is for the steps only a **human** can take: provisioning infrastructure, setting up credentials or CI secrets, clicking through an unfamiliar third-party dashboard, running a one-off migration or cutover. It generates an interactive bash script that opens each URL, captures each value, and writes it into `.env` and GitHub secrets, so the procedure stops being something you re-explain to an agent every time. Model-invoked, so the agent reaches for it the moment it hits a wall only you can pass. If the agent could just do it itself, it should; this is for where a human is genuinely in the loop.
-- **`/wait-what`** is the corrective for a message that didn't land. Use it mid-conversation, inside any other skill, and the agent re-pitches what it just said with the context you were missing, in plain English, using the `GLOSSARY.md` vocabulary. It works after the fact; `/grill-with-docs` is the upfront cure, because a shared language agreed early is what stops the jargon arriving at all.
+- **`/wait-what`** is the corrective for a message that didn't land. Use it mid-conversation, inside any other skill, and the agent re-pitches what it just said with the context you were missing, in plain English, using the `GLOSSARY.md` vocabulary. It's model-invoked, so saying "wait, what?" is enough. It works after the fact; `/grill-with-docs` is the upfront cure, because a shared language agreed early is what stops the jargon arriving at all.
 - **`/teach`**: learn a concept over multiple sessions, using the current directory as a stateful workspace.
 - **`/writing-for-agents`** is the reference for writing documents agents consume: skills, AGENTS.md, pointed-at docs.
 

@@ -8,7 +8,7 @@ Two filters stop the report from becoming generic cleanup advice. First, every c
 
 ## When to reach for it
 
-You invoke this by typing `/improve-codebase-architecture`; the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) will not reach for it on its own.
+Type `/improve-codebase-architecture`, or the [agent](https://www.aihero.dev/ai-coding-dictionary/agent) reaches for it automatically when you ask for an architecture review or refactoring candidates. Designing one module you have already chosen belongs to `codebase-design`, and reviewing a diff belongs to `code-review`.
 
 It is not a step in the main build loop. You run it periodically to queue up more work that improves the codebase. People use it in four situations:
 

@@ -1,7 +1,6 @@
 ---
 name: explain-interface
-description: Explains how a website, a visual effect or an animation was built, from a live URL or a screenshot.
-disable-model-invocation: true
+description: "Explains how a website, a visual effect or an animation was built, from a live URL or a screenshot, with measured, derived and inferred evidence. Use when the user asks how someone else's site or effect was made. Not for reviewing or changing the user's own interface (better-interface and the better-* skills) or reviewing a change (interface-review)."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---

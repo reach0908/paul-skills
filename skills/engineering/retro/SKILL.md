@@ -1,7 +1,6 @@
 ---
 name: retro
-description: "Conduct a retrospective on a coding session."
-disable-model-invocation: true
+description: "Retrospective on a coding session that proposes fixes to the agent's environment: navigation, automated checks, coding standards, steering files and tooling. Use when the user asks for a retro, a post-mortem, or what would have prevented a session's mistakes. Not for reviewing the code itself (code-review), debugging (diagnosing-bugs), or closing a session the user did not ask to review."
 metadata:
   provenance: "https://github.com/reach0908/paul-skills/blob/main/skill-sources.json"
 ---
