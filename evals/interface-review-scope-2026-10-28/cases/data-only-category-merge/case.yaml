@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.1",
+  "name": "data-only-category-merge",
+  "description": "S-01: a data-only category merge in the server ingest mapping, its test and a migration. No UI surface changed, so no better-* domain owner is needed.",
+  "tags": [
+    "interface-review",
+    "scope",
+    "development"
+  ],
+  "runs": 3,
+  "expected_outcome": "Resolves main...HEAD, finds no UI surface (server mapping, test and migration only), loads no better-* domain owner and returns a short result with the scope block, coverage naming each domain Not reviewed and why, and no Block.",
+  "execution": {
+    "max_turns": 80,
+    "timeout_seconds": 1800,
+    "allowed_tools": [
+      "Read",
+      "Glob",
+      "Grep",
+      "Skill",
+      "Bash"
+    ]
+  },
+  "context": {
+    "scaffold_script": "scaffold.sh"
+  },
+  "graders": [
+    {"name": "S1-no-domain-owner-skill", "type": "tool_used", "tool": "Skill", "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-(accessibility|layout|writing|typography|colors|ui)\"", "min": 0, "max": 0},
+    {"name": "S1-no-domain-owner-read", "type": "tool_used", "tool": "Read", "input_match": "better-(accessibility|layout|writing|typography|colors|ui)/SKILL\\.md", "min": 0, "max": 0},
+    {"name": "S1-no-ui-surface-stated", "type": "regex", "pattern": "no UI surface", "flags": "i", "target": "last_message"},
+    {"name": "S1-no-clear-coverage", "type": "regex", "pattern": "\\|\\s*`?Clear\\b", "match": "not_contains", "target": "last_message"},
+    {"name": "S1-no-block-verdict", "type": "regex", "pattern": "\\*\\*Block\\*\\*|Verdict[^\\n]{0,40}\\bBlock\\b", "match": "not_contains", "target": "last_message"},
+    {"name": "C3-review-reply", "type": "regex", "pattern": "\\S", "target": "last_message"},
+    {"name": "RO-no-checkout-mutation", "type": "tool_used", "tool": "Bash", "input_match": "\\bgit\\b[^\"]*(?<![\\w-])(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b", "min": 0, "max": 0},
+    {"name": "RO-no-shell-write", "type": "tool_used", "tool": "Bash", "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]", "min": 0, "max": 0},
+    {"name": "C4-no-eval-read", "type": "tool_used", "tool": "Read", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-grep", "type": "tool_used", "tool": "Grep", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-glob", "type": "tool_used", "tool": "Glob", "input_match": "evals/", "min": 0, "max": 0},
+    {"name": "C4-no-eval-bash", "type": "tool_used", "tool": "Bash", "input_match": "evals/", "min": 0, "max": 0}
+  ]
+}

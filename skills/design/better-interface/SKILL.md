@@ -31,6 +31,6 @@ Use `$paul-skills:interface-review <target>` in Codex or `/paul-skills:interface
 Continue into [audit-procedure.md](audit-procedure.md) for either of these routes:
 
 - **Current-screen audit:** examine a screen, flow, feature or repository as it is now. A repository audit does not attribute problems to a diff.
-- **Explicit change-review handoff:** the user invoked `interface-review`, and it supplied its resolved base, head, file inventory, affected surfaces and permitted verification. Keep its scope and change classifications. The cap and verdict cover only `Introduced` and `Regression`; pre-existing findings alone cannot block the change. Continue the handoff without another invocation.
+- **Explicit change-review handoff:** the user invoked `interface-review`, and it supplied its resolved base, head, file inventory, affected surfaces, domain map and permitted verification. Keep its scope and change classifications. The cap and verdict cover only `Introduced` and `Regression`; pre-existing findings alone cannot block the change. Continue the handoff without another invocation.
 
 Load the procedure only for the selected execution route, as a separate tool action before any artifact inspection. Do not batch that read with workspace reads, searches or domain calls: the procedure supplies the required owner-loading sequence. It owns severity, evidence, consolidation, coverage and the verdict. Domain rules remain with the six `better-*` owners; they are not duplicated here.

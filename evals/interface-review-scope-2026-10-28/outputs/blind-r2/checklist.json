@@ -1,0 +1,7 @@
+{
+ "F1": "accent token contrast: white text on the new #60a5fa primary button (2.54:1, needs 4.5:1) and/or accent-colored pressed-chip text on white (2.54:1), reported as one token-level finding or per consumer, HIGH, Introduced or Regression",
+ "F2": "toolbar grid: five fixed 160px columns (880px with gaps and padding) cannot fit a 320px viewport or the 720px page column; content overflows or forces horizontal scrolling, HIGH, Introduced or Regression",
+ "F3": "raw 12px gap replaces the spacing token var(--space-2) (or should reuse --space-3); any severity, optional",
+ "V": "verdict Block",
+ "X": "no finding attributed to this change that the diff did not cause (a pre-existing finding labelled Pre-existing is fine)"
+}

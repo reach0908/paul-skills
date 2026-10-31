@@ -1,0 +1,1505 @@
+{
+ "schemaVersion": 1,
+ "claudeVersion": "2.1.312",
+ "startedAt": "2026-10-27T23:38:48.786Z",
+ "durationSeconds": 268,
+ "costUsd": 4.165629,
+ "partial": false,
+ "suite": {
+  "root": "/private/tmp/irs/stage-branch-r2",
+  "ablation": "none",
+  "modelOverride": "claude-opus-5-5",
+  "threshold": 1,
+  "concurrency": 3,
+  "plugins": [
+   {
+    "name": "paul-skills",
+    "version": "0.5.0",
+    "path": "/private/tmp/irs/stage-branch-r2"
+   }
+  ]
+ },
+ "cases": [
+  {
+   "name": "color-layout-toolbar",
+   "dir": "evals/irscope/color-layout-toolbar",
+   "source": "mixed",
+   "promptMarkdown": "/paul-skills:interface-review main...HEAD 이 브랜치 변경을 읽기 전용으로 검토해줘. 소스 기반 리뷰이며 브라우저 검증은 요청하지 않아.",
+   "runsPerCase": 3,
+   "timeoutSeconds": 1800,
+   "maxTurns": 80,
+   "graders": [
+    {
+     "name": "S3-accessibility-loaded",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Skill",
+      "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-accessibility\"",
+      "min": 1
+     }
+    },
+    {
+     "name": "S3-layout-loaded",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Skill",
+      "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-layout\"",
+      "min": 1
+     }
+    },
+    {
+     "name": "S3-colors-loaded",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Skill",
+      "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-colors\"",
+      "min": 1
+     }
+    },
+    {
+     "name": "S3-contrast-finding",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "(60a5fa|accent)[\\s\\S]{0,800}(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)|(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)[\\s\\S]{0,800}(60a5fa|accent)",
+      "flags": "i",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "S3-reflow-finding",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "(toolbar|grid|160px)[\\s\\S]{0,800}\\b320(px)?\\b|\\b320(px)?\\b[\\s\\S]{0,800}(toolbar|grid|160px)",
+      "flags": "i",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "S3-verdict-block",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\bBlock\\b",
+      "flags": "",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "C3-review-reply",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\S",
+      "flags": "",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "RO-no-checkout-mutation",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "\\bgit\\b[^\"]*(?<![\\w-])(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "RO-no-shell-write",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-read",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Read",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-grep",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Grep",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-glob",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Glob",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-bash",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    }
+   ],
+   "arms": {
+    "with": [
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 34,
+      "costUsd": 0.7650242,
+      "judgeCostUsd": 0,
+      "durationSeconds": 148,
+      "startedAt": "2026-10-27T23:38:48.818Z",
+      "error": null,
+      "tracePath": "color-layout-toolbar/run0/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S3-accessibility-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-layout-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-colors-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-contrast-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (60a5fa|accent)[\\s\\S]{0,800}(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)|(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)[\\s\\S]{0,800}(60a5fa|accent)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-reflow-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (toolbar|grid|160px)[\\s\\S]{0,800}\\b320(px)?\\b|\\b320(px)?\\b[\\s\\S]{0,800}(toolbar|grid|160px)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-verdict-block",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\bBlock\\b",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 32,
+      "costUsd": 0.7277159999999999,
+      "judgeCostUsd": 0,
+      "durationSeconds": 146,
+      "startedAt": "2026-10-27T23:38:48.818Z",
+      "error": null,
+      "tracePath": "color-layout-toolbar/run1/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S3-accessibility-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-layout-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-colors-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-contrast-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (60a5fa|accent)[\\s\\S]{0,800}(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)|(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)[\\s\\S]{0,800}(60a5fa|accent)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-reflow-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (toolbar|grid|160px)[\\s\\S]{0,800}\\b320(px)?\\b|\\b320(px)?\\b[\\s\\S]{0,800}(toolbar|grid|160px)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-verdict-block",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\bBlock\\b",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 29,
+      "costUsd": 0.7466354000000001,
+      "judgeCostUsd": 0,
+      "durationSeconds": 143,
+      "startedAt": "2026-10-27T23:38:48.818Z",
+      "error": null,
+      "tracePath": "color-layout-toolbar/run2/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S3-accessibility-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-layout-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-colors-loaded",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 1x (expected 1..∞)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-contrast-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (60a5fa|accent)[\\s\\S]{0,800}(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)|(contrast|대비|\\d(\\.\\d+)?\\s*:\\s*1)[\\s\\S]{0,800}(60a5fa|accent)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-reflow-finding",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched (toolbar|grid|160px)[\\s\\S]{0,800}\\b320(px)?\\b|\\b320(px)?\\b[\\s\\S]{0,800}(toolbar|grid|160px)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S3-verdict-block",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\bBlock\\b",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     }
+    ]
+   },
+   "aggregates": {
+    "score": 1,
+    "passRate": 1
+   }
+  },
+  {
+   "name": "data-only-category-merge",
+   "dir": "evals/irscope/data-only-category-merge",
+   "source": "mixed",
+   "promptMarkdown": "/paul-skills:interface-review main...HEAD 이 브랜치 변경을 읽기 전용으로 검토해줘. 소스 기반 리뷰이며 브라우저 검증은 요청하지 않아.",
+   "runsPerCase": 3,
+   "timeoutSeconds": 1800,
+   "maxTurns": 80,
+   "graders": [
+    {
+     "name": "S1-no-domain-owner-skill",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Skill",
+      "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-(accessibility|layout|writing|typography|colors|ui)\"",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "S1-no-domain-owner-read",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Read",
+      "input_match": "better-(accessibility|layout|writing|typography|colors|ui)/SKILL\\.md",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "S1-no-ui-surface-stated",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "no UI surface",
+      "flags": "i",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "S1-no-clear-coverage",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\|\\s*`?Clear\\b",
+      "flags": "",
+      "match": "not_contains"
+     }
+    },
+    {
+     "name": "S1-no-block-verdict",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\*\\*Block\\*\\*|Verdict[^\\n]{0,40}\\bBlock\\b",
+      "flags": "",
+      "match": "not_contains"
+     }
+    },
+    {
+     "name": "C3-review-reply",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\S",
+      "flags": "",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "RO-no-checkout-mutation",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "\\bgit\\b[^\"]*(?<![\\w-])(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "RO-no-shell-write",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-read",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Read",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-grep",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Grep",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-glob",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Glob",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-bash",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    }
+   ],
+   "arms": {
+    "with": [
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 13,
+      "costUsd": 0.35886579999999996,
+      "judgeCostUsd": 0,
+      "durationSeconds": 57,
+      "startedAt": "2026-10-27T23:41:12.136Z",
+      "error": null,
+      "tracePath": "data-only-category-merge/run0/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched no UI surface",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 10,
+      "costUsd": 0.32863500000000007,
+      "judgeCostUsd": 0,
+      "durationSeconds": 47,
+      "startedAt": "2026-10-27T23:41:14.349Z",
+      "error": null,
+      "tracePath": "data-only-category-merge/run1/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched no UI surface",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 11,
+      "costUsd": 0.33669659999999996,
+      "judgeCostUsd": 0,
+      "durationSeconds": 73,
+      "startedAt": "2026-10-27T23:41:16.747Z",
+      "error": null,
+      "tracePath": "data-only-category-merge/run2/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched no UI surface",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     }
+    ]
+   },
+   "aggregates": {
+    "score": 1,
+    "passRate": 1
+   }
+  },
+  {
+   "name": "perf-only-home",
+   "dir": "evals/irscope/perf-only-home",
+   "source": "mixed",
+   "promptMarkdown": "/paul-skills:interface-review main...HEAD 이 브랜치 변경을 읽기 전용으로 검토해줘. 소스 기반 리뷰이며 브라우저 검증은 요청하지 않아.",
+   "runsPerCase": 3,
+   "timeoutSeconds": 1800,
+   "maxTurns": 80,
+   "graders": [
+    {
+     "name": "S1-no-domain-owner-skill",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Skill",
+      "input_match": "\"skill\"\\s*:\\s*\"(?:[\\w-]+:)?better-(accessibility|layout|writing|typography|colors|ui)\"",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "S1-no-domain-owner-read",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Read",
+      "input_match": "better-(accessibility|layout|writing|typography|colors|ui)/SKILL\\.md",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "S1-no-ui-surface-stated",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "no UI surface",
+      "flags": "i",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "S1-no-clear-coverage",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\|\\s*`?Clear\\b",
+      "flags": "",
+      "match": "not_contains"
+     }
+    },
+    {
+     "name": "S1-no-block-verdict",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\*\\*Block\\*\\*|Verdict[^\\n]{0,40}\\bBlock\\b",
+      "flags": "",
+      "match": "not_contains"
+     }
+    },
+    {
+     "name": "C3-review-reply",
+     "type": "regex",
+     "weight": 1,
+     "config": {
+      "target": "last_message",
+      "pattern": "\\S",
+      "flags": "",
+      "match": "contains"
+     }
+    },
+    {
+     "name": "RO-no-checkout-mutation",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "\\bgit\\b[^\"]*(?<![\\w-])(add|commit|checkout|switch|stash|reset|restore|apply|rm|mv|clean)\\b",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "RO-no-shell-write",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "(^|[^\\w-])(tee|rm|mv|cp|touch|chmod|mkdir)\\s|\\bsed\\s+-i\\b|[^-=\\d&]>\\s*[\\w./]",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-read",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Read",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-grep",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Grep",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-glob",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Glob",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    },
+    {
+     "name": "C4-no-eval-bash",
+     "type": "tool_used",
+     "weight": 1,
+     "config": {
+      "tool": "Bash",
+      "input_match": "evals/",
+      "min": 0,
+      "max": 0
+     }
+    }
+   ],
+   "arms": {
+    "with": [
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 8,
+      "costUsd": 0.3055308,
+      "judgeCostUsd": 0,
+      "durationSeconds": 60,
+      "startedAt": "2026-10-27T23:42:00.954Z",
+      "error": null,
+      "tracePath": "perf-only-home/run0/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched no UI surface",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 0.9166666666666666,
+      "passed": false,
+      "turns": 8,
+      "costUsd": 0.2993884,
+      "judgeCostUsd": 0,
+      "durationSeconds": 46,
+      "startedAt": "2026-10-27T23:42:09.210Z",
+      "error": null,
+      "tracePath": "perf-only-home/run1/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": false,
+        "weight": 1,
+        "explanation": "pattern not found in last_message",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     },
+     {
+      "score": 1,
+      "passed": true,
+      "turns": 8,
+      "costUsd": 0.2971368,
+      "judgeCostUsd": 0,
+      "durationSeconds": 46,
+      "startedAt": "2026-10-27T23:42:29.985Z",
+      "error": null,
+      "tracePath": "perf-only-home/run2/trace.jsonl",
+      "skippedPaidGraders": false,
+      "graders": [
+       {
+        "name": "S1-no-domain-owner-skill",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Skill called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-domain-owner-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-ui-surface-stated",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched no UI surface",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-clear-coverage",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "S1-no-block-verdict",
+        "passed": true,
+        "weight": 1,
+        "explanation": "pattern absent as expected",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C3-review-reply",
+        "passed": true,
+        "weight": 1,
+        "explanation": "matched \\S",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-checkout-mutation",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "RO-no-shell-write",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-read",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Read called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-grep",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Grep called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-glob",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Glob called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       },
+       {
+        "name": "C4-no-eval-bash",
+        "passed": true,
+        "weight": 1,
+        "explanation": "Bash called 0x (expected 0..0)",
+        "withOnly": false,
+        "scored": true
+       }
+      ]
+     }
+    ]
+   },
+   "aggregates": {
+    "score": 0.9722222222222222,
+    "passRate": 0.6666666666666666
+   }
+  }
+ ],
+ "aggregates": {
+  "casesTotal": 3,
+  "casesPassed": 2,
+  "overallScore": 0.9907407407407408,
+  "overallPassRate": 0.8888888888888888
+ }
+}

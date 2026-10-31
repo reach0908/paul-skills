@@ -1,0 +1,131 @@
+.button {
+  font: 500 var(--text-sm) / 1.4 var(--font-body);
+  padding: var(--space-2) var(--space-4);
+  border: 1px solid transparent;
+  border-radius: var(--radius-md);
+  cursor: pointer;
+}
+
+.button-primary {
+  background: var(--color-accent);
+  color: #ffffff;
+}
+
+.button-ghost {
+  background: transparent;
+  color: var(--color-text);
+  border-color: var(--color-border);
+}
+
+.button:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+.chips {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--space-2);
+  margin: 0;
+  padding: var(--space-3) var(--space-4);
+  list-style: none;
+}
+
+.chip {
+  font: 500 var(--text-sm) / 1.4 var(--font-body);
+  padding: var(--space-1) var(--space-3);
+  border: 1px solid var(--color-border);
+  border-radius: var(--radius-full);
+  background: var(--color-surface);
+  color: var(--color-text);
+  cursor: pointer;
+}
+
+.chip[aria-pressed='true'] {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.chip:focus-visible {
+  outline: 2px solid var(--color-text);
+  outline-offset: 2px;
+}
+.home {
+  max-width: 720px;
+  margin: 0 auto;
+  font-family: var(--font-body);
+  color: var(--color-text);
+  background: var(--color-surface);
+}
+
+.home-title {
+  margin: 0;
+  padding: var(--space-6) var(--space-4) var(--space-2);
+  font-size: var(--text-xl);
+  line-height: 1.25;
+}
+import { useEffect, useState } from 'react';
+import { fetchCategories, fetchFeed, type Article, type Category } from '../api/feed';
+import { CategoryChips } from '../components/CategoryChips';
+import { FeedList } from '../components/FeedList';
+import { Toolbar } from '../components/Toolbar';
+import './Home.css';
+
+const FILTERS = ['Latest', 'Top', 'Saved', 'Following'];
+
+export function Home() {
+  const [category, setCategory] = useState('all');
+  const [filter, setFilter] = useState('Latest');
+  const [reloadKey, setReloadKey] = useState(0);
+  const [categories, setCategories] = useState<Category[]>([]);
+  const [items, setItems] = useState<Article[]>([]);
+  const [status, setStatus] = useState<'loading' | 'ready' | 'error'>('loading');
+
+  useEffect(() => {
+    let cancelled = false;
+    async function load() {
+      setStatus('loading');
+      try {
+        const nextCategories = await fetchCategories();
+        const nextItems = await fetchFeed(category);
+        if (cancelled) return;
+        setCategories(nextCategories);
+        setItems(nextItems);
+        setStatus('ready');
+      } catch {
+        if (!cancelled) setStatus('error');
+      }
+    }
+    load();
+    return () => {
+      cancelled = true;
+    };
+  }, [category, reloadKey]);
+
+  const visible = items
+    .filter((item) => filter !== 'Saved' || item.score > 0)
+    .sort((a, b) => (filter === 'Top' ? b.score - a.score : b.publishedAt.localeCompare(a.publishedAt)));
+
+  return (
+    <main className="home">
+      <h1 className="home-title">Signal feed</h1>
+      <Toolbar
+        filters={FILTERS}
+        active={filter}
+        onSelect={setFilter}
+        onRefresh={() => setReloadKey((key) => key + 1)}
+      />
+      <CategoryChips categories={categories} selected={category} onSelect={setCategory} />
+      {status === 'loading' && <p role="status">Loading articles…</p>}
+      {status === 'error' && (
+        <p role="alert">
+          Couldn’t load articles. Check your connection, then{' '}
+          <button type="button" onClick={() => setReloadKey((key) => key + 1)}>
+            try again
+          </button>
+          .
+        </p>
+      )}
+      {status === 'ready' && <FeedList items={visible} />}
+    </main>
+  );
+}

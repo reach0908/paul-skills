@@ -10,7 +10,7 @@ State the exact scope, stack and styling conventions, the project convention doc
 | --- | --- | --- |
 | Accessibility | Files, components, states or checks | Findings count or `Clear` |
 
-Include every domain listed under **Use domain skills as the sources of truth**. In each evidence cell, identify the successful owner load and the artifact checks separately. A skill load establishes which rules were used; it does not establish that the screen passed them. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why. A claimed load must have a successful tool result.
+Include every domain listed under **Use domain skills as the sources of truth**. In each evidence cell, identify the successful owner load and the artifact checks separately. A skill load establishes which rules were used; it does not establish that the screen passed them. `Clear` means inspected with no actionable finding; `Not reviewed` must explain why. A domain a change-review domain map skips keeps that map's `Not reviewed: no <surface> in the change scope`. A claimed load must have a successful tool result.
 
 ## Findings
 

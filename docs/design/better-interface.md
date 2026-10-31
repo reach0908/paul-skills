@@ -15,9 +15,16 @@ Type `/better-interface`, or the [agent](https://www.aihero.dev/ai-coding-dictio
 | Review the current screen, flow or repository interface | Review across the six domains |
 | Review what uncommitted, staged, branch, PR or commit-range changes caused | Return the explicit [interface-review](https://github.com/reach0908/paul-skills/blob/main/docs/design/interface-review.md) command with that target and a brief reason; scope resolution starts after you invoke it |
 
-## One report, six owners
+## One report, one owner per domain
 
-All six domain owners are loaded before the surface or optional first-impression reference is inspected, including for a one-attribute change or missing screenshot. The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
+The owners load before the surface or optional first-impression reference is inspected:
+
+| Review | Owners loaded |
+| --- | --- |
+| Current screen, flow or repository | All six, including for a one-attribute change or missing screenshot |
+| Change review from `interface-review` | Those its domain map selects from the changed lines; each skipped domain is reported as not reviewed, with the change it lacks |
+
+The report separates successful owner loads from artifact verification. An unsuccessful load leaves the audit incomplete and prevents approval. Each loaded domain must then have evidence or a named verification limit. Findings with one root cause are combined; independent causes remain separate even when they affect the same component. The result includes coverage, severity, a proposed fix and a verdict, with a cap of 15 findings.
 
 ## Common questions
 
@@ -45,7 +52,7 @@ No. Layout supplies its protocol and the cause keeps its existing owner. AI pred
 
 ## It's working if
 
-- All six domains have evidence or a clear limit in the report.
+- Every domain has evidence or a clear limit in the report: all six for a screen audit, and the mapped owners plus a named reason for each skipped one in a change review.
 - The report distinguishes confirmed defects from taste and untested behavior.
 - An unnamed change request ends with the correct invocation instead of a guessed diff review.
 
