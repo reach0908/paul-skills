@@ -1,0 +1,71 @@
+test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) ... test_clear_falls_back_after_tput_failure (wizard_tests.WizardTemplateTests) ... FAIL
+test_edit_during_prompt_does_not_replace_running_stages (wizard_tests.WizardTemplateTests) ... ok
+test_enter_keeps_plain_double_quoted_value_without_quotes (wizard_tests.WizardTemplateTests) ... FAIL
+test_write_is_available_in_later_stage_and_preserves_file_contract (wizard_tests.WizardTemplateTests) ... FAIL
+
+======================================================================
+FAIL: test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) (value='"$OTHER"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 38, in test_ambiguous_double_quotes_are_rejected_without_execution
+    self.assertNotEqual(result.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) (value='"$(touch injected)"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 38, in test_ambiguous_double_quotes_are_rejected_without_execution
+    self.assertNotEqual(result.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) (value='"a\\nb"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 38, in test_ambiguous_double_quotes_are_rejected_without_execution
+    self.assertNotEqual(result.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) (value='"a"b"')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 38, in test_ambiguous_double_quotes_are_rejected_without_execution
+    self.assertNotEqual(result.returncode, 0)
+AssertionError: 0 == 0
+
+======================================================================
+FAIL: test_clear_falls_back_after_tput_failure (wizard_tests.WizardTemplateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 58, in test_clear_falls_back_after_tput_failure
+    self.assertEqual(process.returncode, 0, 'terminal clearing exited the script')
+AssertionError: 1 != 0 : terminal clearing exited the script
+
+======================================================================
+FAIL: test_enter_keeps_plain_double_quoted_value_without_quotes (wizard_tests.WizardTemplateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 31, in test_enter_keeps_plain_double_quoted_value_without_quotes
+    self.assertEqual((self.root / '.env').read_text(), "EXAMPLE_VALUE='hello world'\n")
+AssertionError: 'EXAMPLE_VALUE=\'"hello world"\'\n' != "EXAMPLE_VALUE='hello world'\n"
+- EXAMPLE_VALUE='"hello world"'
+?                -           -
++ EXAMPLE_VALUE='hello world'
+
+
+======================================================================
+FAIL: test_write_is_available_in_later_stage_and_preserves_file_contract (wizard_tests.WizardTemplateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 46, in test_write_is_available_in_later_stage_and_preserves_file_contract
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : /bin/bash: line 190: EXAMPLE_VALUE: unbound variable
+
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.327s
+
+FAILED (failures=7)
+BASELINE_SUCCESS False

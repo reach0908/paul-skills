@@ -2,6 +2,8 @@
 
 Build several versions of one component along a chosen design axis in its real page. It presents tradeoffs and leaves the choice with the user.
 
+The chosen axis labels a grouped picker beside the piece. At narrower widths, the same choices appear in a select above it with the browser's native keyboard controls. The URL preserves the selected variant across layout changes.
+
 ## When to reach for it
 
 You invoke this by typing `/variant`; the agent will not reach for it on its own.
@@ -22,6 +24,7 @@ No. A comparison can support keeping the original. Switching appearances must pr
 
 - Variants differ on a named axis while sharing the same accessibility floor.
 - You can switch variants at real size without losing task state or hiding focused controls behind the picker.
+- The picker stays usable beside the piece or above it after resizing. Outside editable controls and the native select, arrow keys cross choices and `H` hides or restores it.
 - The tradeoff table identifies costs without declaring an unsolicited winner.
 
 ## Where it fits

@@ -1,0 +1,552 @@
+{
+  "status": "failed",
+  "mutation": "missing-option",
+  "results": [
+    {
+      "skill": "state-machine",
+      "width": 1280,
+      "height": 800,
+      "focusPath": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "state": "choice-0"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "state": "choice-1"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "state": "choice-0"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "Tab to second list button, Enter",
+      "visited": [
+        "choice-2",
+        "choice-3",
+        "choice-4",
+        "choice-5",
+        "choice-6",
+        "choice-7",
+        "choice-8",
+        "choice-9",
+        "choice-10",
+        "choice-11",
+        "choice-12",
+        "choice-13",
+        "choice-14",
+        "choice-15",
+        "choice-16",
+        "choice-17",
+        "choice-18",
+        "choice-19",
+        "choice-20",
+        "choice-21",
+        "choice-22",
+        "choice-23",
+        "choice-24",
+        "choice-25",
+        "choice-26",
+        "choice-27",
+        "choice-28",
+        "choice-29",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 1280,
+        "client": 1280,
+        "stage": {
+          "x": 434,
+          "y": 24,
+          "width": 644,
+          "height": 217.875,
+          "top": 24,
+          "right": 1078,
+          "bottom": 241.875,
+          "left": 434
+        }
+      },
+      "listScroll": 273,
+      "selected": "choice-29",
+      "status": "passed"
+    },
+    {
+      "skill": "state-machine",
+      "width": 390,
+      "height": 844,
+      "focusPath": [],
+      "status": "failed",
+      "error": "Error: wrong option count"
+    },
+    {
+      "skill": "state-machine",
+      "width": 320,
+      "height": 450,
+      "focusPath": [
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "INPUT",
+          "id": "draft",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "native type-ahead Data 2:, Enter, Escape",
+      "nativeEvents": [
+        {
+          "type": "input",
+          "value": "choice-1",
+          "trusted": true
+        },
+        {
+          "type": "change",
+          "value": "choice-1",
+          "trusted": true
+        }
+      ],
+      "visited": [
+        "choice-2",
+        "choice-3",
+        "choice-4",
+        "choice-5",
+        "choice-6",
+        "choice-7",
+        "choice-8",
+        "choice-9",
+        "choice-10",
+        "choice-11",
+        "choice-12",
+        "choice-13",
+        "choice-14",
+        "choice-15",
+        "choice-16",
+        "choice-17",
+        "choice-18",
+        "choice-19",
+        "choice-20",
+        "choice-21",
+        "choice-22",
+        "choice-23",
+        "choice-24",
+        "choice-25",
+        "choice-26",
+        "choice-27",
+        "choice-28",
+        "choice-29",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 320,
+        "client": 320,
+        "stage": {
+          "x": 24,
+          "y": 73,
+          "width": 272,
+          "height": 273.875,
+          "top": 73,
+          "right": 296,
+          "bottom": 346.875,
+          "left": 24
+        }
+      },
+      "selected": "choice-1",
+      "status": "passed"
+    },
+    {
+      "skill": "state-machine",
+      "width": 640,
+      "height": 400,
+      "focusPath": [
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "INPUT",
+          "id": "draft",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "native type-ahead Data 2:, Enter, Escape",
+      "nativeEvents": [
+        {
+          "type": "input",
+          "value": "choice-1",
+          "trusted": true
+        },
+        {
+          "type": "change",
+          "value": "choice-1",
+          "trusted": true
+        }
+      ],
+      "visited": [
+        "choice-2",
+        "choice-3",
+        "choice-4",
+        "choice-5",
+        "choice-6",
+        "choice-7",
+        "choice-8",
+        "choice-9",
+        "choice-10",
+        "choice-11",
+        "choice-12",
+        "choice-13",
+        "choice-14",
+        "choice-15",
+        "choice-16",
+        "choice-17",
+        "choice-18",
+        "choice-19",
+        "choice-20",
+        "choice-21",
+        "choice-22",
+        "choice-23",
+        "choice-24",
+        "choice-25",
+        "choice-26",
+        "choice-27",
+        "choice-28",
+        "choice-29",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 640,
+        "client": 640,
+        "stage": {
+          "x": 24,
+          "y": 73,
+          "width": 592,
+          "height": 217.875,
+          "top": 73,
+          "right": 616,
+          "bottom": 290.875,
+          "left": 24
+        }
+      },
+      "selected": "choice-1",
+      "status": "passed"
+    },
+    {
+      "skill": "variant",
+      "width": 1280,
+      "height": 800,
+      "focusPath": [
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "variant": "choice-0"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "variant": "choice-1"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "",
+          "data": {
+            "variant": "choice-0"
+          },
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "Tab to second list button, Enter",
+      "visited": [
+        "choice-2",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 1280,
+        "client": 1280,
+        "stage": {
+          "x": 434,
+          "y": 24,
+          "width": 644,
+          "height": 217.875,
+          "top": 24,
+          "right": 1078,
+          "bottom": 241.875,
+          "left": 434
+        }
+      },
+      "listScroll": 0,
+      "selected": "choice-2",
+      "status": "passed"
+    },
+    {
+      "skill": "variant",
+      "width": 390,
+      "height": 844,
+      "focusPath": [
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "INPUT",
+          "id": "draft",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "native type-ahead Density 2:, Enter, Escape",
+      "nativeEvents": [
+        {
+          "type": "input",
+          "value": "choice-1",
+          "trusted": true
+        },
+        {
+          "type": "change",
+          "value": "choice-1",
+          "trusted": true
+        }
+      ],
+      "visited": [
+        "choice-2",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 390,
+        "client": 390,
+        "stage": {
+          "x": 24,
+          "y": 73,
+          "width": 342,
+          "height": 238.875,
+          "top": 73,
+          "right": 366,
+          "bottom": 311.875,
+          "left": 24
+        }
+      },
+      "selected": "choice-1",
+      "status": "passed"
+    },
+    {
+      "skill": "variant",
+      "width": 320,
+      "height": 450,
+      "focusPath": [
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "INPUT",
+          "id": "draft",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "native type-ahead Density 2:, Enter, Escape",
+      "nativeEvents": [
+        {
+          "type": "input",
+          "value": "choice-1",
+          "trusted": true
+        },
+        {
+          "type": "change",
+          "value": "choice-1",
+          "trusted": true
+        }
+      ],
+      "visited": [
+        "choice-2",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 320,
+        "client": 320,
+        "stage": {
+          "x": 24,
+          "y": 73,
+          "width": 272,
+          "height": 273.875,
+          "top": 73,
+          "right": 296,
+          "bottom": 346.875,
+          "left": 24
+        }
+      },
+      "selected": "choice-1",
+      "status": "passed"
+    },
+    {
+      "skill": "variant",
+      "width": 640,
+      "height": 400,
+      "focusPath": [
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "INPUT",
+          "id": "draft",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "SELECT",
+          "id": "",
+          "data": {},
+          "outline": "solid"
+        },
+        {
+          "tag": "BUTTON",
+          "id": "save",
+          "data": {},
+          "outline": "solid"
+        }
+      ],
+      "initialFocus": "BODY",
+      "activation": "native type-ahead Density 2:, Enter, Escape",
+      "nativeEvents": [
+        {
+          "type": "input",
+          "value": "choice-1",
+          "trusted": true
+        },
+        {
+          "type": "change",
+          "value": "choice-1",
+          "trusted": true
+        }
+      ],
+      "visited": [
+        "choice-2",
+        "choice-0",
+        "choice-1"
+      ],
+      "geometry": {
+        "scroll": 640,
+        "client": 640,
+        "stage": {
+          "x": 24,
+          "y": 73,
+          "width": 592,
+          "height": 217.875,
+          "top": 73,
+          "right": 616,
+          "bottom": 290.875,
+          "left": 24
+        }
+      },
+      "selected": "choice-1",
+      "status": "passed"
+    }
+  ],
+  "errors": [],
+  "browser": "152.0.7977.82",
+  "observedAt": "2026-10-21T18:16:07.121Z",
+  "limit": "Extracted HTML/CSS and authored interaction adapter; desktop Chrome, no independent agent, human, physical-device or browser-zoom trial",
+  "cliExitCode": 0
+}

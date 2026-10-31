@@ -1,0 +1,158 @@
+
+> paul-skills@0.4.6 check:local
+> npm run check && npm run test:graders && npm run test:pm-beta && git diff --check
+
+
+> paul-skills@0.4.6 check
+> npm run check-plugin-version && python3 scripts/check-skills.py && npm test
+
+
+> paul-skills@0.4.6 check-plugin-version
+> node scripts/sync-plugin-version.mjs --check
+
+Plugin and lock metadata match package version 0.4.6
+61 skill records; 44 promoted paths; provenance and invocation consistent
+
+> paul-skills@0.4.6 test
+> PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -v
+
+test_ambiguous_inventory_leaves_no_output (test_design_trial.DesignTrialTests) ... ok
+test_arms_share_task_but_not_skills (test_design_trial.DesignTrialTests) ... ok
+test_existing_destination_preserved (test_design_trial.DesignTrialTests) ... ok
+test_hash_mismatch_leaves_no_output (test_design_trial.DesignTrialTests) ... ok
+test_missing_candidate_leaves_no_output (test_design_trial.DesignTrialTests) ... ok
+test_promoted_candidate_uses_registered_location (test_design_trial.DesignTrialTests) ... ok
+test_source_uses_commit_not_dirty_checkout (test_design_trial.DesignTrialTests) ... ok
+test_fresh_install_is_idempotent_and_links_support_files (test_dev_links.DevelopmentLinksTests) ... ok
+test_late_destination_collision_preserves_both_destinations (test_dev_links.DevelopmentLinksTests) ... ok
+test_calibration_counts_false_pass_separately (test_native_eval.Calibration) ... ok
+test_cross_judge_majority_feeds_calibrate (test_native_eval.Calibration) ... ok
+test_generated_cases_reproduce_artifacts_and_rewrite_last_message_targets (test_native_eval.Calibration) ... ok
+test_interface_fixture_separates_index_from_working_tree (test_native_eval.Fixtures) ... ok
+test_research_fixture_supplies_the_four_sources (test_native_eval.Fixtures) ... ok
+test_calibration_is_tied_to_the_judge_and_the_exact_criteria (test_native_eval.Records) ... ok
+test_human_failure_overrides_passing_graders (test_native_eval.Records) ... ok
+test_human_review_completes_a_run (test_native_eval.Records) ... ok
+test_plugin_only_criteria_are_not_applicable_in_the_no_plugin_arm (test_native_eval.Records) ... ok
+test_required_failure_is_not_offset_and_unjudged_stays_unknown (test_native_eval.Records) ... ok
+test_single_arm_group_reports_no_skill_comparison_as_not_applicable (test_native_eval.Records) ... ok
+test_skill_changed_since_rubric_is_flagged (test_native_eval.Records) ... ok
+test_record_flags_grants_that_differ_from_the_suite (test_native_eval.Staging) ... ok
+test_stage_copies_only_manifest_skills_and_the_eval_dir (test_native_eval.Staging) ... ok
+test_stage_refuses_to_replace_an_ordinary_directory (test_native_eval.Staging) ... ok
+test_diverging_shared_fixture_is_reported (test_native_eval.SuiteChecks) ... ok
+test_grader_on_withheld_tool_is_reported (test_native_eval.SuiteChecks) ... ok
+test_regex_and_input_controls_hold (test_native_eval.SuiteChecks) ... ok
+test_regex_only_criterion_that_passes_known_bad_is_reported (test_native_eval.SuiteChecks) ... ok
+test_regex_that_fails_known_good_is_reported (test_native_eval.SuiteChecks) ... ok
+test_silently_dropped_criterion_is_reported (test_native_eval.SuiteChecks) ... ok
+test_suite_is_consistent (test_native_eval.SuiteChecks) ... ok
+test_ungraded_required_criterion_is_reported (test_native_eval.SuiteChecks) ... ok
+test_unmapped_grader_name_is_reported (test_native_eval.SuiteChecks) ... ok
+test_wrong_input_match_is_reported (test_native_eval.SuiteChecks) ... ok
+test_zero_call_grader_without_min_is_reported (test_native_eval.SuiteChecks) ... ok
+test_fix_before_test_fails_the_order (test_native_eval.TraceChecks) ... ok
+test_import_text_does_not_count_as_a_source_change (test_native_eval.TraceChecks) ... ok
+test_llm_grader_without_a_fail_artifact_is_rejected (test_native_eval.TraceChecks) ... ok
+test_missing_trace_is_unknown_not_fail (test_native_eval.TraceChecks) ... ok
+test_near_miss_fails_when_the_skill_loads (test_native_eval.TraceChecks) ... ok
+test_positive_file_change_grader_is_rejected (test_native_eval.TraceChecks) ... ok
+test_reread_may_follow_an_existence_check (test_native_eval.TraceChecks) ... ok
+test_unpaired_zero_call_file_grader_is_rejected (test_native_eval.TraceChecks) ... ok
+test_write_counts_as_a_card_change (test_native_eval.TraceChecks) ... ok
+test_publishes_only_version_and_rerun_preserves_tag (test_release_tag.ReleaseTagTests) ... ok
+test_check_does_not_start_research (test_research_aside.AsideResearchTests) ... ok
+test_default_effort_preserves_user_configuration (test_research_aside.AsideResearchTests) ... ok
+test_execution_failure_is_visible (test_research_aside.AsideResearchTests) ... ok
+test_failed_version_check_stops_before_discovery (test_research_aside.AsideResearchTests) ... ok
+test_followup_rejects_check_and_explicit_effort (test_research_aside.AsideResearchTests) ... ok
+test_invalid_brief_never_launches_aside (test_research_aside.AsideResearchTests) ... ok
+test_invalid_session_never_starts_a_new_investigation (test_research_aside.AsideResearchTests) ... ok
+test_missing_cli_preserves_brief_and_reports_failure (test_research_aside.AsideResearchTests) ... ok
+test_prompt_is_one_literal_argument_and_report_streams (test_research_aside.AsideResearchTests) ... ok
+test_resume_uses_known_session_without_overriding_settings (test_research_aside.AsideResearchTests) ... ok
+test_running_followup_preserves_literal_prompt (test_research_aside.AsideResearchTests) ... ok
+test_deferred_work_does_not_disappear (test_upstream_compare.CompareTests) ... ok
+test_execution_mode_change_is_detected (test_upstream_compare.CompareTests) ... ok
+test_missing_repository_base_preserves_skill_results (test_upstream_compare.CompareTests) ... ok
+test_missing_repository_review_is_explicit (test_upstream_compare.CompareTests) ... ok
+test_missing_source_does_not_hide_pending_decision (test_upstream_compare.CompareTests) ... ok
+test_missing_source_path_is_unknown_and_rename_is_visible (test_upstream_compare.CompareTests) ... ok
+test_missing_target_preserves_pending_decisions (test_upstream_compare.CompareTests) ... ok
+test_multiple_sources_are_independent (test_upstream_compare.CompareTests) ... ok
+test_nested_repository_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_path_escape_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_ref_names_are_not_accepted_as_pins (test_upstream_compare.CompareTests) ... ok
+test_same_head_does_not_hide_local_edit (test_upstream_compare.CompareTests) ... ok
+test_symlink_is_rejected_without_reading_target (test_upstream_compare.CompareTests) ... ok
+test_three_way_preserves_local_and_catches_support_changes (test_upstream_compare.CompareTests) ... ok
+test_unchanged_is_read_only (test_upstream_compare.CompareTests) ... ok
+test_uninitialized_local_gitlink_is_rejected (test_upstream_compare.CompareTests) ... ok
+test_unknown_history_is_not_unchanged (test_upstream_compare.CompareTests) ... ok
+test_ambiguous_double_quotes_are_rejected_without_execution (test_wizard_template.WizardTemplateTests) ... ok
+test_clear_falls_back_after_tput_failure (test_wizard_template.WizardTemplateTests) ... ok
+test_edit_during_prompt_does_not_replace_running_stages (test_wizard_template.WizardTemplateTests) ... ok
+test_enter_keeps_plain_double_quoted_value_without_quotes (test_wizard_template.WizardTemplateTests) ... ok
+test_write_is_available_in_later_stage_and_preserves_file_contract (test_wizard_template.WizardTemplateTests) ... ok
+
+----------------------------------------------------------------------
+Ran 78 tests in 16.564s
+
+OK
+
+> paul-skills@0.4.6 test:graders
+> PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s evals/design-domain-entry-repair-v4-2026-10-14 -p test_order_grader.py -v
+
+test_guarded_optional_absence_is_not_a_missing_required_read (test_order_grader.AbsentDocControls) ... ok
+test_no_match_is_not_read_error (test_order_grader.ExitControls) ... ok
+test_requires_matching_call_path_and_full_body (test_order_grader.NativeTraceControls) ... ok
+test_claude_line_prefix_preserves_blank_lines_and_indentation (test_order_grader.NumberedReadControls) ... ok
+test_empty_discovery_after_verified_read_is_not_a_read_error (test_order_grader.OptionalDiscoveryControls) ... ok
+test_relative_reference_needs_call_cwd_and_full_body (test_order_grader.ReferenceReadControls) ... ok
+test_unpassed_shell_parameter_is_a_read_failure (test_order_grader.ReferenceReadControls) ... ok
+test_relative_route_requires_native_cwd_command_and_complete_output (test_order_grader.RelativeRouteControls) ... ok
+test_only_matching_readonly_replay_can_explain_exit_one (test_order_grader.ReplayExitControls) ... ok
+test_chained_status_cannot_hide_behind_router_path (test_order_grader.RouteOrderControls) ... ok
+test_context_memory_is_allowed (test_order_grader.RouteOrderControls) ... ok
+test_diff_stat_counts_as_inspection (test_order_grader.RouteOrderControls) ... ok
+test_execution_procedure_is_not_entry (test_order_grader.RouteOrderControls) ... ok
+test_explicit_domain_may_be_injected_or_read (test_order_grader.RouteOrderControls) ... ok
+test_generic_domain_read_is_not_route (test_order_grader.RouteOrderControls) ... ok
+test_memory_cannot_mask_status (test_order_grader.RouteOrderControls) ... ok
+test_other_skill_cannot_hide_in_router_command (test_order_grader.RouteOrderControls) ... ok
+test_partial_domain_read_cannot_hide_in_router_command (test_order_grader.RouteOrderControls) ... ok
+test_repository_discovery_counts (test_order_grader.RouteOrderControls) ... ok
+test_router_read (test_order_grader.RouteOrderControls) ... ok
+test_staged_requires_index_content_not_working_copy (test_order_grader.ScopeControls) ... ok
+test_working_requires_head_and_untracked_inventory (test_order_grader.ScopeControls) ... ok
+test_diff_option_separator_is_supported (test_order_grader.SourceReadControls) ... ok
+test_diff_prefix_is_decoded_exactly (test_order_grader.SourceReadControls) ... ok
+test_partial_diff_is_not_full_body (test_order_grader.SourceReadControls) ... ok
+test_relative_read_needs_matching_cwd_and_body (test_order_grader.SourceReadControls) ... ok
+
+----------------------------------------------------------------------
+Ran 26 tests in 0.090s
+
+OK
+
+> paul-skills@0.4.6 test:pm-beta
+> PYTHONDONTWRITEBYTECODE=1 python3 evals/product-management-beta/verify.py && PYTHONDONTWRITEBYTECODE=1 python3 evals/pm-conversation-beta/verify.py && PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s evals/product-management-beta -p test_verify.py -v
+
+Verified historical evidence at aa676799bb33ed0ec311a5cd7b6c3c9e6e7d8f20: 11 trial records, five identical-input pairs, one repair, four immutable skill snapshots and direct-source/MIT hashes.
+Current skill equality: not requested. Behavior verdicts remain evaluator-owned.
+151 public artifacts, 8 recorded redactions, 1 maintenance amendments and 5 skill trees verified; no behavior verdict inferred
+test_current_equality_is_an_explicit_separate_failure (test_verify.EvidenceControls) ... ok
+test_current_skill_drift_is_rejected_by_later_evidence (test_verify.EvidenceControls) ... ok
+test_historical_evidence_survives_current_skill_changes (test_verify.EvidenceControls) ... ok
+test_historical_origin_revision_corruption_is_rejected (test_verify.EvidenceControls) ... ok
+test_historical_output_corruption_is_rejected (test_verify.EvidenceControls) ... ok
+test_historical_snapshot_corruption_is_rejected (test_verify.EvidenceControls) ... ok
+test_original_manifest_corruption_is_rejected (test_verify.EvidenceControls) ... ok
+test_public_artifact_corruption_is_rejected (test_verify.EvidenceControls) ... ok
+test_public_copy_ledger_mismatch_is_rejected (test_verify.EvidenceControls) ... ok
+test_unrecorded_public_copy_change_is_rejected (test_verify.EvidenceControls) ... ok
+
+----------------------------------------------------------------------
+Ran 10 tests in 2.290s
+
+OK

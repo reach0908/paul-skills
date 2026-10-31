@@ -5,7 +5,7 @@
       "repository": "https://github.com/mattpocock/skills",
       "ref": "main",
       "license": "MIT",
-      "repositoryReview": "b0618bc436ad893b3c5e84e55fba86586d34a404"
+      "repositoryReview": "5beb35b040e3de97e54fa9e386d7e42d15c295c2"
     },
     "paul-loop": {
       "repository": "https://github.com/reach0908/paul-loop",
@@ -29,12 +29,12 @@
     },
     "gstack": {
       "repository": "https://github.com/garrytan/gstack",
-      "ref": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+      "ref": "main",
       "license": "MIT"
     },
     "phuryn-pm-skills": {
       "repository": "https://github.com/phuryn/pm-skills",
-      "ref": "c68487d721e419ec87af1ae6412a842978eab785",
+      "ref": "main",
       "license": "MIT"
     }
   },
@@ -48,8 +48,8 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/ask-matt",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:654c276d311f2661a81fef6a30977eb209a6ee0c69e3c5aa05dff7bc31761d2b",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:11cbe491b3030a0457604d1535347e83b4dd4fbe3b9361dd47807ee6dd88a802",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -148,6 +148,15 @@
               "decision": "keep-local",
               "reason": "Route merge-readiness judgements to code-review and component reuse to build-design, matching their updated descriptions. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve optional PM beta routes, promoted design roles, explicit change-review handoff, component-reuse and merge-readiness routes.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -163,8 +172,8 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/code-review",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:9e665dc079428e61ad808ae4e7d055ec346b832ab21b9a0f47a49b6f5af600f1",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:87b50c458c1525dabc753e5f9631ae88c7e49914c7d416f58e3e91e72e1d2f9d",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -182,6 +191,15 @@
               "decision": "keep-local",
               "reason": "Name merge-readiness judgements in the description and add a Merge step (target, HEAD and merge-base SHAs, a ref-preserving merge-tree conflict check, a verdict citing both axes) after native evals showed the skill unloaded for \"can this branch merge\" requests and, once loaded by the description alone, dropping the conflict report. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve merge-readiness trigger and the existing Standards/Spec plus merge-tree report; upstream body is unchanged.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -197,7 +215,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/codebase-design",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:08b0266126c6ecbb19821d0aa5d75176af0731158aef3f2f4eb2672d54c4a70b",
           "decisions": [
             {
@@ -222,7 +240,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/diagnosing-bugs",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:feeb72cb358147a2a7f78a15934adef4a34aeddd3291ea3c23d3f99d447dcf91",
           "decisions": [
             {
@@ -247,7 +265,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/domain-modeling",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:93ffec1622982bc198c4e812bd7de35f12bafcd5b7018b70be84d232e59f43dc",
           "decisions": [
             {
@@ -272,7 +290,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/grill-with-docs",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:d8aea758e62aa83a2f575a1197d0aeaa85b5c98224ca81f162e0e5d5f41b8fce",
           "decisions": [
             {
@@ -297,7 +315,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/implement",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:1990843a24edd9c39d79b68f9c1ecdd3df89d0a1c983c8ed80f03d578e094732",
           "decisions": [
             {
@@ -322,7 +340,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/implement-spec",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:8ddcae0c25698ded4585595a868c267cbcafee80baa5611176b01cc9cdb127e8",
           "decisions": [
             {
@@ -347,7 +365,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/improve-codebase-architecture",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:a7b708126f769769b641e61dbe408f877fb804af430dbc1dc21fcedda3300932",
           "decisions": [
             {
@@ -372,7 +390,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/pr",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:a02864ee434a77503064a384d79efecc03a9588b9815447ca0eb3032e1048bf2",
           "decisions": [
             {
@@ -397,8 +415,8 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/prototype",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:4b084a38039f9391a95a4f23d4869879e84a7879a2047747bc7ba6202793ac9e",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:928ef36ea830f7b7db159ad0e6a7907210516e64c232645148fa1cc6eb0b5f89",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -444,6 +462,16 @@
               "decision": "keep-local",
               "reason": "Anchor alternatives to an agreed brief and baseline, preserve fixed benefits and approved elements, and separate comparison notes from product copy. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md",
+                "UI.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve approved baseline, fixed product conditions, component mapping, original-wins outcome and browser evidence policy.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -459,8 +487,8 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/research",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:5a7775c519157ffd4f9a705008800b62e32124fb050fbd8da447b1306ca4c4c6",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:449e25692fb4198d317f3d8ce47ba1b2dbaf1ae7b5247cae39767c2ca2f5e034",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -478,6 +506,19 @@
               "decision": "keep-local",
               "reason": "Name the read-back in step 4 and give the step a completion criterion after native evals observed no read-back of the saved findings file (0/12). Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/claude-native/records/2026-10-17-research-reread/README.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md",
+                "agents/openai.yaml",
+                "references/aside-capabilities.md",
+                "references/web-research.md",
+                "scripts/aside_research.py"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve bounded executor ownership, Aside research and resume helper, claim ledger and final-file read-back; local source content remains separately unverified.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -510,8 +551,8 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/retro",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:bf0daf080ad5a78d4fdb446b3854b79beea1e7a201f428cf1bd9c176fadf913d",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:4de5f29b8a34c29bde2cc6e4ed3544a77150a36bdb7bbab996849094ce0d3ad8",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -529,6 +570,15 @@
               "decision": "keep-local",
               "reason": "Evaluate read completeness and justified reloads before labeling repeats waste; honor local-only checks and existing implementation authorization. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve required-read evidence and local-only verification constraints; the upstream always-load authoring rationale remains compatible.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -544,7 +594,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/setup-matt-pocock-skills",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:105130bd861305afb2d6be69409dd47b2a159c5af6fea5813ab3c8e7f03457c5",
           "decisions": [
             {
@@ -569,7 +619,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/tdd",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:c63d02d45192be615498af86dfa89fd0e2a26d87e9090aa24b8d6f24cd9085f3",
           "decisions": [
             {
@@ -594,7 +644,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/to-spec",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:273ba75bc4fc47625443fef4f02c46b84f35a9388a48c312ef6388666269d6c1",
           "decisions": [
             {
@@ -619,7 +669,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/to-tickets",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:916d9f4774fed02fca28cad7823bf25bb7d42cfbda393f715bc3c03ff2e635d4",
           "decisions": [
             {
@@ -644,7 +694,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/triage",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:031a870028b41800bc5dfd5ad294c7423b89691237f4fbe9f3667e06f9e64ca5",
           "decisions": [
             {
@@ -689,7 +739,7 @@
           "source": "mattpocock-skills",
           "path": "skills/engineering/wayfinder",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:1892db9c5b6c86c0f96fa8c91f03dbac047dacc2ce4be04fafd9df7effbe1458",
           "decisions": [
             {
@@ -708,14 +758,14 @@
     {
       "id": "wizard",
       "path": "skills/engineering/wizard",
-      "kind": "forked",
+      "kind": "adapted",
       "origins": [
         {
           "source": "mattpocock-skills",
           "path": "skills/engineering/wizard",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:a7485a7bfd6f4b3b5d3953cee54bdc170b4668b8d5f672d24fe0cda6c660e2f8",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:ea7ae75fdde835845a4728bb907022bf21cfcf672a6386584be0513ce7c62323",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -724,6 +774,15 @@
               ],
               "decision": "keep-local",
               "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "template.sh"
+              ],
+              "decision": "adapt",
+              "reason": "Adopt double-quoted defaults, shell-variable assignment, tput fallback and parsed stage wrapper; use literal concatenation for apostrophe round-trips on macOS Bash 3.2. Five isolated behavioral tests pass.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -733,14 +792,14 @@
     {
       "id": "chief-of-staff",
       "path": "skills/in-progress/chief-of-staff",
-      "kind": "forked",
+      "kind": "adapted",
       "origins": [
         {
           "source": "mattpocock-skills",
           "path": "skills/in-progress/chief-of-staff",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:b2f3e9e0322aca7aa9f494000fba87809c89cef6dd45c500047012c0b0778a4e",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:ecac1ed50184a1549d4c945e708a07a7e773dc1e2fcea64cf13934eeeab3f582",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -749,6 +808,15 @@
               ],
               "decision": "keep-local",
               "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Adopt dated, commit-cited goal wiki guidance while reusing an authorized destination and respecting host-managed memory policy. Keep user invocation and beta status.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -764,7 +832,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/claude-handoff",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:240bd03e80544f578af8a4bcb7b731e5ab2999d0040fb3eec125d44e4622cb81",
           "decisions": [
             {
@@ -789,7 +857,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/loop-me",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:72ccd65dff3611ca7856b6aab6aeb1fd6e4673bc04e05a386a4d0318a0c0efa2",
           "decisions": [
             {
@@ -814,7 +882,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/setup-ts-deep-modules",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:4f1acf3d5972a5460b11055eb8445521ab88d6f060c57b863d5c9cdaa918ef1e",
           "decisions": [
             {
@@ -839,7 +907,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/writing-beats",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:eec431ba99eaa3227303d485185a8f87215ebb4de325a3fd25f267ed9462bd0f",
           "decisions": [
             {
@@ -864,7 +932,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/writing-fragments",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:c749f86f39e94a4dba2272665d97ab8445d70962e3fee579a6e9102243f73c39",
           "decisions": [
             {
@@ -889,7 +957,7 @@
           "source": "mattpocock-skills",
           "path": "skills/in-progress/writing-shape",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:7a991297f19c9d2d99d24082c5b9bc75100169a262ec03594a8bd30fc25c0c8b",
           "decisions": [
             {
@@ -914,7 +982,7 @@
           "source": "mattpocock-skills",
           "path": "skills/misc/git-guardrails-claude-code",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:2e949ae93bc2c7c5134057f7e3ff01696fcbecdf0f0ad7073a2b2e92fb687aa8",
           "decisions": [
             {
@@ -939,7 +1007,7 @@
           "source": "mattpocock-skills",
           "path": "skills/misc/migrate-to-shoehorn",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:f32d728cd21733d4b448e0fad9f70a73086e74ee64f31fbe9aa148c749f2c83c",
           "decisions": [
             {
@@ -964,7 +1032,7 @@
           "source": "mattpocock-skills",
           "path": "skills/misc/scaffold-exercises",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:2b550c818f3a8f72cc2c483cfe5ed837763622639d00f5546a2c8adfdeee0ef7",
           "decisions": [
             {
@@ -989,7 +1057,7 @@
           "source": "mattpocock-skills",
           "path": "skills/misc/setup-pre-commit",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:5ec2f3e9d0ef380558795e57818be3a4ef7d57005618642501db775337614338",
           "decisions": [
             {
@@ -1014,7 +1082,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/grill-me",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:c35b7605b2435aa942fe6ce7e79079583b13cc05b6e6ed631cc38bfbf2435611",
           "decisions": [
             {
@@ -1039,7 +1107,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/grilling",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:1e92bdd2a12406da164abd3b85473054bde9abbd00cf3ba4abc6e0ef8efb641b",
           "decisions": [
             {
@@ -1064,7 +1132,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/handoff",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:a1123f400a2e424cb569fd26ac4b2e51bd1c83d47db3dc09f04ac108aa9aa18b",
           "decisions": [
             {
@@ -1089,7 +1157,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/teach",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:fbd4511a356bf4d289dd405d4d7f22b6c098a406f45ae5f8c97b624390db01e4",
           "decisions": [
             {
@@ -1114,7 +1182,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/to-questionnaire",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:346b8c5c011e5b232d373452bc0517c100f24d4fc18cff62fcdfdd6934c29921",
           "decisions": [
             {
@@ -1139,7 +1207,7 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/wait-what",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
           "localDigest": "sha256:fa2014e0d0dcd7065e873c0fbfe8b8e50abaa0a5e534cc23236793cb363b7b52",
           "decisions": [
             {
@@ -1164,8 +1232,8 @@
           "source": "mattpocock-skills",
           "path": "skills/productivity/writing-for-agents",
           "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
-          "localDigest": "sha256:93b963003258a9b1ee7aa5c84cb30a7f8a8664a353e1b869a849e93657437944",
+          "reviewedRevision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+          "localDigest": "sha256:009326bff4c990629a8fa21caf4e593803f14b7a4deaef8fdcdc7acec9868117",
           "decisions": [
             {
               "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
@@ -1184,6 +1252,16 @@
               "decision": "keep-local",
               "reason": "Define complete-read evidence, contextual reuse and reload conditions without treating summaries or hashes as loaded instructions. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "5beb35b040e3de97e54fa9e386d7e42d15c295c2",
+              "paths": [
+                "SKILL.md",
+                "required-reads.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve complete-read and justified-reload contract and its reference.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -1199,7 +1277,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-accessibility",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:1c156686762319f4a23e9371a418b9ca23d1522e6278894b126963cc0f305178",
           "decisions": [
             {
@@ -1291,7 +1369,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-colors",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:fff6095c55a499b752c171581480607b5dd083d9318d5b405b70f511b68966e1",
           "decisions": [
             {
@@ -1390,8 +1468,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-interface",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:f912d131d1f973e7826f338609db13f4976065e55f96b7b399d71da32b9054b1",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:7ed7f96f2443c8b2991516f1a8871fc7d1e074a858c55f2444b3647c593dc5e7",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1506,6 +1584,18 @@
               "decision": "keep-local",
               "reason": "Read the authorized audit procedure in a separate tool action so its owner-loading instructions arrive before artifact inspection. The first repair loaded all six owners but batched artifact reads with the procedure in three trials; preserve those failures. Change-review referral and invocation policy remain unchanged.",
               "report": "evals/design-first-impression-order-2026-10-15/REPORT.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "audit-procedure.md",
+                "review-format.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve explicit change-review entry, ordered six-owner loads, scoped findings, first-impression and incomplete-evidence boundaries.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -1528,8 +1618,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-layout",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:debf396b3796d172433792a9d3b82c4c0fffdd9e42a89726e78abd7d581019af",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:cff0d553b4494f468e7f13cb2f10c804a6c37a7294b306f7f9dff0c495b15896",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1604,6 +1694,17 @@
               "decision": "keep-local",
               "reason": "Repair observed prototype-scope and approved-brand overjudgment; require six successful owner loads before interface artifact inspection and separate execution gaps from product defects. Preserve original failed evidence and immutable upstream reconciliation fields.",
               "report": "evals/design-first-impression-repair-2026-10-15/REPORT.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "first-impression.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve Korean/target-locale checks, task-based hierarchy and first-impression preservation protocol.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -1626,7 +1727,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-typography",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:0c206d16d81c9e209bef5965820052e230f8ce1b09d8d07391bece9ef236c3a1",
           "decisions": [
             {
@@ -1709,7 +1810,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-ui",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:77905653f1207fdd2a85e6ac09b797ddc16b42b128d70918452adc72205d8315",
           "decisions": [
             {
@@ -1790,8 +1891,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/better-writing",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:e6d06f7c720ab1dff956afdc842273e71aff06bcb7dfb5443da3f1a252b772a2",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:8683b874e3ea204c74e7decd01fe5c3373ac6865a1f53d30a28597271a2468a3",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1876,6 +1977,18 @@
               "decision": "keep-local",
               "reason": "Review each string by reader and role; distinguish internal research bookkeeping from product limitations useful to the reader. Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-copy.md",
+                "patterns.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve Korean grammar, reader/job-specific copy and recovery semantics after data or permission changes.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -1891,7 +2004,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/break",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:c9115a2c56f03a0a2b88d56eab0ba5045fd29afff2bb4552ff3b21008a593e1a",
           "decisions": [
             {
@@ -1936,8 +2049,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/build-design",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:48a2339f0d376294093adb09caa0d36d02393a9d0e7019080b5dbcf37d694878",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -1987,6 +2100,18 @@
               "decision": "keep-local",
               "reason": "Name component reuse in the description, which the body already covers, after native evals showed the skill unloaded for a reuse request (0/3). Local adaptation only; upstream reconciliation unchanged.",
               "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "agents/openai.yaml",
+                "browser-and-spec.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Preserve browser/spec inputs, exact component mapping, required accessible states and separate fidelity/behavior evidence.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -2002,7 +2127,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/explain-interface",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
           "decisions": [
             {
@@ -2038,7 +2163,7 @@
           "source": "jakubkrehel-skills",
           "path": "skills/interface-review",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
           "localDigest": "sha256:5f96df6e5fe338ad21ce1f8424e804628150ebcb2374f4559e1d79d2a558db9d",
           "decisions": [
             {
@@ -2111,8 +2236,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/state-machine",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:d5e7bcba09e9835b06b9a4f931434d84df2e1cbc996e8b6c5f3dc9c1d5012947",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -2132,6 +2257,16 @@
               "decision": "keep-local",
               "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
               "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "switcher.md"
+              ],
+              "decision": "adapt",
+              "reason": "Resolve the earlier defer: adopt grouped side-list/native-select controls and clarify browser-owned select keyboard handling. Preserve Paul provenance, user-only invocation, shared browser routing and existing task-state/overlay checks. Eight viewport/skill cases and four negative controls verify the authored fixture; the earlier native ArrowDown/Enter automation failure remains recorded and is not claimed fixed in Chrome.",
+              "report": "evals/upstream-sync/2026-10-22-keyboard/REPORT.md"
             }
           ]
         }
@@ -2147,8 +2282,8 @@
           "source": "jakubkrehel-skills",
           "path": "skills/variant",
           "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
-          "localDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:1d194b8d2af8ac0abf3e820b8c1e55d03a8a37da08dd68d1ad1c75794baf463b",
           "decisions": [
             {
               "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
@@ -2186,6 +2321,16 @@
               "decision": "adapt",
               "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
               "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "picker.md"
+              ],
+              "decision": "adapt",
+              "reason": "Resolve the earlier defer: adopt grouped side-list/native-select controls and clarify browser-owned select keyboard handling. Preserve Paul provenance, user-only invocation, shared browser routing and existing task-state/overlay checks. Eight viewport/skill cases and four negative controls verify the authored fixture; the earlier native ArrowDown/Enter automation failure remains recorded and is not claimed fixed in Chrome.",
+              "report": "evals/upstream-sync/2026-10-22-keyboard/REPORT.md"
             }
           ]
         }
@@ -2275,7 +2420,7 @@
           "source": "gstack",
           "path": "office-hours",
           "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
-          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
           "localDigest": "sha256:3c3c200934e3f475020fb198174cf770527530fb543c964856697a3d10ede6e9",
           "files": {
             "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
@@ -2301,6 +2446,15 @@
               "decision": "keep-local",
               "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
               "report": "evals/pm-conversation-beta/RESULTS.md"
+            },
+            {
+              "revision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain Paul context recovery, conversation/decision contracts and current trigger. Upstream changes remove duplicated invocation prose and adjust gstack-only browser options and Bun runner flags; those runtimes are not imported.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }
@@ -2316,7 +2470,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-execution/skills/create-prd",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-execution/skills/create-prd/SKILL.md": "sha256:e3aa10a437ed7f748a957bd5d1eb06d8fa3f56dc728dcb93ce484387ecc3fa13"
@@ -2347,7 +2501,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-product-strategy/skills/value-proposition",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-product-strategy/skills/value-proposition/SKILL.md": "sha256:b07cc0399582fc178be31b513b313d2420c7941dd568b52a0bf6cfb0ab6c4ec7"
@@ -2378,7 +2532,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-execution/skills/job-stories",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-execution/skills/job-stories/SKILL.md": "sha256:69f75264b311418a1ebaf06c9872ed1271203cfc6316466fcb99cc948ade800b"
@@ -2409,7 +2563,7 @@
           "source": "gstack",
           "path": "office-hours",
           "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
-          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
           "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
@@ -2433,6 +2587,15 @@
               "decision": "keep-local",
               "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
               "report": "evals/pm-conversation-beta/RESULTS.md"
+            },
+            {
+              "revision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain Paul context recovery, conversation/decision contracts and current trigger. Upstream changes remove duplicated invocation prose and adjust gstack-only browser options and Bun runner flags; those runtimes are not imported.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         },
@@ -2440,7 +2603,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-market-research/skills/competitor-analysis",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
           "files": {
             "pm-market-research/skills/competitor-analysis/SKILL.md": "sha256:8e627fc7fba96f223ad9f8fd23c6033a429cc28f9e9ce2d672854c6851810c2b"
@@ -2479,7 +2642,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-product-discovery/skills/identify-assumptions-existing",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md": "sha256:59d788213014552ac64f589c71ce82b135f9ef4b84fec457446ad90795fd439f"
@@ -2510,7 +2673,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-product-discovery/skills/identify-assumptions-new",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/identify-assumptions-new/SKILL.md": "sha256:962b1e0c01e45ceb930e4d806c0ffb05e36cf25dcfef5497e7828d89d6ae474b"
@@ -2541,7 +2704,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-product-discovery/skills/prioritize-assumptions",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/prioritize-assumptions/SKILL.md": "sha256:18160a0138c788790c9dd22995ffdcfac485c1f0599c170d8668678e59766073"
@@ -2572,7 +2735,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-product-discovery/skills/brainstorm-experiments-new",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md": "sha256:fe66d9ba76cf6b0e156298c88f752d8e1e62549fe77a7c01c0a74d8679da9334"
@@ -2612,7 +2775,7 @@
           "source": "phuryn-pm-skills",
           "path": "pm-execution/skills/pre-mortem",
           "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
-          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "07b34f64ee828df08953f505b7f747aef85ae7c6",
           "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
           "files": {
             "pm-execution/skills/pre-mortem/SKILL.md": "sha256:4e5cf10a46ac1d1cdde6aa009ba2b860c532f55c0c3d9ec53a82082cad073052"
@@ -2651,7 +2814,7 @@
           "source": "gstack",
           "path": "office-hours",
           "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
-          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
           "localDigest": "sha256:5385db836f69425e32a903d412e5c81af0b7e320f105377855d19ffe3c197708",
           "files": {
             "office-hours/SKILL.md.tmpl": "sha256:e0eee0cf83c00897860149d9d423fd6a3c81486e8fa48494a25171e5a4569676",
@@ -2672,6 +2835,15 @@
               "decision": "adapt",
               "reason": "Preserve mode/posture, adaptive questioning, reuse/landscape, premise revision, alternatives choice, decision record, bounded review and closing. Replace runtime adapters, honor direct skip requests, use one canonical product brief and evidence-bounded coaching; keep visual work in design roles.",
               "report": "evals/pm-conversation-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "b616d6c53dd8fc0d8db210444b44a131b553b83e",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain Paul context recovery, conversation/decision contracts and current trigger. Upstream changes remove duplicated invocation prose and adjust gstack-only browser options and Bun runner flags; those runtimes are not imported.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
             }
           ]
         }

@@ -1,0 +1,165 @@
+<!doctype html><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Upstream control fixture</title><link rel="icon" href="data:,"><style>body{margin:0;font:16px system-ui;background:#eee}main{max-width:960px;margin:auto}section{background:white;padding:16px}input{max-width:100%;box-sizing:border-box}button:focus-visible,input:focus-visible{outline:2px solid blue}body.controls-hidden nav,body.controls-hidden [class$="-select"]{display:none!important}</style><style>.state-page {
+  container: state-page / inline-size;
+  margin-inline: calc(50% - 50vw);
+  padding: 24px;
+}
+
+.state-layout {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+  max-width: 644px;
+  margin-inline: auto;
+}
+
+.state-switcher {
+  all: unset;
+  display: none;
+  flex-direction: column;
+  gap: 16px;
+  max-height: calc(100dvh - 48px);
+  overflow-y: auto;
+  scrollbar-width: none;
+  padding: 6px;
+  border-radius: 14px;
+  background: rgb(20 20 20 / 0.92);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1);
+  font: 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  user-select: none;
+}
+
+.state-switcher-group {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.state-switcher-heading {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 4px 10px 6px;
+  font-size: 11px;
+  font-weight: 500;
+  color: rgb(255 255 255 / 0.45);
+}
+
+.state-switcher button {
+  all: unset;
+  flex: none;
+  padding: 8px 10px;
+  border-radius: 8px;
+  font: inherit;
+  color: rgb(255 255 255 / 0.6);
+  cursor: pointer;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  transition: color 200ms ease-out, font-weight 200ms ease-out;
+}
+
+.state-switcher button:hover {
+  color: rgb(255 255 255 / 0.85);
+}
+
+.state-switcher button[aria-pressed="true"] {
+  background: rgb(255 255 255 / 0.14);
+  color: rgb(255 255 255);
+  font-weight: 500;
+}
+
+.state-switcher button:focus-visible {
+  outline: 2px solid rgb(255 255 255 / 0.7);
+  outline-offset: 2px;
+}
+
+.state-switcher-select {
+  position: relative;
+  align-self: flex-start;
+  max-width: 100%;
+  color: rgb(255 255 255);
+}
+
+.state-switcher-select select {
+  all: unset;
+  box-sizing: border-box;
+  max-width: 100%;
+  padding: 10px 36px 10px 16px;
+  border-radius: 999px;
+  background: rgb(20 20 20 / 0.92);
+  box-shadow: inset 0 0 0 1px rgb(255 255 255 / 0.1);
+  font: 500 13px/1 system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  cursor: pointer;
+}
+
+.state-switcher-select select:focus-visible {
+  outline: 2px solid rgb(255 255 255 / 0.7);
+  outline-offset: 2px;
+}
+
+.state-switcher-select svg {
+  position: absolute;
+  top: 50%;
+  right: 14px;
+  translate: 0 -50%;
+  pointer-events: none;
+  color: rgb(255 255 255 / 0.6);
+}
+
+/* 208px list + 24px gap + 644px component */
+@container state-page (min-width: 876px) {
+  .state-layout {
+    display: grid;
+    grid-template-columns: 208px 644px;
+    justify-content: center;
+    gap: 24px;
+    align-items: start;
+    max-width: none;
+  }
+
+  .state-switcher {
+    display: flex;
+    position: sticky;
+    top: 24px;
+  }
+
+  .state-switcher-select {
+    display: none;
+  }
+}</style><main><div class="state-page">
+  <div class="state-layout">
+    <nav class="state-switcher" aria-label="States"><div class="state-switcher-group" role="group" aria-labelledby="group-Data"><span class="state-switcher-heading" id="group-Data">Data</span><button type="button" data-state="choice-0">Data 1: 상태와 접근 권한</button><button type="button" data-state="choice-1">Data 2: 상태와 접근 권한</button><button type="button" data-state="choice-2">Data 3: 상태와 접근 권한</button><button type="button" data-state="choice-3">Data 4: 상태와 접근 권한</button><button type="button" data-state="choice-4">Data 5: 상태와 접근 권한</button><button type="button" data-state="choice-5">Data 6: 상태와 접근 권한</button><button type="button" data-state="choice-6">Data 7: 상태와 접근 권한</button><button type="button" data-state="choice-7">Data 8: 상태와 접근 권한</button><button type="button" data-state="choice-8">Data 9: 상태와 접근 권한</button><button type="button" data-state="choice-9">Data 10: 상태와 접근 권한</button></div><div class="state-switcher-group" role="group" aria-labelledby="group-Account"><span class="state-switcher-heading" id="group-Account">Account</span><button type="button" data-state="choice-10">Account 11: 상태와 접근 권한</button><button type="button" data-state="choice-11">Account 12: 상태와 접근 권한</button><button type="button" data-state="choice-12">Account 13: 상태와 접근 권한</button><button type="button" data-state="choice-13">Account 14: 상태와 접근 권한</button><button type="button" data-state="choice-14">Account 15: 상태와 접근 권한</button><button type="button" data-state="choice-15">Account 16: 상태와 접근 권한</button><button type="button" data-state="choice-16">Account 17: 상태와 접근 권한</button><button type="button" data-state="choice-17">Account 18: 상태와 접근 권한</button><button type="button" data-state="choice-18">Account 19: 상태와 접근 권한</button><button type="button" data-state="choice-19">Account 20: 상태와 접근 권한</button></div><div class="state-switcher-group" role="group" aria-labelledby="group-Access"><span class="state-switcher-heading" id="group-Access">Access</span><button type="button" data-state="choice-20">Access 21: 상태와 접근 권한</button><button type="button" data-state="choice-21">Access 22: 상태와 접근 권한</button><button type="button" data-state="choice-22">Access 23: 상태와 접근 권한</button><button type="button" data-state="choice-23">Access 24: 상태와 접근 권한</button><button type="button" data-state="choice-24">Access 25: 상태와 접근 권한</button><button type="button" data-state="choice-25">Access 26: 상태와 접근 권한</button><button type="button" data-state="choice-26">Access 27: 상태와 접근 권한</button><button type="button" data-state="choice-27">Access 28: 상태와 접근 권한</button><button type="button" data-state="choice-28">Access 29: 상태와 접근 권한</button><button type="button" data-state="choice-29">Access 30: 상태와 접근 권한</button></div></nav>
+
+    <div class="state-switcher-select">
+      <select aria-label="State"><optgroup label="Data"><option value="choice-0">Data 1: 상태와 접근 권한</option><option value="choice-1">Data 2: 상태와 접근 권한</option><option value="choice-2">Data 3: 상태와 접근 권한</option><option value="choice-3">Data 4: 상태와 접근 권한</option><option value="choice-4">Data 5: 상태와 접근 권한</option><option value="choice-5">Data 6: 상태와 접근 권한</option><option value="choice-6">Data 7: 상태와 접근 권한</option><option value="choice-7">Data 8: 상태와 접근 권한</option><option value="choice-8">Data 9: 상태와 접근 권한</option><option value="choice-9">Data 10: 상태와 접근 권한</option></optgroup><optgroup label="Account"><option value="choice-10">Account 11: 상태와 접근 권한</option><option value="choice-11">Account 12: 상태와 접근 권한</option><option value="choice-12">Account 13: 상태와 접근 권한</option><option value="choice-13">Account 14: 상태와 접근 권한</option><option value="choice-14">Account 15: 상태와 접근 권한</option><option value="choice-15">Account 16: 상태와 접근 권한</option><option value="choice-16">Account 17: 상태와 접근 권한</option><option value="choice-17">Account 18: 상태와 접근 권한</option><option value="choice-18">Account 19: 상태와 접근 권한</option><option value="choice-19">Account 20: 상태와 접근 권한</option></optgroup><optgroup label="Access"><option value="choice-20">Access 21: 상태와 접근 권한</option><option value="choice-21">Access 22: 상태와 접근 권한</option><option value="choice-22">Access 23: 상태와 접근 권한</option><option value="choice-23">Access 24: 상태와 접근 권한</option><option value="choice-24">Access 25: 상태와 접근 권한</option><option value="choice-25">Access 26: 상태와 접근 권한</option><option value="choice-26">Access 27: 상태와 접근 권한</option><option value="choice-27">Access 28: 상태와 접근 권한</option><option value="choice-28">Access 29: 상태와 접근 권한</option><option value="choice-29">Access 30: 상태와 접근 권한</option></optgroup></select>
+      <svg aria-hidden="true" viewBox="0 0 16 16" width="12" height="12" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="m4 6 4 4 4-4" /></svg>
+    </div>
+
+    <div class="state-stage">
+      <section><h1>Demo component</h1><p id="active"></p><label>Working input <input id="draft" value="keep this text"></label><button id="save">Save draft</button><p id="feedback"></p></section>
+    </div>
+  </div>
+</div></main><script>const config = {"prefix": "state", "param": "__state"};
+const buttons = [...document.querySelectorAll(`[data-${config.prefix}]`)];
+const select = document.querySelector('select');
+const keys = buttons.map(b => b.dataset[config.prefix]);
+function show(key, write=true) {
+ if (!keys.includes(key)) key=keys[0];
+ if (write) { const url=new URL(location);url.searchParams.set(config.param,key);history.replaceState({},'',url); }
+ buttons.forEach(b=>b.setAttribute('aria-pressed',String(b.dataset[config.prefix]===key)));
+ select.value=key;document.querySelector('#active').textContent=key;
+ const active=buttons.find(b=>b.dataset[config.prefix]===key);
+ const nav=document.querySelector('nav');
+ if(getComputedStyle(nav).display!=='none')nav.scrollTop=active.offsetTop-nav.offsetTop-nav.clientHeight/2;
+}
+buttons.forEach(b=>b.addEventListener('click',()=>show(b.dataset[config.prefix])));
+select.addEventListener('change',()=>show(select.value));
+document.querySelector('#save').addEventListener('click',()=>document.querySelector('#feedback').textContent='Saved: '+document.querySelector('#draft').value);
+document.addEventListener('keydown',e=>{
+ if(e.defaultPrevented||e.metaKey||e.ctrlKey||e.altKey||e.shiftKey||e.target.closest('input,textarea,select,[contenteditable]'))return;
+ if(e.key.toLowerCase()==='h'){e.preventDefault();document.body.classList.toggle('controls-hidden');return;}
+ const delta={ArrowDown:1,ArrowRight:1,ArrowUp:-1,ArrowLeft:-1}[e.key];
+ if(delta){e.preventDefault();show(keys[(keys.indexOf(select.value)+delta+keys.length)%keys.length]);}
+});
+show(new URL(location).searchParams.get(config.param));
+</script>

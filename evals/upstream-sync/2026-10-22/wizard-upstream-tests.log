@@ -1,0 +1,19 @@
+test_ambiguous_double_quotes_are_rejected_without_execution (wizard_tests.WizardTemplateTests) ... ok
+test_clear_falls_back_after_tput_failure (wizard_tests.WizardTemplateTests) ... ok
+test_edit_during_prompt_does_not_replace_running_stages (wizard_tests.WizardTemplateTests) ... ok
+test_enter_keeps_plain_double_quoted_value_without_quotes (wizard_tests.WizardTemplateTests) ... ok
+test_write_is_available_in_later_stage_and_preserves_file_contract (wizard_tests.WizardTemplateTests) ... FAIL
+
+======================================================================
+FAIL: test_write_is_available_in_later_stage_and_preserves_file_contract (wizard_tests.WizardTemplateTests)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "tests/test_wizard_template.py", line 46, in test_write_is_available_in_later_stage_and_preserves_file_contract
+    self.assertEqual(result.returncode, 0, result.stderr)
+AssertionError: 1 != 0 : 
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.131s
+
+FAILED (failures=1)
+UPSTREAM_SUCCESS False

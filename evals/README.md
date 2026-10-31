@@ -24,6 +24,8 @@ Supply `task.json` and the skill to an independent agent. Do not supply this eva
 
 ## Records and decisions
 
+The [registered-source sweep](upstream-sync/2026-10-22/REPORT.md) pins all seven Git sources, initially reconciles 61 of 63 direct-origin mappings, preserves the two deferred design-control proposals and records bounded wizard regression evidence. The [keyboard follow-up](upstream-sync/2026-10-22-keyboard/REPORT.md) resolves those two deferrals with an eight-case browser matrix and checker controls. These are local upstream-sync field runs, not promotion or release evidence.
+
 The [design beta](design-beta/README.md) adds pinned Jakub, Paul and no-skill workspaces with one shared browser-review task. Its first candidate smoke uses an explicitly loaded bundle against a public page. This is separate from automatic host discovery and from the repeated controlled trials needed to compare skill quality.
 
 The [design planning beta](design-planning/README.md) exercises IA, user-flow and wireframe as separate roles on one synthetic brief. Its source map distinguishes original authoring from the Jakub adaptations.

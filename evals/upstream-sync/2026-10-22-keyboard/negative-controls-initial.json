@@ -1,0 +1,169 @@
+[
+  {
+    "mutation": "missing-option",
+    "exitCode": 1,
+    "status": "passed",
+    "failure": [
+      {
+        "skill": "state-machine",
+        "width": 390,
+        "height": 844,
+        "focusPath": [],
+        "status": "failed",
+        "error": "Error: wrong option count"
+      }
+    ]
+  },
+  {
+    "mutation": "no-tab",
+    "exitCode": 1,
+    "status": "passed",
+    "failure": [
+      {
+        "skill": "state-machine",
+        "width": 390,
+        "height": 844,
+        "focusPath": [
+          {
+            "tag": "INPUT",
+            "id": "draft",
+            "data": {},
+            "outline": "solid"
+          }
+        ],
+        "initialFocus": "BODY",
+        "status": "failed",
+        "error": "Error: not naturally keyboard reachable"
+      }
+    ]
+  },
+  {
+    "mutation": "blocked-keys",
+    "exitCode": 1,
+    "status": "failed",
+    "failure": [
+      {
+        "skill": "state-machine",
+        "width": 390,
+        "height": 844,
+        "focusPath": [
+          {
+            "tag": "SELECT",
+            "id": "",
+            "data": {},
+            "outline": "solid"
+          },
+          {
+            "tag": "SELECT",
+            "id": "",
+            "data": {},
+            "outline": "solid"
+          }
+        ],
+        "initialFocus": "BODY",
+        "status": "failed",
+        "error": "Error: wrong forward Tab order"
+      }
+    ]
+  },
+  {
+    "mutation": "overflow",
+    "exitCode": 1,
+    "status": "passed",
+    "failure": [
+      {
+        "skill": "state-machine",
+        "width": 390,
+        "height": 844,
+        "focusPath": [
+          {
+            "tag": "SELECT",
+            "id": "",
+            "data": {},
+            "outline": "solid"
+          },
+          {
+            "tag": "INPUT",
+            "id": "draft",
+            "data": {},
+            "outline": "solid"
+          },
+          {
+            "tag": "SELECT",
+            "id": "",
+            "data": {},
+            "outline": "solid"
+          },
+          {
+            "tag": "BUTTON",
+            "id": "save",
+            "data": {},
+            "outline": "solid"
+          }
+        ],
+        "initialFocus": "BODY",
+        "activation": "native type-ahead Data 2:, Enter, Escape",
+        "nativeEvents": [
+          {
+            "type": "input",
+            "value": "choice-1",
+            "trusted": true
+          },
+          {
+            "type": "change",
+            "value": "choice-1",
+            "trusted": true
+          }
+        ],
+        "visited": [
+          "choice-2",
+          "choice-3",
+          "choice-4",
+          "choice-5",
+          "choice-6",
+          "choice-7",
+          "choice-8",
+          "choice-9",
+          "choice-10",
+          "choice-11",
+          "choice-12",
+          "choice-13",
+          "choice-14",
+          "choice-15",
+          "choice-16",
+          "choice-17",
+          "choice-18",
+          "choice-19",
+          "choice-20",
+          "choice-21",
+          "choice-22",
+          "choice-23",
+          "choice-24",
+          "choice-25",
+          "choice-26",
+          "choice-27",
+          "choice-28",
+          "choice-29",
+          "choice-0",
+          "choice-1"
+        ],
+        "geometry": {
+          "scroll": 1524,
+          "client": 390,
+          "stage": {
+            "x": 24,
+            "y": 73,
+            "width": 1500,
+            "height": 217.875,
+            "top": 73,
+            "right": 1524,
+            "bottom": 290.875,
+            "left": 24
+          }
+        },
+        "status": "failed",
+        "error": "Error: horizontal page overflow"
+      }
+    ]
+  }
+]

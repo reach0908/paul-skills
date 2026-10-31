@@ -1,0 +1,228 @@
+[
+  {
+    "id": "state-machine",
+    "before": {
+      "id": "state-machine",
+      "path": "skills/design/state-machine",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/state-machine",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "switcher.md"
+              ],
+              "decision": "defer",
+              "reason": "Grouped list/select proposal is preserved in the linked report. One desktop fixture passed; native select keyboard selection at 390px did not change value. Remaining cases, including variant, were not run. Retain existing control until browser compatibility is resolved.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    "after": {
+      "id": "state-machine",
+      "path": "skills/design/state-machine",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/state-machine",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:d5e7bcba09e9835b06b9a4f931434d84df2e1cbc996e8b6c5f3dc9c1d5012947",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "switcher.md"
+              ],
+              "decision": "adapt",
+              "reason": "Resolve the earlier defer: adopt grouped side-list/native-select controls and clarify browser-owned select keyboard handling. Preserve Paul provenance, user-only invocation, shared browser routing and existing task-state/overlay checks. Eight viewport/skill cases and four negative controls verify the authored fixture; the earlier native ArrowDown/Enter automation failure remains recorded and is not claimed fixed in Chrome.",
+              "report": "evals/upstream-sync/2026-10-22-keyboard/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  },
+  {
+    "id": "variant",
+    "before": {
+      "id": "variant",
+      "path": "skills/design/variant",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/variant",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Require native Tab and pointer access around fixed comparison/product controls in short viewports after independent 200-percent Chrome zoom replay found focused search hidden under the fixed selection bar in both original and Paul outputs. Preserve the one-axis role and source invocation policy.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "picker.md"
+              ],
+              "decision": "defer",
+              "reason": "Grouped list/select proposal is preserved in the linked report. One desktop fixture passed; native select keyboard selection at 390px did not change value. Remaining cases, including variant, were not run. Retain existing control until browser compatibility is resolved.",
+              "report": "evals/upstream-sync/2026-10-22/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    "after": {
+      "id": "variant",
+      "path": "skills/design/variant",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/variant",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+          "localDigest": "sha256:1d194b8d2af8ac0abf3e820b8c1e55d03a8a37da08dd68d1ad1c75794baf463b",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Require native Tab and pointer access around fixed comparison/product controls in short viewports after independent 200-percent Chrome zoom replay found focused search hidden under the fixed selection bar in both original and Paul outputs. Preserve the one-axis role and source invocation policy.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "4c66b1fa86e9ab70187b43d7da9b6fdb29f2ef63",
+              "paths": [
+                "SKILL.md",
+                "picker.md"
+              ],
+              "decision": "adapt",
+              "reason": "Resolve the earlier defer: adopt grouped side-list/native-select controls and clarify browser-owned select keyboard handling. Preserve Paul provenance, user-only invocation, shared browser routing and existing task-state/overlay checks. Eight viewport/skill cases and four negative controls verify the authored fixture; the earlier native ArrowDown/Enter automation failure remains recorded and is not claimed fixed in Chrome.",
+              "report": "evals/upstream-sync/2026-10-22-keyboard/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    }
+  }
+]

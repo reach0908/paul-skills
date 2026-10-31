@@ -1,0 +1,2701 @@
+{
+  "schemaVersion": 1,
+  "sources": {
+    "mattpocock-skills": {
+      "repository": "https://github.com/mattpocock/skills",
+      "ref": "main",
+      "license": "MIT",
+      "repositoryReview": "b0618bc436ad893b3c5e84e55fba86586d34a404"
+    },
+    "paul-loop": {
+      "repository": "https://github.com/reach0908/paul-loop",
+      "ref": "main",
+      "license": "MIT"
+    },
+    "jakubkrehel-skills": {
+      "repository": "https://github.com/jakubkrehel/skills",
+      "ref": "main",
+      "license": "MIT"
+    },
+    "microsoft-playwright-cli": {
+      "repository": "https://github.com/microsoft/playwright-cli",
+      "ref": "main",
+      "license": "Apache-2.0"
+    },
+    "pbakaus-impeccable": {
+      "repository": "https://github.com/pbakaus/impeccable",
+      "ref": "main",
+      "license": "Apache-2.0"
+    },
+    "gstack": {
+      "repository": "https://github.com/garrytan/gstack",
+      "ref": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+      "license": "MIT"
+    },
+    "phuryn-pm-skills": {
+      "repository": "https://github.com/phuryn/pm-skills",
+      "ref": "c68487d721e419ec87af1ae6412a842978eab785",
+      "license": "MIT"
+    }
+  },
+  "skills": [
+    {
+      "id": "ask-matt",
+      "path": "skills/engineering/ask-matt",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/ask-matt",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:654c276d311f2661a81fef6a30977eb209a6ee0c69e3c5aa05dff7bc31761d2b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits. The experimental upstream-sync route was removed pending user validation and promotion approval."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Clarify the existing prototype route: keeping the original resolves the decision without an implementation change. Keep unpromoted design skills outside this router.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Route the nine user-approved design roles after promotion, preserve explicit interface-review invocation, and keep browser observations and engineering review verdicts separate.",
+              "report": "evals/design-promotion-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Add the eight user-approved design roles and their stage handoffs, preserving explicit component-workbench invocation and existing engineering flows.",
+              "report": "evals/design-final-promotion-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged.",
+              "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Synchronize source identity, fixed prototype conditions, copy role and browser readiness routing with the locally adapted skills. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Add conditional PM beta routing and the product/design/engineering contract without promoting or automatically installing candidates. No upstream reconciliation was performed.",
+              "report": "evals/product-management-beta/ROLE-BOUNDARIES.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Integrate optional beta routing while retaining every main decision and the existing main reconciliation digest. Restore the baseline changed during beta development; no upstream review or promotion is performed.",
+              "report": "evals/pm-beta-integration-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Route merge-readiness judgements to code-review and component reuse to build-design, matching their updated descriptions. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "code-review",
+      "path": "skills/engineering/code-review",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/code-review",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:9e665dc079428e61ad808ae4e7d055ec346b832ab21b9a0f47a49b6f5af600f1",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Name merge-readiness judgements in the description and add a Merge step (target, HEAD and merge-base SHAs, a ref-preserving merge-tree conflict check, a verdict citing both axes) after native evals showed the skill unloaded for \"can this branch merge\" requests and, once loaded by the description alone, dropping the conflict report. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "codebase-design",
+      "path": "skills/engineering/codebase-design",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/codebase-design",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:08b0266126c6ecbb19821d0aa5d75176af0731158aef3f2f4eb2672d54c4a70b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "diagnosing-bugs",
+      "path": "skills/engineering/diagnosing-bugs",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/diagnosing-bugs",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:feeb72cb358147a2a7f78a15934adef4a34aeddd3291ea3c23d3f99d447dcf91",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "domain-modeling",
+      "path": "skills/engineering/domain-modeling",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/domain-modeling",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:93ffec1622982bc198c4e812bd7de35f12bafcd5b7018b70be84d232e59f43dc",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grill-with-docs",
+      "path": "skills/engineering/grill-with-docs",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/grill-with-docs",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:d8aea758e62aa83a2f575a1197d0aeaa85b5c98224ca81f162e0e5d5f41b8fce",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "implement",
+      "path": "skills/engineering/implement",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/implement",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1990843a24edd9c39d79b68f9c1ecdd3df89d0a1c983c8ed80f03d578e094732",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "implement-spec",
+      "path": "skills/engineering/implement-spec",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/implement-spec",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:8ddcae0c25698ded4585595a868c267cbcafee80baa5611176b01cc9cdb127e8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "improve-codebase-architecture",
+      "path": "skills/engineering/improve-codebase-architecture",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/improve-codebase-architecture",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a7b708126f769769b641e61dbe408f877fb804af430dbc1dc21fcedda3300932",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "pr",
+      "path": "skills/engineering/pr",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/pr",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a02864ee434a77503064a384d79efecc03a9588b9815447ca0eb3032e1048bf2",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "prototype",
+      "path": "skills/engineering/prototype",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/prototype",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:4b084a38039f9391a95a4f23d4869879e84a7879a2047747bc7ba6202793ac9e",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Use playwright-cli for browser operations at the user's request; retain both prototype branches and their existing invocation behavior.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md",
+                "UI.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Use an explicit comparison question and existing UI baseline; treat keeping the original as a valid decision, separate from acceptance of the comparison mechanism.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "UI.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Anchor alternatives to an agreed brief and baseline, preserve fixed benefits and approved elements, and separate comparison notes from product copy. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "research",
+      "path": "skills/engineering/research",
+      "kind": "composite",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/research",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:5a7775c519157ffd4f9a705008800b62e32124fb050fbd8da447b1306ca4c4c6",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Name the read-back in step 4 and give the step a completion criterion after native evals observed no read-back of the saved findings file (0/12). Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/claude-native/records/2026-10-17-research-reread/README.md"
+            }
+          ]
+        }
+      ],
+      "influences": [],
+      "localOrigins": [
+        {
+          "source": "research-with-aside-20261009",
+          "importedDigest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+          "reviewedDigest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+          "decisions": [
+            {
+              "decision": "adapt",
+              "paths": [
+                "SKILL.md",
+                "references/research-brief-template.md"
+              ],
+              "reason": "Integrate the user-requested Aside web workflow into research; retain local investigation, add one execution owner, use safe argv transport and current session commands. This records a local source review, not a new upstream Git reconciliation."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "retro",
+      "path": "skills/engineering/retro",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/retro",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:bf0daf080ad5a78d4fdb446b3854b79beea1e7a201f428cf1bd9c176fadf913d",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Evaluate read completeness and justified reloads before labeling repeats waste; honor local-only checks and existing implementation authorization. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-matt-pocock-skills",
+      "path": "skills/engineering/setup-matt-pocock-skills",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/setup-matt-pocock-skills",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:105130bd861305afb2d6be69409dd47b2a159c5af6fea5813ab3c8e7f03457c5",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "tdd",
+      "path": "skills/engineering/tdd",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/tdd",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c63d02d45192be615498af86dfa89fd0e2a26d87e9090aa24b8d6f24cd9085f3",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-spec",
+      "path": "skills/engineering/to-spec",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/to-spec",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:273ba75bc4fc47625443fef4f02c46b84f35a9388a48c312ef6388666269d6c1",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-tickets",
+      "path": "skills/engineering/to-tickets",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/to-tickets",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:916d9f4774fed02fca28cad7823bf25bb7d42cfbda393f715bc3c03ff2e635d4",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "triage",
+      "path": "skills/engineering/triage",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/triage",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:031a870028b41800bc5dfd5ad294c7423b89691237f4fbe9f3667e06f9e64ca5",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "upstream-sync",
+      "path": "skills/in-progress/upstream-sync",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/writing-for-agents",
+          "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reason": "Authoring principles and skill packaging."
+        },
+        {
+          "source": "paul-loop",
+          "path": "tools/ship-flow/skills/vendor-sync",
+          "revision": "7c95bb3f60e2ae6334bddf452be1852fbad3fd05",
+          "reason": "Three-way review, deliberate local divergence, and inspect/apply scope. New portable implementation; no loop-engine dependency."
+        }
+      ]
+    },
+    {
+      "id": "wayfinder",
+      "path": "skills/engineering/wayfinder",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/wayfinder",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1892db9c5b6c86c0f96fa8c91f03dbac047dacc2ce4be04fafd9df7effbe1458",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "wizard",
+      "path": "skills/engineering/wizard",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/engineering/wizard",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a7485a7bfd6f4b3b5d3953cee54bdc170b4668b8d5f672d24fe0cda6c660e2f8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "chief-of-staff",
+      "path": "skills/in-progress/chief-of-staff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/chief-of-staff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:b2f3e9e0322aca7aa9f494000fba87809c89cef6dd45c500047012c0b0778a4e",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "claude-handoff",
+      "path": "skills/in-progress/claude-handoff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/claude-handoff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:240bd03e80544f578af8a4bcb7b731e5ab2999d0040fb3eec125d44e4622cb81",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "loop-me",
+      "path": "skills/in-progress/loop-me",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/loop-me",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:72ccd65dff3611ca7856b6aab6aeb1fd6e4673bc04e05a386a4d0318a0c0efa2",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-ts-deep-modules",
+      "path": "skills/in-progress/setup-ts-deep-modules",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/setup-ts-deep-modules",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:4f1acf3d5972a5460b11055eb8445521ab88d6f060c57b863d5c9cdaa918ef1e",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-beats",
+      "path": "skills/in-progress/writing-beats",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-beats",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:eec431ba99eaa3227303d485185a8f87215ebb4de325a3fd25f267ed9462bd0f",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-fragments",
+      "path": "skills/in-progress/writing-fragments",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-fragments",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c749f86f39e94a4dba2272665d97ab8445d70962e3fee579a6e9102243f73c39",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-shape",
+      "path": "skills/in-progress/writing-shape",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/in-progress/writing-shape",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:7a991297f19c9d2d99d24082c5b9bc75100169a262ec03594a8bd30fc25c0c8b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "git-guardrails-claude-code",
+      "path": "skills/misc/git-guardrails-claude-code",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/git-guardrails-claude-code",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:2e949ae93bc2c7c5134057f7e3ff01696fcbecdf0f0ad7073a2b2e92fb687aa8",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "migrate-to-shoehorn",
+      "path": "skills/misc/migrate-to-shoehorn",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/migrate-to-shoehorn",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:f32d728cd21733d4b448e0fad9f70a73086e74ee64f31fbe9aa148c749f2c83c",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "scaffold-exercises",
+      "path": "skills/misc/scaffold-exercises",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/scaffold-exercises",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:2b550c818f3a8f72cc2c483cfe5ed837763622639d00f5546a2c8adfdeee0ef7",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "setup-pre-commit",
+      "path": "skills/misc/setup-pre-commit",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/misc/setup-pre-commit",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:5ec2f3e9d0ef380558795e57818be3a4ef7d57005618642501db775337614338",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grill-me",
+      "path": "skills/productivity/grill-me",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/grill-me",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:c35b7605b2435aa942fe6ce7e79079583b13cc05b6e6ed631cc38bfbf2435611",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "grilling",
+      "path": "skills/productivity/grilling",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/grilling",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:1e92bdd2a12406da164abd3b85473054bde9abbd00cf3ba4abc6e0ef8efb641b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "handoff",
+      "path": "skills/productivity/handoff",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/handoff",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:a1123f400a2e424cb569fd26ac4b2e51bd1c83d47db3dc09f04ac108aa9aa18b",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "teach",
+      "path": "skills/productivity/teach",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/teach",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:fbd4511a356bf4d289dd405d4d7f22b6c098a406f45ae5f8c97b624390db01e4",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "to-questionnaire",
+      "path": "skills/productivity/to-questionnaire",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/to-questionnaire",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:346b8c5c011e5b232d373452bc0517c100f24d4fc18cff62fcdfdd6934c29921",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "wait-what",
+      "path": "skills/productivity/wait-what",
+      "kind": "forked",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/wait-what",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:fa2014e0d0dcd7065e873c0fbfe8b8e50abaa0a5e534cc23236793cb363b7b52",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "writing-for-agents",
+      "path": "skills/productivity/writing-for-agents",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "mattpocock-skills",
+          "path": "skills/productivity/writing-for-agents",
+          "importedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "reviewedRevision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+          "localDigest": "sha256:93b963003258a9b1ee7aa5c84cb30a7f8a8664a353e1b869a849e93657437944",
+          "decisions": [
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Retain the Paul provenance locator; preserve upstream instructions and existing credits."
+            },
+            {
+              "revision": "b0618bc436ad893b3c5e84e55fba86586d34a404",
+              "paths": [
+                "SKILL.md",
+                "required-reads.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Define complete-read evidence, contextual reuse and reload conditions without treating summaries or hashes as loaded instructions. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-accessibility",
+      "path": "skills/design/better-accessibility",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-accessibility",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:1c156686762319f4a23e9371a418b9ca23d1522e6278894b126963cc0f305178",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "forms.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Exercise focus continuity beyond reachability and repeated activation during asynchronous submissions. Preserve task impact, recovery and evidence limits after observed omissions in paired retests.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "focus-and-keyboard.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Distinguish native Tab entry from assigned focus and require the claimed viewport/state keyboard matrix after the article field trial exposed incomplete coverage. Preserve the imported role and criteria.",
+              "report": "evals/design-field-trial-2026-10-14/QA-REPAIR.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-colors",
+      "path": "skills/design/better-colors",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-colors",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:fff6095c55a499b752c171581480607b5dd083d9318d5b405b70f511b68966e1",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for text, control and meaningful graphic contrast roles, including components already carrying another accessibility finding, after repeated non-text contrast omissions. Preserve owning accessibility thresholds.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "contrast.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep active-field placeholders and read-only text under WCAG text contrast; distinguish disabled-control exemptions from APCA readability targets after an observed cross-standard semantic failure. Preserve immutable upstream revisions.",
+              "report": "evals/design-contrast-reference-proof-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate calculated-pair evidence, rendered checks and pending inputs; retain the same scope in the final summary. The historical contradiction did not recur in the fixed baseline repeats, so this is a preventive reporting clarification rather than a proven root-cause fix. Preserve immutable upstream revisions.",
+              "report": "evals/design-color-evidence-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-interface",
+      "path": "skills/design/better-interface",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:f912d131d1f973e7826f338609db13f4976065e55f96b7b399d71da32b9054b1",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "review-format.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Account for applicable domain rules and reconcile supported findings; finish independent checks on a shared component before merging root causes. Repair observed lower-severity and non-text contrast omissions.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make unnamed change-review routing terminal before file inspection, distinguish user-only discovery filtering from absence, and pass the explicit user invocation with the resolved scope into the authorized six-domain review. Preserve source review rules and invocation metadata.",
+              "report": "evals/design-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged. Limit terminal routing to the exact command and invocation reason after a trial added imprecise optional branch-scope advice.",
+              "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved. Explicitly prohibit batching the router read with Git status or diff summaries after a typography/color variant exposed that remaining order failure.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "audit-procedure.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "audit-procedure.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "audit-procedure.md",
+                "review-format.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Add evidence-labeled first-impression checks and task-aware simplification while preserving domain ownership and review authorization. Keep imported revisions and reconciliation digest unchanged; this local change is not an upstream reconciliation.",
+              "report": "evals/design-first-impression-2026-10-15/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "audit-procedure.md",
+                "review-format.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Repair observed prototype-scope and approved-brand overjudgment; require six successful owner loads before interface artifact inspection and separate execution gaps from product defects. Preserve original failed evidence and immutable upstream reconciliation fields.",
+              "report": "evals/design-first-impression-repair-2026-10-15/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Read the authorized audit procedure in a separate tool action so its owner-loading instructions arrive before artifact inspection. The first repair loaded all six owners but batched artifact reads with the procedure in three trials; preserve those failures. Change-review referral and invocation policy remain unchanged.",
+              "report": "evals/design-first-impression-order-2026-10-15/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/critique.md",
+          "revision": "abf5779cabc20147fd9c013fa4705088c200bf8a",
+          "reason": "Independently authored screen-purpose, first-impression and preservation contract, informed by surface modes, hierarchy, simplification and observation separation. No command, detector, engine or source text copied. Local implementation and bounded comparison: evals/design-first-impression-2026-10-15/REPORT.md."
+        }
+      ]
+    },
+    {
+      "id": "better-layout",
+      "path": "skills/design/better-layout",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-layout",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:debf396b3796d172433792a9d3b82c4c0fffdd9e42a89726e78abd7d581019af",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "first-impression.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Add evidence-labeled first-impression checks and task-aware simplification while preserving domain ownership and review authorization. Keep imported revisions and reconciliation digest unchanged; this local change is not an upstream reconciliation.",
+              "report": "evals/design-first-impression-2026-10-15/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "first-impression.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Repair observed prototype-scope and approved-brand overjudgment; require six successful owner loads before interface artifact inspection and separate execution gaps from product defects. Preserve original failed evidence and immutable upstream reconciliation fields.",
+              "report": "evals/design-first-impression-repair-2026-10-15/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/distill.md",
+          "revision": "abf5779cabc20147fd9c013fa4705088c200bf8a",
+          "reason": "Independently authored screen-purpose, first-impression and preservation contract, informed by surface modes, hierarchy, simplification and observation separation. No command, detector, engine or source text copied. Local implementation and bounded comparison: evals/design-first-impression-2026-10-15/REPORT.md."
+        }
+      ]
+    },
+    {
+      "id": "better-typography",
+      "path": "skills/design/better-typography",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-typography",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:0c206d16d81c9e209bef5965820052e230f8ce1b09d8d07391bece9ef236c3a1",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-text.md",
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "wrapping-and-punctuation.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make the punctuation reference follow the product language policy, consistent with the entrypoint.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-ui",
+      "path": "skills/design/better-ui",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-ui",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:77905653f1207fdd2a85e6ac09b797ddc16b42b128d70918452adc72205d8315",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Compare control and neighboring geometry when selection border thickness changes after an independent repeat found original reported a real 2px filter shift that Paul missed. Preserve intentional borders and exclude color-only or already reserved geometry. Re-evaluate the exposed and a new task plus composite dependencies.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "better-writing",
+      "path": "skills/design/better-writing",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/better-writing",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:e6d06f7c720ab1dff956afdc842273e71aff06bcb7dfb5443da3f1a252b772a2",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "korean-copy.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "patterns.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Align action and progress templates with the already established natural target-language grammar.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Distinguish filtered empty results from absent or inaccessible content after data/permission changes. Independent replay found the Paul output offering filter-clear recovery after permanent deletion, while the original output suppressed that obsolete advice. Require replay of nearby search/filter recovery in the resulting state.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate the exclusive UI change-review route decision from domain loading after a Codex staged pilot batched domain bodies. Keep current-screen audits, requested fixes and authorized handoffs directly usable. All domain rules and immutable upstream revisions are preserved.",
+              "report": "evals/design-staged-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Put discovery scope exclusions within the delivered short catalog; preserve current-state and authorized domain work. Read references through resolved native paths without host-expanded positional placeholders. Original domain rules and immutable upstream revisions remain unchanged.",
+              "report": "evals/design-domain-entry-repair-v3-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Keep direct-review exclusion and authorized-handoff eligibility together in the shortened discovery text. Require all six installed owners before deciding that a narrow change has no domain evidence. Preserve earlier failures and upstream revisions.",
+              "report": "evals/design-domain-entry-repair-v4-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Review each string by reader and role; distinguish internal research bookkeeping from product limitations useful to the reader. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "break",
+      "path": "skills/design/break",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/break",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:c9115a2c56f03a0a2b88d56eab0ba5045fd29afff2bb4552ff3b21008a593e1a",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol. Permit one task-owned CLI session for the single visual pass; browser setup and debugging remain outside the budget.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Choose plausible upper-bound text before the single browser visit and combine it with the narrowest selected container. The previous output missed source-detected overflow because the stress data fitted; the repaired old and new fixtures expose actual overflow while the supported wrapping control stays clean. Preserve real imports, production CSS and one-pass observation. This is bounded task evidence, not universal superiority or promotion approval.",
+              "report": "evals/design-beta-hardening-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "build-design",
+      "path": "skills/design/build-design",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/build-design",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ec61958d20891ff8c386b5742755392f72884659ae94245b726986dd5135b131",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md",
+                "agents/openai.yaml",
+                "browser-and-spec.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Condition Figma and visual comparison steps on the actual input; verify Markdown-only requirements against rendered values and states.",
+              "report": "evals/design-beta/improvement-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "browser-and-spec.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Resolve reference-to-export identity before reuse and verify preserved destinations and keyboard behavior in matching states. Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/retro-improvements-2026-10-16/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Name component reuse in the description, which the body already covers, after native evals showed the skill unloaded for a reuse request (0/3). Local adaptation only; upstream reconciliation unchanged.",
+              "report": "evals/claude-native/records/2026-10-17-invocation/README.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "explain-interface",
+      "path": "skills/design/explain-interface",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/explain-interface",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:ed0f68018cd2e768255e2b6e98cdec69667c8d5f504d8c638a1e37e609b2a069",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "interface-review",
+      "path": "skills/design/interface-review",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/interface-review",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:5f96df6e5fe338ad21ce1f8424e804628150ebcb2374f4559e1d79d2a558db9d",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Clarify the existing total-five consumer budget with an intermediate-stylesheet example after one of two Paul repetitions counted only rendered routes. Preserve the source scope bound and require separate repair evidence.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Make unnamed change-review routing terminal before file inspection, distinguish user-only discovery filtering from absence, and pass the explicit user invocation with the resolved scope into the authorized six-domain review. Preserve source review rules and invocation metadata.",
+              "report": "evals/design-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Clarify automatic UI change-review entry through better-interface before file discovery, preserve the user-only interface-review command and target, and keep its explicit handoff authorized. Local repair only; upstream review baseline unchanged.",
+              "report": "evals/design-claude-routing-repair-2026-10-14/REPORT.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md",
+                "scope-resolution.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Separate review entry from execution, preserve domain rules, and resolve explicit local scopes against HEAD/index before default-branch discovery. Native-host trials record remaining limitations without advancing immutable upstream revisions.",
+              "report": "evals/design-review-scope-repair-2026-10-14/REPORT.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "state-machine",
+      "path": "skills/design/state-machine",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/state-machine",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:9e56a5fb4d3977145b0b7ab8c8aa4a682c433990ac8e709fbabf0281a3b81bcf",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "variant",
+      "path": "skills/design/variant",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "jakubkrehel-skills",
+          "path": "skills/variant",
+          "importedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "reviewedRevision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+          "localDigest": "sha256:7195dd0b375c96108466d7869acc098cad989bccf40063c115ba7eddc39ad832",
+          "decisions": [
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "LICENSE",
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Keep source role and invocation boundary; add Paul provenance, local MIT notice and the shared browser adapter. Bounded language, implementation and review changes are documented in the beta protocol.",
+              "report": "evals/design-beta/README.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Honor explicit tool choice; route research and general browsing to Aside, development verification and otherwise unspecified browser work to Playwright. Keep analysis/QA judgments separate from browser operation and require controlled evidence before changing task-class defaults.",
+              "report": "evals/design-beta/browser-routing-2026-10-10.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Require native Tab and pointer access around fixed comparison/product controls in short viewports after independent 200-percent Chrome zoom replay found focused search hidden under the fixed selection bar in both original and Paul outputs. Preserve the one-axis role and source invocation policy.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            },
+            {
+              "revision": "d574cc8a576dc24256ad38268b8d03d86724a1b3",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve inputs and task state while switching a visual axis; independent repeat2 replay found Paul restored eight selected records after clear while original retained zero. Keep any requested reset separate and labelled.",
+              "report": "evals/design-role-parity-2026-10-12/repairs.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "design-browser",
+      "path": "skills/design/design-browser",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "microsoft-playwright-cli",
+          "path": "README.md",
+          "revision": "b85c7a736bb473bf55b584e54a09ffa698d6d871",
+          "reason": "Documented CLI API and session lifecycle; independently authored design evidence procedure."
+        }
+      ]
+    },
+    {
+      "id": "information-architecture",
+      "path": "skills/design/information-architecture",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/shape.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Separate settled product context, real content and unresolved design decisions; independently authored destination and content-coverage procedure."
+        }
+      ]
+    },
+    {
+      "id": "user-flow",
+      "path": "skills/design/user-flow",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/shape.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Carry scoped tasks and material states forward from product decisions."
+        },
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/onboard.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Reach the task outcome with contextual guidance rather than a mandatory product tour."
+        },
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/harden.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Account for relevant failure, input and recovery conditions when specifying transitions."
+        }
+      ]
+    },
+    {
+      "id": "wireframe",
+      "path": "skills/design/wireframe",
+      "kind": "original",
+      "origins": [],
+      "influences": [
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/reference/new-work.md",
+          "revision": "d631a8827f99414d2b6daba4ef08b7f8701751d7",
+          "reason": "Use inspectable HTML sketches for structural decisions inside an existing product context; independently authored screen/state handoff. No engine, concept-selection procedure or source text copied."
+        },
+        {
+          "source": "pbakaus-impeccable",
+          "path": "skill/SKILL.src.md",
+          "revision": "abf5779cabc20147fd9c013fa4705088c200bf8a",
+          "reason": "Independently authored screen-purpose, first-impression and preservation contract, informed by surface modes, hierarchy, simplification and observation separation. No command, detector, engine or source text copied. Local implementation and bounded comparison: evals/design-first-impression-2026-10-15/REPORT.md."
+        }
+      ]
+    },
+    {
+      "id": "problem-discovery",
+      "path": "skills/in-progress/problem-discovery",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:3c3c200934e3f475020fb198174cf770527530fb543c964856697a3d10ede6e9",
+          "files": {
+            "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
+            "office-hours/sections/phase-2b-builder-brainstorm.md": "sha256:05251d190b32f1da63165e8339211404963556ef5b9cf4c3e46361cbc51027e2"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/sections/phase-2a-startup-diagnostic.md",
+                "office-hours/sections/phase-2b-builder-brainstorm.md"
+              ],
+              "decision": "adapt",
+              "reason": "Retain startup/builder purpose routing, specificity, status quo, smallest scope and smart-skip; replace forced pressure and mandatory later phases with decision-changing gaps and sufficient-input completion.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "product-brief",
+      "path": "skills/in-progress/product-brief",
+      "kind": "composite",
+      "origins": [
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/create-prd",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "pm-execution/skills/create-prd/SKILL.md": "sha256:e3aa10a437ed7f748a957bd5d1eb06d8fa3f56dc728dcb93ce484387ecc3fa13"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/create-prd/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use lean decision-ready scope and honest assumptions; replace mandatory eight sections, fixed size and blanket missing-input gate with relevant fields, scoped updates and product behavior.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-strategy/skills/value-proposition",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "pm-product-strategy/skills/value-proposition/SKILL.md": "sha256:b07cc0399582fc178be31b513b313d2420c7941dd568b52a0bf6cfb0ab6c4ec7"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-strategy/skills/value-proposition/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Select situation/current alternative/desired outcome questions; preserve Huryn and Abdul Rauf credit, omit mandatory marketing positioning and unsupported framework superiority claims.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/job-stories",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "pm-execution/skills/job-stories/SKILL.md": "sha256:69f75264b311418a1ebaf06c9872ed1271203cfc6316466fcb99cc948ade800b"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/job-stories/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Select situation, motivation, outcome and observable completion; omit fixed story counts and backlog deliverables.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/sections/design-and-handoff.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use decision-plus-reason concision, rejected-alternative brevity and Supersedes lineage; add explicit authority and observed/reported/intended handoff, omit gstack runtime, telemetry and profile.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-market-research/skills/competitor-analysis",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:bd194dd06c324eb85ac96d8df52cb428e9a3c5ba937f3a8c69650294904738c3",
+          "files": {
+            "pm-market-research/skills/competitor-analysis/SKILL.md": "sha256:8e627fc7fba96f223ad9f8fd23c6033a429cc28f9e9ce2d672854c6851810c2b"
+          },
+          "reviewScope": "The listed competitor-analysis source and the local benchmark procedure only.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-market-research/skills/competitor-analysis/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Adapt direct/indirect/status-quo comparison into evidence-to-experience-to-decision synthesis; omit fixed counts and unsupported market/performance claims.",
+              "report": "evals/pm-conversation-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "experiment-design",
+      "path": "skills/in-progress/experiment-design",
+      "kind": "composite",
+      "origins": [
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/identify-assumptions-existing",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
+          "files": {
+            "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md": "sha256:59d788213014552ac64f589c71ce82b135f9ef4b84fec457446ad90795fd439f"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/identify-assumptions-existing/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use existing-product perspective checks and current evidence; bound the selected uncertainty rather than require every risk category.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/identify-assumptions-new",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
+          "files": {
+            "pm-product-discovery/skills/identify-assumptions-new/SKILL.md": "sha256:962b1e0c01e45ceb930e4d806c0ffb05e36cf25dcfef5497e7828d89d6ae474b"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/identify-assumptions-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use new-product assumption review; retain upstream conceptual attribution, omit automatic eight-category inventory.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/prioritize-assumptions",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
+          "files": {
+            "pm-product-discovery/skills/prioritize-assumptions/SKILL.md": "sha256:18160a0138c788790c9dd22995ffdcfac485c1f0599c170d8668678e59766073"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/prioritize-assumptions/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Retain consequential-impact and uncertainty comparison; omit mismatched confidence formula, unsupported ICE/RICE scores and quadrant-based automatic build/reject.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-product-discovery/skills/brainstorm-experiments-new",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
+          "files": {
+            "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md": "sha256:fe66d9ba76cf6b0e156298c88f752d8e1e62549fe77a7c01c0a74d8679da9334"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use falsifiable behavior, small tests and method/observation/criteria; distinguish interest from demand and add inconclusive, validity, budget and stop decisions.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-product-discovery/skills/brainstorm-experiments-new/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "After the paired smoke trial, distinguish proposed test operating constraints from approved product requirements in downstream handoff; same-input fresh recheck recorded. Upstream pins and hashes remain unchanged.",
+              "report": "evals/product-management-beta/RESULTS.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        },
+        {
+          "source": "phuryn-pm-skills",
+          "path": "pm-execution/skills/pre-mortem",
+          "importedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "reviewedRevision": "c68487d721e419ec87af1ae6412a842978eab785",
+          "localDigest": "sha256:13331e4f897a5d169934aa00554c9f287864e1c5f9ef9edde17f61cc8eb2e10e",
+          "files": {
+            "pm-execution/skills/pre-mortem/SKILL.md": "sha256:4e5cf10a46ac1d1cdde6aa009ba2b860c532f55c0c3d9ec53a82082cad073052"
+          },
+          "reviewScope": "Selected direct source files and their adapted procedures; no repository-wide reconciliation.",
+          "decisions": [
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "pm-execution/skills/pre-mortem/SKILL.md"
+              ],
+              "decision": "adapt",
+              "reason": "Use failure-backward questions only for existing-plan review; omit fixed launch dates, defaults and compulsory risk labels.",
+              "report": "evals/product-management-beta/SOURCE-REVIEW.md"
+            },
+            {
+              "revision": "c68487d721e419ec87af1ae6412a842978eab785",
+              "paths": [
+                "SKILL.md"
+              ],
+              "decision": "keep-local",
+              "reason": "Authorized conversation-beta integration: preserve existing source pins and choices, connect office-hours and fresh AI prototype attempts, and check scoped change impact and role readiness. No upstream baseline advance.",
+              "report": "evals/pm-conversation-beta/RESULTS.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "office-hours",
+      "path": "skills/in-progress/office-hours",
+      "kind": "adapted",
+      "origins": [
+        {
+          "source": "gstack",
+          "path": "office-hours",
+          "importedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "reviewedRevision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+          "localDigest": "sha256:5385db836f69425e32a903d412e5c81af0b7e320f105377855d19ffe3c197708",
+          "files": {
+            "office-hours/SKILL.md.tmpl": "sha256:e0eee0cf83c00897860149d9d423fd6a3c81486e8fa48494a25171e5a4569676",
+            "office-hours/sections/phase-2a-startup-diagnostic.md": "sha256:35ed1e419eca359e454b9f18dddcce0aeb553a0ee519a7e635f4f0b7d484a393",
+            "office-hours/sections/phase-2b-builder-brainstorm.md": "sha256:05251d190b32f1da63165e8339211404963556ef5b9cf4c3e46361cbc51027e2",
+            "office-hours/sections/design-and-handoff.md": "sha256:d70a1a2bf291822de53b4ed8957282ed4daa894e00c44e2bd7943bc6e60afccf"
+          },
+          "reviewScope": "Full listed conversational source files; generated host preambles and runtime helpers are not imported or reconciled.",
+          "decisions": [
+            {
+              "revision": "dbf400ec3f1ffb96a429f0d0b29ca932b3d6c6f0",
+              "paths": [
+                "office-hours/SKILL.md.tmpl",
+                "office-hours/sections/phase-2a-startup-diagnostic.md",
+                "office-hours/sections/phase-2b-builder-brainstorm.md",
+                "office-hours/sections/design-and-handoff.md"
+              ],
+              "decision": "adapt",
+              "reason": "Preserve mode/posture, adaptive questioning, reuse/landscape, premise revision, alternatives choice, decision record, bounded review and closing. Replace runtime adapters, honor direct skip requests, use one canonical product brief and evidence-bounded coaching; keep visual work in design roles.",
+              "report": "evals/pm-conversation-beta/SOURCE-REVIEW.md"
+            }
+          ]
+        }
+      ],
+      "influences": []
+    },
+    {
+      "id": "prototype-user-test",
+      "path": "skills/in-progress/prototype-user-test",
+      "kind": "original",
+      "origins": [],
+      "influences": []
+    }
+  ],
+  "localSources": {
+    "research-with-aside-20261009": {
+      "locator": "local-skill:research-with-aside",
+      "files": {
+        "SKILL.md": "sha256:3c0ac5b18e38562c76d8becd323cdfb3244af1465325c024770347efdce33965",
+        "references/research-brief-template.md": "sha256:ab4039344ab59340595cb70ebd72c8330dd75bd5743be3160ea2b91e3f4dd4d6"
+      },
+      "digest": "sha256:876a68a07da35b874513bc045aaadea1977bff74b8ad1c6efc6103120f863c6c",
+      "license": null,
+      "permission": "User supplied this local source and explicitly authorized adaptation and publication of the resulting generalized research workflow on 2026-10-09. No source license was declared; the original source bodies are not redistributed."
+    }
+  }
+}
